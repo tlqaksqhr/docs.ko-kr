@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546376"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>유동 콘텐츠 요소 방법 항목
 이 섹션의 항목에는 다양 한 유동 콘텐츠 요소 및 관련된 기능을 사용 하 여 일반적인 작업을 수행 하는 방법을 설명 합니다.  

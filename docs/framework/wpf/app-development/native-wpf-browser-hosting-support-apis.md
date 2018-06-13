@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550022"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>네이티브 WPF 브라우저 호스팅 지원 API
 호스팅 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 웹 브라우저에서 응용 프로그램 외부 WPF 호스트에서 등록 된 액티브 문서 서버 (DocObject 라고도 함) 하 여 촉진 됩니다. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 활성화 하 고 활성 문서와 통합 직접 수 있습니다. Xbap 및 느슨한 XAML 문서 Mozilla 브라우저에을 호스팅하기 위한 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 제공 하는 비슷한 호스팅 환경을 제공 하는 NPAPI 플러그 인을는 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 으로 액티브 문서 서버 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 않습니다. 그러나 다른 브라우저에서 Xbap 및 XAML을 호스트 하는 가장 쉬운 실용적인 방법은 설명 하 고 Internet Explorer 웹 브라우저 컨트롤을 통해는 독립 실행형 응용 프로그램입니다. 웹 브라우저 컨트롤에서 복잡 한 액티브 문서 서버 호스팅 환경을 제공 하면서 자체 호스트 및 사용자 지정 하 고, 해당 환경을 확장 하 고, 현재 활성 문서 개체와 직접 통신할 수 있습니다.  

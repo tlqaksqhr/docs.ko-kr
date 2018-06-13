@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549739"
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
 유동 문서는 보기와 가독성을 최적화하도록 설계되었습니다. 유동 문서는 미리 정의된 하나의 레이아웃으로 설정되는 것이 아니라, 창 크기, 장치 해상도 및 선택적 사용자 기본 설정 등의 런타임 변수에 따라 동적으로 콘텐츠를 조정하고 리플로우합니다. 유동 문서에서는 페이지 매김 및 열과 같은 고급 문서 기능을 제공합니다. 이 항목에서는 유동 문서의 개요와 해당 문서를 작성하는 방법을 제공합니다.  

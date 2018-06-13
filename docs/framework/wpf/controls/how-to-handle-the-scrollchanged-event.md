@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552703"
 ---
 # <a name="how-to-handle-the-scrollchanged-event"></a>방법: ScrollChanged 이벤트 처리
 ## <a name="example"></a>예제  

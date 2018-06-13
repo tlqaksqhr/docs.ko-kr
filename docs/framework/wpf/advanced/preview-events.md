@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546138"
 ---
 # <a name="preview-events"></a>미리 보기 이벤트
 이벤트를 터널링이 라고도 하는 미리 보기 이벤트는 라우트된 이벤트에서 이벤트를 발생 하 고 이벤트 데이터의 원본으로 보고 하는 요소에 대해 응용 프로그램 루트 경로 방향 전송 되는 위치입니다. 일부 이벤트 시나리오를 지원 하거나 미리 보기 이벤트; 요구 이 항목에서는 미리 보기 이벤트 있는, 응용 프로그램 또는 구성 요소 처리 방법을, 상황 및 사용자 지정 구성 요소 또는 클래스에서 미리 보기 이벤트를 만들 수 있는 적절 한 경우에 설명 합니다.  

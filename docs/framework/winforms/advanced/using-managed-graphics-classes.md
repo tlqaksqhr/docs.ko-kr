@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524888"
 ---
 # <a name="using-managed-graphics-classes"></a>관리되는 그래픽 클래스 사용
 다음 항목을 사용 하는 방법을 설명는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 관리 되는 클래스 프레임 워크의 API입니다.  

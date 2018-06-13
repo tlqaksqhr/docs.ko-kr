@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549372"
 ---
 # <a name="table-overview"></a>테이블 개요
 <xref:System.Windows.Documents.Table> 유동 문서 콘텐츠 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  

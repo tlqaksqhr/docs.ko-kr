@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550841"
 ---
 # <a name="groupbox"></a>GroupBox
 <xref:System.Windows.Controls.GroupBox> 컨트롤은 한 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠입니다.  

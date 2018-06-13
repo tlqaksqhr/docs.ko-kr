@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561916"
 ---
 # <a name="transformations"></a>변형
 변환 하는 데 회전, 크기 조정, 변환, 하거나 <xref:System.Windows.FrameworkElement> 개체입니다.  

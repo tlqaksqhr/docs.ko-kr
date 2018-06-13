@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549103"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>성능 최적화: 2D 그래픽 및 이미징
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램 요구 사항에 맞게 최적화할 수 있는 다양한 범위의 2D 그래픽 및 이미징 기능을 제공합니다. 이 항목에서는 이러한 영역의 성능 최적화에 대한 정보를 제공합니다.  

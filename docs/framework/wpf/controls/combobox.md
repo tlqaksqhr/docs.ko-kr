@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551193"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> 컨트롤 옵션 목록이 있는 사용자에 게 표시 합니다. 목록이 표시 하 고 숨겨진 컨트롤 확장 되 고 축소 됩니다. 해당 기본 상태인 유일한 선택 표시 목록 축소 됩니다. 사용자 옵션의 전체 목록을 확인 하는 단추를 클릭 합니다.  

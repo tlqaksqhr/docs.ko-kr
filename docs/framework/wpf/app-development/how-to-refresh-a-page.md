@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546532"
 ---
 # <a name="how-to-refresh-a-page"></a>방법: 페이지를 새로 고칩니다.
 호출 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> 의 내용을 새로 고치려면 메서드는 <xref:System.Windows.Navigation.NavigationWindow>합니다.  

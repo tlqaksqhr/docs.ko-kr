@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551923"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
 <xref:System.Windows.Controls.FlowDocumentReader> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FlowDocument> 콘텐츠입니다. 여러 표시 모드를 지원합니다.  

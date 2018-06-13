@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548037"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인
 인쇄 큐 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖게 됩니다. 예를 들어 특정 부서 오후 5 시 이후에 단독으로 사용에 대 한 프린터를 예약 하 고이 기능을 사용할 수 있습니다. 해당 부서 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정 됩니다, 그리고 부서에서 선호 하는 방식된에 대 한 큐 수로 설정 되어 동안 항상 사용 가능한 합니다.  

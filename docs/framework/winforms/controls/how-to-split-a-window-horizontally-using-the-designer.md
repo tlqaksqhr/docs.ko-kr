@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532716"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>방법: 디자이너를 사용하여 가로로 창 분할
 이 예제에서는 나누는 분할자는 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 가로로 합니다.  

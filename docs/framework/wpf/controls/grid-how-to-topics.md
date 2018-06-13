@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550367"
 ---
 # <a name="grid-how-to-topics"></a>Grid 방법 항목
 이 섹션의 항목 사용 하 여 요소를 배치 하는 방법에 설명 된 <xref:System.Windows.Controls.Grid> 요소입니다.  

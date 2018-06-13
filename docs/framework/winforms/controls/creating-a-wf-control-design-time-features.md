@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529742"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기
 연결 된 사용자 지정 디자이너를 제작 하 여 사용자 지정 컨트롤에 대 한 디자인 타임 환경을 개선할 수 있습니다.  

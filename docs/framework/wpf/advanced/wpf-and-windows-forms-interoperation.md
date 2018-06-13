@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549232"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF 및 Windows Forms 상호 운용성
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서는 응용 프로그램 인터페이스를 만들기 위한 두 개의 서로 다른 아키텍처를 제공합니다. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> 네임 스페이스는 상호 운용 하는 일반적인 시나리오를 사용할 수 있는 클래스를 제공 합니다. 상호 운용성 기능을 구현 하는 두 가지 주요 클래스는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 및 <xref:System.Windows.Forms.Integration.ElementHost>합니다. 이 항목에서는 지원되는 상호 운용성 시나리오와 지원되지 않는 시나리오를 설명합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552781"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>방법: TextBox에 사용자 지정 컨텍스트 메뉴 사용
 정의 대 한 간단한 사용자 지정 컨텍스트 메뉴를 구현 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox>합니다.  
