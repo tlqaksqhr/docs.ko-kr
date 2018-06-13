@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320692"
 ---
 # <a name="caller-information-c"></a><span data-ttu-id="a5f06-102">호출자 정보(C#)</span><span class="sxs-lookup"><span data-stu-id="a5f06-102">Caller Information (C#)</span></span>
 <span data-ttu-id="a5f06-103">호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5f06-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="a5f06-104">소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5f06-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="a5f06-105">이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5f06-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  

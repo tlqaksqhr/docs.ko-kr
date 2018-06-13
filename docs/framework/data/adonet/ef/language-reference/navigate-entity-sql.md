@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764738"
 ---
 # <a name="navigate-entity-sql"></a><span data-ttu-id="f6b73-102">NAVIGATE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f6b73-102">NAVIGATE (Entity SQL)</span></span>
 <span data-ttu-id="f6b73-103">엔터티 사이에 설정된 관계를 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="f6b73-103">Navigates over the relationship established between entities.</span></span>  

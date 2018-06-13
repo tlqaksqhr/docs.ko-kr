@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758163"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="e7cd7-102">저장 프로시저로 데이터 수정</span><span class="sxs-lookup"><span data-stu-id="e7cd7-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="e7cd7-103">저장 프로시저는 입력 매개 변수로 데이터를 받아들이고 출력 매개 변수, 결과 집합 또는 반환 값으로 데이터를 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7cd7-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="e7cd7-104">다음 샘플에서는 ADO.NET에서 입력 매개 변수, 출력 매개 변수 및 반환 값을 보내고 받는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e7cd7-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="e7cd7-105">이 예제에서는 기본 키 열이 SQL Server 데이터베이스의 ID 열인 테이블에 새 레코드를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="e7cd7-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

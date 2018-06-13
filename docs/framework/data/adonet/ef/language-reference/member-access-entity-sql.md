@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764634"
 ---
 # <a name="-member-access-entity-sql"></a><span data-ttu-id="996a7-103">이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="996a7-103">.</span></span> <span data-ttu-id="996a7-104">(멤버 액세스)(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="996a7-104">(Member Access) (Entity SQL)</span></span>
 <span data-ttu-id="996a7-105">점 (.) 연산자는는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 멤버 액세스 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="996a7-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="996a7-106">멤버 액세스 연산자를 사용하여 구조 개념적 모델 형식 인스턴스의 속성 또는 필드 값을 구합니다.</span><span class="sxs-lookup"><span data-stu-id="996a7-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  

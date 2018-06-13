@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766529"
 ---
 # <a name="entity-framework-terminology"></a><span data-ttu-id="531e1-102">Entity Framework 용어</span><span class="sxs-lookup"><span data-stu-id="531e1-102">Entity Framework Terminology</span></span>
 <span data-ttu-id="531e1-103">이 항목에서는에서 자주 참조 되는 용어를 정의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 설명서입니다.</span><span class="sxs-lookup"><span data-stu-id="531e1-103">This topic defines terms frequently referenced in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation.</span></span> <span data-ttu-id="531e1-104">추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="531e1-104">Links are provided to relevant topics where additional information is available.</span></span>  

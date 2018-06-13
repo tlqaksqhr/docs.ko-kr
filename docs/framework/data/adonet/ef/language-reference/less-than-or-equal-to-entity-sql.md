@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761872"
 ---
 # <a name="lt-less-than-or-equal-to-entity-sql"></a><span data-ttu-id="6896c-102">&lt;=(보다 작거나 같음)(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6896c-102">&lt;= (Less Than or Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="6896c-103">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="6896c-103">Compares two expressions to determine whether the left expression has a value less than or equal to the right expression.</span></span>  

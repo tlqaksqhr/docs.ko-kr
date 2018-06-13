@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755294"
 ---
 # <a name="ltusemanagedpresentationgt"></a><span data-ttu-id="94a6d-102">&lt;useManagedPresentation&gt;</span><span class="sxs-lookup"><span data-stu-id="94a6d-102">&lt;useManagedPresentation&gt;</span></span>
 <span data-ttu-id="94a6d-103">WS-Trust의 CardSpace 프로필을 지원하는 CardSpace 보안 토큰 서비스와 통신하는 데 사용되는 바인딩 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="94a6d-103">A binding element used to communicate with a CardSpace Security Token Service that supports the CardSpace profile of WS-Trust.</span></span> <span data-ttu-id="94a6d-104">이 요소는 특성이 없고 빈 스위치로 존재합니다.</span><span class="sxs-lookup"><span data-stu-id="94a6d-104">This element has no attribute and is present as an empty switch.</span></span>  

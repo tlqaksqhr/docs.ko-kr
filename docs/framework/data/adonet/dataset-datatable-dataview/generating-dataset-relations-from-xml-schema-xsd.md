@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758440"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="fc726-102">XSD(XML 스키마)에서 데이터 집합 관계 생성</span><span class="sxs-lookup"><span data-stu-id="fc726-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
 <span data-ttu-id="fc726-103"><xref:System.Data.DataSet>에서는 부모-자식 관계를 만들어 둘 이상의 열을 연결시킵니다.</span><span class="sxs-lookup"><span data-stu-id="fc726-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="fc726-104">세 가지 방법으로 나타내는 데는 **DataSet** XML 스키마 정의 언어 (XSD) 스키마 내에서 관계:</span><span class="sxs-lookup"><span data-stu-id="fc726-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760091"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="e85a6-102">중첩 없이 요소 사이에 관계 지정</span><span class="sxs-lookup"><span data-stu-id="e85a6-102">Specify Relations Between Elements with No Nesting</span></span>
 <span data-ttu-id="e85a6-103">요소가 중첩되지 않은 경우에는 암시적 관계가 만들어지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e85a6-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="e85a6-104">하지만 사용 하 여 중첩 되지 않은 요소 사이 관계를 명시적으로 지정 수는 **msdata: relationship** 주석입니다.</span><span class="sxs-lookup"><span data-stu-id="e85a6-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  

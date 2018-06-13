@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765232"
 ---
 # <a name="entity-data-model-namespaces"></a><span data-ttu-id="5714b-102">엔터티 데이터 모델: 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="5714b-102">Entity Data Model: Namespaces</span></span>
 <span data-ttu-id="5714b-103">엔터티 데이터 모델 (EDM)의 네임 스페이스에 대 한 추상 컨테이너는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md), [복합 형식을](../../../../docs/framework/data/adonet/complex-type.md), 및 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5714b-103">A namespace in the Entity Data Model (EDM) is an abstract container for [entity types](../../../../docs/framework/data/adonet/entity-type.md), [complex types](../../../../docs/framework/data/adonet/complex-type.md), and [associations](../../../../docs/framework/data/adonet/association-type.md).</span></span> <span data-ttu-id="5714b-104">EDM의 네임스페이스는 프로그래밍 언어의 네임스페이스와 유사하며, 포함하는 개체에 대한 컨텍스트를 제공하고 이름은 같지만 다른 네임스페이스에 포함된 개체를 구분하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5714b-104">Namespaces in the EDM are similar to namespaces in a programming language: they provide context for the objects that they contain and they provide a way to disambiguate objects that have the same name (but are contained in different namespaces).</span></span>  

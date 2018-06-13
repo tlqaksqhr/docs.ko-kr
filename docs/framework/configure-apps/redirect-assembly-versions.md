@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759272"
 ---
 # <a name="redirecting-assembly-versions"></a><span data-ttu-id="634bc-102">어셈블리 버전 리디렉션</span><span class="sxs-lookup"><span data-stu-id="634bc-102">Redirecting Assembly Versions</span></span>
 <span data-ttu-id="634bc-103">.NET Framework 어셈블리, 타사 어셈블리 또는 고유의 앱 어셈블리로 컴파일 타임 바인딩 참조를 리디렉션할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="634bc-103">You can redirect compile-time binding references to .NET Framework assemblies, third-party assemblies, or your own app's assemblies.</span></span> <span data-ttu-id="634bc-104">게시자 정책, 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일 등을 통한 다양한 방법으로 여러 버전의 어셈블리를 사용하도록 응용 프로그램을 리디렉션할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="634bc-104">You can redirect your app to use a different version of an assembly in a number of ways: through publisher policy, through an app configuration file; or through the machine configuration file.</span></span> <span data-ttu-id="634bc-105">이 문서에서는 .NET Framework에서 어셈블리 바인딩의 작동 방식과 구성 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="634bc-105">This article discusses how assembly binding works in the .NET Framework and how it can be configured.</span></span>  

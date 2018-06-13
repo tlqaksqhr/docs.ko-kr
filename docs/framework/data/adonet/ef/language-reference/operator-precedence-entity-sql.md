@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764020"
 ---
 # <a name="operator-precedence-entity-sql"></a><span data-ttu-id="e145a-102">연산자 우선 순위(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e145a-102">Operator Precedence (Entity SQL)</span></span>
 <span data-ttu-id="e145a-103">경우는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에 여러 명의 연산자, 연산자 우선 순위가 연산 수행 순서를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e145a-103">When an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query has multiple operators, operator precedence determines the sequence in which the operations are performed.</span></span> <span data-ttu-id="e145a-104">실행 순서는 쿼리 결과에 상당한 영향을 미칠 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e145a-104">The order of execution can significantly affect the query result.</span></span>  

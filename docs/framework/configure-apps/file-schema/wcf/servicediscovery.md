@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751248"
 ---
 # <a name="ltservicediscoverygt"></a><span data-ttu-id="609e5-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="609e5-102">&lt;serviceDiscovery&gt;</span></span>
 <span data-ttu-id="609e5-103">서비스 끝점의 검색 기능을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="609e5-103">Specifies the discoverability of service endpoints.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749064"
 ---
 # <a name="ltcomcontractgt"></a><span data-ttu-id="153e2-102">&lt;comContract&gt;</span><span class="sxs-lookup"><span data-stu-id="153e2-102">&lt;comContract&gt;</span></span>
 <span data-ttu-id="153e2-103">COM+ 통합 서비스 계약을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="153e2-103">Specifies a COM+ integration service contract.</span></span>  

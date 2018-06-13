@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315713"
 ---
 # <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="c82a3-102">정적 생성자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="c82a3-102">Static Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="c82a3-103">정적 생성자는 [정적](../../../csharp/language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c82a3-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="c82a3-104">첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="c82a3-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  

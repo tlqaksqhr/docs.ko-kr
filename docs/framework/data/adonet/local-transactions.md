@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758895"
 ---
 # <a name="local-transactions"></a><span data-ttu-id="422fc-102">로컬 트랜잭션</span><span class="sxs-lookup"><span data-stu-id="422fc-102">Local Transactions</span></span>
 <span data-ttu-id="422fc-103">[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="422fc-103">Transactions in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] are used when you want to bind multiple tasks together so that they execute as a single unit of work.</span></span> <span data-ttu-id="422fc-104">예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="422fc-104">For example, imagine that an application performs two tasks.</span></span> <span data-ttu-id="422fc-105">먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="422fc-105">First, it updates a table with order information.</span></span> <span data-ttu-id="422fc-106">그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다.</span><span class="sxs-lookup"><span data-stu-id="422fc-106">Second, it updates a table that contains inventory information, debiting the items ordered.</span></span> <span data-ttu-id="422fc-107">이 작업에 실패 하면 다음 두 업데이트가 모두 롤백됩니다.</span><span class="sxs-lookup"><span data-stu-id="422fc-107">If either task fails, then both updates are rolled back.</span></span>  

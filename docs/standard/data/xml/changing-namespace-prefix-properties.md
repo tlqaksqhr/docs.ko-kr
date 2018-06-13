@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568695"
 ---
 # <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="b64a1-102">네임스페이스 접두사 속성 변경</span><span class="sxs-lookup"><span data-stu-id="b64a1-102">Changing Namespace Prefix Properties</span></span>
 <span data-ttu-id="b64a1-103">**XmlNode** 클래스를 사용하면 지정된 노드와 연결된 네임스페이스 접두사를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b64a1-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="b64a1-104">예를 들어, 다음 코드에서는 변경될 요소의 접두사를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b64a1-104">For example, the following code shows the prefix of an element being changed.</span></span>  

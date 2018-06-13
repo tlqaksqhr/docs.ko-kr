@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766896"
 ---
 # <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="b1d8f-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="b1d8f-102">&lt;certificateValidator&gt;</span></span>
 <span data-ttu-id="b1d8f-103">인증서 유효성 검사에 대 한 사용자 지정 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b1d8f-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="b1d8f-104">이 이와 같은 경우에 사용 되는 `certificateValidationMode` 특성에는 [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) "Custom"으로 설정 된 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1d8f-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  

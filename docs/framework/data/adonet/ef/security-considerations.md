@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766623"
 ---
 # <a name="security-considerations-entity-framework"></a><span data-ttu-id="ab373-102">보안 고려 사항(Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="ab373-102">Security Considerations (Entity Framework)</span></span>
 <span data-ttu-id="ab373-103">이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ab373-103">This topic describes security considerations that are specific to developing, deploying, and running [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applications.</span></span> <span data-ttu-id="ab373-104">또한 보안 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 만들기 위한 권장 사항도 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ab373-104">You should also follow recommendations for creating secure [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span> <span data-ttu-id="ab373-105">자세한 내용은 참조 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ab373-105">For more information, see [Security Overview](../../../../../docs/framework/data/adonet/security-overview.md).</span></span>  

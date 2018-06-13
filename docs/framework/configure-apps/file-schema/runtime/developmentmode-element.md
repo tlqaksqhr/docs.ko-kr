@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745502"
 ---
 # <a name="ltdevelopmentmodegt-element"></a><span data-ttu-id="fc2f3-102">&lt;developmentMode&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="fc2f3-102">&lt;developmentMode&gt; Element</span></span>
 <span data-ttu-id="fc2f3-103">런타임이 DEVPATH 환경 변수로 지정된 디렉터리에서 어셈블리를 검색할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-103">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>  

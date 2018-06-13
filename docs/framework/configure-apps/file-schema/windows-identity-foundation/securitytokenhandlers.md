@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758076"
 ---
 # <a name="ltsecuritytokenhandlersgt"></a><span data-ttu-id="e9458-102">&lt;securityTokenHandlers&gt;</span><span class="sxs-lookup"><span data-stu-id="e9458-102">&lt;securityTokenHandlers&gt;</span></span>
 <span data-ttu-id="e9458-103">보안 토큰 처리기에 등록 된 끝점의 컬렉션을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9458-103">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>  

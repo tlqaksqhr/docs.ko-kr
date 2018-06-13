@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759324"
 ---
 # <a name="code-access-security-and-adonet"></a><span data-ttu-id="572be-102">코드 액세스 보안 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="572be-102">Code Access Security and ADO.NET</span></span>
 <span data-ttu-id="572be-103">.NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다.</span><span class="sxs-lookup"><span data-stu-id="572be-103">The .NET Framework offers role-based security as well as code access security (CAS), both of which are implemented using a common infrastructure supplied by the common language runtime (CLR).</span></span> <span data-ttu-id="572be-104">비관리 코드의 경우 대부분의 응용 프로그램은 사용자 또는 보안 주체 권한으로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="572be-104">In the world of unmanaged code, most applications execute with the permissions of the user or principal.</span></span> <span data-ttu-id="572be-105">결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="572be-105">As a result, computer systems can be damaged and private data compromised when malicious or error-filled software is run by a user with elevated privileges.</span></span>  

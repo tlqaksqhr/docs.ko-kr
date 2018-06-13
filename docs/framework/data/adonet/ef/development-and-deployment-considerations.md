@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760348"
 ---
 # <a name="development-and-deployment-considerations"></a><span data-ttu-id="a3138-102">개발 및 배포 고려 사항</span><span class="sxs-lookup"><span data-stu-id="a3138-102">Development and Deployment Considerations</span></span>
 <span data-ttu-id="a3138-103">이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 응용 프로그램을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.</span><span class="sxs-lookup"><span data-stu-id="a3138-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  

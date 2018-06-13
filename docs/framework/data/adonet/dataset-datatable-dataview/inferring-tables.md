@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757829"
 ---
 # <a name="inferring-tables"></a><span data-ttu-id="f5056-102">테이블 유추</span><span class="sxs-lookup"><span data-stu-id="f5056-102">Inferring Tables</span></span>
 <span data-ttu-id="f5056-103">XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO.NET에서는 우선 테이블을 나타내는 XML 요소를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="f5056-103">When inferring a schema for a <xref:System.Data.DataSet> from an XML document, ADO.NET first determines which XML elements represent tables.</span></span> <span data-ttu-id="f5056-104">다음 XML 구조에 대 한 테이블의 결과 **DataSet** 스키마:</span><span class="sxs-lookup"><span data-stu-id="f5056-104">The following XML structures result in a table for the **DataSet** schema:</span></span>  

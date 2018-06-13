@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743978"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="4efa0-102">&lt;specifiedPickupDirectory&gt; 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="4efa0-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="4efa0-103">전송 프로토콜 SMTP (Simple Mail) 서버에 대 한 로컬 디렉터리를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="4efa0-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  

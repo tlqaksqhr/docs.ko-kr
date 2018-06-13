@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765541"
 ---
 # <a name="entity-framework-resources"></a><span data-ttu-id="a9d88-102">Entity Framework 리소스</span><span class="sxs-lookup"><span data-stu-id="a9d88-102">Entity Framework Resources</span></span>
 <span data-ttu-id="a9d88-103">다음 외부 리소스는 Entity Framework 응용 프로그램을 만들기 위한 정보와 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a9d88-103">The following external resources provide information and support for creating Entity Framework applications.</span></span>  

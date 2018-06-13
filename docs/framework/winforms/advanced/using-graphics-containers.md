@@ -1,39 +1,28 @@
 ---
-title: "Graphics 컨테이너 사용"
-ms.custom: 
+title: Graphics 컨테이너 사용
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [Windows Forms], using containers
 - graphics containers
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244f8e8a280369798daf12f8a61519826f937a4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8755a95434d3fed06a55cfca0f71d86e5521cb39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525023"
 ---
-# <a name="using-graphics-containers"></a><span data-ttu-id="e4dfd-102">Graphics 컨테이너 사용</span><span class="sxs-lookup"><span data-stu-id="e4dfd-102">Using Graphics Containers</span></span>
-<span data-ttu-id="e4dfd-103">A <xref:System.Drawing.Graphics> 개체와 같은 메서드를 제공 <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, 및 <xref:System.Drawing.Graphics.DrawString%2A> 벡터 이미지, 래스터 이미지 및 텍스트를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-103">A <xref:System.Drawing.Graphics> object provides methods such as <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, and <xref:System.Drawing.Graphics.DrawString%2A> for displaying vector images, raster images, and text.</span></span> <span data-ttu-id="e4dfd-104">A <xref:System.Drawing.Graphics> 개체에 나타나는 항목의 방향과 품질에 영향을 주는 몇 가지 속성에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-104">A <xref:System.Drawing.Graphics> object also has several properties that influence the quality and orientation of the items that are drawn.</span></span> <span data-ttu-id="e4dfd-105">예를 들어 다듬기 모드 속성은 여부 선 및 곡선 앤티 앨리어싱 적용 되 고 위치 및 회전에 나타나는 항목의 전역 변환 속성에 영향을 줍니다 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-105">For example, the smoothing mode property determines whether antialiasing is applied to lines and curves, and the world transformation property influences the position and rotation of the items that are drawn.</span></span>  
+# <a name="using-graphics-containers"></a><span data-ttu-id="aefd6-102">Graphics 컨테이너 사용</span><span class="sxs-lookup"><span data-stu-id="aefd6-102">Using Graphics Containers</span></span>
+<span data-ttu-id="aefd6-103">A <xref:System.Drawing.Graphics> 개체와 같은 메서드를 제공 <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, 및 <xref:System.Drawing.Graphics.DrawString%2A> 벡터 이미지, 래스터 이미지 및 텍스트를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-103">A <xref:System.Drawing.Graphics> object provides methods such as <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, and <xref:System.Drawing.Graphics.DrawString%2A> for displaying vector images, raster images, and text.</span></span> <span data-ttu-id="aefd6-104">A <xref:System.Drawing.Graphics> 개체에 나타나는 항목의 방향과 품질에 영향을 주는 몇 가지 속성에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-104">A <xref:System.Drawing.Graphics> object also has several properties that influence the quality and orientation of the items that are drawn.</span></span> <span data-ttu-id="aefd6-105">예를 들어 다듬기 모드 속성은 여부 선 및 곡선 앤티 앨리어싱 적용 되 고 위치 및 회전에 나타나는 항목의 전역 변환 속성에 영향을 줍니다 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-105">For example, the smoothing mode property determines whether antialiasing is applied to lines and curves, and the world transformation property influences the position and rotation of the items that are drawn.</span></span>  
   
- <span data-ttu-id="e4dfd-106">A <xref:System.Drawing.Graphics> 개체는 특정 디스플레이 장치에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-106">A <xref:System.Drawing.Graphics> object is associated with a particular display device.</span></span> <span data-ttu-id="e4dfd-107">사용 하는 경우는 <xref:System.Drawing.Graphics> 창에 그릴 개체는 <xref:System.Drawing.Graphics> 또한 개체는 해당 특정 창에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-107">When you use a <xref:System.Drawing.Graphics> object to draw in a window, the <xref:System.Drawing.Graphics> object is also associated with that particular window.</span></span>  
+ <span data-ttu-id="aefd6-106">A <xref:System.Drawing.Graphics> 개체는 특정 디스플레이 장치에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-106">A <xref:System.Drawing.Graphics> object is associated with a particular display device.</span></span> <span data-ttu-id="aefd6-107">사용 하는 경우는 <xref:System.Drawing.Graphics> 창에 그릴 개체는 <xref:System.Drawing.Graphics> 또한 개체는 해당 특정 창에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-107">When you use a <xref:System.Drawing.Graphics> object to draw in a window, the <xref:System.Drawing.Graphics> object is also associated with that particular window.</span></span>  
   
- <span data-ttu-id="e4dfd-108">A <xref:System.Drawing.Graphics> 개체 간주할 수의 컨테이너 드로잉 영향을 미치는 속성 집합을 포함 하기 때문에 있으며 장치 관련 정보에 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-108">A <xref:System.Drawing.Graphics> object can be thought of as a container because it holds a set of properties that influence drawing and it is linked to device-specific information.</span></span> <span data-ttu-id="e4dfd-109">기존 내에서 보조 컨테이너를 만들 수 <xref:System.Drawing.Graphics> 호출 하 여 개체는 <xref:System.Drawing.Graphics.BeginContainer%2A> 하는 방식의 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-109">You can create a secondary container within an existing <xref:System.Drawing.Graphics> object by calling the <xref:System.Drawing.Graphics.BeginContainer%2A> method of that <xref:System.Drawing.Graphics> object.</span></span>  
+ <span data-ttu-id="aefd6-108">A <xref:System.Drawing.Graphics> 개체 간주할 수의 컨테이너 드로잉 영향을 미치는 속성 집합을 포함 하기 때문에 있으며 장치 관련 정보에 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-108">A <xref:System.Drawing.Graphics> object can be thought of as a container because it holds a set of properties that influence drawing and it is linked to device-specific information.</span></span> <span data-ttu-id="aefd6-109">기존 내에서 보조 컨테이너를 만들 수 <xref:System.Drawing.Graphics> 호출 하 여 개체는 <xref:System.Drawing.Graphics.BeginContainer%2A> 하는 방식의 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-109">You can create a secondary container within an existing <xref:System.Drawing.Graphics> object by calling the <xref:System.Drawing.Graphics.BeginContainer%2A> method of that <xref:System.Drawing.Graphics> object.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e4dfd-110">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e4dfd-110">In This Section</span></span>  
- [<span data-ttu-id="e4dfd-111">Graphics 개체의 상태 관리</span><span class="sxs-lookup"><span data-stu-id="e4dfd-111">Managing the State of a Graphics Object</span></span>](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)  
- <span data-ttu-id="e4dfd-112">설명 어떻게 품질 설정, 클리핑 영역 및 변환의 관리는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-112">Describes how manage the quality settings, clipping area and transformations of a <xref:System.Drawing.Graphics> object.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="aefd6-110">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="aefd6-110">In This Section</span></span>  
+ [<span data-ttu-id="aefd6-111">Graphics 개체의 상태 관리</span><span class="sxs-lookup"><span data-stu-id="aefd6-111">Managing the State of a Graphics Object</span></span>](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)  
+ <span data-ttu-id="aefd6-112">설명 어떻게 품질 설정, 클리핑 영역 및 변환의 관리는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-112">Describes how manage the quality settings, clipping area and transformations of a <xref:System.Drawing.Graphics> object.</span></span>  
   
- [<span data-ttu-id="e4dfd-113">중첩된 Graphics 컨테이너 사용</span><span class="sxs-lookup"><span data-stu-id="e4dfd-113">Using Nested Graphics Containers</span></span>](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)  
- <span data-ttu-id="e4dfd-114">컨테이너의 상태를 제어를 사용 하는 방법을 보여 줍니다는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e4dfd-114">Shows how to use containers to control the state of the <xref:System.Drawing.Graphics> object.</span></span>
+ [<span data-ttu-id="aefd6-113">중첩된 Graphics 컨테이너 사용</span><span class="sxs-lookup"><span data-stu-id="aefd6-113">Using Nested Graphics Containers</span></span>](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)  
+ <span data-ttu-id="aefd6-114">컨테이너의 상태를 제어를 사용 하는 방법을 보여 줍니다는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="aefd6-114">Shows how to use containers to control the state of the <xref:System.Drawing.Graphics> object.</span></span>

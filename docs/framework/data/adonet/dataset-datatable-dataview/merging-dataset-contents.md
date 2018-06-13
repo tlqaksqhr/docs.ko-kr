@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763672"
 ---
 # <a name="merging-dataset-contents"></a><span data-ttu-id="4352d-102">데이터 집합 콘텐츠 병합</span><span class="sxs-lookup"><span data-stu-id="4352d-102">Merging DataSet Contents</span></span>
 <span data-ttu-id="4352d-103"><xref:System.Data.DataSet.Merge%2A> 메서드를 사용하여 <xref:System.Data.DataSet>, <xref:System.Data.DataTable> 또는 <xref:System.Data.DataRow> 배열의 내용을 기존 `DataSet`으로 병합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4352d-103">You can use the <xref:System.Data.DataSet.Merge%2A> method to merge the contents of a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, or <xref:System.Data.DataRow> array into an existing `DataSet`.</span></span> <span data-ttu-id="4352d-104">새 데이터가 기존 `DataSet`으로 병합되는 방법은 몇 가지 요소 및 옵션에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="4352d-104">Several factors and options affect how new data is merged into an existing `DataSet`.</span></span>  

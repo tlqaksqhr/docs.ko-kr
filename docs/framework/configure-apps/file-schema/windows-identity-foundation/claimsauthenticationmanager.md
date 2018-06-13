@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755242"
 ---
 # <a name="ltclaimsauthenticationmanagergt"></a><span data-ttu-id="5d988-102">&lt;claimsAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="5d988-102">&lt;claimsAuthenticationManager&gt;</span></span>
 <span data-ttu-id="5d988-103">들어오는 클레임에 대 한 클레임 인증 관리자를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="5d988-103">Registers a claims authentication manager for the incoming claims.</span></span>  

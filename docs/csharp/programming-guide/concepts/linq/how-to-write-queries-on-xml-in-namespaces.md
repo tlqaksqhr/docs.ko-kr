@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320332"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="1e4fc-102">방법: 네임스페이스에서 XML로 쿼리 작성(C#)</span><span class="sxs-lookup"><span data-stu-id="1e4fc-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
 <span data-ttu-id="1e4fc-103">네임스페이스에 있는 XML에 대한 쿼리를 작성하려면 올바른 네임스페이스를 가진 <xref:System.Xml.Linq.XName> 개체를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e4fc-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  

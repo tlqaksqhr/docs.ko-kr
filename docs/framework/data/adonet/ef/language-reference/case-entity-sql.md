@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761466"
 ---
 # <a name="case-entity-sql"></a><span data-ttu-id="7c65b-102">CASE(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7c65b-102">CASE (Entity SQL)</span></span>
 <span data-ttu-id="7c65b-103">`Boolean` 식 집합을 계산하여 결과를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="7c65b-103">Evaluates a set of `Boolean` expressions to determine the result.</span></span>  

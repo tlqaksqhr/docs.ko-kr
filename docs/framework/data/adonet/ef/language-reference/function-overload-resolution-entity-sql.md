@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762860"
 ---
 # <a name="function-overload-resolution-entity-sql"></a><span data-ttu-id="7974c-102">함수 오버로드 확인(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7974c-102">Function Overload Resolution (Entity SQL)</span></span>
 <span data-ttu-id="7974c-103">이 항목에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 함수의 확인 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7974c-103">This topic describes how [!INCLUDE[esql](../../../../../../includes/esql-md.md)] functions are resolved.</span></span>  

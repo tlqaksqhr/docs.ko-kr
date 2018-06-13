@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752795"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="35a9b-102">&lt;netNamedPipeBinding&gt;의 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="35a9b-102">&lt;security&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="35a9b-103">바인딩에 대한 보안 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="35a9b-103">Defines the security settings for a binding.</span></span>  

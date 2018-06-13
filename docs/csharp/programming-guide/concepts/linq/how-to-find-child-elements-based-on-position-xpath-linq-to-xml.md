@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317504"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="7c485-102">방법: 위치에 따라 자식 요소 찾기(XPath-LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="7c485-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="7c485-103">위치에 따라 요소를 찾으려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c485-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="7c485-104">두 번째 요소를 찾으려고 하거나 세 번째 요소부터 다섯 번째 요소까지 찾으려고 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c485-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  

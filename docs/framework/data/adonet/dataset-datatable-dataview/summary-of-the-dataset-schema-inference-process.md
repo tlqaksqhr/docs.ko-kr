@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760273"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="5ee67-102">데이터 집합 스키마 유추 프로세스 요약</span><span class="sxs-lookup"><span data-stu-id="5ee67-102">Summary of the DataSet Schema Inference Process</span></span>
 <span data-ttu-id="5ee67-103">유추 과정에서는 우선 XML 문서에서 테이블로 유추될 요소를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="5ee67-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="5ee67-104">그런 다음 남아 있는 XML에서 해당 테이블의 열을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="5ee67-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="5ee67-105">중첩된 테이블인 경우에는 유추 과정에서 중첩된 <xref:System.Data.DataRelation> 및 <xref:System.Data.ForeignKeyConstraint> 개체를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="5ee67-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766701"
 ---
 # <a name="ltuserequestheadersformetadataaddressgt"></a><span data-ttu-id="e5bbc-102">&lt;useRequestHeadersForMetadataAddress&gt;</span><span class="sxs-lookup"><span data-stu-id="e5bbc-102">&lt;useRequestHeadersForMetadataAddress&gt;</span></span>
 <span data-ttu-id="e5bbc-103">요청 메시지 헤더에서 메타데이터 주소 정보를 검색할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5bbc-103">Enables the retrieval of metadata address information from the request message headers.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762938"
 ---
 # <a name="modeling-and-mapping"></a><span data-ttu-id="424b0-102">모델링 및 매핑</span><span class="sxs-lookup"><span data-stu-id="424b0-102">Modeling and Mapping</span></span>
 <span data-ttu-id="424b0-103">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 응용 프로그램에 가장 적합한 방식으로 개념적 모델, 저장소 모델 및 두 모델 간의 매핑을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="424b0-103">In the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], you can define the conceptual model, storage model, and the mapping between the two in the way that best suits your application.</span></span> <span data-ttu-id="424b0-104">Visual Studio에서 엔터티 데이터 모델 도구를 사용 하면 만들 수는 있습니다. [edmx 파일](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) 데이터베이스 또는 그래픽 모델과 업데이트 한 다음 데이터베이스나 모델이 변경 될 때 해당 파일에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="424b0-104">The Entity Data Model Tools in Visual Studio allow you to create an .[edmx file](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) from a database or a graphical model and then update that file when either the database or model changes.</span></span>  

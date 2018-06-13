@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761040"
 ---
 # <a name="entity-sql-language"></a><span data-ttu-id="e3660-102">Entity SQL 언어</span><span class="sxs-lookup"><span data-stu-id="e3660-102">Entity SQL Language</span></span>
 <span data-ttu-id="e3660-103">Entity SQL은 SQL과 유사한 저장소 독립적 쿼리 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="e3660-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="e3660-104">Entity SQL을 사용하면 엔터티 데이터를 개체 또는 테이블 형식으로 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3660-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="e3660-105">Entity SQL은 다음의 경우에 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3660-105">You should consider using Entity SQL in the following cases:</span></span>  

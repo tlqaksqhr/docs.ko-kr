@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766750"
 ---
 # <a name="date-and-time-canonical-functions"></a><span data-ttu-id="5ac42-102">날짜 및 시간 정식 함수</span><span class="sxs-lookup"><span data-stu-id="5ac42-102">Date and Time Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="5ac42-103">은 날짜 및 시간 정식 함수를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="5ac42-103"> includes date and time canonical functions.</span></span>  

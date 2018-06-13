@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752457"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a><span data-ttu-id="84273-102">&lt;issuerChannelBehaviors&gt;의 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="84273-102">&lt;add&gt; of &lt;issuerChannelBehaviors&gt;</span></span>
 <span data-ttu-id="84273-103">STS와 통신할 때 사용할 끝점 동작을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="84273-103">Adds an endpoint behavior to be used when communicating with an STS.</span></span>  

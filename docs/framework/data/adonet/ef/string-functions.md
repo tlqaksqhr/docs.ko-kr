@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766480"
 ---
 # <a name="string-functions"></a><span data-ttu-id="939cb-102">문자열 함수</span><span class="sxs-lookup"><span data-stu-id="939cb-102">String Functions</span></span>
 <span data-ttu-id="939cb-103">.NET Framework Data Provider for SQL Server(SqlClient)에서는 입력 `String`에 대해 연산을 수행하고 `String` 또는 숫자 값 결과를 반환하는 `String` 함수를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="939cb-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides `String` functions that perform operations on an input `String` and return a `String` or numeric value result.</span></span> <span data-ttu-id="939cb-104">이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="939cb-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="939cb-105">공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="939cb-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  

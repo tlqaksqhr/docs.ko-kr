@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754904"
 ---
 # <a name="ltwsdlimportergt"></a><span data-ttu-id="13cd8-102">&lt;wsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="13cd8-102">&lt;wsdlImporter&gt;</span></span>
 <span data-ttu-id="13cd8-103">WS-Policy 첨부 파일과 함께 WSDL(웹 서비스 기술 언어) 1.1 메타데이터를 가져오는 모든 WSDL 가져오기를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="13cd8-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  

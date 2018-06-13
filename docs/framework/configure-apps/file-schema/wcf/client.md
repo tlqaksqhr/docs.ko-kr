@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752639"
 ---
 # <a name="ltclientgt"></a><span data-ttu-id="8d87d-102">&lt;클라이언트&gt;</span><span class="sxs-lookup"><span data-stu-id="8d87d-102">&lt;client&gt;</span></span>
 <span data-ttu-id="8d87d-103">`client` 요소는 클라이언트가 연결할 수 있는 끝점 목록을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8d87d-103">The `client` element defines a list of endpoints that a client can connect to.</span></span>  

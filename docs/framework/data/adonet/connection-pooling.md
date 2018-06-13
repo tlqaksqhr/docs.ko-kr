@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755528"
 ---
 # <a name="connection-pooling"></a><span data-ttu-id="25615-102">연결 풀링</span><span class="sxs-lookup"><span data-stu-id="25615-102">Connection Pooling</span></span>
 <span data-ttu-id="25615-103">데이터 소스에 연결하는 작업은 시간이 많이 걸릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25615-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="25615-104">ADO.NET 연결을 여는 비용을 최소화 하려면 이라는 최적화 기법을 사용 *연결 풀링*를 반복적으로 열고 연결을 닫는의 비용 최소화 합니다.</span><span class="sxs-lookup"><span data-stu-id="25615-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="25615-105">연결 풀링은 .NET Framework 데이터 공급자마다 각각 다른 방식으로 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="25615-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  

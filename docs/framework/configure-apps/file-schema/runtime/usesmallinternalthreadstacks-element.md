@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745489"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a><span data-ttu-id="23c2d-102">&lt;UseSmallInternalThreadStacks&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="23c2d-102">&lt;UseSmallInternalThreadStacks&gt; Element</span></span>
 <span data-ttu-id="23c2d-103">요청을 공용 언어 런타임 (CLR) 메모리를 줄이지 이러한 스레드에 대 한 기본 스택 크기를 사용 하는 대신 내부적으로 사용 하는 특정 스레드를 만들 때에 명시적 스택 크기를 지정 하 여 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="23c2d-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  

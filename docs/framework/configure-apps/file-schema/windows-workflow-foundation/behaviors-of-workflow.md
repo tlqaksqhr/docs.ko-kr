@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767312"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a><span data-ttu-id="b45ee-102">워크플로의 &lt;behaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="b45ee-102">&lt;behaviors&gt; of workflow</span></span>
 <span data-ttu-id="b45ee-103">이 요소에 포함 된 **serviceBehaviors** 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="b45ee-103">This element contains the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="b45ee-104">컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b45ee-104">Each element in the collection defines behavior elements consumed by workflow services.</span></span> <span data-ttu-id="b45ee-105">각 동작 요소는 고유한으로 식별 되 **이름** 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="b45ee-105">Each behavior element is identified by its unique **name** attribute.</span></span>  

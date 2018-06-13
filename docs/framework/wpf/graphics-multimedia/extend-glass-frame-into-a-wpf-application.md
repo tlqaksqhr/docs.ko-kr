@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557513"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="f4075-102">투명 효과 프레임을 WPF 응용 프로그램으로 확장</span><span class="sxs-lookup"><span data-stu-id="f4075-102">Extend Glass Frame Into a WPF Application</span></span>
 <span data-ttu-id="f4075-103">이 항목에서는 확장 하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램의 클라이언트 영역에 투명 효과 프레임입니다.</span><span class="sxs-lookup"><span data-stu-id="f4075-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>  
