@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525849"
 ---
 # <a name="polygons-in-gdi"></a>GDI+의 다각형
 다각형은 세 개 이상의 직선 면으로 폐쇄형된 도형입니다. 예를 들어 삼각형 세 면 있는 다각형 사각형은 네 면 있는 다각형 있고, 오각형은 5 면 합니다. 다음 그림에는 여러 다각형과 보여 줍니다.  

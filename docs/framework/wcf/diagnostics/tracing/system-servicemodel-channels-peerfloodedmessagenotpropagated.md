@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478194"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 PeerNode에서 메시지를 받았지만 환경에 전파되지 않았습니다.  

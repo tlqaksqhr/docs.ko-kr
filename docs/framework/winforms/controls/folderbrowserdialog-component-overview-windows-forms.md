@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525010"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 폴더를 선택 하 고 검색에 사용 되는 모달 대화 상자. 내에서 새 폴더를 만들 수도 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소입니다.  

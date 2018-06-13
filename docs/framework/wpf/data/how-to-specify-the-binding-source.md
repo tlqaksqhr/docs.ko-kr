@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556876"
 ---
 # <a name="how-to-specify-the-binding-source"></a>방법: 바인딩 소스 지정
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져온 개체를 참조합니다. 이 항목에서는 바인딩 소스를 지정하는 여러 가지 방법을 설명합니다.  

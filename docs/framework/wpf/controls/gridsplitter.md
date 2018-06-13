@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550896"
 ---
 # <a name="gridsplitter"></a>GridSplitter
 <xref:System.Windows.Controls.GridSplitter> 간격의 열 또는 행을 재배포는 <xref:System.Windows.Controls.Grid> 제어 합니다.  

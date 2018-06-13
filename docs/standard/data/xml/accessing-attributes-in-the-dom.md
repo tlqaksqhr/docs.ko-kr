@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572023"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM에서 특성 액세스
 특성은 요소의 자식 항목이 아닌, 요소의 속성입니다. 이러한 구분은 XML DOM(문서 개체 모델)의 형제, 부모 및 자식 노드를 탐색하는 데 사용되는 메서드로 인하여 중요하게 작용합니다. 예를 들어 **PreviousSibling** 및 **NextSibling** 메서드는 요소와 특성 사이 또는 특성 간을 탐색하는 데 사용되지 않습니다. 대신, 특성은 요소의 속성으로서 요소에 속하며 **parentNode** 속성이 아닌, **OwnerElement** 속성과 고유한 탐색 메서드를 갖습니다.  

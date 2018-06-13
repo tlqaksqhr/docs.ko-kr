@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524705"
 ---
 # <a name="lines-curves-and-shapes"></a>선, 곡선 및 도형
 벡터 그래픽 부분의 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선, 곡선 그리기를 그리기 및 도형 채우기 사용 됩니다.  

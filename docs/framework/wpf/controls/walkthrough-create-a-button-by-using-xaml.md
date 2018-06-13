@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557994"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>연습: XAML을 사용하여 단추 만들기
 이 연습의 목표는 애니메이션된 단추를 사용 하 여 Windows Presentation Foundation (WPF) 응용 프로그램을 만드는 방법을 알아보려면입니다. 이 연습에서는 스타일 및 서식 파일을 사용 하 여 코드 재사용 및 단추 선언에서 단추 논리 분리를 허용 하는 사용자 지정된 단추 리소스를 만듭니다. 이 연습은 전체 코드를 작성은 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522538"
 ---
 # <a name="how-to-translate-image-colors"></a>방법: 이미지 색 변환
 번역 네 가지 구성 요소 중 하나 이상에 값을 추가합니다. 다음 표에 번역을 나타내는 색 매트릭스 항목이 제공 됩니다.  

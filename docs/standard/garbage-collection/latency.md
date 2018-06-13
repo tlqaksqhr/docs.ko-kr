@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573902"
 ---
 # <a name="latency-modes"></a>대기 모드
 개체를 회수하려면, 가비지 수집기가 응용 프로그램의 실행 스레드를 모두 중지해야 합니다. 응용 프로그램이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 수집이 중요한 시간에 발생하여 성능이 저하될 수 있습니다. <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.  

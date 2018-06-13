@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514666"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 지속성 데이터베이스
 이 단원에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 데이터베이스 뷰에 대한 세부 정보를 제공하고, 기본 인스턴스 데이터 속성을 deserialize하는 방법과 비지속형 인스턴스를 쿼리하는 방법을 보여 줍니다.  

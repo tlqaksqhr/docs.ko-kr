@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a691f61fcd25b7aaaae90e6adcc3c2ee0c421cf0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424260"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip 메서드
 열거형에 커서를 앞으로 항목의 지정한 수 만큼 이동 합니다.  

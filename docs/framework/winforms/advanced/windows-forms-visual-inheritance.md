@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524415"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows Forms 시각적 상속
 경우에 따라 프로젝트에서 이전 프로젝트에서 작성한 것과 비슷한 폼을 필요로 하는지 결정할 수 있습니다. 또는 이후에 프로젝트 내에서 다시 사용할 워터마크나 특정 컨트롤 레이아웃 등의 설정이 포함되고 반복마다 원본 폼 템플릿에 대한 수정이 포함된 기본적인 폼을 만들려고 할 수 있습니다. 폼 상속을 사용하면 기본 폼을 만든 다음 기본 폼을 상속하고 필요한 모든 원래 설정을 유지하면서 수정할 수 있습니다.  

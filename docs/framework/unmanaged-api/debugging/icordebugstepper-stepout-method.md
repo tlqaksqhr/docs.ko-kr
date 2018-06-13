@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f663f5134cf34bf9beb66da20bbb5886baff5415
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419168"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut 메서드
 단일 단계를 완료 하는 현재 프레임 호출 프레임으로 제어를 반환 하 고 포함 스레드를 통해이 ICorDebugStepper 하면 됩니다.  

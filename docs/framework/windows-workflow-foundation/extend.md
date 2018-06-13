@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511893"
 ---
 # <a name="extending-windows-workflow-foundation"></a>Windows Workflow Foundation 확장
 다음 섹션에서는 사용자 지정 활동 및 디자이너 외부에 다시 호스트 된 환경에서 사용 하 여 Windows WF (Workflow Foundation)를 확장 하는 방법을 설명 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505709"
 ---
 # <a name="one-way"></a>단방향
 이 샘플에서는 단방향 서비스 작업이 있는 서비스 계약을 보여 줍니다. 클라이언트는 양방향 서비스 작업에서처럼 서비스 작업이 완료될 때까지 대기하지 않습니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 사용 하 여는 `wsHttpBinding` 바인딩. 이 샘플의 서비스는 자체적으로 호스팅되는 콘솔 응용 프로그램으로서 이를 통해 요청을 수신하고 처리하는 서비스를 볼 수 있습니다. 클라이언트 역시 콘솔 응용 프로그램입니다.  

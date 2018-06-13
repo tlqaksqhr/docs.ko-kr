@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508321"
 ---
 # <a name="user-name-password-validator"></a>User Name Password Validator
 이 샘플에서는 사용자 지정 UserNamePassword 유효성 검사기를 구현하는 방법을 보여 줍니다. 사용자 이름/암호 쌍이 데이터베이스 같은 외부 저장소에 저장되어 있는 경우처럼 기본 제공되는 UserNamePassword 유효성 검사 모드가 응용 프로그램 요구 사항에 맞지 않는 경우 유용합니다. 이 샘플에서는 두 개의 특정 사용자 이름/암호 쌍을 확인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 클라이언트에서는 이러한 사용자 이름/암호 쌍을 사용하여 서비스의 인증을 얻습니다.  

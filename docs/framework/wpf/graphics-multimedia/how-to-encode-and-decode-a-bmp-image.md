@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558853"
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>방법: BMP 이미지 인코딩 및 디코딩
 다음 예제에서는 암호 해독 하 고 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> 및 <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> 개체입니다.  

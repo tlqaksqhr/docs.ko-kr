@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571087"
 ---
 # <a name="protected-members"></a>보호된 멤버
 단독으로 보호 된 멤버는 확장성을 제공 하지 않습니다 하지만 더 강력한 서브클래싱을 통해 확장성을 내릴 수 있습니다. 기본 공용 인터페이스를 불필요 하 게 하므로 복잡해 집니다 하지 않고 고급 사용자 지정 옵션을 표시 데 사용할 수 있습니다.  

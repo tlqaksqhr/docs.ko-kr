@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 591b3e43712832156283baf16e3d65b09172fe14
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428496"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy 열거형
 수정 하는 방법을 나타내는 [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) 인터페이스 개체입니다. 이 열거는 더 이상 사용 되지 않습니다.  

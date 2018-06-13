@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551125"
 ---
 # <a name="control-customization"></a>컨트롤 사용자 지정
 이 범주에서는 다양 한 기본 클래스, 인터페이스 및 기타 요소와 완벽 하 게 기능을 만드는 데 사용 되는 개념을 다룹니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제어 합니다.  

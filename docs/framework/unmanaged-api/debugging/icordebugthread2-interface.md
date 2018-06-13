@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c348cf28a6330523d1a490c136a3214e37d13f4c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423051"
 ---
 # <a name="icordebugthread2-interface1"></a>ICorDebugThread2 Interface1
 ICorDebugThread 인터페이스를 논리적으로 확장으로 사용 됩니다.  

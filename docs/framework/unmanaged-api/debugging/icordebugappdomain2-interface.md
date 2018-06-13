@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff6ffdd733cf6e7b923d88d057d7cd230c8d8541
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407117"
 ---
 # <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 Interface1
 배열, 포인터, 함수 포인터 및 참조 형식만 사용 하는 메서드를 제공 합니다. 이 인터페이스는 ICorDebugAppDomain 인터페이스의 확장입니다.  

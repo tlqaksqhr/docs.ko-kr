@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521474"
 ---
 # <a name="how-to-create-vertical-text"></a>방법: 세로 텍스트 만들기
 사용할 수는 <xref:System.Drawing.StringFormat> 가로 대신 세로로 텍스트는 그릴지를 지정 하는 개체입니다.  

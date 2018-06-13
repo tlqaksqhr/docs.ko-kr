@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcdb5883e109d7e0c73c8fb76ee61b52cf23091f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407003"
 ---
 # <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 열거형
 열거할 프로세스 형식을 식별합니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6b68d4e3d51fdb50290319de804a78c1a78a07a4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447390"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 메서드
 토큰을 가져옵니다 한 methoddef 묶여 있는 메서드에 대 한 지정 된 <xref:System.Type> 올려진 지정 된 이름 및 메타 데이터 서명을 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521744"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>방법: 빗살 무늬로 도형 채우기
 빗살 무늬 두 가지 색에서 만들어진: 배경색과 배경 위에 패턴을 형성 하는 줄 하나에 대 한 합니다. 빗살 무늬로 닫힌된 셰이프를 채울를 사용 하 여 한 <xref:System.Drawing.Drawing2D.HatchBrush> 개체입니다. 다음 예제에는 빗살 무늬로 타원을 채우는 방법을 보여 줍니다.  

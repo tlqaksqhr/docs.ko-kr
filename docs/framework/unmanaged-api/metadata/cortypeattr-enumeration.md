@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449275"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 열거형
 형식 메타데이터를 나타내는 값을 포함합니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7d280cd20b8ff76efe977983e3e9f6da32990c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413961"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip 메서드
 열거형에 커서를 앞으로 항목의 지정한 수 만큼 이동 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561074"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>방법: Storyboard를 사용하여 속성에 애니메이션 효과 주기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 속성 애니메이션 효과를 합니다. 속성을 사용 하 여 애니메이션 효과를 줄는 <xref:System.Windows.Media.Animation.Storyboard>, 애니메이션 효과 적용 하 고 만들 수도 하려는 각 속성에 대 한 애니메이션을 만들는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 포함 하도록 합니다.  

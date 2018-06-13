@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553899"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>방법: ListView에 있는 열의 가로 맞춤 변경
 기본적으로에서 각 열의 내용은 <xref:System.Windows.Controls.ListViewItem> 는 왼쪽 정렬 합니다. 제공 하 여 각 열의 맞춤을 변경할 수는 <xref:System.Windows.DataTemplate> 설정는 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 내에서 요소의 속성에는 <xref:System.Windows.DataTemplate>합니다. 이 항목에서는 방법을 <xref:System.Windows.Controls.ListView> 맞춤에서 한 열을 변경 하는 방법 및 기본적으로 해당 내용을 맞춥니다.는 <xref:System.Windows.Controls.ListView>합니다.  

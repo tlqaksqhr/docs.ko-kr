@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408673"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 인터페이스
 공용 언어 런타임 (CLR) 환경에서 응용 프로그램을 디버깅 하는 데 사용할 수 있는 메서드를 제공 합니다.  

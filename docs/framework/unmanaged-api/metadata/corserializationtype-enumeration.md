@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446661"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 열거형
 공용 언어 런타임에서 개체가 serialize 되는 방식을 지정 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558241"
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel> 요소는 요소의 렌더링을 제어 하는 구성 요소-크기 및 차원, 위치, 및 자식 콘텐츠를 정렬 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 미리 정의 된 <xref:System.Windows.Controls.Panel> 요소 뿐만 아니라 사용자 지정을 생성 하는 기능 <xref:System.Windows.Controls.Panel> 요소입니다.  

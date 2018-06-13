@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571399"
 ---
 # <a name="member-design-guidelines"></a>멤버 디자인 지침
 메서드, 속성, 이벤트, 생성자 및 필드 통칭 하 여 멤버 라고 합니다. 멤버는 궁극적으로 기준인 프레임 워크 기능 프레임 워크의 최종 사용자에 게 노출 되는 방법입니다.  

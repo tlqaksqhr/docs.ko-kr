@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573791"
 ---
 # <a name="asynchronous-programming-model-apm"></a>APM(비동기 프로그래밍 모델)
 <xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 **Begin***OperationName*과 **End***OperationName*이라는 두 가지 메서드로 구현됩니다. 이 두 메서드를 사용하면 각각 비동기 작업 *OperationName*이 시작되고 종료됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  

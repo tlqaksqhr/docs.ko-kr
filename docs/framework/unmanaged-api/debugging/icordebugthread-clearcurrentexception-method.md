@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1875badfb27b005d63c5b5104c17b87ec7fd51d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423457"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a>ICorDebugThread::ClearCurrentException 메서드
 이 메서드가 구현되지 않았습니다. 이 메서드를 사용하지 마십시오.  
