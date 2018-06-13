@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590688"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="7e6f1-102">방법: 응용 프로그램 이벤트 로그에 쓰기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e6f1-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
 <span data-ttu-id="7e6f1-103">`My.Application.Log` 및 `My.Log` 개체를 사용하여 응용 프로그램에서 발생하는 이벤트에 대한 정보를 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7e6f1-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="7e6f1-104">이 예제에서는 `My.Application.Log` 가 응용 프로그램 이벤트 로그에 추적 정보를 쓰도록 이벤트 로그 수신기를 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7e6f1-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>  

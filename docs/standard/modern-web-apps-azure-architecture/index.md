@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580265"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="d7645-103">ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계</span><span class="sxs-lookup"><span data-stu-id="d7645-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582163"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="dadd6-102">Thread.Suspend, 가비지 컬렉션, 안전한 시점</span><span class="sxs-lookup"><span data-stu-id="dadd6-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
 <span data-ttu-id="dadd6-103">스레드에서 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>를 호출하면 시스템에서 스레드 일시 중단이 요청되었음을 인식하고 스레드를 실제로 일시 중단하기 전에 안전 지점에 도달할 때까지 스레드가 실행되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="dadd6-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="dadd6-104">스레드의 안전 지점은 가비지 수집을 수행할 수 있는 실행 지점입니다.</span><span class="sxs-lookup"><span data-stu-id="dadd6-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  
