@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568019"
 ---
 # <a name="copying-document-fragments"></a>문서 조각 복사
 **XmlDocumentFragment** 노드를 만든 다음, 그 아래에 노드를 추가할 수 있습니다. **InsertNode** 메서드를 사용하여 **XmlDocumentFragment**를 삽입하면 XML DOM(문서 개체 모델)에 **XmlDocumentFragment** 노드가 복사되지 않고 해당 노드의 자식 노드가 삽입됩니다.  

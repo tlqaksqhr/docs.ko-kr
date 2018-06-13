@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462301"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 함수
 지정된 된 개체에서 새로 파생된 클래스 개체를 만듭니다.    

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573583"
 ---
 # <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
 모든 프레임 워크 디자이너를 향하도록 기본 디자인 결정 사항 중 하나 (예: 참조 형식)는 클래스 또는 구조체 (값 형식)으로 형식을 디자인을 여부입니다. 참조 형식 및 값 형식의 동작의 차이점에 잘 알고는이 선택 하는 중요 합니다.  

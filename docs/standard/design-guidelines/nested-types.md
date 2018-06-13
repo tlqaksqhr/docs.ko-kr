@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573661"
 ---
 # <a name="nested-types"></a>중첩 형식
 중첩된 형식은 바깥쪽 형식의 호출 하는 다른 형식의 범위 내에 정의 된 하는 형식이입니다. 중첩된 형식은 바깥쪽 형식의 모든 멤버 권한이 있습니다. 예를 들어 바깥쪽 형식의 모든 상위 항목에 정의 된 필드를 보호 및 바깥쪽 형식에 정의 된 전용 필드에 액세스를 권한이 있습니다.  

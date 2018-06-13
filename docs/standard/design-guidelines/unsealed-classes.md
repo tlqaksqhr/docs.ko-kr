@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571663"
 ---
 # <a name="unsealed-classes"></a>봉인되지 않은 클래스
 From, 봉인된 클래스는 상속 될 수 없습니다 및 확장성을 방지 합니다. 반면, 클래스에서 상속 되는 봉인 되지 않은 클래스 라고 합니다.  

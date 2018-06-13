@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572062"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>배열에서 문화권을 구분하지 않는 문자열 작업 수행
 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 및 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 메서드의 오버로드는 기본적으로 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용하여 문화권 구분 정렬을 수행합니다. 이러한 메서드에서 반환한 문화권 구분 결과는 정렬 순서의 차이로 인해 문화권에 따라 다를 수 있습니다. 문화권 구분 동작을 제거하려면 `comparer` 매개 변수를 수락하는 이 메서드의 오버로드 중 하나를 사용합니다. `comparer` 매개 변수는 배열의 요소를 비교할 때 사용할 <xref:System.Collections.IComparer> 구현을 지정합니다. 매개 변수의 경우 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>를 사용하는 사용자 지정 고정 비교자 클래스를 지정합니다. 사용자 지정 고정 비교자 클래스의 예제는 [컬렉션에서 문화권을 구분하지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 항목의 “SortedList 클래스 사용” 하위 항목에서 제공합니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575286"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 지침에 사용 하기 위한 간단한 방법이 장 레이아웃을 만드는 경우, 형식, 멤버 및 매개 변수를 읽기 쉽게에 대 한 확인 식별자를 일관 되 게 적용 될 때.  

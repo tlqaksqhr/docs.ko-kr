@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a35ec4e3c3110616ac20cd31db134371838deda0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461931"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete 함수
 지정된 된 키 컨테이너를 삭제합니다.  

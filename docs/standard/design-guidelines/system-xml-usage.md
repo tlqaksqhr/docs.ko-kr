@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572816"
 ---
 # <a name="systemxml-usage"></a>System.Xml 사용법
 이 섹션에 있는 여러 유형의 사용에 대 한 설명 <xref:System.Xml?displayProperty=nameWithType> XML 데이터를 나타내기 위해 사용할 수 있는 네임 스페이스입니다.  

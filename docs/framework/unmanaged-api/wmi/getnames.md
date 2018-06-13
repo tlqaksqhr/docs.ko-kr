@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461983"
 ---
 # <a name="getnames-function"></a>GetNames 함수
 하위 집합 또는 모든 개체의 속성 이름을 검색합니다. 
