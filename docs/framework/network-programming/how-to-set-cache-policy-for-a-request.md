@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395429"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>방법: 요청에 캐시 정책 설정
 다음 예제에서는 요청에 대한 캐시 정책을 설정하는 방법을 보여 줍니다. 예제 입력은 http://www.contoso.com/ 등의 URI입니다.  

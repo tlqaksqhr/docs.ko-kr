@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393870"
 ---
 # <a name="lttypeparametergt-element-net-native"></a>&lt;TypeParameter&gt; 요소(.NET 네이티브)
 메서드로 전달된 Type 인수가 나타내는 형식에 정책을 적용합니다.  

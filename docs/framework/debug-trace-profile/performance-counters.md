@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394422"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework의 성능 카운터
 이 항목에서는 [성능 모니터](http://technet.microsoft.com/library/cc749249.aspx)에서 찾을 수 있는 성능 카운터 목록을 제공합니다.  

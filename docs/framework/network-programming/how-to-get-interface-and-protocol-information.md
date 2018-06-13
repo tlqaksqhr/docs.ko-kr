@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395088"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>방법: 인터페이스 및 프로토콜 정보 가져오기
 이 샘플은 네트워크 인터페이스의 TCP 통계를 읽는 방법을 보여 줍니다.  

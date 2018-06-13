@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536243"
 ---
 # <a name="property-changed-events"></a>속성 변경 이벤트
 원하는 경우 라는 속성이 알림을 보내도록 컨트롤 *PropertyName* 명명 된 이벤트를 정의 하는 변경 내용을 *PropertyName* `Changed` 라는 이름의 메서드 `On` *PropertyName* `Changed` 이벤트를 발생 시키는 합니다. 단어를 추가할 Windows Forms의 명명 규칙은 *Changed* 속성의 이름입니다. 속성 변경 이벤트에 대 한 관련된 이벤트 대리자 형식이 <xref:System.EventHandler>, 이벤트 데이터 형식이 고 <xref:System.EventArgs>합니다. 기본 클래스 <xref:System.Windows.Forms.Control> 와 같은 대부분의 속성 변경 이벤트를 정의 <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>, 등입니다. 이벤트에 대 한 배경 정보를 참조 하십시오. [이벤트](../../../../docs/standard/events/index.md) 및 [Windows Forms 컨트롤의 이벤트](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444232"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 열거형
 공용 언어 런타임 (CLR)의 시작 동작을 나타내는 값을 포함 합니다. 기본적으로 가비지 컬렉션은 비 동시 및 전용 기본 클래스 라이브러리는 도메인 중립적으로 영역에 로드 됩니다.  

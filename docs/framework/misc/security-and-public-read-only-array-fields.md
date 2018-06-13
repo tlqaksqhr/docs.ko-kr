@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392631"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>보안 및 공용 읽기 전용 배열 필드
 읽기 전용 공용 배열 필드를 수정할 수 있기 때문에 경계 동작이 나 응용 프로그램의 보안을 정의 하는 관리 되는 라이브러리에서 읽기 전용 공용 배열 필드를 사용 하지 마십시오.  

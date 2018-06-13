@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 76d850363940ff53135fc66ec057ee67822fa40d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424666"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion 메서드
 메서드 버전을 가져옵니다. 메서드 버전은 1에서 시작 하 고 메서드가 다시 컴파일될 때마다 증가 합니다. 메서드를 변경 하지 않고 컴파일할 수 있습니다.  

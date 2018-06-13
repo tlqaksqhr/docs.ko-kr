@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7996d5800e99d8e6161e24f34604aff3e4e906bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422005"
 ---
 # <a name="icordebugnativeframe-interface1"></a>ICorDebugNativeFrame Interface1
 네이티브 프레임에 사용 되는 ICorDebugFrame의 특수화 된 구현입니다.  

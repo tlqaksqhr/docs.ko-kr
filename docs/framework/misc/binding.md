@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392254"
 ---
 # <a name="ltbindinggt"></a>&lt;바인딩&gt;
 `binding` 요소를 사용하여 WCF(Windows Communication Foundation)에서 제공하는 미리 정의된 다양한 바인딩 형식을 구성할 수 있습니다.  

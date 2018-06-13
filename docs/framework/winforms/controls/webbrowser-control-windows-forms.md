@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538595"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 컨트롤(Windows Forms)
 Windows Forms `WebBrowser` 컨트롤이 웹 페이지를 호스팅하고 웹 검색 응용 프로그램에 기능을 제공 합니다.  

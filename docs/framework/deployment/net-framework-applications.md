@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391653"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework 응용 프로그램 배포
 .NET Framework 설명서의 이 섹션에서는 어셈블리를 로드하고, 어셈블리 참조를 확인하고, 네이티브 이미지 생성을 통해 응용 프로그램의 성능을 향상시키는 지침을 포함하여 .NET Framework 응용 프로그램 배포에 대한 중요한 정보를 제공합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541874"
 ---
 # <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정
 (WPF (Windows Presentation Foundation)는 강력한 집합을 제공 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 응용 프로그램에서 텍스트를 포함 하는 데 있습니다. 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 같은 <xref:System.Windows.Controls.TextBlock>, 가장 일반적인 제공 하 고 일반 텍스트 표현에 요소를 사용 합니다. 그리기 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 같은 <xref:System.Windows.Media.GlyphRunDrawing> 및 <xref:System.Windows.Media.FormattedText>, 드로잉에 서식 있는 텍스트를 포함 하는 방법을 제공 합니다. 고급 회원 가장 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 서식 엔진이 텍스트 표현 텍스트 저장소 관리, 실행 텍스트 서식 지정 관리, 포함 된 개체 관리 등의 모든 측면을 제어 하는 확장 가능한 텍스트를 제공 합니다.  

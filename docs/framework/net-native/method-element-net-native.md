@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393340"
 ---
 # <a name="ltmethodgt-element-net-native"></a>&lt;메서드&gt; 요소(.NET 네이티브)
 생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.  

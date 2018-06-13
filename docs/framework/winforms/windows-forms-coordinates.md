@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537878"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms 좌표
 Windows Form에 대 한 좌표계 장치 좌표를 기반으로 하며 Windows Forms에 그리기 하는 경우 측정값의 기본 단위는 장치 단위 (일반적으로 픽셀)입니다. X-좌표는 오른쪽으로, 위쪽에서 아래쪽 증가 y 좌표가 증가 화면의 점은 x 및 y 좌표 쌍에 의해 설명 합니다. 화면 출처의 위치는 화면 또는 클라이언트 좌표를 지정 하는 여부에 따라 달라 집니다.  

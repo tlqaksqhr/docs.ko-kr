@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538912"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap 태그 확장
 포함된 된 프로필이 없는 비트맵 소스를 지정 하는 방법을 제공 합니다. 색 컨텍스트 프로필 붙습니다 / [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]와 마찬가지로 이미지 원본 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]합니다.  
