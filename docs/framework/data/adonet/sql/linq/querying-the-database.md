@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358666"
 ---
 # <a name="querying-the-database"></a>데이터베이스 쿼리
 이 항목 그룹에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트에서 쿼리를 개발하고 실행하는 방법에 대해 설명합니다.  

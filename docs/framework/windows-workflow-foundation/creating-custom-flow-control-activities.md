@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513216"
 ---
 # <a name="creating-custom-flow-control-activities"></a>사용자 지정 흐름 제어 작업 만들기
 .NET Framework에는 추상 프로그래밍 구조(예: <xref:System.Activities.Statements.Flowchart>) 또는 표준 프로그래밍 문(예: <xref:System.Activities.Statements.If>)와 유사하게 작동하는 다양한 흐름 제어 작업이 포함되어 있습니다. 이 항목에서는 샘플 프로젝트 중 하나의 아키텍처를 설명 [비 제네릭 ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)합니다.  

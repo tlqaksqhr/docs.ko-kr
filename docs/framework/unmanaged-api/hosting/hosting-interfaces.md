@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2bef9e1671b8487a6702cce71106c84a2984317
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436162"
 ---
 # <a name="hosting-interfaces"></a>호스팅 인터페이스
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에 공용 언어 런타임 (CLR)를 통합 하 사용할 수 있습니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a99bda7a6d21fea159c8f616f2db7d12b1f27579
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435416"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort 메서드
 공용 언어 런타임 (CLR)를 나타내는 현재 작업을 중단 하도록 지시 [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스 즉시 및 무조건 합니다.  

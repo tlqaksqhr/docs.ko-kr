@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744384"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에 어셈블리 설치
 강력한 이름의 어셈블리를 전역 어셈블리 캐시(GAC)에 설치하는 방법은 두 가지입니다.  

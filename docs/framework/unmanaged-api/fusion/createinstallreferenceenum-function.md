@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e35654b03f68a306329ef488289cfecd6f012484
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431576"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum 함수
 에 대 한 포인터를 가져옵니다는 [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) 목록이 지정된 된 어셈블리에 대 한 응용 프로그램의 한 참조를 나타내는 인스턴스입니다.  

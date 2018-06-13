@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516611"
 ---
 # <a name="transaction-activities-in-wf"></a>WF의 트랜잭션 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 모델링 트랜잭션, 보정 및 취소에 대한 여러 가지 시스템 제공 활동이 있습니다. 이러한 프로그래밍 모델을 사용하면 워크플로가 비즈니스 논리 및 오류 처리에 변경이 있는 경우 프로세스를 계속 전달할 수 있습니다. 트랜잭션, 보정 및 취소 하는 방법에 대 한 자세한 내용은 참조 [트랜잭션을](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md), [보정](../../../docs/framework/windows-workflow-foundation/compensation.md), 및 [취소](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)합니다.  

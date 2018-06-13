@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355300"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
 쿼리에 값이 XML 문자열인 매개 변수를 필요한 경우 개발자의 인스턴스를 사용 하 여 해당 값을 제공할 수는 **SqlXml** 데이터 형식입니다. 까다로운 기법이; 실제로 SQL Server의 XML 열 정확히 같은 방식으로 다른 데이터 형식으로의 매개 변수 값을 허용 합니다.  

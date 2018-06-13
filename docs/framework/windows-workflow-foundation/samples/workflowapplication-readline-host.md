@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518540"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 호스트
 이 샘플은 제네릭 ReadLine 호스트입니다. 포함된 `ReadLine` 활동(또는 문자열을 사용하여 다시 시작된 책갈피에서 데이터를 가져오는 활동과 같은 기타 활동)을 사용하여 워크플로를 로드하고 실행할 수 있습니다. `WriteLine` 활동의 출력이나 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 확장에 기록하는 내용은 호스트 창에 표시됩니다. 유휴 상태인 인스턴스에 사용할 수 있는 책갈피는 콤보 상자에 나타납니다. 책갈피를 선택하고 텍스트를 입력한 다음 책갈피 다시 시작 단추를 누르면 워크플로 실행이 계속됩니다. 선택한 워크플로를 취소하거나 중단하거나 종료할 수도 있습니다. 기본적으로 지속성이 설정되어 있으므로, 호스트를 종료하고 다시 가져올 수 있으며 인스턴스 목록은 데이터베이스에 저장된 인스턴스로 채워집니다. 추적 기능은 활동 수준에 자세한 추적을 추가하는 옵션을 사용하여 <xref:System.Activities.WorkflowApplication> 수준 이벤트를 호스트에 출력하는 데 사용됩니다.   

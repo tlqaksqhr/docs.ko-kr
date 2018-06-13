@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517688"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>선 및 채우기 알파 혼합
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 색이 알파, 빨간색, 녹색 및 파란색에 대 한 8 비트는 32 비트 값입니다. 알파 값 색의 투명도 이면-범위 배경색으로 색 혼합 됩니다. 알파 값 범위는 0에서 255까지, 여기서 0 완전히 투명 한 색을 나타내는 경우 255 완전히 불투명 한 색을 나타냅니다.  

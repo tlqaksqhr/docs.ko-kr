@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94ba53e4af114773a347d15b7308dc4c3567154e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435708"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask 인터페이스
 호스트 공용 언어 런타임 (CLR)의 요청을 만들기 위해 하거나 관련된 작업에 대 한 CLR에 알림을 제공 하는 데 사용할 수 있는 메서드를 제공 합니다.  

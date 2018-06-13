@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517159"
 ---
 # <a name="transaction-rollback"></a>트랜잭션 롤백
 이 샘플에서는 앰비언트 <xref:System.Activities.NativeActivity>에 액세스하여 앰비언트 트랜잭션을 가져와서 명시적으로 롤백하는 사용자 지정 <xref:System.Activities.RuntimeTransactionHandle>를 만드는 방법을 보여 줍니다.  

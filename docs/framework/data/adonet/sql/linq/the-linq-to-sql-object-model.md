@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365386"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 개체 모델
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], 개발자의 프로그래밍 언어로 표현 되는 개체 모델은 관계형 데이터베이스의 데이터 모델에 매핑됩니다. 그런 다음 개체 모델에 따라 데이터 작업이 수행됩니다.  

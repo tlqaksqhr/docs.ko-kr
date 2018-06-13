@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518646"
 ---
 # <a name="workflow-execution-properties"></a>워크플로 실행 속성
 CLR은 TLS(스레드 로컬 저장소)를 통해 각 스레드의 실행 컨텍스트를 유지 관리합니다. 이 실행 컨텍스트는 스레드 ID, 앰비언트 트랜잭션 및 현재 권한 집합과 같은 잘 알려진 스레드 속성은 물론 명명된 슬롯과 같은 사용자 정의 스레드 속성을 제어합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358881"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>데이터 서비스 공급자(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터를 노출 하기 위한 여러 공급자 모델을 지원 한 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 항목에서 제공하는 정보를 통해 데이터 소스에 가장 적합한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 공급자를 선택할 수 있습니다.  

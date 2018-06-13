@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398252"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri의 국가별 리소스 식별자 지원
 <xref:System.Uri?displayProperty=nameWithType> 클래스는 IRI(International Resource Identifier) 및 IDN(Internationalized Domain Names)을 통해 확장되었습니다. 이러한 향상된 기능은 .NET Framework 3.5, 3.0 SP1 및 2.0 SP1에서 사용할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515845"
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 사용자 지정 활동
 이 샘플의 Windows WF (Workflow Foundation), 단순한 사용자 지정 활동을 만드는 방법을 비롯 한 몇 가지 주요 기능을 보여 줍니다. 이러한 기능에는 C#으로 사용자 지정 활동을 만들고 `in` 및 `out` 인수(<xref:System.Activities.InArgument> 및 <xref:System.Activities.OutArgument>)를 사용하는 기능이 포함됩니다.  

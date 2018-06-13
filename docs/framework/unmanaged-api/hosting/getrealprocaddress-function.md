@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429639"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 함수
 공용 언어 런타임 (CLR)의 최신 설치 버전에서 내보낸 지정 된 함수의 주소를 가져옵니다.  

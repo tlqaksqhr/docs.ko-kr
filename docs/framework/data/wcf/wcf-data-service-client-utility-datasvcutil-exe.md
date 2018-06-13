@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364528"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)
 DataSvcUtil.exe는에서 제공 하는 명령줄 도구 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 을 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 하 고.NET Framework 클라이언트 응용 프로그램에서 데이터 서비스에 액세스 하는 데 필요한 클라이언트 데이터 서비스 클래스를 생성 합니다. 이 유틸리티는 다음 메타데이터 소스를 사용하여 데이터 클래스를 생성할 수 있습니다.  

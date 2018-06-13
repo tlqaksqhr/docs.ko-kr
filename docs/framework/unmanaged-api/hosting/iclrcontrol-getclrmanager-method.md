@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f375afde247c3a9b95e1220df747d3f2b95e2840
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436431"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 메서드
 공용 언어 런타임 (CLR)를 구성 하는 호스트 צ ְ ײ 관리자 형식의 모든 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.  

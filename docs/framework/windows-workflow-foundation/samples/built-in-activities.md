@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519329"
 ---
 # <a name="built-in-activities"></a>기본 제공 활동
 이 섹션에는 기본 제공 Windows WF (Workflow Foundation) 활동을 보여 주는 샘플이 포함 되어 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520044"
 ---
 # <a name="corporate-purchase-process"></a>기업 구매 프로세스
 이 샘플에서는 최상의 제안을 자동으로 선택하는 구매 프로세스를 기반으로 매우 기본적인 RFP(제안 요청서)를 만드는 방법을 보여 줍니다. 여기에서는 <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> 및 <xref:System.Activities.Statements.ForEach%601>과 사용자 지정 활동을 결합하여 이 프로세스를 나타내는 워크플로를 만듭니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515064"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 이 섹션에서는 프로그래밍 모델, 샘플 및 도구에는 Windows WF (Workflow Foundation)에 대해 설명 합니다.  

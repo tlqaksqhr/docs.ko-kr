@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c1d83b32402343f3cd2b5403e328698abd6a930
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436217"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 함수
 호스트 프로세스에 지정된 된 버전의 공용 언어 런타임 (CLR)를 로드할 수 있도록 합니다.  

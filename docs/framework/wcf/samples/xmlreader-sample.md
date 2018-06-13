@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506890"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 샘플
 XmlReader 샘플에서는 <xref:System.Xml.XmlReader>를 사용하는 메시지 본문의 처리를 보여 줍니다. 샘플 기반는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 계산기 서비스를 구현 하는 합니다. 더할 값의 배열이 포함된 메시지를 받는 서비스 작업인 `Sum`이 추가되었습니다. 이 서비스는 <xref:System.Xml.XmlReader>를 사용하여 메시지를 읽습니다.  

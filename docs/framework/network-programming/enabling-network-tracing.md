@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390463"
 ---
 # <a name="enabling-network-tracing"></a>네트워크 추적 사용
 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 응용 프로그램에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 응용 프로그램에서 네트워크 추적을 사용하도록 설정하려면 다음 작업을 완료해야 합니다.  

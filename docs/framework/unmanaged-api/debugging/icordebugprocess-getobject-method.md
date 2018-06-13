@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416395"
 ---
 # <a name="icordebugprocessgetobject-method"></a>ICorDebugProcess::GetObject 메서드
 이 메서드는 구현되지 않았습니다.  

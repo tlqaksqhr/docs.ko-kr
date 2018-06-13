@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518566"
 ---
 # <a name="application-settings-for-custom-controls"></a>사용자 지정 컨트롤에 대한 응용 프로그램 설정
 사용자 지정 컨트롤 컨트롤 공급 업체 응용 프로그램에서 호스팅되는 응용 프로그램 설정을 유지 하는 기능을 제공 하려면 특정 작업을 완료 해야 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514526"
 ---
 # <a name="flowchart-workflows"></a>순서도 워크플로
 순서도는 잘 알려진 프로그램 설계용 패러다임입니다. Flowchart 활동은 일반적으로 순차적이 아닌 워크플로를 구현하는 데 사용하지만, `FlowDecision` 노드를 사용하지 않는 경우 순차적 워크플로에도 사용할 수 있습니다.  

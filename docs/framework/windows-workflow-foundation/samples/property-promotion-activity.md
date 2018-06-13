@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519927"
 ---
 # <a name="property-promotion-activity"></a>속성 승격 활동
 이 샘플에서는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 승격 기능을 워크플로 작성 환경에 직접 통합하는 종단 간 솔루션을 제공합니다. 승격 기능의 사용을 단순화하는 워크플로 확장, 워크플로 활동 및 구성 요소의 컬렉션이 제공됩니다. 또한 샘플에는 이 컬렉션을 사용하는 방법을 보여 주는 간단한 워크플로가 포함되어 있습니다.  

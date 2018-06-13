@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358679"
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 클라이언트에서 인증할 서비스의 UPN(User Principal Name)을 지정합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428901"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES 열거형
 가비지 컬렉션에 대 한 기록 통계를 지정 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519189"
 ---
 # <a name="persisting-a-workflow-application"></a>워크플로 응용 프로그램 유지
 이 샘플에서는 <xref:System.Activities.WorkflowApplication>을 실행하고, 유휴 상태가 되면 언로드한 다음, 다시 로드하여 실행을 계속하는 방법을 보여 줍니다.  

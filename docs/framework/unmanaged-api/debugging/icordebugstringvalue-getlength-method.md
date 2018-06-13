@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e62539304817432fcab8f3e0958e5a70b371b83d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416949"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength 메서드
 이 ICorDebugStringValue이 참조 하는 문자열에서 문자 수를 가져옵니다.  

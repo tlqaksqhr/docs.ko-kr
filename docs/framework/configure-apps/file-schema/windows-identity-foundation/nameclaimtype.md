@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755099"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 클레임 유형을 지정 하는 설정의 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 클레임 유형을 검색 하기 위해 사용 되는 <xref:System.Security.Claims.Claim> 의 컬렉션에서 <xref:System.Security.Claims.ClaimsIdentity> 에서 반환 된 개체는 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 이 토큰 처리기의 메서드. 일치 하는 클레임 값의 이름으로 설정 됩니다는 <xref:System.Security.Principal.IIdentity> 토큰 처리기에서 생성 합니다.  

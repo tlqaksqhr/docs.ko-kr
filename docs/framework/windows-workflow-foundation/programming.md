@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515690"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 프로그래밍
 이 섹션에는 능숙 한 Windows WF (Workflow Foundation) 프로그래머를 되기 위해 이해 해야 할 기본 항목 집합이 포함 되어 있습니다.  

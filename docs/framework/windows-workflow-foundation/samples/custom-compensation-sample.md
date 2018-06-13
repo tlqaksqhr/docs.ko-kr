@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514326"
 ---
 # <a name="custom-compensation-sample"></a>사용자 지정 보정 샘플
 이 샘플에서는 <xref:System.Activities.Statements.CompensableActivity>와 해당 보정 처리기를 사용하여 사용자 지정 보정 논리를 정의하는 방법을 보여 줍니다. 이 샘플에서 모델링하는 시나리오는 트럭 렌탈 대행사입니다.  

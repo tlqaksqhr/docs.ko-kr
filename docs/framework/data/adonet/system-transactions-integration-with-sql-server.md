@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365750"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 2.0에는 <xref:System.Transactions> 네임스페이스를 통해 액세스할 수 있는 트랜잭션 프레임워크가 추가되었습니다. 이 프레임워크는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]을 포함하여 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에 완전히 통합된 방식으로 트랜잭션을 노출시킵니다.  

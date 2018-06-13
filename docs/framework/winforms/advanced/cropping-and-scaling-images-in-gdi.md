@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521556"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>GDI+에서 이미지 자르기 및 배율 조정
 사용할 수 있습니다는 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스를 그리기 및 벡터 이미지 및 래스터 이미지 위치를 지정 합니다. <xref:System.Drawing.Graphics.DrawImage%2A> 오버 로드 된 메서드를 이므로 여러 가지 인수를 제공할 수 있습니다.  

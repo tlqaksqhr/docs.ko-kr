@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516602"
 ---
 # <a name="using-collection-activities"></a>컬렉션 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.AddToCollection%601> 인터페이스를 구현하는 클래스를 사용하여 <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, <xref:System.Activities.Statements.RemoveFromCollection%601> 및 <xref:System.Collections.ICollection> 컬렉션 활동을 사용하는 방법과 컬렉션을 반복하여 컬렉션의 각 요소 내용을 출력하는 사용자 지정 활동을 만드는 방법을 보여 줍니다. `PrintCollection`이라는 사용자 지정 활동은 `Numbers`라는 컬렉션의 항목 멤버를 콘솔에 출력합니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435944"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 메서드
 호스트가 완료 되는 작업을 CLR의 현재 다시 사용할 수 있도록 공용 언어 런타임 (CLR) 알립니다 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스를 다른 작업을 나타내는입니다.  

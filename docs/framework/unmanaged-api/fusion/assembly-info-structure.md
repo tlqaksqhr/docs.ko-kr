@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430572"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 구조체
 전역 어셈블리 캐시에 등록 되어 있는 어셈블리에 대 한 정보를 포함 합니다.  

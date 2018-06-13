@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516248"
 ---
 # <a name="rules-samples"></a>규칙 샘플
 이 단원에는 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]의 워크플로 규칙 엔진을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764998"
 ---
 # <a name="entity-key"></a>엔터티 키
 *엔터티 키* 는 [속성](../../../../docs/framework/data/adonet/property.md) 또는의 속성 집합은 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 신분을 확인 하는 데 사용 되는 합니다. 엔터티 키를 구성하는 속성은 디자인 타임에 선택됩니다. 엔터티 키 속성의 값 내에서 엔터티 형식 인스턴스를 고유 하 게 식별 해야 합니다는 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md) 런타임 시. 엔터티 키를 구성하는 속성을 선택하여 엔터티 집합에서 인스턴스의 고유성을 보장해야 합니다.  

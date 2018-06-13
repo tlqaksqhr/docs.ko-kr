@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520242"
 ---
 # <a name="using-the-invokepowershell-activity"></a>InvokePowerShell 활동 사용
 InvokePowerShell 샘플에서는 `InvokePowerShell` 활동을 사용하여 Windows PowerShell 명령을 호출하는 방법을 보여 줍니다.  

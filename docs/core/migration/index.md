@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217183"
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>.csproj 형식으로 .NET Core 프로젝트 마이그레이션
 

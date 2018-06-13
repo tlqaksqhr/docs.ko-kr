@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508201"
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *끝점 id*서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 끝점에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 끝점 ID 값과 끝점 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 끝점에 연결됩니다. 이 역할에 대 한 보호 *피싱* 하면 클라이언트가 악성 서비스에서 호스팅된 끝점에 리디렉션되지 않도록 하 여 합니다.  

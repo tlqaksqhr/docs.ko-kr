@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365815"
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표준 쿼리 연산자를 SQL 명령으로 변환합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환에 대 한 실행 의미 체계를 결정합니다.  

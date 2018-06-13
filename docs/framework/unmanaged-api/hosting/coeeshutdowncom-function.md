@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431892"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
 공용 언어 런타임 (CLR) 내부 런타임 호출 가능 래퍼 RCW ()를 보유 하는 모든 인터페이스 포인터를 해제 하기 위해를 강제로 수행 합니다. 모든 RCW 캐시 해제 것과 효과가 있습니다. 이 전역 함수에서 사용 되지 않는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 대신, 특정 런타임에 대 한 진입점을 사용 합니다.  

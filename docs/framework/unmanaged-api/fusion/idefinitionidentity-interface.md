@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429347"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity 인터페이스
 현재 범위에서 응용 프로그램을 정의 하는 코드의 고유한 시그니처를 나타냅니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745005"
 ---
 # <a name="ltprobinggt-element"></a>&lt;검색이&gt; 요소
 공용 언어 런타임에서 어셈블리를 로드할 때 검색에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.  

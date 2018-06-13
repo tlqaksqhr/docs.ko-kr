@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519138"
 ---
 # <a name="entity-activities"></a>엔터티 활동
 이 샘플에서는 Windows Workflow Foundation와 ADO.NET Entity Framework를 사용 하 여 데이터 액세스를 단순화 하는 방법을 보여 줍니다.  
