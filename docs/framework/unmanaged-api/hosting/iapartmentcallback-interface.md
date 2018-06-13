@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffa06fd42b5cfa09817bae9f0b3a3810e30f99c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430969"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback 인터페이스
 콜백을 아파트 내에서 수행 하기 위한 메서드를 제공 합니다. *아파트* 는 같은 스레드 액세스 요구 사항을 공유 하는 개체에 대 한 프로세스 내에서 논리적 컨테이너입니다.  

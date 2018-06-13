@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498012"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF 웹 HTTP 프로그래밍 모델
 Windows Communication Foundation (WCF) Web HTTP 프로그래밍 모델에는 개발자가 WCF 서비스 작업을 비 SOAP 끝점을 노출할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557006"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>방법: 데이터 수집 뷰의 개체 탐색
 뷰는 동일한 데이터 수집을 정렬, 필터링 또는 그룹화에 따라 다양 한 방법으로 볼 수 있도록 합니다. 뷰는 또한 현재 레코드 포인터 개념을 제공 하 고 포인터를 이동 하는 사용 하도록 설정 합니다. 현재 개체를 가져올 수 있을 뿐만 아니라에서 제공 하는 기능을 사용 하 여 데이터 컬렉션의 개체를 통해 이동 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Data.CollectionView> 클래스입니다.  

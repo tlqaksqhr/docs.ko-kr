@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 52246ac531853eea87464e265f731ece0d350e22
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426038"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 인터페이스
 싱크 알림 위한 메서드를 선언합니다.  

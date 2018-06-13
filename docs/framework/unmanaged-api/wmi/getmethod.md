@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460449"
 ---
 # <a name="getmethod-function"></a>GetMethod 함수
 지정 된 메서드에 대 한 정보를 검색합니다.

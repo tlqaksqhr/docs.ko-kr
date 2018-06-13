@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498646"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>WCF에 필요한 운영 체제 리소스
 Windows Communication Foundation (WCF) 함수에 운영 체제에서 제공 되는 여러 리소스에 따라 달라 집니다. 다음 표에서는 이러한 리소스를 보여 줍니다.  

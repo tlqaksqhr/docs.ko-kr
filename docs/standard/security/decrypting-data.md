@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589099"
 ---
 # <a name="decrypting-data"></a>데이터 해독
 암호 해독은 암호화의 반대 작업입니다. 비밀 키 암호화의 경우 데이터를 암호화하는 데 사용된 키 및 IV를 모두 알고 있어야 합니다. 공개 키 암호화의 경우 공개 키(개인 키를 사용하여 데이터가 암호화된 경우) 또는 개인 키(공개 키를 사용하여 데이터가 암호화된 경우)를 알고 있어야 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752067"
 ---
 # <a name="creating-assemblies"></a>어셈블리 만들기
 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 등의 IDE 또는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공된 컴파일러와 도구를 사용하여 단일 파일 또는 복사 파일 어셈블리를 만들 수 있습니다. 가장 단순한 어셈블리는 간단한 이름을 가지고 단일 응용 프로그램 도메인에 로드되는 단일 파일입니다. 이 어셈블리는 응용 프로그램 디렉터리 외부에 있는 다른 어셈블리가 참조할 수 없고 버전 확인이 진행되지 않습니다. 어셈블리로 구성된 응용 프로그램을 제거하려면 어셈블리가 있는 디렉터리를 삭제하면 됩니다. 대부분 개발자의 경우 응용 프로그램을 배포하는 데는 이러한 기능이 포함된 어셈블리만 있으면 됩니다.  

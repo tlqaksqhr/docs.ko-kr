@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7884d53630ca13a30d7b4efd55d46684a9dd7d30
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427644"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal Coclass
 인터페이스 포인터의 마샬링을 관리 하기 위한 인터페이스를 제공 합니다.  

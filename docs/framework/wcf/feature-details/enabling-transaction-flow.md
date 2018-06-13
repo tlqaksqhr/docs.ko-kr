@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497093"
 ---
 # <a name="enabling-transaction-flow"></a>트랜잭션 흐름 사용
 Windows Communication Foundation (WCF) 트랜잭션 흐름을 제어 하기 위한 매우 유연성 있는 옵션을 제공 합니다. 특성 및 구성을 조합하여 서비스의 트랜잭션 흐름 설정을 나타낼 수 있습니다.  

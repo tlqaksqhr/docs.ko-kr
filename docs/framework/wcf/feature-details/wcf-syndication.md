@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499169"
 ---
 # <a name="wcf-syndication"></a>WCF 배포
 Windows Communication Foundation (WCF)에 읽기 및 만들 뿐만 아니라 서비스 끝점에서 노출할 수 있는 Atom, RSS 또는 기타 사용자 지정 형식의 배포 피드를 쉽게 작업할 지원을 제공 합니다. 이 단원의 항목에서는 배포에 대한 이 프로그래밍 모델에 대해 자세히 설명합니다.  

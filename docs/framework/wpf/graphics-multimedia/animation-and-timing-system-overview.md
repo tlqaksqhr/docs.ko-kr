@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557968"
 ---
 # <a name="animation-and-timing-system-overview"></a>애니메이션 및 타이밍 시스템 개요
 이 항목에서는 타이밍 시스템에 애니메이션을 사용 하는 방법을 설명 <xref:System.Windows.Media.Animation.Timeline>, 및 <xref:System.Windows.Media.Animation.Clock> 속성에 애니메이션을 적용 하는 클래스입니다.  

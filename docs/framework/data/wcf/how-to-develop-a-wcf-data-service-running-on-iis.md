@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362516"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>방법: IIS에서 실행되는 WCF Data Services 개발
 이 항목에서는 사용 하는 방법을 보여 줍니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 인터넷 정보 서비스 (IIS)에서 실행 중인 ASP.NET 웹 응용 프로그램에 의해 호스팅되는 Northwind 샘플 데이터베이스를 기반으로 하는 데이터 서비스를 만드는 합니다. ASP.NET 개발 서버에서 실행 되는 ASP.NET 웹 응용 프로그램으로 동일한 Northwind 데이터 서비스를 만드는 방법의 예제를 보려면는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.  

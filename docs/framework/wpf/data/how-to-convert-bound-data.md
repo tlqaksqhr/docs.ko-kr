@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556642"
 ---
 # <a name="how-to-convert-bound-data"></a>방법: 바인딩된 데이터 변환
 이 예제에서는 바인딩에 사용 되는 데이터에 변환을 적용 하는 방법을 보여 줍니다.  

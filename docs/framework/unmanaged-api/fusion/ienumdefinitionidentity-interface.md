@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432356"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 인터페이스
 컬렉션의 열거자 역할을 `IDefinitionIdentity` 개체입니다.  
