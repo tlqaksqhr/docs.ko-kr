@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742025"
 ---
 # <a name="full-code-listings"></a><span data-ttu-id="f33d7-102">전체 코드 목록</span><span class="sxs-lookup"><span data-stu-id="f33d7-102">Full Code Listings</span></span>
 <span data-ttu-id="f33d7-103">이 항목에는 [조작 및 관성](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) 프로세서를 사용하는 응용 프로그램에 대한 전체 코드 목록이 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f33d7-103">This topic contains the entire code listing for an application that uses [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) processors.</span></span>  

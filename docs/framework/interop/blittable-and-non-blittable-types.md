@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392293"
 ---
 # <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="8aaf8-102">Blittable 형식 및 비 Blittable 형식</span><span class="sxs-lookup"><span data-stu-id="8aaf8-102">Blittable and Non-Blittable Types</span></span>
 <span data-ttu-id="8aaf8-103">대부분의 데이터 형식은 관리되는 메모리와 관리되지 않는 메모리 둘 다에서 공통된 표현을 사용하며 interop 마샬러의 특별한 처리가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8aaf8-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="8aaf8-104">이러한 형식은 관리 코드와 비관리 코드 간에 전달될 때 변환이 필요하지 않기 때문에 *blittable 형식*이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8aaf8-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  

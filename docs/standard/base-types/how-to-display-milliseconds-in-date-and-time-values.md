@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568006"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a><span data-ttu-id="4ba61-102">방법: 날짜 및 시간 값의 밀리초 표시</span><span class="sxs-lookup"><span data-stu-id="4ba61-102">How to: Display Milliseconds in Date and Time Values</span></span>
 <span data-ttu-id="4ba61-103"><xref:System.DateTime.ToString?displayProperty=nameWithType>과 같은 기본 날짜 및 시간 서식 지정 메서드에는 시간 값의 시, 분, 초가 포함되지만 밀리초 구성 요소는 제외됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ba61-103">The default date and time formatting methods, such as <xref:System.DateTime.ToString?displayProperty=nameWithType>, include the hours, minutes, and seconds of a time value but exclude its milliseconds component.</span></span> <span data-ttu-id="4ba61-104">이 항목에서는 형식이 지정된 날짜 및 시간 문자열에 날짜 및 시간의 밀리초 구성 요소를 포함하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4ba61-104">This topic shows how to include a date and time's millisecond component in formatted date and time strings.</span></span>  

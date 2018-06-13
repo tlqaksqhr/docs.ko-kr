@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744852"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="802b8-102">&lt;appDomainManagerAssembly&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="802b8-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
 <span data-ttu-id="802b8-103">프로세스의 기본 응용 프로그램 도메인용 응용 프로그램 도메인 관리자를 제공하는 어셈블리를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="802b8-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759155"
 ---
 # <a name="handling-dataadapter-events"></a><span data-ttu-id="9e6d2-102">DataAdapter 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="9e6d2-102">Handling DataAdapter Events</span></span>
 <span data-ttu-id="9e6d2-103">ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터가 변경되었을 때 응답하는 데 사용할 수 있는 세 가지 이벤트를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9e6d2-103">The ADO.NET <xref:System.Data.Common.DataAdapter> exposes three events that you can use to respond to changes made to data at the data source.</span></span> <span data-ttu-id="9e6d2-104">다음 표에서는 `DataAdapter` 이벤트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9e6d2-104">The following table shows the `DataAdapter` events.</span></span>  

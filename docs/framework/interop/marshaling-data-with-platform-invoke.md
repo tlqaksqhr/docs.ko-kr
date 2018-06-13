@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391318"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="7752d-102">플랫폼 호출을 사용하여 데이터 마샬링</span><span class="sxs-lookup"><span data-stu-id="7752d-102">Marshaling Data with Platform Invoke</span></span>
 <span data-ttu-id="7752d-103">관리되지 않는 라이브러리에서 내보낸 함수를 호출하려면 .NET Framework 응용 프로그램의 관리 코드에 관리되지 않는 함수를 나타내는 함수 프로토타입이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="7752d-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="7752d-104">데이터를 제대로 마샬링하도록 플랫폼에서 호출할 수 있는 프로토타입을 만들려면 다음을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7752d-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  

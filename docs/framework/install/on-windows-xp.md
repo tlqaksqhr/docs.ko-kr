@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392004"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a><span data-ttu-id="06f51-103">Windows XP 및 Windows Server 2003에 .NET Framework 설치</span><span class="sxs-lookup"><span data-stu-id="06f51-103">Install the .NET Framework on Windows XP and Windows Server 2003</span></span>
 

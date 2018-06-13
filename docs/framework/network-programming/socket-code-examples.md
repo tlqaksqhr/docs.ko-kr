@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395855"
 ---
 # <a name="socket-code-examples"></a><span data-ttu-id="f8bd8-102">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="f8bd8-102">Socket Code Examples</span></span>
 <span data-ttu-id="f8bd8-103">다음 코드 예제에서는 <xref:System.Net.Sockets.Socket> 클래스를 원격 네트워크 서비스에 연결할 클라이언트 및 원격 클라이언트의 연결을 수신 대기할 서버로 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f8bd8-103">The following code examples demonstrate how to use the <xref:System.Net.Sockets.Socket> class as a client to connect to remote network services and as a server to listen for connections from remote clients.</span></span>  

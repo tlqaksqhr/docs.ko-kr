@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741752"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a><span data-ttu-id="98fd1-102">방법: 공개/개인 키 쌍 만들기</span><span class="sxs-lookup"><span data-stu-id="98fd1-102">How to: Create a Public-Private Key Pair</span></span>
 <span data-ttu-id="98fd1-103">강력한 이름으로 어셈블리를 서명하려면 공개/개인 키 쌍이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="98fd1-103">To sign an assembly with a strong name, you must have a public/private key pair.</span></span> <span data-ttu-id="98fd1-104">이 공개/개인 암호화 키 쌍은 컴파일 중에 강력한 이름의 어셈블리를 만드는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="98fd1-104">This public and private cryptographic key pair is used during compilation to create a strong-named assembly.</span></span> <span data-ttu-id="98fd1-105">[Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 키 쌍을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98fd1-105">You can create a key pair using the [Strong Name tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).</span></span> <span data-ttu-id="98fd1-106">대개 키 쌍 파일의 확장명은 .snk입니다.</span><span class="sxs-lookup"><span data-stu-id="98fd1-106">Key pair files usually have an .snk extension.</span></span>  

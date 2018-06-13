@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394045"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a><span data-ttu-id="6efd3-102">System.Net.PeerToPeer.Collaboration 네임스페이스 정보</span><span class="sxs-lookup"><span data-stu-id="6efd3-102">About the System.Net.PeerToPeer.Collaboration Namespace</span></span>
 <span data-ttu-id="6efd3-103"><xref:System.Net.PeerToPeer.Collaboration> 네임스페이스는 피어 투 피어 공동 작업 인프라를 사용하여 피어 공동 작업 활동을 구현하는 데 사용되는 클래스 및 API를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6efd3-103">The <xref:System.Net.PeerToPeer.Collaboration> namespace provides classes and APIs that are used to implement peer collaboration activities using the Peer-to-Peer Collaboration Infrastructure.</span></span>  

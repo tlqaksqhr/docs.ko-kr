@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741895"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="74726-102">&lt;smtp&gt; 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="74726-102">&lt;smtp&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="74726-103">배달 형식, 배달 방법 구성 들어오고 보내는 전자 메일에 대 한 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="74726-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  

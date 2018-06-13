@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393934"
 ---
 # <a name="enabling-and-disabling-ipv6"></a><span data-ttu-id="1b90d-102">IPv6 사용 및 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="1b90d-102">Enabling and Disabling IPv6</span></span>
 <span data-ttu-id="1b90d-103">IPv6 프로토콜을 사용하려면 IPv6을 지원하는 운영 체제 버전을 실행 중인지 확인하고 운영 체제와 네트워킹 클래스가 제대로 구성되어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="1b90d-103">To use the IPv6 protocol, ensure that you are running a version of the operating system that supports IPv6 and ensure that the operating system and the networking classes are configured properly.</span></span>  

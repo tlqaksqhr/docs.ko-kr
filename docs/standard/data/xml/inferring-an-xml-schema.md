@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568786"
 ---
 # <a name="inferring-an-xml-schema"></a><span data-ttu-id="4f2c5-102">XML 스키마 유추</span><span class="sxs-lookup"><span data-stu-id="4f2c5-102">Inferring an XML Schema</span></span>
 <span data-ttu-id="4f2c5-103">SOM(스키마 개체 모델) <xref:System.Xml.Schema.XmlSchemaInference> 클래스를 사용하여 XML 문서 구조에서 XSD(XML 스키마 정의 언어) 스키마를 유추하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4f2c5-103">Describes how to use the Schema Object Model (SOM) <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XML Schema definition language (XSD) schema from the structure of an XML document.</span></span>  
