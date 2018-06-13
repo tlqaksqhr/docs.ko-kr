@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1380864a66d904c26ece14899de78b1b5b7f0408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437146"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale 메서드
 현재 실행 중인 작업에서 공용 언어 런타임을 (CLR) 사용자 인터페이스 (UI) 로캘 또는 culture 호스트가 수정 했음을 알립니다.  

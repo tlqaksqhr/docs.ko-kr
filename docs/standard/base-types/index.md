@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567642"
 ---
 # <a name="working-with-base-types-in-net"></a>.NET의 기본 형식 작업
 이 섹션에서는 형식 지정, 변환 및 일반 작업을 포함하여 .NET 기본 형식 작업에 대해 설명합니다.  

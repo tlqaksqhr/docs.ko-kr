@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518105"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity 만들기
 이 샘플에서는 <xref:System.Activities.DynamicActivity> 활동을 사용하여 런타임에 활동을 만드는 두 가지 방법을 보여 줍니다.  

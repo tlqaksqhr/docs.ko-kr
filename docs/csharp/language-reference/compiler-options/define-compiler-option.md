@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218718"
 ---
 # <a name="-define-c-compiler-options"></a>-define(C# 컴파일러 옵션)
 **-define** 옵션은 프로그램의 모든 소스 코드 파일에서 `name`을 기호로 정의합니다.  

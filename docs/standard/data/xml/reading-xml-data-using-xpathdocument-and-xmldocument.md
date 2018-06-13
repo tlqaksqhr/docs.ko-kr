@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575468"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기
 두 가지 방법으로 <xref:System.Xml.XPath?displayProperty=nameWithType> 네임스페이스에서 XML 문서를 읽을 수 있습니다. 하나는 읽기 전용 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서를 읽는 것이고 다른 하나는 <xref:System.Xml.XmlDocument> 네임스페이스에서 편집 가능한 <xref:System.Xml?displayProperty=nameWithType> 클래스를 사용하여 XML 문서를 읽는 것입니다.  

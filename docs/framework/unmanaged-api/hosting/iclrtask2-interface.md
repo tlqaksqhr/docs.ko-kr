@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed0d2ff3b64bab026087e13d54314eca86181d8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438810"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 인터페이스
 모든 기능을 제공 된 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인터페이스; 또한 스레드 중단 현재 스레드에서 지연 될 수 있는 메서드를 제공 합니다.  

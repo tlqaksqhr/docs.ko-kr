@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442168"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
 특성을 적용하는 데 유효한 응용 프로그램 요소를 지정합니다.  

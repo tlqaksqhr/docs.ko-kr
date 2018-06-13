@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 661aeff56955f729a5728f00f563bb2bef971a9f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444394"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 인터페이스
 어셈블리 간의 매핑 기능을 제공합니다.  

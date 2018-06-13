@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5620df2ab2b2530332df02cf3f11a00d6b6c8fb4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441616"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore 인터페이스
 호스트 별도로 공용 언어 런타임 (CLR) 어셈블리와 모듈을 로드 하는 데 사용할 수 있는 메서드를 제공 합니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443328"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 구조체
 해당 버전 및 로캘, 프로세서, 및 운영 체제에 대 한 지원 수준을 포함 하 여 참조 된 어셈블리에 대 한 정보를 포함 합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95dd084520d1e93803a91f0c4d01214ed0d3744d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436243"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 인터페이스
 유사한 기능을 제공 된 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 다음과 같이 변경 된 버전 1,.NET Framework에서 제공 되는 인터페이스:  

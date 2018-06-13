@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517510"
 ---
 # <a name="constraint-types"></a>제약 조건 형식
 이 샘플에서는 워크플로에 제약 조건을 적용하는 서로 다른 두 가지 방법을 보여 줍니다. 그 중 하나는 활동 내부에서(빌드) 적용하는 방법이고, 다른 하나는 활동 외부에서(정책) 적용하는 방법입니다. 이 시나리오에서는 타사 소프트웨어 회사의 활동 작성자가 두 인수 사이의 관계에 대한 유효성을 검사하려는 경우를 가정합니다. 이 경우 비용이 금액을 초과하지 않아야 합니다. 이는 일반적인 유효성 검사 빌드 제약 조건입니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523925"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>GDI+에서 그리기 화면 제한
 클리핑은 그리기 특정 사각형 또는 영역을 제한 하는 작업이 포함 됩니다. 다음 그림과 문자열 "Hello" 하트 모양의 영역 잘립니다.  

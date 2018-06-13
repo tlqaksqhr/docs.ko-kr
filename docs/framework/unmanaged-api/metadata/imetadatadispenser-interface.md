@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b7c183a6ef61b97920fef5c80b4abad50da25bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444872"
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser 인터페이스
 새 메타 데이터 범위를 작성 하거나 기존 열 메서드를 제공 합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441334"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 인터페이스
 표준 Win32 가상 메모리 함수를 사용 하는 대신 공용 언어 런타임 (CLR)에서 호스트를 통해 가상 메모리를 요청을 허용 하는 메서드를 제공 합니다.  

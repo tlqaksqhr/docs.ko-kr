@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494864"
 ---
 # <a name="choosing-a-message-encoder"></a>메시지 인코더 선택
 이 항목에서는 Windows Communication Foundation (WCF)에 포함 되어 있는 메시지 인코더 선택 조건에 설명: 이진, 텍스트 및 전송 최적화 메커니즘 MTOM (Message).  

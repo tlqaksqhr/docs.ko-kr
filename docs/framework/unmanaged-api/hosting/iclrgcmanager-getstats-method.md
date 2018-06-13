@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96673049d37034781dff9f206db86a1d5d953d52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436402"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats 메서드
 공용 언어 런타임의 가비지 수집 시스템에 대 한 현재 통계의 집합을 가져옵니다.  

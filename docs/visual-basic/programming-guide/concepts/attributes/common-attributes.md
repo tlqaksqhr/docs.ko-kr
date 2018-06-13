@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644162"
 ---
 # <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
 이 항목에서는 Visual Basic 프로그램에 가장 일반적으로 사용 되는 특성에 설명 합니다.  

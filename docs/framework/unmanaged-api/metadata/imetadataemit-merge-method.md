@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98997bfbb7d3c9343f78438b1195222565c5b9ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444553"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::병합 메서드
 병합 해야 하는 범위 목록에 지정된 된 가져오기 범위를 추가 합니다.  

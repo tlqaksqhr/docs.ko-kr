@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604265"
 ---
 # <a name="as-clause-visual-basic"></a>As 절(Visual Basic)
 소개는 `As` 선언 문 또는 제네릭 형식 매개 변수의 제약 조건 목록에서 데이터 형식을 식별 하는 절.  

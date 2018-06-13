@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523996"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>방법: Modifiers 및 GenerateMember 속성 사용
 Windows Form에는 구성 요소를 배치 하는 경우 두 속성은 디자인 환경에서 제공 됩니다: `GenerateMember` 및 `Modifiers`합니다. `GenerateMember` 속성 Windows Forms 디자이너 구성 요소에 대 한 멤버 변수를 생성 하는 시기를 지정 합니다. `Modifiers` 속성은 해당 멤버 변수에 할당 된 액세스 한정자입니다. 하는 경우의 값은 `GenerateMember` 속성은 `false`, 값은 `Modifiers` 속성이 적용 되지 않습니다.  

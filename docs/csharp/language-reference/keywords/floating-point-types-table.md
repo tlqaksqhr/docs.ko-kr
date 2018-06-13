@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219276"
 ---
 # <a name="floating-point-types-table-c-reference"></a>부동 소수점 형식 표(C# 참조)
 다음 표는 부동 소수점 형식의 자릿수와 근사 범위를 보여 줍니다.  

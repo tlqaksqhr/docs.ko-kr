@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569534"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>유지되지 않고 확장되는 엔터티 참조
 엔터티 참조가 확장되어 해당 참조가 나타내는 텍스트로 바뀌면 **XmlEntityReference** 노드가 생성되지 않습니다. 대신 엔터티 선언이 구문 분석되고 선언의 내용에서 생성된 노드가 **XmlEntityReference**를 대신하여 복사됩니다. 따라서 `&publisher;` 예제에서 `&publisher;`가 저장되는 대신 **XmlText** 노드가 생성됩니다.  

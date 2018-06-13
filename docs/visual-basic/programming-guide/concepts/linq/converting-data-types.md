@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643754"
 ---
 # <a name="converting-data-types-visual-basic"></a>데이터 형식 (Visual Basic)으로 변환
 변환 메서드는 입력 개체의 형식을 변경합니다.  

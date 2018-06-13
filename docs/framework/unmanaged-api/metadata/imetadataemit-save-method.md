@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6d97d3e4a93985f9b2de3ed9785eff5f7f46c36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444681"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 메서드
 지정된 된 주소에서 파일에는 현재 범위에서 모든 메타 데이터를 저장 합니다.  

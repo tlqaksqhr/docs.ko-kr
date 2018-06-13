@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443117"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 열거형
 에 대 한 호출에서 반환 된 이식 가능한 실행 (PE) 파일을 설명 하는 값이 포함 되어 [imetadataimport2:: Getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)합니다.  

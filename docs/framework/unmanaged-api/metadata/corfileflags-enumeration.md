@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441670"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 열거형
 에 대 한 호출에 정의 된 파일의 형식을 설명 하는 값이 포함 되어 [imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)합니다.  

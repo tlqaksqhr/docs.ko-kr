@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a7b21179faec0b6f37b8084c9ee8a0bfd327193e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443566"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection 메서드
 지정 된 길이 의해 지정 된 코드 섹션을 자릅니다.  

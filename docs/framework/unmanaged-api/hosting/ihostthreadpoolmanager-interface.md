@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92097cdf735630f3537296f188bd83ea8162add2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441140"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 인터페이스
 공용 언어 런타임 (CLR) 스레드 풀을 구성 하 고 스레드 풀에 작업 항목 큐에 사용할 수 있는 메서드를 제공 합니다.  

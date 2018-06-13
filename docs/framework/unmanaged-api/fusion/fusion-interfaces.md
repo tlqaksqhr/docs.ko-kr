@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434895"
 ---
 # <a name="fusion-interfaces"></a>Fusion 인터페이스
 이 섹션에서는 응용 프로그램의 리소스의 속성을 액세스 하 고 응용 프로그램에 대 한 이러한 리소스의 정확한 버전을 찾을 수는 fusion API를 사용 하는 관리 되지 않는 인터페이스를 설명 합니다.  
