@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410100"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a><span data-ttu-id="49ecf-102">Caspol.exe(코드 액세스 보안 정책 도구)</span><span class="sxs-lookup"><span data-stu-id="49ecf-102">Caspol.exe (Code Access Security Policy Tool)</span></span>
 <span data-ttu-id="49ecf-103">CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49ecf-103">The Code Access Security (CAS) Policy tool (Caspol.exe) enables users and administrators to modify security policy for the machine policy level, the user policy level, and the enterprise policy level.</span></span>  

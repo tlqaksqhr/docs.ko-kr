@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331492"
 ---
 # <a name="linq-to-xml-axes-c"></a><span data-ttu-id="e69a2-102">LINQ to XML 축(C#)</span><span class="sxs-lookup"><span data-stu-id="e69a2-102">LINQ to XML Axes (C#)</span></span>
 <span data-ttu-id="e69a2-103">XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e69a2-103">After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.</span></span>  

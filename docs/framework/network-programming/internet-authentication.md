@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396187"
 ---
 # <a name="internet-authentication"></a><span data-ttu-id="472a1-102">인터넷 인증</span><span class="sxs-lookup"><span data-stu-id="472a1-102">Internet Authentication</span></span>
 <span data-ttu-id="472a1-103"><xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="472a1-103">The <xref:System.Net> classes support a variety of client authentication mechanisms, including the standard Internet authentication methods basic, digest, negotiate, NTLM, and Kerberos authentication, as well as custom methods that you can create.</span></span>  

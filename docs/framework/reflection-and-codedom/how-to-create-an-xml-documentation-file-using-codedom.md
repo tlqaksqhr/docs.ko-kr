@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397155"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a><span data-ttu-id="1cbcd-102">방법: CodeDOM을 사용하여 XML 문서 파일 만들기</span><span class="sxs-lookup"><span data-stu-id="1cbcd-102">How to: Create an XML Documentation File Using CodeDOM</span></span>
 <span data-ttu-id="1cbcd-103">CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1cbcd-103">CodeDOM can be used to create code that generates XML documentation.</span></span> <span data-ttu-id="1cbcd-104">이 프로세스에서는 XML 문서 주석이 포함된 CodeDOM 그래프를 생성하고, 코드를 생성하고, XML 문서 출력을 만드는 컴파일러 옵션을 사용하여 생성된 코드를 컴파일해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1cbcd-104">The process involves creating the CodeDOM graph that contains the XML documentation comments, generating the code, and compiling the generated code with the compiler option that creates the XML documentation output.</span></span>  
