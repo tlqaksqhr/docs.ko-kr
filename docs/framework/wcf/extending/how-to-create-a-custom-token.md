@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809211"
 ---
 # <a name="how-to-create-a-custom-token"></a><span data-ttu-id="50517-102">방법: 사용자 지정 토큰 만들기</span><span class="sxs-lookup"><span data-stu-id="50517-102">How to: Create a Custom Token</span></span>
 <span data-ttu-id="50517-103">이 항목에서는 <xref:System.IdentityModel.Tokens.SecurityToken> 클래스를 사용하여 사용자 지정 보안 토큰을 만들고 사용자 지정 보안 토큰 공급자 및 인증자를 사용하여 통합하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="50517-103">This topic shows how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span> <span data-ttu-id="50517-104">전체 코드 예제에 대 한 참조는 [사용자 지정 토큰](../../../../docs/framework/wcf/samples/custom-token.md) 샘플.</span><span class="sxs-lookup"><span data-stu-id="50517-104">For a complete code example see the [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) sample.</span></span>  

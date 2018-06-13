@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809279"
 ---
 # <a name="custom-encoders"></a><span data-ttu-id="22555-102">사용자 지정 인코더</span><span class="sxs-lookup"><span data-stu-id="22555-102">Custom Encoders</span></span>
 <span data-ttu-id="22555-103">이 항목에서는 사용자 지정 인코더를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="22555-103">This topic discusses how to create custom encoders.</span></span>  

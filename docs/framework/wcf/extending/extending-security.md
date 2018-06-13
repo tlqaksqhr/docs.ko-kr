@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809403"
 ---
 # <a name="extending-security"></a><span data-ttu-id="9e69f-102">보안 확장</span><span class="sxs-lookup"><span data-stu-id="9e69f-102">Extending Security</span></span>
 <span data-ttu-id="9e69f-103">새 클레임 유형 및 사용자 지정 토큰을 수용 하기 위해 Windows Communication Foundation (WCF)의 보안 인프라를 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9e69f-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="9e69f-104">이 단원의 각 항목에서는 이를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9e69f-104">The topics in this section show you how this is done.</span></span>  

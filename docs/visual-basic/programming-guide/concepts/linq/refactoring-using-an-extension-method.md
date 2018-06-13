@@ -1,36 +1,27 @@
 ---
-title: "확장 메서드 (Visual Basic)를 사용 하 여 리팩터링"
-ms.custom: 
+title: 확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647906"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="e5eef-102">확장 메서드 (Visual Basic)를 사용 하 여 리팩터링</span><span class="sxs-lookup"><span data-stu-id="e5eef-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="e5eef-103">이 예제에서는 앞의 예에서 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="d712a-102">확장 메서드 (Visual Basic)를 사용 하 여 리팩터링</span><span class="sxs-lookup"><span data-stu-id="d712a-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="d712a-103">이 예제에서는 앞의 예에서 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
   
- <span data-ttu-id="e5eef-104">이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="e5eef-105">그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장 메서드를 작성하는 것이 간편합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
+ <span data-ttu-id="d712a-104">이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="d712a-105">그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장 메서드를 작성하는 것이 간편합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e5eef-106">예제</span><span class="sxs-lookup"><span data-stu-id="e5eef-106">Example</span></span>  
- <span data-ttu-id="e5eef-107">이 예제에서는 WordprocessingML 문서를 처리하여 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="e5eef-108">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-108">This example builds on the previous examples in this tutorial.</span></span>  
+## <a name="example"></a><span data-ttu-id="d712a-106">예제</span><span class="sxs-lookup"><span data-stu-id="d712a-106">Example</span></span>  
+ <span data-ttu-id="d712a-107">이 예제에서는 WordprocessingML 문서를 처리하여 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="d712a-108">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-108">This example builds on the previous examples in this tutorial.</span></span>  
   
- <span data-ttu-id="e5eef-109">이 예제에는 `StringConcatenate` 메서드의 오버로드가 여러 개 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
+ <span data-ttu-id="d712a-109">이 예제에는 `StringConcatenate` 메서드의 오버로드가 여러 개 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
   
- <span data-ttu-id="e5eef-110">이 예제에 대 한 소스 문서를 만들기 위한 지침을 제공 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="d712a-110">이 예제에 대 한 소스 문서를 만들기 위한 지침을 제공 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="e5eef-111">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="e5eef-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="e5eef-112"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="d712a-111">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="d712a-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="d712a-112"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -73,10 +64,10 @@ ByVal func As Func(Of T, String), ByVal separator As String) As String
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e5eef-113">예제</span><span class="sxs-lookup"><span data-stu-id="e5eef-113">Example</span></span>  
- <span data-ttu-id="e5eef-114">`StringConcatenate` 메서드의 오버로드는 네 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="e5eef-115">한 오버로드는 문자열의 컬렉션을 가져와서 단일 문자열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="e5eef-116">다른 오버로드는 원하는 형식의 컬렉션과 컬렉션의 singleton에서 문자열로 프로젝션하는 대리자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="e5eef-117">나머지 두 오버로드는 구분 기호 문자열을 지정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-117">There are two more overloads that allow you to specify a separator string.</span></span>  
+## <a name="example"></a><span data-ttu-id="d712a-113">예제</span><span class="sxs-lookup"><span data-stu-id="d712a-113">Example</span></span>  
+ <span data-ttu-id="d712a-114">`StringConcatenate` 메서드의 오버로드는 네 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="d712a-115">한 오버로드는 문자열의 컬렉션을 가져와서 단일 문자열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="d712a-116">다른 오버로드는 원하는 형식의 컬렉션과 컬렉션의 singleton에서 문자열로 프로젝션하는 대리자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="d712a-117">나머지 두 오버로드는 구분 기호 문자열을 지정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-117">There are two more overloads that allow you to specify a separator string.</span></span>  
   
- <span data-ttu-id="e5eef-118">다음 코드에서는 네 오버로드를 모두 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-118">The following code uses all four overloads.</span></span>  
+ <span data-ttu-id="d712a-118">다음 코드에서는 네 오버로드를 모두 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-118">The following code uses all four overloads.</span></span>  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -89,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- <span data-ttu-id="e5eef-119">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="d712a-119">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-119">This example produces the following output:</span></span>  
   
 ```  
 onetwothree  
@@ -98,8 +89,8 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e5eef-120">예제</span><span class="sxs-lookup"><span data-stu-id="e5eef-120">Example</span></span>  
- <span data-ttu-id="e5eef-121">이제 새 확장명 메서드를 활용하기 위해 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
+## <a name="example"></a><span data-ttu-id="d712a-120">예제</span><span class="sxs-lookup"><span data-stu-id="d712a-120">Example</span></span>  
+ <span data-ttu-id="d712a-121">이제 새 확장명 메서드를 활용하기 위해 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -225,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e5eef-122">이 예제는 다음에 설명 된 문서에 적용 하면 출력 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="d712a-122">이 예제는 다음에 설명 된 문서에 적용 하면 출력 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -245,13 +236,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="e5eef-123">이 리팩터링은 순수 함수로의 리팩터링에 대한 변환입니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="e5eef-124">다음 항목에서는 순수 함수로의 팩터링 개념에 대해 자세히 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
+ <span data-ttu-id="d712a-123">이 리팩터링은 순수 함수로의 리팩터링에 대한 변환입니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="d712a-124">다음 항목에서는 순수 함수로의 팩터링 개념에 대해 자세히 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="e5eef-125">다음 단계</span><span class="sxs-lookup"><span data-stu-id="e5eef-125">Next Steps</span></span>  
- <span data-ttu-id="e5eef-126">다음 예제에서는 순수 함수를 사용하여 다른 방식으로 이 코드를 리팩터링하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e5eef-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="d712a-125">다음 단계</span><span class="sxs-lookup"><span data-stu-id="d712a-125">Next Steps</span></span>  
+ <span data-ttu-id="d712a-126">다음 예제에서는 순수 함수를 사용하여 다른 방식으로 이 코드를 리팩터링하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d712a-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
   
--   [<span data-ttu-id="e5eef-127">순수 함수를 사용하여 리팩터링(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5eef-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [<span data-ttu-id="d712a-127">순수 함수를 사용하여 리팩터링(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d712a-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5eef-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e5eef-128">See Also</span></span>  
- [<span data-ttu-id="e5eef-129">자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작</span><span class="sxs-lookup"><span data-stu-id="e5eef-129">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [<span data-ttu-id="e5eef-130">(Visual Basic) 순수 함수로 리팩터링</span><span class="sxs-lookup"><span data-stu-id="e5eef-130">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="d712a-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d712a-128">See Also</span></span>  
+ [<span data-ttu-id="d712a-129">자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작</span><span class="sxs-lookup"><span data-stu-id="d712a-129">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="d712a-130">(Visual Basic) 순수 함수로 리팩터링</span><span class="sxs-lookup"><span data-stu-id="d712a-130">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
