@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abb2e2902737749fd9dc1f148a340e28da772e59
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439022"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain 메서드
 다음 도메인으로 열거형에 대 한 인터페이스 포인터를 가져옵니다.  

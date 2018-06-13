@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523769"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
 설정 디자이너를 사용 하 여 디자인 타임에 새 설정을 만들 수 있습니다. 설정 디자이너는 새 설정을 만들고 이러한 설정에 대 한 속성을 지정할 수 있도록 표 스타일 인터페이스입니다. 이름, 값, 유형 및 새 설정에 대 한 범위를 지정 해야 합니다. 설정을 만든 후에 코드에서 액세스할 수 있습니다.  

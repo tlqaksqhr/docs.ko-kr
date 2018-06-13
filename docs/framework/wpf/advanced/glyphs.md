@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543068"
 ---
 # <a name="glyphs"></a>문자 모양
 문자는 문자를 화면에 그릴 하위 수준 설명입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 차단 하 고 텍스트를 포맷 한 후 유지 하려는 고객에 대 한 문자 모양에 대 한 직접 액세스를 제공 합니다.  

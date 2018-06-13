@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766402"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 표준 쿼리 연산자
 쿼리에는 데이터 소스에서 검색하려는 정보를 지정합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. LINQ에서는 쿼리에서 사용할 수 있는 표준 쿼리 메서드 집합을 제공합니다. 이러한 메서드의 대부분 시퀀스;에서 동작 시퀀스의 해당 형식이 구현 하는 개체는이 컨텍스트에서 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스입니다. 표준 쿼리 연산자 쿼리 기능에는 필터링, 프로젝션, 집계, 정렬, 그룹화, 페이징 등이 포함됩니다. 자주 사용되는 표준 쿼리 연산자 중 일부는 전용 키워드 구문이 있어서 쿼리 식 구문을 사용하여 호출할 수 있습니다. 쿼리 식은 메서드 기반 방법과는 다른, 가독성이 더 우수한 쿼리 표현 방법입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다. 목록이 같은 쿼리 식 절을 사용할 수 있는 표준 쿼리 연산자에 대 한 참조 [표준 쿼리 연산자 개요](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)합니다.  

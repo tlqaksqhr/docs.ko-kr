@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536696"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 텍스트 선택
 Windows Forms에서 프로그래밍 방식으로 텍스트를 선택할 수 있습니다 <xref:System.Windows.Forms.TextBox> 제어 합니다. 예를 들어 특정 문자열에 대 한 텍스트를 검색 하는 함수를 만드는 경우에 텍스트를 시각적으로 알려줄 검색된 된 문자열의 위치를 선택할 수 있습니다.  

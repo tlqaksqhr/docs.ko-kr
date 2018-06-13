@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545313"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>방법: UIElement를 투명하거나 반투명하게 만들기
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.UIElement> 투명 하 게 또는 반투명 하 게 합니다. 요소를 투명 하 게 또는 반투명 하 게 확인을 설정 하면 해당 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다. 값이 `0.0` 요소 값 완전히 투명 하 게 만듭니다 `1.0` 요소를 완전히 불투명 하 게 만듭니다. 값이 `0.5` 사용 하면 요소 50% 불투명 하 고 까지입니다. 요소의 <xref:System.Windows.UIElement.Opacity%2A> 로 설정 된 `1.0` 기본적으로 합니다.  

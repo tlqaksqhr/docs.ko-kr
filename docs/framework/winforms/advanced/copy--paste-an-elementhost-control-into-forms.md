@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520944"
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>연습: ElementHost 컨트롤을 복사하여 다른 Windows Forms에 붙여넣기
 이 연습에서는 Windows Forms 간에 WPF(Windows Presentation Foundation) 컨트롤을 복사하는 방법을 보여 줍니다.  

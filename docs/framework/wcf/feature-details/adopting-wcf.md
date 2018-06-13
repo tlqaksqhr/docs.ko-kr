@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489133"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation 채택
 ASP.NET을 사용 하 여 개발을 계속 기존 응용 프로그램 유지 관리 하는 동안 새로운 개발에 대 한 Windows Communication Foundation (WCF)를 사용할 수 있습니다. WCF는 모든 시나리오에서.NET Framework로 빌드된 응용 프로그램과 통신을 지 원하는 가장 적합 한 선택 하도록 만들어졌으므로 역할을 다양 한 방식으로 소프트웨어 통신 문제를 해결 하기 위한 표준 도구로 해당 ASP.NET 할 수 없습니다.  

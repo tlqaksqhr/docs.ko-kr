@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538115"
 ---
 # <a name="method-implementation-in-custom-controls"></a>사용자 지정 컨트롤에서 메서드 구현
 메서드는 다른 구성 요소에서 구현되는 것과 같은 방식으로 컨트롤에서 구현됩니다.  

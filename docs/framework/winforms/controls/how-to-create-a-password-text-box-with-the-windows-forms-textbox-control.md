@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534302"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기
 암호 상자에는 사용자가 문자열을 입력 하는 동안에 자리 표시자 문자를 표시 하는 Windows Forms 텍스트 상자가입니다.  

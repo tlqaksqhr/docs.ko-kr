@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523733"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>브러시를 사용하여 도형 채우기
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> 개체가 닫힌 도형의 내부를 채우는 데 사용 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 몇 가지 채우기 스타일 정의: 단색, 빗살 무늬, 이미지 질감 및 색 그라데이션을 합니다.  

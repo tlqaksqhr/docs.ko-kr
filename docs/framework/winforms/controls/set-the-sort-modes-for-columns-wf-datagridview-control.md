@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535733"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정
 에 <xref:System.Windows.Forms.DataGridView> 컨트롤, 텍스트 상자 열에서는 다른 형식의 열이 자동으로 정렬 되지 않는 동안 기본적으로 자동 정렬 합니다. 이 기본값을 재정의할 수도 있습니다. 예를 들어, 텍스트, 숫자 또는 열거형 셀 값 대신 이미지를 표시할 수 있습니다. 이미지를 정렬할 수 있어야 하는 동안에 나타내는 내부 값을 정렬할 수 있습니다.  

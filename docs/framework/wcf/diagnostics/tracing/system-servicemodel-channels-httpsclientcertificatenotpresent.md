@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487713"
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificatenotpresent"></a>System.ServiceModel.Channels.HttpsClientCertificateNotPresent
 클라이언트 인증서가 필요합니다. 요청에서 인증서를 찾을 수 없습니다.  

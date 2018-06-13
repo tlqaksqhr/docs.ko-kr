@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523970"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>MDI 응용 프로그램
 (Mdi 다중) 다중 문서 인터페이스 응용 프로그램을 사용 하는 별도 창에 표시 되는 각 문서와 같은 시간에 여러 문서를 표시할 수 있습니다. MDI 응용 프로그램 창 또는 문서 간 전환에 대 한 하위 메뉴가 있는 창 메뉴 항목이 있는 경우가 많습니다.  

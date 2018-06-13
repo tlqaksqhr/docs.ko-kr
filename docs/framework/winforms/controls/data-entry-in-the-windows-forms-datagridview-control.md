@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526822"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 입력
 `DataGridView` 컨트롤 사용자가 추가 또는 컨트롤의 데이터를 수정할 방식을 변경할 수 있는 여러 가지 기능을 제공 합니다. 예를 들어 가능 데이터 입력 보다 효율적인 새 행에 대 한 기본 값을 제공 하 고 오류 발생 시 사용자가 경고 하 여 합니다.  

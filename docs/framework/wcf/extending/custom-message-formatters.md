@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487674"
 ---
 # <a name="custom-message-formatters"></a>사용자 지정 메시지 포맷터
 메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다. 응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다. Windows Communication Foundation (WCF) 사용 하 여는 *데이터 계약* 변환 하는 <xref:System.ServiceModel.Channels.Message> 응용 프로그램에서 쉽게 처리할 수 있는 개체로 개체입니다. 이러한 프로세스를 serialization 및 deserialization이라고 합니다. 전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.  

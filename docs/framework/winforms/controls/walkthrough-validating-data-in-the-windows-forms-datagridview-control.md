@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540965"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사
 사용자에 게 데이터 입력 기능을 표시할 때 자주 폼에 입력 된 데이터의 유효성을 검사 해야 합니다. <xref:System.Windows.Forms.DataGridView> 클래스 데이터가 데이터 저장소에 커밋되기 전에 유효성 검사를 수행 하는 편리한 방법을 제공 합니다. 처리 하 여 데이터를 확인할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.CellValidating> 이벤트에 의해 발생 하는 <xref:System.Windows.Forms.DataGridView> 현재 셀이 변경 합니다.  

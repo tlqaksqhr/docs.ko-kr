@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543421"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>방법: 데이터 개체에 데이터 형식이 있는지 확인
 다음 예제에서는 다양 한를 사용 하는 방법을 보여 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 데이터 개체에 있는지 여부를 쿼리 하 메서드 오버 로드 합니다.  

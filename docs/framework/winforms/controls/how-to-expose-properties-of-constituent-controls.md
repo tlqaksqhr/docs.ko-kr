@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532635"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>방법: 구성 요소 컨트롤의 속성 노출
 복합 컨트롤을 구성 하는 컨트롤 이라고 *구성 요소 컨트롤*합니다. 이러한 컨트롤은 일반적으로 전용으로 선언 및 따라서 개발자가 액세스할 수 없습니다. 향후 사용자에 게 이러한 컨트롤의 속성을 제공 하려는 경우 사용자에 게 노출 해야 합니다. 사용자 정의 컨트롤에서 속성을 만들고 사용 하 여 구성 요소 컨트롤의 속성을 노출 된 `get` 및 `set` 의 구성 요소 컨트롤 전용 속성의 변경 내용을 적용 하려면 해당 속성의 접근자입니다.  

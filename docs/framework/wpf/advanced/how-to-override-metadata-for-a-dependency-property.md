@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543721"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>방법: 종속성 속성의 메타데이터 재정의
 호출 하 여 상속된 된 클래스에서 제공 되는 기본 종속성 속성 메타 데이터를 재정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 메서드와 유형별 메타 데이터를 제공 합니다.  

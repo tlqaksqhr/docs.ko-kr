@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1455ce7c3b07809d1dead8e98019c991475eb02
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442149"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 함수 포인터
 대기를 처리 하는 호스트를 알리는 함수를 가리키는 (<xref:System.Threading.WaitHandle>) 중 하나 신호 되었거나 시간이 초과 되었습니다.  

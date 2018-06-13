@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543249"
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>방법: 사용자 지정 컨트롤에서 잉크 지우기
 <xref:System.Windows.Ink.IncrementalStrokeHitTester> 현재 그려진된 스트로크에 다른 획 교차 하는지 여부를 결정 합니다.  앱을 통해 컨트롤을 만드는 사용자가 스트로크 일부를 지울 수 유용, 방식에서 할 수 있는 사용자는 <xref:System.Windows.Controls.InkCanvas> 때는 <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> 로 설정 된 <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>합니다.  

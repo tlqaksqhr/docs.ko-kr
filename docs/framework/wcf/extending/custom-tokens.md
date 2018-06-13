@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485367"
 ---
 # <a name="custom-tokens"></a>사용자 지정 토큰
 Windows Communication Foundation (WCF) 기본적으로 지원 하지만 X.509 인증서, 보안 컨텍스트 토큰, Kerberos 티켓 및 자격 증명으로 사용자 이름 토큰에 사용자 고유의 사용자 지정 자격 증명을 사용할 수 있도록 충분히 유연 합니다.  

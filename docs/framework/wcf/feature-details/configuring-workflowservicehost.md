@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488477"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost 구성
 이 섹션에서는 간단한 "방법"는의 여러 기능을 구성 하는 방법에 간략하게 설명 하는 항목은 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 구성에서 클래스입니다. 이러한 항목에서는 워크플로 서비스 관련 구성에 다른 모든 구성은 일반 WCF 서비스와 동일한 방식으로 수행 됩니다.  

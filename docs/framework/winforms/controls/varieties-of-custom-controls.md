@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541231"
 ---
 # <a name="varieties-of-custom-controls"></a>사용자 지정 컨트롤의 종류
 .NET Framework를 사용하여 새 컨트롤을 개발 및 구현할 수 있습니다. 상속을 통해서 기존 컨트롤 및 친숙한 사용자 정의 컨트롤의 기능을 확장할 수 있습니다. 또한 고유한 그리기를 수행하는 사용자 지정 컨트롤을 작성할 수도 있습니다.  

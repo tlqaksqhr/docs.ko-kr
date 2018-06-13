@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516193"
 ---
 # <a name="toolbox-service"></a>도구 상자 서비스
 이 샘플에서는 워크플로 컨텍스트를 기반으로 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 도구 상자 활동을 업데이트하는 방법을 보여 줍니다. 이 샘플에는 사용자 지정 활동이 선택되었는지 여부에 따라 도구 상자 내용을 변경하는 워크플로가 포함되어 있습니다.  

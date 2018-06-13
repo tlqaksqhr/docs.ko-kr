@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445633"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 메서드
 현재 메타 데이터 범위에 있는 어셈블리 매니페스트에에서 참조 된 내보낸된 형식을 열거 합니다.  

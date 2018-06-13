@@ -8,11 +8,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 6ea5346119259d70ac1a42f3f72a8b2746b8f536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 092c30a858df7baeb35bdf28bae53802fb0916d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172021"
 ---
 # <a name="as-c-reference"></a>as(C# 참조)
 `as` 연산자를 사용하여 호환되는 참조 형식 또는 [nullable 형식](../../../csharp/programming-guide/nullable-types/index.md) 간에 특정 형식의 변환을 수행할 수 있습니다. 다음 코드는 예제를 보여 줍니다.  
@@ -22,13 +23,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  `as` 연산자는 캐스트 작업과 비슷합니다. 하지만 변환할 수 없는 경우 `as`는 예외를 발생시키지 않고 `null`을 반환합니다. 다음 예제를 참조하세요.  
   
-```  
+```csharp  
 expression as type  
 ```  
   
  `expression` 변수가 한 번만 계산된다는 점을 제외하고 코드는 다음 식과 같습니다.  
   
-```  
+```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   

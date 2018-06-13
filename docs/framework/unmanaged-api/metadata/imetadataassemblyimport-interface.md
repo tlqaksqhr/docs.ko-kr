@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da75f98edb54080658dc86f48d4ebb458d72f20d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449314"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport 인터페이스
 어셈블리 매니페스트에 액세스하여 이를 검사하는 메서드를 제공합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495611"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드는 다음과 같은 기본 절차 이루어져 있습니다.  

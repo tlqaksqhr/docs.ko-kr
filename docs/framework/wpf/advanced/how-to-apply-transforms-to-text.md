@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544924"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>방법: 텍스트에 변환 적용
 변환을 통해 응용 프로그램에서 텍스트 표시를 변경할 수 있습니다. 다음 예에서는 다양 한 유형의 렌더링 변환의 텍스트 표시에 영향을 사용 하 여 한 <xref:System.Windows.Controls.TextBlock> 제어 합니다.  

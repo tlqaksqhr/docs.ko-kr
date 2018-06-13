@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525270"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거
 배치 하는 경우는 <xref:System.Windows.Forms.TabControl> 컨트롤이 폼에 기본적으로 두 개의 탭 포함 합니다. 추가 하거나 디자이너를 사용 하 여 탭을 제거할 수 있습니다.  

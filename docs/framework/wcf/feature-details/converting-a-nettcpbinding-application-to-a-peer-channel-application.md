@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489000"
 ---
 # <a name="converting-a-nettcpbinding-application-to-a-peer-channel-application"></a>NetTcpBinding 응용 프로그램을 피어 채널 응용 프로그램으로 변환
 연결 매개 변수를 설명하는 바인딩을 사용하여 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]에서 클라이언트 간의 연결을 만들 수 있습니다. 피어 투 피어 연결을 사용하도록 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 변환하려면 클라이언트 연결을 설정할 때 이 기술을 지원하는 바인딩이 필요합니다. 피어 채널은 <xref:System.ServiceModel.NetPeerTcpBinding>과 유사한 방식으로 사용할 수 있는 <xref:System.ServiceModel.NetTcpBinding>이라는 바인딩을 제공합니다. 주요 차이점에는 확인자 서비스 지정과 보안 설정 정의가 포함됩니다.  

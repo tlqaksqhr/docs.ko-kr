@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540412"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 태그 확장
 정의 하 고 외부 어셈블리에서 로드 되는 리소스에 대 한 키를 참조 합니다. 그러면 리소스 조회는 클래스 또는 어셈블리에 명시적 리소스 사전 하지 않고 어셈블리의 대상 형식을 지정할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493200"
 ---
 # <a name="correlation-overview"></a>상관 관계 개요
 상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 응용 프로그램 상태와 연결하는 메커니즘입니다. 예를 들어 응답을 초기 요청과 연결하거나 특정 주문 ID를 주문 처리 워크플로의 지속된 상태와 연결할 수 있습니다. 이 항목에서는 상관 관계에 대해 간략하게 설명하고 이 단원의 다른 항목에서는 각 상관 관계 형식에 대해 자세히 설명합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522322"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>방법: 화면에 기존 비트맵 그리기
 쉽게 화면에 기존 이미지를 그릴 수 있습니다. 만들려면 먼저는 <xref:System.Drawing.Bitmap> 파일 이름을 사용 하는 비트맵 생성자를 사용 하 여 개체 <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>합니다. 이 생성자는 BMP, GIF, JPEG, PNG 및 TIFF를 비롯 한 여러 가지 다른 파일 형식을 사용 하 여 이미지를 허용 합니다. 만든 후는 <xref:System.Drawing.Bitmap> 개체를 전달 하는 <xref:System.Drawing.Bitmap> 개체는 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 개체입니다.  

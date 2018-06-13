@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447005"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 메서드
 형식 정의의 메타 데이터 서명을 만듭니다, 반환 된 `mdTypeDef` 정의 된 형식에서 참조 형식의 멤버 임을 지정 하 고 해당 형식에 대 한 토큰는 `tdEncloser` 매개 변수입니다.  

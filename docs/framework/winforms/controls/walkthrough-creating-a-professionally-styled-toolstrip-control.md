@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541608"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기
 응용 프로그램을 제공할 수 있습니다 <xref:System.Windows.Forms.ToolStrip> 에서 파생 되는 고유한 클래스를 작성 하 여 전문적인 모양과 동작을 제어는 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 유형입니다.  

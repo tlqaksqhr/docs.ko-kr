@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337875"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>방법: 바이트 배열을 정수로 변환(C# 프로그래밍 가이드)
 이 예제에서는 <xref:System.BitConverter> 클래스를 사용하여 바이트 배열을 [int](../../../csharp/language-reference/keywords/int.md)로 변환하고 다시 바이트 배열로 변환하는 방법을 보여 줍니다. 예를 들어 네트워크에 바이트를 읽은 후 바이트에서 기본 제공 데이터 형식으로 변환해야 할 수 있습니다. 예제의 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 메서드 외에도 다음 표에서는 바이트(바이트 배열)를 다른 기본 제공 형식으로 변환하는 <xref:System.BitConverter> 클래스의 메서드를 보여 줍니다.  

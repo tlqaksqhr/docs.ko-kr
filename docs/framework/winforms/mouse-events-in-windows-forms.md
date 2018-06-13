@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541212"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms의 마우스 이벤트
 마우스 입력을 처리하는 경우 일반적으로 마우스 포인터의 위치와 마우스 단추의 상태를 알아야 합니다. 이 항목에서는 마우스 이벤트에서 이 정보를 가져오는 방법을 자세히 설명하고 Windows Forms 컨트롤에서 마우스 클릭 이벤트가 발생하는 순서를 설명합니다. 목록 및 모든 마우스 이벤트의 설명에 대 한 참조 [Windows Forms의 마우스 입력 방법](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)합니다.  또한 참조 [이벤트 처리기 개요 (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [이벤트 개요 (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  

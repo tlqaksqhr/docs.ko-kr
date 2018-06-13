@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519066"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스팅
 이 항목의 인스턴스를 호스트 하는 절차에 설명 된 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서 합니다.  

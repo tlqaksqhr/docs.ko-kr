@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957983"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>클라우드 액세스에 최적화 된 응용 프로그램에 기존.NET 앱을 최신식 하는 이유
 

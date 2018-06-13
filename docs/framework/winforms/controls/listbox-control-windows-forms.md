@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534198"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox 컨트롤(Windows Forms)
 Windows Forms `ListBox` 컨트롤 하나 이상의 사용자 선택할 수 있는 항목의 목록을 표시 합니다.  

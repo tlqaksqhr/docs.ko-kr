@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518848"
 ---
 # <a name="confirmation"></a>확인
 이 샘플에서는 <xref:System.Activities.Statements.CompensableActivity>의 사용 및 확인과 관련된 일반적인 네 개의 시나리오를 보여 주고, 네 개의 워크플로를 실행하여 확인하는 방법을 보여 줍니다. 이 샘플은 선언적 버전과 명령적 버전으로 사용할 수 있습니다.   

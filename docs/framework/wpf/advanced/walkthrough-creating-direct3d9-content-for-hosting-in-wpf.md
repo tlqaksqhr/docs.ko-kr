@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547370"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기
 이 연습에는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅에 대 한 적합 한 Direct3D9 콘텐츠를 만드는 방법을 보여 줍니다. WPF 응용 프로그램의 Direct3D9 콘텐츠를 호스트에 대 한 자세한 내용은 참조 하십시오. [WPF 및 Direct3D9 상호 운용](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)합니다.  

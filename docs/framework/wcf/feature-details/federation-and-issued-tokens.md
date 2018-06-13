@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491579"
 ---
 # <a name="federation-and-issued-tokens"></a>페더레이션 및 발급된 토큰
 와 WCF Windows Communication Foundation (), Ws-federation 및 Ws-trust 사양을 구현 하는 서비스와 안전 하 게 통신 하는 클라이언트를 만들 수 있습니다. 사양은 XML, SOAP 및 WSDL(웹 서비스 기술 언어)을 사용하여 여러 신뢰 영역 간에 인증 및 권한을 사용할 수 있는 메커니즘을 제공합니다.  

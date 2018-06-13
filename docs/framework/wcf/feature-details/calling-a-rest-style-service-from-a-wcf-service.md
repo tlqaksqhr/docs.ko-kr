@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488513"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>WCF 서비스에서 REST 스타일 서비스 호출
 일반(SOAP 기반) WCF 서비스에서 REST 스타일의 서비스를 호출할 때 서비스 메서드의 작업 컨텍스트(들어오는 요청에 대한 정보 포함)가 나가는 요청에 사용되는 컨텍스트를 재정의합니다. 따라서 HTTP GET 요청이 HTTP POST 요청으로 변경됩니다. WCF 서비스가 REST 스타일 서비스를 호출하는 데 올바른 컨텍스트를 사용하도록 적용하려면 새 <xref:System.ServiceModel.OperationContextScope>를 만들고 작업 컨텍스트 범위 내에서 REST 스타일 서비스를 호출합니다. 이 항목에서는 이러한 기술을 설명하는 간단한 예제를 만드는 방법에 대해 설명합니다.  

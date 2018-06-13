@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523223"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>방법: 선 끝이 있는 선 그리기
 선 끝을 호출 하는 여러 셰이프 중 하나에 시작 또는 끝 줄을 그릴 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화살촉이 라운드, 사각형, 다이아몬드 등 여러 선 끝을 지원합니다.  

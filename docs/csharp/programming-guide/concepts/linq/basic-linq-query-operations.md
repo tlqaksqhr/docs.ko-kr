@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333042"
 ---
 # <a name="basic-linq-query-operations-c"></a>기본 LINQ 쿼리 작업(C#)
 이 항목에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식 및 쿼리에서 수행하는 일부 일반적인 작업을 간단히 소개합니다. 자세한 내용은 다음 항목을 참조하세요.  

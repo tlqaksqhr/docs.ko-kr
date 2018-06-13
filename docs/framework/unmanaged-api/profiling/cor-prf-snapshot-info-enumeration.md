@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d6713a7f54f6a6d8dbf261ad45304e6ddbe24c0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450719"
 ---
 # <a name="corprfsnapshotinfo-enumeration"></a>COR_PRF_SNAPSHOT_INFO 열거형
 프로파일러를 호출할 때마다 스택 스냅숏과 함께 다시 전달할 데이터 양을 지정 [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) 함수입니다.  

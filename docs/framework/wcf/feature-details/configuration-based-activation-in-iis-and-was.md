@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488945"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 및 WAS에서 구성 기반 활성화
 일반적으로 인터넷 정보 서비스 (IIS) 나 WAS Windows Process Activation Service ()에서 Windows Communication Foundation (WCF) 서비스를 호스팅하는 경우.svc 파일을 제공 해야 합니다. .svc 파일에는 서비스 이름과 선택적 사용자 지정 서비스 호스트 팩터리가 포함되어 있습니다. 이 추가 파일을 사용하면 관리 효율성이 떨어지지만 구성 기반 활성화 기능을 사용하면 .svc 파일이 필요 없기 때문에 이로 인한 관리 효율성 저하도 발생하지 않습니다.  

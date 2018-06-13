@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ef6771ec3f458c20701cc330a5730367b3c5b89
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445928"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps 메서드
 설정 하거나 지정된 된 상대 가상 주소, 이전 호출에서 정의 된 메서드의 저장 하는 기능을 업데이트 [imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)합니다.  

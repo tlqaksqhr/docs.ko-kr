@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 68a9d6ad7470ffaf1143a4a8e3134f20edb9e3c5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439220"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery 메서드
 해당 Win32 함수에 대 한 논리적 래퍼입니다로 사용 됩니다. Win32 구현은 `VirtualQuery` 호출 프로세스의 가상 주소 공간에 있는 페이지의 범위에 대 한 정보를 검색 합니다.  

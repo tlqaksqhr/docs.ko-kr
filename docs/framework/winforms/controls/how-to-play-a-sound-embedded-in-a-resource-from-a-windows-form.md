@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532137"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>방법: Windows Form에서 리소스에 포함된 소리 재생
 사용할 수는 <xref:System.Media.SoundPlayer> 포함된 리소스에서 소리를 재생 하는 클래스입니다.  
