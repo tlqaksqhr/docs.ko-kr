@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638705"
 ---
 # <a name="specified-event-log-does-not-exist-on-this-machine"></a>지정된 이벤트 로그가 이 컴퓨터에 없습니다.
 이 컴퓨터에 존재하지 않는 이벤트 로그에 액세스하려고 했습니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648283"
 ---
 # <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Visual Basic에서 문자열 및 기타 데이터 형식 사이에 변환
 이 섹션에서는 문자열을 다른 데이터 형식으로 변환 하는 방법에 설명 합니다.  

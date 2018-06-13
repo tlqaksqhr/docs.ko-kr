@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643002"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>방법: 특정 특성 (Visual Basic)으로 요소 찾기
 이 항목에서는 특정 값을 가진 특성이 포함된 요소를 찾는 방법을 보여 줍니다.  

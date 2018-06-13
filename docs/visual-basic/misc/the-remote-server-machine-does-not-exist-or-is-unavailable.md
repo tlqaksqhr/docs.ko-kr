@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639261"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>원격 서버 컴퓨터가 없거나 사용할 수 없습니다(Visual Basic).
 사용할 수 없거나 존재하지 않는 원격 서버에 연결하려고 합니다. 네트워크 연결 문제로 인해 이 오류가 발생할 수 있습니다.  

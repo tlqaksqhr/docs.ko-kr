@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655865"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 *개체*는 하나의 단위로 취급될 수 있는 코드 및 데이터의 조합입니다. 개체는 컨트롤 또는 폼과 같은 응용 프로그램의 부분일 수 있습니다. 전체 응용 프로그램이 하나의 개체가 될 수도 있습니다.

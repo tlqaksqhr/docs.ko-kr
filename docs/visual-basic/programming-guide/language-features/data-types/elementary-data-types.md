@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646385"
 ---
 # <a name="elementary-data-types-visual-basic"></a>기본 데이터 형식(Visual Basic)
 Visual Basic에서는 다양 한 프로그래밍 요소에 사용할 수 있는 미리 정의 된 데이터 형식 집합을 제공 합니다. 이 섹션에서는 이러한 형식 및 사용 하는 방법에 설명 합니다.  

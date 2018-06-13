@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641682"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(Visual Basic)(LINQ to XML)
 이 항목에서는 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650259"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: LINQ to (Visual Basic) XSLT 스타일에서 XML 트리 변형 하려면 주석을 사용
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804835"
 ---
 # <a name="message-queueing-integration"></a>메시지 큐 통합
 이 섹션에는 메시지 큐와 Windows Communication Foundation (WCF) 간의 통합을 보여 주는 샘플이 들어 있습니다.  

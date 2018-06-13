@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638873"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>명명된 인수를 찾을 수 없습니다(Visual Basic).
 명명된 인수가 프로시저 정의에 표시되지 않는 경우 프로시저 호출에서 사용할 수 없습니다. 명명된 인수를 지정했지만 프로시저가 해당 이름으로 인수를 승인하도록 정의되지 않았습니다.  

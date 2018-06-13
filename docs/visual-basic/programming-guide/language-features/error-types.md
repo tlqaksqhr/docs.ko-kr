@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647113"
 ---
 # <a name="error-types-visual-basic"></a>오류 형식(Visual Basic)
 Visual basic에서 오류 (호출 또한 *예외*) 세 가지 범주 중 하나에 해당: 구문 오류, 런타임 오류 및 논리 오류입니다.  

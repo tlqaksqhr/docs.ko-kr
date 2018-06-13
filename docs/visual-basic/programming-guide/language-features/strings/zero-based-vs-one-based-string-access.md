@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649102"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Vs 0부터 시작 합니다. Visual Basic에서 하나 기반 문자열 액세스
 이 항목에서는 Visual Basic 비교 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 문자열의 문자에 대 한 액세스를 제공 합니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 항상 함수에 따라 0부터 시작 하 고 1부터 액세스를 제공 하는 Visual Basic는 문자열의 문자에 대 한 0부터 시작 액세스를 제공 합니다.  

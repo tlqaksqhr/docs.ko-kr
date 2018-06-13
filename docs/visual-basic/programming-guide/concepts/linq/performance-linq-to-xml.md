@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645631"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>성능 (LINQ to XML) (Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 성능을 함수 생성 및 쿼리 성능에 중점을 두어 설명합니다.  

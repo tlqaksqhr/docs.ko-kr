@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803002"
 ---
 # <a name="transfer"></a>전송
 Windows Communication Foundation (WCF) 동작 추적 모델의 전송에 설명 합니다.  

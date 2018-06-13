@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655273"
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 시각화할 수 있지만 Visual Studio 프로젝트를 일련의 절차를 순서 실제로 실행 하는 대부분의 프로그램은 이벤트 구동 방식-라는 외부 발생 요인에 의해 결정 됩니다 실행 흐름이 *이벤트*합니다.  

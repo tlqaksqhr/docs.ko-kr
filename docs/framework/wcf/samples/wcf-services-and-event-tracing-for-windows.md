@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809835"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows용 WCF 서비스 및 이벤트 추척
 이 샘플에서 이벤트 추적에 대 한 ETW (Windows) 이벤트를 내보내는 Windows Communication Foundation (WCF)의 분석 추적을 사용 하는 방법을 보여 줍니다. 분석 추적은 프로덕션 환경에서 WCF 서비스의 문제 해결을 허용 하는 WCF 스택의 주요 지점에서 내보내는 이벤트 됩니다.  

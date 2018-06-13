@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656167"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>암시적 변환과 명시적 변환(Visual Basic)
 *암시적 변환* 소스 코드에서 특수 구문이 필요 하지 않습니다. 다음 예제에서는 Visual Basic 암시적 변환의 값 `k` 을 단 정밀도 부동 소수점 값에 할당 하기 전에 `q`합니다.  

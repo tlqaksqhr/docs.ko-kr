@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647338"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>기타 데이터 형식(Visual Basic)
 Visual Basic에서 숫자 또는 문자 분류 되지 않는 몇 가지 데이터 형식을 제공 합니다. 를 처리 특수 데이터와 같은 예/아니요 값, 날짜/시간 값 및 개체 주소입니다.  

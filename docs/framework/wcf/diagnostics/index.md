@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810007"
 ---
 # <a name="administration-and-diagnostics"></a>관리 및 진단
 Windows Communication Foundation (WCF)에서는 다양 한 응용 프로그램 수명의 다양 한 단계를 모니터링 하는 데 도움이 되는 기능을 제공 합니다. 예를 들어 구성을 사용하여 배포 시 서비스와 클라이언트를 설정할 수 있습니다. WCF에는 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 되어 있습니다. 또한 WCF의 WCF Windows Management Instrumentation (WMI) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. 응용 프로그램이 실패하거나 실행을 잘못 시작할 때 이벤트 로그를 사용하여 중요한 이벤트가 발생했는지 여부를 확인할 수 있습니다. 메시지 로깅 및 추적을 사용하여 응용 프로그램의 종단 간에 발생한 이벤트를 확인할 수도 있습니다. 이러한 기능에는 개발자와 IT 전문가 올바르게 작동 하지는 않을 때 WCF 응용 프로그램 문제를 해결 하려면 지원 합니다.  

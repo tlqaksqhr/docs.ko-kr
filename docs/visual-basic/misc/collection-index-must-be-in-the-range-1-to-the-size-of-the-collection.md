@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637011"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a>컬렉션 인덱스는 1에서 컬렉션 크기 사이의 범위에 있어야 합니다.
 제공된 인덱스 값이 유효한 범위인 1에서 컬렉션 크기 사이를 벗어났습니다.  

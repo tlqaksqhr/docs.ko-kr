@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637649"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a>값 형식의 필드에 런타임에 바인딩된 할당 &#39; &lt;typename&gt; &#39; 올바르지 때 &#39; &lt;이름&gt; &#39; 는 런타임에 바인딩된 식의 결과
 시도한 런타임에 바인딩된 할당이 잘못되었습니다.  

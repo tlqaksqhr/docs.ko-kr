@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648670"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 언어 사양
 Visual Basic 언어 사양은 Visual Basic 문법 및 구문에 대 한 모든 질문에 대 한 답변에 대 한 신뢰할 수 있는 소스입니다. Visual Basic 참조 설명서에서 다루지 않은 여러 항목을 포함 하 여 언어에 대 한 자세한 정보가 있습니다.  

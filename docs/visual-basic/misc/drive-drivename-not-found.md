@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637519"
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a>드라이브 &#39; &lt;drivename&gt; &#39; 찾을 수 없음
 드라이브를 찾을 수 없습니다. 네트워크 연결이 끊어졌거나, 액세스하려는 드라이브가 오프라인 상태이거나 존재하지 않습니다.  

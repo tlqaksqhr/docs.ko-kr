@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636541"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>액세스 가능한 오버 로드 된 &#39; &lt;methodname&gt; &#39; 축소 변환 없이이 인수로 호출할 수 있습니다: &lt;목록&gt;
 오버로드된 메서드를 호출했지만 축소 변환 없이 제공된 인수 목록과 메서드를 일치시킬 수 없습니다.  

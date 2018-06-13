@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649947"
 ---
 # <a name="-optimize"></a>-최적화
 컴파일러 최적화를 사용 하지 않도록 설정 하거나 사용 합니다.  

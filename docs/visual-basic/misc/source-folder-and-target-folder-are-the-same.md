@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640494"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>원본 폴더와 대상 폴더가 동일합니다.
 파일을 복사 또는 이동하려고 했으나 지정된 소스 디렉터리와 대상 디렉터리가 동일합니다. 파일 경로가 올바르게 구문 분석되지 않은 것 같습니다.  

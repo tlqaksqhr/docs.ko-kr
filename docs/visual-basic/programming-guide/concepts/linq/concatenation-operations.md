@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643360"
 ---
 # <a name="concatenation-operations-visual-basic"></a>연결 작업 (Visual Basic)
 연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.  

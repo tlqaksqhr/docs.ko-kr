@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803948"
 ---
 # <a name="automatic-format-selection"></a>자동 포맷 선택
 이 샘플의 작업 코드에서 형식을 명시적으로 설정 하는 방법 뿐만 아니라 모델을 프로그래밍 Windows Communication Foundation (WCF) 나머지 선택 영역 자동 서식 지정 (XML 또는 JSON)을 사용 하도록 설정 하는 방법을 보여 줍니다.  

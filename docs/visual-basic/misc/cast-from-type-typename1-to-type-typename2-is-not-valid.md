@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636095"
 ---
 # <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a>형식에서 캐스팅 &#39; &lt;typename1&gt; &#39; 입력 &#39; &lt;typename2&gt; &#39; 사용할 수 없습니다
 한 형식에서 다른 형식으로 변환할 수 없습니다.  

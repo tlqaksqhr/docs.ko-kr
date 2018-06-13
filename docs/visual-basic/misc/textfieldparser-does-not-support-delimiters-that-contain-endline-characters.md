@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641343"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a>TextFieldParser는 EndLine 문자가 포함된 구분 기호를 지원하지 않습니다.
 Endline 문자를 포함 하는 구분을 제공 하지만 `TextFieldParser` endline 문자가 포함 된 구분 기호를 지원 하지 않습니다.  

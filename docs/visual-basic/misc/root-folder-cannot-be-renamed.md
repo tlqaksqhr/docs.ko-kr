@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639575"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>루트 폴더의 이름을 바꿀 수 없습니다.
 루트 디렉터리의 이름을 바꾸려고 했습니다. 파일 경로가 올바르게 구문 분석되지 않은 것 같습니다.  
