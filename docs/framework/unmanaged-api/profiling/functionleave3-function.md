@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 14f4f16a73c50de2d23804f77bca180f4e9827b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453926"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 함수
 제어는 함수에서 반환 되는 프로파일러에 알립니다.  

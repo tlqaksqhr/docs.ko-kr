@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565365"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 내장 XAML 형식
 XAML 프로덕션 내에서 XML 데이터 아일랜드를 배치할을 수 있습니다. 내에서 XML 요소 `x:XData` 기본 XAML 네임 스페이스의 일부 인지 XAML 네임 스페이스 마치 XAML 프로세서에서 처리 되지 해야 합니다. `x:XData` 임의의 올바른 형식의 XML을 포함할 수 있습니다.  

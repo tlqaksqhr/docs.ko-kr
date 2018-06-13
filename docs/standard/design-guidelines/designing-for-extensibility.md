@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571386"
 ---
 # <a name="designing-for-extensibility"></a>확장성을 위한 디자인
 프레임 워크를 디자인할 때의 중요 한 측면 있는지 확인 하는 프레임 워크의 확장성을 신중 하 게 고려 했습니다. 이렇게 하려면 다양 한 확장성 메커니즘와 관련 된 이점과 비용을 이해 해야 합니다. 이 장에서 확장성 메커니즘 중 어떤 것인지-서브클래싱, 이벤트, 가상 멤버, 콜백 및 등-프레임 워크의 요구 사항을 충족할 수 있습니다.  

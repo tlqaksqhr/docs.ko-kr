@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561724"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Visual Studio에서 Windows Presentation Foundation (WPF) 기간 업무 windows 데스크톱 응용 프로그램을 구축 하기 위한 통합된 프로그래밍 모델 개발자에 게 제공 합니다.  

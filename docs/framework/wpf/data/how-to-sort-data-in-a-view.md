@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556759"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>방법: 뷰의 데이터 정렬
 이 예에서는 뷰에서 데이터를 정렬 하는 방법을 설명 합니다.  

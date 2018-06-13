@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478981"
 ---
 # <a name="systemservicemodelchannelspnrpresolveexception"></a>System.ServiceModel.Channels.PnrpResolveException
 PnrpResolverService가 확인을 수행하려는 동안 예외가 발생했습니다.  

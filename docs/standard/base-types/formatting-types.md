@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579849"
 ---
 # <a name="formatting-types-in-net"></a>.NET의 서식 지정 형식
 <a name="Introduction"></a> 형식 지정은 대개 결과 문자열을 사용자에게 표시하거나 deserialize하여 원본 데이터 형식으로 복원하기 위해 클래스, 구조체 또는 열거형 값의 인스턴스를 해당 문자열 표현으로 변환하는 프로세스입니다. 이 변환 프로세스에는 다음과 같은 여러 가지 문제점이 나타날 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484769"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforautocomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 `OperationBehaviorAttribute.TransactionAutoComplete` 멤버가 `true`로 설정되어 있기 때문에 지정된 작업에 대한 지정된 트랜잭션이 완료되었습니다.  

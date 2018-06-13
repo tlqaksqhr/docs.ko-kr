@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450101"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON 열거형
 가비지 컬렉션이 수행되는 이유를 나타냅니다.  

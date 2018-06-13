@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557877"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현
 <xref:System.Windows.Controls.DataGrid> 컨트롤 셀 및 행 수준에서 유효성 검사를 수행할 수 있습니다. 셀 수준 유효성 검사는 사용자는 값을 업데이트 하는 경우 바인딩된 데이터 개체의 각 속성에 유효성 검사 합니다. 행 수준 유효성 검사와 행에 변경 내용을 커밋할 때 전체 데이터 개체에 유효성 검사. 유효성 검사 오류에 대 한 사용자 지정된 시각적 피드백을 제공 하거나 기본 시각적 피드백을 사용할 수도 있는 <xref:System.Windows.Controls.DataGrid> 제어를 제공 합니다.  

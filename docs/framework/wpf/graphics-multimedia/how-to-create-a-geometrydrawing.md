@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560662"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>방법: GeometryDrawing 만들기
 만들고 표시 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.GeometryDrawing>합니다. A <xref:System.Windows.Media.GeometryDrawing> 채우기 개요와 연결 하 여 셰이프를 만들 수 있습니다는 <xref:System.Windows.Media.Pen> 및 <xref:System.Windows.Media.Brush> 와 <xref:System.Windows.Media.Geometry>합니다. <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> 도형의 구조를 설명는 <xref:System.Windows.Media.GeometryDrawing.Brush%2A> 도형의 채우기 설명 및 <xref:System.Windows.Media.GeometryDrawing.Pen%2A> 도형의 윤곽선에 설명 합니다.  

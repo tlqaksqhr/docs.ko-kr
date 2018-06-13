@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573915"
 ---
 # <a name="localization"></a>지역화
 지역화는 응용 프로그램에서 지원할 각 문화권에 맞는 지역화된 버전으로 응용 프로그램 리소스를 변환하는 프로세스입니다. [지역화 가능성 검토](../../../docs/standard/globalization-localization/localizability-review.md) 단계를 완료한 후에만 지역화 단계를 진행하여 전역화된 응용 프로그램이 지역화 준비가 되었는지 확인해야 합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573635"
 ---
 # <a name="events-and-callbacks"></a>이벤트 및 콜백
 콜백을 대리자를 통해 사용자 코드로 콜백 하는 프레임 워크를 사용할 수 있는 확장성 지점입니다. 이러한 대리자는 대개 메서드의 매개 변수를 통해 프레임 워크에 전달 됩니다.  

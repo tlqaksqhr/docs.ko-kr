@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570405"
 ---
 # <a name="arrays"></a>배열
 **✓ 않습니다** 공용 Api에서 배열을 통해 컬렉션을 사용 하는 것을 선호 합니다. [컬렉션](../../../docs/standard/design-guidelines/guidelines-for-collections.md) 섹션에서는 컬렉션 및 배열 중 하나를 선택 하는 방법에 대 한 세부 정보를 제공 합니다.  

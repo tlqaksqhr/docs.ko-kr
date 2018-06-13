@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450504"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>메타데이터(관리되지 않는 API 참조)
 메타데이터 API는 컴파일러 등의 클라이언트가 CLR(공용 언어 런타임)에서 형식을 로드하지 않아도 구성 요소 메타데이터를 생성하거나 액세스할 수 있게 해줍니다.  

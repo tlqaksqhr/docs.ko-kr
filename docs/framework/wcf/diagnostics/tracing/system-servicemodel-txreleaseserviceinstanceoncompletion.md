@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482435"
 ---
 # <a name="systemservicemodeltxreleaseserviceinstanceoncompletion"></a>System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 트랜잭션이 완료 되 면 서비스 인스턴스가 릴리스 되었습니다 '{0}' ReleaseServiceInstanceOnTransactionComplete ServiceBehaviorAttribute 설정 되었기 때문에 true로 합니다.  

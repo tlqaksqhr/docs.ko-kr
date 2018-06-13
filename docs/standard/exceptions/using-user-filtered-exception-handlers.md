@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571893"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>사용자 필터 예외 처리기 사용
 현재 Visual Basic에서는 사용자 필터 예외를 지원합니다. 사용자 필터 예외 처리기는 예외에 대해 정의한 요구 사항을 기반으로 하여 예외를 catch하고 처리합니다. 이러한 처리기는 **Catch** 문을 **When** 키워드와 함께 사용합니다.  

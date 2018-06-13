@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573557"
 ---
 # <a name="member-overloading"></a>멤버 오버로드
 멤버 오버 로드을 같은 형식의 매개 변수 형식이 나 개수 에서만 차이가 있지만 이름이 같은 둘 이상의 멤버를 만드는 것을 의미 합니다. 예를 들어 다음 표에 `WriteLine` 메서드가 오버 로드 됩니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561503"
 ---
 # <a name="how-to-use-a-bitmapimage"></a>방법: BitmapImage 사용
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapImage> 의 소스로 <xref:System.Windows.Controls.Image> 제어 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cd53d74dfe8199617df47e46641b71203abf6e5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452350"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 메서드
 새 공용 언어 런타임 (CLR) 응용 프로그램 시작 될 때마다 코드 프로파일러를 초기화 하기 위해 호출 합니다.  

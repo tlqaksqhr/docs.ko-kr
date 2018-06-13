@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582137"
 ---
 # <a name="security-and-race-conditions"></a>보안 및 경합 상태
 중요 한 보안 허점 경합 상태에 의해 악용 가능성이 시킵니다. 여러 가지 방법으로이 발생할 수 있습니다. 다음에 나오는 하위 개발자 피해 야 하는 주요 문제 중 일부를 간략하게 설명 합니다.  
