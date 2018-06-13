@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758934"
 ---
 # <a name="ole-db-data-type-mappings"></a><span data-ttu-id="58dbd-102">OLE DB 데이터 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="58dbd-102">OLE DB Data Type Mappings</span></span>
 <span data-ttu-id="58dbd-103">다음 표에서는 .NET Framework Data Provider ADO 및 OLE DB([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.OleDb> 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58dbd-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ADO and OLE DB (<xref:System.Data.OleDb>).</span></span> <span data-ttu-id="58dbd-104">또한 이 표에는 <xref:System.Data.OleDb.OleDbDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58dbd-104">The typed accessor methods for the <xref:System.Data.OleDb.OleDbDataReader> are also listed.</span></span>  
