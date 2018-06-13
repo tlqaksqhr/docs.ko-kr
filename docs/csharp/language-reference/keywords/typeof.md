@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171943"
 ---
 # <a name="typeof-c-reference"></a>typeof(C# 참조)
 형식의 `System.Type` 개체를 가져오는 데 사용됩니다. `typeof` 식의 형식은 다음과 같습니다.  

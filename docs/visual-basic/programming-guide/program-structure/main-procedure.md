@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652154"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
 모든 Visual Basic 응용 프로그램 호출 프로시저를 포함 해야 `Main`합니다. 이 절차는 사용 시작 지점 및 응용 프로그램에 대해 전체적으로 제어 됩니다. .NET Framework 호출 프로그램 `Main` 프로시저 응용 프로그램을 로드 하 고 제어를 전달 하도록 준비 되어 있습니다. Windows Forms 응용 프로그램을 만들 경우를 제외 작성 해야 합니다는 `Main` 자체적으로 실행 되는 응용 프로그램에 대 한 프로시저입니다.  

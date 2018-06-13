@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652580"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
 모든 프로그램 요소-변수, 클래스 또는 멤버와 같은-제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 라는 변수를 만들 수 있습니다 `Loop`합니다. 그러나 구별 참조 하려면-제한 된와 동일한 이름이 있는 `Loop` 키워드-앞에 정규화 문자열 하거나 대괄호로 묶어야 합니다 (`[ ]`) 다음 예제와 같이 합니다.  

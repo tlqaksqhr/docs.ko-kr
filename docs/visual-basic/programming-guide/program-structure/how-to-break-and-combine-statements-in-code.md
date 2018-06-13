@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651020"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>방법: 코드에서 문 분리 및 결합(Visual Basic)
 코드를 작성할 시간에 가로 스크롤 코드 편집기에서 볼 수 있는 긴 문을 만들 수 있습니다. 방식에 영향을 주지 않지만 코드를 실행, 하기 쉽게 없는 사용자나 다른 사람이 모니터에 표시 된 대로 코드를 읽을 수에 대 한 합니다. 이러한 경우 긴 문은 여러 줄으로 분리를 고려해 야 합니다.  

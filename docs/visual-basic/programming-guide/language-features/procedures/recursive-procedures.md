@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650217"
 ---
 # <a name="recursive-procedures-visual-basic"></a>재귀 프로시저(Visual Basic)
 A *재귀* 절차는 자신을 호출 하는 하나입니다. 일반적으로 Visual Basic 코드를 작성 하려면 가장 효과적인 방법은 아닙니다.  

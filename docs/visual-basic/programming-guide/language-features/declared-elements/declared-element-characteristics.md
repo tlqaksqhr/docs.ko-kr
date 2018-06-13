@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650896"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>선언된 요소 특성(Visual Basic)
 A *특징* 선언 요소의 코드 상호 작용 하는 방법에 영향을 주는 요소는 요소입니다. 선언 된 모든 요소에 하나 이상의 관련 된 다음과 같은 특징이 있습니다.  

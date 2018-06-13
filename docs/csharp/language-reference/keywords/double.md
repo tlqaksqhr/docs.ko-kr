@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: e2524c907781bd3ce618acb0bdd087acb4b10f75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3683b51dfd0ef653ab8bfff6705b96a37e21a10a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172518"
 ---
 # <a name="double-c-reference"></a>double(C# 참조)
 `double` 키워드는 64비트 부동 소수점 값을 저장하는 단순 형식을 나타냅니다. 다음 표에서는 `double` 형식의 전체 자릿수와 근사 범위를 보여 줍니다.  
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="literals"></a>리터럴  
  기본적으로 대입 연산자 오른쪽의 실수 리터럴은 `double`로 처리됩니다. 그러나 정수가 `double`로 처리되도록 하려면 접미사 d 또는 D를 사용하세요. 예를 들면 다음과 같습니다.  
   
-```  
+```csharp  
 double x = 3D;  
 ```  
   

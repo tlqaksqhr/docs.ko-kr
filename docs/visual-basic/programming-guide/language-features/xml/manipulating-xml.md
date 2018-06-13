@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650415"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic에서 XML 조작
 사용할 수 있습니다 *XML 리터럴을* 를 문자열, 파일 또는 스트림을 같은 외부 소스에서 XML을 로드 합니다. 사용할 수 있습니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML을 조작 하 여 사용할 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] XML을 쿼리하고 있습니다.  

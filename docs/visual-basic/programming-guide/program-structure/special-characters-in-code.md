@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654358"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>코드의 특수 문자(Visual Basic)
 경우에 따라 영문자 또는 숫자 하지 않은 문자가 즉, 사용자 코드에 특수 문자를 사용 해야 할 수도 있습니다. 문장 부호 및 Visual Basic 문자 집합의 특수 문자는 프로그램 텍스트에서 컴파일러 또는 컴파일된 프로그램이 수행 하는 작업 정의에 이르기까지 다양 한 용도로 사용 합니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다.  

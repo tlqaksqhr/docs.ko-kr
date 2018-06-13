@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652872"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>방법: XML 리터럴 만들기(Visual Basic)
 코드에서 직접 XML 리터럴을 사용 하 여 XML 문서, 조각 또는 요소를 만들 수 있습니다. 이 항목의 예제 XML 문서를 만드는 방법과 세 개의 자식 요소를 포함 하는 XML 요소를 만드는 방법을 보여 줍니다.  

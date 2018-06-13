@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650831"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>완화된 대리자 변환(Visual Basic)
 완화 된 대리자 변환에는 해당 서명이 동일 하지 않은 경우에 처리기에 sub 및 함수를 할당할 수 있습니다. 따라서 대리자에는 바인딩이 이미 메서드 호출에 대해 허용 된 바인딩과 일치 됩니다.  

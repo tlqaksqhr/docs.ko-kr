@@ -25,6 +25,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172343"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 전자 메일 형식인지 확인
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.  

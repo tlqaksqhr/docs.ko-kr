@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653431"
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
 Visual Basic 컴파일러에서 몇 가지 오버 로드 된 버전에 정의 된 프로시저 호출을를 발견 하면 호출 하는 오버 로드 중 어떤 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  

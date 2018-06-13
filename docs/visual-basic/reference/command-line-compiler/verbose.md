@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652131"
 ---
 # <a name="-verbose"></a>-verbose
 컴파일러가 상태 및 오류에 대 한 자세한 정보 메시지를 생성 합니다.  

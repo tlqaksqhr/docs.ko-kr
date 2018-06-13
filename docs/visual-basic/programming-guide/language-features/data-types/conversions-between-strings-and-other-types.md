@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650571"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>문자열과 다른 형식 사이의 변환(Visual Basic)
 숫자, 변환할 수 있습니다 `Boolean`, 또는 날짜/시간 값을 한 `String`합니다. 반대 방향으로 변환할 수 있습니다-숫자에는 문자열 값에서 `Boolean`, 또는 `Date` -문자열의 내용을 대상 데이터 형식의 유효한 값으로 해석 될 수 있습니다. 그렇지 않을 경우 런타임 오류가 발생 합니다.  

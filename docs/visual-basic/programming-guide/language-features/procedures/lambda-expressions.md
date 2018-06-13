@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654796"
 ---
 # <a name="lambda-expressions-visual-basic"></a>람다 식(Visual Basic)
 A *람다 식을* 은 함수 또는 서브루틴 대리자가 유효한 함께 사용 될 수 있는 이름이 없는 합니다. 람다 식을 함수 또는 서브루틴 수 있으며 또는 여러 줄 수 있습니다. 람다 식에는 현재 범위에서 값을 전달할 수 있습니다.  

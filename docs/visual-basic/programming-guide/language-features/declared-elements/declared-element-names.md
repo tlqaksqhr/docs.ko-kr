@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651481"
 ---
 # <a name="declared-element-names-visual-basic"></a>선언된 요소 이름(Visual Basic)
 선언 된 모든 요소 이름이 라고도 *식별자*는 코드는 참조 하는 데 사용 하는 하 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650285"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>연습: 암호의 복합성 검사(Visual Basic)
 이 메서드는 몇 가지 강력한 암호 특성에 대 한 확인 하 고 문자열 매개 변수 정보로 업데이트 실패에 대 한 암호를 확인 합니다.  

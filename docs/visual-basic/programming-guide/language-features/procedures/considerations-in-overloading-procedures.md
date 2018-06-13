@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654332"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>프로시저를 오버로드할 때 고려해야 할 사항(Visual Basic)
 프로시저를 오버 로드할 때는 다른 사용 해야 *서명* 각 오버 로드 된 버전에 대 한 합니다. 일반적으로 즉, 각 버전에는 다른 매개 변수 목록을 지정 해야 합니다. 자세한 내용은 "다른 서명"의 참조 [프로시저 오버 로드](./procedure-overloading.md)합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652684"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>방법: Visual Basic에서 이벤트 처리기 호출
 *이벤트* 작업이 나 항목은-들면 마우스 클릭 또는 신용 한도 초과-응답 하도록 코드를 작성할 수에 대 한 일부 프로그램 구성 요소가 인식 되어 있습니다. *이벤트 처리기* 이벤트에 응답 하기 위해 작성 하는 코드입니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651079"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>방법: 인수가 값으로 전달되도록 설정(Visual Basic)
 프로시저 선언 전달 메커니즘을 결정 합니다. 매개 변수가 선언 된 경우 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic 참조로 전달 하는 해당 인수를 모니터링 해야 합니다. 따라서 프로시저를를 호출 코드의 기반이 되는 프로그래밍 요소의 값을 변경할 수 있습니다. 이러한 변경 으로부터 내부 요소를 보호 하려는 경우 재정의할 수 있습니다는 `ByRef` 프로시저에 전달 메커니즘 괄호 안에 인수 이름을 포함 하 여 호출 합니다. 이 괄호는 호출에 인수 목록을 묶는 괄호는 별개입니다.  

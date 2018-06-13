@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650971"
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
 코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 이 기호는 Visual Basic 컴파일러가, 다음의 텍스트를 무시 또는 *주석*합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  

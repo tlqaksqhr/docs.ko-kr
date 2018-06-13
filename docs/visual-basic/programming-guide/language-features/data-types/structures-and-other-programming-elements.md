@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652027"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>구조체 및 기타 프로그래밍 요소(Visual Basic)
 배열, 개체 및 프로시저 및 상호 함께 구조를 사용할 수 있습니다. 이러한 요소를 개별적으로 사용 하는 대로 동일한 구문을 사용 하는 상호 작용 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655927"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.  

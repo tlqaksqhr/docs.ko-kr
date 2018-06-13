@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654062"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic의 문자열 기본
 `String` 데이터 형식은 일련의 문자를 나타내며, 각각은 차례로 `Char` 데이터 형식의 인스턴스를 나타냅니다. 이 항목에서는 Visual Basic에서 문자열의 기본 개념을 소개 합니다.  

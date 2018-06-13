@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653587"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.  

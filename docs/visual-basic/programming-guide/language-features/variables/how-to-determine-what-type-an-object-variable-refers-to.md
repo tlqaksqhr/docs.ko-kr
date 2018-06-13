@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651316"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>방법: 개체 변수가 참조하는 형식 확인(Visual Basic)
 개체 변수는 다른 위치에 저장 된 데이터에 대 한 포인터를 포함 합니다. 런타임 동안 해당 데이터의 형식은 변경할 수 있습니다. 언제 든 지 사용할 수 있습니다는 <xref:System.Type.GetTypeCode%2A> 현재 런타임 형식을 결정 하는 메서드 또는 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 런타임 형식이 현재 했는지 확인 하 여 지정 된 형식의 호환 되는지 합니다.  

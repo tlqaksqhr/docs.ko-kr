@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651378"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>방법: 값이 변경되지 않는 변수 만들기(Visual Basic)
 해당 값이 변경 되지 않는 변수 개념 모순 되 게 나타날 수 있습니다. 하지만 상황이 발생 하는 상수 작업이 불가능 하 고 변수 고정된 값을 사용 하는 것이 유용 합니다. 이러한 경우에 사용 하 여 멤버 변수를 정의할 수 있습니다는 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드입니다.  

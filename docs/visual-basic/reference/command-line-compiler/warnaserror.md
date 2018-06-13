@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655671"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 컴파일러에서 맨 처음 발견 되는 경고를 오류로 처리 하도록 합니다.  

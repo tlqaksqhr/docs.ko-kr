@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473375"
 ---
 # <a name="msmq-integration-transport"></a>MSMQ 통합 전송
 이 항목에서는 MSMQ 통합 전송에 의해 생성된 모든 예외를 보여 줍니다.  

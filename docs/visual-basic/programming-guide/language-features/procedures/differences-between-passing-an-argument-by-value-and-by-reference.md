@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651657"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
 프로시저에 하나 이상의 인수를 전달 하는 경우 각 인수에서 호출 코드의 기본 프로그래밍 요소에 해당 합니다. 이 내부 요소 값 또는 그에 대 한 참조를 전달할 수 있습니다. 이것은 *전달 메커니즘*합니다.  

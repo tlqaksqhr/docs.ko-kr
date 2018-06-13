@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655116"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리(Visual Basic)
 이벤트로 작업 하는 방법을 보여 주는 두 항목 중 두 번째 숫자입니다. 첫 번째 항목 [연습: 이벤트 선언 및 발생](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)를 선언 하는 방법을 보여 줍니다. 이 섹션에서는 발생할 때 이벤트를 처리 하는 방법을 보여 주는 폼과 다음 연습에서 클래스를 사용 합니다.  

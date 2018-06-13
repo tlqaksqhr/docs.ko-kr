@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9714277f87095b709e37b582cd3435374d9a1555
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172230"
 ---
 # <a name="enum-c-reference"></a>enum(C# 참조)
 `enum` 키워드는 열거자 목록이라고 하는 명명된 상수 집합으로 구성된 고유 형식인 열거형을 선언하는 데 사용됩니다.  
@@ -20,13 +21,13 @@ ms.lasthandoff: 05/04/2018
   
  기본적으로 첫 번째 열거자 값은 0이며 그 이후의 열거자 값은 순서대로 1씩 증가됩니다. 예를 들어 다음 열거형에서 `Sat` 은 `0`, `Sun` 은 `1`, `Mon` 은 `2`등입니다.  
   
-```  
+```csharp  
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  다음 예제와 같이 열거자는 이니셜라이저를 사용하여 기본값을 재정의할 수 있습니다.  
   
-```  
+```csharp  
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -34,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [char](../../../csharp/language-reference/keywords/char.md) 형식을 제외한 임의의 정수 형식이 될 수 있습니다. 열거형 요소의 기본적인 기본 형식은 i [int](../../../csharp/language-reference/keywords/int.md)입니다. [바이트](../../../csharp/language-reference/keywords/byte.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.  
   
-```  
+```csharp  
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -49,7 +50,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  기본 형식은 각 열거자에 할당될 저장소 크기를 지정합니다. 그러나 `enum` 형식에서 정수 계열 형식으로 변환하려면 명시적 캐스트가 필요합니다. 예를 들어 다음 문은 `Sun` 을 [로 변환하는 캐스트를 사용하여 열거자](../../../csharp/language-reference/keywords/int.md) 을 `enum` int `int`형식 변수에 대입합니다.  
   
-```  
+```csharp  
 int x = (int)Day.Sun;  
 ```  
   

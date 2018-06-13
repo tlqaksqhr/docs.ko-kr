@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654111"
 ---
 # <a name="other-control-structures-visual-basic"></a>기타 제어 구조(Visual Basic)
 Visual Basic 리소스를 삭제 하거나 개체 참조를 반복 해야 할 횟수를 줄일 제어 구조 수를 제공 합니다.  

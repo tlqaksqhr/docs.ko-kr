@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653496"
 ---
 # <a name="-bugreport"></a>-bugreport
 버그 보고서를 파일로 작성할 때는 사용할 수 있는 파일을 만듭니다.  

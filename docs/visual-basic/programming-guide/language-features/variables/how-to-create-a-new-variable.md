@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651546"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 만들기(Visual Basic)
 변수를 만들는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  

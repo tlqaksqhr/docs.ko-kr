@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651468"
 ---
 # <a name="array-conversions-visual-basic"></a>배열 변환(Visual Basic)
 다음 조건이 충족 되는 배열 형식이 다른 배열 형식으로 변환할 수 있습니다.  

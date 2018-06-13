@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652911"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 암시적 형식 변환을 제한 하는 엄격한 형식 의미 체계를 적용 합니다.  
