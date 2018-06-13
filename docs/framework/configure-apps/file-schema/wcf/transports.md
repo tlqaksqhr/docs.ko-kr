@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755333"
 ---
 # <a name="transports"></a>전송
 전송 계층은 채널 스택의 최하위 수준에 있습니다. Windows Communication Foundation (WCF)에서 사용 되는 기본 전송은 HTTP, HTTPS, TCP 및 명명 된 파이프 됩니다. 이 섹션은 다양한 전송 형식을 구성할 수 있게 해 주는 모든 구성 요소를 나열합니다.  
