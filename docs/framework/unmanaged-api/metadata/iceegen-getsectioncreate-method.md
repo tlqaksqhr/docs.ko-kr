@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443341"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 메서드
 생성 하 고 지정한 이름 및 플래그 값을 사용 하는 코드 섹션을 가져옵니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495553"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
 이 항목에서는 기본 ASP.NET AJAX 서비스는 해당 하는 AJAX 사용 WCF Windows Communication Foundation () 서비스를 마이그레이션하는 절차를 설명 합니다. ASP.NET AJAX 서비스의 기능적으로 동일한 WCF 버전을 작성 하는 방법을 보여 줍니다. 두 서비스는 함께 사용할 수 있습니다 또는 WCF 서비스는 ASP.NET AJAX 서비스를 바꾸는 데 사용할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495322"
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 참조는 [Ws-discovery 사양의](http://go.microsoft.com/fwlink/?LinkID=122347)합니다.  

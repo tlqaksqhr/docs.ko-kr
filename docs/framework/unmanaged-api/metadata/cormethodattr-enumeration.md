@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444668"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 열거형
 메서드의 기능을 설명 하는 값을 포함 합니다.  

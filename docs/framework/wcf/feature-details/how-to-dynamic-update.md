@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493297"
 ---
 # <a name="how-to-dynamic-update"></a>방법: 동적 업데이트
 이 항목에서는 라우팅 구성을 만들고 동적으로 업데이트하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 구성 파일에서 초기 라우팅 구성을 가져오고 이 구성을 사용하여 모든 메시지를 regularCalc 계산기 서비스에 라우트합니다. 그러나 이 구성은 대상 끝점을 roundingCalc 서비스로 변경하기 위해 이후에 프로그래밍 방식으로 업데이트됩니다.  

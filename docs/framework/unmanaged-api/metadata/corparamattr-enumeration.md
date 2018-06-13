@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444293"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 열거형
 메서드 매개 변수의 메타데이터를 설명하는 값을 포함합니다.  

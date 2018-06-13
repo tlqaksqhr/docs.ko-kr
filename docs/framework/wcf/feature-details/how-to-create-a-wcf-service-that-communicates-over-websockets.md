@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493779"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>방법: WebSocket을 통해 통신하는 WCF 서비스 만들기
 WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.  WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다. 이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.  

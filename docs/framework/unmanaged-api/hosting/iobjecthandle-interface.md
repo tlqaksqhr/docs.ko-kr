@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa16b67f11e5d4f44ef88daf27e0014ae8690769
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443098"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle 인터페이스
 간접 참조에서 래핑 해제 값 방식 마샬링 개체에 대 한 방법을 제공합니다.  

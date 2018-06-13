@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494659"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>방법: 대기 중인 메시지와 WCF 끝점 교환
 큐는 서비스의 통신 시 사용할 수 없는 경우에 신뢰할 수 있는 메시징 클라이언트와 Windows Communication Foundation (WCF) 서비스 간에 발생할 수 없음을 확인 합니다. 다음 절차에는 클라이언트와 표준을 사용 하 여 서비스 간의 통신을 지 속하는 WCF 서비스를 구현 하는 경우에 대기 중인 바인딩을 확인 하는 방법을 보여 줍니다.  

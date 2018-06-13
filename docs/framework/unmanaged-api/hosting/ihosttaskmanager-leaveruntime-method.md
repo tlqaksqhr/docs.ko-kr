@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d31c5c1b95d250f90b202b391d908f9c12afb84
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444479"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 메서드
 현재 실행 중인 작업이 공용 언어 런타임 (CLR) 종료 하 고 관리 되지 않는 코드를 입력 되려고 함을 호스트에 알립니다.  

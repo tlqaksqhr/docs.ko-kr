@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356358"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 대리자가 함수 포인터로 관리 코드에서 비관리 코드로 마샬링되고 대리자가 가비지 수집된 후 콜백이 해당 함수 포인터에 배치된 경우 `callbackOnCollectedDelegate` MDA(관리 디버깅 도우미)가 활성화됩니다.  
