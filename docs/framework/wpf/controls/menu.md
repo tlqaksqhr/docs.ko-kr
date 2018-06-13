@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555791"
 ---
 # <a name="menu"></a>메뉴
 A <xref:System.Windows.Controls.Menu> 계층적 명령 또는 이벤트 처리기와 관련 된 요소도 구성할 수 있는 컨트롤입니다. 각 <xref:System.Windows.Controls.Menu> 여러 개 포함할 수 <xref:System.Windows.Controls.MenuItem> 컨트롤입니다. 각 <xref:System.Windows.Controls.MenuItem> 명령을 호출 하거나 호출할 수는 `Click` 이벤트 처리기입니다. A <xref:System.Windows.Controls.MenuItem> 여러 개 있을 수도 수 <xref:System.Windows.Controls.MenuItem> 자식, 하위 메뉴를 형성할으로 합니다.  

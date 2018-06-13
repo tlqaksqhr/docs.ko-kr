@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529484"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가
 비시각적 컨트롤 (또는 구성 요소) 응용 프로그램에 기능을 제공합니다. 다른 컨트롤과 달리 구성 요소 사용자에 게 사용자 인터페이스를 제공 하지 않는 및 따라서 Windows Forms 디자이너 화면에 표시 될 필요가 없습니다. 구성 요소는 폼에 추가 되 면 Windows Forms 디자이너 구성 요소를 모두 표시 되는 폼의 아래쪽에 크기를 조정할 수 트레이 표시 합니다. 컨트롤에 구성 요소 트레이에 추가 되 면 구성 요소를 선택한 폼에서 다른 컨트롤 처럼 해당 속성을 설정할 수 있습니다.  

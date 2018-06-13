@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758479"
 ---
 # <a name="connection-string-builders"></a>연결 문자열 작성기
 이전 버전의 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]컴파일 시간 실행 시 잘못 된 키워드가 생성 되도록 연결 된 문자열 값이 발생 하지 않은 있는 연결 문자열의 검사는 <xref:System.ArgumentException>합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 각각 다른 연결 문자열 키워드 구문을 지원하므로 수동으로 유효한 연결 문자열을 구성하는 것이 어렵습니다. 이 문제를 해결하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0에는 각 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에 사용할 수 있는 새로운 연결 문자열 작성기가 추가되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자와 그와 관련된 연결 문자열 작성기 클래스가 나와 있습니다.  

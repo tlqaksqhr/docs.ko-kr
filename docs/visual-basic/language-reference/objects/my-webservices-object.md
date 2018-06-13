@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604694"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 개체
 만들고 현재 프로젝트에서 참조 하는 각 XML 웹 서비스의 단일 인스턴스에 액세스 하기 위한 속성을 제공 합니다.  

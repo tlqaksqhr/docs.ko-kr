@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750689"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;메시지 로깅&gt;
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  

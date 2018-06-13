@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760559"
 ---
 # <a name="key-entity-sql"></a>KEY(Entity SQL)
 참조 또는 엔터티 식의 키를 추출합니다.  

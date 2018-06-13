@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559427"
 ---
 # <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>방법: 3차원 개체에 EmissiveMaterial 적용
 다음 예제에서는 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Media.Media3D.EmissiveMaterial> 색은 기존 자료 같은 EmissiveMaterial의 브러시의 색을 추가 합니다. 다음 코드 <xref:System.Windows.Media.Media3D.DiffuseMaterial> 및 <xref:System.Windows.Media.Media3D.EmissiveMaterial> 파란색 DiffuseMaterial의 모양에 추가할 조합 하 여 적용 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604213"
 ---
 # <a name="implements-statement"></a>Implements 문
 인터페이스 또는 클래스에서 구현 해야 하는 인터페이스 멤버 또는 자신이 나타나는 구조체 정의 하나 이상 지정 합니다.  

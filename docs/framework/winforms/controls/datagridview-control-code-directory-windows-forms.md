@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529317"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a>DataGridView 컨트롤 코드 디렉터리(Windows Forms)
 이 항목에 대 한 링크를 제공 <xref:System.Windows.Forms.DataGridView>-관련 코드 예제는 문서에서 확인할 수 있습니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555859"
 ---
 # <a name="how-to-clear-bindings"></a>방법: 바인딩 지우기
 이 예에서는 개체에서 바인딩을 지우는 방법을 보여줍니다.  

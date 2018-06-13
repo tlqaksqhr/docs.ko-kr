@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555780"
 ---
 # <a name="data-binding-wpf"></a>데이터 바인딩(WPF)
 Windows Presentation Foundation (WPF) 데이터 바인딩 응용 프로그램 데이터와 상호 작용 하는 간단 하 고 일관적인 방법을 제공 합니다. 다양 한 형식의 공용 언어 런타임 (CLR) 개체 및 XML 데이터 원본에서에서 데이터 요소를 바인딩할 수 있습니다.  

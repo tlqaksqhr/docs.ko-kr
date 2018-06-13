@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524656"
 ---
 # <a name="windows-forms-accessibility"></a>Windows Forms 내게 필요한 옵션
 Windows Forms의 접근성 기능을 사용하면 다양한 사용자에게 응용 프로그램을 제공할 수 있습니다.  

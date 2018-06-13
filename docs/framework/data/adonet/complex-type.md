@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756815"
 ---
 # <a name="complex-type"></a>복합 형식
 A *복합 형식* 는 다양 한 구조적된 속성을 정의 하기 위한 서식 파일 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 또는 다른 복합 형식의 합니다. 각 템플릿에는 다음 정보가 들어 있습니다.  

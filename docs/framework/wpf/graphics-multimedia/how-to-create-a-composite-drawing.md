@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561595"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>방법: 합성 그리기 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.DrawingGroup> 다중 결합 하 여 복잡 한 드로잉을 만드는 데 <xref:System.Windows.Media.Drawing> 단일 복합 그리기 개체입니다.  

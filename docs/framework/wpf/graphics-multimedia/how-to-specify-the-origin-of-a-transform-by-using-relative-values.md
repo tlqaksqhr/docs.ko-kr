@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561409"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>방법: 상대 값을 사용하여 변환 원점 지정
 원본을 지정 하려면 상대 값을 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.UIElement.RenderTransform%2A> 에 적용 되는 <xref:System.Windows.FrameworkElement>합니다.  

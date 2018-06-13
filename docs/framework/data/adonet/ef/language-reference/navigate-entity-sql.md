@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764738"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 엔터티 사이에 설정된 관계를 탐색합니다.  

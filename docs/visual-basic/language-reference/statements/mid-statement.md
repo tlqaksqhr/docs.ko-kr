@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602267"
 ---
 # <a name="mid-statement"></a>Mid 문
 지정 된 개수의 문자를 바꿉니다는 `String` 를 다른 문자열 변수입니다.  

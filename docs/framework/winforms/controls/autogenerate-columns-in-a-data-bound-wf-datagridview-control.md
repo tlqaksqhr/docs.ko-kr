@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524389"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에서 열 자동 생성
 다음 코드 예제에 바인딩된 데이터 원본에서 열을 표시 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 경우는 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 속성 값은 `true` (기본값) 이면는 <xref:System.Windows.Forms.DataGridViewColumn> 데이터 원본 테이블의 각 열에 대해 생성 됩니다.  

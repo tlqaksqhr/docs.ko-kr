@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524503"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>관리 GDI+에서 이미지 인코더 및 디코더 사용
 <xref:System.Drawing> 네임 스페이스는 제공 된 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. 이미지 인코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 디스크에 메모리에서 이미지를 작성할 수 있습니다. 이미지 디코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 메모리에 디스크에서 이미지를 로드할 수 있습니다. 데이터를 변환 하는 인코더는 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 개체를 지정 된 디스크 파일 형식입니다. 데이터 원본에 디스크 파일에 데이터를 해석 하는 디코더는 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체입니다.  

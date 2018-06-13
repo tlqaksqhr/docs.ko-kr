@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604577"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case 문(Visual Basic)
 여러 식의 값에 따라 문 그룹 중 하나를 실행 합니다.  

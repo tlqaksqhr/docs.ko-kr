@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529794"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의
 `ShouldSerialize` 및 `Reset` 속성이 없는 경우 속성에 대해 제공할 수 있는 선택적 메서드는는 간단한 기본값을 가집니다. 속성에 기본값을 적용 해야는 <xref:System.ComponentModel.DefaultValueAttribute> 특성 클래스 생성자에 기본값을 대신 제공 합니다. 이러한 메커니즘 중 하나를 통해 디자이너에서 다음과 같은 기능 수 있습니다.  

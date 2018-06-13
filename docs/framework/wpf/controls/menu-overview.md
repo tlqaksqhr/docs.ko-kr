@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557604"
 ---
 # <a name="menu-overview"></a>Menu 개요
 <xref:System.Windows.Controls.Menu> 클래스를 사용 하면 명령 및 이벤트 처리기를 계층적 순서로 관련 된 요소를 구성할 수 있습니다. 각 <xref:System.Windows.Controls.Menu> 의 컬렉션을 포함 하는 요소 <xref:System.Windows.Controls.MenuItem> 요소입니다.  

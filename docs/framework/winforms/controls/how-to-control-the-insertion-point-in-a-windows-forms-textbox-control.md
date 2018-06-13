@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530740"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 삽입 지점 제어
 때 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤이 포커스를 먼저 받기, 텍스트 상자 내에서 기본 삽입이 기존 텍스트의 왼쪽에 있습니다. 키보드 또는 마우스 커서를 이동할 수 있습니다. 텍스트 상자에서 손실 되 고 포커스 다시 얻은 후, 삽입 지점을 아무 곳에 나 사용자 마지막 배치 됩니다.  

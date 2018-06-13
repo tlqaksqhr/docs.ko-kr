@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761274"
 ---
 # <a name="null-comparisons"></a>null 비교
 데이터 소스의 `null` 값은 값을 알 수 없음을 나타냅니다. [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서는 특정 계산이나 비교가 유효한 데이터 또는 Null이 아닌 데이터를 가진 행에서만 수행되도록 Null 값을 확인할 수 있습니다. 그러나 CLR Null 의미 체계는 데이터 소스의 Null 의미 체계와 다를 수 있습니다. 대부분의 데이터베이스는 세 개의 값으로 구성된 논리 버전을 사용하여 Null 비교를 처리합니다. 즉, Null 값에 대한 비교는 `true` 또는 `false`가 되지 않고 `unknown`이 됩니다. ANSI Null은 이렇게 구현되는 경우가 많지만 항상 그런 것은 아닙니다.  

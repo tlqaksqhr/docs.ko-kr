@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557032"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링
 데이터를 종종 유용는 <xref:System.Windows.Controls.DataGrid> 그룹화, 정렬 및 데이터를 필터링 하 여 다양 한 방식에서입니다. 그룹화, 정렬 및 데이터를 필터링 하는 <xref:System.Windows.Controls.DataGrid>에 바인딩할는 <xref:System.Windows.Data.CollectionView> 이러한 함수를 지 원하는 합니다. 데이터로 작업할 수 있습니다는 <xref:System.Windows.Data.CollectionView> 원본 데이터에 영향을 주지 않고 합니다. 컬렉션 뷰에서의 변경에 반영 된 <xref:System.Windows.Controls.DataGrid> UI (사용자 인터페이스).  

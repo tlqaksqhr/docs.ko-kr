@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558815"
 ---
 # <a name="how-to-animate-in-a-style"></a>방법: 스타일에 애니메이션 효과 적용
 이 예에서는 스타일 내에서 속성에 애니메이션을 적용 하는 방법을 보여 줍니다. 애니메이션 스타일 적용을 스타일이 정의 된 프레임 워크 요소만 직접 지정할 수 있습니다. Freezable 개체를 대상으로 하면 해야 "dot 다운" 스타일의 요소 속성에서 합니다.  

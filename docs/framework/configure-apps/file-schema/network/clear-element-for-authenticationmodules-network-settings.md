@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751989"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;지우기&gt; authenticationModules (네트워크 설정)에 대 한 요소
 응용 프로그램에서 인증 모듈을 모두 지웁니다.  

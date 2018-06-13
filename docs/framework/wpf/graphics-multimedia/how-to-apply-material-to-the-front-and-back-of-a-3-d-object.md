@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559736"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>방법: 3차원 개체의 앞과 뒤에 Material 적용
 적용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.Media3D.Material> 를 맨 앞과 뒤 3 차원 개체를 개체의 양쪽 모두 표시 하도록 개체에 애니메이션을 적용 합니다. <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> 속성의는 <xref:System.Windows.Media.Media3D.GeometryModel3D> 빨간색을 적용 하는 데 사용 되 <xref:System.Windows.Media.Brush> 개체의 전면에 및 <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> 속성의는 <xref:System.Windows.Media.Media3D.GeometryModel3D> 옆에 파란색을 적용 하는 데 사용 되 <xref:System.Windows.Media.Brush> 개체의 뒷면에 합니다. 아래 코드 개체에 대 한 자료의 응용 프로그램을 보여 줍니다.  

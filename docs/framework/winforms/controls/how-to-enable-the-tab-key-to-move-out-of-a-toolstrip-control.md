@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531217"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>방법: TAB 키를 사용하여 ToolStrip 컨트롤 밖으로 이동 가능하도록 설정
 사용자의 이동 하려면 TAB 키를 사용 하도록 설정 하려면 다음 절차를 사용 하 여 한 <xref:System.Windows.Forms.ToolStrip> 탭 순서의 다음 컨트롤로 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559803"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>방법: 시각적 요소로 영역 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.VisualBrush> 클래스를 사용 하 여 영역을 그리는 <xref:System.Windows.Media.Visual>합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760468"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable에 열 추가
 A <xref:System.Data.DataTable> 의 컬렉션을 포함 <xref:System.Data.DataColumn> 에서 참조 한 개체는 **열** 테이블의 속성입니다. 이 열 컬렉션과 모든 제약 조건을 함께 사용하여 테이블의 스키마나 구조를 정의합니다.  

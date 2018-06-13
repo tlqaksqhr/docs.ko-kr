@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764020"
 ---
 # <a name="operator-precedence-entity-sql"></a>연산자 우선 순위(Entity SQL)
 경우는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에 여러 명의 연산자, 연산자 우선 순위가 연산 수행 순서를 결정 합니다. 실행 순서는 쿼리 결과에 상당한 영향을 미칠 수 있습니다.  

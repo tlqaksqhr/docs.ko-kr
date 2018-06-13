@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603021"
 ---
 # <a name="ctype-function-visual-basic"></a>CType 함수(Visual Basic)
 명시적으로 지정 된 데이터 형식, 개체, 구조체, 클래스 또는 인터페이스에는 식을 변환한 결과를 반환 합니다.  

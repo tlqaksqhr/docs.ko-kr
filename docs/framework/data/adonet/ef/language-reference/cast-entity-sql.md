@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761443"
 ---
 # <a name="cast-entity-sql"></a>CAST(Entity SQL)
 데이터 형식의 식을 다른 형식의 식으로 변환합니다.  

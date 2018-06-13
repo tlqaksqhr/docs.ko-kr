@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762886"
 ---
 # <a name="then-entity-sql"></a>THEN(Entity SQL)
 WHEN 절이 `true`로 계산될 때의 결과입니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600861"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 축 속성(Visual Basic)
 이 섹션의 항목에는 Visual Basic의 XML 축 속성의 구문은 문서화합니다. XML 축 속성 쉽게 XML 코드에서 직접 액세스할 수 있습니다.  
