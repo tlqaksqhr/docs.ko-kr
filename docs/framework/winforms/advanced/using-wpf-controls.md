@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526606"
 ---
 # <a name="using-wpf-controls"></a>WPF 컨트롤 사용
 Windows Forms 기반 응용 프로그램에서 Windows Presentation Foundation (WPF) 컨트롤을 사용할 수 있습니다. 이러한 옵션은 두 가지 서로 다른 뷰 기술, 상호 운용 되 원활 하 게 합니다.  

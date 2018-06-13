@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559673"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>방법: 요소 또는 브러시의 불투명도에 애니메이션 효과 적용
 페이드 아웃 프레임 워크 요소를 하려면 애니메이션을 적용할 수 해당 <xref:System.Windows.UIElement.Opacity%2A> 속성 또는 있습니다 애니메이션을 적용할 수는 <xref:System.Windows.Media.Brush.Opacity%2A> 속성은 <xref:System.Windows.Media.Brush> (또는 브러시) 칠할 하는 데 사용 합니다. 하면 불투명도 요소에 애니메이션을 적용 하 고 자식 페이드 아웃, 하지만 페이드 요소의 부분에 대 한 좀 더 선택적 될 수 있습니다 요소를 그리는 데 사용 되는 브러시에 애니메이션을 적용 합니다. 예를 들어 단추의 배경을 그리는 데 사용 되는 브러시 불투명도 애니메이션을 적용할 수 있습니다. 이 단추의 배경을 완전히 불투명 한 텍스트를 그대로 유지 하면서 현재 뷰를 페이드 인 / 아웃 하 리라 예상 되었습니다.  

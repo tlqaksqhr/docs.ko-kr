@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555979"
 ---
 # <a name="tabcontrol"></a>TabControl
 <xref:System.Windows.Controls.TabControl> 요소에서 해당 탭을 선택 하 여 개별 페이지의 콘텐츠를 표시 합니다. 각 탭에는 <xref:System.Windows.Controls.TabItem>합니다.  

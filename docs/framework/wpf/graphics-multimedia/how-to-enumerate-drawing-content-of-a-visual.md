@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559404"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>방법: 시각적 요소의 그리기 콘텐츠 열거
 <xref:System.Windows.Media.Drawing> 의 내용을 열거 하기 위한 개체 모델을 제공 하는 개체는 <xref:System.Windows.Media.Visual>합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554478"
 ---
 # <a name="statusbar"></a>StatusBar
 A <xref:System.Windows.Controls.Primitives.StatusBar> 응용 프로그램 상태 정보를 표시할 수 있는 창 맨 아래에 수평 영역입니다.  

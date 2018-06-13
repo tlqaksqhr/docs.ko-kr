@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556967"
 ---
 # <a name="how-to-implement-binding-validation"></a>방법: 바인딩 유효성 검사 구현
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 및 잘못 된 값을 입력 한 경우 사용자에 게 시각적 피드백을 제공 하는 스타일 트리거는 사용자 지정 유효성 검사 규칙에 기반 합니다.  

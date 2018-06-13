@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760858"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>중첩 Entity SQL 쿼리 작성
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 다양한 기능을 가진 언어입니다. 빌딩 블록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 는 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 탭 형식의 결과 집합에 국한 되지 않음: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 리터럴, 매개 변수 또는 중첩된 식을 가질 수 있는 복잡 한 식 작성을 지원 합니다. 식에서 값을 매개 변수화 또는 다른 식으로 구성 수 있습니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558867"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>방법: 여러 BitmapSource 개체 연결
 이 예제 연결 하 여 이미지 소스를 다양 한 효과 적용 하는 방법을 여러 <xref:System.Windows.Media.Imaging.BitmapSource> 파생 개체를 함께 합니다.  

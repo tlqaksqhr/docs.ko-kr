@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558073"
 ---
 # <a name="geometry-overview"></a>Geometry 개요
 이 개요에서는 사용 하는 방법을 설명는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 셰이프를 설명 하는 클래스입니다. 이 항목은 또한 간의 차이점을 대조 <xref:System.Windows.Media.Geometry> 개체 및 <xref:System.Windows.Shapes.Shape> 요소입니다.  

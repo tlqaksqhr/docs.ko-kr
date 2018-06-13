@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553743"
 ---
 # <a name="stackpanel"></a>StackPanel
 <xref:System.Windows.Controls.StackPanel> 요소는 가로 또는 세로로 자식 요소를 스택 하는 데 사용 됩니다.  

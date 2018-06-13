@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560960"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>방법: 이미지로 영역 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ImageBrush> 이미지 영역을 그리는 클래스입니다. <xref:System.Windows.Media.ImageBrush> 변수에 지정 된 단일 이미지를 표시 합니다. 해당 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 속성입니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762324"
 ---
 # <a name="query-results"></a>쿼리 결과
 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리가 명령 트리로 변환되어 실행되고 나면 일반적으로 쿼리 결과가 다음 중 하나의 형태로 반환됩니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560578"
 ---
 # <a name="how-to-create-a-reflection"></a>방법: 리플렉션 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.VisualBrush> 반사를 만들려고 합니다. 때문에 <xref:System.Windows.Media.VisualBrush> 기존의 시각적을 표시할 수 있으며,이 기능을 사용 하 여 리플렉션 및 확대 같은 흥미로운 시각적 효과 생성 합니다.  

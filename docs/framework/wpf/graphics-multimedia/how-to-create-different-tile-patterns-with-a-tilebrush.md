@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559603"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>방법: TileBrush로 다른 바둑판식 배열 패턴 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush.TileMode%2A> 의 속성은 <xref:System.Windows.Media.TileBrush> 는 패턴을 생성 합니다.  

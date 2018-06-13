@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555940"
 ---
 # <a name="how-to-position-a-tooltip"></a>방법: 도구 설명 배치
 이 예제에서는 화면에 도구 설명의 위치를 지정 하는 방법을 보여 줍니다.  

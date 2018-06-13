@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565061"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 지시문
 명명 된 개체 참조에 대 한 필드 정의 된 XAML 컴파일 동작을 수정 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 대신 액세스는 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 기본 동작입니다.  

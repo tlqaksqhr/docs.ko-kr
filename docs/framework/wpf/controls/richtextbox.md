@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554094"
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox> 요소 잘라내기 및 붙여넣기, 풍부한 문서 표시 및 콘텐츠 선택 등의 기능에 대 한 기본 제공 지원으로 편집 컨트롤을 정의 합니다.  

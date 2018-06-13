@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525062"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>방법: 카디널 스플라인 그리기
 카디널 스플라인 주어진된 점의 집합을 통해 원활 하 게 전달 되는 곡선입니다. 카디널 스플라인 그리기, 하려면 만듭니다는 <xref:System.Drawing.Graphics> 개체를 가리키는 배열 주소 전달는 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.  

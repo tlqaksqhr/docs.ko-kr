@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560334"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>방법: 키 프레임을 사용하여 색에 애니메이션 효과 주기
 애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 <xref:System.Windows.Media.SolidColorBrush> 키 프레임을 사용 하 여 합니다.  

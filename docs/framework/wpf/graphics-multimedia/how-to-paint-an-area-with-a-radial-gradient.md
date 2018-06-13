@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560644"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>방법: 방사형 그라데이션으로 영역 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.RadialGradientBrush> 방사형 그라데이션으로 영역을 그리는 클래스입니다.  

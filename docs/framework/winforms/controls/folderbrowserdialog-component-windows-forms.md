@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524454"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog 구성 요소(Windows Forms)
 Windows Forms `FolderBrowserDialog` 구성 요소는 사용자 수 및 폴더를 선택 찾아보거나 새로 만들려면 새 인터페이스를 표시 합니다. 보완 하는 [OpenFileDialog 구성 요소](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) 파일을 선택 하 고 검색에 사용 되는 구성 요소입니다.  

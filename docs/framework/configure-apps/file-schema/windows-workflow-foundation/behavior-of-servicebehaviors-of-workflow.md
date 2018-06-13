@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757972"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt-of-workflow"></a>워크플로 &lt;serviceBehaviors&gt;의 &lt;behavior&gt;
 **동작** 요소는 서비스의 동작에 대 한 설정 컬렉션을 포함 합니다. 각 동작은 기준으로 인덱싱되어 있으면 해당 **이름**합니다. 서비스 사용 하 여이 이름을 통해 각 동작에 연결할 수는 **behaviorConfiguration**특성에는 [ \<끝점 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소입니다. 따라서 설정을 다시 정의하지 않고도 끝점에서 일반 동작 구성을 공유할 수 있습니다.  

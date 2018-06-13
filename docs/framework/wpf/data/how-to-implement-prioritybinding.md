@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557760"
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
 <xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 바인딩의 목록을 지정 하 여 작동 합니다. 바인딩 목록은 가장 낮은 우선 순위를 높은 우선 순위에서 정렬 됩니다. 우선 순위가 높은 바인딩이 값을 반환 하는 경우 성공적으로 처리 될 때 다음는 없습니다 목록에 다른 바인딩을 처리할 필요가 있습니다. 우선 순위가 높은 바인딩이 평가할 오랜 시간이 걸리는 경우 수, 다음 우선 순위가 가장 높은 값을 성공적으로 반환 하는 더 높은 우선 순위의 바인딩 값을 성공적으로 반환 될 때까지 사용 됩니다.  

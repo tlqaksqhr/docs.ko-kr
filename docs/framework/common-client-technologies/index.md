@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753497"
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework의 일반 클라이언트 기술
 이 단원에서는 클라이언트 응용 프로그램에서 사용하는 다양한 기술을 설명합니다.  

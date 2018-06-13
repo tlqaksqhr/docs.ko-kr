@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760572"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN(Entity SQL)
 여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다. 새 컬렉션에는 기존 컬렉션과 동일한 요소가 모두 포함되지만 중첩 구조는 포함되지 않습니다.  

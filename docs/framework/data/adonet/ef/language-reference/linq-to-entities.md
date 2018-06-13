@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760780"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다. Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다. LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다. 다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  

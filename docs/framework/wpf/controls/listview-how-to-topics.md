@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555804"
 ---
 # <a name="listview-how-to-topics"></a>ListView 방법 항목
 이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.ListView> 컨트롤에 데이터 항목 집합을 표시 합니다.  

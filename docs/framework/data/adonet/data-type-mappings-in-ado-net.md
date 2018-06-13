@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757673"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET에서 데이터 형식 매핑
 .NET Framework는 런타임에 형식이 선언, 사용 및 관리되는 방법을 정의하는 공용 형식 시스템을 기반으로 합니다. .NET Framework는 값 형식과 참조 형식으로 구성되며, 두 형식 모두 <xref:System.Object> 기본 형식에서 파생됩니다. 데이터 소스로 작업할 경우 데이터 형식을 명시적으로 지정하지 않으면 데이터 공급자에서 데이터 형식이 유추됩니다. 예를 들어 <xref:System.Data.DataSet> 개체는 모든 데이터 소스에 대해 독립적입니다. `DataSet`의 데이터는 데이터 소스에서 검색되며 변경 내용은 `DataAdapter`를 사용하여 데이터 소스에 다시 적용됩니다. 즉, `DataAdapter`가 <xref:System.Data.DataTable>의 `DataSet`을 데이터 소스의 값으로 채울 때 `DataTable` 열의 결과 데이터 형식은 데이터 소스에 연결하는 데 사용되는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자별 형식이 아닌, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식입니다.  

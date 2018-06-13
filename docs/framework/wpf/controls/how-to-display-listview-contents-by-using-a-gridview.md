@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554053"
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>방법: GridView를 사용하여 ListView 콘텐츠 표시
 정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.GridView> 에 대 한 보기 모드는 <xref:System.Windows.Controls.ListView> 제어 합니다.  

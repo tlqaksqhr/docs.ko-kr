@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559973"
 ---
 # <a name="how-to-create-a-composite-shape"></a>방법: 복합 도형 만들기
 사용 하 여 복합 셰이프를 만드는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체 하 고 표시를 사용 하 여는 <xref:System.Windows.Shapes.Path> 요소입니다. 다음 예제에서는 <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>, 및 <xref:System.Windows.Media.RectangleGeometry> 함께 사용 되는 <xref:System.Windows.Media.GeometryGroup> 복합 셰이프를 만듭니다. 기 하 도형이 다음 사용 하 여 그려집니다는 <xref:System.Windows.Shapes.Path> 요소입니다.  

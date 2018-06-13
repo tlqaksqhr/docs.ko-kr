@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553769"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>방법: 상황에 맞는 메뉴로 맞춤법 검사 사용
 기본적으로 편집 컨트롤에서 맞춤법 검사를 사용 하도록 설정 하면 같은 <xref:System.Windows.Controls.TextBox> 또는 <xref:System.Windows.Controls.RichTextBox>, 상황에 맞는 메뉴에서 맞춤법 검사 선택 항목을 찾을 수 있습니다. 예를 들어 사용자가 맞춤법이 틀린된 단어 마우스 오른쪽 단추로 러 워 맞춤법이 나 하는 옵션 집합이 **모두 무시**합니다. 그러나 사용자 고유의 사용자 지정 상황에 맞는 메뉴와 기본 상황에 맞는 메뉴를 재정의 하면이 기능 손실 되 고 상황에 맞는 메뉴에서 맞춤법 검사 기능을 다시 사용 하도록 설정 하는 코드를 작성 해야 합니다. 다음 예제에서는 이것을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.TextBox>합니다.  

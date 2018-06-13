@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758271"
 ---
 # <a name="specifying-an-assembly39s-location"></a>어셈블리를 지정 하&#39;s 위치
 두 가지 방법으로 어셈블리의 위치를 지정할 수 있습니다.  

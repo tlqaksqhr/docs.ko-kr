@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557526"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 개요
 <xref:System.Windows.Controls.RichTextBox> 컨트롤 표시 하거나 단락, 이미지, 테이블 등 유동 콘텐츠를 편집할 수 있습니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.TextBox> 모두에서 사용 하는 방법의 예제를 제공 하 고 클래스 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 C#입니다.  

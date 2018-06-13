@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556040"
 ---
 # <a name="drawings"></a>Drawing
 <xref:System.Windows.Media.Drawing> 개체는 효율적으로 도형, 이미지 또는 텍스트를 그리는 데 사용 됩니다. 드로잉으로 그릴 때 사용 되는 <xref:System.Windows.Media.DrawingBrush> 프로그래밍할 <xref:System.Windows.Media.Visual> 개체입니다.  

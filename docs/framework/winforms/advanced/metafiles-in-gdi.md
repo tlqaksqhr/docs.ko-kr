@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525098"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+의 메타파일
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Imaging.Metafile> 클래스를 기록 하 고 메타 파일을 표시할 수 있도록 합니다. 벡터 이미지 라고도 불리는 메타 파일 그리기 명령 및 설정의 시퀀스로 저장 되는 이미지를입니다. 명령 및 설정에 기록 된 <xref:System.Drawing.Imaging.Metafile> 개체를 메모리에 저장 되거나를 파일이 나 스트림에 저장할 수 있습니다.  

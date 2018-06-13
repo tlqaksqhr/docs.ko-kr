@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749584"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 동작 확장을 사용하면 사용자 정의 동작 요소를 만들 수 있습니다. 이러한 요소는 표준 WCF(Windows Communication Foundation) 동작 요소 구성과 함께 사용할 수 있습니다. `behaviorExtensions` 섹션은 구성에 사용할 수 있도록 요소를 정의합니다. 다음은 일반적인 동작 확장 예제입니다.  

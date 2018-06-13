@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564315"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 내장 XAML 형식
 XAML 프로덕션 내에서 코드를 배치할 수 있습니다. 이러한 코드는 런타임에 의해 해석 같이 나중에 사용에 대 한 XAML 프로덕션의 왼쪽 또는 XAML을 컴파일하는 XAML 프로세서 구현 하거나 컴파일될 수 있습니다.  

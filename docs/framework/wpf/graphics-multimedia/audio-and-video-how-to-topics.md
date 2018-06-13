@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556018"
 ---
 # <a name="audio-and-video-how-to-topics"></a>오디오 및 비디오 방법 항목
 다음 항목을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement> 응용 프로그램에서 오디오 및 비디오 콘텐츠에 통합할 수 있습니다.  

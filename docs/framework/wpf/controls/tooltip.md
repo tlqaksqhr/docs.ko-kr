@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556980"
 ---
 # <a name="tooltip"></a>도구 설명
 도구 설명 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창인은는 <xref:System.Windows.Controls.Button>합니다.  

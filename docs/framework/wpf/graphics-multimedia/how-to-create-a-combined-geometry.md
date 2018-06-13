@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561123"
 ---
 # <a name="how-to-create-a-combined-geometry"></a>방법: 결합된 기하 도형 만들기
 이 예제에는 기 하 도형을 결합 하는 방법을 보여 줍니다. 두 기 하 도형을 함께 사용 하려면 사용을 <xref:System.Windows.Media.CombinedGeometry> 개체입니다. 설정의 <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 및 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 결합 및 설정 하려면 두 기 하 도형 사용 하 여 속성의 <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> 기 하 도형이 함께 결합할 수는 방법을 확인 하는 경우이 속성을 `Union`, `Intersect`, `Exclude`, 또는 `Xor`.  

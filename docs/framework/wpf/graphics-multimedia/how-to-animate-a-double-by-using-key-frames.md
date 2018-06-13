@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557435"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>방법: 키 프레임을 사용하여 Double에 애니메이션 효과 주기
 사용 하는 속성의 값에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Double> 키 프레임을 사용 하 여 합니다.  

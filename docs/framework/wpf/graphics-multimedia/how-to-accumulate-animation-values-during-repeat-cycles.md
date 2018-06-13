@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557669"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>방법: 주기가 반복되는 동안 애니메이션 값 누적
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 반복 주기에 대해 애니메이션 값을 누적 하는 속성입니다.  

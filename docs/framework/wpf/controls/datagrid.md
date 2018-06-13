@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557084"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> 컨트롤 표시 하 고 SQL 데이터베이스, LINQ 쿼리 또는 기타 바인딩할 수 있는 데이터 원본에서와 같은 서로 다른 여러 원본의 데이터를 편집할 수 있습니다. 자세한 내용은 [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)를 참조하세요.  

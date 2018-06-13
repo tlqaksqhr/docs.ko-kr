@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525538"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip 컨트롤
 <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤은 컨트롤에 연결하는 바로 가기 메뉴를 제공합니다.  

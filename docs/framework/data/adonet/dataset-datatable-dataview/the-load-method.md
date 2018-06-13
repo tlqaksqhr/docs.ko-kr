@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758310"
 ---
 # <a name="the-load-method"></a>로드 메서드
 <xref:System.Data.DataTable.Load%2A> 메서드를 사용하여 데이터 소스의 행과 함께 <xref:System.Data.DataTable>을 로드할 수 있습니다. 이 가장 간단한 형태의 단일 매개 변수를 허용 하는 오버 로드 된 메서드는 **DataReader**합니다. 이 양식에서 단순히 로드는 **DataTable** 행이 있는 합니다. 선택적으로 지정할 수는 **LoadOption** 매개 변수 데이터를 추가 하는 방법을 제어 하는 **DataTable**합니다.  
