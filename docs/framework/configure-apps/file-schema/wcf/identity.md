@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749168"
 ---
 # <a name="ltidentitygt"></a><span data-ttu-id="06649-102">&lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="06649-102">&lt;identity&gt;</span></span>
 <span data-ttu-id="06649-103">ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID를 디자인 타임에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06649-103">The identity element allows a client developer to specify at design time the expected identity of the service.</span></span> <span data-ttu-id="06649-104">클라이언트와 서비스 간의 핸드셰이크 프로세스에서 Windows Communication Foundation (WCF) 인프라는 id가 확인 하는 일치 하는 예상 되는 서비스 항목이 요소의 값 및 인증 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06649-104">In the handshake process between the client and service, the Windows Communication Foundation (WCF) infrastructure will ensure that the identity of the expected service matches the values of this element, and thus can be authenticated.</span></span> <span data-ttu-id="06649-105">자세한 내용은 참조 [서비스 Id 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="06649-105">For more information, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  

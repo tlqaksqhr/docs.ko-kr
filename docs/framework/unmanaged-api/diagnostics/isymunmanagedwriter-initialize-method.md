@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::Initialize 메서드"
-ms.custom: 
+title: ISymUnmanagedWriter::Initialize 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.Initialize
 api_location:
@@ -23,24 +15,21 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 737e6b5218d51d8a1a051104ecdd11240a2ddac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 44046560f4f788c4a7d695ff18c9c01740fea35a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428037"
 ---
-# <a name="isymunmanagedwriterinitialize-method"></a><span data-ttu-id="82c72-102">ISymUnmanagedWriter::Initialize 메서드</span><span class="sxs-lookup"><span data-stu-id="82c72-102">ISymUnmanagedWriter::Initialize Method</span></span>
-<span data-ttu-id="82c72-103">이 작성기를 연결, 될 메타 데이터 내보내기 인터페이스를 설정 하 고 디버깅 기호를 기록할 출력 파일 이름을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span>  
+# <a name="isymunmanagedwriterinitialize-method"></a><span data-ttu-id="a3d2d-102">ISymUnmanagedWriter::Initialize 메서드</span><span class="sxs-lookup"><span data-stu-id="a3d2d-102">ISymUnmanagedWriter::Initialize Method</span></span>
+<span data-ttu-id="a3d2d-103">이 작성기를 연결, 될 메타 데이터 내보내기 인터페이스를 설정 하 고 디버깅 기호를 기록할 출력 파일 이름을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span>  
   
- <span data-ttu-id="82c72-104">이 메서드를 한 번만 호출할 수 있습니다 및 다른 기록기 메서드보다 먼저 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-104">This method can be called only once, and it must be called before any other writer methods.</span></span> <span data-ttu-id="82c72-105">일부 작성기에는 파일 이름이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-105">Some writers may require a file name.</span></span> <span data-ttu-id="82c72-106">그러나이 메서드에 파일 이름을 사용 하지 않는 작성기에 나쁜 영향 없이 항상 파일 이름을 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span></span>  
+ <span data-ttu-id="a3d2d-104">이 메서드를 한 번만 호출할 수 있습니다 및 다른 기록기 메서드보다 먼저 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-104">This method can be called only once, and it must be called before any other writer methods.</span></span> <span data-ttu-id="a3d2d-105">일부 작성기에는 파일 이름이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-105">Some writers may require a file name.</span></span> <span data-ttu-id="a3d2d-106">그러나이 메서드에 파일 이름을 사용 하지 않는 작성기에 나쁜 영향 없이 항상 파일 이름을 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82c72-107">구문</span><span class="sxs-lookup"><span data-stu-id="82c72-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3d2d-107">구문</span><span class="sxs-lookup"><span data-stu-id="a3d2d-107">Syntax</span></span>  
   
 ```  
 HRESULT Initialize(  
@@ -50,25 +39,25 @@ HRESULT Initialize(
     [in] BOOL         fFullBuild);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="82c72-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="82c72-108">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a3d2d-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a3d2d-108">Parameters</span></span>  
  `emitter`  
- <span data-ttu-id="82c72-109">[in] 메타 데이터 내보내기 인터페이스에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-109">[in] A pointer to the metadata emitter interface.</span></span>  
+ <span data-ttu-id="a3d2d-109">[in] 메타 데이터 내보내기 인터페이스에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-109">[in] A pointer to the metadata emitter interface.</span></span>  
   
  `filename`  
- <span data-ttu-id="82c72-110">[in] 에 디버깅 기호가 쓰여진 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-110">[in] The file name to which the debugging symbols are written.</span></span> <span data-ttu-id="82c72-111">파일 이름을 사용하지 않는 작성기에 대해 파일 이름이 지정되면 이 매개 변수는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-111">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
+ <span data-ttu-id="a3d2d-110">[in] 에 디버깅 기호가 쓰여진 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-110">[in] The file name to which the debugging symbols are written.</span></span> <span data-ttu-id="a3d2d-111">파일 이름을 사용하지 않는 작성기에 대해 파일 이름이 지정되면 이 매개 변수는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-111">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="82c72-112">[in] 기호 작성기를 지정 하는 경우에 대 한 기호를 내보냅니다는 주어진 <xref:System.Runtime.InteropServices.ComTypes.IStream> 대신에 지정 된 파일에는 `filename` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="82c72-113">`pIStream` 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-113">The `pIStream` parameter is optional.</span></span>  
+ <span data-ttu-id="a3d2d-112">[in] 기호 작성기를 지정 하는 경우에 대 한 기호를 내보냅니다는 주어진 <xref:System.Runtime.InteropServices.ComTypes.IStream> 대신에 지정 된 파일에는 `filename` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="a3d2d-113">`pIStream` 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-113">The `pIStream` parameter is optional.</span></span>  
   
  `fFullBuild`  
- <span data-ttu-id="82c72-114">[in] `true` 이것이 전체를 다시 빌드해야 합니다. `false` 증분 컴파일을 이것이 합니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
+ <span data-ttu-id="a3d2d-114">[in] `true` 이것이 전체를 다시 빌드해야 합니다. `false` 증분 컴파일을 이것이 합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="82c72-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="82c72-115">Return Value</span></span>  
- <span data-ttu-id="82c72-116">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="82c72-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a3d2d-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="a3d2d-115">Return Value</span></span>  
+ <span data-ttu-id="a3d2d-116">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82c72-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="82c72-117">Requirements</span></span>  
- <span data-ttu-id="82c72-118">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="82c72-118">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3d2d-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a3d2d-117">Requirements</span></span>  
+ <span data-ttu-id="a3d2d-118">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a3d2d-118">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82c72-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="82c72-119">See Also</span></span>  
- [<span data-ttu-id="82c72-120">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="82c72-120">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="82c72-121">Initialize2 메서드</span><span class="sxs-lookup"><span data-stu-id="82c72-121">Initialize2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+## <a name="see-also"></a><span data-ttu-id="a3d2d-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a3d2d-119">See Also</span></span>  
+ [<span data-ttu-id="a3d2d-120">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a3d2d-120">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
+ [<span data-ttu-id="a3d2d-121">Initialize2 메서드</span><span class="sxs-lookup"><span data-stu-id="a3d2d-121">Initialize2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

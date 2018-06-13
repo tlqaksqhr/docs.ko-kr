@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749545"
 ---
 # <a name="lttokenrequestparametersgt"></a><span data-ttu-id="789c9-102">&lt;tokenRequestParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="789c9-102">&lt;tokenRequestParameters&gt;</span></span>
 <span data-ttu-id="789c9-103">이 구성 요소에는 토큰 요청 시 메시지 본문에 포함시켜 보안 토큰 서비스로 전송할 추가 XML 요소를 지정하는 데 사용할 수 있는 자식 요소가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="789c9-103">This configuration element contains child elements that can be used to specify additional XML elements to be sent in the message body to the Security Token Service when requesting a token.</span></span>  

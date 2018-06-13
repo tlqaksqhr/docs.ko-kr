@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576483"
 ---
 # <a name="microservices-architecture"></a><span data-ttu-id="6e42a-103">마이크로 서비스 아키텍처</span><span class="sxs-lookup"><span data-stu-id="6e42a-103">Microservices architecture</span></span>
 

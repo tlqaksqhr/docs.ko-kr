@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589041"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a><span data-ttu-id="a6fd2-102">방법: 비동기적으로 웹 서비스 호출(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6fd2-102">How to: Call a Web Service Asynchronously (Visual Basic)</span></span>
 <span data-ttu-id="a6fd2-103">이 예제에서는 비동기 메서드 호출의 결과를 검색할 수 있도록 웹 서비스의 비동기 처리기 이벤트에 처리기를 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="a6fd2-103">This example attaches a handler to a Web service's asynchronous handler event, so that it can retrieve the result of an asynchronous method call.</span></span> <span data-ttu-id="a6fd2-104">여기에는 http://www.xmethods.net에 DemoTemperatureService 웹 서비스가 사용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a6fd2-104">This example used the DemoTemperatureService Web service at http://www.xmethods.net.</span></span>  

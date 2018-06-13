@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338613"
 ---
 # <a name="thread-synchronization-c"></a><span data-ttu-id="c3ba7-102">스레드 동기화(C#)</span><span class="sxs-lookup"><span data-stu-id="c3ba7-102">Thread Synchronization (C#)</span></span>
 <span data-ttu-id="c3ba7-103">다음 섹션에서는 다중 스레드 응용 프로그램에서 리소스에 대한 액세스를 동기화 하는 데 사용할 수 있는 기능 및 클래스를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c3ba7-103">The following sections describe features and classes that can be used to synchronize access to resources in multithreaded applications.</span></span>  

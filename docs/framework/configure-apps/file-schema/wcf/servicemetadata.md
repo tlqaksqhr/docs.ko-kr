@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751790"
 ---
 # <a name="ltservicemetadatagt"></a><span data-ttu-id="d41c1-102">&lt;serviceMetadata&gt;</span><span class="sxs-lookup"><span data-stu-id="d41c1-102">&lt;serviceMetadata&gt;</span></span>
 <span data-ttu-id="d41c1-103">서비스 메타데이터 및 관련 정보의 게시를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d41c1-103">Specifies the publication of service metadata and associated information.</span></span>  

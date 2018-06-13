@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272684"
 ---
 # <a name="modifiers-c-reference"></a><span data-ttu-id="88ce6-102">한정자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="88ce6-102">Modifiers (C# Reference)</span></span>
 <span data-ttu-id="88ce6-103">한정자는 형식 및 형식 멤버의 선언을 수정하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="88ce6-103">Modifiers are used to modify declarations of types and type members.</span></span> <span data-ttu-id="88ce6-104">이 단원에서는 다음의 C# 한정자에 대해 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="88ce6-104">This section introduces the C# modifiers.</span></span>  

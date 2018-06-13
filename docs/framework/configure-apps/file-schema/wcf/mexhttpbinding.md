@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748814"
 ---
 # <a name="ltmexhttpbindinggt"></a><span data-ttu-id="c7d20-102">&lt;mexHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="c7d20-102">&lt;mexHttpBinding&gt;</span></span>
 <span data-ttu-id="c7d20-103">HTTP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바인딩의 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c7d20-103">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over HTTP.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750235"
 ---
 # <a name="ltissuedtokengt"></a><span data-ttu-id="f515e-102">&lt;issuedToken&gt;</span><span class="sxs-lookup"><span data-stu-id="f515e-102">&lt;issuedToken&gt;</span></span>
 <span data-ttu-id="f515e-103">서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f515e-103">Specifies a custom token used to authenticate a client to a service.</span></span>  
