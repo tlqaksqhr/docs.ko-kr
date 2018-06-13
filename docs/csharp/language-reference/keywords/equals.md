@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216177"
 ---
 # <a name="equals-c-reference"></a>equals(C# 참조)
 `equals` 상황별 키워드는 쿼리 식의 `join` 절에서 사용되어 두 시퀀스의 요소를 비교합니다. 자세한 내용은 [join 절](../../../csharp/language-reference/keywords/join-clause.md)을 참조하세요.  

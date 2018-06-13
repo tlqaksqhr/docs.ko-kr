@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c9ed79eb799971dfcbc9fd787cd0290795f79d96
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417975"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext 메서드
 이 프로세스에서 지정 된 스레드의 컨텍스트를 설정합니다.  

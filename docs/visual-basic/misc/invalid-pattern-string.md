@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635647"
 ---
 # <a name="invalid-pattern-string"></a>잘못된 패턴 문자열
 검색의 `Like` 작업에서 지정된 패턴 문자열이 잘못되었습니다.  

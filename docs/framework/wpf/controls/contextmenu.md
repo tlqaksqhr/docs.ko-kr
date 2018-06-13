@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550126"
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu> 표시 하는 컨트롤을 사용 하면 한 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 고유 합니다. 일반적으로 <xref:System.Windows.Controls.ContextMenu> 에 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해 합니다.  

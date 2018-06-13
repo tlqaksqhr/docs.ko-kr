@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519451"
 ---
 # <a name="persistence-database-schema"></a>지속성 데이터베이스 스키마
 이 항목에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 뷰에 대해 설명합니다.  

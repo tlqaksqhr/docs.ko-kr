@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537088"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 데이터 집합에 있는 오류 보기
 Windows Forms를 사용 하 여 <xref:System.Windows.Forms.ErrorProvider> 구성 요소는 데이터 집합 또는 다른 데이터 원본 내에서 열 오류를 볼 수 있습니다. 에 대 한는 <xref:System.Windows.Forms.ErrorProvider> 오류를 표시 하려면 데이터, 폼의 구성 요소 수 있어서는 안 컨트롤와 직접 연결 합니다. 데이터 소스에 바인딩된 후에 동일한 데이터 원본에 바인딩되는 컨트롤 옆에 오류 아이콘이 표시할 수 있으며  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517662"
 ---
 # <a name="declarative-constraints"></a>선언적 제약 조건
 선언적 제약 조건은 활동 및 활동과 다른 활동의 관계에 대한 강력한 유효성 검사 메서드를 제공합니다. 제약 조건이 제작 프로세스 중에 활동에 대해 구성되지만, 워크플로 호스트에서 추가 제약 조건을 지정할 수도 있습니다. 이 항목에서는 선언적 제약 조건을 사용하여 작업 유효성 검사를 제공하는 방법에 대해 간략하게 설명합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516402"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF의 활동 제작 옵션
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]은 사용자 지정 활동을 만들기 위한 여러 옵션을 보여 줍니다. 지정한 활동을 작성하는 데 사용할 올바른 방법은 필요한 런타임 기능에 따라 결정됩니다.  

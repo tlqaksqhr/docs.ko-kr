@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519816"
 ---
 # <a name="persistence-participants"></a>지속성 참석자
 지속성 참가자는 응용 프로그램 호스트에서 트리거된 지속성 작업(저장 또는 로드)에 참가할 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 두 가지 추상 클래스와 함께 제공 **PersistenceParticipant** 및 **PersistenceIOParticipant**, 지 속성 참가자를 만드는 데 사용할 수 있습니다. 지속성 참가자는 이 클래스 중 하나에서 파생되고 관련 메서드를 구현한 다음 클래스의 인스턴스를 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>의 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 컬렉션에 추가합니다. 응용 프로그램 호스트는 워크플로 인스턴스를 지속할 때 이 워크플로 확장을 검색하고 적당한 시간에 지속성 참가자에서 해당 메서드를 호출합니다.  

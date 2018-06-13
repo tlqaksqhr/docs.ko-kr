@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1408c3aa064cf6db641c2f14b61e4a93bca34b1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411508"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPEBytes 메서드
 `SetPEBytes`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  

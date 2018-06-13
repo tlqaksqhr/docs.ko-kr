@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338424"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>무명 메서드(C# 프로그래밍 가이드)
 2.0 이전의 C# 버전에서 [delegate](../../../csharp/language-reference/keywords/delegate.md)를 선언하는 유일한 방법은 [명명된 메서드](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)를 사용하는 것이었습니다. C# 2.0에서는 무명 메서드가 도입되었고, C# 3.0 이상에서는 람다 식이 인라인 코드를 작성하는 기본 방법으로 무명 메서드를 대체합니다. 그러나 이 항목의 무명 메서드 관련 정보는 람다 식에도 적용됩니다. 무명 메서드가 람다 식에서 찾을 수 없는 기능을 제공하는 한 가지 경우가 있습니다. 무명 메서드를 사용하여 매개 변수 목록을 생략할 수 있습니다. 즉, 무명 메서드를 여러 시그니처를 가진 대리자로 변환할 수 있습니다. 람다 식에서는 이 작업이 불가능합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  

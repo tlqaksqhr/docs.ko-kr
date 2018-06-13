@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573041"
 ---
 # <a name="interface-design"></a>인터페이스 디자인
 대부분의 Api는 클래스 및 구조체를 사용 하 여 모델링 가장 있지만 사례를 인터페이스 보다 적절 한 파일이 나 옵션만 있습니다.  

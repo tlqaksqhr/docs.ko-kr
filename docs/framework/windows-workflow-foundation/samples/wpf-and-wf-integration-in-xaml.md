@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518192"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML의 WPF 및 WF 통합
 이 샘플에는 단일 XAML 문서에 Windows Presentation Foundation (WPF) 및 Windows WF (Workflow Foundation) 기능을 사용 하 여 응용 프로그램을 만드는 방법을 보여 줍니다. 이를 위해 샘플 Windows WF (Workflow Foundation) 및 XAML 확장성을 사용 합니다.  

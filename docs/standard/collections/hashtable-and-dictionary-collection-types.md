@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568887"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 클래스와 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 제네릭 클래스는 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 인터페이스를 구현합니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스도 구현합니다. 따라서 이러한 컬렉션의 각 요소는 한 쌍의 키-값입니다.  

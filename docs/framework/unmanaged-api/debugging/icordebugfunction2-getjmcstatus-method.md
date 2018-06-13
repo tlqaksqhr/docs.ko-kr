@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf0ba3938568524479e12b93ae8cebbcf52f909
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411731"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus 메서드
 이 ICorDebugFunction2 개체로 표시 하는 함수는 사용자 코드로 표시 여부를 나타내는 값을 가져옵니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519862"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>방법: 사용자 지정 인스턴스 저장소 만들기
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 응용 프로그램에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 저장소를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소를 완전히 구현에 대 한 참조는 [기업 구매 프로세스](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) 샘플.  

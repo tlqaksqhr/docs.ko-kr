@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551982"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>방법: 캔버스 위치 지정 속성 가져오기 또는 설정
 위치 지정 메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Canvas> 요소 자식 콘텐츠를 배치 합니다. 콘텐츠를 사용 하 여이 예제는 <xref:System.Windows.Controls.ListBoxItem> 를 나타내는 값을 값의 인스턴스로 변환 위치 지정 <xref:System.Double>, 위치 지정에 대 한 필수 인수는 합니다. 값 한 다음 다시 문자열로 변환 되어에 텍스트로 표시 되는 <xref:System.Windows.Controls.TextBlock> 사용 하 여 요소는 <xref:System.Windows.Controls.Canvas.GetLeft%2A> 메서드.  

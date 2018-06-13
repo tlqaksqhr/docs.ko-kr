@@ -6,11 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: bf25ddda2c7e381f0b43798b28179b18338d71cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172609"
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 확장명 메서드를 사용하면 새 파생 형식을 만들거나 다시 컴파일하거나 원래 형식을 수정하지 않고도 기존 형식에 메서드를 "추가"할 수 있습니다. 확장 메서드는 특수한 종류의 정적 메서드이지만 확장 형식의 인스턴스 메서드인 것처럼 호출됩니다. C#, F# 및 Visual Basic에서 작성된 클라이언트 코드의 경우 확장명 메서드를 호출하는 것과 형식에 실제로 정의된 메서드를 호출하는 데는 명백한 차이가 없습니다.  
@@ -29,13 +30,13 @@ ms.lasthandoff: 05/04/2018
   
  `WordCount` 지시문을 사용하여 `using` 확장 메서드를 범위로 가져올 수 있습니다.  
   
-```  
+```csharp  
 using ExtensionMethods;  
 ```  
   
  또한 다음 구문을 사용하여 응용 프로그램에서 확장 메서드를 호출할 수 있습니다.  
   
-```  
+```csharp  
 string s = "Hello Extension Methods";  
 int i = s.WordCount();  
 ```  
@@ -46,7 +47,7 @@ int i = s.WordCount();
   
  일반적으로 확장명 메서드를 직접 구현하는 것보다 호출하는 경우가 훨씬 많습니다. 확장 메서드는 인스턴스 메서드 구문을 사용하여 호출되므로 특별한 지식이 없어도 클라이언트 코드에서 확장 메서드를 사용할 수 있습니다. 특정 형식의 확장 메서드를 사용하려면 해당 메서드가 정의된 네임스페이스에 대해 `using` 지시문을 추가합니다. 예를 들어 표준 쿼리 연산자를 사용하려면 다음 `using` 지시문을 코드에 추가합니다.  
   
-```  
+```csharp  
 using System.Linq;  
 ```  
   

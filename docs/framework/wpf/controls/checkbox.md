@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550761"
 ---
 # <a name="checkbox"></a>CheckBox
 사용할 수 있습니다는 <xref:System.Windows.Controls.CheckBox> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응용 프로그램을 나타내는 사용자를 선택 하거나 선택을 취소할 수 있는 옵션입니다. 단일 확인란을 사용할 수 있습니다 또는 두 개 이상의 확인란을 그룹화 할 수 있습니다.  

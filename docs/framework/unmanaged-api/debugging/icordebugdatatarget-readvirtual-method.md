@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d9e619e4176633074242521133d42f191f140ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412193"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 메서드
 지정된 된 주소에서 시작 하는 인접 한 메모리 블록을 가져오고 제공된 된 버퍼에 반환 합니다.  

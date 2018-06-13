@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409804"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 SqlMetal 명령줄 도구는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  

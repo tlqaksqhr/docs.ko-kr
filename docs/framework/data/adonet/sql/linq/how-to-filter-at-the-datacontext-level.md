@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354935"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>방법: DataContext 수준에서 필터링
 `EntitySets` 수준에서 `DataContext`를 필터링할 수 있습니다. 이러한 필터는 <xref:System.Data.Linq.DataContext> 인스턴스로 수행되는 모든 쿼리에 적용됩니다.  

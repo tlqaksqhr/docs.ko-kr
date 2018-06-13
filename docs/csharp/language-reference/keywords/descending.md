@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214181"
 ---
 # <a name="descending-c-reference"></a>descending(C# 참조)
 `descending` 상황별 키워드는 쿼리 식의 [orderby 절](../../../csharp/language-reference/keywords/orderby-clause.md)에서 사용되어 정렬 순서를 가장 큰 값에서 가장 작은 값의 내림차순으로 지정합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551054"
 ---
 # <a name="separator"></a>구분 기호
 A <xref:System.Windows.Controls.Separator> 컨트롤이 그릴 선, 가로 또는 세로 컨트롤에 있는 항목 사이 같은 <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.ToolBar>합니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e5c3185dc6d488223d5882f543f0c690d82261b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402446"
 ---
 # <a name="closeenum-method"></a>CloseEnum 메서드
 표시 된 열거형을 닫고 연결 된 리소스를 해제 합니다.  

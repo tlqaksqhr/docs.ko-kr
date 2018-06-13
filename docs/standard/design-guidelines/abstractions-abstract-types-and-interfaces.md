@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573028"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>추상화(추상 형식 및 인터페이스)
 추상화 형식이 하는 계약에 설명 하지만 계약의 전체 구현을 제공 하지 않습니다. 추상화는 일반적으로 추상 클래스 또는 인터페이스를 구현 하 고 참조 설명서는 계약을 구현 하는 형식의 필요한 의미 체계를 설명 하는 잘 정의 된 집합이 함께 제공 되 합니다. .NET Framework의 가장 중요 한 추상화 같습니다 <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, 및 <xref:System.Object>합니다.  

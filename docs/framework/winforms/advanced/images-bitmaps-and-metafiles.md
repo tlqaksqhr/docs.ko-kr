@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522203"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>이미지, 비트맵 및 메타파일
 `Image` 클래스는 래스터 이미지(비트맵) 및 벡터 이미지(메타파일) 작업을 위한 메서드를 제공하는 추상 기본 클래스입니다. `Bitmap` 클래스와 <xref:System.Drawing.Imaging.Metafile> 클래스는 모두 `Image` 클래스에서 상속됩니다. `Bitmap` 클래스는 래스터 이미지를 로드, 저장 및 조작하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다. <xref:System.Drawing.Imaging.Metafile> 클래스는 벡터 이미지를 기록 및 검사하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다.  

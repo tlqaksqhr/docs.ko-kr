@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356478"
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;의 &lt;message&gt;
 에 대 한 메시지 수준 보안 정의 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)합니다.  

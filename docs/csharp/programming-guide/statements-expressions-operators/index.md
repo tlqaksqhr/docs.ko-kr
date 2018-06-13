@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338798"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>문, 식, 연산자(C# 프로그래밍 가이드)
 응용 프로그램을 구성하는 C# 코드는 키워드, 식, 연산자가 포함된 문으로 구성됩니다. 이 섹션에서는 C# 프로그램의 이러한 기본 요소에 대한 정보를 소개합니다.  

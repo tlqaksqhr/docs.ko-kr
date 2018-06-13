@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569735"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
 **XmlNodeChangedEventArgs**는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  

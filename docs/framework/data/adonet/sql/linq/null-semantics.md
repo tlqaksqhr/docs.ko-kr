@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357704"
 ---
 # <a name="null-semantics"></a>Null 의미 체계
 다음 표에서는 다양 한 부분에 대 한 링크를 제공는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서 여기서 `null` (`Nothing` Visual basic에서) 문제에 설명 합니다.  

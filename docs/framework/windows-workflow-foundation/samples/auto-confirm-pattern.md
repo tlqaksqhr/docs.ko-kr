@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515995"
 ---
 # <a name="auto-confirm-pattern"></a>자동 확인 패턴
 이 샘플은 사용자 지정 `AutoConfirmScope` 활동을 보여 주기 위해 실행하는 세 가지 시나리오로 구성되어 있습니다. 첫 번째 시나리오에서는 두 번째 시나리오와 세 번째 시나리오가 `AutoConfirmScope`에 중첩된 네 개의 보정 가능한 활동으로 구성된 시퀀스의 성공적인 실행을 보여 줍니다. 두 번째 시나리오에서는 네 번째 <xref:System.Activities.Statements.CompensableActivity>가 실행된 후 예외가 발생한다는 점만 제외하고 동일한 시퀀스를 보여 줍니다. 세 번째 시나리오에서는 두 번째 `AutoConfirmScope`가 완료된 후 <xref:System.Activities.Statements.CompensableActivity>에서 예외가 발생한다는 점만 제외하고 동일한 시퀀스를 보여 줍니다.  

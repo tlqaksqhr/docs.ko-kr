@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570569"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM의 요소 노드에서 특성 제거
 여러 가지 방법으로 특성을 제거할 수 있습니다. 그 중 한 가지 방법은 특성 컬렉션에서 특성을 제거하는 것입니다. 이 방법을 사용하려면 다음 단계를 수행합니다.  

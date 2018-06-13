@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515638"
 ---
 # <a name="basic"></a>Basic
 이 섹션에서는 기본 Windows WF (Workflow Foundation) 기능을 보여 주는 샘플을 제공 합니다.  

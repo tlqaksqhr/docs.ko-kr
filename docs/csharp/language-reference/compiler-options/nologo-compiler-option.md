@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213642"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo(C# 컴파일러 옵션)
 **-nologo** 옵션은 컴파일러가 시작될 때 로그온 배너의 표시를 억제하고 컴파일하는 동안 정보 메시지를 표시합니다.  

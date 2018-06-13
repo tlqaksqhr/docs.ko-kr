@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536763"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 컨트롤(Windows Forms)
 Windows Forms `TabControl`은 파일 캐비닛의 폴더 집합에 노트북 또는 레이블의 구분선과 같은 여러 탭을 표시합니다. 탭에는 사진 및 기타 컨트롤이 포함될 수 있습니다. `TabControl`을 사용하여 속성 페이지를 만듭니다.  

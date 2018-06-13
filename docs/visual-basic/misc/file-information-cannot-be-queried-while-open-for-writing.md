@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636373"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>파일이 쓰기용으로 열려 있는 동안에는 파일 정보를 쿼리할 수 없습니다.
 쓰기를 위해 현재 열려 있는 파일에 대한 정보를 가져오려고 했습니다.  

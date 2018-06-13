@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217170"
 ---
 # <a name="access-modifiers-c-reference"></a>액세스 한정자(C# 참조)
 액세스 한정자는 멤버 또는 형식의 선언된 접근성을 지정하는 데 사용되는 키워드입니다. 이 섹션에서는 다음 네 가지 액세스 한정자를 소개합니다.  

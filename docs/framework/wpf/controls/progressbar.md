@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552898"
 ---
 # <a name="progressbar"></a>ProgressBar
 A <xref:System.Windows.Controls.ProgressBar> 작업의 진행률을 나타냅니다. <xref:System.Windows.Controls.ProgressBar> 제어 작업이 진행 됨에 따라 시스템 강조 색으로 채워진 창 구성 됩니다.  

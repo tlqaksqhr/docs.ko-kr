@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335824"
 ---
 # <a name="converting-data-types-c"></a>데이터 형식 변환(C#)
 변환 메서드는 입력 개체의 형식을 변경합니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ae761b2d48552aded8191ddbea26552d8da277
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411020"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 메서드
 프로세서 아키텍처와 대상 프로세스가 실행 되는 운영 체제를 포함 하는 플랫폼에 대 한 정보를 제공 합니다.  

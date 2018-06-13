@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958163"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>온-프레미스에서 Windows 컨테이너를 배포 하는 경우 IaaS VM 인프라
 

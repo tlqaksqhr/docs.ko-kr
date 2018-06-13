@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 670c6af66802c8badc5dba9d414427a13a1b815c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411865"
 ---
 # <a name="icordebugilframegetstackdepth-method"></a>ICorDebugILFrame::GetStackDepth 메서드
 이 메서드는 구현되지 않았습니다.  
