@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551030"
 ---
 # <a name="grid"></a>표
 <xref:System.Windows.Controls.Grid> 요소 콘텐츠를 행과 열을 정확 하 게 배치를 사용 합니다.  

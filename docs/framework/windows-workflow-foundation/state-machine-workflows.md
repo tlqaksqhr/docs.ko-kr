@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519641"
 ---
 # <a name="state-machine-workflows"></a>상태 시스템 워크플로
 상태 시스템은 잘 알려진 프로그램 개발용 패러다임입니다. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 기타 작업과 함께 <xref:System.Activities.Statements.Transition> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다. 이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.  

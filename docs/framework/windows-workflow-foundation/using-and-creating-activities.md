@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519849"
 ---
 # <a name="using-and-creating-activities"></a>활동 사용 및 만들기
 이 섹션의 항목에서는 Windows WF (Workflow Foundation) 사용 하 여 사용할 수 있는 시스템 제공 활동에 설명 합니다.  

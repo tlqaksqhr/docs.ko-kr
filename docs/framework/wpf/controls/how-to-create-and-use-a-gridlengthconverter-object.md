@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551858"
 ---
 # <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>방법: GridLengthConverter 개체 만들기 및 사용
 ## <a name="example"></a>예제  

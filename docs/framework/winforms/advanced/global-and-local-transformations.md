@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523161"
 ---
 # <a name="global-and-local-transformations"></a>전역 및 지역 변형
 전역 변환은 그려진 모든 항목에 적용 되는 변환을 주어진 <xref:System.Drawing.Graphics> 개체입니다. 반면, 로컬 변환을를 그릴 수 있는 특정 항목에 적용 하는 변환이입니다.  

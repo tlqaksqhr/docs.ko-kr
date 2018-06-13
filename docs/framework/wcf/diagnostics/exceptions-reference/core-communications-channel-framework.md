@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469826"
 ---
 # <a name="core-communications-channel-framework"></a>핵심 통신: 채널 프레임워크
 이 항목에서는 Windows Communication Foundation (WCF) 채널 프레임 워크에 의해 생성 된 모든 예외를 보여 줍니다.  

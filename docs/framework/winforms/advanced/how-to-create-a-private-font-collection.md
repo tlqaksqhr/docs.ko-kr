@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523087"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>방법: 개인 글꼴 컬렉션 만들기
 <xref:System.Drawing.Text.PrivateFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.PrivateFontCollection> 응용 프로그램에 맞게 글꼴 집합을 유지 관리 하는 개체입니다. 개인 글꼴 컬렉션으로 설치 된 시스템 글꼴 컴퓨터에 설치 되지 않은 글꼴을 포함할 수 있습니다. 글꼴 파일을 개인 글꼴 컬렉션을 추가 하려면 호출는 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> 의 메서드는 <xref:System.Drawing.Text.PrivateFontCollection> 개체입니다.  

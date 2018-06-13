@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519420"
 ---
 # <a name="order-processing-with-policy"></a>정책을 사용한 주문 처리
 Order Processing Policy 샘플에서는 Windows WF(Workflow Foundation )의 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]에 도입된 몇 가지 주요 기능을 보여 줍니다. 다음은 WF 규칙 엔진에 새로 추가된 기능입니다.  

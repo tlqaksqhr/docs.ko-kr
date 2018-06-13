@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522348"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정
 <xref:System.Drawing.Bitmap> 클래스 (에서 상속 되는 <xref:System.Drawing.Image> 클래스) 및 <xref:System.Drawing.Imaging.ImageAttributes> 클래스 가져오고 픽셀 값을 설정 하기 위한 기능을 제공 합니다. 사용할 수는 <xref:System.Drawing.Imaging.ImageAttributes> 알파를 수정 하는 클래스는 전체 이미지에 대 한 값 하거나 호출할 수 있습니다는 <xref:System.Drawing.Bitmap.SetPixel%2A> 의 메서드는 <xref:System.Drawing.Bitmap> 개별 픽셀 값을 수정 하는 클래스입니다.  

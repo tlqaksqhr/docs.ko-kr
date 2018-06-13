@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520385"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>선과 곡선의 앤티 앨리어싱
 사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선을 그리려면, 시작 지점 및 끝 줄 지점을 제공 하지만 줄에서 개별 픽셀에 대 한 정보를 제공할 필요가 없습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 픽셀 특정 디스플레이 장치에 줄을 표시 하도록 설정 됩니다 확인 하려면 디스플레이 드라이버 소프트웨어와 함께 작동 합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523798"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>관리 GDI+에서 변형 사용
 3x3 유사 변환에는 회전, 크기 조정, 반영 하며, 기울이기 및 변환 하는 기능이 포함 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> 클래스 벡터 드로잉, 이미지 및 텍스트에서 관계 변형 수행 하기 위한 기반을 제공 합니다.  

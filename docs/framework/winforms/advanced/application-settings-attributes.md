@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518351"
 ---
 # <a name="application-settings-attributes"></a>응용 프로그램 설정 특성
 응용 프로그램 설정 아키텍처는 응용 프로그램 설정 래퍼 클래스 또는 해당 개별 속성에 적용할 수 있는 여러 특성을 제공 합니다. 이러한 특성은 맞게 사용자 지정 래퍼 명시 된 요구 사항에 기능을 조절 하려면 응용 프로그램 설정 인프라 종종 특별히 설정 공급자에 의해 런타임 시 검사 합니다.  

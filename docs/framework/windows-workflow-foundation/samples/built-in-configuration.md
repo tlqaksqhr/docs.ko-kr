@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518622"
 ---
 # <a name="built-in-configuration"></a>기본 제공 구성
 이 샘플에서는 SQL 워크플로 인스턴스 저장소를 사용하고 구성하는 방법을 보여 줍니다. SQL 워크플로 인스턴스 저장소는 인스턴스 저장소의 SQL 기반 구현이며, 이 저장소를 사용하면 인스턴스가 SQL Server 또는 SQL Server Express 데이터베이스 간에 인스턴스 상태를 저장하고 로드할 수 있습니다.  

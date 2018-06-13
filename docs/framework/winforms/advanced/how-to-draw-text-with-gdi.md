@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522917"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>방법: GDI를 사용하여 텍스트 그리기
 와 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 에서 메서드는 <xref:System.Windows.Forms.TextRenderer> 클래스에 액세스할 수 있습니다 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 폼 이나 컨트롤에 텍스트를 그리기 위한 기능입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 텍스트 렌더링은 일반적으로 더 나은 성능과 더 정확한 텍스트 보다 측정 제공 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  

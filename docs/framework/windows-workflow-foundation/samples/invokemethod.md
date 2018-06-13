@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517740"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 이 샘플에서는 <xref:System.Activities.Statements.InvokeMethod> 활동을 사용하여 클래스의 메서드를 호출하는 여러 가지 방법을 보여 줍니다.  

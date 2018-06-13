@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744020"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; 요소
 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.  

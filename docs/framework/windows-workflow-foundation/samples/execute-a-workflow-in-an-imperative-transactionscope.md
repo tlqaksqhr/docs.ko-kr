@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516961"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a>명령형 TransactionScope에서 워크플로 실행
 이 샘플에서는 명령형 C# 코드에서 <xref:System.Activities.WorkflowInvoker>의 <xref:System.Transactions.Transaction>를 사용하여 워크플로를 실행하는 방법을 보여 줍니다.  

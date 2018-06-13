@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520658"
 ---
 # <a name="constructing-and-drawing-paths"></a>경로 구성 및 그리기
 경로 시퀀스의 기본 그래픽 (선, 사각형, 곡선, 텍스트 및 like)를 조작 하 고 하나의 단위로 그릴 수 있습니다. 경로 나눌 수 있으며 *수치* 열려 있거나 닫힌 합니다. 도형 여러 기본 요소를 포함할 수 있습니다.  

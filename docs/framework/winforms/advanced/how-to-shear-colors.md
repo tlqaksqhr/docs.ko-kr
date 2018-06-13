@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522449"
 ---
 # <a name="how-to-shear-colors"></a>방법: 색 전단
 기울이기 증가 또는 다른 색상 구성 요소에 비례 하는 양을 색상 구성 요소 감소 합니다. 예를 들어 빨강 구성 요소를 1/2 파랑의 값 만큼 늘리는 변환을 사용 하십시오. 이러한 변환에서 (0.7, 0.5, 1) (0.2, 0.5, 1) 색 될 것입니다. 새 빨강 구성은 0.2 + (1/2)(1) 0.7입니다.  

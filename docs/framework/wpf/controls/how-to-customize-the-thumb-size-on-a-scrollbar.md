@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551806"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>방법: ScrollBar의 Thumb 크기 사용자 지정
 이 항목에서는 설정 하는 방법에 설명 된 <xref:System.Windows.Controls.Primitives.Thumb> 의 <xref:System.Windows.Controls.Primitives.ScrollBar> 최소 크기를 지정 하는 방법 및 고정된 크기는 <xref:System.Windows.Controls.Primitives.Thumb> 의 <xref:System.Windows.Controls.Primitives.ScrollBar>합니다.  

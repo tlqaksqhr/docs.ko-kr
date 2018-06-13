@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524035"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 이벤트 정의
 사용자 지정 이벤트를 정의 하는 방법에 대 한 세부 정보를 참조 하십시오. [이벤트](../../../../docs/standard/events/index.md)합니다. 연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다. 이벤트 멤버 및 보호 된 정의를 작업을 수행 하는 남게 됩니다 `On` *EventName* 이벤트를 발생 시키는 메서드.  

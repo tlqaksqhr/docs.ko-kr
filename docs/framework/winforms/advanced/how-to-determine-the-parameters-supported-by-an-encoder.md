@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521981"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>방법: 인코더에서 지원하는 매개 변수 확인
 품질 및 압축 수준 등의 이미지 매개 변수를 조정할 수 있지만 지정된 이미지 인코더에 의해 지원 되는 매개 변수를 알고 있어야 합니다. <xref:System.Drawing.Image> 클래스를 제공는 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드를 특정 인코더에 대 한 지원 되는 이미지 매개 변수를 확인할 수 있습니다. GUID가 하는 인코더를 지정 합니다. <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드 배열을 반환 <xref:System.Drawing.Imaging.EncoderParameter> 개체입니다.  

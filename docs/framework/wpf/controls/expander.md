@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551969"
 ---
 # <a name="expander"></a>Expander
 <xref:System.Windows.Controls.Expander> 헤더 보기 및 확장 하 여 헤더만 섹션을 축소 또는 추가 정보를 볼 수 있습니다.  

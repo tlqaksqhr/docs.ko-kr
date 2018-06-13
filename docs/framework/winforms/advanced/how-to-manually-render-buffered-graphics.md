@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524198"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>방법: 버퍼링된 그래픽 수동 렌더링
 버퍼링된 고유한 그래픽을 관리하는 경우 그래픽 버퍼를 만들고 렌더링할 수 있어야 합니다. <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> 메서드를 호출하여 화면의 그리기 화면과 연결된 <xref:System.Drawing.BufferedGraphics> 클래스의 인스턴스를 만들 수 있습니다. 이 메서드는 폼 또는 컨트롤과 같은 특정 렌더링 화면과 연결된 <xref:System.Drawing.BufferedGraphics> 인스턴스를 만듭니다. <xref:System.Drawing.BufferedGraphics> 인스턴스를 만든 후 <xref:System.Drawing.BufferedGraphics.Graphics%2A> 속성을 통해 나타내는 버퍼에 통해 나타내는 버퍼에 그래픽을 그릴 수 있습니다. 모든 그래픽 작업을 수행한 후 <xref:System.Drawing.BufferedGraphics.Render%2A> 메서드를 호출하여 버퍼 내용을 화면에 복사할 수 있습니다.  

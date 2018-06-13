@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554913"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>방법: ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정
 정의 하는 방법을 보여 주는이 예제 <xref:System.Windows.Style.Triggers%2A> 에 대 한는 <xref:System.Windows.Controls.ListViewItem> 제어 되도록 때의 속성 값을는 <xref:System.Windows.Controls.ListViewItem> 변경은 <xref:System.Windows.Style> 의 <xref:System.Windows.Controls.ListViewItem> 변경 내용에 대 한 응답에서입니다.  

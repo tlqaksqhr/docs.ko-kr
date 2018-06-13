@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522462"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>방법: 선형 그라데이션 만들기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 가로, 세로, 및 대각선 선형 그라데이션을 제공합니다. 기본적으로 선형 그라데이션 색 균일 하 게 변경합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  

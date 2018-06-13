@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551151"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> 다음 두 가지 콘텐츠 속성이: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 및 <xref:System.Windows.Controls.Decorator.Child%2A>합니다. <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 속성 정의 <xref:System.Windows.UIElement> 글머리 기호로 사용 하도록 합니다. <xref:System.Windows.Controls.Decorator.Child%2A> 속성 정의 <xref:System.Windows.UIElement> 시각적 글머리 기호도 정렬 하는 합니다.  

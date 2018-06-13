@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521780"
 ---
 # <a name="coordinate-systems-and-transformations"></a>좌표계 및 변형
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 변형할 수 있도록 전역 변환 및 페이지 변환을 제공 (회전, 크기 조정, 변환, 및 등) 사용자가 그린 항목입니다. 두 개의 변환에서는 다양 한 좌표 시스템에서에서 작동 하도록 수도 있습니다.  

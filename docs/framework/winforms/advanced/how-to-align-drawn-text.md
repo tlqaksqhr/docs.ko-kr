@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522759"
 ---
 # <a name="how-to-align-drawn-text"></a>방법: 그린 텍스트 맞추기
 사용자 지정 그리기를 수행 하는 경우 폼 이나 컨트롤에 그려지는 텍스트를 가운데에 하려는 경우가 많습니다. 으로 그린 텍스트를 쉽게 맞출 수 있습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 또는 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 올바른 형식 지정 개체를 만들고 적절 한 형식 플래그를 설정 하 여 메서드.  

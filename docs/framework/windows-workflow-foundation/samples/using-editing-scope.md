@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517393"
 ---
 # <a name="using-editing-scope"></a>편집 범위 사용
 이 샘플에서는 단일 원자 단위에서 실행 취소될 수 있도록 일련의 변경 내용을 일괄 처리하는 방법을 보여 줍니다. 기본적으로 활동 디자이너 작성자가 수행하는 동작은 실행 취소/다시 실행 시스템에 자동으로 통합됩니다.  

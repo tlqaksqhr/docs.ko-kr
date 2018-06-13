@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518271"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>서비스 내에 TransactionScope 중첩
 이 샘플은 한 서비스 내의 <xref:System.Activities.Statements.TransactionScope> 활동 인스턴스 여러 개를 처리하는 방법을 보여 주는 두 개의 시나리오로 구성되어 있습니다. 우선 <xref:System.Activities.Statements.TransactionScope> 활동을 사용하여 클라이언트에 새 트랜잭션을 만들어 트랜잭션을 시작하고 <xref:System.ServiceModel.Activities.TransactedReceiveScope>를 사용하여 서버에서 트랜잭션을 받고 트랜잭션 수명의 범위를 정합니다. 서비스 내의 첫째 시나리오는 보조 <xref:System.Activities.Statements.TransactionScope> 활동을 실행하여 서비스 내에 중첩되는 <xref:System.Activities.Statements.TransactionScope> 활동을 보여 줍니다. 둘째 시나리오에서는 중첩된 <xref:System.Activities.Statements.TransactionScope> 활동 내에 제한 시간이 적용되는 방식을 보여 줍니다.  

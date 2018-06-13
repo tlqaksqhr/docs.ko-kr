@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561945"
 ---
 # <a name="how-to-translate-an-element"></a>방법: 요소 변환
 이 예제에서는 변환 (이동) 하는 요소를 사용 하 여는 <xref:System.Windows.Media.TranslateTransform>합니다.  

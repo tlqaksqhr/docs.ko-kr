@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522111"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+의 타원 및 원호
 타원 및 원호를 사용 하 여 쉽게 그릴 수는 <xref:System.Drawing.Graphics.DrawEllipse%2A> 및 <xref:System.Drawing.Graphics.DrawArc%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스입니다.  

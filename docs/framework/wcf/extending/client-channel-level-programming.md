@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486507"
 ---
 # <a name="client-channel-level-programming"></a>클라이언트 채널 수준 프로그래밍
 이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 작성 하는 방법을 설명는 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 클래스 및 관련된 개체 모델입니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519151"
 ---
 # <a name="using-the-modelitem-editing-context"></a>ModelItem 편집 컨텍스트 사용
 <xref:System.Activities.Presentation.Model.ModelItem> 편집 컨텍스트는 호스트 응용 프로그램이 디자이너와 통신할 때 사용하는 개체입니다. <xref:System.Activities.Presentation.EditingContext>는 사용할 수 있는 메서드 두 개(<xref:System.Activities.Presentation.EditingContext.Items%2A> 및 <xref:System.Activities.Presentation.EditingContext.Services%2A>)를 노출합니다.  

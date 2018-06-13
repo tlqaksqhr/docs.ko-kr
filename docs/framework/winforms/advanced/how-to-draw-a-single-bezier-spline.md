@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521338"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>방법: 단일 B 그리기&#233;zier 스플라인
 베 지 어 스플라인을 4 개의 점으로 정의:, 두 개의 제어점 시작점과 끝점입니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552833"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>방법: 데이터에 ListBox 바인딩
 응용 프로그램 개발자를 만들 수 <xref:System.Windows.Controls.ListBox> 각각의 내용을 지정 하지 않고 컨트롤 <xref:System.Windows.Controls.ListBoxItem> 별도로 합니다. 개별 항목으로 데이터를 바인딩할 데이터 바인딩을 사용할 수 있습니다.  

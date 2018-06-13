@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571510"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>추상화 구현을 위한 기본 클래스
 엄격히 말해서, 클래스는 다른 클래스에서 파생 된 경우 기본 클래스를 수 있습니다. 그러나이 섹션에서는 목적으로 기본 클래스는 클래스는 일반적인 추상화를 제공 합니다. 또는 일부를 다시 사용 다른 클래스에 대 한 기본 구현을 통해 상속을 주로. 일반적으로 기본 클래스 추상화 계층의 루트에 맨 아래에 몇 가지 사용자 지정 구현이 사이의 상속 계층 구조 가운데에 배치 합니다.  

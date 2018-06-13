@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517851"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>방법: 사용자 지정 활동 템플릿 만들기
 사용자 지정 활동 템플릿은 사용자가 각 활동을 개별적으로 만들지 않고 속성 및 기타 설정을 수동으로 구성하지 않아도 되도록 사용자 지정 복합 활동을 비롯한 여러 활동의 구성을 사용자 지정하는 데 사용됩니다. 이러한 사용자 지정 템플릿을 사용할 수 있도록 설정에 **도구 상자** 에 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 또는 있는 사용자 수에 미리 구성 된 디자인 화면으로 끌 리호스팅된 된 디자이너에서 합니다. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 이러한 서식 파일의 좋은 예로와 함께 제공:는 [SendAndReceiveReply 템플릿 디자이너](/visualstudio/workflow-designer/sendandreceivereply-template-designer) 및 [ReceiveAndSendReply 템플릿 디자이너](/visualstudio/workflow-designer/receiveandsendreply-template-designer) 에 [메시징 활동 디자이너](/visualstudio/workflow-designer/messaging-activity-designers) 범주입니다.  

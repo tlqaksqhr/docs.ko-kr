@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550072"
 ---
 # <a name="datepicker"></a>DatePicker
 <xref:System.Windows.Controls.DatePicker> 컨트롤을 사용 하면 날짜를 입력 하거나 텍스트 필드에 또는 드롭 다운을 사용 하 여 <xref:System.Windows.Controls.Calendar> 제어 합니다.  

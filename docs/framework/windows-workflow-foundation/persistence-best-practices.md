@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520190"
 ---
 # <a name="persistence-best-practices"></a>지속성 최선의 구현 방법
 이 문서에서는 워크플로 지속성과 관련된 워크플로 디자인 및 구성에 대한 최상의 방법을 설명합니다.  

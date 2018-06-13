@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522574"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>끌어서 놓기 작업 및 클립보드 지원
 일련의 이벤트, 특히 <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> 및 <xref:System.Windows.Forms.Control.DragDrop> 이벤트를 처리하여 Windows 기반 응용 프로그램에서 사용자 끌어서 놓기 작업을 사용하도록 설정할 수 있습니다.  

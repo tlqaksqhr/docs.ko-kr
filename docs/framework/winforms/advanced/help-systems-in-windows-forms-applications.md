@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520723"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 응용 프로그램의 도움말 시스템
 하나는 가장 중요 한 행위의, 응용 프로그램 개발자는 사용자를 위해 수 때 유용한 도움말 시스템입니다. 이것이 응용 또는 혼동 될 때 설정 됩니다 것입니다. Windows 기반 응용 프로그램의 도움말 시스템을 제공 하는 사용 하 여 쉽게 설정할 수는 [HelpProvider 구성 요소](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)합니다.  

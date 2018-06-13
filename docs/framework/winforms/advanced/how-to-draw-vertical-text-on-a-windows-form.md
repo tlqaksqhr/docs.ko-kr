@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521543"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>방법: Windows Form에 세로로 텍스트 그리기
 다음 코드 예제를 사용 하 여 폼에 세로 텍스트를 그리는 방법을 보여 줍니다.는 <xref:System.Drawing.Graphics.DrawString%2A> 방식의 <xref:System.Drawing.Graphics>합니다.  

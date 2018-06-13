@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519521"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 이 항목에서는 Windows Workflow Foundation 초보자를 위한 자습서에 포함된 일련의 항목 중 하나로, 워크플로 호스트를 만들고 이전 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 항목에서 정의한 워크플로를 실행하는 방법을 설명합니다.  

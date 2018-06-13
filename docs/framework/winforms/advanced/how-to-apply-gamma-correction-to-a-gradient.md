@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520736"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>방법: 그라데이션에 감마 보정 적용
 브러시의 설정 하 여 선형 그라데이션 브러시에 대 한 감마 보정을 사용 하도록 설정할 수 있습니다 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `true`합니다. 감마 보정을 사용 하지 않도록 설정 하 여 수는 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `false`합니다. 감마 보정은 기본적으로 비활성화 되어 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517938"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>FlowChart와 Pick을 함께 사용하는 StateMachine 시나리오
 이 샘플에서는 <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Pick> 활동을 함께 사용하여 간단한 스톱워치 시나리오를 구현하는 방법을 보여 줍니다. 이 샘플에서는 Pick 활동 내의 Receive 및 Send를 사용하여 스톱워치 이벤트를 수신 대기합니다.  

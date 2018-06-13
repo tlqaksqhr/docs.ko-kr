@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521640"
 ---
 # <a name="how-to-crop-and-scale-images"></a>방법: 이미지 자르기 및 배율 조정
 <xref:System.Drawing.Graphics> 클래스에는 일부의 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 중 일부는 원본 및 대상 사각형 하는 매개 변수가 이미지 자르기 및 배율에 사용할 수 있습니다.  
