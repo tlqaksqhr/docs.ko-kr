@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214395"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a><span data-ttu-id="a9a2f-103">Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축</span><span class="sxs-lookup"><span data-stu-id="a9a2f-103">Building a complete .NET Core solution on Windows, using Visual Studio 2017</span></span>
 

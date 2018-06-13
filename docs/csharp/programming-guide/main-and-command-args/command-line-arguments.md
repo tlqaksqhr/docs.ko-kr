@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335327"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="b3351-102">명령줄 인수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="b3351-102">Command-Line Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="b3351-103">다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3351-103">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>  

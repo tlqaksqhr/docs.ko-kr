@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219247"
 ---
 # <a name="float-c-reference"></a><span data-ttu-id="f867f-102">float(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f867f-102">float (C# Reference)</span></span>
 <span data-ttu-id="f867f-103">`float` 키워드는 32비트 부동 소수점 값을 저장하는 단순 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f867f-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="f867f-104">다음 표에서는 `float` 형식의 전체 자릿수와 근사 범위를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f867f-104">The following table shows the precision and approximate range for the `float` type.</span></span>  

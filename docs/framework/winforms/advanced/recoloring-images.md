@@ -1,64 +1,53 @@
 ---
-title: "이미지 다시 칠하기"
-ms.custom: 
+title: 이미지 다시 칠하기
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - images [Windows Forms], recoloring
 - recoloring images
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a85a0637e86657d68b5ea34d8c6eea74cb31af8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525956"
 ---
-# <a name="recoloring-images"></a><span data-ttu-id="0a52e-102">이미지 다시 칠하기</span><span class="sxs-lookup"><span data-stu-id="0a52e-102">Recoloring Images</span></span>
-<span data-ttu-id="0a52e-103">이미지 색을 조정 하는 과정은 다시 칠하기 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-103">Recoloring is the process of adjusting image colors.</span></span> <span data-ttu-id="0a52e-104">다시 칠하기의 몇 가지 예는 한 가지 색 다른를 조정 하는 다른 색을 기준으로 색의 강도, 밝기 또는 모든 색의 대비 조정 및 회색 음영으로 변환 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-104">Some examples of recoloring are changing one color to another, adjusting a color's intensity relative to another color, adjusting the brightness or contrast of all colors, and converting colors to shades of gray.</span></span>  
+# <a name="recoloring-images"></a><span data-ttu-id="f5421-102">이미지 다시 칠하기</span><span class="sxs-lookup"><span data-stu-id="f5421-102">Recoloring Images</span></span>
+<span data-ttu-id="f5421-103">이미지 색을 조정 하는 과정은 다시 칠하기 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-103">Recoloring is the process of adjusting image colors.</span></span> <span data-ttu-id="f5421-104">다시 칠하기의 몇 가지 예는 한 가지 색 다른를 조정 하는 다른 색을 기준으로 색의 강도, 밝기 또는 모든 색의 대비 조정 및 회색 음영으로 변환 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-104">Some examples of recoloring are changing one color to another, adjusting a color's intensity relative to another color, adjusting the brightness or contrast of all colors, and converting colors to shades of gray.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0a52e-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0a52e-105">In This Section</span></span>  
- [<span data-ttu-id="0a52e-106">방법: 색 매트릭스를 사용하여 단색으로 변형</span><span class="sxs-lookup"><span data-stu-id="0a52e-106">How to: Use a Color Matrix to Transform a Single Color</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
- <span data-ttu-id="0a52e-107">색 매트릭스를 사용 하 여 색 변환에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-107">Discusses using a color matrix to transform a color.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f5421-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f5421-105">In This Section</span></span>  
+ [<span data-ttu-id="f5421-106">방법: 색 매트릭스를 사용하여 단색으로 변형</span><span class="sxs-lookup"><span data-stu-id="f5421-106">How to: Use a Color Matrix to Transform a Single Color</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
+ <span data-ttu-id="f5421-107">색 매트릭스를 사용 하 여 색 변환에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-107">Discusses using a color matrix to transform a color.</span></span>  
   
- [<span data-ttu-id="0a52e-108">방법: 이미지 색 변환</span><span class="sxs-lookup"><span data-stu-id="0a52e-108">How to: Translate Image Colors</span></span>](../../../../docs/framework/winforms/advanced/how-to-translate-image-colors.md)  
- <span data-ttu-id="0a52e-109">색 매트릭스를 사용 하 여 색을 변환 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-109">Shows how to translate colors using a color matrix.</span></span>  
+ [<span data-ttu-id="f5421-108">방법: 이미지 색 변환</span><span class="sxs-lookup"><span data-stu-id="f5421-108">How to: Translate Image Colors</span></span>](../../../../docs/framework/winforms/advanced/how-to-translate-image-colors.md)  
+ <span data-ttu-id="f5421-109">색 매트릭스를 사용 하 여 색을 변환 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-109">Shows how to translate colors using a color matrix.</span></span>  
   
- [<span data-ttu-id="0a52e-110">변형을 사용하여 색의 비율 조정</span><span class="sxs-lookup"><span data-stu-id="0a52e-110">Using Transformations to Scale Colors</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-to-scale-colors.md)  
- <span data-ttu-id="0a52e-111">색 매트릭스를 사용 하 여 색의 크기를 조정 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-111">Explains how to scale colors using a color matrix.</span></span>  
+ [<span data-ttu-id="f5421-110">변형을 사용하여 색의 비율 조정</span><span class="sxs-lookup"><span data-stu-id="f5421-110">Using Transformations to Scale Colors</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-to-scale-colors.md)  
+ <span data-ttu-id="f5421-111">색 매트릭스를 사용 하 여 색의 크기를 조정 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-111">Explains how to scale colors using a color matrix.</span></span>  
   
- [<span data-ttu-id="0a52e-112">방법: 색 회전</span><span class="sxs-lookup"><span data-stu-id="0a52e-112">How to: Rotate Colors</span></span>](../../../../docs/framework/winforms/advanced/how-to-rotate-colors.md)  
- <span data-ttu-id="0a52e-113">색 매트릭스를 사용 하 여 색을 회전 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-113">Describes how to rotate a color using a color matrix.</span></span>  
+ [<span data-ttu-id="f5421-112">방법: 색 회전</span><span class="sxs-lookup"><span data-stu-id="f5421-112">How to: Rotate Colors</span></span>](../../../../docs/framework/winforms/advanced/how-to-rotate-colors.md)  
+ <span data-ttu-id="f5421-113">색 매트릭스를 사용 하 여 색을 회전 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-113">Describes how to rotate a color using a color matrix.</span></span>  
   
- [<span data-ttu-id="0a52e-114">방법: 색 전단</span><span class="sxs-lookup"><span data-stu-id="0a52e-114">How to: Shear Colors</span></span>](../../../../docs/framework/winforms/advanced/how-to-shear-colors.md)  
- <span data-ttu-id="0a52e-115">기울이기 정의 하 고 색 매트릭스를 사용 하 여 색 전단 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-115">Defines shearing and explains how to shear colors using a color matrix.</span></span>  
+ [<span data-ttu-id="f5421-114">방법: 색 전단</span><span class="sxs-lookup"><span data-stu-id="f5421-114">How to: Shear Colors</span></span>](../../../../docs/framework/winforms/advanced/how-to-shear-colors.md)  
+ <span data-ttu-id="f5421-115">기울이기 정의 하 고 색 매트릭스를 사용 하 여 색 전단 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-115">Defines shearing and explains how to shear colors using a color matrix.</span></span>  
   
- [<span data-ttu-id="0a52e-116">방법: 색 매핑 변경 테이블 사용</span><span class="sxs-lookup"><span data-stu-id="0a52e-116">How to: Use a Color Remap Table</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-a-color-remap-table.md)  
- <span data-ttu-id="0a52e-117">다시 매핑을 정의 하 고 색 다시 매핑 테이블을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-117">Defines remapping and shows how to use a color remap table.</span></span>  
+ [<span data-ttu-id="f5421-116">방법: 색 매핑 변경 테이블 사용</span><span class="sxs-lookup"><span data-stu-id="f5421-116">How to: Use a Color Remap Table</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-a-color-remap-table.md)  
+ <span data-ttu-id="f5421-117">다시 매핑을 정의 하 고 색 다시 매핑 테이블을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-117">Defines remapping and shows how to use a color remap table.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="0a52e-118">참조</span><span class="sxs-lookup"><span data-stu-id="0a52e-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f5421-118">참조</span><span class="sxs-lookup"><span data-stu-id="f5421-118">Reference</span></span>  
  <xref:System.Drawing.Imaging.ColorMatrix>  
- <span data-ttu-id="0a52e-119">이 클래스를 설명 하 고 모든 해당 멤버의 링크를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-119">Describes this class and contains links to all of its members.</span></span>  
+ <span data-ttu-id="f5421-119">이 클래스를 설명 하 고 모든 해당 멤버의 링크를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-119">Describes this class and contains links to all of its members.</span></span>  
   
  <xref:System.Drawing.Imaging.ColorMap>  
- <span data-ttu-id="0a52e-120">이 클래스를 설명 하 고 모든 해당 멤버의 링크를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-120">Describes this class and contains links to all of its members.</span></span>  
+ <span data-ttu-id="f5421-120">이 클래스를 설명 하 고 모든 해당 멤버의 링크를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-120">Describes this class and contains links to all of its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="0a52e-121">관련 단원</span><span class="sxs-lookup"><span data-stu-id="0a52e-121">Related Sections</span></span>  
- [<span data-ttu-id="0a52e-122">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="0a52e-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- <span data-ttu-id="0a52e-123">여러 종류의 이미지에 대 한 항목 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-123">Provides a list of topics regarding the different types of images.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="f5421-121">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f5421-121">Related Sections</span></span>  
+ [<span data-ttu-id="f5421-122">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="f5421-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ <span data-ttu-id="f5421-123">여러 종류의 이미지에 대 한 항목 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-123">Provides a list of topics regarding the different types of images.</span></span>  
   
- [<span data-ttu-id="0a52e-124">이미지, 비트맵, 아이콘 및 메타파일 사용</span><span class="sxs-lookup"><span data-stu-id="0a52e-124">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- <span data-ttu-id="0a52e-125">여러 종류의 이미지를 사용 하는 방법을 보여 주는 항목의 목록을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-125">Contains a list of topics that show how to use different types of images.</span></span>  
+ [<span data-ttu-id="f5421-124">이미지, 비트맵, 아이콘 및 메타파일 사용</span><span class="sxs-lookup"><span data-stu-id="f5421-124">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
+ <span data-ttu-id="f5421-125">여러 종류의 이미지를 사용 하는 방법을 보여 주는 항목의 목록을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-125">Contains a list of topics that show how to use different types of images.</span></span>  
   
- [<span data-ttu-id="0a52e-126">관리되는 그래픽 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="0a52e-126">Using Managed Graphics Classes</span></span>](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
- <span data-ttu-id="0a52e-127">관리 되는 그래픽 클래스를 사용 하는 방법을 설명 하는 항목의 목록을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a52e-127">Contains a list of topics describing how to use managed graphics classes.</span></span>
+ [<span data-ttu-id="f5421-126">관리되는 그래픽 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="f5421-126">Using Managed Graphics Classes</span></span>](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
+ <span data-ttu-id="f5421-127">관리 되는 그래픽 클래스를 사용 하는 방법을 설명 하는 항목의 목록을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5421-127">Contains a list of topics describing how to use managed graphics classes.</span></span>

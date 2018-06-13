@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212677"
 ---
 # <a name="net-core-application-deployment"></a><span data-ttu-id="0dab0-103">.NET Core 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="0dab0-103">.NET Core application deployment</span></span>
 

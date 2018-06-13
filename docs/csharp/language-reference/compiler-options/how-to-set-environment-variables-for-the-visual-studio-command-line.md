@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214993"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="08b52-102">방법: Visual Studio 명령줄에 필요한 환경 변수 설정</span><span class="sxs-lookup"><span data-stu-id="08b52-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
 

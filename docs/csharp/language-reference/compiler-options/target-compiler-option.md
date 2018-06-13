@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215500"
 ---
 # <a name="-target-c-compiler-options"></a><span data-ttu-id="bde13-102">-target(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="bde13-102">-target (C# Compiler Options)</span></span>
 <span data-ttu-id="bde13-103">**-target** 컴파일러 옵션은 다음 네 가지 형태 중 하나로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bde13-103">The **-target** compiler option can be specified in one of four forms:</span></span>  
