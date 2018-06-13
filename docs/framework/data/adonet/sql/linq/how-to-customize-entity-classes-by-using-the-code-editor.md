@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360493"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정
 Visual Studio를 사용 하 여 개발자가 사용할 수는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 를 만들거나 해당 엔터티 클래스 사용자 지정 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359799"
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB에 대한 SqlClient 지원
 SQL Server 코드 이름 Denali 부터는 LocalDB 라고 부르는 SQL Server의 경량 버전 제공 됩니다. 이 항목에서는 LocalDB 데이터베이스에 연결하는 방법을 설명합니다.  

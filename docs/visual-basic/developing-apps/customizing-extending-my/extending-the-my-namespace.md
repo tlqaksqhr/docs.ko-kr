@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591835"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic에서 My 네임스페이스 확장
 `My` Visual Basic의 네임 스페이스 속성과 쉽게.NET Framework의 기능을 활용 하기 위해 사용할 수 있는 메서드를 노출 합니다. `My` 네임 스페이스 코드 한 줄으로 어려운 작업이 줄어들 일반적인 프로그래밍 문제를 단순화 합니다. 또한는 `My` 의 동작을 사용자 지정할 수 있도록 네임 스페이스는 à ü è `My` 특정 응용 프로그램 요구 사항에 맞게 조정 하는 계층 구조를 새 서비스를 추가 합니다. 이 항목에서는 기존 멤버의 사용자 지정 하는 `My` 네임 스페이스 및 사용자 지정 클래스를 추가 하는 방법의 `My` 네임 스페이스.  

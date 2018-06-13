@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386173"
 ---
 # <a name="wcf-directive-syntax"></a>WCF 지시문 구문
 컴파일러에 지시 하려면.svc 파일의 Windows Communication Foundation (WCF) 지시문에 의해 사용 되는 설정을 지정 합니다. 각 지시문에는 해당 지시문에만 관련되는 하나 이상의 특성(값과 쌍을 이룸)이 포함됩니다. WCF에는 [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문입니다.  

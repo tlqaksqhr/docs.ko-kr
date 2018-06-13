@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587562"
 ---
 # <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>&#39;&lt;특성&gt; &#39; 적용할 수 없습니다 GUID의 형식이 &#39; &lt;번호&gt; &#39; 올바르지 않은
 A `COMClassAttribute` 특성 블록 GUID에 대 한 적절 한 형식에 맞지 않는 전역적으로 고유 식별자 (GUID)를 지정 합니다. `COMClassAttribute` Guid를 사용 하 여 고유 하 게 클래스, 인터페이스 및 생성 이벤트를 식별 합니다.  

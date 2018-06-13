@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592082"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My가 프로젝트 형식에 의존하는 방식(Visual Basic)
 `My` 특정 프로젝트 형식에 필요한 개체만 표시 합니다. 예를 들어는 `My.Forms` 개체는 Windows Forms 응용 프로그램에서 사용할 수 있지만 콘솔 응용 프로그램에서 사용할 수 없습니다. 이 항목을 설명 하는 `My` 다양 한 프로젝트 형식에 사용할 수 있는 개체입니다.  

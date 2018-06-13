@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588176"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;식&gt; &#39; 형식 제약 조건으로 사용할 수 없습니다
 제약 조건 목록에 형식 매개 변수에 대한 유효한 제약 조건을 나타내지 않는 식이 포함되어 있습니다.  

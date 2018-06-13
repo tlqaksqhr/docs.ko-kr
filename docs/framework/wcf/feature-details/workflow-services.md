@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499195"
 ---
 # <a name="workflow-services"></a>워크플로 서비스
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 XAML을 사용하여 워크플로 기반 서비스를 선언적으로 자세히 설명할 수 있습니다. 즉, XAML을 사용하여 서비스를 구현하는 워크플로를 정의하고 서비스가 노출하는 끝점을 설명할 수 있습니다. 이 단원의 항목에서는 선언적 방식의 서비스 작성을 지원하는 프로그래밍 모델에 대해 자세히 설명합니다.  

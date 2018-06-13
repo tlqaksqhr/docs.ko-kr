@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578224"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
 .NET Framework를 사용할 수 있습니다 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식을 여러 플랫폼에서 클래스 라이브러리의 리소스에 액세스할 수 있도록 합니다. 이 프로젝트 형식은 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 사용할 수 있으며 .NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.  

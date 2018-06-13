@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593264"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>이 키는 이 컬렉션의 요소와 이미 연결되어 있습니다.
 컬렉션의 다른 멤버를 이미 식별 하는 컬렉션 멤버에 대 한 키를 지정 합니다. 키가 지정 된 문자열이 `Add` 컬렉션의 특정 멤버를 고유 하 게 식별 하는 메서드입니다.  

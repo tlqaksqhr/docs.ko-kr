@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502253"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX 웹 서비스와의 상호 운영성
 이 샘플을 기존 ASMX 웹 서비스와 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 통합 하는 방법을 보여 줍니다.  

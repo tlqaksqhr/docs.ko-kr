@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501972"
 ---
 # <a name="multiple-endpoints"></a>다중 끝점
 Multiple Endpoints 샘플은 서비스에서 여러 끝점을 구성하는 방법과 클라이언트에서 각 끝점과 통신하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스 구성은 `ICalculator` 계약을 지원하지만 각각 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 끝점을 정의하기 위해 수정되었습니다. 클라이언트 구성과 코드는 두 서비스 끝점 모두와 통신하기 위해 수정되었습니다.  

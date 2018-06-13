@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576434"
 ---
 # <a name="names-of-namespaces"></a>네임스페이스의 이름
 으로 다른 이름 지정 지침으로 목표 네임 스페이스의 이름을 지정할 때 만들어지고 충분 한 명확성 즉시 내용을 알 수 네임 스페이스의 내용을 가능성이 프레임 워크를 사용 하 여 프로그래머에 대 한 있습니다. 다음 템플릿 네임 스페이스 이름 지정에 대 한 일반적인 규칙을 지정 합니다.  

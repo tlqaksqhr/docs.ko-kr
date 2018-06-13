@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508880"
 ---
 # <a name="transacted-batching"></a>트랜잭션된 일괄 처리
 이 샘플에서는 MSMQ(메시지 큐)를 사용하여 트랜잭션된 읽기를 일괄 처리하는 방법을 보여 줍니다. 트랜잭션된 일괄 처리는 대기 중인 통신에서 트랜잭션된 읽기의 성능을 최적화하는 기능입니다.  

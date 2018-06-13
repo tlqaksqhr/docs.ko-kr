@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765466"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities에서 알려진 문제 및 고려 사항
 이 단원에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리와 관련하여 알려진 문제에 대한 정보를 제공합니다.  

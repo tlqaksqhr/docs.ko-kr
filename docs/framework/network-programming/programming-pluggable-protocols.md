@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396143"
 ---
 # <a name="programming-pluggable-protocols"></a>플러그형 프로토콜 프로그래밍
 추상 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스에서 플러그형 프로토콜의 기초를 제공합니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 프로토콜별 클래스를 파생시키면, 응용 프로그램에서 사용할 프로토콜을 지정하지 않아도 인터넷 리소스에서 데이터를 요청하고 응답을 읽을 수 있습니다.  

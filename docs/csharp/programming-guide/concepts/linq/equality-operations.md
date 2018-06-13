@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326952"
 ---
 # <a name="equality-operations-c"></a>같음 연산(C#)
 해당 요소가 동일하고 같은 수의 요소를 포함 하는 두 시퀀스는 같은 것으로 간주됩니다.  

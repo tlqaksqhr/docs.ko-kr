@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498692"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
 사용 하는 경우이 섹션에서는 WCF 메시지 보안 <xref:System.ServiceModel.NetMsmqBinding>합니다.  

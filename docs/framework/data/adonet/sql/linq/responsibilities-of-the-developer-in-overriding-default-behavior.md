@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365256"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>기본 동작 재정의에서 개발자의 책임
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 다음 요구 사항을 적용 하지 않는 않지만 이러한 요구 사항을 만족 하지 않으면 동작이 정의 되지 않습니다.  

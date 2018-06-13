@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588095"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;membername&gt; &#39; 형식을 노출할 수 없습니다 &#39; &lt;typename&gt; &#39; 통해 프로젝트 외부 &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
 해당 컨테이너 외부 노출 되는 변수, 프로시저, 매개 변수 또는 함수 반환 하지만 컨테이너 외부 노출 되어서는 안 되는 형식으로 선언 합니다.  

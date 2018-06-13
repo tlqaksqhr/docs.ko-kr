@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504187"
 ---
 # <a name="default-message-contract"></a>기본 메시지 계약
 Default Message Contract 샘플에서는 사용자 지정 사용자 정의 메시지를 서비스 작업에 전달하고 전달받는 서비스를 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 인터페이스는 형식화 되지 않은 서비스를 구현 하는 합니다. 더하기, 빼기, 곱하기 및 나누기에서 사용에 대 한 개별 서비스 작업 대신는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md),이 샘플에는 피연산자와 연산자를 모두 포함 하 고 반환 하는 사용자 지정 메시지 전달 산술 계산의 결과입니다.  

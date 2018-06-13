@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362852"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>데이터 서비스 호스팅(WCF Data Services)
 사용 하 여 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 데이터를 노출 하는 서비스를 만들 수 있습니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 데이터 서비스는 <xref:System.Data.Services.DataService%601>에서 상속되는 클래스로 정의됩니다. 이 클래스는 요청 메시지를 처리 하 고 데이터 소스에 대 한 업데이트를 수행 하 여 필요에 따라 응답 메시지를 생성 하는 데 필요한 기능을 제공 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]합니다. 그러나 데이터 서비스에 바인딩할 수 없으며 들어오는 HTTP 요청에 대 한 네트워크 소켓에서 수신 대기 합니다. 이 필요한 기능을 위해 데이터 서비스는 호스팅 구성 요소를 사용합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768309"
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>방법: ConcurrentBag을 사용하여 개체 풀 만들기
 이 예제에서는 CurrentBag을 사용하여 개체 풀을 구현하는 방법을 보여 줍니다. 클래스에 여러 인스턴스가 필요하고 클래스를 만들거나 삭제하는 데 비용이 많이 드는 경우 개체 풀을 사용하면 응용 프로그램 성능을 향상시킬 수 있습니다. 클라이언트 프로그램에서 새 개체를 요청하면 먼저 개체 풀이 이미 풀에 만들어져 반환된 개체를 제공하려고 시도합니다. 제공될 개체가 없는 경우에만 새 개체가 만들어집니다.  

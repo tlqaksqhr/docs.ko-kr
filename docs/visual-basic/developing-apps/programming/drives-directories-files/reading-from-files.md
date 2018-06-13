@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590800"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
 이 섹션에서는 파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  

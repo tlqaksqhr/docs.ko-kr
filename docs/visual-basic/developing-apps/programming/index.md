@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587412"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic의 프로그래밍
 이 섹션에서는 Visual Basic 응용 프로그램을 만들 때 배우면 도움이 될 수 있는 프로그래밍 작업에 대해 설명합니다.  

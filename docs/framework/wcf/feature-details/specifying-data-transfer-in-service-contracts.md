@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508501"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
 (WCF (Windows Communication Foundation)는 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  

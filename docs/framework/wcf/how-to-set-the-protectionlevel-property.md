@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501535"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>방법: ProtectionLevel 속성 설정
 적절한 특성을 적용하고 속성을 설정하여 보호 수준을 설정할 수 있습니다. 각 메시지의 모든 부분에 영향을 주도록 서비스 수준에서 보호를 설정하거나 메서드에서 메시지 부분으로 점차 세부적인 수준에서 보호를 설정할 수 있습니다. 에 대 한 자세한 내용은 `ProtectionLevel` 속성 참조 [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다.  

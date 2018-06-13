@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508723"
 ---
 # <a name="security-protocols"></a>보안 프로토콜
 Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 섹션에서는 Windows Communication Foundation (WCF) 세부 정보를 설명 (에서 구현 되는 <xref:System.ServiceModel.Channels.SecurityBindingElement>) 다음 웹 서비스 보안 프로토콜에 대 한 합니다.  

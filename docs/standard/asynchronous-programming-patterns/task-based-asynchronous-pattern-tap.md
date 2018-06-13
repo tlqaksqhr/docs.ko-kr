@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579017"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>TAP(작업 기반 비동기 패턴)
 TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용되는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  

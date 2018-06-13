@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590922"
 ---
 # <a name="key-security-concepts"></a>주요 보안 개념
 Microsoft .NET Framework는 모바일 코드에 대한 보안 문제를 해결하고 사용자에게 수행할 수 있는 권한이 있는 작업을 구성 요소가 확인할 수 있게 해주는 지원을 제공하기 위해 역할 기반 보안을 제공합니다.  

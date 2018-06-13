@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507366"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 및 WSDL 참조
 이 항목에서 Windows Communication Foundation (WCF) 설명 언어 WSDL (웹 서비스) 문서를 매핑하는 방법에 대해 설명 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스.  

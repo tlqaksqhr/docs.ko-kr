@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365344"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>트랜잭션 및 대량 복사 작업
 대량 복사 작업을 격리된 작업이나 여러 단계로 이루어진 트랜잭션의 일부로 수행할 수 있습니다. 후자를 사용하면 다른 데이터베이스 작업(삽입, 업데이트, 삭제 등)을 수행하면서 같은 트랜잭션 내에서 둘 이상의 대량 복사 작업을 수행할 수 있을 뿐만 아니라 전체 트랜잭션을 커밋하거나 롤백할 수 있습니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397704"
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 응용 프로그램을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 다른 응용 프로그램의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594311"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>XML axis 속성은 런타임 바인딩을 지원하지 않습니다.
 XML 축 속성 형식화 되지 않은 개체에 대 한 참조 되었습니다.  

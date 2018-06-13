@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363897"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>방법: Windows Presentation Foundation 요소에 데이터 바인딩(WCF Data Services)
 와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 같은 Windows Presentation Foundation (WPF) 요소를 바인딩할 수는 <xref:System.Windows.Controls.ListBox>' 또는 <xref:System.Windows.Controls.ComboBox> 의 인스턴스로 <xref:System.Data.Services.Client.DataServiceCollection%601>를 유지 하는 컨트롤에서 발생 한 이벤트를 처리 하는 <xref:System.Data.Services.Client.DataServiceContext> 변경 내용과 동기화 컨트롤의 데이터를 하려고 합니다. 자세한 내용은 참조 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다.  

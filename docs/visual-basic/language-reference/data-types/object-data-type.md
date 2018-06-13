@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591629"
 ---
 # <a name="object-data-type"></a>Object Data Type
 개체를 참조 하는 주소를 저장 합니다. 참조 형식 (문자열, 배열, 클래스 또는 인터페이스)를 할당할 수 있습니다는 `Object` 변수입니다. `Object` 변수 값 형식의 데이터에도 참조할 수 있습니다 (숫자, `Boolean`, `Char`, `Date`, 구조체 또는 열거형)입니다.  

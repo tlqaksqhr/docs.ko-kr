@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364257"
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 일부에 항상 포함 개체가 *상태*합니다. 예를 들어, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 새 개체를 만들 경우 개체는 `Unchanged` 상태입니다. 직접 만든 새 개체는 <xref:System.Data.Linq.DataContext>에 알려져 있지 않으며 `Untracked` 상태입니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 실행하고 나면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 알려진 모든 개체는 `Unchanged` 상태가 됩니다. 유일한 예외는 데이터베이스에서 삭제된 개체로 이러한 개체는 `Deleted` 상태이고 해당 <xref:System.Data.Linq.DataContext> 인스턴스에서 사용할 수 없습니다.  

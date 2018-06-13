@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762815"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>쿼리 식 구문 예제: 프로젝션
 이 항목의 예제에 사용 하는 방법을 보여 주기는 `Select` 메서드 및 `From … From …` 키워드를는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) 쿼리 식 구문을 사용 합니다. `From … From …`은 `SelectMany` 메서드에 해당하는 쿼리 기반 키워드입니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  

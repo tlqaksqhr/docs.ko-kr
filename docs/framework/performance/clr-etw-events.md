@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393921"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 이벤트
 이 섹션의 항목은 ETW(Windows용 이벤트 추적) 이벤트를 설명합니다. 각 이벤트에는 연결된 키워드 및 수준이 있으며, [CLR ETW 키워드 및 수준](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) 항목에서 설명합니다. CLR에는 이벤트에 대한 두 개의 공급자가 있습니다.  

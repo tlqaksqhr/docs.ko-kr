@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593115"
 ---
 # <a name="textfieldparser-is-unable-to-complete-the-read-operation-because-maximum-buffer-size-has-been-exceeded"></a>최대 버퍼 크기를 초과했으므로 TextFieldParser에서 읽기 작업을 완료할 수 없습니다.
 최대 버퍼 크기 (10000000 바이트)를 초과 했으므로 작업을 완료할 수 없습니다.  

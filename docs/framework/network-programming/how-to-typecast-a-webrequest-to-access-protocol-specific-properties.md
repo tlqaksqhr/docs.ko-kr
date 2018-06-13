@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394074"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>방법: 프로토콜 관련 속성에 액세스하기 위해 WebRequest 형식 캐스팅
 이 예제에서는 프로토콜별 속성에 액세스할 수 있도록 WebRequest를 형식 캐스팅하는 방법을 보여 줍니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508646"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
 Windows Communication Foundation (WCF), 동작은 서비스 수준 또는 끝점 수준에서 런타임 동작을 수정 합니다. (일반적으로 참조 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  

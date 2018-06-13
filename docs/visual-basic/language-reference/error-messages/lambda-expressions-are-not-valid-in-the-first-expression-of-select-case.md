@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588923"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>람다 식의 첫 번째 식에 유효 하지 않은 한 &#39;Select Case&#39; 문
 테스트 식에 람다 식을 사용할 수 없습니다는 `Select Case` 문. 람다 식 정의는 함수를 테스트 식의 반환을 `Select Case` 문은 기본 데이터 형식 이어야 합니다.  

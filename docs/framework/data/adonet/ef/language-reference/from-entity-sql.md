@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765817"
 ---
 # <a name="from-entity-sql"></a>FROM(Entity SQL)
 사용 되는 컬렉션을 지정 [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문.  

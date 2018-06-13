@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587748"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>파일을 찾을 수 없습니다(Visual Basic 런타임 오류).
 지정 된 파일이 없습니다. 오류가 발생 하는 다음과 같은 가능한 원인을:  

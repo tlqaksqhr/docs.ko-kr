@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365269"
 ---
 # <a name="transactions-and-concurrency"></a>트랜잭션 및 동시성
 트랜잭션은 패키지로 실행되는 하나의 명령 또는 명령 그룹으로 구성됩니다. 트랜잭션을 사용하여 여러 작업을 하나의 작업 단위로 통합할 수 있습니다. 또한 트랜잭션의 한 지점에서 오류가 발생하는 경우 모든 업데이트를 이전 트랜잭션 상태로 롤백할 수 있습니다.  

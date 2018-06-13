@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590967"
 ---
 # <a name="principal-and-identity-objects"></a>Principal 개체 및 Identity 개체
 Id 또는 통해 주 역할을 관리 코드를 검색할 수는 <xref:System.Security.Principal.IPrincipal> 개체에 대 한 참조를 포함 하는 <xref:System.Security.Principal.IIdentity> 개체입니다. Identity 개체와 Principal 개체를 사용자 및 그룹 계정과 같이 익숙한 개념과 비교해 보면 쉽게 이해할 수 있습니다. 대부분의 네트워크 환경에서 사용자 계정은 사람 또는 프로그램을 나타내고, 그룹 계정은 특정 사용자 범주 및 해당 사용자들이 소유하는 권한을 나타냅니다. 마찬가지로, .NET Framework의 Identity 개체는 사용자를 나타내고, 역할은 멤버 및 보안 컨텍스트를 나타냅니다. .NET Framework에서 Principal 개체는 Identity 개체와 역할을 모두 캡슐화합니다. .NET Framework 응용 프로그램에서는 보안 주체의 ID 또는 더 일반적인 경우에는 역할 멤버에 따라 보안 주체에 권한을 부여합니다.  

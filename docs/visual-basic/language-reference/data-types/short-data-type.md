@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590714"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 데이터 형식 (Visual Basic)
 부호 있는 16 비트 (2 바이트) 정수 값 범위에 있는-32, 768에서 32, 767 까지의 저장 합니다.  

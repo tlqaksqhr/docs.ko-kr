@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500336"
 ---
 # <a name="discovery-router-service"></a>검색 라우터 서비스
 이 샘플에서는 검색 메시지를 다른 끝점에 전달하는 방법을 보여 줍니다.  

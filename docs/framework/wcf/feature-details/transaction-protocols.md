@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508444"
 ---
 # <a name="transaction-protocols"></a>트랜잭션 프로토콜
 Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination 프로토콜을 구현 합니다.  

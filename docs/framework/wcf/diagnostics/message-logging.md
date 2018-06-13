@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474034"
 ---
 # <a name="message-logging"></a>메시지 로깅
 Windows Communication Foundation (WCF)에 대 한 오프 라인에서 사용할 들어오고 나가는 메시지를 기록할 수 있는 기능을 제공 합니다. 메시지 로깅을 사용하면 메시지와 메시지 본문의 모양을 확인할 수 있습니다. 특히 이 로깅 형식을 사용하면 전달된 인수 및 수신하는 끝점에서 XML로 표현된 인수가 어떻게 표시되는지를 확인할 수 있습니다. 또한 메시지를 수신된 그대로 로깅하면 잘못된 형식의 메시지를 진단하고 메시지가 도착한 방법을 확인할 수 있습니다. 사용된 보안 토큰, 암호화되고 서명된 부분 및 그대로 유지된 부분을 확인할 수도 있습니다.  

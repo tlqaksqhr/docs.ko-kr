@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506469"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
 TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 응용 프로그램에 대한 연결을 구분합니다. 응용 프로그램이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 응용 프로그램으로 이동합니다. 다른 응용 프로그램이 동시에 이 포트에서 수신 대기할 수는 없습니다.  

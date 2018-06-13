@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398263"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>동적 형식 생성을 위해 수집 가능한 어셈블리
 

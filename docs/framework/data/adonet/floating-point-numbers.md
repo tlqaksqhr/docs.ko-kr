@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764725"
 ---
 # <a name="floating-point-numbers"></a>부동 소수점 숫자
 이 항목에서는 개발자가 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 부동 소수점 숫자로 작업할 때 자주 발생하는 몇 가지 문제에 대해 설명합니다. 이러한 문제는 컴퓨터가 부동 소수점 숫자를 저장하는 방식 때문에 발생하며 <xref:System.Data.SqlClient> 또는 <xref:System.Data.OracleClient>와 같은 특정 공급자에 한정된 문제가 아닙니다.  

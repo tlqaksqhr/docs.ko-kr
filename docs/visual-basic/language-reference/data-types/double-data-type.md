@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590266"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 데이터 형식(Visual Basic)
 부호 있는 IEEE 64 비트 (8 바이트) 배정밀 부동 소수점 숫자 값에서-1.79769313486231570 e + 308에서-범위에 있는 저장 4.94065645841246544E-324 음수 경우 4.94065645841246544 e에서-324 1.79769313486231570 e + 308 양수 값입니다. 두 자리 숫자는 실수의 근사값을 저장합니다.  

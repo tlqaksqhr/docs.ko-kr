@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587712"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>방법: XML 스트림의 대체 요소 이름 지정
 [코드 예제](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  

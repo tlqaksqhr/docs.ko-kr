@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363116"
 ---
 # <a name="manipulating-data"></a>데이터 조작
 MARS(Multiple Active Result Sets)가 도입되기 전까지 개발자는 다중 연결이나 서버측 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 트랜잭션 상황에서 여러 개의 연결이 사용 되 던 때 바인딩된 연결 (으로 **sp_getbindtoken** 및 **sp_bindsession**) 필요 했습니다. 다음 시나리오에서는 다중 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  

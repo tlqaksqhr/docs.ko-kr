@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396287"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET 네이티브 일반 문제 해결
 이 항목에서는 [!INCLUDE[net_native](../../../includes/net-native-md.md)]를 사용하여 앱을 개발할 때 발생할 수 있는 잠재적인 문제를 해결하는 방법을 설명합니다.  

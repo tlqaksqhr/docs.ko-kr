@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766311"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>개념적 모델 정식 함수와 SQL Server 함수 매핑
 이 항목에서는 개념적 모델 정식 함수가 해당 SQL Server 함수에 매핑되는 방법에 대해 설명합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502730"
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
 워크플로 서비스는 워크플로 사용 하 여 구현 되는 WCF 기반 서비스입니다. 워크플로 서비스는 Windows Communication Foundation (WCF) 메시지를 받거나 보내기 위해 메시징 활동을 사용 하는 워크플로입니다. .NET Framework 4.5에서는 워크플로 내에서 메시지를 보내고 받을 수 있는 다양한 메시징 작업을 제공합니다. 메시징 활동 및 다른 메시지 교환 패턴을 구현 하는 수 방법에 대 한 자세한 내용은 참조 [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다.  

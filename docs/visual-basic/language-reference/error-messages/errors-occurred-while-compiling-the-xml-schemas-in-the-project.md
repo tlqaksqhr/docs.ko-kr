@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588264"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>프로젝트에서 XML 스키마를 컴파일하는 동안 오류가 발생했습니다.
 프로젝트에서 XML 스키마를 컴파일하는 동안 오류가 발생 했습니다. 이 인해 XML IntelliSense를 사용할 수 없습니다.  

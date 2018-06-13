@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590015"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>방법: PrintForm 구성 요소를 사용하여 폼 인쇄(Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 사용하면 <xref:System.Drawing.Printing.PrintDocument> 구성 요소를 사용하지 않고 화면에 표시된 대로 정확히 폼 이미지를 빠르게 인쇄할 수 있습니다. 다음 절차에서는 프린터, 인쇄 미리 보기 창, Encapsulated PostScript 파일 등으로 폼을 인쇄하는 방법을 보여 줍니다.  

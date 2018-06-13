@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365555"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlNotificationRequest를 사용하여 SqlCommand 실행
 데이터가 서버에서 반입된 후 변경될 때 알림을 생성하도록 <xref:System.Data.SqlClient.SqlCommand>를 구성할 수 있으며 쿼리가 다시 실행된 경우 결과 집합은 달라질 수 있습니다. 이 기능은 서버에 사용자 지정 알림 큐를 사용하려는 경우나 활성 개체를 유지하지 않으려는 경우에 유용합니다.  

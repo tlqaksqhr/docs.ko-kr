@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593732"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;methodname&gt; &#39; 에 시그니처가 동일한 정의가 여러 개
 A `Function` 또는 `Sub` 프로시저 선언 이전 선언과 동일한 프로시저 이름 및 인수 목록을 사용 합니다. 원래 프로시저를 오버 로드 하려는 경우이 오류가 발생 합니다. 오버 로드 된 프로시저는 서로 다른 인수 목록이 있어야 합니다.  

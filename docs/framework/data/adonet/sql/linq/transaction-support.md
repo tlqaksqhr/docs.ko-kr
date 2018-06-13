@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364979"
 ---
 # <a name="transaction-support"></a>트랜잭션 지원
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 세 개의 고유한 트랜잭션 모델이 지원합니다. 이러한 모델을 검사가 수행되는 순서대로 나열하면 다음과 같습니다.  

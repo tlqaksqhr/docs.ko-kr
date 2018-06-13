@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576824"
 ---
 # <a name="building-xml-schemas"></a>XML 스키마 빌드
 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항에 정의된 구조에 매핑되며 이 클래스를 사용하여 메모리 내 XML 스키마를 빌드할 수 있습니다.  

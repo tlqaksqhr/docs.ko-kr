@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588108"
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>방법: DataRepeater 컨트롤의 바인딩되지 않은 컨트롤 표시(Visual Studio)
 바인딩된 컨트롤 이외에 다른 컨트롤을 추가 하려는 한 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, 정적 레이블 또는 각 항목에 대해 반복 되는 이미지와 같은 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 제어 합니다.  
