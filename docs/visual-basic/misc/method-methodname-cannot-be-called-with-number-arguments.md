@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636121"
 ---
 # <a name="method-39ltmethodnamegt39-cannot-be-called-with-ltnumbergt-arguments"></a>메서드 &#39; &lt;methodname&gt; &#39; 으로 호출할 수 없습니다 &lt;번호&gt; 인수
 메서드 호출에 잘못된 인수 개수가 포함되어 있습니다.  

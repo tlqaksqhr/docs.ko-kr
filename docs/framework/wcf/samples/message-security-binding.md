@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805043"
 ---
 # <a name="message-security-binding"></a>메시지 보안 바인딩
 이 섹션에는 WCF에서 Windows 서비스의 메시지 보안 바인딩을 보여 주는 샘플이 포함 되어 있습니다.  

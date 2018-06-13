@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653665"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>샘플 컴파일 명령줄 (Visual Basic)
 Visual Studio 내에서 Visual Basic 프로그램 컴파일 하는 대신, 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성 하기 위해 명령줄에서 컴파일할 수 있습니다.  

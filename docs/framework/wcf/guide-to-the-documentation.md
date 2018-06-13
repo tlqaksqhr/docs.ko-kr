@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805540"
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
 Windows Communication Foundation (WCF) 설명서에 대 한 지침은 다음과 같습니다 제공. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  

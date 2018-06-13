@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647233"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>방법: 시스템 리소스 해제(Visual Basic)
 사용할 수는 `Using` 블록 코드 블록을 종료할 때 시스템 리소스의 삭제 되도록 합니다. 또는 다른 구성 요소가 사용 하 여 할 많은 양의 메모리를 사용 하는 시스템 리소스를 사용 하는 경우에 유용 합니다.  

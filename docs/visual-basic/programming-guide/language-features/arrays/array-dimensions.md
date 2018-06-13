@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651758"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 각 날짜의 월에 대 한 총 판매를 포함 하는 배열에는 1 차원 (해당 월의 일)에 있습니다. 총 판매액이 들어 부서별로 각 날짜의 월에 대 한 배열 차원이 두 개 (부서 번호 및 월의 일). 배열의 차원 수 라고 해당 *순위*합니다.  
