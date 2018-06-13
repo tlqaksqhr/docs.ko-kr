@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807761"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a><span data-ttu-id="6ba06-102">독립형 진단 피드 샘플</span><span class="sxs-lookup"><span data-stu-id="6ba06-102">Stand-Alone Diagnostics Feed Sample</span></span>
 <span data-ttu-id="6ba06-103">이 샘플에는 RSS/Atom 배포와 Windows Communication Foundation (WCF)에 대 한 피드를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ba06-103">This sample demonstrates how to create an RSS/Atom feed for syndication with Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="6ba06-104">개체 모델의 기본 사항 및 Windows Communication Foundation (WCF) 서비스를 설정 하는 방법을 보여 주는 기본 "Hello World" 프로그램은</span><span class="sxs-lookup"><span data-stu-id="6ba06-104">It is a basic "Hello World" program that shows the basics of the object model and how to set it up on a Windows Communication Foundation (WCF) service.</span></span>  

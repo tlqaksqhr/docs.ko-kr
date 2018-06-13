@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805956"
 ---
 # <a name="net-binding"></a><span data-ttu-id="236d2-102">Net 바인딩</span><span class="sxs-lookup"><span data-stu-id="236d2-102">Net Binding</span></span>
 <span data-ttu-id="236d2-103">이 단원에는 끝점 요소의 네트워크 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="236d2-103">This section contains samples that demonstrate using network binding attributes of an endpoint element.</span></span>  

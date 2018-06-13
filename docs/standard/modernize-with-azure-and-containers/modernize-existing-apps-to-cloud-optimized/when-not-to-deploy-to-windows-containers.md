@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957963"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a><span data-ttu-id="533e4-103">Windows 컨테이너를 배포 하지 않는 경우</span><span class="sxs-lookup"><span data-stu-id="533e4-103">When not to deploy to Windows Containers</span></span>
 
