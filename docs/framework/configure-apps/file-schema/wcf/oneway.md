@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746724"
 ---
 # <a name="ltonewaygt"></a><span data-ttu-id="fa105-102">&lt;oneWay&gt;</span><span class="sxs-lookup"><span data-stu-id="fa105-102">&lt;oneWay&gt;</span></span>
 <span data-ttu-id="fa105-103">사용자 지정 바인딩에 대한 패킷 라우팅 및 단방향 메서드를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fa105-103">Enables packet routing and the use of one-way methods for a custom binding.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748430"
 ---
 # <a name="ltstartupgt-element"></a><span data-ttu-id="c5b5d-102">&lt;시작&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="c5b5d-102">&lt;startup&gt; Element</span></span>
 <span data-ttu-id="c5b5d-103">공용 언어 런타임 시작 정보를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b5d-103">Specifies common language runtime startup information.</span></span>  

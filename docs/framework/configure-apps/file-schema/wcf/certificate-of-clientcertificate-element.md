@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753393"
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a><span data-ttu-id="0ac65-102">&lt;clientCertificate&gt; 요소의 &lt;certificate&gt;</span><span class="sxs-lookup"><span data-stu-id="0ac65-102">&lt;certificate&gt; of &lt;clientCertificate&gt; Element</span></span>
 <span data-ttu-id="0ac65-103">메시지 서명 및 암호화에 사용되는 X.509 인증서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0ac65-103">Specifies an X.509 certificate used to sign and encrypt messages.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749233"
 ---
 # <a name="ltservicesgt"></a><span data-ttu-id="66f7b-102">&lt;서비스&gt;</span><span class="sxs-lookup"><span data-stu-id="66f7b-102">&lt;services&gt;</span></span>
 <span data-ttu-id="66f7b-103">서비스는 구성 파일의 `services` 섹션에 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="66f7b-103">Services are defined in the `services` section of the configuration file.</span></span> <span data-ttu-id="66f7b-104">서비스별로 해당 `service` 구성 섹션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66f7b-104">Each service has its own `service` configuration section.</span></span>  

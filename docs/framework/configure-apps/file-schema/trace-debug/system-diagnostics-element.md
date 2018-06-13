@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750338"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="74afc-102">&lt;system.diagnostics&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="74afc-102">&lt;system.diagnostics&gt; Element</span></span>
 <span data-ttu-id="74afc-103">메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="74afc-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  

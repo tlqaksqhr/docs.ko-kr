@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762425"
 ---
 # <a name="facet"></a><span data-ttu-id="6a3a1-102">패싯</span><span class="sxs-lookup"><span data-stu-id="6a3a1-102">facet</span></span>
 <span data-ttu-id="6a3a1-103">A *패싯* 세부 정보는 기본 형식 속성 정의를 추가 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a3a1-103">A *facet* is used to add detail to a primitive type property definition.</span></span> <span data-ttu-id="6a3a1-104">A [속성](../../../../docs/framework/data/adonet/property.md) 정의 속성 형식에 대 한 정보를 포함 하지만 자주 자세히는 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a3a1-104">A [property](../../../../docs/framework/data/adonet/property.md) definition contains information about the property type, but often more detail is necessary.</span></span> <span data-ttu-id="6a3a1-105">예를 들어, 개념적 모델의 엔터티 형식에는 값을 null로 설정할 수 없는 `String` 형식의 속성이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a3a1-105">For example, an entity type in a conceptual model might have a property of type `String` whose value cannot be set to null.</span></span> <span data-ttu-id="6a3a1-106">패싯을 사용하면 이 수준의 세부 정보를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a3a1-106">Facets allow you to specify this level of detail.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319171"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="3e1cf-102">방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="3e1cf-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 <span data-ttu-id="3e1cf-103">이 예제에서는 일치하는 키로 사용되는 공통 값을 공유하는 두 개의 쉼표로 구분된 파일의 데이터를 조인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3e1cf-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="3e1cf-104">이 방법은 두 스프레드시트나 한 스프레드시트와 다른 형식으로 된 파일의 데이터를 하나의 새 파일로 결합해야 하는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e1cf-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="3e1cf-105">모든 종류의 구조적 텍스트에서 작동하도록 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e1cf-105">You can modify the example to work with any kind of structured text.</span></span>  

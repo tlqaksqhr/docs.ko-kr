@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747413"
 ---
 # <a name="ltfiltertablegt"></a><span data-ttu-id="8d545-102">&lt;filterTable&gt;</span><span class="sxs-lookup"><span data-stu-id="8d545-102">&lt;filterTable&gt;</span></span>
 <span data-ttu-id="8d545-103">필터 식이 true로 평가 대해 메시지 및 메시지를 라우팅할 클라이언트 끝점을 평가 하는 필터의 목록을 포함 하는 라우팅 테이블을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8d545-103">Represents a routing table that contains a list of filters to evaluate messages against and the client endpoint to route messages to if the filter evaluates to true.</span></span>  

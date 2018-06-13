@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763841"
 ---
 # <a name="set-entity-sql"></a><span data-ttu-id="019f9-102">SET(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="019f9-102">SET (Entity SQL)</span></span>
 <span data-ttu-id="019f9-103">SET 식은 중복 요소가 모두 제거된 새 컬렉션을 생성하여 개체 컬렉션을 집합으로 변환하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="019f9-103">The SET expression is used to convert a collection of objects into a set by yielding a new collection with all duplicate elements removed.</span></span>  

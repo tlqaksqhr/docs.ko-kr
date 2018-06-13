@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760829"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a><span data-ttu-id="00126-102">방법: 다형 쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="00126-102">How to: Execute a Polymorphic Query</span></span>
 <span data-ttu-id="00126-103">이 항목에서는 다형를 실행 하는 방법을 보여 줍니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 사용 하 여 쿼리는 [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="00126-103">This topic shows how to execute a polymorphic [!INCLUDE[esql](../../../../../includes/esql-md.md)] query using the [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operator.</span></span>  

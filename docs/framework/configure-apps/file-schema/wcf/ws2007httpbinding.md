@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759090"
 ---
 # <a name="ltws2007httpbindinggt"></a><span data-ttu-id="ebc02-102">&lt;ws2007HttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="ebc02-102">&lt;ws2007HttpBinding&gt;</span></span>
 <span data-ttu-id="ebc02-103">올바른 버전의 <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> 및 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 바인딩 요소를 지원하는 상호 운용 가능한 바인딩을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ebc02-103">Defines an interoperable binding that provides support for the correct versions of the <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, and <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> binding elements.</span></span>  

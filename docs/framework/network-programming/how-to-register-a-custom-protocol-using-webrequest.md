@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394594"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="0ee74-102">방법: WebRequest를 사용하여 사용자 지정 프로토콜 등록</span><span class="sxs-lookup"><span data-stu-id="0ee74-102">How to: Register a Custom Protocol Using WebRequest</span></span>
 <span data-ttu-id="0ee74-103">이 예제에서는 다른 곳에서 정의된 프로토콜별 클래스를 등록하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0ee74-103">This example shows how to register a protocol specific classthat is defined elsewhere.</span></span> <span data-ttu-id="0ee74-104">이 예제에서 `CustomWebRequestCreator`는 `CustomWebRequest` 개체를 반환하는 **Create** 메서드를 구현하는 사용자가 구현한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0ee74-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="0ee74-105">코드 예제에서는 사용자 지정 프로토콜을 구현하는 `CustomWebRequest` 코드를 작성했다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="0ee74-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  

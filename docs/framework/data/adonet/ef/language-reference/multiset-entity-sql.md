@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762925"
 ---
 # <a name="multiset-entity-sql"></a><span data-ttu-id="25835-102">MULTISET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="25835-102">MULTISET (Entity SQL)</span></span>
 <span data-ttu-id="25835-103">값 목록에서 multiset 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="25835-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="25835-104">MULTISET 생성자의 모든 값은 호환되는 `T`형식이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25835-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="25835-105">빈 multiset 생성자는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25835-105">Empty multiset constructors are not allowed.</span></span>  

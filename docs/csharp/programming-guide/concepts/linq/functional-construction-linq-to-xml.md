@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329857"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a><span data-ttu-id="19107-102">함수 생성(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="19107-102">Functional Construction (LINQ to XML) (C#)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="19107-103">에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="19107-103"> provides a powerful way to create XML elements called *functional construction*.</span></span> <span data-ttu-id="19107-104">함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="19107-104">Functional construction is the ability to create an XML tree in a single statement.</span></span>  

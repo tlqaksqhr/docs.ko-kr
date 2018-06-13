@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749428"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a><span data-ttu-id="7bd57-102">&lt;ThrowUnobservedTaskExceptions&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="7bd57-102">&lt;ThrowUnobservedTaskExceptions&gt; Element</span></span>
 <span data-ttu-id="7bd57-103">작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7bd57-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  

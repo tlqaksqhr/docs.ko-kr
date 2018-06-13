@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749805"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a><span data-ttu-id="80280-102">&lt;wsFederationHttpBinding&gt;의 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="80280-102">&lt;security&gt; of &lt;wsFederationHttpBinding&gt;</span></span>
 <span data-ttu-id="80280-103">보안 설정을 정의 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="80280-103">Defines the security settings of the [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  

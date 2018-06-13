@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749100"
 ---
 # <a name="ltpolicyimportersgt"></a><span data-ttu-id="465d9-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="465d9-102">&lt;policyImporters&gt;</span></span>
 <span data-ttu-id="465d9-103">이 구성 요소는 바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 모든 정책 가져오기 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="465d9-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="465d9-104">각 자식 요소는 바인딩 기능에 대한 사용자 지정 정책 어설션을 검색하거나 어설션에서 요구하는 기능을 구현하는 사용자 지정 바인딩 요소를 연결하는 데 사용되는 <`policyImporter`>입니다.</span><span class="sxs-lookup"><span data-stu-id="465d9-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  

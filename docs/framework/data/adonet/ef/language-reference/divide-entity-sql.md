@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760442"
 ---
 # <a name="-divide-entity-sql"></a><span data-ttu-id="64241-102">/ (나누기) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="64241-102">/ (Divide) (Entity SQL)</span></span>
 <span data-ttu-id="64241-103">한 숫자를 다른 숫자로 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="64241-103">Divides one number by another.</span></span>  

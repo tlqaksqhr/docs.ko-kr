@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335392"
 ---
 # <a name="projection-operations-c"></a><span data-ttu-id="e4507-102">프로젝션 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="e4507-102">Projection Operations (C#)</span></span>
 <span data-ttu-id="e4507-103">프로젝션은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환하는 작업을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="e4507-103">Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used.</span></span> <span data-ttu-id="e4507-104">프로젝션을 사용하면 각 개체를 기반으로 만들어지는 새 형식을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4507-104">By using projection, you can construct a new type that is built from each object.</span></span> <span data-ttu-id="e4507-105">속성을 프로젝션하고 속성에서 수학 함수를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4507-105">You can project a property and perform a mathematical function on it.</span></span> <span data-ttu-id="e4507-106">원래 개체를 변경하지 않고 프로젝션할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4507-106">You can also project the original object without changing it.</span></span>  

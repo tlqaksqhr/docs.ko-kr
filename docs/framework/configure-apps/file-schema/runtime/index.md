@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747955"
 ---
 # <a name="runtime-settings-schema"></a><span data-ttu-id="f96d6-102">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="f96d6-102">Runtime Settings Schema</span></span>
 <span data-ttu-id="f96d6-103">런타임 설정은 공용 언어 런타임에서 .NET Framework를 대상으로 하는 응용 프로그램을 구성하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f96d6-103">Runtime settings are used by the common language runtime to configure applications that target the .NET Framework.</span></span>  

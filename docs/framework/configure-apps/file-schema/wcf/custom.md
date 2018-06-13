@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748362"
 ---
 # <a name="ltcustomgt"></a><span data-ttu-id="6dd89-102">&lt;custom&gt;</span><span class="sxs-lookup"><span data-stu-id="6dd89-102">&lt;custom&gt;</span></span>
 <span data-ttu-id="6dd89-103">사용자 지정 피어 확인자 서비스의 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6dd89-103">Specifies settings for a custom peer resolver service.</span></span>  

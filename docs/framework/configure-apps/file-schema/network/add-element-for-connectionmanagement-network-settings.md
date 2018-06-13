@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753744"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="beae5-102">&lt;추가&gt; connectionManagement (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="beae5-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="beae5-103">연결 관리 목록에 IP 주소 또는 DNS 이름을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="beae5-103">Adds an IP address or DNS name to the connection management list.</span></span>  

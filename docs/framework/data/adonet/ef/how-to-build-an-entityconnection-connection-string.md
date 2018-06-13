@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759961"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a><span data-ttu-id="56c89-102">방법: EntityConnection 연결 문자열 작성</span><span class="sxs-lookup"><span data-stu-id="56c89-102">How to: Build an EntityConnection Connection String</span></span>
 <span data-ttu-id="56c89-103">이 항목에서는 <xref:System.Data.EntityClient.EntityConnection>을 작성하는 방법에 대한 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="56c89-103">This topic provides an example of how to build an <xref:System.Data.EntityClient.EntityConnection>.</span></span>  

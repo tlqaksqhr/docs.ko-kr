@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762262"
 ---
 # <a name="ltwshttpbindinggt"></a><span data-ttu-id="e55cd-102">&lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e55cd-102">&lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="e55cd-103">비이중 서비스 계약에 적합한 안전하고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e55cd-103">Defines a secure, reliable, interoperable binding suitable for non-duplex service contracts.</span></span> <span data-ttu-id="e55cd-104">이 바인딩은 안정성을 위해 WS-Reliable Messaging 사양을 구현하고, 메시지 보안 및 인증을 위해 WS-Security 사양을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="e55cd-104">The binding implements the following specifications: WS-Reliable Messaging for reliability, and WS-Security for message security and authentication.</span></span> <span data-ttu-id="e55cd-105">전송은 HTTP이며 메시지 인코딩은 Text/XML 인코딩입니다.</span><span class="sxs-lookup"><span data-stu-id="e55cd-105">The transport is HTTP, and message encoding is Text/XML encoding.</span></span>  

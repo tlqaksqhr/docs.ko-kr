@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750598"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a><span data-ttu-id="125db-102">&lt;claimTypeRequirements&gt;의 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="125db-102">&lt;add&gt; of &lt;claimTypeRequirements&gt;</span></span>
 <span data-ttu-id="125db-103">페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="125db-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="125db-104">예를 들어, 서비스는 특정 집합의 클레임 형식이어야 하는 들어오는 자격 증명에 대한 요구 사항을 기술합니다.</span><span class="sxs-lookup"><span data-stu-id="125db-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

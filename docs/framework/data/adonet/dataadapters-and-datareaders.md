@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758102"
 ---
 # <a name="dataadapters-and-datareaders"></a><span data-ttu-id="c77ba-102">DataAdapter 및 DataReader</span><span class="sxs-lookup"><span data-stu-id="c77ba-102">DataAdapters and DataReaders</span></span>
 <span data-ttu-id="c77ba-103">ADO.NET을 사용 하 여 **DataReader** 를 데이터베이스에서 데이터의 읽기 전용, 정방향 전용 스트림을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="c77ba-103">You can use the ADO.NET **DataReader** to retrieve a read-only, forward-only stream of data from a database.</span></span> <span data-ttu-id="c77ba-104">쿼리 실행 되 고 요청할 때까지 클라이언트의 네트워크 버퍼에 저장 된 결과 반환 합니다. 사용 하 여는 **읽기** 의 메서드는 **DataReader**합니다.</span><span class="sxs-lookup"><span data-stu-id="c77ba-104">Results are returned as the query executes, and are stored in the network buffer on the client until you request them using the **Read** method of the **DataReader**.</span></span> <span data-ttu-id="c77ba-105">사용 하는 **DataReader** 가능한 즉시 데이터를 검색 하 고 기본적으로 응용 프로그램 성능을 향상 시킬 수 시스템 오버 헤드를 줄여 메모리에 한 번에 하나의 행을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="c77ba-105">Using the **DataReader** can increase application performance both by retrieving data as soon as it is available, and (by default) storing only one row at a time in memory, reducing system overhead.</span></span>  

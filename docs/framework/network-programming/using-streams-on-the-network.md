@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397548"
 ---
 # <a name="using-streams-on-the-network"></a><span data-ttu-id="74961-102">네트워크에서 스트림 사용</span><span class="sxs-lookup"><span data-stu-id="74961-102">Using Streams on the Network</span></span>
 <span data-ttu-id="74961-103">네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="74961-103">Network resources are represented in the .NET Framework as streams.</span></span> <span data-ttu-id="74961-104">스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="74961-104">By treating streams generically, the .NET Framework offers the following capabilities:</span></span>  

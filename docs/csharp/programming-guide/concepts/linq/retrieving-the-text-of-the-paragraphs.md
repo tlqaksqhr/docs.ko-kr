@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327160"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a><span data-ttu-id="c5c62-102">단락의 텍스트 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="c5c62-102">Retrieving the Text of the Paragraphs (C#)</span></span>
 <span data-ttu-id="c5c62-103">이 예제는 이전 예제 [단락 및 해당 스타일 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5c62-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="c5c62-104">이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="c5c62-104">This new example retrieves the text of each paragraph as a string.</span></span>  

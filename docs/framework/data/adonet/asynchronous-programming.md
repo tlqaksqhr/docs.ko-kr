@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759909"
 ---
 # <a name="asynchronous-programming"></a><span data-ttu-id="e776c-102">비동기 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="e776c-102">Asynchronous Programming</span></span>
 

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757907"
 ---
 # <a name="managing-dataviews"></a><span data-ttu-id="e214e-102">데이터 보기 관리</span><span class="sxs-lookup"><span data-stu-id="e214e-102">Managing DataViews</span></span>
 <span data-ttu-id="e214e-103"><xref:System.Data.DataViewManager>를 사용하여 <xref:System.Data.DataView>의 모든 테이블에 대한 뷰 설정을 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="e214e-104">여러 테이블에 바인딩할 하는 컨트롤의 경우는 표와 같이 관계를 탐색 하는 **DataViewManager** 이상적입니다.</span><span class="sxs-lookup"><span data-stu-id="e214e-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758128"
 ---
 # <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="b1481-102">방법: 게시자 정책 만들기</span><span class="sxs-lookup"><span data-stu-id="b1481-102">How to: Create a Publisher Policy</span></span>
 <span data-ttu-id="b1481-103">어셈블리 공급 업체 응용 프로그램이 업그레이드 된 어셈블리와 함께 게시자 정책 파일을 포함 하 여 최신 버전의 어셈블리를 사용 해야 명시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1481-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="b1481-104">게시자 정책 파일이 어셈블리 리디렉션 및 코드 베이스 설정을 지정 하 고 응용 프로그램 구성 파일과 같은 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1481-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="b1481-105">게시자 정책 파일을 어셈블리로 컴파일되고 전역 어셈블리 캐시에 배치 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1481-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  

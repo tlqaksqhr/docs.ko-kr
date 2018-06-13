@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746100"
 ---
 # <a name="ltpublisherpolicygt-element"></a><span data-ttu-id="acce9-102">&lt;l i c y&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="acce9-102">&lt;publisherPolicy&gt; Element</span></span>
 <span data-ttu-id="acce9-103">런타임이 게시자 정책을 적용할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="acce9-103">Specifies whether the runtime applies publisher policy.</span></span>  

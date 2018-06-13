@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761703"
 ---
 # <a name="in-entity-sql"></a><span data-ttu-id="7bda8-102">IN(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7bda8-102">IN (Entity SQL)</span></span>
 <span data-ttu-id="7bda8-103">컬렉션에 일치하는 값이 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="7bda8-103">Determines whether a value matches any value in a collection.</span></span>  

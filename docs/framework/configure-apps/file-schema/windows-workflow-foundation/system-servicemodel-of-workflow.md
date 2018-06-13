@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755639"
 ---
 # <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="11b66-102">워크플로의 &lt;system.serviceModel&gt;</span><span class="sxs-lookup"><span data-stu-id="11b66-102">&lt;system.serviceModel&gt; of workflow</span></span>
 <span data-ttu-id="11b66-103">이 구성 섹션에는 모든 워크플로 구성 요소가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="11b66-103">This configuration section contains all the workflow configuration elements.</span></span>  

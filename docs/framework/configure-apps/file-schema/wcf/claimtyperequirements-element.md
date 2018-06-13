@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748023"
 ---
 # <a name="ltclaimtyperequirementsgt-element"></a><span data-ttu-id="cd36f-102">&lt;claimTypeRequirements&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="cd36f-102">&lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="cd36f-103">필요한 클레임 형식의 컬렉션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cd36f-103">Specifies a collection of required claim types.</span></span>  

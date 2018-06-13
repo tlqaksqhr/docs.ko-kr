@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748063"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a><span data-ttu-id="e1e13-102">&lt;client&gt;의 &lt;endpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="e1e13-102">&lt;endpoint&gt; of &lt;client&gt;</span></span>
 <span data-ttu-id="e1e13-103">클라이언트에서 서버의 서비스 끝점과 연결하는 데 사용하는 채널 끝점의 contract, 바인딩 및 address 속성을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e1e13-103">Specifies contract, binding, and address properties of the channel endpoint, which is used by clients to connect to service endpoints on the server.</span></span>  

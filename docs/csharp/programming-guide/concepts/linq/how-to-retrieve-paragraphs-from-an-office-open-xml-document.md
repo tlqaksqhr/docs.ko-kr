@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322184"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a><span data-ttu-id="5d5d3-102">방법: Office Open XML 문서에서 단락 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="5d5d3-102">How to: Retrieve Paragraphs from an Office Open XML Document (C#)</span></span>
 <span data-ttu-id="5d5d3-103">이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5d5d3-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  

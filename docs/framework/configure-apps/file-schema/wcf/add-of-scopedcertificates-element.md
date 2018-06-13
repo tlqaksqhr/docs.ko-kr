@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746646"
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a><span data-ttu-id="373ee-102">&lt;scopedCertificates&gt; 요소의 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="373ee-102">&lt;add&gt; of &lt;scopedCertificates&gt; Element</span></span>
 <span data-ttu-id="373ee-103">범위가 지정된 인증서 컬렉션에 X.509 인증서를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="373ee-103">Adds an X.509 certificate to the collection of scoped certificates.</span></span>  

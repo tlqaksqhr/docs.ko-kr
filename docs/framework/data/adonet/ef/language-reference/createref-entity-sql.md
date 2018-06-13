@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761339"
 ---
 # <a name="createref-entity-sql"></a><span data-ttu-id="492b4-102">CREATEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="492b4-102">CREATEREF (Entity SQL)</span></span>
 <span data-ttu-id="492b4-103">entityset의 엔터티에 대한 참조를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="492b4-103">Fabricates references to an entity in an entityset.</span></span>  

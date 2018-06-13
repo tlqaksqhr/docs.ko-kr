@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759636"
 ---
 # <a name="limit-entity-sql"></a><span data-ttu-id="22fcb-102">LIMIT(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="22fcb-102">LIMIT (Entity SQL)</span></span>
 <span data-ttu-id="22fcb-103">ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22fcb-103">Physical paging can be performed by using LIMIT sub-clause in ORDER BY clause.</span></span> <span data-ttu-id="22fcb-104">LIMIT 절은 ORDER BY 절과 별도로 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="22fcb-104">LIMIT can not be used separately from ORDER BY clause.</span></span>  

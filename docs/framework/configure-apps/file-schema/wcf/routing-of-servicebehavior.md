@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750754"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a><span data-ttu-id="c2059-102">&lt;serviceBehavior&gt;의 &lt;routing&gt;</span><span class="sxs-lookup"><span data-stu-id="c2059-102">&lt;routing&gt; of &lt;serviceBehavior&gt;</span></span>
 <span data-ttu-id="c2059-103">라우팅 서비스에 대한 런타임 액세스를 제공하여 라우팅 구성의 동적 수정을 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="c2059-103">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>  

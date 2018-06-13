@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334576"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="da39d-102">WordprocessingML 문서의 스타일 부분</span><span class="sxs-lookup"><span data-stu-id="da39d-102">Style Part of a WordprocessingML Document</span></span>
 <span data-ttu-id="da39d-103">이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="da39d-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  

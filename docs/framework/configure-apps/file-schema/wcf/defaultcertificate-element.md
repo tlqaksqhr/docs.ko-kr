@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751014"
 ---
 # <a name="ltdefaultcertificategt-element"></a><span data-ttu-id="9e52b-102">&lt;defaultCertificate&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="9e52b-102">&lt;defaultCertificate&gt; Element</span></span>
 <span data-ttu-id="9e52b-103">서비스 또는 STS가 협상 프로토콜을 통해 인증서를 제공하지 않을 때 사용할 X.509 인증서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9e52b-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  

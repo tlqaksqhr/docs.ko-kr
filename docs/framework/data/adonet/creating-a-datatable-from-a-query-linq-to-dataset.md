@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758830"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a><span data-ttu-id="09468-102">쿼리에서 DataTable 만들기(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="09468-102">Creating a DataTable From a Query (LINQ to DataSet)</span></span>
 <span data-ttu-id="09468-103">데이터 바인딩에는 일반적으로 <xref:System.Data.DataTable> 개체가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="09468-103">Data binding is a common use of <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="09468-104"><xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="09468-104">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method takes the results of a query and copies the data into a <xref:System.Data.DataTable>, which can then be used for data binding.</span></span> <span data-ttu-id="09468-105">데이터 작업이 수행되면 새 <xref:System.Data.DataTable>이 소스 <xref:System.Data.DataTable>에 다시 병합됩니다.</span><span class="sxs-lookup"><span data-stu-id="09468-105">When the data operations have been performed, the new <xref:System.Data.DataTable> is merged back into the source <xref:System.Data.DataTable>.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746412"
 ---
 # <a name="ltcomcontractsgt"></a><span data-ttu-id="3c8b2-102">&lt;comContracts&gt;</span><span class="sxs-lookup"><span data-stu-id="3c8b2-102">&lt;comContracts&gt;</span></span>
 <span data-ttu-id="3c8b2-103">`comContracts` 구성 섹션에는 COM+ 통합 서비스 계약의 다양한 속성을 지정할 수 있게 해 주는 요소가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3c8b2-103">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  

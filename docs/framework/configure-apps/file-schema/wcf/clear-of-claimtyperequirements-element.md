@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747127"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="8a41c-102">&lt;claimTypeRequirements&gt; 요소의 &lt;clear&gt;</span><span class="sxs-lookup"><span data-stu-id="8a41c-102">&lt;clear&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="8a41c-103">페더레이션 자격 증명에서 제거할 모든 클레임의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a41c-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="8a41c-104">이를 통해 컬렉션이 빈 상태로 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a41c-104">This ensures that the collection starts empty.</span></span>  

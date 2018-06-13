@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760195"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="f9a87-102">명령 트리에서 SQL 생성 - 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="f9a87-102">Generating SQL from Command Trees - Best Practices</span></span>
 <span data-ttu-id="f9a87-103">출력 쿼리 명령 트리는 SQL로 표현 가능한 쿼리를 유사하게 모델링합니다.</span><span class="sxs-lookup"><span data-stu-id="f9a87-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="f9a87-104">그러나 출력 명령 트리에서 SQL을 생성할 때 공급자 작성기에 대한 특정한 공통적 문제가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9a87-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="f9a87-105">이 항목에서는 이러한 문제에 대해 설명하며,</span><span class="sxs-lookup"><span data-stu-id="f9a87-105">This topic discusses these challenges.</span></span> <span data-ttu-id="f9a87-106">그 다음 항목에서는 동일한 공급자가 이러한 문제를 처리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f9a87-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  

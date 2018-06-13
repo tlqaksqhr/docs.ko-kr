@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340205"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="37f68-102">방법: 서명되지 않은 Friend 어셈블리 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="37f68-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
 <span data-ttu-id="37f68-103">이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="37f68-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  

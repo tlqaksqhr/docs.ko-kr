@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752922"
 ---
 # <a name="ltcontracttypenamesgt"></a><span data-ttu-id="a8cae-102">&lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="a8cae-102">&lt;contractTypeNames&gt;</span></span>
 <span data-ttu-id="a8cae-103">검색할 서비스의 계약 이름인 계약 형식 이름 목록 및 서비스를 검색할 때 일반적으로 사용되는 기준을 지정하는 구성 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="a8cae-103">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="a8cae-104">둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 끝점만 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="a8cae-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="a8cae-105">Windows Communication Foundation (WCF), 끝점 지원할 수 있는지만 하나의 계약을 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8cae-105">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  

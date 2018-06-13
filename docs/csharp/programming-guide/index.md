@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333273"
 ---
 # <a name="c-programming-guide"></a><span data-ttu-id="4e6ca-102">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="4e6ca-102">C# programming guide</span></span>
 <span data-ttu-id="4e6ca-103">이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4e6ca-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  

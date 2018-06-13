@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746737"
 ---
 # <a name="ltdnsgt"></a><span data-ttu-id="eb6d7-102">&lt;Dns&gt;</span><span class="sxs-lookup"><span data-stu-id="eb6d7-102">&lt;dns&gt;</span></span>
 <span data-ttu-id="eb6d7-103">서버에서 사용할 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="eb6d7-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="eb6d7-104">서버의 인증서에 같은 값이 있는 DNS가 포함된 경우 이 ID를 X509 인증서 인증 모드에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb6d7-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="eb6d7-105">SPN에 같은 값이 있는 경우 Windows 인증 모드에도 해당 ID를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb6d7-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  

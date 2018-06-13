@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752496"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="b2938-102">메시지 인코딩</span><span class="sxs-lookup"><span data-stu-id="b2938-102">Message Encoding</span></span>
 <span data-ttu-id="b2938-103">인코딩은 유니코드 문자 집합을 바이트 시퀀스로 변환하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="b2938-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="b2938-104">디코딩은 역프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="b2938-104">Decoding is the reverse process.</span></span> <span data-ttu-id="b2938-105">WCF(Windows Communication Foundation)에서는 SOAP 메시지에 대해 텍스트, 이진 및 MTOM(Message Transmission Optimization Mechanism)이라는 세 가지 형식의 인코딩을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b2938-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

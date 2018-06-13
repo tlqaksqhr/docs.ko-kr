@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758031"
 ---
 # <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="c10fc-102">강력한 형식의 데이터 집합 생성</span><span class="sxs-lookup"><span data-stu-id="c10fc-102">Generating Strongly Typed DataSets</span></span>
 <span data-ttu-id="c10fc-103">XSD(XML 스키마 정의 언어) 표준과 호환되는 XML 스키마가 있으면 <xref:System.Data.DataSet>에 제공된 XSD.exe 도구를 사용하여 강력한 형식의 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c10fc-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span></span>  

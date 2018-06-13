@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749490"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a><span data-ttu-id="e1ff1-102">WCF의 &lt;states&gt;, &lt;workflowInstanceQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="e1ff1-102">&lt;states&gt; of WCF, &lt;workflowInstanceQuery&gt;</span></span>
 <span data-ttu-id="e1ff1-103">추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e1ff1-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  

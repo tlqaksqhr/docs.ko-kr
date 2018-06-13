@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395767"
 ---
 # <a name="creating-internet-requests"></a><span data-ttu-id="99a7a-102">인터넷 요청 만들기</span><span class="sxs-lookup"><span data-stu-id="99a7a-102">Creating Internet Requests</span></span>
 <span data-ttu-id="99a7a-103">응용 프로그램은 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 메서드를 통해 <xref:System.Net.WebRequest> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="99a7a-103">Applications create <xref:System.Net.WebRequest> instances through the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="99a7a-104">이것은 전달된 URI 구성표에 따라 **WebRequest**에서 파생된 클래스를 만드는 정적 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="99a7a-104">This is a static method that creates a class derived from **WebRequest** based on the URI scheme passed to it.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757868"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="4628a-102">데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑</span><span class="sxs-lookup"><span data-stu-id="4628a-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="4628a-103">스키마에서는 요소에 대 한 key 제약 조건을 지정 하거나 사용 하 여 특성 수는 **키** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4628a-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="4628a-104">KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4628a-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  

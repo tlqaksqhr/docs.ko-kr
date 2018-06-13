@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764189"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a><span data-ttu-id="9108d-102">쿼리 식 구문 예제: 필터링</span><span class="sxs-lookup"><span data-stu-id="9108d-102">Query Expression Syntax Examples: Filtering</span></span>
 <span data-ttu-id="9108d-103">이 항목의 예제에 사용 하는 방법을 보여 줍니다는 `Where` 및 `Where…Contains` 를 쿼리 하는 메서드는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) 쿼리 식 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9108d-103">The examples in this topic demonstrate how to use the `Where` and `Where…Contains` methods to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="9108d-104">단, 여기서...`Contains`</span><span class="sxs-lookup"><span data-stu-id="9108d-104">Note, Where…`Contains`</span></span> <span data-ttu-id="9108d-105">일부로 사용할 수 없습니다는 [컴파일된 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9108d-105">cannot be used as a part of a [compiled query](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span></span>  

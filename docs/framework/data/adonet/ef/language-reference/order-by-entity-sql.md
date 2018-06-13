@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763994"
 ---
 # <a name="order-by-entity-sql"></a><span data-ttu-id="12441-102">ORDER BY(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="12441-102">ORDER BY (Entity SQL)</span></span>
 <span data-ttu-id="12441-103">SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="12441-103">Specifies the sort order used on objects returned in a SELECT statement.</span></span>  

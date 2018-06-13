@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762561"
 ---
 # <a name="handling-dataview-events"></a><span data-ttu-id="8040f-102">DataView 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="8040f-102">Handling DataView Events</span></span>
 <span data-ttu-id="8040f-103"><xref:System.Data.DataView.ListChanged>의 <xref:System.Data.DataView> 이벤트를 사용하여 뷰가 업데이트되었는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8040f-103">You can use the <xref:System.Data.DataView.ListChanged> event of the <xref:System.Data.DataView> to determine if a view has been updated.</span></span> <span data-ttu-id="8040f-104">이벤트를 발생시키는 업데이트에는 원본으로 사용하는 테이블에서의 행 추가, 삭제 또는 수정과 원본으로 사용하는 테이블 스키마에서의 열 추가 또는 삭제, 그리고 부모 또는 자식 관계의 변경이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="8040f-104">Updates that raise the event include adding, deleting, or modifying a row in the underlying table; adding or deleting a column to the schema of the underlying table; and a change in a parent or child relationship.</span></span> <span data-ttu-id="8040f-105">**ListChanged** 이벤트 또한 알려 인해 새 정렬 순서 또는 필터를 적용 하는 보고 있는 행 목록이 크게 변경 된 경우.</span><span class="sxs-lookup"><span data-stu-id="8040f-105">The **ListChanged** event also notifies you if the list of rows you are viewing has changed significantly due to the application of a new sort order or a filter.</span></span>  

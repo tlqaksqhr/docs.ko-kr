@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761635"
 ---
 # <a name="collection-entity-sql"></a><span data-ttu-id="0a057-102">COLLECTION(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0a057-102">COLLECTION (Entity SQL)</span></span>
 <span data-ttu-id="0a057-103">COLLECTION 키워드는 인라인 함수의 정의에만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a057-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="0a057-104">컬렉션 함수는 값 컬렉션에 대해 작업을 수행하고 스칼라 출력을 생성하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="0a057-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  

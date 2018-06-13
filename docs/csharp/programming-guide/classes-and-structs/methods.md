@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336400"
 ---
 # <a name="methods-c-programming-guide"></a><span data-ttu-id="7bec0-102">메서드(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="7bec0-102">Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="7bec0-103">메서드는 일련의 문을 포함하는 코드 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="7bec0-103">A method is a code block that contains a series of statements.</span></span> <span data-ttu-id="7bec0-104">프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7bec0-104">A program causes the statements to be executed by calling the method and specifying any required method arguments.</span></span> <span data-ttu-id="7bec0-105">C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7bec0-105">In C#, every executed instruction is performed in the context of a method.</span></span> <span data-ttu-id="7bec0-106">Main 메서드는 모든 C# 응용 프로그램의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="7bec0-106">The Main method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321303"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="051d6-102">방법: 디렉터리 트리의 중복 파일 쿼리(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="051d6-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
 <span data-ttu-id="051d6-103">동일한 이름을 가진 파일이 둘 이상의 폴더에 있는 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="051d6-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="051d6-104">예를 들어 Visual Studio 설치 폴더 아래의 여러 폴더에 readme.htm 파일이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="051d6-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="051d6-105">이 예제에서는 지정된 루트 폴더 아래에서 이러한 중복 파일 이름을 쿼리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="051d6-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="051d6-106">두 번째 예제에서는 크기 및 생성 시간도 일치하는 파일을 쿼리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="051d6-106">The second example shows how to query for files whose size and creation times also match.</span></span>  

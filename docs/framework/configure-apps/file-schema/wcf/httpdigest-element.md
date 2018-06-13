@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748895"
 ---
 # <a name="lthttpdigestgt-element"></a><span data-ttu-id="e2e48-102">&lt;httpDigest&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="e2e48-102">&lt;httpDigest&gt; Element</span></span>
 <span data-ttu-id="e2e48-103">서비스에게 클라이언트를 인증하는 데 사용되는 다이제스트 형식 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e2e48-103">Specifies a digest type credential used when authenticating the client to a service.</span></span>  

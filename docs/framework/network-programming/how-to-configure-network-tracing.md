@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395962"
 ---
 # <a name="how-to-configure-network-tracing"></a><span data-ttu-id="167fa-102">방법: 네트워크 추적 구성</span><span class="sxs-lookup"><span data-stu-id="167fa-102">How to: Configure Network Tracing</span></span>
 <span data-ttu-id="167fa-103">응용 프로그램 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="167fa-103">The application or computer configuration file holds the settings that determine the format and content of network traces.</span></span> <span data-ttu-id="167fa-104">이 절차를 수행하기 전에 추적이 활성화되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="167fa-104">Before performing this procedure, be sure tracing is enabled.</span></span> <span data-ttu-id="167fa-105">추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="167fa-105">For information about enabling tracing, see [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).</span></span>  
