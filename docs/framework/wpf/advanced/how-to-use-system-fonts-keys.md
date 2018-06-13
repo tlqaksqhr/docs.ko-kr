@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544429"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>방법: 시스템 글꼴 키 사용
 시스템 리소스는 개발자가 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 메트릭을 리소스로 노출합니다. <xref:System.Windows.SystemFonts> 시스템 글꼴 값과 값에 바인딩되는 시스템 글꼴 리소스를 모두 포함 하는 클래스-예를 들어 <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> 및 <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>합니다.  

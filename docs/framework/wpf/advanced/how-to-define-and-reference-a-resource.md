@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543496"
 ---
 # <a name="how-to-define-and-reference-a-resource"></a>방법: 리소스 정의 및 참조
 이 예제에서는 리소스를 정의 하 고 특성을 사용 하 여 참조 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

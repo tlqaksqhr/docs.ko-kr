@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544198"
 ---
 # <a name="how-to-handle-a-loaded-event"></a>방법: Loaded 이벤트 처리
 처리 하는 방법을 보여 주는이 예제는 <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> 이벤트 및 해당 이벤트를 처리 하기 위한 적합 한 시나리오가 있습니다. 처리기 만듭니다는 <xref:System.Windows.Controls.Button> 페이지를 로드 합니다.  

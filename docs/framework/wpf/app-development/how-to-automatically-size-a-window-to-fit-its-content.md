@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544873"
 ---
 # <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>방법: 자동으로 창의 콘텐츠에 맞게 크기 조정
 설정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Window.SizeToContent%2A> 속성을 통해 내용에 맞게 창의 크기 조정 하는 방법을 지정 합니다.  

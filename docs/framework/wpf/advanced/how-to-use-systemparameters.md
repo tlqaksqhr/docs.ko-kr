@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544637"
 ---
 # <a name="how-to-use-systemparameters"></a>방법: SystemParameters 사용
 이 예제에 액세스 하 고 속성을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 스타일 하거나 단추를 사용자 지정 합니다.  

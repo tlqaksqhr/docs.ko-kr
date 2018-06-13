@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544234"
 ---
 # <a name="input-wpf"></a>입력 (WPF)
 Windows Presentation Foundation (WPF)에 여러 유형의 입력에 대 한 지원이 포함 되어 있습니다. 이 입력에는 텍스트, 터치, 마우스, 명령, 포커스, 터치, 끌어서 놓기, 및 디지털 잉크 포함 됩니다. 이 섹션에서는 WPF의 입력에 관련 된 항목을 설명 합니다.  

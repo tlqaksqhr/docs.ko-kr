@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545589"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>방법: 대화 상자 결과 반환 합니다.
 호출 하 여 열려 있는 창에 대 한 대화 상자 결과 검색 하는 방법을 보여 주는이 예제 <xref:System.Windows.Window.ShowDialog%2A>합니다.  

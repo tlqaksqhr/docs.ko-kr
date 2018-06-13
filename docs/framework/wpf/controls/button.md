@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551702"
 ---
 # <a name="button"></a>단추
 A <xref:System.Windows.Controls.Button> 마우스, 키보드, 스타일러스 또는 다른 입력된 장치 및 발생에서 사용자 입력에 반응 하는 컨트롤을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. A <xref:System.Windows.Controls.Button> 기본 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 텍스트와 같은 단순 콘텐츠를 포함할 수 있으며 이미지와 같은 복잡 한 콘텐츠를 포함할 수도 수 있는 구성 요소 및 <xref:System.Windows.Controls.Panel> 컨트롤입니다.  

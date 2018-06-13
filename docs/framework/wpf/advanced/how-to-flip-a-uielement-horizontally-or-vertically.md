@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544397"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>방법: UIElement를 좌우 또는 상하 대칭 이동
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 대칭는 <xref:System.Windows.UIElement> 가로 또는 세로로 합니다. 이 예제에서는 <xref:System.Windows.Controls.Button> 컨트롤 (의 형식을 <xref:System.Windows.UIElement>) 적용 하 여 대칭 이동는 <xref:System.Windows.Media.ScaleTransform> 를 해당 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다.  

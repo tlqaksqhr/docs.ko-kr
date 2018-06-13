@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545547"
 ---
 # <a name="how-to-stop-a-page-from-loading"></a>방법: 페이지 로드를 중지 합니다.
 호출 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> 메서드 다운로드를 마치기 전에 콘텐츠를 탐색을 중지할 수 있습니다.  

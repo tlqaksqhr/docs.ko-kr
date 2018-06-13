@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544855"
 ---
 # <a name="migration-and-interoperability"></a>마이그레이션 및 상호 운용성
 이 페이지에서는 사이의 상호 운용을 구현 하는 방법을 설명 하는 문서에 대 한 링크 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 및 다른 종류의 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램입니다.  

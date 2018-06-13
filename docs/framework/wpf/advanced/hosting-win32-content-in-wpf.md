@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547357"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF에서 Win32 콘텐츠 호스팅
 ## <a name="prerequisites"></a>전제 조건  

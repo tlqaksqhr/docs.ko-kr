@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548370"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>방법: 사용자 지정 컨트롤에서 잉크 선택
 추가 하 여 프로그램 <xref:System.Windows.Ink.IncrementalLassoHitTester> 사용자 지정 컨트롤을 활성화 컨트롤 사용자 방식과 유사 하 게 올가미 도구를 사용 하 여 잉크를 선택할 수 있도록는 <xref:System.Windows.Controls.InkCanvas> 가 올가미로 잉크를 선택 합니다.  

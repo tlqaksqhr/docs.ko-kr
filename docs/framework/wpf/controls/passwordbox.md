@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550854"
 ---
 # <a name="passwordbox"></a>PasswordBox
 <xref:System.Windows.Controls.PasswordBox> 제어 하는 데 중요 한 정보나 개인 정보를 입력 합니다.  

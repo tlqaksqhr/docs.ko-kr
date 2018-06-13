@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552768"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>방법: ScrollViewer의 콘텐츠 스크롤 메서드 사용
 스크롤 메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ScrollViewer> 요소입니다. 이러한 메서드는 증분 스크롤 콘텐츠의 줄 또는 페이지에 제공 된 <xref:System.Windows.Controls.ScrollViewer>합니다.  

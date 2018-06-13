@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548353"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>연습: 첫 응용 프로그램 만들기
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 터치에 응답 하도록 응용 프로그램이 있습니다. 예를 들어 하나를 사용 하 여 응용 프로그램 상호 작용할 수 있습니다 또는 터치 지원 장치 등이 연습에서는 사용자가을 이동할 수 있도록 응용 프로그램을 만듭니다 터치 스크린에 손가락 크기 조정 또는 터치를 사용 하 여 단일 개체를 회전 합니다.  

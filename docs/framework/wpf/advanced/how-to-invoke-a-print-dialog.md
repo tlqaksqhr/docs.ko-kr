@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545560"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>방법: 인쇄 대화 상자 호출
 응용 프로그램에서 인쇄 하는 기능을 제공 하려면 있습니다 간단히 만들고 열 수는 <xref:System.Windows.Controls.PrintDialog> 개체입니다.  

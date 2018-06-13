@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550656"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel 방법 항목
 이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.DockPanel> 레이아웃 컨테이너의 가장자리를 따라 자식 요소를 배치 하는 요소입니다.  

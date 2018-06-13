@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543591"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>방법: 인쇄 큐의 하위 집합 열거
 프린터의 회사 전체 집합을 관리 하는 정보 기술 (IT) 전문가가 직면 하는 일반적인 상황 특정 한 특성이 있는 프린터의 목록을 생성 하는 것입니다. 이 기능을 제공는 <xref:System.Printing.PrintServer.GetPrintQueues%2A> 의 메서드는 <xref:System.Printing.PrintServer> 개체 및 <xref:System.Printing.EnumeratedPrintQueueTypes> 열거형입니다.  

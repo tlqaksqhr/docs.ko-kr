@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544112"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>고급(Windows Presentation Foundation)
 이 섹션의 WPF에서 일부 고급 영역을 설명합니다.  

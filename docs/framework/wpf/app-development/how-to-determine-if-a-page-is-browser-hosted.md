@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545899"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>방법: 브라우저에서 호스팅되는 페이지 인지 확인
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page> 브라우저에서 호스트 됩니다.  

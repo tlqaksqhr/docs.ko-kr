@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547143"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF 응용 프로그램 빌드 및 배포
 빌드 및 배포 모델에서는 다음을 포함 하는 빌드하고 로컬 및 원격으로 응용 프로그램을 배포 하는 기능을 제공 합니다.  

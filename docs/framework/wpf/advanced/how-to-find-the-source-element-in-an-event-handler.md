@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544006"
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a>방법: 이벤트 처리기에서 소스 요소 찾기
 이 예제에는 이벤트 처리기에서 원본 요소를 찾는 방법을 보여 줍니다.  

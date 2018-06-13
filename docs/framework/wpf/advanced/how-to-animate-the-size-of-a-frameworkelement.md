@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543987"
 ---
 # <a name="how-to-animate-the-size-of-a-frameworkelement"></a>방법: FrameworkElement의 크기에 애니메이션 효과 적용
 크기를 애니메이션 효과를 주는 <xref:System.Windows.FrameworkElement>, 애니메이션을 적용할 수 있거나 해당 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성이 나 사용 하 여 애니메이션된 <xref:System.Windows.Media.ScaleTransform>합니다.  

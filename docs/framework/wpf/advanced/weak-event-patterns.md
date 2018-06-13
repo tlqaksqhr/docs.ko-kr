@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549349"
 ---
 # <a name="weak-event-patterns"></a>약한 이벤트 패턴
 응용 프로그램에서 있기 이벤트 소스에 연결 된 처리기를 조정 하 여 처리기는 소스에 연결 하는 수신기 개체 소멸 되지 것입니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 특정 이벤트에 대 한 전용된 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에 인터페이스를 구현 하 여이 문제를 해결 하는 데 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴 이라고는 *취약 한 이벤트 패턴*합니다.  

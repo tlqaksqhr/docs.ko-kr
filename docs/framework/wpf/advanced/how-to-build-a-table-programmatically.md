@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544308"
 ---
 # <a name="how-to-build-a-table-programmatically"></a>방법: 프로그래밍 방식으로 표 작성
 다음 예제에서는 프로그래밍 방식으로 만드는 방법을 보여는 <xref:System.Windows.Documents.Table> 콘텐츠를 채웁니다. 테이블의 내용이 5 개의 행에 할당 됩니다 (나타내는 <xref:System.Windows.Documents.TableRow> 에 포함 된 개체는 <xref:System.Windows.Documents.Table.RowGroups%2A> 개체)와 6 개의 열 (나타내는 <xref:System.Windows.Documents.TableColumn> 개체). 행은 전체 테이블의 제목을 지정하는 제목 행, 테이블의 데이터 열을 설명하는 헤더 행 및 요약 정보가 포함된 바닥글 행 등의 여러 다른 프레젠테이션 용도로 사용됩니다.  “제목”, “헤더” 및 “바닥글” 행의 개념은 테이블에 고유한 것이 아니며, 여러 다른 특성이 있는 행일 뿐입니다. 테이블 셀에 텍스트, 이미지 또는 기타 거의 모든 구성 될 수 있습니다는 실제 콘텐츠를 포함할 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 요소입니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547764"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>방법: RichTextBox 컨트롤에 끌어 놓은 파일 열기
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, 및 <xref:System.Windows.Documents.FlowDocument> 컨트롤은 모두 기능이 기본 제공 끌어서 놓기. 기본 제공 기능 컨트롤 간의 텍스트 내에서 끌어서 놓기 사용 하도록 설정 합니다. 그러나 컨트롤에 파일을 삭제 하 여 파일을 열 수 없습니다 것. 이러한 제어는 또한 처리 된 것으로 끌어서 놓기 이벤트를 표시 합니다. 결과적으로, 기본적으로 삭제 된 파일을 여는 기능을 제공 하는 고유한 이벤트 처리기를 추가할 수 없습니다.  

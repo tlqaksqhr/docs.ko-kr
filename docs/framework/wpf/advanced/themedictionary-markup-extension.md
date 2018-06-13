@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547409"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 태그 확장
 타사 컨트롤을 통합하는 사용자 지정 컨트롤 작성자 또는 응용 프로그램이 컨트롤 스타일 지정에 사용할 테마별 리소스 사전을 로드하는 방법을 제공합니다.  

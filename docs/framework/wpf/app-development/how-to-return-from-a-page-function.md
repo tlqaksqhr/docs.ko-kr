@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545514"
 ---
 # <a name="how-to-return-from-a-page-function"></a>방법: 페이지 함수에서 반환
 이 예제에서는 페이지 함수에서 결과를 반환하는 방법을 보여 줍니다.  

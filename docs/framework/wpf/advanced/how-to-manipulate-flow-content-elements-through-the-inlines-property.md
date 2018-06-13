@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545573"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>방법: Inlines 속성을 통한 유동 콘텐츠 요소 조작
 이 예에서는 인라인 유동 콘텐츠 요소에서 수행할 수 있는 보다 일반적인 작업 중 일부를 보여 줍니다 (및 이러한 요소는 컨테이너와 같은 <xref:System.Windows.Controls.TextBlock>)를 통해는 **인라인** 속성입니다. 항목 추가 및 제거 하려면이 속성은 사용 <xref:System.Windows.Documents.InlineCollection>합니다. 유동 콘텐츠 요소는 **인라인** 속성에 포함 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550152"
 ---
 # <a name="how-to-create-a-dockpanel"></a>방법: DockPanel 만들기
 ## <a name="example"></a>예제  

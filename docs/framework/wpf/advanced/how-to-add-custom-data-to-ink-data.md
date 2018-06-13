@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544513"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>방법: 잉크 데이터에 사용자 지정 데이터 추가
 serialize 된 잉크 형식 (ISF)로 저장할 때 저장 될 잉크를 사용자 지정 데이터를 추가할 수 있습니다.  사용자 지정 데이터를 저장할 수는 <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, 또는 <xref:System.Windows.Ink.Stroke>합니다.  3 개의 개체에 사용자 지정 데이터를 저장할 수 없게 하면 데이터를 저장 하는 가장 좋은 위치를 결정할 수 있습니다.  세 클래스 모두 유사한 메서드를 사용 하 여 저장 하 고 사용자 지정 데이터에 액세스 합니다.  

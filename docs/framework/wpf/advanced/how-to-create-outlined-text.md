@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544967"
 ---
 # <a name="how-to-create-outlined-text"></a>방법: 윤곽선이 있는 텍스트 만들기
 대부분의 경우 장식을의 텍스트 문자열에 추가할 때 프로그램 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 불연속 문자 또는 문자 모양의 컬렉션과 관련 된 텍스트를 사용 하는 응용 프로그램입니다. 예를 들어 만들고 하는 선형 그라데이션 브러시에 적용 된 <xref:System.Windows.Controls.Control.Foreground%2A> 속성은 <xref:System.Windows.Controls.TextBox> 개체입니다. 을 표시 하거나 텍스트 상자를 편집할 때 선형 그라데이션 브러시 현재 텍스트 문자열의 문자 집합에 자동으로 적용 됩니다.  
