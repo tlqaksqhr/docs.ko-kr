@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762873"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 및 DataRowView
 <xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다. **DataRowView** 개체 이름 또는 원본 테이블에 있는 열의 서 수 참조로 인덱싱된 개체 배열로 값을 표시 합니다. 에 액세스할 수 있습니다는 <xref:System.Data.DataRow> 가 노출 하는 **DataRowView** 를 사용 하 여는 <xref:System.Data.DataRowView.Row%2A> 속성은 **DataRowView**합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545440"
 ---
 # <a name="how-to-apply-animations-to-text"></a>방법: 텍스트에 애니메이션 적용
 애니메이션은 응용 프로그램의 텍스트 모양과 표시를 변경할 수 있습니다. 다음 예에서는 다양 한 유형의 애니메이션의 텍스트 표시에 영향을 사용 하 여 한 <xref:System.Windows.Controls.TextBlock> 제어 합니다.  

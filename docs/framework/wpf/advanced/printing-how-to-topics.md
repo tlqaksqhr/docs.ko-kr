@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546281"
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
 이 섹션의 항목에는 인쇄를 사용 하는 방법을 보여 줍니다 및에 포함 된 인쇄 시스템 관리 기능 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 및 새로운 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 인쇄 경로입니다.  

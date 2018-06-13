@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422948"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 메서드
 현재 위치부터 시작 하는 열거형에서 지정 된 개수의 개체의 상대 가상 주소를 (Rva)를 가져옵니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 71be697a8a1decd9b5f780d047c3dbb397e351d0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426892"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod 메서드
 현재 메서드를 닫습니다. 메서드를 닫은 후 내에서 더 이상 없는 기호를 정의할 수 있습니다.  

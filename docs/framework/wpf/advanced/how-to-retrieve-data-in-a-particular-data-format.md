@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545109"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>방법: 특정 데이터 형식의 데이터 검색
 다음 예에서는 지정된 된 형식으로의 데이터 개체에서 데이터를 검색 하는 방법을 보여 줍니다.  

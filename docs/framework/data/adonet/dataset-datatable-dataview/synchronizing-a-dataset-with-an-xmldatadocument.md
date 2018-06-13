@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763269"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 집합 동기화
 이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 이 예제에서는 만들기는 **데이터 집합** 소스 XML 문서의 일부에만 일치 하는 스키마가 최소화 된 합니다. 예에서는 사용는 **XmlDataDocument** 소스 XML 문서의 신뢰도 유지 하를 사용 하도록 설정 된 **데이터 집합** XML 문서의 하위 집합을 노출 하는 데 사용할 합니다.  

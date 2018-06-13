@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545271"
 ---
 # <a name="how-to-get-the-return-value-of-a-page-function"></a>방법: Page 함수의 반환 값 가져오기
 이 예제에서는 페이지 함수에서 반환되는 결과를 가져오는 방법을 보여 줍니다.  

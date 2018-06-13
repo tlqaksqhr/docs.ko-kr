@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359317"
 ---
 # <a name="inserting-an-image-from-a-file"></a>파일에서 이미지 삽입
 데이터 소스의 필드 형식에 따라 BLOB(Binary Large Object)를 이진 또는 문자 데이터로 데이터베이스에 쓸 수 있습니다. BLOB는 주로 문서와 그림이 포함된 `text`, `ntext` 및 `image` 데이터 형식을 나타내는 일반적인 용어입니다.  

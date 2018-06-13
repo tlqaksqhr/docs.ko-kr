@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358543"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 IIS에서 Windows Communication Foundation (WCF) 응용 프로그램을 호스트할 때 적합 한 인터넷 정보 서비스 (IIS) 바인딩을 선택 하기 위한 메커니즘을 제공 하는 필터를 지정 하는 요소 전달 구성의 컬렉션을 나타냅니다.  
