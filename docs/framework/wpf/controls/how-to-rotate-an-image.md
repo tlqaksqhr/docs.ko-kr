@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551897"
 ---
 # <a name="how-to-rotate-an-image"></a>방법: 이미지 회전
 이미지를 사용 하 여 90도 회전 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 속성은 <xref:System.Windows.Media.Imaging.BitmapImage>합니다.  

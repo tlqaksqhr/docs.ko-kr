@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440647"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 메서드
 지정 된 유효성 검사 오류에 해당 하는 오류 메시지를 가져옵니다.  

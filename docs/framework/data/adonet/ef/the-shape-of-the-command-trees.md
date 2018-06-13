@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766038"
 ---
 # <a name="the-shape-of-the-command-trees"></a>명령 트리의 모양
 SQL 생성 모듈은 지정된 입력 쿼리 명령 트리 식을 기반으로 특정 백엔드 SQL 쿼리를 생성하는 작업을 담당합니다. 이 단원에서는 쿼리 명령 트리의 특성, 속성 및 구조에 대해 설명합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271075"
 ---
 # <a name="-operator-c-reference"></a>% 연산자(C# 참조)
 나머지 연산자(`%`)는 첫 번째 피연산자를 두 번째 피연산자로 나눈 후 나머지를 계산합니다. 모든 숫자 형식에는 미리 정의된 나머지 연산자가 있습니다. 

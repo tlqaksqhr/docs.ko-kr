@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752145"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>어셈블리 및 Side-by-Side 실행
 Side-by-side 실행은 같은 컴퓨터에 여러 버전의 응용 프로그램이나 구성 요소를 저장하고 실행할 수 있는 기능입니다. 다시 말해 동시에 같은 컴퓨터에서 여러 런타임 버전을 사용할 수 있으며 특정 런타임 버전을 바탕으로 하는 여러 버전의 응용 프로그램 및 구성 요소를 사용할 수 있습니다. Side-by-Side 실행을 사용하면 응용 프로그램이 바인딩되는 구성 요소 버전과 응용 프로그램에서 사용되는 런타임 버전을 보다 효과적으로 관리할 수 있습니다.  

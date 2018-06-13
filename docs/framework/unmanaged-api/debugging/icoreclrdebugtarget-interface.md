@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 371768a8306c3751e7fc54b91a8583df41ad219b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422284"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 인터페이스
 참조 횟수를 제어, 프로세스, 열거 및 Macintosh Silverlight의 원격 대상에 연결 된 디버거에 연결 된 메모리를 해제 하는 메서드를 제공 합니다.  

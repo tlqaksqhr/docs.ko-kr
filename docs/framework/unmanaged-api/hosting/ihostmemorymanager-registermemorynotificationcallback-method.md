@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d68790cdb671efdd0761ceef59196e8646654d5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439608"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback 메서드
 호스트에 공용 언어 런타임 (CLR)를 알리기 위해 호출 하는 콜백 함수에 대 한 포인터는 컴퓨터의 현재 메모리 로드를 등록 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539542"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정
 Windows forms에서 데이터 바인딩 작업을 수행할 때 종종 여러 컨트롤은 동일한 데이터 원본에 바인딩됩니다. 일부 경우에는 컨트롤의 바인딩된 속성이 서로 데이터 소스와 동기화 되어 있는지 확인 하려면 추가 단계를 수행 해야 할 수도 있습니다. 이러한 단계는 두 가지 상황에서 필요 합니다.  
