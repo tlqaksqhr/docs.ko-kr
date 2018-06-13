@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bac5578caaf5682c12509b41da77b3d7cca76312
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415235"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  

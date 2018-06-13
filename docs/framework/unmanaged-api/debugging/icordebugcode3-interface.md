@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: febfe7df52a0c1f44cb156faf2da310d317e01a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411327"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 인터페이스
 확장 "ICorDebugCode" 및 "ICorDebugCode2" 관리 되는 반환 값에 대 한 정보를 제공 하는 메서드를 제공 합니다.  

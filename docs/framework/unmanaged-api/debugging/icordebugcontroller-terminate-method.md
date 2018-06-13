@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7a95f09d1baebed65bae994550431d88ba0dfc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412473"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 메서드
 지정된 된 종료 코드가 사용 하 여 프로세스를 종료합니다.  

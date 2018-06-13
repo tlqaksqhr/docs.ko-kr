@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414055"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument 메서드
 이 Microsoft MSIL (intermediate language) 스택 프레임에서 지정 된 인수 값을 가져옵니다.  

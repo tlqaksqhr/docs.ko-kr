@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550068"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>방법: TextBox에 워터마크 추가
 다음 예제에서는의 유용성는 <xref:System.Windows.Controls.TextBox> 내부의 설명 배경 이미지를 표시 하 여는 <xref:System.Windows.Controls.TextBox> 이미지 제거 되는 지점에 사용자가 텍스트를 입력 될 때까지 합니다. 또한 사용자가 입력 내용을 제거 하는 경우 배경 이미지가 다시 복원 됩니다. 아래 그림을 참조 하십시오.  

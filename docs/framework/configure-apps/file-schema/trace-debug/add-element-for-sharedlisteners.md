@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752613"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;추가&gt; 요소에 대 한 &lt;sharedListeners&gt;
 `sharedListeners` 컬렉션에 수신기를 추가합니다. `sharedListeners` 모든 수신기의 컬렉션은 [ \<소스 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 또는 [ \<추적 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) 참조할 수 있습니다.  기본적으로 수신기에는 `sharedListeners` 컬렉션에 배치 되지는 `Listeners` 컬렉션입니다. 이름으로 추가 해야 합니다는 [ \<소스 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 또는 [ \<추적 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)합니다. 수신기 가져올 수 없으면는 `sharedListeners` 런타임에 코드에서 컬렉션입니다.  

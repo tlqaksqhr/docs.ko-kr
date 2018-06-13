@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530629"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>방법: 클릭한 TreeView 노드 확인(Windows Forms)
 Windows Forms 작업할 때 <xref:System.Windows.Forms.TreeView> 컨트롤은 일반적인 작업 결정 하는 것 노드 클릭 되었는지와 적절 하 게 응답 합니다.  

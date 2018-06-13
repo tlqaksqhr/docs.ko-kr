@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548340"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>빌드 및 배포 방법 항목
 다음 항목에서는 다양 한 프로젝트 파일을 만드는 방법을 보여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 종류입니다.  

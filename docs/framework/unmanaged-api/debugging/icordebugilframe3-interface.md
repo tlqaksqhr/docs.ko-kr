@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be45022701f72e15e83b7ca28cd110ef58c809b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415599"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 인터페이스
 함수의 반환 값을 캡슐화하는 메서드를 제공합니다. `ICorDebugILFrame3` ICorDebugILFrame 및 ICorDebugILFrame2 인터페이스를 논리적으로 확장이 됩니다.  

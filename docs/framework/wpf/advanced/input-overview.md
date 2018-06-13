@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549531"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 마우스, 키보드, 터치, 스타일러스를 비롯한 다양한 장치에서 입력을 가져오는 데 사용할 수 있는 강력한 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]를 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4082c4204b85aba97651419db15ba8eb4c3d54e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415164"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 인터페이스
 스택 주소 및 ICorDebugFrame 개체와 관련 위치를 비롯 하 여 내부 프레임에 대 한 정보를 제공 합니다.  

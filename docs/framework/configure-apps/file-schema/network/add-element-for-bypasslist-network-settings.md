@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754521"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;추가&gt; bypasslist (네트워크 설정)에 대 한 요소
 프록시 무시 목록에 IP 주소 또는 DNS 이름을 추가합니다.  

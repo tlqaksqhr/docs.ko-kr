@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529443"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 폼 만들기
 사용 하기 위한 가장 일반적인 시나리오 중 하나는 <xref:System.Windows.Forms.DataGridView> 컨트롤은는 *마스터/세부* 폼을 두 개의 데이터베이스 테이블 간의 부모/자식 관계 표시 됩니다. 마스터 테이블에서 행을 선택 하면 해당 자식 데이터로 업데이트할 세부 테이블 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549567"
 ---
 # <a name="xaml-resources"></a>XAML 리소스
 리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다. 리소스의 예로는 브러시와 스타일이 있습니다. 이 개요에서는의 리소스를 사용 하는 방법을 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 만들 수 있고 하거나 코드 서로 바꿔 코드를 사용 하 여 리소스에 액세스 하면 및 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 자세한 내용은 참조 [리소스와 코드가](../../../../docs/framework/wpf/advanced/resources-and-code.md)합니다.  

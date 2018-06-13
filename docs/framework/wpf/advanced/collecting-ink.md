@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541072"
 ---
 # <a name="collecting-ink"></a>잉크 수집
 [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) 플랫폼은 기능의 핵심 요소로서 디지털 잉크를 수집합니다. 이 항목에서는 잉크 Windows Presentation Foundation (WPF)를 수집 하기 위한 메서드를 설명 합니다.  

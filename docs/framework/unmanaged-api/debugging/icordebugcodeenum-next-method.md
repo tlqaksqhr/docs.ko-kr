@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415109"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next 메서드
 현재 위치부터 시작 하는 열거형에서 지정 된 "ICorDebugCode" 인스턴스 수를 가져옵니다.  

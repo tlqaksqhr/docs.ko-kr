@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548859"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 콘텐츠 모델 개요
 에 대 한 지원 되는 콘텐츠를 설명 하는이 콘텐츠 모델 개요는 <xref:System.Windows.Documents.TextElement>합니다. <xref:System.Windows.Documents.Paragraph> 클래스는 유형의 <xref:System.Windows.Documents.TextElement>합니다. 콘텐츠 모델은 어떤 개체/요소가 다른 개체/요소에 포함될 수 있는지를 설명합니다. 이 개요에서 파생 된 개체에 사용 되는 콘텐츠 모델을 요약 <xref:System.Windows.Documents.TextElement>합니다. 자세한 내용은 참조 [문서 개요 흐름](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  

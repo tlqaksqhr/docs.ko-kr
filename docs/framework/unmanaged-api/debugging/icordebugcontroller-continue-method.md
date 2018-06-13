@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412567"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 메서드
 관리 되는 스레드를 호출한 후 실행을 계속 [Stop 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)합니다.  

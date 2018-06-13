@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537475"
 ---
 # <a name="digital-ink"></a>디지털 잉크
 디지털 잉크 사용을 설명 하는이 섹션의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. Tablet PC SDK에 있는 일반적으로, 디지털 잉크가 되었습니다 핵심 Windows Presentation Foundation에서에서 사용할 수 있습니다. 즉, Windows Presentation Foundation의 기능을 사용 하 여 이제 완전 한 Tablet PC 응용 프로그램을 개발할 수 있습니다.  

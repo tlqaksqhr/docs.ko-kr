@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cad8b305de580ce7cf4876939b95cc05d0fd11f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411485"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach 메서드
 프로세스 또는 응용 프로그램 도메인에서 디버거를 분리 합니다.  
