@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323445"
 ---
 # <a name="thread-timers-c"></a><span data-ttu-id="02484-102">스레드 타이머(C#)</span><span class="sxs-lookup"><span data-stu-id="02484-102">Thread Timers (C#)</span></span>
 <span data-ttu-id="02484-103"><xref:System.Threading.Timer?displayProperty=nameWithType> 클래스는 별도 스레드에서 정기적으로 작업을 실행하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="02484-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="02484-104">예를 들어 스레드 타이머를 사용하여 데이터베이스의 상태 및 무결성을 확인하거나 중요한 파일을 백업할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02484-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  

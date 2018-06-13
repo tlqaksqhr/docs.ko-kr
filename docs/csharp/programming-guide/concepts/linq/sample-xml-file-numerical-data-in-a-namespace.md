@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329006"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="8a4da-102">샘플 XML 파일: 네임스페이스의 숫자 데이터</span><span class="sxs-lookup"><span data-stu-id="8a4da-102">Sample XML File: Numerical Data in a Namespace</span></span>
 <span data-ttu-id="8a4da-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a4da-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8a4da-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a4da-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="8a4da-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a4da-105">The XML is in a namespace.</span></span>  

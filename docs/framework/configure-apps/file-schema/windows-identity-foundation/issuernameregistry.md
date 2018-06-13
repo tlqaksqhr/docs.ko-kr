@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757530"
 ---
 # <a name="ltissuernameregistrygt"></a><span data-ttu-id="d20c5-102">&lt;issuerNameRegistry&gt;</span><span class="sxs-lookup"><span data-stu-id="d20c5-102">&lt;issuerNameRegistry&gt;</span></span>
 <span data-ttu-id="d20c5-103">토큰 처리기 컬렉션에 대 한 처리기가 사용 되는 발급자 이름 레지스트리를 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="d20c5-103">Configures the issuer name registry that is used by handlers in the token handler collection.</span></span>  

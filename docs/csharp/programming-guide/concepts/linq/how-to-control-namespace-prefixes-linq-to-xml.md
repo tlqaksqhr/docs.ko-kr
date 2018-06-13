@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327755"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a><span data-ttu-id="874a2-102">방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="874a2-102">How to: Control Namespace Prefixes (C#) (LINQ to XML)</span></span>
 <span data-ttu-id="874a2-103">이 항목에서는 XML 트리를 serialize할 때 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="874a2-103">This topic describes how you can control namespace prefixes when serializing an XML tree.</span></span>  

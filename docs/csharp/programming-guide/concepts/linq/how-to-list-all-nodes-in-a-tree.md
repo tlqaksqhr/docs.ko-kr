@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322132"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="2c2f3-102">방법: 트리의 모든 노드 나열(C#)</span><span class="sxs-lookup"><span data-stu-id="2c2f3-102">How to: List All Nodes in a Tree (C#)</span></span>
 <span data-ttu-id="2c2f3-103">경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="2c2f3-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="2c2f3-104">이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c2f3-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="2c2f3-105">텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="2c2f3-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  

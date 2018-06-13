@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326334"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a><span data-ttu-id="dc6f9-102">명명된 인수와 선택적 인수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="dc6f9-102">Named and Optional Arguments (C# Programming Guide)</span></span>
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]<span data-ttu-id="dc6f9-103">에서는 명명된 인수 및 선택적 인수를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="dc6f9-103"> introduces named and optional arguments.</span></span> <span data-ttu-id="dc6f9-104">*명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc6f9-104">*Named arguments* enable you to specify an argument for a particular parameter by associating the argument with the parameter's name rather than with the parameter's position in the parameter list.</span></span> <span data-ttu-id="dc6f9-105">*선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc6f9-105">*Optional arguments* enable you to omit arguments for some parameters.</span></span> <span data-ttu-id="dc6f9-106">두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc6f9-106">Both techniques can be used with methods, indexers, constructors, and delegates.</span></span>  

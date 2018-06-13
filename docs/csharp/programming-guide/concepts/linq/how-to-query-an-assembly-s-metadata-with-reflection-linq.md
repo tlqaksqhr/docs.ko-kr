@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319500"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a><span data-ttu-id="06259-102">방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="06259-102">How to: Query An Assembly&#39;s Metadata with Reflection (LINQ) (C#)</span></span>
 <span data-ttu-id="06259-103">다음 예제에서는 리플렉션과 함께 LINQ를 사용하여 지정된 검색 조건과 일치하는 메서드에 대한 특정 메타데이터를 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06259-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="06259-104">이 경우 쿼리는 배열과 같은 열거 가능한 형식을 반환하는 모든 메서드의 이름을 어셈블리에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="06259-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  

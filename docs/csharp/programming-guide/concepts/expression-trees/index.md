@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326500"
 ---
 # <a name="expression-trees-c"></a><span data-ttu-id="b8f6e-102">식 트리(C#)</span><span class="sxs-lookup"><span data-stu-id="b8f6e-102">Expression Trees (C#)</span></span>
 <span data-ttu-id="b8f6e-103">식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="b8f6e-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  

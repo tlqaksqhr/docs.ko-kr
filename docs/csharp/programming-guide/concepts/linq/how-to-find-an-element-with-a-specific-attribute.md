@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325697"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="de148-102">방법: 특정 특성으로 요소 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="de148-102">How to: Find an Element with a Specific Attribute (C#)</span></span>
 <span data-ttu-id="de148-103">이 항목에서는 특정 값을 가진 특성이 포함된 요소를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="de148-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  

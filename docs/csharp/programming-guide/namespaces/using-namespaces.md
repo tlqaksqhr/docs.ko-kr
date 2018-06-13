@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329549"
 ---
 # <a name="using-namespaces-c-programming-guide"></a><span data-ttu-id="b182d-102">네임스페이스 사용(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="b182d-102">Using Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="b182d-103">네임스페이스는 C# 프로그램 내에서 두 가지 방법으로 많이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b182d-103">Namespaces are heavily used within C# programs in two ways.</span></span> <span data-ttu-id="b182d-104">첫째, .NET Framework 클래스는 네임스페이스를 사용하여 많은 클래스를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="b182d-104">Firstly, the .NET Framework classes use namespaces to organize its many classes.</span></span> <span data-ttu-id="b182d-105">둘째, 고유한 네임스페이스를 선언하면 대규모 프로그래밍 프로젝트에서 클래스 및 메서드 이름의 범위를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b182d-105">Secondly, declaring your own namespaces can help control the scope of class and method names in larger programming projects.</span></span>  

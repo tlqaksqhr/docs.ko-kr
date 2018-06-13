@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319646"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="b12f5-102">방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="b12f5-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
 <span data-ttu-id="b12f5-103">어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="b12f5-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="b12f5-104">DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="b12f5-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  

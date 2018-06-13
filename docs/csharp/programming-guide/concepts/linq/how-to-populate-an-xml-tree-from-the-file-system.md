@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328177"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="b20cc-102">방법: 파일 시스템에서 XML 트리 채우기(C#)</span><span class="sxs-lookup"><span data-stu-id="b20cc-102">How to: Populate an XML Tree from the File System (C#)</span></span>
 <span data-ttu-id="b20cc-103">일반적으로 XML 트리는 계층적인 이름/값 데이터 저장소로 유용하게 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b20cc-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="b20cc-104">계층적 데이터로 XML 트리를 채운 다음 쿼리 및 변환하고 필요한 경우 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b20cc-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="b20cc-105">이 사용 시나리오에서 네임스페이스 및 공백 동작과 같은 많은 XML 관련 의미는 중요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b20cc-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="b20cc-106">대신 XML 트리를 한 사용자가 사용하는 작고 계층적인 메모리 내 데이터베이스로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b20cc-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  

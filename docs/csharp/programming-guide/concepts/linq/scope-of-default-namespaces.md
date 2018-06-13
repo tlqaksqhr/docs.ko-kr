@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330098"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="d1236-102">C#에서 기본 네임스페이스 범위</span><span class="sxs-lookup"><span data-stu-id="d1236-102">Scope of Default Namespaces in C#</span></span>
 <span data-ttu-id="d1236-103">XML 트리에 나타나는 기본 네임스페이스는 쿼리에 범위에 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d1236-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="d1236-104">기본 네임스페이스에 있는 XML을 사용하는 경우 <xref:System.Xml.Linq.XNamespace> 변수를 선언하고 로컬 이름과 결합하여 쿼리에서 사용할 정규화된 이름을 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1236-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329386"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="c3849-102">샘플 XML 파일: 통합된 구매 주문</span><span class="sxs-lookup"><span data-stu-id="c3849-102">Sample XML File: Consolidated Purchase Orders</span></span>
 <span data-ttu-id="c3849-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c3849-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c3849-104">이 파일은 여러 회사에 속한 모양이 다른 구매 주문의 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="c3849-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="c3849-105">각 회사의 구매 주문은 별도의 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c3849-105">Purchase orders from each company are in separate namespaces.</span></span>  

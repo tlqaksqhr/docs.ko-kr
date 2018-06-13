@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327361"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a><span data-ttu-id="d5784-103">클래스 및 구조체(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="d5784-103">Classes and Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="d5784-104">클래스와 구조체는 .NET Framework의 공용 형식 시스템의 기본 구문 중 두 가지입니다.</span><span class="sxs-lookup"><span data-stu-id="d5784-104">Classes and structs are two of the basic constructs of the common type system in the .NET Framework.</span></span> <span data-ttu-id="d5784-105">각각은 기본적으로 하나의 논리 단위에 속하는 데이터 및 동작 집합을 캡슐화하는 데이터 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="d5784-105">Each is essentially a data structure that encapsulates a set of data and behaviors that belong together as a logical unit.</span></span> <span data-ttu-id="d5784-106">데이터 및 동작은 클래스 또는 구조체의 *멤버*로, 이 항목의 뒷부분에 나오는 것처럼 메서드, 속성 및 이벤트 등을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="d5784-106">The data and behaviors are the *members* of the class or struct, and they include its methods, properties, and events, and so on, as listed later in this topic.</span></span>  

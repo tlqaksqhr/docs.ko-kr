@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331469"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a><span data-ttu-id="a6b30-102">방법: 레지스트리에 키 만들기(Visual C#)</span><span class="sxs-lookup"><span data-stu-id="a6b30-102">How to: Create a Key In the Registry (Visual C#)</span></span>
 <span data-ttu-id="a6b30-103">이 예제에서는 현재 사용자의 레지스트리, "Names" 키 아래에 "Name" 및 "Isabella" 값 쌍을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a6b30-103">This example adds the value pair, "Name" and "Isabella", to the current user's registry, under the key "Names".</span></span>  

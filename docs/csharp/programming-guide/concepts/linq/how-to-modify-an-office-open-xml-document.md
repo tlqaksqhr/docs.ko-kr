@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321654"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="7295c-102">방법: Office Open XML 문서 수정(C#)</span><span class="sxs-lookup"><span data-stu-id="7295c-102">How to: Modify an Office Open XML Document (C#)</span></span>
 <span data-ttu-id="7295c-103">이 항목에서는 Office Open XML 문서를 열고, 수정하고, 저장하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7295c-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  

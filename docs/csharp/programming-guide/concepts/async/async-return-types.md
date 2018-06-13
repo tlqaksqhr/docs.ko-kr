@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334186"
 ---
 # <a name="async-return-types-c"></a><span data-ttu-id="06da1-102">비동기 반환 형식(C#)</span><span class="sxs-lookup"><span data-stu-id="06da1-102">Async Return Types (C#)</span></span>
 <span data-ttu-id="06da1-103">비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06da1-103">Async methods can have the following return types:</span></span>

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328762"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="74fc4-102">방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="74fc4-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
 <span data-ttu-id="74fc4-103">이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="74fc4-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="74fc4-104">여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="74fc4-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334326"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a><span data-ttu-id="084b3-102">정적으로 컴파일된 쿼리(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="084b3-102">Statically Compiled Queries (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="084b3-103"><xref:System.Xml.XmlDocument>와는 달리 LINQ to XML의 가장 큰 성능 이점 중 하나는 LINQ to XML의 쿼리가 정적으로 컴파일된다는 점입니다. 반면 XPath 쿼리는 런타임에 해석되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="084b3-103">One of the most important performance benefits LINQ to XML, as opposed to <xref:System.Xml.XmlDocument>, is that queries in LINQ to XML are statically compiled, whereas XPath queries must be interpreted at run time.</span></span> <span data-ttu-id="084b3-104">이 기능은 LINQ to XML에 기본 제공되므로 이를 활용하기 위해 별도의 단계를 수행할 필요는 없습니다. 그러나 이 두 가지 기술 중 하나를 선택해야 하는 경우를 위해 그 차이를 알고 있는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="084b3-104">This feature is built in to LINQ to XML, so you do not have to perform extra steps to take advantage of it, but it is helpful to understand the distinction when choosing between the two technologies.</span></span> <span data-ttu-id="084b3-105">이 항목에서는 그 차이에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="084b3-105">This topic explains the difference.</span></span>  

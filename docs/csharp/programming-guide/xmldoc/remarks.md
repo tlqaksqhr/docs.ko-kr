@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330569"
 ---
 # <a name="ltremarksgt-c-programming-guide"></a><span data-ttu-id="79e70-102">&lt;remarks&gt;(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="79e70-102">&lt;remarks&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="79e70-103">구문</span><span class="sxs-lookup"><span data-stu-id="79e70-103">Syntax</span></span>  

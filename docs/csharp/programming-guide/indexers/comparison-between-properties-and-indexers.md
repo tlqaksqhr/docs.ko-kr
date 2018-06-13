@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330374"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a><span data-ttu-id="60587-102">속성 및 인덱서 비교(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="60587-102">Comparison Between Properties and Indexers (C# Programming Guide)</span></span>
 <span data-ttu-id="60587-103">인덱서는 속성과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="60587-103">Indexers are like properties.</span></span> <span data-ttu-id="60587-104">다음 표에 나와 있는 차이점을 제외하면 속성 접근자에 대해 정의된 모든 규칙이 인덱서 접근자에도 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="60587-104">Except for the differences shown in the following table, all the rules that are defined for property accessors apply to indexer accessors also.</span></span>  
