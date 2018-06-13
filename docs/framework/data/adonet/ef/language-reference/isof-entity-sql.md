@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762142"
 ---
 # <a name="isof-entity-sql"></a>ISOF(Entity SQL)
 식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.  
