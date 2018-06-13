@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590028"
 ---
 # <a name="mutexes"></a>뮤텍스
 <xref:System.Threading.Mutex> 개체를 사용하여 리소스에 대한 전용 액세스를 제공할 수 있습니다. <xref:System.Threading.Mutex> 클래스는 <xref:System.Threading.Monitor> 클래스보다 많은 시스템 리소스를 사용하지만 응용 프로그램 도메인 경계를 넘어 마샬링될 수 있으며 여러 대기와 함께 사용될 수 있고 서로 다른 프로세스에서 스레드를 동기화하는 데 사용될 수 있습니다. 관리되는 동기화 메커니즘의 비교는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  

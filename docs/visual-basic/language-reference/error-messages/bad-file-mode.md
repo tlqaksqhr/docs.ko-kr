@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587386"
 ---
 # <a name="bad-file-mode"></a>파일 모드가 잘못되었습니다.
 파일 내용을 조작에 사용 된 파일을 연 모드에 적합 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604174"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>클래스에 대 한 정보를 로드할 수 없습니다 &#39; &lt;응용 프로그램 이름&gt;&#39;
 사용할 수 있는 클래스에 대 한 참조가.  

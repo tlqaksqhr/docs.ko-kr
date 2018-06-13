@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604551"
 ---
 # <a name="shared-visual-basic"></a>Shared(Visual Basic)
 선언 된 프로그래밍 요소를 하나 이상의 클래스 또는 구조체의 특정 인스턴스가 아닌 클래스 또는 구조체도 연결 되도록 지정 합니다.  

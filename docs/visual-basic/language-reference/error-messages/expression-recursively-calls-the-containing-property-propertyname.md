@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588845"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>식이 재귀적으로 포함 하는 속성을 호출 &#39; &lt;propertyname&gt;&#39;
 문은 `Set` 프로시저 속성 정의의 값을 속성의 이름에 저장 합니다.  

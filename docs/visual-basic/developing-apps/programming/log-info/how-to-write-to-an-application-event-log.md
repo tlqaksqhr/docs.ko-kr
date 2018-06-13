@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590688"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>방법: 응용 프로그램 이벤트 로그에 쓰기(Visual Basic)
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 응용 프로그램에서 발생하는 이벤트에 대한 정보를 쓸 수 있습니다. 이 예제에서는 `My.Application.Log` 가 응용 프로그램 이벤트 로그에 추적 정보를 쓰도록 이벤트 로그 수신기를 구성하는 방법을 보여 줍니다.  

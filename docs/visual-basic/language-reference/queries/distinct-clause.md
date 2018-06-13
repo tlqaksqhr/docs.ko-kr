@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603979"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 절(Visual Basic)
 후속 쿼리 절에 중복 값을 제거 하 여 현재 범위 변수 값을 제한 합니다.  

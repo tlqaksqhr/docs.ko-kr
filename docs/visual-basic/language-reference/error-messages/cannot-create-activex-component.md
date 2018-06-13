@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585959"
 ---
 # <a name="cannot-create-activex-component"></a>ActiveX 구성 요소를 만들 수 없습니다.
 디자인 타임에 ActiveX 컨트롤을 폼에 배치하거나 ActiveX 컨트롤이 포함된 폼을 프로젝트에 추가하려고 했으나 레지스트리의 관련 정보를 찾지 못했습니다.  

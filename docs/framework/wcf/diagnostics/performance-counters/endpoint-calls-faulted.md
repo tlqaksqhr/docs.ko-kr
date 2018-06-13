@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473726"
 ---
 # <a name="endpoint-calls-faulted"></a>끝점: Calls Faulted
 카운터 이름: Calls Faulted  

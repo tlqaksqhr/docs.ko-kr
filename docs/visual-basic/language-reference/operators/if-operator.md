@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603966"
 ---
 # <a name="if-operator-visual-basic"></a>If 연산자(Visual Basic)
 사용 조건에 따라 두 값 중 하나를 반환할 (short-circuit). `If` 는 세 개의 인수 또는 인수 두 개 연산자를 호출할 수 있습니다.  

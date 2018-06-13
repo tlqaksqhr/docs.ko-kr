@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604083"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 연산자(Visual Basic)
 두 식에 논리 결합을 단락 (short-circuiting)를 수행 합니다.  

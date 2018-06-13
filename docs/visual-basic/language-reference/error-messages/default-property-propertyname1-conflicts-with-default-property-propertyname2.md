@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586626"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>기본 속성 &#39; &lt;propertyname1&gt; &#39; 기본 속성과 충돌 &#39; &lt;propertyname2&gt; &#39; 에 &#39; &lt;classname&gt; &#39;선언할 수 있으므로 &#39;그림자&#39;
 기본 클래스에 정의 된 속성과 동일한 이름을 가진 속성이 선언 되어 있습니다. 이 상황에서이 클래스에서 속성 기본 클래스 속성을 숨겨야 합니다.  

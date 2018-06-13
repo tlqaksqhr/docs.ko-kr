@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602725"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue 문(Visual Basic)
 루프의 다음 반복으로 즉시 제어를 전송 합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604837"
 ---
 # <a name="set-statement-visual-basic"></a>Set 문(Visual Basic)
 선언 된 `Set` 속성 프로시저는 속성에 값을 할당 하는 데 사용 합니다.  

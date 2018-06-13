@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605097"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 문(Visual Basic)
 오류 처리 루틴을 사용 하 고 프로시저;에서 루틴의 위치 지정 오류 처리 루틴을 사용 하지 않도록 설정 하 여 사용할 수도 있습니다.  

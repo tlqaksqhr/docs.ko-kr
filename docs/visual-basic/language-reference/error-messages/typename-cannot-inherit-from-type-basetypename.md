@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598426"
 ---
 # <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;typename&gt; &#39; 에서 상속할 수 없습니다. &lt;형식&gt; &#39; &lt;basetypename&gt; &#39; 기본 액세스를 확장 하기 때문에 &lt;형식&gt; 어셈블리 외부에서
 기본 클래스에서 상속 하는 클래스 또는 인터페이스 또는 인터페이스 하지만 덜 제한적인 액세스 수준이 있는 포함 합니다.  

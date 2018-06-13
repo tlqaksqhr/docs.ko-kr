@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604226"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 연산자(Visual Basic)
 상속 또는 구현에 따라 형식 변환 작업을 소개 합니다.  

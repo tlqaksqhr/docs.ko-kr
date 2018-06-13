@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605006"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 각 부분 평가 되 고 호출 미리 결정 된 순서 대로 확인 식에서 여러 작업이 발생 하는 경우 *연산자 우선 순위*합니다.  

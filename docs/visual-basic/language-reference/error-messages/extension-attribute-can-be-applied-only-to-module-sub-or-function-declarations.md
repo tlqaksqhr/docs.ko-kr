@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587321"
 ---
 # <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a>&#39;확장&#39; 특성에만 적용할 수 있습니다 &#39;모듈&#39;, &#39;Sub&#39;, 또는 &#39;함수&#39; 선언
 Visual Basic의 데이터 형식을 확장 하는 유일한 방법은 표준 모듈 내에 확장 메서드를 정의 하는입니다. 사용할 수 있는 확장 메서드에 `Sub` 프로시저 또는 `Function` 프로시저입니다. 모든 확장 메서드가 확장 특성으로 표시 해야 `<Extension()>`에서 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임 스페이스입니다. 필요에 따라 확장 메서드를 포함 하는 모듈은 같은 방식으로 표시할 수 있습니다. 확장 특성의 사용 하지 않는 유효합니다.  
