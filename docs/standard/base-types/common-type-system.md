@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579589"
 ---
 # <a name="common-type-system"></a><span data-ttu-id="bb9f5-102">공용 형식 시스템</span><span class="sxs-lookup"><span data-stu-id="bb9f5-102">Common Type System</span></span>
 <span data-ttu-id="bb9f5-103">공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9f5-103">The common type system defines how types are declared, used, and managed in the common language runtime, and is also an important part of the runtime's support for cross-language integration.</span></span> <span data-ttu-id="bb9f5-104">공용 형식 시스템은 다음과 같은 기능을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9f5-104">The common type system performs the following functions:</span></span>  

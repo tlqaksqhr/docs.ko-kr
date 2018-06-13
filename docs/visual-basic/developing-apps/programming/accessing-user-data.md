@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582846"
 ---
 # <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="e807c-102">사용자 데이터 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e807c-102">Accessing User Data (Visual Basic)</span></span>
 <span data-ttu-id="e807c-103">이 섹션에는 `My.User` 개체 및 이 개체로 수행할 수 있는 작업을 설명하는 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e807c-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  

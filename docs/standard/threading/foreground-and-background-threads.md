@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583078"
 ---
 # <a name="foreground-and-background-threads"></a><span data-ttu-id="d091a-102">포그라운드 및 백그라운드 스레드</span><span class="sxs-lookup"><span data-stu-id="d091a-102">Foreground and Background Threads</span></span>
 <span data-ttu-id="d091a-103">관리되는 스레드는 백그라운드 스레드 또는 포그라운드 스레드입니다.</span><span class="sxs-lookup"><span data-stu-id="d091a-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="d091a-104">백그라운드 스레드는 하나의 예외가 있는 포그라운드 스레드와 동일합니다. 백그라운드 스레드는 관리되는 실행 환경을 계속 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d091a-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="d091a-105">모든 포그라운드 스레드가 관리되는 프로세스(.exe 파일이 관리되는 어셈블리인 프로세스)에서 중지되면 시스템이 모든 백그라운드 스레드를 중지하고 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="d091a-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  

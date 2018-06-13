@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583307"
 ---
 # <a name="file-access-with-visual-basic"></a><span data-ttu-id="a4382-102">Visual Basic을 사용한 파일 액세스</span><span class="sxs-lookup"><span data-stu-id="a4382-102">File Access with Visual Basic</span></span>
 <span data-ttu-id="a4382-103">`My.Computer.FileSystem` 개체는 파일 및 폴더로 작업하기 위한 도구를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a4382-103">The `My.Computer.FileSystem` object provides tools for working with files and folders.</span></span> <span data-ttu-id="a4382-104">해당 속성, 메서드 및 이벤트를 사용하여 파일 및 폴더를 만들고 복사, 이동, 조사 및 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4382-104">Its properties, methods, and events allow you to create, copy, move, investigate, and delete files and folders.</span></span> <span data-ttu-id="a4382-105">`My.Computer.FileSystem`은 이전 버전과의 호환성을 위해 Visual Basic에서 제공하는 레거시 함수(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` 등)보다 뛰어난 성능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a4382-105">`My.Computer.FileSystem` provides better performance than the legacy functions (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) that are provided by Visual Basic for backward compatibility.</span></span>  

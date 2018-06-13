@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580899"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a><span data-ttu-id="fe33f-102">방법: 공급자-소비자 데이터 흐름 패턴 구현</span><span class="sxs-lookup"><span data-stu-id="fe33f-102">How to: Implement a Producer-Consumer Dataflow Pattern</span></span>
 <span data-ttu-id="fe33f-103">이 문서에서는 TPL 데이터 흐름 라이브러리를 사용하여 생산자-소비자 패턴을 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fe33f-103">This document describes how to use the TPL Dataflow Library to implement a producer-consumer pattern.</span></span> <span data-ttu-id="fe33f-104">이 패턴에서 *생산자*는 메시지 블록에 메시지를 보내고 *소비자*는 해당 블록에서 메시지를 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="fe33f-104">In this pattern, the *producer* sends messages to a message block, and the *consumer* reads messages from that block.</span></span>  

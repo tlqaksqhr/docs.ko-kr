@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580252"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="aef80-102">방법: 병렬 및 순차적 LINQ 쿼리 결합</span><span class="sxs-lookup"><span data-stu-id="aef80-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
 <span data-ttu-id="aef80-103">이 예제는 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 메서드를 사용하여 쿼리의 모든 후속 연산자를 순차적으로 처리하도록 PLINQ에 지시하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="aef80-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="aef80-104">순차적 처리는 일반적으로 병렬보다 느리지만 올바른 결과를 생성하는 데 필요한 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aef80-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  

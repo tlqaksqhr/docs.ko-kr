@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578952"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a><span data-ttu-id="7758d-103">도메인 모델 레이어에서 유효성 검사 디자인</span><span class="sxs-lookup"><span data-stu-id="7758d-103">Designing validations in the domain model layer</span></span>
 

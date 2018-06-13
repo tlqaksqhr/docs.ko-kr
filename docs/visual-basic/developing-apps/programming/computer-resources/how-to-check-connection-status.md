@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582466"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="b63c3-102">방법: Visual Basic에서 연결 상태 확인</span><span class="sxs-lookup"><span data-stu-id="b63c3-102">How to: Check Connection Status in Visual Basic</span></span>
 <span data-ttu-id="b63c3-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> 속성은 컴퓨터에 작동하는 네트워크 또는 인터넷 연결이 있는지 확인하는 데 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b63c3-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  

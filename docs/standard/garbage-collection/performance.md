@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579797"
 ---
 # <a name="garbage-collection-and-performance"></a><span data-ttu-id="c5d82-102">가비지 컬렉션 및 성능</span><span class="sxs-lookup"><span data-stu-id="c5d82-102">Garbage Collection and Performance</span></span>
 <a name="top"></a> <span data-ttu-id="c5d82-103">이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c5d82-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="c5d82-104">관리되는 힙과 관련된 문제를 해결하고 응용 프로그램에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c5d82-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="c5d82-105">각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c5d82-105">Each issue has links to procedures that you can use to investigate problems.</span></span>  

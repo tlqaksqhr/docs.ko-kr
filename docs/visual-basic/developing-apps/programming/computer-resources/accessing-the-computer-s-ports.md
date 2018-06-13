@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585543"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a><span data-ttu-id="c9581-102">컴퓨터 포트에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9581-102">Accessing the Computer&#39;s Ports (Visual Basic)</span></span>
 <span data-ttu-id="c9581-103">`My.Computer.Ports` 개체는 컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c9581-103">The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.</span></span>  

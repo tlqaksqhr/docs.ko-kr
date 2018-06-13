@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582823"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a><span data-ttu-id="ffd79-103">.NET 마이크로 서비스 및 웹 응용 프로그램의 권한 부여 정보</span><span class="sxs-lookup"><span data-stu-id="ffd79-103">About authorization in .NET microservices and web applications</span></span>
 

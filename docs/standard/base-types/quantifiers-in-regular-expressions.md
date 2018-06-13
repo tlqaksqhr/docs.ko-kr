@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579095"
 ---
 # <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="7e92a-102">정규식의 수량자</span><span class="sxs-lookup"><span data-stu-id="7e92a-102">Quantifiers in Regular Expressions</span></span>
 <span data-ttu-id="7e92a-103">수량자는 찾을 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7e92a-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="7e92a-104">다음 테이블에서는 .NET에서 지원하는 수량자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7e92a-104">The following table lists the quantifiers supported by .NET.</span></span>  

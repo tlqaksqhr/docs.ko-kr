@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580228"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a><span data-ttu-id="cd6f5-102">방법: 작업 및 해당 자식 취소</span><span class="sxs-lookup"><span data-stu-id="cd6f5-102">How to: Cancel a Task and Its Children</span></span>
 <span data-ttu-id="cd6f5-103">이 예제는 다음 작업을 수행하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="cd6f5-103">These examples show how to perform the following tasks:</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576349"
 ---
 # <a name="how-to-implement-a-provider"></a><span data-ttu-id="63685-102">방법: 공급자 구현</span><span class="sxs-lookup"><span data-stu-id="63685-102">How to: Implement a Provider</span></span>
 <span data-ttu-id="63685-103">관찰자 디자인 패턴은 데이터를 모니터링하고 알림을 보내는 공급자와 해당 공급자로부터 알림(콜백)을 받는 하나 이상의 관찰자 간에 구분이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="63685-103">The observer design pattern requires a division between a provider, which monitors data and sends notifications, and one or more observers, which receive notifications (callbacks) from the provider.</span></span> <span data-ttu-id="63685-104">이 항목에서는 공급자를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="63685-104">This topic discusses how to create a provider.</span></span> <span data-ttu-id="63685-105">관련 항목인 [방법: 관찰자 구현](../../../docs/standard/events/how-to-implement-an-observer.md)에서는 관찰자를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="63685-105">A related topic, [How to: Implement an Observer](../../../docs/standard/events/how-to-implement-an-observer.md), discusses how to create an observer.</span></span>  

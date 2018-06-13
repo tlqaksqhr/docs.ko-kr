@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583931"
 ---
 # <a name="security-and-the-registry-visual-basic"></a><span data-ttu-id="bcd77-102">보안 및 레지스트리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bcd77-102">Security and the Registry (Visual Basic)</span></span>
 <span data-ttu-id="bcd77-103">이 페이지에서는 레지스트리에 데이터를 저장할 경우 보안에 미치는 영향을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd77-103">This page discusses the security implications of storing data in the registry.</span></span>  

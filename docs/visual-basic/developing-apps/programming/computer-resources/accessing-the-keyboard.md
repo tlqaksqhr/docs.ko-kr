@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582653"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="c0a79-102">키보드에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0a79-102">Accessing the Keyboard (Visual Basic)</span></span>
 <span data-ttu-id="c0a79-103">`My.Computer.Keyboard` 개체는 현재 누른 키 등 키보드의 현재 상태에 액세스하기 위한 속성을 제공하고, 활성 창에 키 입력을 보내기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c0a79-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  

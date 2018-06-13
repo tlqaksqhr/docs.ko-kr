@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577618"
 ---
 # <a name="types-of-isolation"></a><span data-ttu-id="082d5-102">격리 유형</span><span class="sxs-lookup"><span data-stu-id="082d5-102">Types of Isolation</span></span>
 <span data-ttu-id="082d5-103">격리된 저장소에 대한 액세스는 항상 저장소를 만든 사용자로 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="082d5-103">Access to isolated storage is always restricted to the user who created it.</span></span> <span data-ttu-id="082d5-104">이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="082d5-104">To implement this type of isolation, the common language runtime uses the same notion of user identity that the operating system recognizes, which is the identity associated with the process in which the code is running when the store is opened.</span></span> <span data-ttu-id="082d5-105">이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="082d5-105">This identity is an authenticated user identity, but impersonation can cause the identity of the current user to change dynamically.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579459"
 ---
 # <a name="designing-a-microservice-domain-model"></a><span data-ttu-id="df030-103">마이크로 서비스 도메인 모델 디자인</span><span class="sxs-lookup"><span data-stu-id="df030-103">Designing a microservice domain model</span></span>
 

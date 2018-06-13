@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578423"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="8bbd1-102">최선의 이벤트 기반 비동기 패턴 구현 방법</span><span class="sxs-lookup"><span data-stu-id="8bbd1-102">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="8bbd1-103">이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbd1-103">The Event-based Asynchronous Pattern provides you with an effective way to expose asynchronous behavior in classes, with familiar event and delegate semantics.</span></span> <span data-ttu-id="8bbd1-104">이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbd1-104">To implement Event-based Asynchronous Pattern, you need to follow some specific behavioral requirements.</span></span> <span data-ttu-id="8bbd1-105">다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbd1-105">The following sections describe requirements and guidelines you should consider when you implement a class that follows the Event-based Asynchronous Pattern.</span></span>  

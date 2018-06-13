@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577361"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="f354d-102">이벤트 기반 비동기 패턴 구현</span><span class="sxs-lookup"><span data-stu-id="f354d-102">Implementing the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="f354d-103">상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f354d-103">If you are writing a class with some operations that may incur noticeable delays, consider giving it asynchronous functionality by implementing [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span></span>  

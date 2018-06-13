@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582810"
 ---
 # <a name="scheduling-threads"></a><span data-ttu-id="b6c18-102">스레드 스케줄링</span><span class="sxs-lookup"><span data-stu-id="b6c18-102">Scheduling Threads</span></span>
 <span data-ttu-id="b6c18-103">모든 스레드에는 할당된 스레드 우선 순위가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6c18-103">Every thread has a thread priority assigned to it.</span></span> <span data-ttu-id="b6c18-104">공용 언어 런타임 내에서 생성된 스레드에는 초기에 **ThreadPriority.Normal**의 우선 순위가 할당됩니다.</span><span class="sxs-lookup"><span data-stu-id="b6c18-104">Threads created within the common language runtime are initially assigned the priority of **ThreadPriority.Normal**.</span></span> <span data-ttu-id="b6c18-105">런타임 외부에서 생성된 스레드는 관리되는 환경에 들어가기 전의 우선 순위를 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="b6c18-105">Threads created outside the runtime retain the priority they had before they entered the managed environment.</span></span> <span data-ttu-id="b6c18-106">**Thread.Priority** 속성이 있는 스레드의 우선 순위를 가져오거나 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6c18-106">You can get or set the priority of any thread with the **Thread.Priority** property.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579693"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="f6a38-102">정규식의 문자 클래스</span><span class="sxs-lookup"><span data-stu-id="f6a38-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a> <span data-ttu-id="f6a38-103">문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6a38-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="f6a38-104">.NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="f6a38-104">The regular expression language in .NET supports the following character classes:</span></span>  

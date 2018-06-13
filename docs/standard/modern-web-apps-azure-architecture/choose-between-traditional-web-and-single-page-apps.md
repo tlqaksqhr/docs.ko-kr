@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582901"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a><span data-ttu-id="53be2-103">기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택</span><span class="sxs-lookup"><span data-stu-id="53be2-103">Choose Between Traditional Web Apps and Single Page Apps (SPAs)</span></span>
 

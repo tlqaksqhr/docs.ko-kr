@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582592"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a><span data-ttu-id="4fdcd-102">마우스에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4fdcd-102">Accessing the Mouse (Visual Basic)</span></span>
 <span data-ttu-id="4fdcd-103">`My.Computer.Mouse` 개체는 마우스가 있는 경우 마우스 단추 수, 마우스 휠 정보 등 컴퓨터의 마우스에 대한 정보를 찾는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4fdcd-103">The `My.Computer.Mouse` object provides a way to find information about the computer's mouse, such as if a mouse exists, the number of mouse buttons, and details about the mouse wheel.</span></span>  

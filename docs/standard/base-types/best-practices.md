@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579836"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a><span data-ttu-id="8221b-102">.NET의 정규식에 대한 모범 사례</span><span class="sxs-lookup"><span data-stu-id="8221b-102">Best Practices for Regular Expressions in .NET</span></span>
 <a name="top"></a><span data-ttu-id="8221b-103">.NET의 정규식 엔진은 리터럴 텍스트에 대한 비교 및 검색 대신 패턴 일치를 기반으로 텍스트를 처리하는 완벽한 기능을 갖춘 강력한 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="8221b-103">The regular expression engine in .NET is a powerful, full-featured tool that processes text based on pattern matches rather than on comparing and matching literal text.</span></span> <span data-ttu-id="8221b-104">대부분의 경우 신속하고 효율적인 방식으로 패턴 일치가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8221b-104">In most cases, it performs pattern matching rapidly and efficiently.</span></span> <span data-ttu-id="8221b-105">하지만 일부 경우에는 정규식 엔진의 실행 속도가 매우 느리게 보일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8221b-105">However, in some cases, the regular expression engine can appear to be very slow.</span></span> <span data-ttu-id="8221b-106">심한 경우에는 입력 크기가 비교적 적은데도 처리하는 데 시간이 몇 시간 또는 며칠씩 걸려서 응답이 멎은 것처럼 보일 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8221b-106">In extreme cases, it can even appear to stop responding as it processes a relatively small input over the course of hours or even days.</span></span>  

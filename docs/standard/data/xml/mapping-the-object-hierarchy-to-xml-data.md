@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577204"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a><span data-ttu-id="e91f7-102">XML 데이터에 개체 계층 구조 매핑</span><span class="sxs-lookup"><span data-stu-id="e91f7-102">Mapping the Object Hierarchy to XML Data</span></span>
 <span data-ttu-id="e91f7-103">메모리에 있는 XML 문서를 개념적으로 표현한 것이 트리입니다.</span><span class="sxs-lookup"><span data-stu-id="e91f7-103">When an XML document is in memory, the conceptual representation is a tree.</span></span> <span data-ttu-id="e91f7-104">프로그래밍의 경우에는 트리 노드에 액세스하는 개체 계층 구조가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e91f7-104">For programming, you have an object hierarchy to access the nodes of the tree.</span></span> <span data-ttu-id="e91f7-105">다음 예제에서는 XML 내용이 노드가 되는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e91f7-105">The following example shows you how the XML content becomes nodes.</span></span>  

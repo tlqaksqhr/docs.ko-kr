@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581383"
 ---
 # <a name="parallel-linq-plinq"></a><span data-ttu-id="b1e50-102">PLINQ(병렬 LINQ)</span><span class="sxs-lookup"><span data-stu-id="b1e50-102">Parallel LINQ (PLINQ)</span></span>
 <span data-ttu-id="b1e50-103">PLINQ(병렬 LINQ)는 LINQ to Objects의 병렬 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="b1e50-103">Parallel LINQ (PLINQ) is a parallel implementation of LINQ to Objects.</span></span> <span data-ttu-id="b1e50-104">PLINQ는 LINQ 표준 쿼리 연산자의 전체 집합을 <xref:System.Linq> 네임스페이스의 확장 메서드로 구현하고, 병렬 작업을 위한 추가 연산자를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b1e50-104">PLINQ implements the full set of LINQ standard query operators as extension methods for the <xref:System.Linq> namespace and has additional operators for parallel operations.</span></span> <span data-ttu-id="b1e50-105">PLINQ는 LINQ의 간편성과 가독성을 병렬 프로그래밍의 기능과 결합합니다.</span><span class="sxs-lookup"><span data-stu-id="b1e50-105">PLINQ combines the simplicity and readability of LINQ syntax with the power of parallel programming.</span></span> <span data-ttu-id="b1e50-106">작업 병렬 라이브러리를 대상으로 하는 코드와 마찬가지로 PLINQ 쿼리는 호스트 컴퓨터의 기능에 따라 동시성 수준 규모를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="b1e50-106">Just like code that targets the Task Parallel Library, PLINQ queries scale in the degree of concurrency based on the capabilities of the host computer.</span></span>  

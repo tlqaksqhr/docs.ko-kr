@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580116"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a><span data-ttu-id="4da88-103">개발하는 동안 응용 프로그램 비밀 저장</span><span class="sxs-lookup"><span data-stu-id="4da88-103">Storing application secrets safely during development</span></span>
 

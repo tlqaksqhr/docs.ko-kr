@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580405"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="239fa-103">Azure Key Vault를 사용하여 프로덕션 시 비밀 보호</span><span class="sxs-lookup"><span data-stu-id="239fa-103">Using Azure Key Vault to protect secrets at production time</span></span>
 

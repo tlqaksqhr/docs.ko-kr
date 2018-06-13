@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578586"
 ---
 # <a name="handling-and-raising-events"></a><span data-ttu-id="da2e2-102">이벤트 처리 및 발생</span><span class="sxs-lookup"><span data-stu-id="da2e2-102">Handling and Raising Events</span></span>
 <span data-ttu-id="da2e2-103">.NET Framework에서 이벤트는 대리자 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="da2e2-103">Events in the .NET Framework are based on the delegate model.</span></span> <span data-ttu-id="da2e2-104">대리자 모델은 구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 관찰자 디자인 패턴을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="da2e2-104">The delegate model follows the observer design pattern, which enables a subscriber to register with, and receive notifications from, a provider.</span></span> <span data-ttu-id="da2e2-105">이벤트 전송자는 이벤트가 발생했음을 알리고, 이벤트 수신자는 해당 알림을 수신하고 그에 대한 응답을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="da2e2-105">An event sender pushes a notification that an event has happened, and an event receiver receives that notification and defines a response to it.</span></span> <span data-ttu-id="da2e2-106">이 문서에서는 대리자 모델의 주요 구성 요소, 응용 프로그램에서 이벤트를 사용하는 방법 및 코드에서 이벤트를 구현하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="da2e2-106">This article describes the major components of the delegate model, how to consume events in applications, and how to implement events in your code.</span></span>  

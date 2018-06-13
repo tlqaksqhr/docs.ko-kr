@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584959"
 ---
 # <a name="timers"></a><span data-ttu-id="c1f90-102">타이머</span><span class="sxs-lookup"><span data-stu-id="c1f90-102">Timers</span></span>
 <span data-ttu-id="c1f90-103">타이머는 지정된 시간에 대리자가 호출되도록 지정할 수 있는 간단한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c1f90-103">Timers are lightweight objects that enable you to specify a delegate to be called at a specified time.</span></span> <span data-ttu-id="c1f90-104">스레드 풀의 스레드가 대기 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="c1f90-104">A thread in the thread pool performs the wait operation.</span></span>  

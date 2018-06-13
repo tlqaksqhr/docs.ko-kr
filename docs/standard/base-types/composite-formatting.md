@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579186"
 ---
 # <a name="composite-formatting"></a><span data-ttu-id="c16d5-102">복합 형식 지정</span><span class="sxs-lookup"><span data-stu-id="c16d5-102">Composite Formatting</span></span>
 <span data-ttu-id="c16d5-103">.NET의 복합 형식 지정 기능에는 개체 목록과 복합 형식 문자열이 입력으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c16d5-103">The .NET composite formatting feature takes a list of objects and a composite format string as input.</span></span> <span data-ttu-id="c16d5-104">합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="c16d5-104">A composite format string consists of fixed text intermixed with indexed placeholders, called format items, that correspond to the objects in the list.</span></span> <span data-ttu-id="c16d5-105">서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c16d5-105">The formatting operation yields a result string that consists of the original fixed text intermixed with the string representation of the objects in the list.</span></span>  

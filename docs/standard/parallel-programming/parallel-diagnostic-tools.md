@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580525"
 ---
 # <a name="parallel-diagnostic-tools"></a><span data-ttu-id="ac237-102">병렬 진단 도구</span><span class="sxs-lookup"><span data-stu-id="ac237-102">Parallel Diagnostic Tools</span></span>
 <span data-ttu-id="ac237-103">Visual Studio는 다중 스레드 응용 프로그램 디버깅 및 프로파일링에 대한 광범위한 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ac237-103">Visual Studio provides extensive support for debugging and profiling multi-threaded applications.</span></span>  

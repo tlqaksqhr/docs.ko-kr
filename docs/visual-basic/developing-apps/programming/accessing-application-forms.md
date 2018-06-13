@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581855"
 ---
 # <a name="accessing-application-forms-visual-basic"></a><span data-ttu-id="78027-102">응용 프로그램 폼 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78027-102">Accessing Application Forms (Visual Basic)</span></span>
 <span data-ttu-id="78027-103">`My.Forms` 개체는 응용 프로그램 프로젝트에 선언된 각 Windows Form의 인스턴스에 액세스하는 간편한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78027-103">The `My.Forms` object provides an easy way to access an instance of each Windows Form declared in the application's project.</span></span> <span data-ttu-id="78027-104">`My.Application` 개체의 속성을 사용하여 응용 프로그램의 시작 화면 및 기본 폼에 액세스하고 응용 프로그램의 열려 있는 폼 목록을 가져올 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78027-104">You can also use properties of the `My.Application` object to access the application's splash screen and main form, and get a list of the application's open forms.</span></span>  

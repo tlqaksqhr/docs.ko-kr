@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580798"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a><span data-ttu-id="21302-102">방법: PLINQ를 사용하여 파일 디렉터리 열거</span><span class="sxs-lookup"><span data-stu-id="21302-102">How to: Iterate File Directories with PLINQ</span></span>
 <span data-ttu-id="21302-103">이 예제는 파일 디렉터리에서 작업을 병렬 처리하는 두 가지 간단한 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="21302-103">This example shows two simple ways to parallelize operations on file directories.</span></span> <span data-ttu-id="21302-104">첫 번째 쿼리는 <xref:System.IO.Directory.GetFiles%2A> 메서드를 사용하여 디렉터리 및 모든 하위 디렉터리에서 파일 이름 배열을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="21302-104">The first query uses the <xref:System.IO.Directory.GetFiles%2A> method to populate an array of file names in a directory and all subdirectories.</span></span> <span data-ttu-id="21302-105">이 메서드는 전체 배열이 채워질 때까지 반환되지 않으므로 작업 시작 시 지연이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21302-105">This method does not return until the entire array is populated, and therefore it can introduce latency at the beginning of the operation.</span></span> <span data-ttu-id="21302-106">그러나 배열이 채워진 후 PLINQ는 메서드를 매우 빠르게 병렬 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21302-106">However, after the array is populated, PLINQ can process it in parallel very quickly.</span></span>  
