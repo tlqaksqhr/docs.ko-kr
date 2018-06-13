@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442919"
 ---
 # <a name="unmanaged-api-reference"></a>관리되지 않는 API 참조
 이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 응용 프로그램에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  

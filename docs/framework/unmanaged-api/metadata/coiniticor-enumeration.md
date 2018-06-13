@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441428"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 열거형
 사용 하는 상수를 지정 [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) 때 공용 언어 런타임을 초기화 합니다.  

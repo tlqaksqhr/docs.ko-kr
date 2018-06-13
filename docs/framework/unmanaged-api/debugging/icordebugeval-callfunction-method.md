@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412554"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 메서드
 지정된 된 함수에 대 한 호출을 설정합니다.  

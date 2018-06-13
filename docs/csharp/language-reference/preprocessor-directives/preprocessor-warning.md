@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268185"
 ---
 # <a name="warning-c-reference"></a>#warning(C# 참조)
 `#warning`을 사용하면 코드의 특정 위치에서 수준 1 경고를 생성할 수 있습니다. 예:  

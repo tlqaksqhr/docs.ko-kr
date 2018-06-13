@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aea8cb4c180477fdd763a8af2f251db2d37d066
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436639"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop 메서드
 현재 프로세스에 대해 런타임에서 코드의 실행을 중지합니다.  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435906"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion 전역 정적 함수
 이 여기서는 fusion API를 사용 하는 관리 되지 않는 전역 정적 함수를 설명 합니다.  

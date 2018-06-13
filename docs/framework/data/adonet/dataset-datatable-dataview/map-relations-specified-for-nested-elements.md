@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756698"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>중첩된 요소에 지정된 관계 매핑
 스키마를 포함할 수 있습니다는 **msdata: relationship** 주석을 명시적으로 스키마의 두 요소 간의 매핑을 지정 합니다. 에 지정 된 두 요소가 **msdata: relationship** 스키마에서 중첩 될 수 있지만 될 필요가 없습니다. 매핑 프로세스를 사용 하 여 **msdata: relationship** 두 열 간의 기본 키/외래 키 관계를 생성 하는 스키마에 있습니다.  

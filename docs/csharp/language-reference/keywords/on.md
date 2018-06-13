@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265235"
 ---
 # <a name="on-c-reference"></a>on(C# 참조)
 `on` 상황별 키워드는 쿼리 식의 [join 절](../../../csharp/language-reference/keywords/join-clause.md)에 사용되어 조인 조건을 지정합니다.  

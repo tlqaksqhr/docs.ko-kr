@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435866"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>사용되지 않는 CLR 호스팅 함수
 이 섹션에서는 이전 버전의 호스팅 API에서 사용 되는 관리 되지 않는 전역 정적 함수를 설명 합니다.  

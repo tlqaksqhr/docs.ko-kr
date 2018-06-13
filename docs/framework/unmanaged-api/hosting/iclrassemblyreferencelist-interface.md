@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 388b26a5559435ea57300751987d14bc5cb9d50c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435299"
 ---
 # <a name="iclrassemblyreferencelist-interface"></a>ICLRAssemblyReferenceList 인터페이스
 호스트 아니라 공용 언어 런타임 (CLR)에서 로드 하는 어셈블리 목록을 관리 합니다.  

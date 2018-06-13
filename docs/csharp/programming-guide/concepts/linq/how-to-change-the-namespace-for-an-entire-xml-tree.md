@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328255"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>방법: 전체 XML 트리에 대한 네임스페이스 변경(C#)
 요소나 특성의 네임스페이스를 프로그래밍 방식으로 변경해야 하는 경우가 있습니다. LINQ to XML을 사용하면 이 작업을 쉽게 수행할 수 있습니다. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> 속성은 설정될 수 있지만, <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> 속성은 설정될 수 없습니다. 하지만 쉽게 특성을 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>에 복사하고 기존 특성을 제거한 다음 원하는 새 네임스페이스에 있는 새 특성을 추가할 수 있습니다.  

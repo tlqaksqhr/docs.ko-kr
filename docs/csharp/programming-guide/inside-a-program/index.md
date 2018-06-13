@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339396"
 ---
 # <a name="inside-a-c-program"></a>C# 프로그램 내부
 이 단원에서는 C# 프로그램의 일반적인 구조를 설명하고 표준 "Hello, World!" 예가 포함됩니다.  

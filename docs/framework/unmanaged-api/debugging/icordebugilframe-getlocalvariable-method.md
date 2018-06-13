@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3424646337c3f90f15d991f3f669a296bf11d8ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413009"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable 메서드
 이 Microsoft MSIL (intermediate language) 스택 프레임에서 지정 된 로컬 변수의 값을 가져옵니다.  

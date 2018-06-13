@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 449546a0f774a241efd035190d43de103199edbf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436808"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>ICorConfiguration::SetDebuggerThreadControl 메서드
 디버깅 서비스 디버깅을 위해 공용 언어 런타임 (CLR) 스레드를 차단 하 여 차단 해제를 호출 하는 콜백 인터페이스를 설정 합니다.  

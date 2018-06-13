@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747456"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;추가&gt; 요소에 대 한 &lt;스위치&gt;
 추적 스위치를 설정하는 수준을 지정합니다.  
