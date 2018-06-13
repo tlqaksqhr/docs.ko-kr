@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359922"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>밀접하게 결합된 클라이언트-서버 응용 프로그램을 사용한 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프레젠테이션 계층에 있는 밀접 하 게 결합 된 스마트 클라이언트와 중간 계층에서 사용할 수 있습니다. 읽기 전용 데이터 액세스를 사용하고 낙관적 동시성 검사 또는 타임스탬프를 사용하는 낙관적 동시성 검사가 필요하지 않은 시나리오에서는 로컬 시나리오에 비해 작업이 크게 복잡하지 않습니다. 그러나 데이터베이스에서 원래 값을 사용하여 낙관적 동시성 검사를 수행해야 할 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 데이터 집합을 사용할 때와는 달리 데이터 라운드트립을 지원하지 않습니다. 하지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 중간 계층은 모든 종류의 플랫폼에 있는 클라이언트와 데이터를 교환할 수 있습니다.  

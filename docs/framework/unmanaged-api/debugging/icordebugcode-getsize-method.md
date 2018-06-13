@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c5d42aa7053c1138808775a16d820d5fef3b095
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410821"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 메서드
 "ICorDebugCode"이 표시 되는 이진 코드를 바이트 단위로 크기를 가져옵니다.  

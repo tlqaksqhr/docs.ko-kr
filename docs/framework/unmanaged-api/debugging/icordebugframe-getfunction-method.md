@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414845"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction 메서드
 이 스택 프레임과 연결 된 코드를 포함 하는 함수를 가져옵니다.  

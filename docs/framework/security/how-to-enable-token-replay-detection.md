@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408062"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>방법: 토큰 재생을 검색하도록 설정
 ## <a name="applies-to"></a>적용 대상  
