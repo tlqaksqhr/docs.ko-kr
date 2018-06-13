@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754134"
 ---
 # <a name="ltclientviagt"></a><span data-ttu-id="07871-102">&lt;clientVia&gt;</span><span class="sxs-lookup"><span data-stu-id="07871-102">&lt;clientVia&gt;</span></span>
 <span data-ttu-id="07871-103">전송 채널을 만들어야 하는 URI를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="07871-103">Specifies the URI for which the transport channel should be created.</span></span> <span data-ttu-id="07871-104">자세한 내용은 <xref:System.ServiceModel.Description.ClientViaBehavior>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="07871-104">For more information, see <xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span>  

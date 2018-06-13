@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762389"
 ---
 # <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="e024a-102">null 허용 구조적 형식(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e024a-102">Nullable Structured Types (Entity SQL)</span></span>
 <span data-ttu-id="e024a-103">구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="e024a-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="e024a-104">이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="e024a-104">This is different from an existing instance in which all properties have `null` values.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763932"
 ---
 # <a name="spatial-functions"></a><span data-ttu-id="2d1c2-102">공간 함수</span><span class="sxs-lookup"><span data-stu-id="2d1c2-102">Spatial Functions</span></span>
 <span data-ttu-id="2d1c2-103">공간 형식의 경우 리터럴 형식이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2d1c2-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="2d1c2-104">그러나 WKT(Well Known Text) 형식의 문자열을 사용하여 호출하는 정식 Entity Framework 함수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2d1c2-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="2d1c2-105">예를 들어 다음 함수 호출은 기하 도형 점을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2d1c2-105">For example, the following function call creates a geometry point:</span></span>  

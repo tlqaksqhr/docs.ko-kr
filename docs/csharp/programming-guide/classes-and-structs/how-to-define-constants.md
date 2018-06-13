@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313224"
 ---
 # <a name="how-to-define-constants-in-c"></a><span data-ttu-id="54268-102">방법: C#에서 상수 정의</span><span class="sxs-lookup"><span data-stu-id="54268-102">How to: Define Constants in C#</span></span>
 <span data-ttu-id="54268-103">상수는 해당 값이 컴파일 시간에 설정되며 변경할 수 없는 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="54268-103">Constants are fields whose values are set at compile time and can never be changed.</span></span> <span data-ttu-id="54268-104">상수를 사용하여 특수 값에 대해 숫자 리터럴(“매직 넘버”) 대신 의미 있는 이름을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54268-104">Use constants to provide meaningful names instead of numeric literals ("magic numbers") for special values.</span></span>  

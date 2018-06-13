@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753094"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a><span data-ttu-id="b5a17-102">&lt;basicHttpContextBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="b5a17-102">&lt;basicHttpContextBinding&gt;</span></span>
 <span data-ttu-id="b5a17-103">HTTP 쿠키를 교환 메커니즘으로 사용하도록 설정하여 교환할 <xref:System.ServiceModel.BasicHttpBinding>의 컨텍스트를 제공하는 바인딩을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b5a17-103">Specifying a binding that provides context for the <xref:System.ServiceModel.BasicHttpBinding> to be exchanged by enabling HTTP cookies as the exchange mechanism.</span></span>  

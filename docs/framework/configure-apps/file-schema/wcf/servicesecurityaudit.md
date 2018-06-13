@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751183"
 ---
 # <a name="ltservicesecurityauditgt"></a><span data-ttu-id="9e1b8-102">&lt;serviceSecurityAudit&gt;</span><span class="sxs-lookup"><span data-stu-id="9e1b8-102">&lt;serviceSecurityAudit&gt;</span></span>
 <span data-ttu-id="9e1b8-103">서비스 작업 중에 보안 이벤트의 감사를 사용하도록 하는 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9e1b8-103">Specifies settings that enable auditing of security events during service operations.</span></span>  
