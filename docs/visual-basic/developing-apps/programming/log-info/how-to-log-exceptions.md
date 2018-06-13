@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588528"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a><span data-ttu-id="f58a1-102">방법: Visual Basic에서 예외 기록</span><span class="sxs-lookup"><span data-stu-id="f58a1-102">How to: Log Exceptions in Visual Basic</span></span>
 <span data-ttu-id="f58a1-103">`My.Application.Log` 및 `My.Log` 개체를 사용하여 응용 프로그램에서 발생하는 예외에 대한 정보를 기록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f58a1-103">You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application.</span></span> <span data-ttu-id="f58a1-104">이 예제에서는 `My.Application.Log.WriteException` 메서드를 사용하여 명시적으로 catch하는 예외 및 처리되지 않은 예외를 기록하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f58a1-104">These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.</span></span>  
