@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742681"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a><span data-ttu-id="e8bd1-102">&lt;schemeSettings&gt; 요소 (Uri 설정)</span><span class="sxs-lookup"><span data-stu-id="e8bd1-102">&lt;schemeSettings&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="e8bd1-103">특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e8bd1-103">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>  

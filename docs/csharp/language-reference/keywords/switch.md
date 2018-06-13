@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288894"
 ---
 # <a name="switch-c-reference"></a><span data-ttu-id="bb011-102">switch(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="bb011-102">switch (C# Reference)</span></span>
 <span data-ttu-id="bb011-103">`switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다.</span><span class="sxs-lookup"><span data-stu-id="bb011-103">`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.</span></span> 

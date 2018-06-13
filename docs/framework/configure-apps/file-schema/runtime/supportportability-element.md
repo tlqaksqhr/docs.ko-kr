@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754108"
 ---
 # <a name="ltsupportportabilitygt-element"></a><span data-ttu-id="b9aa4-102">&lt;되어 supportPortability&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="b9aa4-102">&lt;supportPortability&gt; Element</span></span>
 <span data-ttu-id="b9aa4-103">응용 프로그램 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 응용 프로그램이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b9aa4-103">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>  

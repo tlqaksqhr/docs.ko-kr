@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297370"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="a8210-102">가변 배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="a8210-102">Jagged Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="a8210-103">가변 배열의 요소에는 배열이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a8210-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="a8210-104">가변 배열의 요소는 차원과 크기가 서로 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8210-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="a8210-105">가변 배열을 “배열의 배열”이라고도 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8210-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="a8210-106">다음 예제에서는 가변 배열을 선언, 초기화 및 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a8210-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  

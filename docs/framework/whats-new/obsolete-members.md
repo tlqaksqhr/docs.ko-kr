@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508776"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a><span data-ttu-id="78331-102">.NET Framework에서 사용되지 않는 멤버</span><span class="sxs-lookup"><span data-stu-id="78331-102">Obsolete Members in the .NET Framework</span></span>
 <span data-ttu-id="78331-103">이 문서의 표에는 .NET Framework 4.5 이상 버전에서 사용되지 않은 형식 멤버가 어셈블리별로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78331-103">The tables in this article list the type members that are obsolete in the .NET Framework 4.5 and later versions organized by assembly.</span></span> <span data-ttu-id="78331-104">각 어셈블리에서 사용되지 않는 멤버 목록과 권장되는 대체 항목을 확인하려면 다음 링크를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="78331-104">Use the following links to see a list of the obsolete members and the recommended alternatives in each assembly.</span></span> <span data-ttu-id="78331-105">사용되지 않는 형식의 멤버는 이 항목에 나열되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78331-105">This topic doesn't list the members of obsolete types.</span></span> <span data-ttu-id="78331-106">사용되지 않는 형식 목록은 [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="78331-106">For a list of obsolete types, see [Obsolete Types](../../../docs/framework/whats-new/obsolete-types.md).</span></span>  
