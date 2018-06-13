@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265222"
 ---
 # <a name="jump-statements-c-reference"></a>점프문(C# 참조)
 분기는 점프 문을 사용하여 수행되며, 프로그램 제어가 즉시 전송됩니다. 점프 문에서 사용되는 키워드는 다음과 같습니다.  

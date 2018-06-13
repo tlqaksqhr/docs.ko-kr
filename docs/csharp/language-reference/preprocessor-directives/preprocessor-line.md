@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289271"
 ---
 # <a name="line-c-reference"></a>#line(C# 참조)
 `#line`을 사용하면 오류 및 경고에 대한 컴파일러의 줄 번호와 파일 이름 출력(옵션)을 수정할 수 있습니다. 이 예제에서는 줄 번호와 관련된 두 개의 경고를 보고하는 방법을 보여 줍니다. `#line 200` 지시문은 줄 번호를 강제로 200(기본값은 #7임)으로 설정하며, 다음 #line 지시문까지 파일 이름이 “Special”로 보고됩니다. #line 기본 지시문은 줄 번호 매기기를 기본 번호 매기기로 되돌립니다. 이 경우 이전 지시문을 통해 번호가 다시 매겨진 줄이 계산됩니다.  

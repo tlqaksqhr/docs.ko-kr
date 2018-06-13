@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528350"
 ---
 # <a name="vector-graphics-overview"></a>벡터 그래픽 개요
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 좌표계에 선, 사각형 및 기타 도형을 그립니다. 좌표 시스템의 다양 한에서 선택할 수 있지만 기본 좌표계 x 축이 오른쪽에 y 축은 아래쪽을 향하고 왼쪽 위 모퉁이에 원점에 있습니다. 기본 좌표 시스템의 측정 단위 픽셀입니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761209"
 ---
 # <a name="other-canonical-functions"></a>기타 정식 함수
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에는 비트, 집계, 수치, 날짜/시간, 문자열 등으로 분류되지 않는 정식 함수가 포함됩니다.  

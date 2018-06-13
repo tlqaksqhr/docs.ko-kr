@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752203"
 ---
 # <a name="setting-assembly-attributes"></a>어셈블리 특성 설정
 어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 특성은 다음과 같은 정보 집합으로 나뉩니다.  
