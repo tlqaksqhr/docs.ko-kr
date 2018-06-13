@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639300"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a>시스템 이벤트 로그를 삭제할 수 없습니다.
 삭제할 수 없는 시스템 이벤트 로그를 삭제하려고 했습니다. 시스템 로그는 시스템 시작 및 하드웨어 오류와 같은 시스템 이벤트를 추적합니다.  

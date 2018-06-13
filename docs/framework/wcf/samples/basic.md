@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809452"
 ---
 # <a name="basic"></a>Basic
 이 섹션에는 기본 Windows Communication Foundation (WCF) 기능을 보여 주는 샘플의 섹션이 포함 됩니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638332"
 ---
 # <a name="the-path-has-not-been-set"></a>경로가 설정되지 않았습니다.
 필요한 경로를 제공하지 않고 파일을 이동 및 복사하는 등 파일 작업이 시도되었습니다. 이는 경로를 잘못 구문 분석하면 발생할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810020"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 템플릿
 Windows Communication Foundation (WCF) Visual Studio 템플릿은 미리 정의 된 프로젝트 및 항목 템플릿 신속 하 게 WCF 서비스 및 해당 응용 프로그램을 빌드하려면 Visual Studio에서 사용할 수 있습니다.  

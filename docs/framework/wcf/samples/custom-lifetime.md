@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809305"
 ---
 # <a name="custom-lifetime"></a>사용자 지정 수명
 이 샘플에는 WCF 서비스 인스턴스를 공유에 대 한 사용자 지정 수명 서비스를 제공 하는 Windows Communication Foundation (WCF) 확장을 작성 하는 방법을 보여 줍니다.  

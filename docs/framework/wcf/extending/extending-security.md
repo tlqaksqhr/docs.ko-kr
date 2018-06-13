@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809403"
 ---
 # <a name="extending-security"></a>보안 확장
 새 클레임 유형 및 사용자 지정 토큰을 수용 하기 위해 Windows Communication Foundation (WCF)의 보안 인프라를 확장할 수 있습니다. 이 단원의 각 항목에서는 이를 수행하는 방법을 보여 줍니다.  

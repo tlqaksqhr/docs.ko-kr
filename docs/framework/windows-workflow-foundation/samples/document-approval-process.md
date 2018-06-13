@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809494"
 ---
 # <a name="document-approval-process"></a>문서 승인 프로세스
 이 샘플 여러 Windows WF (Workflow Foundation) 및 Windows Communication Foundation (WCF) 기능의 사용을 함께 보여 줍니다. 이 기능들은 문서 승인 프로세스 시나리오를 구현하는 데 함께 사용됩니다. 클라이언트 응용 프로그램은 승인이 필요한 문서를 제출하고 문서를 승인합니다. 클라이언트 사이의 원활한 통신을 지원하고 승인 프로세스의 규칙을 적용하는 데는 승인 관리자 응용 프로그램이 사용됩니다. 승인 프로세스는 여러 가지 유형의 승인을 실행할 수 있는 워크플로입니다. 단일 승인 프로세스, 정족수 승인(승인자 집합의 백분율) 프로세스 및 정족수 승인과 단일 승인이 차례로 이루어지는 복합 승인 프로세스를 처리하기 위하여 각기 다른 활동이 사용됩니다.  

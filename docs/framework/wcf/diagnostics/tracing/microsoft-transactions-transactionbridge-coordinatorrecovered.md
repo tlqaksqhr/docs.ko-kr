@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473862"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorrecovered"></a>Microsoft.Transactions.TransactionBridge.CoordinatorRecovered
 트랜잭션 관리자에서 코디네이터 인리스트먼트를 복구했습니다.  

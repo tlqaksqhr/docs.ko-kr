@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644383"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Friend 어셈블리 (Visual Basic)
 A *friend 어셈블리* 은 다른 어셈블리에 액세스할 수 있는 어셈블리 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 형식 및 멤버입니다. 어셈블리를 friend 어셈블리로 식별하는 경우 다른 어셈블리에서 액세스할 수 있도록 하기 위해 더 이상 형식 및 멤버를 public으로 표시할 필요가 없습니다. 다음과 같은 시나리오에서 특히 편리합니다.  

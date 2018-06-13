@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808873"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. Windows Communication Foundation (WCF), 버전 3.0 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램에 최종 사용자의 개인 정보를 떨어질 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. WCF 보내지 않습니다 한 정보를 Microsoft 응용 프로그램에서 사용자 또는 최종 사용자를 보낼 하도록 선택 하지 않으면.  

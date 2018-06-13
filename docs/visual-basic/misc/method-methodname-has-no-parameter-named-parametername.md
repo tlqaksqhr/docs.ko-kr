@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638319"
 ---
 # <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a>메서드 &#39; &lt;methodname&gt; &#39; 이라는 매개 변수가 없습니다 &#39; &lt;parametername&gt;&#39;
 제공한 명명된 인수가 대상 메서드의 인수와 일치하지 않습니다.  

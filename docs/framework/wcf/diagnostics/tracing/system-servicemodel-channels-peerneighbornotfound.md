@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478682"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a>System.ServiceModel.Channels.PeerNeighborNotFound
 해당 환경이 환경 목록에 없으므로 환경에 대한 작업을 수행할 수 없습니다.  

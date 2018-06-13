@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809929"
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  

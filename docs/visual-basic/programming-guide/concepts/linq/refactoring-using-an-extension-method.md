@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647906"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
 이 예제에서는 앞의 예에서 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링 하 합니다.  

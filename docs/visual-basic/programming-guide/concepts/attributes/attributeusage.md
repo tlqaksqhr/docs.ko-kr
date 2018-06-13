@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643410"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 사용자 지정 특성 클래스를 사용하는 방법을 결정합니다. `AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다. 기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.  

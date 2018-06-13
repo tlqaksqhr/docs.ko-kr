@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599514"
 ---
 # <a name="iterator-visual-basic"></a>반복기(Visual Basic)
 지정 하는 함수 또는 `Get` 접근자가 반복기입니다.  

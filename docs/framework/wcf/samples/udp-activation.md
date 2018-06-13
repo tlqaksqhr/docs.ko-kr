@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810033"
 ---
 # <a name="udp-activation"></a>UDP 활성화
 이 샘플에 따라는 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플. 확장 된 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플은 WAS Windows Process Activation Service ()를 사용 하 여 프로세스 활성화를 지원 하도록 합니다.  

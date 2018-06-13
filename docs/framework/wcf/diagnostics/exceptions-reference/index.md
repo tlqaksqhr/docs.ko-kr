@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474469"
 ---
 # <a name="exceptions-reference"></a>예외 참조
 이 섹션에서는 Windows Communication Foundation (WCF)에서 생성 된 다음 영역에서 모든 예외를 나열 합니다.  

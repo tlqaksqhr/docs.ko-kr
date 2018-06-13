@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808841"
 ---
 # <a name="securing-services"></a>서비스에 보안 설정
 Windows Communication Foundation (WCF) 서비스의 보안을 두 가지 기본 요구 사항 구성: 전송 보안 및 권한 부여 합니다. (한 세 번째 요구 사항인 보안 이벤트 감사에 대 한 자세한 내용은 [감사](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) 간단히 말해서 전송 보안은 인증(서비스와 클라이언트 모두에 대해 ID 확인), 기밀성(메시지 암호화) 및 무결성(변조 확인을 위한 디지털 서명)을 포함합니다. 권한 부여는 리소스에 대한 액세스 제어입니다. 예를 들어, 권한 있는 사용자에게만 파일 읽기를 허용합니다. WCF의 기능을 사용 하면 두 가지 주요 요구 사항이 쉽게 구현 됩니다.  

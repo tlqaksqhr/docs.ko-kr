@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810059"
 ---
 # <a name="building-clients"></a>클라이언트 빌드
 이 섹션의 항목을 만들고 Windows Communication Foundation (WCF) 클라이언트를 사용 하는 방법을 보여 줍니다.  

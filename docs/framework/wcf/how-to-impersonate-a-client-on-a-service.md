@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810228"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>방법: 서비스에서 클라이언트 가장
 Windows Communication Foundation (WCF) 서비스에 클라이언트를 가장 하는 서비스를 클라이언트를 대신해 작업을 수행할 수 있습니다. 예를 들어, 시스템의 디렉터리 및 파일에 대한 액세스 또는 SQL Server 데이터베이스에 대한 액세스와 같이 ACL(액세스 제어 목록) 검사 관련 작업의 경우 ACL 검사는 클라이언트 사용자 계정에 대해 수행됩니다. 이 항목에서는 Windows 도메인의 클라이언트를 사용하여 클라이언트 가장 수준을 설정하는 데 필요한 기본적인 단계에 대해 설명합니다. 이와 관련된 작업 예제는 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하십시오. 클라이언트 가장에 대 한 자세한 내용은 참조 [위임 및 가장](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  

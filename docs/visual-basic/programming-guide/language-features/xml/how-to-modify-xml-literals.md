@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656047"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>방법: XML 리터럴 수정(Visual Basic)
 Visual Basic XML 리터럴 수정 하는 편리한 방법을 제공 합니다. 추가 하거나 요소 및 특성을 삭제할 수 있으며 기존 요소를 새 XML 요소로 바꿀 수도 있습니다. 이 항목에서는 기존 XML 리터럴 수정 하는 방법의 몇 가지 예를 제공 합니다.  
