@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640407"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>네트워크 연결을 사용할 수 없어 ping을 실행할 수 없습니다.
 네트워크 연결을 사용할 수 없으므로 작업을 수행할 수 없습니다.  

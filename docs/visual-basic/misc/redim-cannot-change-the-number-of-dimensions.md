@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640383"
 ---
 # <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39;ReDim&#39; 차원 수를 변경할 수 없습니다
 작업에서 `ReDim` 문을 사용하여 배열 차수(차원 수)를 변경하려고 합니다. `ReDim` 은 이전에 선언된 배열의 차원 크기를 하나 이상 변경할 수 있지만 배열 차수를 변경할 수는 없습니다.  

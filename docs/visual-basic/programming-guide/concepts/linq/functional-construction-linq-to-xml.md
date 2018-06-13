@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644292"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>함수 생성 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다. 함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.  

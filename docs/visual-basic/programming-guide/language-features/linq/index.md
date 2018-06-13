@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648993"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
 이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  

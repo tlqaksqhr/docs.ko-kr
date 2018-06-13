@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649765"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)
 프로시저를 호출 하는 경우 일반적으로에 하나 이상의 인수를 전달 합니다. 각 인수는 기본 프로그래밍 요소에 해당합니다. 기본 요소와 인수 자체 수정 가능 하거나 수정할 수 있습니다.  

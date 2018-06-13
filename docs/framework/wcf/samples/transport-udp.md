@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808418"
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법을 보여 줍니다. 이 샘플에서는 WCF 최선의 구현 방법 및 채널 프레임 워크를 사용 하 여 wcf에서 사용자 지정 전송을 만드는 권장된 절차를 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  

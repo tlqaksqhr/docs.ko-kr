@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644305"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체를 사용한 상속 구현(Visual Basic)
 Visual Basic 클래스를 파생 시켜 `Public` 도 이전 버전의 Visual Basic에 생성 된 COM 개체의 클래스. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성와 마찬가지로 오버 로드 및 다른 기본 클래스의 메서드를 재정의 하거나 오버 로드 합니다. COM 개체에서 상속 다시 컴파일하지 않을 기존 클래스 라이브러리에 있는 경우에 유용 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640370"
 ---
 # <a name="the-source-folder-does-not-exist"></a>소스 폴더가 없습니다.
 존재하지 않는 소스 폴더를 참조하는 작업을 시도했습니다. 파일 경로를 잘못 제공했기 때문일 수 있습니다.  

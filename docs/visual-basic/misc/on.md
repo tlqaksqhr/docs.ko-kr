@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640595"
 ---
 # <a name="on-visual-basic"></a>On(Visual Basic)
 런타임 오류에 대 한 응답 또는 컴파일러 옵션을 설정 합니다.  
