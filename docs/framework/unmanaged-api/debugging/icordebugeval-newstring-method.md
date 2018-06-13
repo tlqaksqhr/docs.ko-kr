@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412232"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString 메서드
 지정 된 내용으로 새 문자열 인스턴스를 할당합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537566"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤 사용자 하나 이상의 항목을 선택할 수 있는 목록을 표시 합니다. 스크롤 막대에 자동으로 추가 됩니다 총 항목 수가 표시 될 수 있는 수를 초과 하면는 <xref:System.Windows.Forms.ListBox> 제어 합니다. 경우는 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `true`, 여러 열에 있는 항목을 표시 하는 목록 상자 및 가로 스크롤 막대가 나타납니다. 경우는 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `false`, 단일 열에 있는 항목을 표시 하는 목록 상자 및 세로 스크롤 막대가 나타납니다. 때 <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> 로 설정 된 `true`, 항목 수에 관계 없이 스크롤 막대가 나타납니다. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> 속성 결정 목록 항목의 수를 한 번에 선택할 수 있습니다.  

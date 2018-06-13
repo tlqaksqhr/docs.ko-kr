@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546086"
 ---
 # <a name="performance"></a>성능
 응용 프로그램 디자인에 대 한 모범 사례 이해 만전 필요한 응용 프로그램 성능을 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 개발 합니다. 고성능 구축에 추가 정보를 제공 하는이 섹션의 항목 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  

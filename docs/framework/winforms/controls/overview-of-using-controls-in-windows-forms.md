@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537364"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
 이 항목 Windows Forms 응용 프로그램의 필수 요소에 설명 하 고 컨트롤을 사용 하는 Windows Forms 응용 프로그램의 이벤트를 처리 하는 간단한 예를 제공 합니다.  

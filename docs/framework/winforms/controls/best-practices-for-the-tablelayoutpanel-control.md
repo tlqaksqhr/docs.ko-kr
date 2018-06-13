@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526455"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤에 대한 유용한 정보
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 Windows Forms에서 사용 하기 전에 신중 하 게 고려해 야 하는 강력한 레이아웃 기능을 제공 합니다.  

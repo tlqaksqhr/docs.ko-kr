@@ -5,6 +5,7 @@ ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
+ms.locfileid: "25726590"
 ---
 # <a name="asynchronous-and-concurrent-programming-in-f"></a>F #에서 비동기 및 동시 프로그래밍 #
 

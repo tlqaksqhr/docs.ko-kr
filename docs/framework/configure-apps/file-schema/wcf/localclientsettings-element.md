@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750949"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>&lt;localClientSettings&gt; 요소
 이 바인딩에 대한 로컬 클라이언트의 보안 설정을 지정합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528325"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 속성 정의
 속성의 개요는 [속성 개요](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)를 참조하세요. 속성을 정의할 때 다음과 같은 몇 가지 주요 고려 사항이 있습니다.  

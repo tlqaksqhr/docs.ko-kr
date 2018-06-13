@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539031"
 ---
 # <a name="advanced-ink-handling"></a>고급 잉크 처리
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 함께 제공 되는 <xref:System.Windows.Controls.InkCanvas>, 수집 및 잉크 디스플레이 즉시 시작 하도록 응용 프로그램에 넣을 수 요소입니다. 그러나 경우는 <xref:System.Windows.Controls.InkCanvas> 제어는 충분히 상세 제어 수준을 제공 하지 않습니다, 사용자 고유의 잉크 컬렉션 및 잉크 렌더링 클래스를 사용 하 여 사용자 지정 하 여 더 높은 수준의 제어를 유지 관리할 수 있습니다 <xref:System.Windows.Input.StylusPlugIns>합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216188"
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 상황별 키워드는 코드에서 특정 의미를 제공하는 데 사용되지만 C#의 예약어입니다. 다음 상황별 키워드를 이 섹션에서 소개합니다.  

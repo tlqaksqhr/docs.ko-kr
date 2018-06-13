@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538410"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows Forms의 마우스 캡처
 *마우스 캡처* 컨트롤 명령 모든 마우스 입력을 받는 시점을 나타냅니다. 컨트롤이 마우스를 캡처, 포인터의 테두리 내는 여부에 관계 없이 마우스 입력을 받습니다.  

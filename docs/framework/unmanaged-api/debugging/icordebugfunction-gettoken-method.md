@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acfb8910df6e20bf55ed33fdbb9b1c30d22f4684
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412054"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken 메서드
 이 함수에 대 한 메타 데이터를 토큰을 가져옵니다.  

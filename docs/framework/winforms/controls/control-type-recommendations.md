@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528946"
 ---
 # <a name="control-type-recommendations"></a>컨트롤 형식 권장 사항
 .NET Framework는 새 컨트롤을 개발 및 구현하는 기능을 제공합니다. 익숙한 사용자 정의 컨트롤뿐 아니라 이제 고유한 그리기를 수행하는 사용자 지정 컨트롤을 작성할 수 있으며 상속을 통해 기존 컨트롤의 기능을 확장할 수도 있습니다. 만들 컨트롤 형식을 결정하기 어려울 수 있습니다. 이 섹션에서는 상속할 수 있는 다양한 컨트롤 형식 간의 차이점을 요약하고 프로젝트에 대해 선택할 형식과 관련된 고려 사항을 제공합니다.  

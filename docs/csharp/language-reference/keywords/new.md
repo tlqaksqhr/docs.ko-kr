@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266073"
 ---
 # <a name="new-c-reference"></a>new(C# 참조)
 C#에서는 `new` 키워드를 연산자, 한정자 또는 제약 조건으로 사용할 수 있습니다.  

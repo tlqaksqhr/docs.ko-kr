@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410194"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>지원되는 UI 자동화 컨트롤 패턴 가져오기
 > [!NOTE]

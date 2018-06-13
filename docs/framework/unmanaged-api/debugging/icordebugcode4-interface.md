@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 624db77f0db2fe374e16abae64b6bf6ad290baa5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411436"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 인터페이스
 디버거를 지역 변수 및 함수에 인수를 열거 하는 메서드를 제공 합니다.  

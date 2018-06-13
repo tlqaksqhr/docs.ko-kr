@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541300"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize
 사용자 지정 컨트롤 노출 하는 속성으로 컬렉션 경우도 있습니다. 이 연습에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 디자인 타임에 컬렉션을 serialize 하는 방법을 제어 하는 클래스입니다. 적용 된 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 컬렉션 속성에 값을 입력 하면 속성을 serialize 합니다.  

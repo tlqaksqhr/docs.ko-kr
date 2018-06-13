@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546954"
 ---
 # <a name="planning-for-application-performance"></a>응용 프로그램 성능 계획
 성공적인 성능 목표를 달성 성능 전략 개발 정도에 따라 다릅니다. 계획은 모든 제품 개발의 첫 번째 단계입니다. 이 항목에서는 성능이 현저히 전략을 개발 하기 위한 매우 간단한 몇 가지 규칙을 설명 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527286"
 ---
 # <a name="matrix-representation-of-transformations"></a>매트릭스에 의한 변형 표시
 m × n 행렬은 행 m과 n 개의 열으로 정렬 하는 숫자 집합입니다. 다음 그림에서는 몇 가지 매트릭스를 보여 줍니다.  
