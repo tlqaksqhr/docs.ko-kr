@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649739"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>방법: 상수 선언(Visual Basic)
 사용 하면는 `Const` 문을 상수를 선언 하 고 해당 값을 설정 합니다. 상수를 선언 하 여 값으로 의미 있는 이름을 할당 합니다. 상수 선언 되 면 수정 또는 새 값을 지정할 수 없습니다.  

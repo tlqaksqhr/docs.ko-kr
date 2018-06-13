@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458088"
 ---
 # <a name="f-component-design-guidelines"></a>F # 구성 요소 디자인 지침
 

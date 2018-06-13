@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651520"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>방법: 값 변경에 대해 프로시저 인수 보호(Visual Basic)
 프로시저 매개 변수로 선언 된 경우 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic 프로시저 코드에 호출 코드의 기반이 되는 프로그래밍 요소에 대 한 직접 참조를 제공 합니다. 이렇게 하면 프로시저가 호출 코드의 기반이 되는 값을 변경할 수 있습니다. 일부 경우에서는 호출 코드에서 이러한 변경 으로부터 보호 하려고 할 수 있습니다.  

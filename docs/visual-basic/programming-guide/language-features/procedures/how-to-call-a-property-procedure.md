@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654819"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>방법: 속성 프로시저 호출(Visual Basic)
 속성에 값을 저장 하거나 값을 검색 하는 속성 프로시저를 호출 합니다. 속성 변수에 액세스 하는 동일한 방식으로 액세스 합니다.  

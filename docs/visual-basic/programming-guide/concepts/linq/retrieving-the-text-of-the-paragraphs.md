@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647152"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>(Visual Basic) 단락의 텍스트 검색
 이 예제에서는 앞의 예에서 [단락 및 (Visual Basic) 해당 스타일 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  

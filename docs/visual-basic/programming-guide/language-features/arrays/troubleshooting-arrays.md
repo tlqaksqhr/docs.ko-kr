@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654270"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>배열 문제 해결(Visual Basic)
 이 페이지는 배열에서 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  

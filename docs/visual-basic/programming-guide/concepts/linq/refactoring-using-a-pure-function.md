@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645017"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수 (Visual Basic)를 사용 하 여 리팩터링
 다음 예제에서는 앞의 예에서 리팩터링 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)순수 정적 메서드에 이동단락의텍스트를찾기위해코드를이예제에서는순수함수를사용하려면`ParagraphText`.  

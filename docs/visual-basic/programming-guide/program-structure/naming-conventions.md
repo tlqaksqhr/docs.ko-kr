@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651920"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 명명 규칙
 Visual Basic 응용 프로그램의 요소 이름을 지정할 때 해당 이름의 첫 번째 문자는 영문자 또는 밑줄 이어야 합니다. 단, 이름이 밑줄로 시작 준수 하지 않는 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS).  

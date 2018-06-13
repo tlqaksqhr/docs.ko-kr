@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648696"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic의 문자열 조작 메서드 유형
 분석 및 나 문자열을 조작 하는 여러 가지가 있습니다. 일부 메서드는 Visual Basic 언어의 일부 이며 다른 사용자에 내재 된는 `String` 클래스입니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645956"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 문서의 스타일 부분
 이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.  

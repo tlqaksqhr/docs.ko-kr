@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636593"
 ---
 # <a name="myapplicationlog-cannot-determine-the-amount-of-free-disk-space"></a>My.Application.Log에서 사용 가능한 디스크 공간의 크기를 확인할 수 없습니다.
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스에서 사용 가능한 디스크 공간의 크기를 확인할 수 없습니다.  

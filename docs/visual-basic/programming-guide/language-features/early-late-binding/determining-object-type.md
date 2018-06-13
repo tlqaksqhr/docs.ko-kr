@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648296"
 ---
 # <a name="determining-object-type-visual-basic"></a>개체 형식 확인(Visual Basic)
 일반 개체 변수 (즉, 변수 선언으로 `Object`) 모든 클래스의 개체를에서 포함할 수 있습니다. 형식의 변수를 사용 하는 경우 `Object`, 개체의 클래스를 기반으로 하는 다른 작업을 수행 해야 할 수; 예를 들어 일부 개체 수 지원 하지 않습니다는 특정 속성 또는 메서드. Visual Basic에서 개체 변수에 저장 됩니다 개체의 유형을 결정 하는 두 가지 방법을 제공:는 `TypeName` 함수 및 `TypeOf...Is` 연산자입니다.  

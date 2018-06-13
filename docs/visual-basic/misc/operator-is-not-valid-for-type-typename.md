@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638533"
 ---
 # <a name="operator-is-not-valid-for-type-39lttypenamegt39"></a>연산자 종류에 적합 하지 않습니다. &#39; &lt;typename&gt;&#39;
 연산자가 형식에 적합하지 않습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636619"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>명명된 인수는 ParamArray 매개 변수와 일치할 수 없습니다.
 매개 변수 배열이 값으로 전달되어야 합니다.  

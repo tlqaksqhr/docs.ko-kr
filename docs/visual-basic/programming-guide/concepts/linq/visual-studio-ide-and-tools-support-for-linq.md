@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646639"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE 및 LINQ (Visual Basic)에 대 한 지원 되는 도구
 Visual Studio IDE(통합 개발 환경)는 LINQ 응용 프로그램 개발을 지원하는 다음과 같은 기능을 제공합니다.  

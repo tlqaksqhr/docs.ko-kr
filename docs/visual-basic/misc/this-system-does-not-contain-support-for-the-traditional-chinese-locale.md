@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641746"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>이 시스템은 중국어 번체 로캘을 지원하지 않습니다.
 `VbStrConv.TraditionalChinese` 열거형 멤버를 사용하려고 했지만 시스템이 중국어 번체 로캘을 지원하지 않습니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655344"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 사용 되는 변수 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 작업에는 강력한 형식이 며 서로 호환 되어야 합니다. 강력한 형식 지정 데이터 원본, 쿼리 자체 및 쿼리 실행에 사용 됩니다. 다음 그림에 설명 하는 데 사용 되는 용어를 식별 한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다. 쿼리 부분에 대 한 자세한 내용은 참조 [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34456642"
 ---
 # <a name="methods"></a>메서드
 

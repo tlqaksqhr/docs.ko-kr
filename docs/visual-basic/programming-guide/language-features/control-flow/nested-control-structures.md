@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648074"
 ---
 # <a name="nested-control-structures-visual-basic"></a>중첩 제어 구조(Visual Basic)
 예를 들어 다른 제어 문의 내부에 제어 문을 배치할 수 있습니다는 `If...Then...Else` 블록 내에 `For...Next` 루프입니다. 다른 컨트롤 문 안에 있는 제어 문을 라고 *중첩*합니다.  

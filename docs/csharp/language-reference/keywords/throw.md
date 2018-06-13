@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457505"
 ---
 # <a name="throw-c-reference"></a>throw(C# 참조)
 프로그램 실행 중 예외 발생 신호를 보냅니다.  

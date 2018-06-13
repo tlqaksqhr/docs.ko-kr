@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457802"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. 및 ?[] Null 조건부 연산자(C# 및 Visual Basic)
 멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 Null에서 왼쪽 피연산자의 값을 테스트합니다. 왼쪽 피연산자가 `null`로 계산하는 경우 `null`을 반환합니다. 

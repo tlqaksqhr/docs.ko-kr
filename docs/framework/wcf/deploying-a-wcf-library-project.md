@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803025"
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF 라이브러리 프로젝트 배포
 이 항목에서는 Windows Communication Foundation (WCF) 서비스 라이브러리 프로젝트를 배포 하는 방법에 대해 설명 합니다.  

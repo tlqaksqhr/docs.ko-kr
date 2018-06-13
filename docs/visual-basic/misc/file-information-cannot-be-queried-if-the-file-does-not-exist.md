@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638485"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>파일이 없으면 파일 정보를 쿼리할 수 없습니다.
 <xref:System.IO.FileInfo> 개체에서 존재하지 않는 파일 정보를 쿼리하려고 했습니다. 이는 일반적으로 파일 이름을 제공할 때 생긴 실수 때문입니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656330"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>자동 구현 속성(Visual Basic)
 *자동 구현 속성* 신속 하 게 하는 코드를 작성 하지 않고도 클래스의 속성을 지정할 수 있도록 `Get` 및 `Set` 속성입니다. 자동 구현 속성에 대한 코드를 작성하면 Visual Basic 컴파일러에서 관련 `Get` 및 `Set` 프로시저가 생성될 뿐만 아니라 속성 변수를 저장하는 전용 필드가 자동으로 만들어집니다.  

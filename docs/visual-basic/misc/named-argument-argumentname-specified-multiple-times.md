@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635761"
 ---
 # <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a>명명 된 인수 &#39; &lt;argumentname&gt; &#39; 여러 번 지정 했습니다.
 명명된 인수를 두 번 이상 지정했습니다.  

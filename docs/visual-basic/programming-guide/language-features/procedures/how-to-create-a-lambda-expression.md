@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653548"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 만들기(Visual Basic)
 A *람다 식을* 은 함수 또는 서브루틴에 이름이 없습니다입니다. 람다 식은 대리자 형식이 유효한 모든 곳에서 사용할 수 있습니다.  

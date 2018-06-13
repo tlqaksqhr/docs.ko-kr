@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647685"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>방법: 문자열 내에서 검색(Visual Basic)
 이 예제에서는 호출는 <xref:System.String.IndexOf%2A> 에서 메서드는 <xref:System.String> 개체 맨 처음 발견 되는 부분 문자열의 인덱스를 보고 합니다.  

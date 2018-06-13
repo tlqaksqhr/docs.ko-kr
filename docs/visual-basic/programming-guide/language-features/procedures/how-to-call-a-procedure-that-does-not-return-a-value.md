@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649050"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>방법: 값을 반환하지 않는 프로시저 호출(Visual Basic)
 A `Sub` 프로시저가 호출 코드에 값을 반환 하지 않습니다. 하면 명시적으로 호출 독립 실행형 호출 문을 사용 합니다. 식 내에서 프로시저 이름을 사용 하 여 호출할 수 없습니다.  

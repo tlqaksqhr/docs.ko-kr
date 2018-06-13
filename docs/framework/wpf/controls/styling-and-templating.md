@@ -20,6 +20,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457760"
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 응용 프로그램에 따라 모양을 광범위하게 사용자 지정할 수 있지만 응용 프로그램 내에서 또는 응용 프로그램 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  

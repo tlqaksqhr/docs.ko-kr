@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644848"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>샘플 XML 파일: 통합된 구매 주문
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일은 여러 회사에 속한 모양이 다른 구매 주문의 집합입니다. 각 회사의 구매 주문은 별도의 네임스페이스에 있습니다.  

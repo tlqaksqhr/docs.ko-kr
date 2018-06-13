@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804478"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
 *identity* 기능 Windows Communication Foundation (WCF) 클라이언트는 서비스의 예상된 id를 미리 지정할 수 있습니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (참조에 대 한 id 및 작동 방법 설명은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

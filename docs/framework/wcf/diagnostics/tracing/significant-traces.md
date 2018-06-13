@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804715"
 ---
 # <a name="significant-traces"></a>중요한 추적
 이 항목에서는 일부 Windows Communication Foundation (WCF)에서 내보낸 주요 추적 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647620"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>방법: Visual Basic에서 Object를 다른 형식으로 변환
 변환 된 `Object` 같은 변환 키워드를 사용 하 여 다른 데이터 형식으로 변수 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)합니다.  

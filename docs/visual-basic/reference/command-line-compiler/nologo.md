@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648543"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 컴파일 시 저작권 배너 및 정보 메시지를 표시를 하지 않습니다.  

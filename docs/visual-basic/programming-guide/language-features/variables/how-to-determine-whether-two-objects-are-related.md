@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649827"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>방법: 두 개체가 관련이 있는지 확인(Visual Basic)
 생성 된 클래스 간의 관계를 확인 하려면 두 개체를 비교할 수 있습니다. <xref:System.Type.IsInstanceOfType%2A> 의 메서드는 <xref:System.Type?displayProperty=nameWithType> 반환 클래스 `True` 지정된 된 클래스는 현재 클래스에서 상속 하는 경우 또는 현재 형식이 지정된 된 클래스에서 지 원하는 인터페이스인 경우.  

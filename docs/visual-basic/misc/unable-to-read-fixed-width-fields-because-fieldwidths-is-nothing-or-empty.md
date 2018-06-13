@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641055"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>FieldWidths가 Nothing이거나 비어 있기 때문에 고정 폭 필드를 읽을 수 없습니다.
 `TextFieldParser` 속성이 `FieldWidths` 으로 설정되거나 비어 있기 때문에 `Nothing` 가 고정 폭 필드를 읽을 수 없습니다.  

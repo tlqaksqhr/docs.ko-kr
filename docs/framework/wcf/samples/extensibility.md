@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805384"
 ---
 # <a name="extensibility"></a>확장성
 이 섹션에는 사용자 지정 확장성 및 Windows Communication Foundation (WCF)의 기타 기능을 처리 하는 샘플이 들어 있습니다.  

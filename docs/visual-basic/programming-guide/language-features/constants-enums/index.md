@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646394"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic의 상수 및 열거형
 상수는 변경되지 않는 값 대신 의미 있는 이름을 사용하는 방법입니다. 상수는 응용 프로그램 실행 중 변함없이 유지되는 값을 저장합니다. 상수를 사용하여 숫자 대신 의미 있는 이름을 제공하여 코드의 가독성을 향상할 수 있습니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644014"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>방법: 특정 자식 요소 (Visual Basic)으로 요소 찾기
 이 항목에서는 지정된 값을 가진 자식 요소가 포함된 특정 요소를 찾는 방법을 보여 줍니다.  

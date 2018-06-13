@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810150"
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다. 이 샘플에서는 `wsHttpBinding` 바인딩을 사용합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803139"
 ---
 # <a name="endpoint-performance-counters"></a>끝점 성능 카운터
 끝점 성능 카운터는 끝점이 메시지를 수신하는 방식을 나타내는 데이터를 저장합니다. 이러한 카운터는 성능 모니터에서 볼 때 `ServiceModelEndpoint 4.0.0.0` 성능 개체 아래에 있습니다. 인스턴스 이름은 다음 패턴으로 지정됩니다.  

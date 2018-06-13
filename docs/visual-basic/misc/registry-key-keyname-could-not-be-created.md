@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638425"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>레지스트리 키 &#39; &lt;keyname&gt; &#39; 만들 수 없습니다
 지정된 레지스트리 키를 만들 수 없습니다. 보안 권한이 없기 때문일 수 있습니다.  

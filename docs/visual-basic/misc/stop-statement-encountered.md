@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640321"
 ---
 # <a name="stop-statement-encountered"></a>Stop 문을 발견했습니다.
 실행을 중지하는 `Stop` 문을 발견했습니다.  

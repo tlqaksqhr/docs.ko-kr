@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648166"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
 이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법에 설명 합니다.  

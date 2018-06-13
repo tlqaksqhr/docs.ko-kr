@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636554"
 ---
 # <a name="file-39ltfilenamegt39-is-write-protected"></a>파일 &#39; &lt;filename&gt; &#39; 쓰기 금지 되어
 쓰려는 파일이 쓰기 금지되어 있으므로 변경할 수 없습니다.  

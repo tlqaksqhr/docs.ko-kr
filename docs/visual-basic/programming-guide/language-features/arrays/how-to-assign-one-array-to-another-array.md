@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647932"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열에 다른 배열 할당(Visual Basic)
 배열 개체 이기 때문에 다른 개체 형식 처럼 대입 문에서 사용할 수 있습니다. 배열 변수는 배열 요소와 순위 및 길이 정보를 구성 하는 데이터는 포인터를 보유 하 고 할당만이 포인터를 복사 합니다.  

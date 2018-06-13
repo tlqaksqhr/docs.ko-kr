@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639757"
 ---
 # <a name="specified-dll-function-not-found"></a>지정한 DLL 함수를 찾을 수 없습니다.
 사용자 라이브러리 참조에서 DLL(동적 연결 라이브러리)을 찾았지만 지정된 DLL 함수를 DLL 내에서 찾지 못했습니다.  

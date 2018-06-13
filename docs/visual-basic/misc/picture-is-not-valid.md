@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638098"
 ---
 # <a name="picture-is-not-valid"></a>그림이 잘못되었습니다.
 폼 또는 컨트롤의 `Picture` 속성에 비트맵, 아이콘 또는 Windows 메타파일 이외의 그래픽 형식을 할당하려고 했습니다.  

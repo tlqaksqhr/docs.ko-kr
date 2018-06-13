@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653314"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>방법: 익명 형식 선언에서 속성 이름 및 형식 유추(Visual Basic)
 익명 형식은 속성의 데이터 형식을 직접 지정하는 메커니즘을 제공하지 않습니다. 모든 속성의 형식이 유추됩니다. 다음 예제에서 `Name` 및 `Price` 의 형식은 이를 초기화하는 데 사용되는 값에서 직접 유추됩니다.  

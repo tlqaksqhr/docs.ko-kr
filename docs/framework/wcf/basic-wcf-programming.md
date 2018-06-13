@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803743"
 ---
 # <a name="basic-wcf-programming"></a>기본 WCF 프로그래밍
 이 섹션에서는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 기본 사항.  

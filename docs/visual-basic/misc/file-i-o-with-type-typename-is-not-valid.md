@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636489"
 ---
 # <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>형식의 파일 I/O &#39; &lt;typename&gt; &#39; 사용할 수 없습니다
 지원되지 않는 형식을 파일에 쓰려고 합니다.  

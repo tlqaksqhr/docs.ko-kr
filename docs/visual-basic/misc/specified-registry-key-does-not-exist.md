@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639602"
 ---
 # <a name="specified-registry-key-does-not-exist"></a>지정한 레지스트리 키가 없습니다.
 지정된 레지스트리 키가 존재하지 않는 경우  

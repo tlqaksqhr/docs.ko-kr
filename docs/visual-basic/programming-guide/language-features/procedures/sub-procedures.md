@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652567"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 프로시저(Visual Basic)
 A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인는 `Sub` 및 `End Sub` 문. `Sub` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 하지만 호출 코드에는 값을 반환 하지는 않습니다.  

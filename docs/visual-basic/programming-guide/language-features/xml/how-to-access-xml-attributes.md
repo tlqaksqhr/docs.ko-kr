@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649034"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>방법: XML 특성 액세스(Visual Basic)
 이 예에서는 XML 요소에 XML 특성 이름으로 액세스할 특성 축 속성을 사용 하는 방법을 보여 줍니다. 사용 하 여 특히는 `type` 특성 축 속성에 명명 된 특성에 액세스 하려면 `type` 에 `phone` 개체입니다.  

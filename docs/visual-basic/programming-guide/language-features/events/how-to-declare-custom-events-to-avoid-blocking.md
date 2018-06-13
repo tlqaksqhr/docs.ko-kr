@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646928"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>방법: 차단을 방지하는 사용자 지정 이벤트 선언(Visual Basic)
 이 하나의 이벤트 처리기는 후속 이벤트 처리기를 차단 하지 중요 한 몇 가지 경우가 있습니다. 사용자 지정 이벤트의 이벤트 처리기를 비동기적으로 호출 하려면 이벤트를 허용 합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647216"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic의 형식 변환
 데이터 형식을 다른 형식으로 값을 변경 하는 프로세스 라고 *변환*합니다. 변환에는 하나 *확대* 또는 *축소*는 형식의 데이터 용량에 따라 합니다. 또한 *암시적* 또는 *명시적*소스 코드의 구문에 따라 합니다.  

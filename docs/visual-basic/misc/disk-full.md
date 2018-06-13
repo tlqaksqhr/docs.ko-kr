@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635579"
 ---
 # <a name="disk-full-visual-basic"></a>디스크가 꽉 찼습니다(Visual Basic).
 디스크에 `Print`, `Write`또는 `FileClose` 작업을 완료하거나 필요한 파일을 만들기에 충분한 공간이 없습니다.  

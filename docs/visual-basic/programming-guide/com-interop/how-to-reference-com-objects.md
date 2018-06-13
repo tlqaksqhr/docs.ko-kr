@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643954"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>방법: Visual Basic에서 COM 개체 참조
 Visual Basic의 형식 라이브러리에 있는 COM 개체에 대 한 참조를 추가 합니다. COM 라이브러리에 대 한 interop 어셈블리의 생성이 필요 합니다. COM 개체의 멤버에 대 한 참조는 interop 어셈블리를 라우팅되고 실제 COM 개체에 전달 합니다. Interop 어셈블리를 COM 개체의 응답은 라우팅되고에 전달 하면 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램입니다.  

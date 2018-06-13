@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646580"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>방법: Visual Basic에서 열거형 반복
 열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다. 열거를 반복 하려면 이동할 수 있습니다 사용 하 여 배열에는 <xref:System.Enum.GetValues%2A> 메서드. 사용 하는 열거형 반복할 수도 있습니다는 `For...Each` 문을 사용 하는 <xref:System.Enum.GetNames%2A> 또는 <xref:System.Enum.GetValues%2A> 문자열이 나 숫자 값을 추출 하는 메서드.  

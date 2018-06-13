@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635550"
 ---
 # <a name="code-resource-not-found"></a>코드 리소스를 찾을 수 없습니다.
 코드 리소스의 프로시저를 호출했지만 코드 리소스를 찾을 수 없습니다.  

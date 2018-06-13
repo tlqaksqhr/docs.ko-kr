@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651413"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>방법: 액세스 수준이 혼합된 속성 선언(Visual Basic)
 원하는 경우는 `Get` 및 `Set` 액세스 수준이 서로 속성에 프로시저에서 더 수준을 사용할 수 있습니다는 `Property` 문과 더 제한적인 수준 중 하나에 `Get` 또는 `Set` 문입니다. 일부 속성의 값을 가져올 수 있게 되기를 코드와 값을 변경 하려면 코드의 다른 구성 요소 속성에 액세스 수준이 혼합된를 사용 합니다.  

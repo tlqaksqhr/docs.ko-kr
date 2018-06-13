@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639613"
 ---
 # <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>인수의 형식을 &#39; &lt;argumentname&gt; &#39; 은 &#39; &lt;typename&gt;&#39;, 숫자있지 않습니다
 숫자 인수가 필요한 상황에서 숫자가 아닌 인수가 발생합니다.  

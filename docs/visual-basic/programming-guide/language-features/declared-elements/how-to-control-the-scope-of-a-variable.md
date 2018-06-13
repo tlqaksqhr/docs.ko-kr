@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649193"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수의 범위 제어(Visual Basic)
 변수는 일반적으로 *범위*, 또는 참조를 선언 하면 영역 전체에 대 한 표시 합니다. 경우에 따라 변수의 *액세스 수준* 해당 범위에 영향을 줄 수 있습니다.  

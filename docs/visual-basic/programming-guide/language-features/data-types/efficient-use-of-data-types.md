@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647763"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>데이터 형식의 효율적 사용(Visual Basic)
 할당 된 선언 되지 않은 변수 및 데이터 형식 없이 선언 된 변수는 `Object` 데이터 형식입니다. 이렇게 하면 프로그램을 신속 하 게 작성 하지만 더 느리게 실행 발생할 수 있습니다.  

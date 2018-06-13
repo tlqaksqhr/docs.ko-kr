@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472389"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  

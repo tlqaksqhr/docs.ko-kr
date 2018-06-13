@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647711"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic의 문자열
 이 섹션에서는 Visual Basic에서 문자열 사용에 대 한 기본 개념을 설명 합니다.  
