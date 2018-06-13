@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519002"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+의 브러시 및 채워진 도형
 사각형, 타원, 등의 닫힌된 셰이프 개요와 내부 구성 됩니다. 윤곽선 펜으로 그려지고 브러시로 내부 채워집니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 닫힌 도형의 내부를 채우는 브러시는 여러 클래스 제공: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, 및 <xref:System.Drawing.Drawing2D.PathGradientBrush>합니다. 이 클래스는 모두에서 상속 된 <xref:System.Drawing.Brush> 클래스입니다. 다음 그림에서는 단색 브러시 채워진 사각형 및 타원 빗살 무늬 브러시 채워진 보여 줍니다.  

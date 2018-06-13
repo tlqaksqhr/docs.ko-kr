@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513499"
 ---
 # <a name="designer"></a>Designer
 이 단원에는 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 사용 방법을 보여 주는 샘플이 포함되어 있습니다.  

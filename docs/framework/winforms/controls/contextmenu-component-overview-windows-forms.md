@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526125"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu 구성 요소 개요(Windows Forms)
 > [!IMPORTANT]

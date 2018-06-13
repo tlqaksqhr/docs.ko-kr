@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525049"
 ---
 # <a name="three-categories-of-graphics-services"></a>세 가지 범주의 그래픽 서비스
 Windows Forms의 그래픽 제공 되는 다음 세 가지 광범위 한 범주에 속합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440049"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 인터페이스
 시작 하 고를 만들고 기본 도메인에 액세스 하 고 프로세스에서 실행 중인 모든 도메인을 열거 하는 응용 프로그램 도메인을 구성 하려면 공용 언어 런타임 (CLR)를 명시적으로 중지할 호스트를 사용할 수 있는 메서드를 제공 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519482"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 도구 상자에 포함 하 여 제어 흐름 작업 집합이 제공 <xref:System.Activities.Statements.ForEach%601>, 반복할 수 있도록는 <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` 컬렉션입니다.  

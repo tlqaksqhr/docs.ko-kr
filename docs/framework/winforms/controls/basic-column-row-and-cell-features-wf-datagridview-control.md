@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525496"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능
 많은 기본 동작 `DataGridView` 단일 속성을 설정 하 여 셀, 행 및 열을 수정할 수 있습니다. 이 단원의 항목에서는 이러한 기능 중 가장 일반적으로 사용 중 몇 가지를 설명합니다.  

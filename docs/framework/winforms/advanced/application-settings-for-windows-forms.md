@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517172"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Forms에 대한 응용 프로그램 설정
 Windows Forms의 응용 프로그램 설정 기능을 사용하면 클라이언트에서 사용자 지정 응용 프로그램과 사용자 기본 설정을 쉽게 만들고 저장 및 유지 관리할 수 있습니다. 응용 프로그램 설정을 통해 데이터베이스 연결 문자열과 같은 응용 프로그램 데이터뿐 아니라 도구 모음 위치 및 가장 최근에 사용한 목록과 같은 사용자별 데이터도 저장할 수 있습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512043"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation 데이터 모델
 Windows Workflow Foundation 데이터 모델은 변수, 인수, 식이라는 세 가지 개념으로 구성됩니다. 변수는 데이터 저장소를 나타내고 인수는 활동 내부 및 외부로 흐르는 데이터 흐름을 나타냅니다. 인수는 변수를 참조할 수 있는 식을 사용하여 바인딩(값이 할당)됩니다.  

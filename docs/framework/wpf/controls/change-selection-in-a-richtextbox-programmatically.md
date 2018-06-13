@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551005"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>프로그래밍 방식으로 RichTextBox의 선택 변경
 프로그래밍 방식으로의 현재 선택 영역을 변경 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.RichTextBox>합니다. 사용자가 사용자 인터페이스를 사용 하 여 콘텐츠를 선택 하는 경우이 옵션을이 선택은 같습니다.  

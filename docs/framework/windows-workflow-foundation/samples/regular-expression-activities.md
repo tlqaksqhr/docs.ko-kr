@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519836"
 ---
 # <a name="regular-expression-activities"></a>정규식 활동
 이 샘플에서는 <xref:System.Text.RegularExpressions> 네임스페이스의 정규식 기능을 노출하는 활동 집합을 만드는 방법을 보여 줍니다. 이러한 사용자 지정 활동은 워크플로 응용 프로그램 내에서 사용할 수 있습니다. 정규식에 대 한 자세한 내용은 참조 [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace입니다.  

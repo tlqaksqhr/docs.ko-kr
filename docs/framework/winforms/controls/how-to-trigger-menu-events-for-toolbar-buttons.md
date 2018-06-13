@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535199"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>방법: Toolbar 단추의 메뉴 이벤트 트리거
 > [!NOTE]

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520216"
 ---
 # <a name="tracking-events-reference"></a>추적 이벤트 참조
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 워크플로는 다양한 수명 단계를 거치면서 실행되는 동안 추적 이벤트를 발생시킵니다. 호스트는 이 이벤트의 알림을 신청하여 수명 중에 워크플로 진행 상태를 계속 업데이트할 수 있습니다. 이 단원에서는 발생하는 추적 이벤트를 설명합니다.  

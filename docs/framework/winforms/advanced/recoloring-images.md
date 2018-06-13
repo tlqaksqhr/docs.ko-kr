@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525956"
 ---
 # <a name="recoloring-images"></a>이미지 다시 칠하기
 이미지 색을 조정 하는 과정은 다시 칠하기 합니다. 다시 칠하기의 몇 가지 예는 한 가지 색 다른를 조정 하는 다른 색을 기준으로 색의 강도, 밝기 또는 모든 색의 대비 조정 및 회색 음영으로 변환 변경 됩니다.  

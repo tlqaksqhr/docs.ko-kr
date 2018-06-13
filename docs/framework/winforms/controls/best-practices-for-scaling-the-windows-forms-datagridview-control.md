@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529810"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 최대 확장성을 제공 하도록 설계 되었습니다. 많은 양의 데이터를 표시 해야 하는 경우 많은 양의 메모리를 사용 하거나 사용자 인터페이스 (UI)의 응답 속도 저하를 방지 하려면이 항목에 설명 된 지침을 따라야 합니다. 이 항목에서는 다음과 같은 문제를 설명합니다.  

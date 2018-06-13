@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397636"
 ---
 # <a name="using-udp-services"></a>UDP 서비스 사용
 <xref:System.Net.Sockets.UdpClient> 클래스는 UDP를 사용하여 네트워크 서비스와 통신합니다. <xref:System.Net.Sockets.UdpClient> 클래스의 속성 및 메서드는 UDP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다.  

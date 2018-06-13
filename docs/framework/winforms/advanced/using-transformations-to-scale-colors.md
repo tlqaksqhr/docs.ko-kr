@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525969"
 ---
 # <a name="using-transformations-to-scale-colors"></a>변형을 사용하여 색의 비율 조정
 크기 조정 변환을 숫자는 네 가지 구성 요소 중 하나 이상을 곱합니다. 다음 테이블에 확장을 나타내는 색 매트릭스 항목이 제공 됩니다.  

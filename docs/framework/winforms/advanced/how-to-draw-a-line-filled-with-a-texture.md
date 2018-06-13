@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522190"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>방법: 질감으로 채워진 선 그리기
 단색으로 선 대신, 질감으로 줄을 그릴 수 있습니다. 선 및 곡선 질감으로을 그리려면 만듭니다는 <xref:System.Drawing.TextureBrush> 개체를 전달 하는 <xref:System.Drawing.TextureBrush> 개체를 한 <xref:System.Drawing.Pen.%23ctor%2A> 생성자입니다. 펜의 스트로크 바둑판식으로 배열 된 질감의 특정 픽셀에서 확인 되 면 펜 선 또는 곡선 그리면 및 질감 브러시와 연결 된 비트맵 평면 (눈에 보이지 않게) 타일에 사용 됩니다.  

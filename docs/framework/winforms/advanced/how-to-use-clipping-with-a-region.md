@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522098"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>방법: 영역을 사용하여 클리핑
 속성 중 하나는 <xref:System.Drawing.Graphics> 클래스는 클립 영역입니다. 이 수행한 모든 그리기는 주어진 <xref:System.Drawing.Graphics> 개체의 클립 영역으로 제한 됩니다. <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 클립 영역을 설정할 수 있습니다는 <xref:System.Drawing.Graphics.SetClip%2A> 메서드.  

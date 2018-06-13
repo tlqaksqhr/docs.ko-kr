@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525754"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 구성 요소
 `BackgroundWorker` 폼 이나 컨트롤을 작업을 비동기적으로 실행할 수 있도록 하는 구성 요소입니다.  

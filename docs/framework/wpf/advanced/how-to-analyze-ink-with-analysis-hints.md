@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543604"
 ---
 # <a name="how-to-analyze-ink-with-analysis-hints"></a>방법: 분석 힌트를 사용하여 잉크 분석
 [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) 에 대 한 힌트를 제공는 [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) 연결 되어 있습니다.  힌트에서 지정한 영역에 적용 됩니다는 [System.Windows.Ink.ContextNode.Location%2A](https://msdn.microsoft.com/library/system.windows.ink.contextnode.location(v=vs.100).aspx) 의 속성은 [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) 잉크 분석기를에 추가 컨텍스트를 제공 합니다. 인식 정확도 향상 합니다. [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) 힌트 영역 내에서 가져온 잉크를 분석할 때이 컨텍스트 정보를 적용 합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533545"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>방법: 디자이너를 사용하여 그림 로드(Windows Forms)
 Windows forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 로드 하 고 설정 하 여 폼의 디자인 타임에 그림을 표시할 수는 <xref:System.Windows.Forms.PictureBox.Image%2A> 속성을 유효한 그림을 합니다. 다음 표에서 허용 되는 파일 형식을 보여 줍니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63699f0af69b3a7623c5e9da156c2ff8ae83ccfc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437526"
 ---
 # <a name="icorconfiguration-interface"></a>ICorConfiguration 인터페이스
 공용 언어 런타임 (CLR)를 구성 하기 위한 메서드를 제공 합니다.  

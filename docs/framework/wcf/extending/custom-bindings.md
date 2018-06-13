@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487074"
 ---
 # <a name="custom-bindings"></a>사용자 지정 바인딩
 시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 끝점에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제를 보려면 [사용자 지정 바인딩 샘플](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)합니다. 자세한 내용은 참조 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  

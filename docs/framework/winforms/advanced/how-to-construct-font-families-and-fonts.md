@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520892"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>방법: 글꼴 패밀리 및 글꼴 만들기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 글꼴 패밀리에 글꼴 서체 하지만 다양 한 스타일을 그룹화합니다. 예를 들어 Arial 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.  

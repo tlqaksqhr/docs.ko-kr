@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524858"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>방법: 디자인 타임에 ElementHost 컨트롤 복사하여 붙여넣기
 이 절차에서는 Windows Form에 Windows Presentation Foundation (WPF) 컨트롤을 복사 하는 방법을 보여 줍니다.  

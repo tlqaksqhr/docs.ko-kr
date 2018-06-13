@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527150"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+의 개곡선 및 폐곡선
 다음 그림에서는 두 곡선으로 분할을 보여 줍니다: 개곡선 및 닫힙니다.  

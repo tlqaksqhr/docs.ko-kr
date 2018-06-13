@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519047"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의에서 표면화 된 정책 작업
 이 샘플에서는 ExternalizedPolicy4 활동을 통해 기존를 실행 하는 방법을 보여 줍니다. [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> 개체 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 규칙 엔진을 사용 하 여 직접 Windows Workflow Foundation (WF 4.5) WF 3.5에서 제공 됩니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함 된 WF 3.5 규칙 엔진에 대 한 자세한 내용은 읽으십시오 [Windows Workflow Foundation 규칙 엔진 소개](http://go.microsoft.com/fwlink/?LinkId=166079)합니다. 마이그레이션에 대 한 자세한 정보에 대 한 규칙을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 에 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 마이그레이션 지침을 읽어 보십시오 [마이그레이션 지침](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  

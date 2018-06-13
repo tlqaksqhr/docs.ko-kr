@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513885"
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>.NET framework 4.5 기본 제공 활동 라이브러리
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 확장된 기능이 있는 새로운 활동 라이브러리가 포함됩니다. 활동 유형은 다음을 포함합니다.  

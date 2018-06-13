@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552047"
 ---
 # <a name="frame"></a>프레임
 <xref:System.Windows.Controls.Frame> 컨트롤은 콘텐츠 내에서 콘텐츠 탐색을 지원 합니다. <xref:System.Windows.Controls.Frame> 같은 루트 요소에서 호스팅될 수 <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, 또는 루트 요소에 속하는 콘텐츠 트리 내에서 아일랜드로 합니다.  

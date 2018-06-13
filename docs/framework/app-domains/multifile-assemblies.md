@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742512"
 ---
 # <a name="multifile-assemblies"></a>다중 파일 어셈블리
 명령줄 컴파일러 또는 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]를 Visual C++와 함께 사용하여 다중 파일 어셈블리를 만들 수 있습니다. 어셈블리의 한 파일에 어셈블리 매니페스트가 포함되어 있어야 합니다. 응용 프로그램을 시작하는 어셈블리에는 Main 또는 WinMain 메서드와 같은 진입점도 포함되어 있어야 합니다.  

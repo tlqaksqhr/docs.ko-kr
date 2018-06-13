@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387863"
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 이전에 수행된 관리 코드에서 네이티브 코드로의 전환이 순서대로 수행되지 않은 경우 네이티브 코드에서 관리 코드로 전환하려고 하면 `reentrancy` MDA(관리 디버깅 도우미)가 활성화됩니다.  

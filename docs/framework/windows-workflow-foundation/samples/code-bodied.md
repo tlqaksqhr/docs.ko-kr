@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514842"
 ---
 # <a name="code-bodied"></a>본문 코딩
 이 단원에는 선언적으로 코드로 만든 사용자 지정 활동 샘플이 포함되어 있습니다.  

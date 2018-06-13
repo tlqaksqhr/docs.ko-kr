@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518954"
 ---
 # <a name="using-activity-delegates"></a>활동 대리자 사용
 작업 대리자를 사용하면 활동 작성자는 활동 사용자가 활동 기반 처리기를 제공할 수 있는 특정 시그니처가 있는 콜백을 노출할 수 있습니다. 두 가지 형식의 작업 대리자를 사용할 수 있습니다. <xref:System.Activities.ActivityAction%601>은 반환 값이 없는 작업 대리자를 정의하는 데 사용되고 <xref:System.Activities.ActivityFunc%601>은 반환 값이 있는 작업 대리자를 정의하는 데 사용됩니다.  

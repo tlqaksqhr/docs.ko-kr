@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513977"
 ---
 # <a name="migration"></a>마이그레이션
 이 섹션에 사용 하 여 작성 하는 Windows WF (Workflow Foundation) 콘텐츠를 마이그레이션하는 방법을 보여 주는 샘플이 포함 되어 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 를 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]합니다.  

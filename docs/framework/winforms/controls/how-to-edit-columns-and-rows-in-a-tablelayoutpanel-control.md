@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533509"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 열과 행 편집
 컬렉션 편집기를 사용할 수 있습니다는 <xref:System.Windows.Forms.TableLayoutPanel> 라는 컨트롤의 **열 및 행 스타일** 행과 컨트롤의 열을 편집 하려면 대화 상자.  

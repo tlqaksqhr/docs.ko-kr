@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514349"
 ---
 # <a name="migration-activity-in-wf"></a>WF의 마이그레이션 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 제공 된 <xref:System.Activities.Statements.Interop> 기반으로 하는 워크플로 내의 활동에서 파생 되는 활동을 실행 하기 위한 작업 <xref:System.Activities.Activity>합니다. 자세한 내용은 참조는 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) 섹션.  

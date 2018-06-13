@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534543"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>ToolStripStatusLabel 컨트롤 개요
 <xref:System.Windows.Forms.ToolStripStatusLabel> 에 대해 레이블이 <xref:System.Windows.Forms.StatusStrip>합니다. 마찬가지로 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.ToolStripLabel>, <xref:System.Windows.Forms.ToolStripStatusLabel> 텍스트, 이미지, 또는 둘 다에 대해 클릭할 수 없는 표시 영역을 제공 합니다. <xref:System.Windows.Forms.ToolStripStatusLabel> 에서 호스팅하는 <xref:System.Windows.Forms.StatusStrip>합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474352"
 ---
 # <a name="service-framework-metadata"></a>서비스 프레임워크 메타데이터
 이 항목에서는 서비스 프레임워크 메타데이터에 의해 생성된 모든 예외를 보여 줍니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526838"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>이미지, 비트맵, 아이콘 및 메타파일 사용
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다. `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  

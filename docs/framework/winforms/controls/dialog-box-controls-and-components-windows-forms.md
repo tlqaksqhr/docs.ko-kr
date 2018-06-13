@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527212"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>대화 상자 컨트롤 및 구성 요소(Windows Forms)
 다음 Windows Forms 컨트롤 및 구성 요소는 표준 대화 상자를 제공합니다. 각 대화 상자에서 사용할 수 있는 함수에 대한 자세한 내용은 링크를 참조하세요.  

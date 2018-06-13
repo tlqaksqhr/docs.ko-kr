@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524608"
 ---
 # <a name="how-to-render-images-with-gdi"></a>방법: GDI+를 사용하여 이미지 렌더링
 응용 프로그램에서 파일로 존재하는 이미지를 렌더링하는 데 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 사용할 수 있습니다. 새 개체를 만들어이 작업을 수행는 <xref:System.Drawing.Image> 클래스 (같은 <xref:System.Drawing.Bitmap>) 만들기는 <xref:System.Drawing.Graphics> 참조 하는 그리기 화면을 사용 하려면 개체를 호출 하는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 이미지는 그래픽 클래스에서 표시하는 그리기 화면에 그려집니다. 이미지 편집기를 사용하여 디자인 타임에 이미지 파일을 만들고 편집하고 런타임 시 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 사용하여 렌더링합니다. 자세한 내용은 [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)를 참조하세요.  

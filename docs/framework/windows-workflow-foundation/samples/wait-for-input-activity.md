@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518999"
 ---
 # <a name="wait-for-input-activity"></a>입력 대기 활동
 이 샘플은 워크플로에 명명된 책갈피를 만드는 방법을 보여 줍니다. Windows WF (Workflow Foundation)는 선언적 책갈피 작성에 대 한 활동을 제공 하지 않습니다. 따라서 워크플로에 책갈피가 필요하면 책갈피를 만드는 사용자 지정 활동을 작성해야 합니다. 이 샘플에 정의되어 있는 `WaitForInput` 활동에서 이러한 기능을 제공하므로 사용자가 워크플로 내에 선언적으로 책갈피를 만들 수 있습니다.  

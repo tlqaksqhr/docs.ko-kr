@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471245"
 ---
 # <a name="percent-of-max-concurrent-calls"></a>최대 동시 호출 백분율
 카운터 이름: Percent of Max Concurrent Calls  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d9a8f9aa910054a4541e4ff8c1f7cad63077ba8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439952"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap 메서드
 간접 참조에서 값 방식 마샬링 개체 래핑 해제 됩니다.  

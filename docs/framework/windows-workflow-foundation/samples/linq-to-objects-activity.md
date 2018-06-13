@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516671"
 ---
 # <a name="linq-to-objects-activity"></a>LINQ to Objects 활동
 이 샘플에서는 LINQ to Objects를 사용하여 컬렉션의 요소를 쿼리하는 활동을 만드는 방법을 보여 줍니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520749"
 ---
 # <a name="how-to-create-a-solid-brush"></a>방법: 단색 브러시 만들기
 이 예제에서는 만듭니다는 <xref:System.Drawing.SolidBrush> 에서 사용할 수 있는 개체는 <xref:System.Drawing.Graphics> 모양을 채우는 개체입니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526079"
 ---
 # <a name="why-transformation-order-is-significant"></a>변형 순서의 중요성
 단일 <xref:System.Drawing.Drawing2D.Matrix> 개체는 단일 변환 또는 일련의 변환 저장할 수 있습니다. 후자 보다 복합 변환을 이라고 합니다. 복합 변환 매트릭스 개별 변환 행렬을 곱하여 구합니다.  

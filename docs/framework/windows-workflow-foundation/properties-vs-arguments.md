@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514770"
 ---
 # <a name="properties-vs-arguments"></a>속성 vs입니다. 인수
 데이터를 작업으로 전달하는 데 사용할 수 있는 여러 가지 옵션이 있습니다. <xref:System.Activities.InArgument>를 사용하는 것 외에 표준 CLR 속성이나 공용 <xref:System.Activities.ActivityAction> 속성을 사용하여 데이터를 받는 작업을 개발할 수도 있습니다. 이 항목에서는 적절한 메서드 형식을 선택하는 방법에 대해 설명합니다.  

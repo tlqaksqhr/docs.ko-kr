@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525590"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 컨트롤(Windows Forms)
 Windows Forms `CheckedListBox` 컨트롤 같은 항목의 목록이 표시 됩니다는 <xref:System.Windows.Forms.ListBox> 를 제어 하 고 또한 목록에서 항목 옆에 있는 확인 표시를 표시할 수 있습니다.  
