@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284279"
 ---
 # <a name="perform-left-outer-joins"></a><span data-ttu-id="60c53-103">왼쪽 우선 외부 조인 수행</span><span class="sxs-lookup"><span data-stu-id="60c53-103">Perform left outer joins</span></span>
 <span data-ttu-id="60c53-104">왼쪽 우선 외부 조인은 두 번째 컬렉션에 상호 연결된 요소가 있는지 여부에 관계없이 첫 번째 컬렉션의 각 요소가 반환되는 조인입니다.</span><span class="sxs-lookup"><span data-stu-id="60c53-104">A left outer join is a join in which each element of the first collection is returned, regardless of whether it has any correlated elements in the second collection.</span></span> <span data-ttu-id="60c53-105">LINQ를 통해 그룹 조인의 결과에서 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 메서드를 호출하여 왼쪽 우선 외부 조인을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="60c53-105">You can use LINQ to perform a left outer join by calling the <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> method on the results of a group join.</span></span>  
