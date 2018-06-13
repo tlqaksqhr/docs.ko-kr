@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595188"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>형식 &#39; &lt;typename&gt; &#39; 정의 되어 있지 않습니다
 문이 정의 되지 않은 형식에 대 한 참조를 만들었습니다. 선언문의 형식을 같은 정의 `Enum`, `Structure`, `Class`, 또는 `Interface`합니다.  

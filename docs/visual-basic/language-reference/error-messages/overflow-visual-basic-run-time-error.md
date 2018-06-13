@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594177"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>오버플로가 발생했습니다(Visual Basic 런타임 오류).
 할당 대상의 한계를 초과 하 여 할당 하려고 할 때 오버플로가 발생 했습니다.  

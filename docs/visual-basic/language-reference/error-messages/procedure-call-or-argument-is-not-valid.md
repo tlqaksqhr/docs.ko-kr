@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593657"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>프로시저 호출 또는 인수가 잘못되었습니다(Visual Basic).
 호출의 특정 부분을 완료할 수 없습니다.  

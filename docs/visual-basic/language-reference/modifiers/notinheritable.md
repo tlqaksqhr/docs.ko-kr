@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594703"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable(Visual Basic)
 클래스를 기본 클래스로 사용할 수 없음을 지정 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595968"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock 개체
 시스템 시계에서 현재 현지 시간 및 협정 세계시(그리니치 표준시와 같음)에 액세스하기 위한 속성을 제공합니다.  

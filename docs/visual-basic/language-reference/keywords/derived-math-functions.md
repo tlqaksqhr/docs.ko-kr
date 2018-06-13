@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596810"
 ---
 # <a name="derived-math-functions-visual-basic"></a>파생된 수학 함수(Visual Basic)
 다음 표에의 내장 수학 함수에서 파생 될 수 있는 비 내장 수치 연산 함수는 <xref:System.Math?displayProperty=nameWithType> 개체입니다. 추가 하 여 기본 수치 연산 함수에 액세스할 수 있습니다 `Imports System.Math` 를 파일이 나 프로젝트입니다.  

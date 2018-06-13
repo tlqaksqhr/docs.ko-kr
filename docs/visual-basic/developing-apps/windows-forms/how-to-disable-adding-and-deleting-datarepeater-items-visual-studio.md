@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590811"
 ---
 # <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a>방법: DataRepeater 항목 추가 및 삭제 사용 안 함(Visual Studio)
 기본적으로 사용자가 추가 하 고 수의 항목을 삭제 한 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 제어 합니다. 사용자가 CTRL + N을 눌러 새 항목을 추가할 수 있습니다 때는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> 포커스 했거나이 클릭 하 여는 **AddNewItem** 단추는 <xref:System.Windows.Forms.BindingNavigator> 제어 합니다. 사용자 키를 눌러 항목을 삭제할 수 있습니다 때 삭제 될는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> 포커스 했거나이 클릭 하 여는 **DeleteItem** 단추는 <xref:System.Windows.Forms.BindingNavigator> 제어 합니다.  

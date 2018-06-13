@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593956"
 ---
 # <a name="39optional39-expected"></a>&#39;선택적&#39; 필요 합니다.
 프로시저 선언에서 선택적 인수는 필수 인수에 나옵니다. 모든 인수는 선택적 인수 뒤에 선택적 이어야 합니다.  
