@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571800"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a><span data-ttu-id="8f3b8-102">catch 블록에 특정 예외를 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="8f3b8-102">How to use specific exceptions in a catch block</span></span>
 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569631"
 ---
 # <a name="post-schema-compilation-infoset"></a><span data-ttu-id="02228-102">Post-Schema Compilation Infoset</span><span class="sxs-lookup"><span data-stu-id="02228-102">Post-Schema Compilation Infoset</span></span>
 <span data-ttu-id="02228-103">[World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema)(W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항)에서는 사전 스키마 유효성 검사 및 사후 스키마 컴파일을 위해 노출해야 하는 infoset(정보 집합)에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="02228-103">The [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) discusses the information set (infoset) that must be exposed for pre-schema validation and post-schema compilation.</span></span> <span data-ttu-id="02228-104">XML SOM(스키마 개체 모델)은 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 호출하기 전과 후에 이렇게 노출된 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="02228-104">The XML Schema Object Model (SOM) views this exposure before and after the <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> method of the <xref:System.Xml.Schema.XmlSchemaSet> is called.</span></span>  

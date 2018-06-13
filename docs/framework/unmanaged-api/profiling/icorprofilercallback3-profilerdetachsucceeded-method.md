@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback3::ProfilerDetachSucceeded 메서드"
-ms.custom: 
+title: ICorProfilerCallback3::ProfilerDetachSucceeded 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback3.ProfilerDetachSucceeded Method
 api_location:
@@ -23,48 +15,45 @@ helpviewer_keywords:
 ms.assetid: 05164966-16ce-4cc9-a530-43a640c00711
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d06671917094752287836800ebc492d5f0a5b595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bffe293f7d29c34a22196336533202996f3fd129
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454041"
 ---
-# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="cedfe-102">ICorProfilerCallback3::ProfilerDetachSucceeded 메서드</span><span class="sxs-lookup"><span data-stu-id="cedfe-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
-<span data-ttu-id="cedfe-103">CLR(공용 언어 런타임)이 프로파일러 DLL을 언로드한다고 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
+# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="7616d-102">ICorProfilerCallback3::ProfilerDetachSucceeded 메서드</span><span class="sxs-lookup"><span data-stu-id="7616d-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
+<span data-ttu-id="7616d-103">CLR(공용 언어 런타임)이 프로파일러 DLL을 언로드한다고 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cedfe-104">구문</span><span class="sxs-lookup"><span data-stu-id="cedfe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7616d-104">구문</span><span class="sxs-lookup"><span data-stu-id="7616d-104">Syntax</span></span>  
   
 ```  
 HRESULT ProfilerDetachSucceeded();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="cedfe-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="cedfe-105">Return Value</span></span>  
- <span data-ttu-id="cedfe-106">이 콜백의 반환 값은 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-106">The return value from this callback is ignored.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7616d-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="7616d-105">Return Value</span></span>  
+ <span data-ttu-id="7616d-106">이 콜백의 반환 값은 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-106">The return value from this callback is ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cedfe-107">설명</span><span class="sxs-lookup"><span data-stu-id="cedfe-107">Remarks</span></span>  
- <span data-ttu-id="cedfe-108">`ProfilerDetachSucceeded` 콜백은 모든 스레드가 프로파일러의 코드를 종료한 후에 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="cedfe-109">이 메서드가 호출되면 프로파일러는 UI 또는 로깅 구성 요소에 알림과 같은 소멸자에 적합하지 않은 마지막 작업을 모두 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="cedfe-110">그러나 프로파일러 해야 함수를 호출 하지이 콜백 중 CLR에서 제공 되는 인터페이스에 (예:는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 또는 `IMetaData*` 인터페이스).</span><span class="sxs-lookup"><span data-stu-id="cedfe-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7616d-107">설명</span><span class="sxs-lookup"><span data-stu-id="7616d-107">Remarks</span></span>  
+ <span data-ttu-id="7616d-108">`ProfilerDetachSucceeded` 콜백은 모든 스레드가 프로파일러의 코드를 종료한 후에 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="7616d-109">이 메서드가 호출되면 프로파일러는 UI 또는 로깅 구성 요소에 알림과 같은 소멸자에 적합하지 않은 마지막 작업을 모두 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="7616d-110">그러나 프로파일러 해야 함수를 호출 하지이 콜백 중 CLR에서 제공 되는 인터페이스에 (예:는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 또는 `IMetaData*` 인터페이스).</span><span class="sxs-lookup"><span data-stu-id="7616d-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
   
- <span data-ttu-id="cedfe-111">CLR은 Windows 응용 프로그램 이벤트 로그에 항목을 만들어 분리 작업에 성공했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
+ <span data-ttu-id="7616d-111">CLR은 Windows 응용 프로그램 이벤트 로그에 항목을 만들어 분리 작업에 성공했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
   
- <span data-ttu-id="cedfe-112">프로파일러가 이 콜백에서 반환된 후 CLR은 프로파일러 개체를 해제하고 프로파일러 DLL을 언로드합니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="cedfe-113">따라서 프로파일러는 이 콜백에서 반환된 후 프로파일러 DLL 내에서 실행되는 작업을 수행하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="cedfe-114">예를 들어 스레드를 만들거나 타이머 콜백을 등록하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-114">For example, it must not create threads or register timer callbacks.</span></span>  
+ <span data-ttu-id="7616d-112">프로파일러가 이 콜백에서 반환된 후 CLR은 프로파일러 개체를 해제하고 프로파일러 DLL을 언로드합니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="7616d-113">따라서 프로파일러는 이 콜백에서 반환된 후 프로파일러 DLL 내에서 실행되는 작업을 수행하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="7616d-114">예를 들어 스레드를 만들거나 타이머 콜백을 등록하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-114">For example, it must not create threads or register timer callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cedfe-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cedfe-115">Requirements</span></span>  
- <span data-ttu-id="cedfe-116">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cedfe-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7616d-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7616d-115">Requirements</span></span>  
+ <span data-ttu-id="7616d-116">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7616d-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cedfe-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cedfe-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7616d-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7616d-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cedfe-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cedfe-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7616d-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7616d-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cedfe-119">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cedfe-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7616d-119">**.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7616d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cedfe-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cedfe-120">See Also</span></span>  
- [<span data-ttu-id="cedfe-121">메타데이터 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cedfe-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [<span data-ttu-id="cedfe-122">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cedfe-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="cedfe-123">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cedfe-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="cedfe-124">프로파일링</span><span class="sxs-lookup"><span data-stu-id="cedfe-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="7616d-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7616d-120">See Also</span></span>  
+ [<span data-ttu-id="7616d-121">메타데이터 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7616d-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [<span data-ttu-id="7616d-122">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7616d-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
+ [<span data-ttu-id="7616d-123">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7616d-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="7616d-124">프로파일링</span><span class="sxs-lookup"><span data-stu-id="7616d-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

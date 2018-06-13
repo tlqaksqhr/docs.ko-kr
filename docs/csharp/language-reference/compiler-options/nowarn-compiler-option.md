@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215487"
 ---
 # <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="c0976-102">-nowarn(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="c0976-102">-nowarn (C# Compiler Options)</span></span>
 <span data-ttu-id="c0976-103">**-nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0976-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="c0976-104">여러 경고 번호를 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="c0976-104">Separate multiple warning numbers with a comma.</span></span>  

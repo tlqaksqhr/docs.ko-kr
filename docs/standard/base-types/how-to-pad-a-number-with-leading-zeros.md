@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569774"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a><span data-ttu-id="6c14a-102">방법: 숫자 앞에 0으로 채우기</span><span class="sxs-lookup"><span data-stu-id="6c14a-102">How to: Pad a Number with Leading Zeros</span></span>
 <span data-ttu-id="6c14a-103">"D" [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)과 함께 전체 자릿수 지정자를 사용하여 앞에 오는 0을 정수에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c14a-103">You can add leading zeros to an integer by using the "D" [standard numeric format string](../../../docs/standard/base-types/standard-numeric-format-strings.md) with a precision specifier.</span></span> <span data-ttu-id="6c14a-104">[사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 사용하여 정수와 부동 소수점 숫자 둘 다에 앞에 오는 0을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c14a-104">You can add leading zeros to both integer and floating-point numbers by using a [custom numeric format string](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span> <span data-ttu-id="6c14a-105">이 항목에서는 두 개의 메서드를 사용하여 앞에 오는 0으로 숫자를 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6c14a-105">This topic shows how to use both methods to pad a number with leading zeros.</span></span>  

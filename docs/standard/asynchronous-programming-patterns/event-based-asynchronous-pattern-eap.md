@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567808"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="d27dd-102">이벤트 기반 비동기 패턴(EAP)</span><span class="sxs-lookup"><span data-stu-id="d27dd-102">Event-based Asynchronous Pattern (EAP)</span></span>
 <span data-ttu-id="d27dd-103">비동기 기능을 클라이언트 코드에 노출하는 방법은 여러 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d27dd-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="d27dd-104">이벤트 기반 비동기 패턴은 클래스에 비동기 동작을 표시하는 한 가지 방법을 규정합니다.</span><span class="sxs-lookup"><span data-stu-id="d27dd-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  

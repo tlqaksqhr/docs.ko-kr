@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214934"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a><span data-ttu-id="b4ba3-102">-nowin32manifest(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="b4ba3-102">-nowin32manifest (C# Compiler Options)</span></span>
 <span data-ttu-id="b4ba3-103">**-nowin32manifest** 옵션을 사용하면 실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b4ba3-103">Use the **-nowin32manifest** option to instruct the compiler not to embed any application manifest into the executable file.</span></span>  

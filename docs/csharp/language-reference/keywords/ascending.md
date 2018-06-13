@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213499"
 ---
 # <a name="ascending-c-reference"></a><span data-ttu-id="297f6-102">ascending(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="297f6-102">ascending (C# Reference)</span></span>
 <span data-ttu-id="297f6-103">`ascending` 상황별 키워드는 쿼리 식의 [orderby 절](../../../csharp/language-reference/keywords/orderby-clause.md)에서 사용되어 정렬 순서를 가장 작은 값에서 가장 큰 값의 오름차순으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="297f6-103">The `ascending` contextual keyword is used in the [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md) in query expressions to specify that the sort order is from smallest to largest.</span></span> <span data-ttu-id="297f6-104">`ascending`은 기본 정렬 순서이므로 지정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="297f6-104">Because `ascending` is the default sort order, you do not have to specify it.</span></span>  

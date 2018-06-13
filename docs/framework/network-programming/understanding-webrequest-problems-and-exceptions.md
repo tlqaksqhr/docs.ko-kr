@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398068"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a><span data-ttu-id="36446-102">WebRequest 문제 및 예외 이해</span><span class="sxs-lookup"><span data-stu-id="36446-102">Understanding WebRequest Problems and Exceptions</span></span>
 <span data-ttu-id="36446-103"><xref:System.Net.WebRequest> 및 파생 클래스(<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FileWebRequest>)는 예외를 throw하여 비정상 상태를 알립니다.</span><span class="sxs-lookup"><span data-stu-id="36446-103"><xref:System.Net.WebRequest> and its derived classes (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, and <xref:System.Net.FileWebRequest>) throw exceptions to signal an abnormal condition.</span></span> <span data-ttu-id="36446-104">이러한 문제의 해결이 분명하지 않은 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36446-104">Sometimes the resolution of these problems is not obvious.</span></span>  

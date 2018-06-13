@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217141"
 ---
 # <a name="dynamic-c-reference"></a><span data-ttu-id="fccf9-102">dynamic(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="fccf9-102">dynamic (C# Reference)</span></span>
 <span data-ttu-id="fccf9-103">`dynamic` 형식을 통해 컴파일 시간 형식 검사를 우회하는 작업을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fccf9-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="fccf9-104">대신, 이러한 작업은 런타임에 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="fccf9-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="fccf9-105">`dynamic` 형식은 Office Automation API 등의 COM API, IronPython 라이브러리 등의 동적 API 및 HTML DOM(문서 개체 모델)에 대한 액세스를 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="fccf9-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>  

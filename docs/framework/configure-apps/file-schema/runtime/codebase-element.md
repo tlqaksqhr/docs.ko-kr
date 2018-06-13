@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745996"
 ---
 # <a name="ltcodebasegt-element"></a><span data-ttu-id="841a2-102">&lt;코드 베이스&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="841a2-102">&lt;codeBase&gt; Element</span></span>
 <span data-ttu-id="841a2-103">공용 언어 런타임에서 어셈블리를 찾을 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="841a2-103">Specifies where the common language runtime can find an assembly.</span></span>  

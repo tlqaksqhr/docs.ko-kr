@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572199"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="28be9-102">XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="28be9-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
 <span data-ttu-id="28be9-103"><xref:System.Xml.Schema.XmlSchemaCollection>을 사용하여 XSD(XML 스키마 정의 언어) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28be9-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="28be9-104"><xref:System.Xml.Schema.XmlSchemaCollection>은 스키마를 컬렉션에 저장함으로써 유효성을 검사할 때마다 메모리에 로드되지 않으므로 성능이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="28be9-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="28be9-105">스키마가 스키마 컬렉션에 있을 경우 `schemaLocation` 특성을 사용하여 컬렉션에서 스키마를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28be9-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  

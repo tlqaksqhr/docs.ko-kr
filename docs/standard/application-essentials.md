@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567577"
 ---
 # <a name="net-framework-application-essentials"></a><span data-ttu-id="fcf22-102">.NET Framework 응용 프로그램 주요 사항</span><span class="sxs-lookup"><span data-stu-id="fcf22-102">.NET Framework Application Essentials</span></span>
 <span data-ttu-id="fcf22-103">.NET Framework 설명서의 이 섹션은 .NET Framework의 기본 응용 프로그램 개발 작업에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fcf22-103">This section of the .NET Framework documentation provides information about basic application development tasks in the .NET Framework.</span></span>  

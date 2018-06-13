@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387340"
 ---
 # <a name="mitigation-wpf-layout"></a><span data-ttu-id="b6f5a-102">완화: WPF 레이아웃</span><span class="sxs-lookup"><span data-stu-id="b6f5a-102">Mitigation: WPF Layout</span></span>
 <span data-ttu-id="b6f5a-103">WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6f5a-103">The layout of WPF controls can change slightly.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568032"
 ---
 # <a name="parsing-other-strings-in-net"></a><span data-ttu-id="0ff7d-102">.NET에서 기타 문자열 구문 분석</span><span class="sxs-lookup"><span data-stu-id="0ff7d-102">Parsing Other Strings in .NET</span></span>
 <span data-ttu-id="0ff7d-103">숫자 및 <xref:System.DateTime> 문자열 외에도 <xref:System.Char>, <xref:System.Boolean> 및 <xref:System.Enum> 형식을 나타내는 문자열을 데이터 형식으로 구문 분석할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ff7d-103">In addition to numeric and <xref:System.DateTime> strings, you can also parse strings that represent the types <xref:System.Char>, <xref:System.Boolean>, and <xref:System.Enum> into data types.</span></span>  

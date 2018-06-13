@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214772"
 ---
 # <a name="-appconfig-c-compiler-options"></a><span data-ttu-id="54b45-102">-appconfig(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="54b45-102">-appconfig (C# Compiler Options)</span></span>
 <span data-ttu-id="54b45-103">**-appconfig** 컴파일러 옵션을 사용하면 C# 응용 프로그램이 어셈블리 바인딩 시간에 어셈블리의 응용 프로그램 구성(app.config) 파일 위치를 CLR(공용 언어 런타임)에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54b45-103">The **-appconfig** compiler option enables a C# application to specify the location of an assembly's application configuration (app.config) file to the common language runtime (CLR) at assembly binding time.</span></span>  

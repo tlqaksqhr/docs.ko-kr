@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741986"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="53120-102">&lt;지우기&gt; connectionManagement (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="53120-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="53120-103">연결 관리 목록을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="53120-103">Clears the connection management list.</span></span>  

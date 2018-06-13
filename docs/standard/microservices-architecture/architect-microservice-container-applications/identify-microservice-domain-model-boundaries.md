@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578119"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a><span data-ttu-id="5e52a-103">각 마이크로 서비스의 도메인 모델 경계 식별</span><span class="sxs-lookup"><span data-stu-id="5e52a-103">Identify domain-model boundaries for each microservice</span></span>
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745294"
 ---
 # <a name="ltbindingredirectgt-element"></a><span data-ttu-id="3ca59-102">&lt;bindingRedirect&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="3ca59-102">&lt;bindingRedirect&gt; Element</span></span>
 <span data-ttu-id="3ca59-103">어셈블리 버전을 다른 버전으로 리디렉션합니다.</span><span class="sxs-lookup"><span data-stu-id="3ca59-103">Redirects one assembly version to another.</span></span>  
