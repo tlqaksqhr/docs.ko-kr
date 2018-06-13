@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538159"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>이벤트 처리기 개요(Windows Forms)
 이벤트 처리기는 이벤트에 바인딩된 메서드입니다. 이벤트가 발생 하면 이벤트 처리기 내에서 코드가 실행 됩니다. 각 이벤트 처리기는 이벤트를 올바르게 처리할 수 있도록 하는 두 개의 매개 변수를 제공 합니다. 다음 예제에 대 한 이벤트 처리기는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트입니다.  

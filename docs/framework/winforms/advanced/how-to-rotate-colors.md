@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522397"
 ---
 # <a name="how-to-rotate-colors"></a>방법: 색 회전
 4 차원 색 공간에서 회전 시각화 하기 어렵습니다. 동의 고정 색상 구성 요소 중 하나를 유지 하는 것으로 회전 시각화할 쉽게 만들 수 있습니다. 1 자리 알파 구성 요소 (완전히 불투명 함)을 유지 한다고 가정 합니다. 다음 다음 그림에 나와 있는 것 처럼 빨간색, 녹색 및 파란색 축이 있는 3 차원 색 공간을 시각화할 수 했습니다.  

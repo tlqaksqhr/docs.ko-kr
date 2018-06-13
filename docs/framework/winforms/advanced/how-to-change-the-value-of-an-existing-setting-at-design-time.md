@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521458"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>방법: 디자인 타임에 기존 설정 값 변경
 프로젝트에 기존 설정의 값을 편집 하려면 Visual Studio를 사용할 수 있습니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640535"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>방법: ActiveX 컨트롤을 사용하여 작업(Visual Basic)
 ActiveX 컨트롤은 COM 구성 요소 또는 개체를 웹 페이지 또는 다른 사용자가 프로그래밍 하는 패키지에 포함 된 기능을 다시 사용 하려면 다른 응용 프로그램에 삽입할 수 있습니다. Visual Basic 6.0 및 이전 버전으로 개발 하는 ActiveX 컨트롤을 사용 하 여 기능을 추가할 수는 **도구 상자** 의 Visual Studio입니다.  

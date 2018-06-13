@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534403"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>PictureBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤은 그래픽 비트맵, GIF, JPEG, 메타 파일 또는 아이콘으로 표시 하는 데 사용 합니다.  

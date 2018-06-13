@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4302a73f9f077c2e1bf4f66c2b80ab025ae4a62c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430585"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache 인터페이스
 Fusion 기술에서 사용 하기 위해 전역 어셈블리 캐시를 나타냅니다.  

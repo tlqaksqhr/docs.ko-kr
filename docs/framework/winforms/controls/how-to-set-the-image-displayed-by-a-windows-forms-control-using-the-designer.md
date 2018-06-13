@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532787"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에 표시되는 이미지 설정
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이미지 디스크 아이콘이 단추를 나타내는 것 처럼 컨트롤의 용도 명확히 하는 아이콘 수는 **저장** 명령입니다. 또한 아이콘 배경 이미지를 원하는 모양을 제어할 수 있습니다.  
