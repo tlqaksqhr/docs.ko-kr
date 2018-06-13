@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529262"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 구성 요소 아키텍처
 와 <xref:System.Windows.Forms.BindingSource> 구성 요소를 데이터 원본에 일반적으로 모든 Windows Forms 컨트롤을 바인딩할 수 있습니다.  

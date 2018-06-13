@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551819"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>방법: ToolBar 컨트롤의 스타일 지정
 <xref:System.Windows.Controls.ToolBar> 정의 <xref:System.Windows.ResourceKey> 개체 내에서 컨트롤의 스타일을 지정 하는 <xref:System.Windows.Controls.ToolBar>합니다.  컨트롤에 스타일을 지정 하는 <xref:System.Windows.Controls.ToolBar>설정는 `x:key` 스타일의 특성을 <xref:System.Windows.ResourceKey> 에 정의 된 <xref:System.Windows.Controls.ToolBar>합니다.  

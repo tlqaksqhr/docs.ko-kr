@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528683"
 ---
 # <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정
 처리 하 여 모든 셀의 모양을 사용자 지정할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.CellPainting> 이벤트입니다. 추출할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Drawing.Graphics> 에서 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> 의 속성은 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>합니다. 이 <xref:System.Drawing.Graphics>, 전체의 모양에 영향을 줄 수 <xref:System.Windows.Forms.DataGridView> 컨트롤 있지만 일반적으로 현재 칠하고 있는 셀의 모양에만 영향을 줄 합니다. <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> 의 속성은 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> 그리기 작업을 현재 칠하고 있는 셀을 제한할 수 있습니다.  

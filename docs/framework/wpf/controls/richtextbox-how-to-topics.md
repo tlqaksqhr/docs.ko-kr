@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555053"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 방법 항목
 이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제는 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.  

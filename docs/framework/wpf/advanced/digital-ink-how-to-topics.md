@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538876"
 ---
 # <a name="digital-ink-how-to-topics"></a>디지털 잉크 방법 항목
 ## <a name="in-this-section"></a>섹션 내용  

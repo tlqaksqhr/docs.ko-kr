@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541059"
 ---
 # <a name="creating-an-ink-input-control"></a>잉크 입력 컨트롤 만들기
 컨트롤을 만들 수는 사용자 지정 하는 동적 및 정적으로 잉크를 렌더링 합니다. 즉, 사용자가 스트로크를 일으키는 잉크 "배치" 태블릿 펜 고 잉크 후 표시에 추가 된 컨트롤을 클립보드에서 붙여 넣은 태블릿 펜을 통해 또는 파일에서 로드 표시를 그릴 때 잉크를 렌더링 합니다. 잉크를 동적으로 렌더링 하려면 컨트롤을 사용 해야는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>합니다. 잉크를 정적으로 렌더링 하려면 스타일러스 이벤트 메서드를 재정의 해야 (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, 및 <xref:System.Windows.UIElement.OnStylusUp%2A>)를 수집 하 <xref:System.Windows.Input.StylusPoint> 데이터를 스트로크를 만들고 추가 하는 프로그램 <xref:System.Windows.Controls.InkPresenter> (잉크를 렌더링 하는 컨트롤에).  

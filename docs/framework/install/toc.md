@@ -9,5 +9,4 @@
 ## [.NET Framework 복구](repair.md)
 ## [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
 ## [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](dotnet-35-windows-10.md)
-### [.NET Framework 3.5 설치 문제 해결](net-framework-3-5-on-windows-8-plus.md)
 ## [Windows 8, Windows 8.1 또는 Windows 10에서 .NET Framework 1.1 앱 실행](run-net-framework-1-1-apps.md)

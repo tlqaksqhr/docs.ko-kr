@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539869"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 컨트롤 개요(Windows Forms)
 Windows Forms 텍스트 상자의 텍스트를 표시 하는 사용자 로부터 입력을 사용 됩니다. <xref:System.Windows.Forms.TextBox> 컨트롤은 일반적으로 편집 가능한 텍스트에 사용 것도 만들 수 있지만 읽기 전용입니다. 텍스트 상자는 여러 줄을 표시 하 고 텍스트는 컨트롤의 크기를 줄 바꿈할 기본 서식을 추가할 수 있습니다. <xref:System.Windows.Forms.TextBox> 컨트롤은 컨트롤에 표시 되거나 입력 텍스트에 대 한 단일 서식 스타일을 제공 합니다. 여러 종류의 서식 있는 텍스트를 표시 하려면 사용 된 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 자세한 내용은 참조 [RichTextBox 컨트롤 개요](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)합니다.  

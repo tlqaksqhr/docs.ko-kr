@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552014"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>방법: 텍스트 선택 검색
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox.SelectedText%2A> 속성에서 사용자가 선택한 텍스트를 검색할는 <xref:System.Windows.Controls.TextBox> 제어 합니다.  

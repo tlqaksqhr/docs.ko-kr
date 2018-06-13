@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388201"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` MDA(관리 디버깅 도우미)는 Microsoft Windows 운영 체제 로더 잠금을 보유하는 스레드에서 관리 코드를 실행하려는 시도를 감지합니다.  이와 같은 실행은 운영 체제의 로더에서 초기화하기 전에 DLL을 사용하고 교착 상태를 일으킬 수 있으므로 유효하지 않습니다.  

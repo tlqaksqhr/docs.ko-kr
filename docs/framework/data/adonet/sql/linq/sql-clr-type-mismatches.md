@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365672"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 형식 불일치
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델과 SQL Server 간의 변환을 대부분 자동화합니다. 하지만 정확한 변환이 불가능한 경우도 있습니다. 공용 언어 런타임 (CLR) 형식 및 SQL Server 데이터베이스 형식 간의 주요 이러한 불일치는 다음 섹션에 요약 되어 있습니다. 특정 형식 매핑과 함수로 변환 하는 방법에 대 한 자세한 정보를 볼 수 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 및 [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)합니다.  

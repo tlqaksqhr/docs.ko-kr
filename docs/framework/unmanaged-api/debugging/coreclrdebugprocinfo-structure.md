@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402193"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 구조체
 원격 컴퓨터에서 실행되는 프로세스를 나타냅니다.  

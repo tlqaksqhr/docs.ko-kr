@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527315"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Windows Forms에서 컨트롤 정렬
 다양한 방법으로 양식에 컨트롤을 배치하고 조작함으로써 사용자가 직관적이고 기능적으로 사용할 수 있는 사용자 인터페이스를 만들 수 있습니다.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529207"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤이 포함된 탐색기 스타일 인터페이스 만들기
 Visual Studio의 이점 중 하나를 짧은 시간 안에 전문적인 Windows Forms 응용 프로그램을 만들 수입니다. 일반적인 시나리오는 만드는 사용자 인터페이스 (UI) <xref:System.Windows.Forms.ListView> 및 <xref:System.Windows.Forms.TreeView> Windows 운영 체제의 Windows 탐색기 기능을 제어 합니다. Windows 탐색기 사용자의 컴퓨터에 파일 및 폴더의 계층 구조를 표시합니다.  

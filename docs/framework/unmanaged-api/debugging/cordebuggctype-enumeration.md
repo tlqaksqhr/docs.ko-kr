@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e74f564a483d80fd6312cf015802750d48e73ca7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403996"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 열거형
 가비지 수집기가 실행되고 있는 위치(워크스테이션 또는 서버)를 나타냅니다.  

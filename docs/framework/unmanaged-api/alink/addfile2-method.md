@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f4735103f277d710dd23adfa19c475c425feaa36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403333"
 ---
 # <a name="addfile2-method"></a>AddFile2 메서드
 어셈블리에 파일을 추가합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  

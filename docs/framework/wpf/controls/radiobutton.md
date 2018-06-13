@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553925"
 ---
 # <a name="radiobutton"></a>RadioButton
 <xref:System.Windows.Controls.RadioButton> 컨트롤은 일반적으로 함께 그룹화 되어 사용자에 게 단일; 여러 옵션 중 한 번에 하나만 단추를 선택할 수 있습니다.  

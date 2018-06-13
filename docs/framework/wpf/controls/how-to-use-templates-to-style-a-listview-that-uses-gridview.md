@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553834"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>방법: 템플릿을 사용하여 GridView 사용 ListView의 스타일 지정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.DataTemplate> 및 <xref:System.Windows.Style> 의 모양을 지정 하는 개체는 <xref:System.Windows.Controls.ListView> 컨트롤을 사용 하는 <xref:System.Windows.Controls.GridView> 보기 모드입니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541887"
 ---
 # <a name="binding-markup-extension"></a>Binding 태그 확장
 중간 식 개체 만들기와 런타임 시 해당 바인딩 요소에 적용 되는 데이터 컨텍스트를 해석 하는 데이터 바인딩된 값이 되도록 하 여 속성 값을 연기 합니다.  

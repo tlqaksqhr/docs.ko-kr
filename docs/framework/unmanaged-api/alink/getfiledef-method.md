@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b772ae37baed44b90e4f5420e0f7724201a56abe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401813"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 메서드
 (반대로 ALink에서 할당 된 토큰) 메타 데이터에 사용 되는 실제 FileDef 토큰을 검색 합니다.  

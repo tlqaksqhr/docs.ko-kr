@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390967"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>방법: 시간 기반 캐시 정책을 사용자 지정
 시간 기반 캐시 정책을 만들 경우 최대 기간, 최소 새로 고침, 최대 부실 또는 캐시 동기화 날짜에 대한 값을 지정하여 캐싱 동작을 사용자 지정할 수 있습니다. <xref:System.Net.Cache.HttpRequestCachePolicy> 개체는 이러한 값의 유효한 조합을 지정할 수 있는 여러 가지 생성자를 제공합니다.  

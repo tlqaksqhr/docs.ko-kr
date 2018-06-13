@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541156"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기
 자주 데이터베이스에서 사용 하지 않고도 표 형식 데이터를 표시 하려는 경우가 있습니다. 예를 들어 다음 문자열 2 차원 배열의 콘텐츠를 표시 하는 것이 좋습니다. <xref:System.Windows.Forms.DataGridView> 클래스는 데이터 소스에 바인딩하지 않고 데이터를 표시 하는 쉽고 고도로 사용자 지정 가능한 방법을 제공 합니다. 이 연습에서는를 채우는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.DataGridView> 제어 하 고 추가 "언바운드" 모드에서 행의 삭제를 관리 합니다. 사용자는 기본적으로 새 행을 추가할 수 있습니다. 행 추가 방지 하려면 설정는 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성은 `false`합니다.  

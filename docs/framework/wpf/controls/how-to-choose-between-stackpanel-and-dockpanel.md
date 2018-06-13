@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551936"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>방법: StackPanel과 DockPanel 중 선택
 사용 하 여 중에서 선택 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.StackPanel> 또는 <xref:System.Windows.Controls.DockPanel> 의 콘텐츠를 스택 하는 <xref:System.Windows.Controls.Panel>합니다.  

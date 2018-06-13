@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401029"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>UI 자동화 조각 공급자에서 탐색 사용
 > [!NOTE]

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544065"
 ---
 # <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>방법: Blocks 속성을 통한 FlowDocument 조작
 이러한 예제에서 수행할 수 있는 일반적인 작업 몇 가지를 보여는 <xref:System.Windows.Documents.FlowDocument> 통해는 <xref:System.Windows.Documents.FlowDocument.Blocks%2A> 속성입니다.  

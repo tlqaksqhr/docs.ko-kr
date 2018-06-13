@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538967"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Forms 시작
 Windows forms에서 강력한 Windows 기반 응용 프로그램을 만들 수 있습니다. 다음 항목 데이터를 표시 하 고 사용자 입력을 처리 한 다음이 쉽고 향상 된 보안 응용 프로그램을 배포 하려면 Windows Forms의 강력한 기능을 사용 하는 방법을 자세히 설명 합니다.  
