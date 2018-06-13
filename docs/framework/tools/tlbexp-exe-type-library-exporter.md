@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408820"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a><span data-ttu-id="1f814-102">Tlbexp.exe(형식 라이브러리 내보내기)</span><span class="sxs-lookup"><span data-stu-id="1f814-102">Tlbexp.exe (Type Library Exporter)</span></span>
 <span data-ttu-id="1f814-103">형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f814-103">The Type Library Exporter generates a type library that describes the types defined in a common language runtime assembly.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387782"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="6f065-102">완화: 포인터 기반 터치 및 스타일러스 지원</span><span class="sxs-lookup"><span data-stu-id="6f065-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
 

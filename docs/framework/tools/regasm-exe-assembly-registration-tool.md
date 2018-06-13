@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408748"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a><span data-ttu-id="fe18e-102">Regasm.exe(어셈블리 등록 도구)</span><span class="sxs-lookup"><span data-stu-id="fe18e-102">Regasm.exe (Assembly Registration Tool)</span></span>
 <span data-ttu-id="fe18e-103">어셈블리 등록 도구를 사용하면 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 .NET Framework 클래스를 투명하게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe18e-103">The Assembly Registration tool reads the metadata within an assembly and adds the necessary entries to the registry, which allows COM clients to create .NET Framework classes transparently.</span></span> <span data-ttu-id="fe18e-104">클래스가 등록되고 나면 COM 클라이언트에서는 해당 클래스가 마치 COM 클래스인 것처럼 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe18e-104">Once a class is registered, any COM client can use it as though the class were a COM class.</span></span> <span data-ttu-id="fe18e-105">클래스는 어셈블리가 설치될 때 한 번만 등록됩니다.</span><span class="sxs-lookup"><span data-stu-id="fe18e-105">The class is registered only once, when the assembly is installed.</span></span> <span data-ttu-id="fe18e-106">클래스가 실제로 등록되어야만 COM에서 어셈블리 내의 클래스 인스턴스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe18e-106">Instances of classes within the assembly cannot be created from COM until they are actually registered.</span></span>  

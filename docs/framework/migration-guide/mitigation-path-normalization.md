@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389534"
 ---
 # <a name="mitigation-path-normalization"></a><span data-ttu-id="5e115-102">완화: 경로 정규화</span><span class="sxs-lookup"><span data-stu-id="5e115-102">Mitigation: Path Normalization</span></span>
 <span data-ttu-id="5e115-103">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]을 대상으로 하는 앱부터, .NET Framework의 경로 정규화가 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="5e115-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  

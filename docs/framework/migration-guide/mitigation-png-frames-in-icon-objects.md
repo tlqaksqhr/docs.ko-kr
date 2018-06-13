@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387928"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a><span data-ttu-id="422e1-102">완화: 아이콘 개체의 PNG 프레임</span><span class="sxs-lookup"><span data-stu-id="422e1-102">Mitigation: PNG Frames in Icon Objects</span></span>
 <span data-ttu-id="422e1-103">.NET Framework 4.6부터는 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드가 PNG 프레임이 있는 아이콘을 <xref:System.Drawing.Bitmap> 개체로 성공적으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="422e1-103">Starting with the .NET Framework 4.6, the <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> method successfully converts icons with PNG frames into <xref:System.Drawing.Bitmap> objects.</span></span>  
