@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583320"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a><span data-ttu-id="b4700-102">ManualResetEvent 및 ManualResetEventSlim</span><span class="sxs-lookup"><span data-stu-id="b4700-102">ManualResetEvent and ManualResetEventSlim</span></span>
 <span data-ttu-id="b4700-103"><xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 클래스는 신호를 받은 후 수동으로 다시 설정해야 하는 로컬 대기 핸들 이벤트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b4700-103">The <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> class represents a local wait handle event that must be reset manually after it is signaled.</span></span> <span data-ttu-id="b4700-104">이 클래스는 기본 클래스인 <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>의 특수한 경우를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b4700-104">This class represents a special case of its base class, <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b4700-105">수동 재설정 이벤트의 사용 및 기능은 [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) 개념 설명서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b4700-105">See the [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) conceptual documentation for the use and features of manual reset events.</span></span>  

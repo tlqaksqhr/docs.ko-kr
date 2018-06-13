@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584029"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a><span data-ttu-id="700c4-102">방법: Visual Basic에서 직렬 포트로 문자열 보내기</span><span class="sxs-lookup"><span data-stu-id="700c4-102">How to: Send Strings to Serial Ports in Visual Basic</span></span>
 <span data-ttu-id="700c4-103">이 항목에서는 Visual Basic에서 `My.Computer.Ports`를 사용하여 컴퓨터의 직렬 포트에 문자열을 보내는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="700c4-103">This topic describes how to use `My.Computer.Ports` to send strings to the computer's serial ports in Visual Basic.</span></span>  
