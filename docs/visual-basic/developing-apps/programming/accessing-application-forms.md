@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581855"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>응용 프로그램 폼 액세스(Visual Basic)
 `My.Forms` 개체는 응용 프로그램 프로젝트에 선언된 각 Windows Form의 인스턴스에 액세스하는 간편한 방법을 제공합니다. `My.Application` 개체의 속성을 사용하여 응용 프로그램의 시작 화면 및 기본 폼에 액세스하고 응용 프로그램의 열려 있는 폼 목록을 가져올 수도 있습니다.  

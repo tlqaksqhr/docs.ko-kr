@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579693"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 <a name="Top"></a> 문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다. .NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.  

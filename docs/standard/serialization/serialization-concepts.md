@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583762"
 ---
 # <a name="serialization-concepts"></a>Serialization 개념
 serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 가지 이유는 이후 단계에서 정확한 복사본을 다시 만들 수 있도록 저장 매체에 개체의 상태를 유지하는 것과 개체를 한 응용 프로그램 도메인에서 다른 응용 프로그램 도메인으로 값으로 전송하는 것입니다. 예를 들어 serialization을 사용하여 세션 상태를 ASP.NET에 저장하고 개체를 Windows Forms의 클립보드로 복사할 수 있습니다. 또한 Remoting에서 이를 사용하여 개체를 한 응용 프로그램 도메인에서 다른 응용 프로그램 도메인으로 값으로 전달할 수도 있습니다.

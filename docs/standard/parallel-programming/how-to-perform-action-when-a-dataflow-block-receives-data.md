@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583021"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행
 *실행 데이터 흐름 블록* 형식은 데이터를 받을 때 사용자가 제공한 대리자를 호출합니다. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 클래스는 실행 데이터 흐름 블록 형식입니다. 실행 데이터 흐름 블록에 작업 함수를 제공할 때 `delegate`(Visual Basic에서는 `Sub`) 키워드, <xref:System.Action%601>, <xref:System.Func%602> 또는 람다 식을 사용할 수 있습니다. 이 문서에서는 <xref:System.Func%602> 및 람다 식을 사용하여 실행 블록에서 작업을 수행하는 방법을 설명합니다.  

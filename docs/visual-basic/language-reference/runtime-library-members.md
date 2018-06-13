@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604590"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 런타임 라이브러리 멤버
 `Microsoft.VisualBasic` 네임 스페이스 클래스, 모듈, 상수, 및 Visual Basic 런타임 라이브러리를 구성 하는 열거형을 포함 합니다. 이 라이브러리 멤버 프로시저, 속성 및 코드에서 사용할 수 있는 상수 값을 제공 합니다. 각 모듈 및 클래스에는 기능의 특정 범주를 나타냅니다.  

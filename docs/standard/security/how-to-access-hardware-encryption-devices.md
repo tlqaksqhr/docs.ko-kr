@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581718"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 장치 액세스
 <xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 장치에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 응용 프로그램을 통합할 수 있습니다.  

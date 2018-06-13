@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585582"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;&#39; 피연산자 참조 형식이 있는 하는데이 피연산자의 값 형식은 &#39; &lt;typename&gt;&#39;
 `Is` 비교 연산자는 두 개체 변수의 같은 인스턴스를 참조 하는지 여부를 결정 합니다. 이 비교 값 형식에 대해 정의 되지 않았습니다.  

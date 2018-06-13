@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605058"
 ---
 # <a name="parameter-list-visual-basic"></a>매개 변수 목록(Visual Basic)
 호출 될 때 프로시저에 필요한 매개 변수를 지정 합니다. 매개 변수가 여러 개이면 쉼표로 구분 됩니다. 다음은 매개 변수 하나에 대 한 구문입니다.  

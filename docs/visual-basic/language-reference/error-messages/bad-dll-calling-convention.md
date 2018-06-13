@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583840"
 ---
 # <a name="bad-dll-calling-convention"></a>DLL 호출 규칙이 잘못되었습니다.
 동적 연결 라이브러리 (DLL)에 전달 된 인수는 루틴에서 예상 되 정확히 일치 해야 합니다. 호출 규칙 번호, 형식 인수의 순서와 함께 처리합니다. 프로그램 루틴 인수의 수 나 잘못 된 형식이 전달 되는 DLL에서 호출 하 고 있습니다.  

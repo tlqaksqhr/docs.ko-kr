@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585118"
 ---
 # <a name="argument-not-optional-visual-basic"></a>필수 인수입니다(Visual Basic).
 수와 형식의 인수가 필요 합니다. 일치 해야 합니다. 잘못 된 수의 인수를 있거나 생략 된 인수는 선택 사항이 아닙니다. 가 선언 된 경우는 인수를 사용자 정의 프로시저 호출에서 생략할 수만 `Optional` 프로시저 정의에 있습니다.  

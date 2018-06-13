@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599482"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>인수 &#39;경로&#39; Nothing 이거나 비어 있습니다.
 경로 이름이 `Nothing` 으로 초기화되었거나 비어 있기 때문에 잘못되었습니다. 경로에 특정 데이터 형식 및 올바른 이름이 있어야 합니다.  

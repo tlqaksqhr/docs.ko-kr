@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597492"
 ---
 # <a name="application-defined-or-object-defined-error"></a>응용 프로그램 정의 또는 개체 정의 오류
 응용 프로그램 정의 또는 사용자 정의 오류가 발생했습니다. 오류를 확인합니다.  

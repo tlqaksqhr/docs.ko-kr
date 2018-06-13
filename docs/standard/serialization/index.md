@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581318"
 ---
 # <a name="serialization-in-net"></a>.NET의 Serialization
 serialization은 지속시키거나 전송할 수 있는 형태로 개체 상태를 변환하는 프로세스입니다. serialization과 짝을 이루는 것은 스트림을 개체로 변환하는 deserialization입니다. 이 두 프로세스를 통해 데이터를 쉽게 저장하고 전송할 수 있습니다.  

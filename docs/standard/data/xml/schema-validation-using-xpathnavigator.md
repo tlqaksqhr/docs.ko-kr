@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578355"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator를 사용하여 스키마 유효성 검사
 <xref:System.Xml.XmlDocument> 클래스를 사용하면 두 가지 방법으로 <xref:System.Xml.XmlDocument> 개체에 포함된 XML 내용의 유효성을 검사할 수 있습니다. 첫 번째 방법은 유효성 검사 <xref:System.Xml.XmlReader> 개체를 사용하여 XML 내용의 유효성을 검사하는 것이고 두 번째 방법은 <xref:System.Xml.XmlDocument.Validate%2A> 클래스의 <xref:System.Xml.XmlDocument> 메서드를 사용하는 것입니다. <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 내용의 읽기 전용 유효성 검사를 수행할 수도 있습니다.  

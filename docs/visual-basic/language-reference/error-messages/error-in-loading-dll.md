@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584685"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
 동적 연결 라이브러리 (DLL)는에 지정 된 라이브러리는 `Lib` 절은 `Declare` 문. 이 오류에 대 한 가능한 원인은 다음과 같습니다.  

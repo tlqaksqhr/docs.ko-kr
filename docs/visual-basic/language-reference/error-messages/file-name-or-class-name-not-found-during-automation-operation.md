@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584594"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>자동화 작업 중 파일 이름 또는 클래스 이름을 찾을 수 없음(Visual Basic)
 파일 이름 또는 클래스에 대 한 호출에 대해 지정 된 이름이 고 `GetObject` 함수를 찾을 수 없습니다.  

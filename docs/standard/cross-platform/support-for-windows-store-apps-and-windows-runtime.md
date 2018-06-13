@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579290"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.  

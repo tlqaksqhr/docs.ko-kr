@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593141"
 ---
 # <a name="property-array-index-is-not-valid"></a>속성 배열 인덱스가 잘못되었습니다.
 제공 된 값에 대 한 속성 배열 인덱스가 올바르지 않습니다.  

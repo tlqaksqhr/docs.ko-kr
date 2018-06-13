@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596621"
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>내부 형식 &lt;typename&gt; 열거형의는 CLS 규격이 아닙니다
 이 열거형은 하지에 대해 지정 된 데이터 형식에 속하지는 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS). 때문에 사용자 구성 요소에서 오류는는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 및 Visual Basic에는이 데이터 형식을 지원 합니다. 그러나 엄격 하 게 CLS 규격 코드 작성 된 다른 구성 요소는이 데이터 형식을 지원 하지 않습니다. 이러한 구성 요소를 성공적으로 구성 요소와 상호 작용할 수 수 있습니다.  

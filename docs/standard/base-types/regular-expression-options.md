@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579654"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 <a name="Top"></a> 기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604902"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 절(Visual Basic)
 컬렉션에 하나 이상의 집계 함수를 적용 합니다.  

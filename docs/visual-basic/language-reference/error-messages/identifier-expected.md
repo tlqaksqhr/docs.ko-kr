@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586132"
 ---
 # <a name="identifier-expected"></a>식별자가 필요합니다.
 프로그래밍 요소를 인식할 수 있는 선언 된 요소 이름이 아니거나 요소 이름이 필요한 위치에 발생 합니다. 한 가지 가능한 원인은 특성 이외의 다른 위치 지정 된 것은 문의 시작 부분에 있습니다.  

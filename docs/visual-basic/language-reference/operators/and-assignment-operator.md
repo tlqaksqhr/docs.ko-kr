@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601883"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 연산자 (Visual Basic)
 연결 하는 `String` 식을 `String` 변수 또는 속성 변수 또는 속성에는 결과 할당 합니다.  

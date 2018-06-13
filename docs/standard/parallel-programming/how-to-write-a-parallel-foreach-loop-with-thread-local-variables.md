@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582739"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.ForEach 루프 작성
 다음 예제에서는 스레드 지역 변수를 사용하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 메서드를 작성하는 방법을 보여 줍니다. <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프가 실행되면 해당 소스 컬렉션이 여러 파티션으로 나뉩니다. 각 파티션은 "스레드 지역" 변수의 자체 복사본을 갖게 됩니다. (여기서 "스레드 지역"이라는 용어는 다소 부정확합니다. 일부 경우 두 개의 파티션이 동일한 스레드에서 실행될 수 있기 때문입니다.)  

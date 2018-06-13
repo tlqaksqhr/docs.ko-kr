@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586840"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic에서 프로젝트 사용자 지정 및 My 확장
 추가로 제공 되는 프로젝트 템플릿이 사용자 지정할 수 있습니다 `My` 개체입니다. 이렇게 하면 쉽게 찾고 사용자 개체를 사용 하는 다른 개발자에 대 한 합니다.  

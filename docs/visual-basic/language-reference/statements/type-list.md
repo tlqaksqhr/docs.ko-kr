@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605292"
 ---
 # <a name="type-list-visual-basic"></a>형식 목록(Visual Basic)
 지정 된 *형식 매개 변수* 에 대 한는 *제네릭* 프로그래밍 요소입니다. 매개 변수가 여러 개이면 쉼표로 구분 됩니다. 다음은 한 형식 매개 변수에 대 한 구문입니다.  

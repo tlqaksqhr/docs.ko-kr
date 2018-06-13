@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584016"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>방법: 스크롤 가능 폼 인쇄(Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 사용하면 <xref:System.Drawing.Printing.PrintDocument> 구성 요소를 사용하지 않고 폼 이미지를 빠르게 인쇄할 수 있습니다. 기본적으로 폼의 현재 표시되는 부분만 인쇄되고, 사용자가 런타임에 폼 크기를 변경하면 이미지가 의도대로 인쇄되지 않을 수 있습니다. 다음 절차에서는 폼 크기가 조정되었더라도 스크롤 가능한 폼의 전체 클라이언트 영역을 인쇄하는 방법을 보여 줍니다.  

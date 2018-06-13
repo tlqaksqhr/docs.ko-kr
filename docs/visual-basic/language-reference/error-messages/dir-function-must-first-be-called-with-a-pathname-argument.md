@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585462"
 ---
 # <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a>&#39;Dir&#39; 함수는 처음으로 호출 된 &#39;PathName&#39; 인수
 에 대 한 초기 호출에서 `Dir` 함수 포함 되지 않습니다는 `PathName` 인수입니다. 첫 번째 호출 `Dir` 포함 되어야 합니다는 `PathName`, 하지만 후속 호출을 `Dir` 다음 항목을 검색 하는 매개 변수를 포함할 필요가 없습니다.  

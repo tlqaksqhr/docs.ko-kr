@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580733"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>방법: 중첩된 작업 래핑 취소
 메서드에서 작업을 반환한 후 다음 예제와 같이 해당 작업을 대기하거나 계속할 수 있습니다.  

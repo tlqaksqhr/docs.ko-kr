@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579095"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>정규식의 수량자
 수량자는 찾을 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정합니다.  다음 테이블에서는 .NET에서 지원하는 수량자를 보여 줍니다.  

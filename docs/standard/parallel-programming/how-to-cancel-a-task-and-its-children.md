@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580228"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>방법: 작업 및 해당 자식 취소
 이 예제는 다음 작업을 수행하는 방법을 보여줍니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578991"
 ---
 # <a name="dispose-pattern"></a>삭제 패턴
 모든 프로그램 실행을 사용 하는 동안 메모리, 시스템 핸들 또는 데이터베이스 연결과 같은 하나 이상의 시스템 리소스를 획득합니다. 개발자가 직접 획득 고 사용한 후 해제 되어야 합니다 때문에 이러한 시스템 리소스를 사용할 때는 주의 해야 해야 합니다.  

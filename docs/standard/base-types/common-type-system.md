@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579589"
 ---
 # <a name="common-type-system"></a>공용 형식 시스템
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  

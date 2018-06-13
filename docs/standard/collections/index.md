@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577230"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  

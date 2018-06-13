@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582664"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 및 My.WebServices에서 제공하는 기본 개체 인스턴스(Visual Basic)
 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) 및 [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) 개체 폼, 데이터 원본 및 응용 프로그램에서 사용 하는 XML 웹 서비스에 대 한 액세스를 제공 합니다. 컬렉션을 제공 하 여이 수행 *인스턴스를 기본* 이러한 각 개체의 합니다.  

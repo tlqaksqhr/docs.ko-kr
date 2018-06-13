@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604252"
 ---
 # <a name="objects-visual-basic"></a>개체(Visual Basic)
 이 항목에서는 Visual Basic 런타임 개체를 설명하고 멤버 프로시저, 속성 및 이벤트 테이블을 포함하는 기타 항목의 링크를 제공합니다.  

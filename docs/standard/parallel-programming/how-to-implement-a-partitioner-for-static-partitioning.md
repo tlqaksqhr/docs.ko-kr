@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580499"
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>방법: 정적 분할을 위한 파티셔너 구현
 다음 예제에서는 정적 파티셔닝을 수행하는 PLINQ에 대해 단순한 사용자 지정 파티셔너를 구현하는 한 가지 방법을 보여줍니다. 파티셔너는 동적 파티션을 지원하지 않으므로 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>에서 사용할 수 없습니다. 이 특정 파티셔너는 각 요소로 인해 처리 시간이 늘어나는 데이터 소스의 기본 범위 파티셔너에 대해 가속을 제공할 수 있습니다.  

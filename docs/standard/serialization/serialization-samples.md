@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581471"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework에 대한 serialization 샘플
 이 단원에서는 .NET Framework에서 개체를 serialize하는 방법을 보여 줍니다.  

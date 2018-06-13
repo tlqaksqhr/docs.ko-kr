@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635161"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>줄 &lt;번호&gt; 최대 줄 크기를 초과 하기 때문에 읽을 수 없습니다.
 최대 줄 크기를 초과하기 때문에 줄을 읽을 수 없습니다. 일반적으로 파일에 여는 따옴표가 있지만 닫는 따옴표가 없음을 의미합니다.  

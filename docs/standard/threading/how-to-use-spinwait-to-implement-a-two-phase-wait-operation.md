@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583281"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>방법: SpinWait을 사용하여 2단계 대기 작업 구현
 다음 예제는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 개체를 사용하여 2단계 대기 작업을 구현하는 방법을 보여줍니다. 첫 번째 단계에서 동기화 개체(`Latch`)는 잠금이 사용 가능해졌는지 여부를 확인하는 동안 몇 주기 동안 회전합니다. 두 번째 단계에서는 잠금이 사용 가능하게 되면 `Wait` 메서드에서 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>을 사용하여 대기를 수행하지 않고 반환합니다. 잠금이 사용 가능하지 않으면 `Wait`에서 대기를 수행합니다.  

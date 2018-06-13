@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582124"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>방법: 파생 클래스의 Serialization 제어
 **XmlElementAttribute** 특성을 사용하여 XML 요소의 이름을 변경하는 것이 개체 serialization을 사용자 지정하는 유일한 방법은 아닙니다. 기존 클래스에서 파생하고 새 클래스를 serialize하는 방법을 <xref:System.Xml.Serialization.XmlSerializer> 인스턴스에 지시하여 XML 스트림을 사용자 지정할 수도 있습니다.  

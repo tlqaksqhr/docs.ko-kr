@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582638"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET의 병렬 처리, 동시성 및 비동기 프로그래밍
 .NET은 응용 프로그램이 사용자에게 더 빠르게 대응하도록 설정하는 비동기 코드를 작성하고 여러 개의 실행 스레드를 사용하여 사용자 컴퓨터의 성능을 최대화하는 병렬 코드를 작성할 수 있는 다양한 방법을 제공합니다.  

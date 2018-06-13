@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597323"
 ---
 # <a name="my-reference-visual-basic"></a>My 참조(Visual Basic)
 `My` 기능으로 일반적으로 사용 되는 메서드, 속성 및 이벤트에 쉬운 액세스를 부여 하 여 보다 빠르고 쉽게 프로그래밍 합니다. 이 테이블에 포함 된 개체가 나열 `My`, 및 각 사용 하 여 수행할 수 있는 작업입니다.  

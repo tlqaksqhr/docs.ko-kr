@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583057"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 응용 프로그램의 특징
 

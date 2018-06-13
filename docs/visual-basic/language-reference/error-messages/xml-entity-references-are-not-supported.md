@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595828"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>XML 엔터티 참조는 지원되지 않습니다.
 엔터티 참조 (예를 들어 `©`) 정의 되지 않은 사양 XML 1.0에는 XML 리터럴에 대 한 값으로 포함 됩니다. 만 `&`, `"`, `<`, `>`, 및 `'` XML 리터럴의 XML 엔터티 참조는 지원 합니다.  

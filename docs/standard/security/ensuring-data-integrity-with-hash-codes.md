@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581575"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>해시 코드를 사용하여 데이터 무결성 보장
 해시 값을 데이터를 고유하게 식별하는 고정 길이 숫자 값입니다. 해시 값은 대용량 데이터를 훨씬 더 작은 숫자 값으로 나타내므로 디지털 서명과 함께 사용됩니다. 해시 값에 서명하는 것이 더 큰 값에 서명하는 것보다 더 효율적입니다. 해시 값은 안전하지 않은 채널을 통해 전송된 데이터의 무결성을 확인하는 데도 유용합니다. 수신된 데이터의 해시 값을 전송된 데이터의 해시 값과 비교하여 데이터가 변경되었는지 확인할 수 있습니다.  

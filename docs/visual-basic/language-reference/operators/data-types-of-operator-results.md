@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605435"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
 Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작업의 결과 데이터 형식을 결정 합니다. 경우에 따라이 데이터 형식으로 범위는 두 피연산자의 보다 클 수 있습니다.  

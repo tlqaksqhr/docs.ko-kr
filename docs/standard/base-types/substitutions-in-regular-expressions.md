@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579420"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
 <a name="Top"></a> 대체는 바꾸기 패턴에서만 인식되는 언어 요소입니다. 정규식 패턴을 사용하여 입력 문자열에서 일치하는 텍스트를 바꿀 텍스트의 전부 또는 일부를 정의합니다. 바꾸기 패턴은 리터럴 문자와 하나 이상의 대체로 구성될 수 있습니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 매개 변수가 포함된 `replacement` 메서드의 오버로드와 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 대해 바꾸기 패턴이 제공됩니다. 해당 메서드는 일치하는 패턴을 `replacement` 매개 변수에 정의된 패턴으로 바꿉니다.  

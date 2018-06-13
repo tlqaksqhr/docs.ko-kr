@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583931"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>보안 및 레지스트리(Visual Basic)
 이 페이지에서는 레지스트리에 데이터를 저장할 경우 보안에 미치는 영향을 설명합니다.  

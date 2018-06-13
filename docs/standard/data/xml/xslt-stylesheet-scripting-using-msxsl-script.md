@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577178"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>&lt;msxsl:script&gt;를 사용한 XSLT 스타일시트 스크립트
 <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다.  

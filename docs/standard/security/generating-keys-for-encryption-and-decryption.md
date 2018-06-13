@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587614"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>암호화 및 해독용 키 생성
 키 만들기 및 관리는 암호화 프로세스의 중요한 부분입니다. 대칭 알고리즘을 사용할 때는 키와 IV(Initialization Vector)를 만들어야 합니다. 키는 데이터를 암호 해독해서는 안 되는 사람이 알 수 없도록 해야 합니다. IV는 기밀이어야 할 필요는 없지만 각 세션에서 변경되어야 합니다. 비대칭 알고리즘에서는 공개 키와 개인 키를 만들어야 합니다. 공개 키는 모든 사용자에게 공개될 수 있는 반면, 개인 키는 공개 키로 암호화된 데이터를 암호 해독하는 당사자만 알고 있어야 합니다. 이 섹션에서는 대칭 및 비대칭 알고리즘에 대한 키를 생성 및 관리하는 방법을 설명합니다.  

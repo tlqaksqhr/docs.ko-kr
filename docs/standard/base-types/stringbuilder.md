@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579147"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  

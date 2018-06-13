@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578861"
 ---
 # <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
 일부 일반적인 특성에 포함 된 개체의 그룹을 조작 하도록 특별히 설계 된 모든 형식은 컬렉션을 간주할 수 있습니다. 구현 하는 이러한 형식에 대 한 적절 한 것은 항상 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>이므로이 섹션의만 이라고 생각 컬렉션 수를 하나 또는 둘 다 인터페이스를 구현 하는 형식입니다.  

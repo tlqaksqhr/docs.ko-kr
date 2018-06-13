@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579771"
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
 <a name="top"></a> 역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장된 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  

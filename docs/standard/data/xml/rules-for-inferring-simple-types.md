@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576395"
 ---
 # <a name="rules-for-inferring-simple-types"></a>단순 형식 유추 규칙
 <xref:System.Xml.Schema.XmlSchemaInference> 클래스가 특성 및 요소에 대한 데이터 형식을 유추하는 방법을 설명합니다.  

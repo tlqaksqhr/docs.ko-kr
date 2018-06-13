@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578835"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
 

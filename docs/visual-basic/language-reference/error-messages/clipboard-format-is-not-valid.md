@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586223"
 ---
 # <a name="clipboard-format-is-not-valid"></a>클립보드 형식이 잘못되었습니다.
 지정 된 클립보드 형식을 실행 중인 메서드의와 호환 되지 않습니다. 이 오류의 가능한 원인:  

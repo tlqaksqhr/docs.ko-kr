@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584211"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Visual Basic Power Packs 컨트롤
 Visual Basic Power Packs 컨트롤은 추가 Windows Forms 컨트롤입니다. Visual Studio에는 포함되지 않습니다.  할 수 있습니다 [다운로드](http://go.microsoft.com/fwlink/?LinkId=321343),으로 제공 되는 하지만-지원 없이 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580174"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core를 선택할 경우
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600755"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable(Visual Basic)
 파생된 클래스에서 속성 또는 프로시저를 재정의할 수 없음을 지정 합니다.  

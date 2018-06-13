@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580886"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>방법: Parallel.Invoke를 사용하여 병렬 작업 실행
 이 예제에서는 작업 병렬 라이브러리의 <xref:System.Threading.Tasks.Parallel.Invoke%2A>을 사용하여 작업을 병렬 처리하는 방법을 보여 줍니다. 세 가지 작업이 공유 데이터 소스에 대해 수행됩니다. 소스를 수정하는 작업이 없기 때문에 간단하게 병렬로 실행할 수 있습니다.  
