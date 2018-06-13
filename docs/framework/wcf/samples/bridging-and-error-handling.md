@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804393"
 ---
 # <a name="bridging-and-error-handling"></a><span data-ttu-id="b5373-102">브리징과 오류 처리</span><span class="sxs-lookup"><span data-stu-id="b5373-102">Bridging and Error Handling</span></span>
 <span data-ttu-id="b5373-103">이 샘플 클라이언트와 서로 다른 바인딩을 사용 하는 서비스 간의 브리징 통신에 대 한 Windows Communication Foundation (WCF) 라우팅 서비스는 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b5373-103">This sample demonstrates how the Windows Communication Foundation (WCF) routing service is used for bridging communication between a client and a service that use different bindings.</span></span> <span data-ttu-id="b5373-104">또한 장애 조치 시나리오에 백업 서비스를 사용하는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b5373-104">This sample also shows how to use a back-up service for failover scenarios.</span></span> <span data-ttu-id="b5373-105">라우팅 서비스는 쉽게 응용 프로그램에 내용 기반 라우터를 포함 하는 WCF 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b5373-105">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="b5373-106">이 샘플에서는 라우팅 서비스를 사용 하 여 통신 하도록 표준 WCF Calculator 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="b5373-106">This sample adapts the standard WCF Calculator Sample to communicate using the routing service.</span></span>  

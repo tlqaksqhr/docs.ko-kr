@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803730"
 ---
 # <a name="basic-resource-service"></a><span data-ttu-id="00626-102">기본 리소스 서비스</span><span class="sxs-lookup"><span data-stu-id="00626-102">Basic Resource Service</span></span>
 <span data-ttu-id="00626-103">이 샘플에는 검색을 지 원하는 고객 컬렉션을 노출 하는 Windows Communication Foundation (WCF) REST 프로그래밍 모델을 사용 하 여 HTTP 기반 서비스 구현, 추가, 삭제 및 바꾸기 작업 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="00626-103">This sample demonstrates how to implement a HTTP-based service using the Windows Communication Foundation (WCF) REST Programming model that exposes a collection of customers that supports the retrieve, add, delete and replace operations.</span></span> <span data-ttu-id="00626-104">이 샘플에는 두 가지 자체 호스팅된 WCF HTTP 서비스 (Service.cs)와 서비스를 만들고를 호출 하는 콘솔 응용 프로그램 (program.cs).</span><span class="sxs-lookup"><span data-stu-id="00626-104">This sample consists of 2 components - a self-hosted WCF HTTP service (Service.cs) and a console application (program.cs) that creates the service and makes calls to it.</span></span>  

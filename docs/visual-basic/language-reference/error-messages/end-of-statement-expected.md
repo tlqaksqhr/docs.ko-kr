@@ -1,40 +1,32 @@
 ---
 title: 문의 끝이 필요합니다.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30205
 - vbc30205
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4934952015cb4871bcd90cef982eab5425b1617f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b91d13cbcb9d211d4ca18c8e48c7494bf6eccc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588082"
 ---
-# <a name="end-of-statement-expected"></a><span data-ttu-id="e1fba-102">문의 끝이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-102">End of statement expected</span></span>
-<span data-ttu-id="e1fba-103">문이 구문적으로 완료 되었지만 문을 완료 하는 요소 뒤에 추가 프로그래밍 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-103">The statement is syntactically complete, but an additional programming element follows the element that completes the statement.</span></span> <span data-ttu-id="e1fba-104">줄 종결자는 모든 문이 끝날 때 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-104">A line terminator is required at the end of every statement.</span></span>
+# <a name="end-of-statement-expected"></a><span data-ttu-id="36e33-102">문의 끝이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-102">End of statement expected</span></span>
+<span data-ttu-id="36e33-103">문이 구문적으로 완료 되었지만 문을 완료 하는 요소 뒤에 추가 프로그래밍 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-103">The statement is syntactically complete, but an additional programming element follows the element that completes the statement.</span></span> <span data-ttu-id="36e33-104">줄 종결자는 모든 문이 끝날 때 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-104">A line terminator is required at the end of every statement.</span></span>
   
- <span data-ttu-id="e1fba-105">줄 종결자를 줄으로 Visual Basic 소스 파일의 문자를 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-105">A line terminator divides the characters of a Visual Basic source file into lines.</span></span> <span data-ttu-id="e1fba-106">유니코드 캐리지 반환 문자 (& HD), 줄 종결자의 예로는 유니코드 줄 바꿈 문자 (& HA), 및 유니코드 캐리지 리턴, 유니코드 줄 바꿈 문자는 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-106">Examples of line terminators are the Unicode carriage return character (&HD), the Unicode linefeed character (&HA), and the Unicode carriage return character followed by the Unicode linefeed character.</span></span> <span data-ttu-id="e1fba-107">줄 종결자에 대 한 자세한 내용은 참조는 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-107">For more information about line terminators, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).</span></span>
+ <span data-ttu-id="36e33-105">줄 종결자를 줄으로 Visual Basic 소스 파일의 문자를 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-105">A line terminator divides the characters of a Visual Basic source file into lines.</span></span> <span data-ttu-id="36e33-106">유니코드 캐리지 반환 문자 (& HD), 줄 종결자의 예로는 유니코드 줄 바꿈 문자 (& HA), 및 유니코드 캐리지 리턴, 유니코드 줄 바꿈 문자는 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-106">Examples of line terminators are the Unicode carriage return character (&HD), the Unicode linefeed character (&HA), and the Unicode carriage return character followed by the Unicode linefeed character.</span></span> <span data-ttu-id="36e33-107">줄 종결자에 대 한 자세한 내용은 참조는 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-107">For more information about line terminators, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).</span></span>
   
- <span data-ttu-id="e1fba-108">**오류 ID:** BC30205</span><span class="sxs-lookup"><span data-stu-id="e1fba-108">**Error ID:** BC30205</span></span>
+ <span data-ttu-id="36e33-108">**오류 ID:** BC30205</span><span class="sxs-lookup"><span data-stu-id="36e33-108">**Error ID:** BC30205</span></span>
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e1fba-109">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e1fba-109">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="36e33-109">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="36e33-109">To correct this error</span></span>
   
-1.  <span data-ttu-id="e1fba-110">두 개의 다른 문을 실수로 같은 줄에 배치 된 경우 참조를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-110">Check to see if two different statements have inadvertently been put on the same line.</span></span>
+1.  <span data-ttu-id="36e33-110">두 개의 다른 문을 실수로 같은 줄에 배치 된 경우 참조를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-110">Check to see if two different statements have inadvertently been put on the same line.</span></span>
   
-2.  <span data-ttu-id="e1fba-111">문을 완료 하는 요소 뒤 줄 종결자를 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="e1fba-111">Insert a line terminator after the element that completes the statement.</span></span>
+2.  <span data-ttu-id="36e33-111">문을 완료 하는 요소 뒤 줄 종결자를 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="36e33-111">Insert a line terminator after the element that completes the statement.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="e1fba-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e1fba-112">See Also</span></span>  
- [<span data-ttu-id="e1fba-113">방법: 코드에서 문 분리 및 결합</span><span class="sxs-lookup"><span data-stu-id="e1fba-113">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [<span data-ttu-id="e1fba-114">문</span><span class="sxs-lookup"><span data-stu-id="e1fba-114">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a><span data-ttu-id="36e33-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="36e33-112">See Also</span></span>  
+ [<span data-ttu-id="36e33-113">방법: 코드에서 문 분리 및 결합</span><span class="sxs-lookup"><span data-stu-id="36e33-113">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [<span data-ttu-id="36e33-114">문</span><span class="sxs-lookup"><span data-stu-id="36e33-114">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)

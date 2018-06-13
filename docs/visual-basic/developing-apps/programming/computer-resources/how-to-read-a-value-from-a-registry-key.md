@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586479"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a><span data-ttu-id="8493d-102">방법: Visual Basic에서 레지스트리 키 값 읽기</span><span class="sxs-lookup"><span data-stu-id="8493d-102">How to: Read a Value from a Registry Key in Visual Basic</span></span>
 <span data-ttu-id="8493d-103">`My.Computer.Registry` 개체의 `GetValue` 메서드를 사용하여 Windows 레지스트리의 값을 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8493d-103">The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.</span></span>  

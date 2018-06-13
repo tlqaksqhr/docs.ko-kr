@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584284"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a><span data-ttu-id="9d21b-102">방법: PLINQ 쿼리 취소</span><span class="sxs-lookup"><span data-stu-id="9d21b-102">How to: Cancel a PLINQ Query</span></span>
 <span data-ttu-id="9d21b-103">다음 예제는 PLINQ 쿼리를 취소하는 두 가지 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9d21b-103">The following examples show two ways to cancel a PLINQ query.</span></span> <span data-ttu-id="9d21b-104">첫 번째 예제에서는 주로 데이터 트래버스로 구성되는 쿼리를 취소하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9d21b-104">The first example shows how to cancel a query that consists mostly of data traversal.</span></span> <span data-ttu-id="9d21b-105">두 번째 예제에서는 계산을 많이 해야 하는 사용자 함수를 포함하는 쿼리를 취소하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9d21b-105">The second example shows how to cancel a query that contains a user function that is computationally expensive.</span></span>  

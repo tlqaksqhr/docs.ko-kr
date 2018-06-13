@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582758"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a><span data-ttu-id="806da-102">방법: 낮은 수준의 동기화에 SpinLock 사용</span><span class="sxs-lookup"><span data-stu-id="806da-102">How to: Use SpinLock for Low-Level Synchronization</span></span>
 <span data-ttu-id="806da-103">다음 예제는 <xref:System.Threading.SpinLock> 사용 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="806da-103">The following example demonstrates how to use a <xref:System.Threading.SpinLock>.</span></span>  
