@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410269"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a><span data-ttu-id="37c08-102">Storeadm.exe(격리된 저장소 도구)</span><span class="sxs-lookup"><span data-stu-id="37c08-102">Storeadm.exe (Isolated Storage Tool)</span></span>
 <span data-ttu-id="37c08-103">격리된 저장소 도구를 사용하면 현재 사용자의 기존 저장소를 모두 표시하거나 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37c08-103">The Isolated Storage tool lists or removes all existing stores for the current user.</span></span>  

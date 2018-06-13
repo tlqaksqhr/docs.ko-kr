@@ -1,14 +1,6 @@
 ---
-title: "CLR_DEBUGGING_PROCESS_FLAGS 열거형"
-ms.custom: 
+title: CLR_DEBUGGING_PROCESS_FLAGS 열거형
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CLR_DEBUGGING_PROCESS_FLAGS
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 85b85fde-1f87-490b-ba8d-d604670959c3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4c6d66f9a11f28ca572e0f1eddc74f3a5197a19d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407068"
 ---
-# <a name="clrdebuggingprocessflags-enumeration"></a><span data-ttu-id="a9afc-102">CLR_DEBUGGING_PROCESS_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="a9afc-102">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>
-<span data-ttu-id="a9afc-103">사용 되는 값을 제공 된 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="a9afc-103">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+# <a name="clrdebuggingprocessflags-enumeration"></a><span data-ttu-id="23966-102">CLR_DEBUGGING_PROCESS_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="23966-102">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>
+<span data-ttu-id="23966-103">사용 되는 값을 제공 된 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="23966-103">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a9afc-104">구문</span><span class="sxs-lookup"><span data-stu-id="a9afc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23966-104">구문</span><span class="sxs-lookup"><span data-stu-id="23966-104">Syntax</span></span>  
   
 ```  
 typedef enum CLR_DEBUGGING_PROCESS_FLAGS  
@@ -47,27 +36,27 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
 }  CLR_DEBUGGING_PROCESS_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a9afc-105">멤버</span><span class="sxs-lookup"><span data-stu-id="a9afc-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="23966-105">멤버</span><span class="sxs-lookup"><span data-stu-id="23966-105">Members</span></span>  
   
-|<span data-ttu-id="a9afc-106">멤버</span><span class="sxs-lookup"><span data-stu-id="a9afc-106">Member</span></span>|<span data-ttu-id="a9afc-107">설명</span><span class="sxs-lookup"><span data-stu-id="a9afc-107">Description</span></span>|  
+|<span data-ttu-id="23966-106">멤버</span><span class="sxs-lookup"><span data-stu-id="23966-106">Member</span></span>|<span data-ttu-id="23966-107">설명</span><span class="sxs-lookup"><span data-stu-id="23966-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|<span data-ttu-id="a9afc-108">이 런타임 보낼 catch 업 아닌 관리 되는 디버거 이벤트를 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a9afc-108">This runtime has a non-catch-up managed debugger event to send.</span></span> <span data-ttu-id="a9afc-109">따라잡기 및 catch 업 비 이벤트 간의 차이 대 한 설명 섹션을 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="a9afc-109">See the Remarks section for the distinction between catch-up and non-catch-up events.</span></span>|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|<span data-ttu-id="a9afc-110">보류 중인 관리 되는 이벤트는 한 <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="a9afc-110">The managed event that is pending is a <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> request.</span></span>|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|<span data-ttu-id="23966-108">이 런타임 보낼 catch 업 아닌 관리 되는 디버거 이벤트를 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23966-108">This runtime has a non-catch-up managed debugger event to send.</span></span> <span data-ttu-id="23966-109">따라잡기 및 catch 업 비 이벤트 간의 차이 대 한 설명 섹션을 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="23966-109">See the Remarks section for the distinction between catch-up and non-catch-up events.</span></span>|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|<span data-ttu-id="23966-110">보류 중인 관리 되는 이벤트는 한 <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="23966-110">The managed event that is pending is a <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a9afc-111">설명</span><span class="sxs-lookup"><span data-stu-id="a9afc-111">Remarks</span></span>  
- <span data-ttu-id="a9afc-112">후속 이벤트는 프로세스, 응용 프로그램 도메인, 어셈블리, 모듈 및 프로세스에 연결에 디버거가 현재 상태로 전환 하는 스레드 만들기 알림이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a9afc-112">Catch-up events include process, application domain, assembly, module, and thread creation notifications that bring the debugger up to the current state after it has attached to a process.</span></span> <span data-ttu-id="a9afc-113">비 catch 업 이벤트도 표시 하는 `CLR_DEBUGGING_MANAGED_EVENT_PENDING` 플래그입니다. 모든 다른 디버거 이벤트, 예외 등을 포함 하 고 관리 디버깅 도우미 (MDA) 알림입니다.</span><span class="sxs-lookup"><span data-stu-id="a9afc-113">Non-catch-up events, which are indicated by the `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, include all other debugger events, such as exceptions and managed debugging assistant (MDA) notifications.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23966-111">설명</span><span class="sxs-lookup"><span data-stu-id="23966-111">Remarks</span></span>  
+ <span data-ttu-id="23966-112">후속 이벤트는 프로세스, 응용 프로그램 도메인, 어셈블리, 모듈 및 프로세스에 연결에 디버거가 현재 상태로 전환 하는 스레드 만들기 알림이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23966-112">Catch-up events include process, application domain, assembly, module, and thread creation notifications that bring the debugger up to the current state after it has attached to a process.</span></span> <span data-ttu-id="23966-113">비 catch 업 이벤트도 표시 하는 `CLR_DEBUGGING_MANAGED_EVENT_PENDING` 플래그입니다. 모든 다른 디버거 이벤트, 예외 등을 포함 하 고 관리 디버깅 도우미 (MDA) 알림입니다.</span><span class="sxs-lookup"><span data-stu-id="23966-113">Non-catch-up events, which are indicated by the `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, include all other debugger events, such as exceptions and managed debugging assistant (MDA) notifications.</span></span>  
   
- <span data-ttu-id="a9afc-114">`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` 플래그를 사용 하면 런타임 예외를 종료 하 고 취소할 수 있는 관리 되는 디버거가 연결 요청을 구분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a9afc-114">The `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag enables the runtime to differentiate between a terminating exception and a request to attach a managed debugger that can be canceled.</span></span>  
+ <span data-ttu-id="23966-114">`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` 플래그를 사용 하면 런타임 예외를 종료 하 고 취소할 수 있는 관리 되는 디버거가 연결 요청을 구분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23966-114">The `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag enables the runtime to differentiate between a terminating exception and a request to attach a managed debugger that can be canceled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a9afc-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a9afc-115">Requirements</span></span>  
- <span data-ttu-id="a9afc-116">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a9afc-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23966-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="23966-115">Requirements</span></span>  
+ <span data-ttu-id="23966-116">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="23966-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a9afc-117">**헤더:** Metahost.idl, Metahost.h</span><span class="sxs-lookup"><span data-stu-id="a9afc-117">**Header:** Metahost.idl, Metahost.h</span></span>  
+ <span data-ttu-id="23966-117">**헤더:** Metahost.idl, Metahost.h</span><span class="sxs-lookup"><span data-stu-id="23966-117">**Header:** Metahost.idl, Metahost.h</span></span>  
   
- <span data-ttu-id="a9afc-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9afc-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23966-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23966-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a9afc-119">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9afc-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="23966-119">**.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23966-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9afc-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a9afc-120">See Also</span></span>  
- [<span data-ttu-id="a9afc-121">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="a9afc-121">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [<span data-ttu-id="a9afc-122">디버깅</span><span class="sxs-lookup"><span data-stu-id="a9afc-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="23966-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="23966-120">See Also</span></span>  
+ [<span data-ttu-id="23966-121">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="23966-121">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [<span data-ttu-id="23966-122">디버깅</span><span class="sxs-lookup"><span data-stu-id="23966-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

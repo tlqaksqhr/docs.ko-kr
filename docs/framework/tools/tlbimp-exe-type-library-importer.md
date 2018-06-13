@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409830"
 ---
 # <a name="tlbimpexe-type-library-importer"></a><span data-ttu-id="ab49a-102">Tlbimp.exe(형식 라이브러리 가져오기)</span><span class="sxs-lookup"><span data-stu-id="ab49a-102">Tlbimp.exe (Type Library Importer)</span></span>
 <span data-ttu-id="ab49a-103">형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ab49a-103">The Type Library Importer converts the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly.</span></span> <span data-ttu-id="ab49a-104">Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다.</span><span class="sxs-lookup"><span data-stu-id="ab49a-104">The output of Tlbimp.exe is a binary file (an assembly) that contains runtime metadata for the types defined within the original type library.</span></span> <span data-ttu-id="ab49a-105">[Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ab49a-105">You can examine this file with tools such as [Ildasm.exe](ildasm-exe-il-disassembler.md).</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744631"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a><span data-ttu-id="1230d-102">방법: 강력한 이름으로 어셈블리 서명</span><span class="sxs-lookup"><span data-stu-id="1230d-102">How to: Sign an Assembly with a Strong Name</span></span>
 <span data-ttu-id="1230d-103">강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1230d-103">There are a number of ways to sign an assembly with a strong name:</span></span>  

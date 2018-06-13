@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325372"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="c77da-102">Office Open XML 문서 부분을 출력하는 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="c77da-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
 <span data-ttu-id="c77da-103">이 항목에서는 Office Open XML 문서를 열고 문서 안의 부분에 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c77da-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  

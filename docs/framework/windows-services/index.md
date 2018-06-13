@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512270"
 ---
 # <a name="developing-windows-service-applications"></a><span data-ttu-id="f1f61-102">Windows 서비스 응용 프로그램 개발</span><span class="sxs-lookup"><span data-stu-id="f1f61-102">Developing Windows Service Applications</span></span>
 <span data-ttu-id="f1f61-103">Microsoft Visual Studio나 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK를 사용하면 서비스로 설치되는 응용 프로그램을 만들어 서비스를 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f1f61-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="f1f61-104">이 유형의 응용 프로그램을 Windows 서비스라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1f61-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="f1f61-105">프레임워크 기능을 사용하여 서비스를 만들고 설치하고 시작 및 중지할 수 있으며 서비스 동작을 제어할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f1f61-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  

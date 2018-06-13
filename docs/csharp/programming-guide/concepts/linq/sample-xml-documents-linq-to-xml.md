@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333458"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a><span data-ttu-id="5eeb7-102">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5eeb7-102">Sample XML Documents (LINQ to XML)</span></span>
 <span data-ttu-id="5eeb7-103">다음 예제 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서 전반의 코드 샘플과 코드 조각에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="5eeb7-103">The following example files are used in the code samples and code snippets throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span>  

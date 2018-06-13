@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754508"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a><span data-ttu-id="6df35-102">&lt;webProxyScript&gt; 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="6df35-102">&lt;webProxyScript&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="6df35-103">웹 프록시 검색에 사용 되는 스크립트의 특성을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df35-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  

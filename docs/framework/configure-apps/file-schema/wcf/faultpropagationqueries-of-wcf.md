@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754006"
 ---
 # <a name="ltfaultpropagationqueriesgt-of-wcf"></a><span data-ttu-id="f7c48-102">WCF의 &lt;faultPropagationQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="f7c48-102">&lt;faultPropagationQueries&gt; of WCF</span></span>
 <span data-ttu-id="f7c48-103">활동 내에서 발생하는 오류의 처리를 추적하는 데 사용되는 쿼리 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f7c48-103">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="f7c48-104">이 이벤트는 FaultHandler가 오류를 처리할 때마다 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="f7c48-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="f7c48-105">활동 내에서 발생하는 오류 처리를 추적하려면 이러한 쿼리를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7c48-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="f7c48-106">추적 참가자가 오류 전파 레코드를 구독하려면 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f7c48-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

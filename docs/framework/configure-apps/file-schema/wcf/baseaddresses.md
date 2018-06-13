@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747488"
 ---
 # <a name="ltbaseaddressesgt"></a><span data-ttu-id="355ad-102">&lt;baseAddresses&gt;</span><span class="sxs-lookup"><span data-stu-id="355ad-102">&lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="355ad-103">자체 호스팅 환경의 서비스 호스트에 대한 기준 주소인 `baseAddress` 요소의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="355ad-103">Represents a collection of `baseAddress` elements, which are base addresses for a service host in a self-hosted environment.</span></span> <span data-ttu-id="355ad-104">기준 주소가 있는 경우 기준 주소에 대한 상대 주소로 끝점을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="355ad-104">If a base address is present, endpoints can be configured with addresses relative to the base address.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745619"
 ---
 # <a name="resolving-assembly-loads"></a><span data-ttu-id="458f6-102">어셈블리 로드 해결</span><span class="sxs-lookup"><span data-stu-id="458f6-102">Resolving Assembly Loads</span></span>
 <span data-ttu-id="458f6-103">.NET Framework에서는 어셈블리 로드를 보다 효율적으로 제어해야 하는 응용 프로그램에 대해 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="458f6-103">The .NET Framework provides the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event for applications that require greater control over assembly loading.</span></span> <span data-ttu-id="458f6-104">이 이벤트를 처리하면 응용 프로그램이 정상적인 검색 경로 외부에서 로드 컨텍스트에 어셈블리를 로드하고, 여러 어셈블리 버전 중에서 로드할 버전을 선택하고, 동적 어셈블리를 내보내 반환하는 작업 등을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="458f6-104">By handling this event, your application can load an assembly into the load context from outside the normal probing paths, select which of several assembly versions to load, emit a dynamic assembly and return it, and so on.</span></span> <span data-ttu-id="458f6-105">이 항목에서는 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="458f6-105">This topic provides guidance for handling the <xref:System.AppDomain.AssemblyResolve> event.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409595"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a><span data-ttu-id="31faa-102">Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)</span><span class="sxs-lookup"><span data-stu-id="31faa-102">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>
 <span data-ttu-id="31faa-103">ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="31faa-103">The ActiveX Control Importer converts type definitions in a COM type library for an ActiveX control into a Windows Forms control.</span></span>  

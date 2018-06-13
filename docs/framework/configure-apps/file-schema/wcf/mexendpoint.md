@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747787"
 ---
 # <a name="ltmexendpointgt"></a><span data-ttu-id="9bd82-102">&lt;mexEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="9bd82-102">&lt;mexEndpoint&gt;</span></span>
 <span data-ttu-id="9bd82-103">이 구성 요소는 고정 IMetadataExchange 계약을 사용하여 표준 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9bd82-103">This configuration element defines a standard endpoint with a fixed IMetadataExchange contract.</span></span> <span data-ttu-id="9bd82-104">모든 메타데이터 교환 끝점이 IMetadataExchange를 계약으로 지정하므로 고유의 끝점을 정의하는 대신 이 표준 지점을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9bd82-104">Since all metadata exchange endpoints specify IMetadataExchange as their contract, you can use this standard point instead of defining one for yourself.</span></span>  

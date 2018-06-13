@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750481"
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a><span data-ttu-id="7908b-102">&lt;clientCertificate&gt; 요소의 &lt;authentication&gt;</span><span class="sxs-lookup"><span data-stu-id="7908b-102">&lt;authentication&gt; of &lt;clientCertificate&gt; Element</span></span>
 <span data-ttu-id="7908b-103">서비스에서 사용되는 클라이언트 인증서에 대한 인증 동작을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7908b-103">Specifies authentication behaviors for client certificates used by a service.</span></span>  

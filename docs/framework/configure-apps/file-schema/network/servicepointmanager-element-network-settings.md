@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753588"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="8573c-102">&lt;servicePointManager&gt; 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="8573c-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="8573c-103">네트워크 리소스에 대 한 연결을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="8573c-103">Configures connections to network resources.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744371"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a><span data-ttu-id="ce2b0-102">방법: 첫째 예외 알림 받기</span><span class="sxs-lookup"><span data-stu-id="ce2b0-102">How to: Receive First-Chance Exception Notifications</span></span>
 <span data-ttu-id="ce2b0-103"><xref:System.AppDomain> 클래스의 <xref:System.AppDomain.FirstChanceException> 이벤트를 사용하면 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce2b0-103">The <xref:System.AppDomain.FirstChanceException> event of the <xref:System.AppDomain> class lets you receive a notification that an exception has been thrown, before the common language runtime has begun searching for exception handlers.</span></span>  

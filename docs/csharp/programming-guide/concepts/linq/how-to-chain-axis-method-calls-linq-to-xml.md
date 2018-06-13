@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333779"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a><span data-ttu-id="85a6e-102">방법: 축 메서드 호출 연결(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="85a6e-102">How to: Chain Axis Method Calls (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="85a6e-103">코드에 사용할 수 있는 일반적인 방법은 축 메서드를 호출한 다음 확장명 메서드 축 중 하나를 호출하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="85a6e-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  
