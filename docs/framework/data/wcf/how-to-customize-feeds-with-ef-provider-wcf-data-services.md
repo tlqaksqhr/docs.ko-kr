@@ -1,55 +1,44 @@
 ---
-title: "방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)"
-ms.custom: 
+title: '방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 276aea81716f58ed4a0d6ba8e1f8e2bcdbedb908
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bd29f6154297c2410294af14952d3d79201966ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359480"
 ---
-# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="220cd-102">방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="220cd-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="220cd-103">를 사용하면 엔터티의 속성이 AtomPub 프로토콜에 정의된 사용하지 않은 요소에 매핑될 수 있도록 데이터 서비스 응답의 Atom serialization을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-103"> enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="220cd-104">이 항목에서는 Entity Framework 공급자를 사용하여 .edmx 파일에 정의된 데이터 모델의 엔터티 형식에 대한 매핑 특성을 정의하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="220cd-105">자세한 내용은 참조 [피드 사용자 지정](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="7a050-102">방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="7a050-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="7a050-103">를 사용하면 엔터티의 속성이 AtomPub 프로토콜에 정의된 사용하지 않은 요소에 매핑될 수 있도록 데이터 서비스 응답의 Atom serialization을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-103"> enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="7a050-104">이 항목에서는 Entity Framework 공급자를 사용하여 .edmx 파일에 정의된 데이터 모델의 엔터티 형식에 대한 매핑 특성을 정의하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="7a050-105">자세한 내용은 참조 [피드 사용자 지정](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="220cd-106">이 항목에서는 데이터 모델이 포함되어 있고 도구에서 생성된 .edmx 파일을 수동으로 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-106">In this topic you will manually modify the tool-generated .edmx file that contains the data model.</span></span> <span data-ttu-id="220cd-107">Entity Designer에서 데이터 모델 확장을 지원하지 않으므로 파일을 수동으로 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-107">You must manually modify the file because extensions to the data model are not supported by the Entity Designer.</span></span> <span data-ttu-id="220cd-108">엔터티 데이터 모델 도구에서 생성 한.edmx 파일에 대 한 자세한 내용은 참조 하십시오. [.edmx 파일 개요](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-108">For more information about the .edmx file that the Entity Data Model tools generate, see [.edmx File Overview](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span> <span data-ttu-id="220cd-109">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="220cd-110">완료 하면이 서비스 및 클라이언트 데이터 클래스 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="7a050-106">이 항목에서는 데이터 모델이 포함되어 있고 도구에서 생성된 .edmx 파일을 수동으로 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-106">In this topic you will manually modify the tool-generated .edmx file that contains the data model.</span></span> <span data-ttu-id="7a050-107">Entity Designer에서 데이터 모델 확장을 지원하지 않으므로 파일을 수동으로 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-107">You must manually modify the file because extensions to the data model are not supported by the Entity Designer.</span></span> <span data-ttu-id="7a050-108">엔터티 데이터 모델 도구에서 생성 한.edmx 파일에 대 한 자세한 내용은 참조 하십시오. [.edmx 파일 개요](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-108">For more information about the .edmx file that the Entity Data Model tools generate, see [.edmx File Overview](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span> <span data-ttu-id="7a050-109">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="7a050-110">완료 하면이 서비스 및 클라이언트 데이터 클래스 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a><span data-ttu-id="220cd-111">Northwind.edmx 파일을 수동으로 수정하여 피드 사용자 지정 특성을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="220cd-111">To manually modify the Northwind.edmx file to add feed customization attributes</span></span>  
+### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a><span data-ttu-id="7a050-111">Northwind.edmx 파일을 수동으로 수정하여 피드 사용자 지정 특성을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="7a050-111">To manually modify the Northwind.edmx file to add feed customization attributes</span></span>  
   
-1.  <span data-ttu-id="220cd-112">**솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 `Northwind.edmx` 파일을 선택한 다음 클릭 **로 열기**합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-112">In **Solution Explorer**, right-click the `Northwind.edmx` file, and then click **Open with**.</span></span>  
+1.  <span data-ttu-id="7a050-112">**솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 `Northwind.edmx` 파일을 선택한 다음 클릭 **로 열기**합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-112">In **Solution Explorer**, right-click the `Northwind.edmx` file, and then click **Open with**.</span></span>  
   
-2.  <span data-ttu-id="220cd-113">에 **연결 프로그램-Northwind.edmx** 대화 상자에서 **XML 편집기**, 클릭 하 고 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-113">In the **Open With - Northwind.edmx** dialog box, select **XML Editor**, and then click **OK**.</span></span>  
+2.  <span data-ttu-id="7a050-113">에 **연결 프로그램-Northwind.edmx** 대화 상자에서 **XML 편집기**, 클릭 하 고 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-113">In the **Open With - Northwind.edmx** dialog box, select **XML Editor**, and then click **OK**.</span></span>  
   
-3.  <span data-ttu-id="220cd-114">`ConceptualModels` 요소를 찾아 기존 `Customers` 엔터티 형식을 피드 사용자 지정 매핑 특성이 포함된 다음 요소로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-114">Locate the `ConceptualModels` element and replace the existing `Customers` entity type with the following element that contains feed customization mapping attributes:</span></span>  
+3.  <span data-ttu-id="7a050-114">`ConceptualModels` 요소를 찾아 기존 `Customers` 엔터티 형식을 피드 사용자 지정 매핑 특성이 포함된 다음 요소로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-114">Locate the `ConceptualModels` element and replace the existing `Customers` entity type with the following element that contains feed customization mapping attributes:</span></span>  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  <span data-ttu-id="220cd-115">변경 내용을 저장하고 Northwind.edmx 파일을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-115">Save changes and close the Northwind.edmx file.</span></span>  
+4.  <span data-ttu-id="7a050-115">변경 내용을 저장하고 Northwind.edmx 파일을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-115">Save changes and close the Northwind.edmx file.</span></span>  
   
-5.  <span data-ttu-id="220cd-116">(선택 사항) Northwind.edmx 파일을 마우스 오른쪽 단추로 누른 **사용자 지정 도구 실행**합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-116">(Optional) Right-click the Northwind.edmx file and then click **Run Custom Tool**.</span></span>  
+5.  <span data-ttu-id="7a050-116">(선택 사항) Northwind.edmx 파일을 마우스 오른쪽 단추로 누른 **사용자 지정 도구 실행**합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-116">(Optional) Right-click the Northwind.edmx file and then click **Run Custom Tool**.</span></span>  
   
-     <span data-ttu-id="220cd-117">이렇게 하면 필요한 개체 계층 파일이 다시 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-117">This regenerates the object layer file, which may be required.</span></span>  
+     <span data-ttu-id="7a050-117">이렇게 하면 필요한 개체 계층 파일이 다시 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-117">This regenerates the object layer file, which may be required.</span></span>  
   
-6.  <span data-ttu-id="220cd-118">프로젝트를 다시 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-118">Recompile the project.</span></span>  
+6.  <span data-ttu-id="7a050-118">프로젝트를 다시 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-118">Recompile the project.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="220cd-119">예</span><span class="sxs-lookup"><span data-stu-id="220cd-119">Example</span></span>  
- <span data-ttu-id="220cd-120">위 예제에서는 URI `http://myservice/``Northwind.svc/Customers('ALFKI')`에 대해 다음 결과를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="220cd-120">The previous example returns the following result for the URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span></span>  
+## <a name="example"></a><span data-ttu-id="7a050-119">예제</span><span class="sxs-lookup"><span data-stu-id="7a050-119">Example</span></span>  
+ <span data-ttu-id="7a050-120">위 예제에서는 URI `http://myservice/``Northwind.svc/Customers('ALFKI')`에 대해 다음 결과를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7a050-120">The previous example returns the following result for the URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span></span>  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## <a name="see-also"></a><span data-ttu-id="220cd-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="220cd-121">See Also</span></span>  
- [<span data-ttu-id="220cd-122">Entity Framework 공급자</span><span class="sxs-lookup"><span data-stu-id="220cd-122">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="7a050-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7a050-121">See Also</span></span>  
+ [<span data-ttu-id="7a050-122">Entity Framework 공급자</span><span class="sxs-lookup"><span data-stu-id="7a050-122">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587308"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a><span data-ttu-id="246ca-102">TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="246ca-102">Parsing text files with the TextFieldParser object (Visual Basic)</span></span>
 <span data-ttu-id="246ca-103">`TextFieldParser` 개체를 사용하면 로그 파일 또는 레거시 데이터베이스 정보와 같은 구분된 너비 열로 구성된 매우 큰 파일을 구문 분석하고 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="246ca-103">The `TextFieldParser` object allows you to parse and process very large file that are structured as delimited-width columns of text, such as log files or legacy database information.</span></span> <span data-ttu-id="246ca-104">`TextFieldParser`를 사용한 텍스트 파일 구문 분석은 텍스트 파일 반복과 비슷하고, 텍스트의 필드를 추출하는 구문 분석 메서드는 구분된 문자열을 토큰화하는 데 사용되는 문자열 조작 메서드와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="246ca-104">Parsing a text file with `TextFieldParser` is similar to iterating over a text file, while the parse method to extract fields of text is similar to string manipulation methods used to tokenize delimited strings.</span></span>  

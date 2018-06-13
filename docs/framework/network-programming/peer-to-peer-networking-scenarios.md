@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395455"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="fd11a-102">피어 투 피어 네트워킹 시나리오</span><span class="sxs-lookup"><span data-stu-id="fd11a-102">Peer-to-Peer Networking Scenarios</span></span>
 <span data-ttu-id="fd11a-103">피어 투 피어 네트워킹에서는 다음 시나리오를 사용하고 향상시킵니다.</span><span class="sxs-lookup"><span data-stu-id="fd11a-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  

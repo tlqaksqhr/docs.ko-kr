@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387382"
 ---
 # <a name="mitigation-path-colon-checks"></a><span data-ttu-id="042ac-102">완화: 경로 콜론 검사</span><span class="sxs-lookup"><span data-stu-id="042ac-102">Mitigation: Path Colon Checks</span></span>
 <span data-ttu-id="042ac-103">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터 이전에 지원되지 않던 경로를 지원하도록 여러 가지 변경이 수행되었습니다(길이 및 형식 측면에서).</span><span class="sxs-lookup"><span data-stu-id="042ac-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="042ac-104">특히 적절한 드라이브 구분 기호 구문(콜론)에 대한 확인이 좀 더 정확해졌습니다.</span><span class="sxs-lookup"><span data-stu-id="042ac-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  

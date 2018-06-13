@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767325"
 ---
 # <a name="literals-entity-sql"></a><span data-ttu-id="1251e-102">리터럴(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1251e-102">Literals (Entity SQL)</span></span>
 <span data-ttu-id="1251e-103">이 항목에서는 리터럴에 대한 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 지원을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1251e-103">This topic describes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] support for literals.</span></span>  

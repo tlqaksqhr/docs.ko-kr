@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768309"
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a><span data-ttu-id="1204a-102">방법: ConcurrentBag을 사용하여 개체 풀 만들기</span><span class="sxs-lookup"><span data-stu-id="1204a-102">How to: Create an Object Pool by Using a ConcurrentBag</span></span>
 <span data-ttu-id="1204a-103">이 예제에서는 CurrentBag을 사용하여 개체 풀을 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1204a-103">This example shows how to use a concurrent bag to implement an object pool.</span></span> <span data-ttu-id="1204a-104">클래스에 여러 인스턴스가 필요하고 클래스를 만들거나 삭제하는 데 비용이 많이 드는 경우 개체 풀을 사용하면 응용 프로그램 성능을 향상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1204a-104">Object pools can improve application performance in situations where you require multiple instances of a class and the class is expensive to create or destroy.</span></span> <span data-ttu-id="1204a-105">클라이언트 프로그램에서 새 개체를 요청하면 먼저 개체 풀이 이미 풀에 만들어져 반환된 개체를 제공하려고 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="1204a-105">When a client program requests a new object, the object pool first attempts to provide one that has already been created and returned to the pool.</span></span> <span data-ttu-id="1204a-106">제공될 개체가 없는 경우에만 새 개체가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="1204a-106">If none is available, only then is a new object created.</span></span>  

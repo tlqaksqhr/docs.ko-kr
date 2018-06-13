@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575416"
 ---
 # <a name="xslt-security-considerations"></a><span data-ttu-id="f5034-102">XSLT 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="f5034-102">XSLT Security Considerations</span></span>
 <span data-ttu-id="f5034-103">XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5034-103">The XSLT language has a rich set of features that give you a great deal of power and flexibility.</span></span> <span data-ttu-id="f5034-104">이러한 기능은 유용하지만 외부 소스에서 악용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5034-104">It includes many features that, while useful, could also be exploited by outside sources.</span></span> <span data-ttu-id="f5034-105">XSLT를 안전하게 사용하려면 XSLT를 사용할 때 발생하는 보안 문제 유형을 이해하고 이러한 위험 요소를 완화하기 위한 기본적인 전략을 알아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5034-105">In order to use XSLT safely, you must understand the types of security issues that arise when using XSLT, and the basic strategies that you can employ to mitigate these risks.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587761"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a><span data-ttu-id="8b84c-102">방법: 로그 메시지 쓰기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b84c-102">How to: Write Log Messages (Visual Basic)</span></span>
 <span data-ttu-id="8b84c-103">`My.Application.Log` 및 `My.Log` 개체를 사용하여 응용 프로그램에 대한 정보를 기록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b84c-103">You can use the `My.Application.Log` and `My.Log` objects to log information about your application.</span></span> <span data-ttu-id="8b84c-104">이 예제에서는 `My.Application.Log.WriteEntry` 메서드를 사용하여 추적 정보를 기록하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8b84c-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information.</span></span>  

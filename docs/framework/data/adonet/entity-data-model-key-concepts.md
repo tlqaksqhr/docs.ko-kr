@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765635"
 ---
 # <a name="entity-data-model-key-concepts"></a><span data-ttu-id="406e8-102">엔터티 데이터 모델의 주요 개념</span><span class="sxs-lookup"><span data-stu-id="406e8-102">Entity Data Model Key Concepts</span></span>
 <span data-ttu-id="406e8-103">(EDM (엔터티 데이터 모델) 세 가지 주요 개념을 사용 하 여 데이터의 구조를 설명할: *엔터티 형식*, *연결 형식*, 및 *속성*합니다.</span><span class="sxs-lookup"><span data-stu-id="406e8-103">The Entity Data Model (EDM) uses three key concepts to describe the structure of data: *entity type*, *association type*, and *property*.</span></span> <span data-ttu-id="406e8-104">이는 모든 EDM 구현의 데이터 구조 설명에 가장 중요한 개념입니다.</span><span class="sxs-lookup"><span data-stu-id="406e8-104">These are the most important concepts in describing the structure of data in any implementation of the EDM.</span></span>  

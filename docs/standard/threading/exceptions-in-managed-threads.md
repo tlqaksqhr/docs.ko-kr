@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591575"
 ---
 # <a name="exceptions-in-managed-threads"></a><span data-ttu-id="27947-102">관리되는 스레드의 예외</span><span class="sxs-lookup"><span data-stu-id="27947-102">Exceptions in Managed Threads</span></span>
 <span data-ttu-id="27947-103">NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 있는 대부분의 처리되지 않은 예외가 정상적으로 진행됩니다.</span><span class="sxs-lookup"><span data-stu-id="27947-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="27947-104">즉, 대부분의 경우에서 처리되지 않은 예외는 응용 프로그램을 종료시킵니다.</span><span class="sxs-lookup"><span data-stu-id="27947-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  

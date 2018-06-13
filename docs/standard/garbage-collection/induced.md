@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575865"
 ---
 # <a name="induced-collections"></a><span data-ttu-id="f18e8-102">인덱싱된 컬렉션</span><span class="sxs-lookup"><span data-stu-id="f18e8-102">Induced Collections</span></span>
 <span data-ttu-id="f18e8-103">대부분의 경우 가비지 수집기가 수집을 수행할 적절한 시기를 결정할 수 있으며 가비지 수집기가 독립적으로 실행되는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="f18e8-103">In most cases, the garbage collector can determine the best time to perform a collection, and you should let it run independently.</span></span> <span data-ttu-id="f18e8-104">강제된 컬렉션이 응용 프로그램의 성능을 향상시키는 드문 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f18e8-104">There are rare situations when a forced collection might improve your application's performance.</span></span> <span data-ttu-id="f18e8-105">이러한 경우에 가비지 수집을 강제하는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 사용하여 가비지 수집을 유도할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f18e8-105">In these cases, you can induce garbage collection by using the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method to force a garbage collection.</span></span>  

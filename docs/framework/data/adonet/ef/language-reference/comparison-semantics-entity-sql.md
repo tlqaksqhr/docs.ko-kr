@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765557"
 ---
 # <a name="comparison-semantics-entity-sql"></a><span data-ttu-id="6e319-102">비교 의미 체계(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6e319-102">Comparison Semantics (Entity SQL)</span></span>
 <span data-ttu-id="6e319-103">다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자를 수행하면 형식 인스턴스 비교가 수반됩니다.</span><span class="sxs-lookup"><span data-stu-id="6e319-103">Performing any of the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators involves comparison of type instances:</span></span>  

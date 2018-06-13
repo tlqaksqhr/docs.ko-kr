@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327595"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="c88a7-102">샘플 XML 파일: 숫자 데이터(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c88a7-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
 <span data-ttu-id="c88a7-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c88a7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c88a7-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c88a7-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  

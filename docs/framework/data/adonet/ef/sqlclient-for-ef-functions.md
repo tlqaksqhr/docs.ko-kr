@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764673"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a><span data-ttu-id="2a75e-102">Entity Framework용 SqlClient 기능</span><span class="sxs-lookup"><span data-stu-id="2a75e-102">SqlClient for Entity Framework Functions</span></span>
 <span data-ttu-id="2a75e-103">Entity Framework용 .NET Framework Data Provider for SQL Server(SqlClient)에서는 수치 및 집계 계산을 수행할 함수 집합과 `System.DateTime` 및 `string` 연산을 수행할 함수를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2a75e-103">The .NET Framework Data Provider for SQL Server (SqlClient) for the Entity Framework provides a set of functions to perform mathematical and aggregation calculations, as well as functions to perform `System.DateTime` and `string` operations.</span></span> <span data-ttu-id="2a75e-104">이러한 함수는 `SQLServer` 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a75e-104">These functions are in the `SQLServer` namespace.</span></span>  

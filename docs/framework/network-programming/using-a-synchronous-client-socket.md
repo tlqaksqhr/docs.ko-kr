@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397704"
 ---
 # <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="cc029-102">동기 클라이언트 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="cc029-102">Using a Synchronous Client Socket</span></span>
 <span data-ttu-id="cc029-103">동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 응용 프로그램을 일시 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="cc029-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="cc029-104">동기 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 다른 응용 프로그램의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc029-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  

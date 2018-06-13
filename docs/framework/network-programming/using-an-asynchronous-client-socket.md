@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393685"
 ---
 # <a name="using-an-asynchronous-client-socket"></a><span data-ttu-id="108d2-102">비동기 클라이언트 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="108d2-102">Using an Asynchronous Client Socket</span></span>
 <span data-ttu-id="108d2-103">비동기 클라이언트 소켓은 네트워크 작업이 완료될 때까지 기다리는 동안 응용 프로그램을 일시 중단하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="108d2-103">An asynchronous client socket does not suspend the application while waiting for network operations to complete.</span></span> <span data-ttu-id="108d2-104">대신, 표준 .NET Framework 비동기 프로그래밍 모델을 사용하여 응용 프로그램이 원래 스레드에서 계속 실행되는 동안 한 스레드에서 네트워크 연결을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="108d2-104">Instead, it uses the standard .NET Framework asynchronous programming model to process the network connection on one thread while the application continues to run on the original thread.</span></span> <span data-ttu-id="108d2-105">비동기 소켓은 네트워크를 많이 사용하거나 계속하기 전에 네트워크 작업이 완료될 때까지 기다릴 수 없는 응용 프로그램에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="108d2-105">Asynchronous sockets are appropriate for applications that make heavy use of the network or that cannot wait for network operations to complete before continuing.</span></span>  

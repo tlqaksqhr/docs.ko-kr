@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592017"
 ---
 # <a name="overview-of-synchronization-primitives"></a><span data-ttu-id="14496-102">동기화 기본 형식 개요</span><span class="sxs-lookup"><span data-stu-id="14496-102">Overview of Synchronization Primitives</span></span>
 <a name="top"></a> <span data-ttu-id="14496-103">.NET Framework에서는 스레드 조작을 제어하고 경합 상태를 방지할 수 있는 동기화 기본 형식 범위를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="14496-103">The .NET Framework provides a range of synchronization primitives for controlling the interactions of threads and avoiding race conditions.</span></span> <span data-ttu-id="14496-104">이들 기본 형식은 크게 잠금, 신호 및 연관 작업의 세 범주로 구분됩니다.</span><span class="sxs-lookup"><span data-stu-id="14496-104">These can be roughly divided into three categories: locking, signaling, and interlocked operations.</span></span>  

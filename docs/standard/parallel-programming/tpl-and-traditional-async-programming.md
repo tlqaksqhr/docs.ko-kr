@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591757"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a><span data-ttu-id="88074-102">TPL 및 일반적인 .NET Framework 비동기 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="88074-102">TPL and Traditional .NET Framework Asynchronous Programming</span></span>
 <span data-ttu-id="88074-103">.NET Framework에서는 I/O에 바인딩된 비동기 작업과 계산에 바인딩된 비동기 작업을 수행하도록 다음 표준 패턴 두 개를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="88074-103">The .NET Framework provides the following two standard patterns for performing I/O-bound and compute-bound asynchronous operations:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587412"
 ---
 # <a name="programming-in-visual-basic"></a><span data-ttu-id="3b4d5-102">Visual Basic의 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="3b4d5-102">Programming in Visual Basic</span></span>
 <span data-ttu-id="3b4d5-103">이 섹션에서는 Visual Basic 응용 프로그램을 만들 때 배우면 도움이 될 수 있는 프로그래밍 작업에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3b4d5-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577127"
 ---
 # <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="1c2ea-102">방법: 파일에 텍스트 쓰기</span><span class="sxs-lookup"><span data-stu-id="1c2ea-102">How to: Write Text to a File</span></span>
 <span data-ttu-id="1c2ea-103">이 항목에서는 .NET Framework 응용 프로그램 또는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 위해 파일에 텍스트를 쓸 수 있는 여러 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1c2ea-103">This topic shows different ways you can write text to a file for .NET Framework applications or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="1c2ea-104">파일에 텍스트를 쓸 때는 일반적으로 다음 클래스 및 메서드가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1c2ea-104">The following classes and methods are typically used to write text to a file:</span></span>  

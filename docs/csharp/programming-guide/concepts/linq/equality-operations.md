@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326952"
 ---
 # <a name="equality-operations-c"></a><span data-ttu-id="14174-102">같음 연산(C#)</span><span class="sxs-lookup"><span data-stu-id="14174-102">Equality Operations (C#)</span></span>
 <span data-ttu-id="14174-103">해당 요소가 동일하고 같은 수의 요소를 포함 하는 두 시퀀스는 같은 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="14174-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  

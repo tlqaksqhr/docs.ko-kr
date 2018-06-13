@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592472"
 ---
 # <a name="managed-threading-best-practices"></a><span data-ttu-id="27842-102">관리되는 스레딩을 구현하는 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="27842-102">Managed Threading Best Practices</span></span>
 <span data-ttu-id="27842-103">다중 스레딩에는 신중한 프로그래밍이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="27842-103">Multithreading requires careful programming.</span></span> <span data-ttu-id="27842-104">대부분의 작업의 경우 스레드 풀 스레드로 실행에 대한 요청을 큐에 대기시켜 복잡성을 줄일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27842-104">For most tasks, you can reduce complexity by queuing requests for execution by thread pool threads.</span></span> <span data-ttu-id="27842-105">이 항목에서는 다중 스레드의 작업 조정 또는 차단되는 스레드 처리 등의 더욱 어려운 상황을 다룹니다.</span><span class="sxs-lookup"><span data-stu-id="27842-105">This topic addresses more difficult situations, such as coordinating the work of multiple threads, or handling threads that block.</span></span>  
