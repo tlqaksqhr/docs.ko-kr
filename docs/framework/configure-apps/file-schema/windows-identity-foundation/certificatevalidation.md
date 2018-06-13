@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756061"
 ---
 # <a name="ltcertificatevalidationgt"></a><span data-ttu-id="24386-102">&lt;certificateValidation&gt;</span><span class="sxs-lookup"><span data-stu-id="24386-102">&lt;certificateValidation&gt;</span></span>
 <span data-ttu-id="24386-103">토큰 처리기 인증서의 유효성을 검사 하기 위해 사용 하는 설정을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="24386-103">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="24386-104">특정 처리기 자체적인 검사기로 구성 된 경우이 설정은 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24386-104">These settings are overridden if a specific handler is configured with its own validator.</span></span>  

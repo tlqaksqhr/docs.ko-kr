@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318226"
 ---
 # <a name="members-c-programming-guide"></a><span data-ttu-id="b37f8-102">멤버(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="b37f8-102">Members (C# Programming Guide)</span></span>
 <span data-ttu-id="b37f8-103">클래스 및 구조체에는 해당 데이터와 동작을 나타내는 멤버가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b37f8-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="b37f8-104">클래스의 멤버에는 클래스에서 선언된 모든 멤버가 상속 계층 구조의 모든 클래스에서 선언된 모든 멤버(생성자 및 종료자 제외)와 함께 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b37f8-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="b37f8-105">기본 클래스의 private 멤버는 상속되지만 파생 클래스에서 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b37f8-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266112"
 ---
 # <a name="return-c-reference"></a><span data-ttu-id="79294-102">return(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="79294-102">return (C# Reference)</span></span>
 <span data-ttu-id="79294-103">`return` 문은 해당 문이 나타나는 메서드의 실행을 종료하고 제어를 호출 메서드로 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="79294-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="79294-104">선택적 값을 반환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79294-104">It can also return an optional value.</span></span> <span data-ttu-id="79294-105">메서드가 `void` 형식인 경우 `return` 문을 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79294-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  

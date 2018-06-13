@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755112"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a><span data-ttu-id="457eb-102">&lt;windowsStreamSecurity&gt;</span><span class="sxs-lookup"><span data-stu-id="457eb-102">&lt;windowsStreamSecurity&gt;</span></span>
 <span data-ttu-id="457eb-103">사용자 지정의 바인딩에 대한 Windows 스트림 보안 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="457eb-103">Specify Windows stream security settings of the custom binding.</span></span>  

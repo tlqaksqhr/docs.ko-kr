@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754992"
 ---
 # <a name="ltsessiontokenrequirementgt"></a><span data-ttu-id="894ef-102">&lt;sessionTokenRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="894ef-102">&lt;sessionTokenRequirement&gt;</span></span>
 <span data-ttu-id="894ef-103">에 대 한 구성을 제공 된 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 클래스나 파생된 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="894ef-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  

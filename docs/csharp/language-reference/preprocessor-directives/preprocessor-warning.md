@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268185"
 ---
 # <a name="warning-c-reference"></a><span data-ttu-id="1b8db-102">#warning(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="1b8db-102">#warning (C# Reference)</span></span>
 <span data-ttu-id="1b8db-103">`#warning`을 사용하면 코드의 특정 위치에서 수준 1 경고를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b8db-103">`#warning` lets you generate a level one warning from a specific location in your code.</span></span> <span data-ttu-id="1b8db-104">예:</span><span class="sxs-lookup"><span data-stu-id="1b8db-104">For example:</span></span>  

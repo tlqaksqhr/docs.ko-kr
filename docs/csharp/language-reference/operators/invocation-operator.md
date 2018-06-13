@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275027"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="1c626-102">() 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="1c626-102">() Operator (C# Reference)</span></span>
 <span data-ttu-id="1c626-103">괄호는 식에서 연산의 순서를 지정하는 데 사용될 뿐만 아니라 다음 작업을 수행하는 데도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1c626-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>  

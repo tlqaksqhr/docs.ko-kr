@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754865"
 ---
 # <a name="ltusernameauthenticationgt"></a><span data-ttu-id="27cdc-102">&lt;userNameAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="27cdc-102">&lt;userNameAuthentication&gt;</span></span>
 <span data-ttu-id="27cdc-103">사용자 이름 및 암호에 따라 서비스의 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27cdc-103">Specifies a service's credentials based on user name and password.</span></span>  

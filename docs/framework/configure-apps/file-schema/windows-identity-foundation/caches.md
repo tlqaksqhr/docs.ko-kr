@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755216"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="32c22-102">&lt;캐시&gt;</span><span class="sxs-lookup"><span data-stu-id="32c22-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="32c22-103">세션 토큰에서 토큰 재생 검색에 사용 되는 캐시에 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="32c22-103">Registers the caches used for session tokens and token replay detection.</span></span>  

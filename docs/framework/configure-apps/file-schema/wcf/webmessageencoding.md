@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755268"
 ---
 # <a name="ltwebmessageencodinggt"></a><span data-ttu-id="dd319-102">&lt;webMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="dd319-102">&lt;webMessageEncoding&gt;</span></span>
 <span data-ttu-id="dd319-103">WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍스트 XML, JSON(JavaScript Object Notation) 메시지 인코딩 및 "원시" 이진 콘텐츠를 읽고 쓸 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd319-103">Enables plain-text XML, JavaScript Object Notation (JSON) message encodings and "raw" binary content to be read and written when used in a Windows Communication Foundation (WCF) binding.</span></span>  

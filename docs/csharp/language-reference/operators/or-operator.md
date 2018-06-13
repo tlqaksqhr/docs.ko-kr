@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265689"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="18a89-102">| 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="18a89-102">| Operator (C# Reference)</span></span>
 <span data-ttu-id="18a89-103">이항 `|` 연산자는 정수 형식 및 `bool`에 대해 미리 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="18a89-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="18a89-104">정수 형식의 경우 `|` 연산자는 해당 피연산자의 비트 OR 연산자를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="18a89-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="18a89-105">`bool` 피연산자의 경우 `|` 연산자는 해당 피연산자의 논리적 OR 연산을 계산합니다. 즉, 피연산자가 둘 다 `false`일 경우에만 결과가 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="18a89-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  

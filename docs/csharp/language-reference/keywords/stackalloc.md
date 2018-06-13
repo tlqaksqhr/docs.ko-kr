@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269170"
 ---
 # <a name="stackalloc-c-reference"></a><span data-ttu-id="c2caf-102">stackalloc(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="c2caf-102">stackalloc (C# Reference)</span></span>
 <span data-ttu-id="c2caf-103">`stackalloc` 키워드는 스택에 메모리 블록을 할당하기 위해 안전하지 않은 코드 컨텍스트에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c2caf-103">The `stackalloc` keyword is used in an unsafe code context to allocate a block of memory on the stack.</span></span>

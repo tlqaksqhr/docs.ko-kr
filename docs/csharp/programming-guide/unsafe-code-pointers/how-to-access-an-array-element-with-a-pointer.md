@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332041"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a><span data-ttu-id="85b2a-102">방법: 포인터로 배열 요소 액세스(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="85b2a-102">How to: Access an Array Element with a Pointer (C# Programming Guide)</span></span>
 <span data-ttu-id="85b2a-103">안전하지 않은 컨텍스트에서는 다음 예제와 같이 포인터 요소 액세스를 사용하여 메모리의 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="85b2a-103">In an unsafe context, you can access an element in memory by using pointer element access, as shown in the following example:</span></span>  

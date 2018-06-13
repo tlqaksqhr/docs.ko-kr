@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273925"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="f84dc-103">!</span><span class="sxs-lookup"><span data-stu-id="f84dc-103">!</span></span> <span data-ttu-id="f84dc-104">연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f84dc-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="f84dc-105">논리적 부정 연산자(`!`)는 해당 피연산자를 부정하는 단항 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="f84dc-105">The logical negation operator (`!`) is a unary operator that negates its operand.</span></span> <span data-ttu-id="f84dc-106">`bool`에 대해 정의되며, 해당 피연산자가 `false`인 경우에만 `true`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f84dc-106">It is defined for `bool` and returns `true` if and only if its operand is `false`.</span></span>  

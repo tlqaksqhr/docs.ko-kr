@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268985"
 ---
 # <a name="true-literal-c-reference"></a><span data-ttu-id="17c7f-102">true 리터럴(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="17c7f-102">true Literal (C# Reference)</span></span>
 <span data-ttu-id="17c7f-103">부울 값 true를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="17c7f-103">Represents the boolean value true.</span></span>  
