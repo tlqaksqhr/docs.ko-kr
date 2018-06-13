@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457505"
 ---
 # <a name="throw-c-reference"></a><span data-ttu-id="36b23-102">throw(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="36b23-102">throw (C# Reference)</span></span>
 <span data-ttu-id="36b23-103">프로그램 실행 중 예외 발생 신호를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="36b23-103">Signals the occurrence of an exception during program execution.</span></span>  

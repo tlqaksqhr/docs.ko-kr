@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457659"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a><span data-ttu-id="e10f6-102">오버로드할 수 있는 연산자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e10f6-102">Overloadable Operators (C# Programming Guide)</span></span>
 

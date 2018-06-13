@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957953"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a><span data-ttu-id="be364-103">Azure 컨테이너 인스턴스 (ACI)에 Windows 컨테이너를 배포 하는 경우</span><span class="sxs-lookup"><span data-stu-id="be364-103">When to deploy Windows Containers to Azure Container Instances (ACI)</span></span>
 
