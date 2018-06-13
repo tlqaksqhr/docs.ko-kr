@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805131"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a><span data-ttu-id="e7b80-102">WCF 서비스를 사용한 ASMX 클라이언트</span><span class="sxs-lookup"><span data-stu-id="e7b80-102">ASMX Client with a WCF Service</span></span>
 <span data-ttu-id="e7b80-103">이 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 서비스를 만들고 다음 ASMX 클라이언트와 같은 비 WCF 클라이언트에서 서비스에 액세스 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e7b80-103">This sample demonstrates how to create a service using Windows Communication Foundation (WCF) and then access the service from a non-WCF client, such as an ASMX client.</span></span>  

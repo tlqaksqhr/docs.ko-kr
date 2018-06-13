@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806385"
 ---
 # <a name="namedpipe-activation"></a><span data-ttu-id="8f4af-102">NamedPipe 활성화</span><span class="sxs-lookup"><span data-stu-id="8f4af-102">NamedPipe Activation</span></span>
 <span data-ttu-id="8f4af-103">이 샘플에서는 WAS(Windows Process Activation Service)를 사용하는 서비스를 호스트하여 이름 파이프를 통해 통신하는 서비스를 활성화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8f4af-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="8f4af-104">이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 으로 이루어지며 [!INCLUDE[wv](../../../../includes/wv-md.md)] 실행 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="8f4af-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810215"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a><span data-ttu-id="673d3-102">WCF 보안의 암호화 유연성</span><span class="sxs-lookup"><span data-stu-id="673d3-102">Cryptographic Agility in WCF Security</span></span>
 <span data-ttu-id="673d3-103">이 샘플에서는 Windows Communication Foundation (WCF) 클라이언트와 서비스에서 암호화 agile 구현을 제공 하는 표준/사용자 지정 알고리즘에서 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="673d3-103">This sample shows how to specify in a standard/custom algorithm to provide a cryptographic agile implementation in a Windows Communication Foundation (WCF) client and service.</span></span> <span data-ttu-id="673d3-104">이 샘플은 다음 프로젝트로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="673d3-104">The sample is composed of the following projects:</span></span>  

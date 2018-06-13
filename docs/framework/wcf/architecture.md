@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804224"
 ---
 # <a name="windows-communication-foundation-architecture"></a><span data-ttu-id="9555b-102">Windows Communication Foundation 아키텍처</span><span class="sxs-lookup"><span data-stu-id="9555b-102">Windows Communication Foundation Architecture</span></span>
 <span data-ttu-id="9555b-103">다음 그림에서는 Windows Communication Foundation (WCF) 아키텍처의 주요 계층을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9555b-103">The following graphic illustrates the major layers of the Windows Communication Foundation (WCF) architecture.</span></span>  

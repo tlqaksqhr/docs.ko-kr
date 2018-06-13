@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809705"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="86b1d-102">워크플로 추적 구성</span><span class="sxs-lookup"><span data-stu-id="86b1d-102">Configuring Tracking for a Workflow</span></span>
 <span data-ttu-id="86b1d-103">워크플로는 다음과 같은 세 가지 방식으로 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86b1d-103">A workflow can execute in three ways:</span></span>  

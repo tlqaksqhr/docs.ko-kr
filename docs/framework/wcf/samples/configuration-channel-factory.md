@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806580"
 ---
 # <a name="configuration-channel-factory"></a><span data-ttu-id="8f5bd-102">구성 채널 팩터리</span><span class="sxs-lookup"><span data-stu-id="8f5bd-102">Configuration Channel Factory</span></span>
 <span data-ttu-id="8f5bd-103">이 샘플에서는 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>의 사용법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8f5bd-103">This sample covers the usage of the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span></span> <span data-ttu-id="8f5bd-104"><xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF 클라이언트 구성 중앙에서 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f5bd-104">The <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> allows central management of WCF client configuration.</span></span> <span data-ttu-id="8f5bd-105">응용 프로그램 도메인의 로드 이후 구성이 선택되었거나 변경된 경우에도 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="8f5bd-105">This can also be useful in scenarios in which configuration is selected or changed after the application domain load time.</span></span>  

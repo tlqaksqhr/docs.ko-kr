@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807527"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="09095-102">부하 분산</span><span class="sxs-lookup"><span data-stu-id="09095-102">Load Balancing</span></span>
 <span data-ttu-id="09095-103">하나의 Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리려면 방법은 부하 분산 된 서버 팜으로 배포를 확장할 수입니다.</span><span class="sxs-lookup"><span data-stu-id="09095-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="09095-104">WCF 응용 프로그램에는 하드웨어 기반의 부하 분산 뿐만 아니라 표준 부하 분산 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치를 비롯 한 기술을 사용 하 여 분산 된 부하 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09095-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

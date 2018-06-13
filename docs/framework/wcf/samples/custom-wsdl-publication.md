@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807881"
 ---
 # <a name="custom-wsdl-publication"></a><span data-ttu-id="8f0da-102">사용자 지정 WSDL 게시</span><span class="sxs-lookup"><span data-stu-id="8f0da-102">Custom WSDL Publication</span></span>
 <span data-ttu-id="8f0da-103">이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f0da-103">This sample demonstrates how to:</span></span>  

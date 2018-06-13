@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809520"
 ---
 # <a name="soap-and-http-endpoints"></a><span data-ttu-id="1405e-102">SOAP 및 HTTP 끝점</span><span class="sxs-lookup"><span data-stu-id="1405e-102">SOAP and HTTP Endpoints</span></span>
 <span data-ttu-id="1405e-103">이 샘플에는 RPC 기반 서비스를 구현 하 고 SOAP 형식 및 WCF 웹 프로그래밍 모델을 사용 하 여 "Plain Old XML" (POX) 형식에 노출 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1405e-103">This sample demonstrates how to implement an RPC-based service and expose it in the SOAP format and the "Plain Old XML" (POX) format using the WCF Web Programming model.</span></span> <span data-ttu-id="1405e-104">참조는 [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 서비스에 대 한 HTTP 바인딩에 대 한 자세한 내용은 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="1405e-104">See the [Basic HTTP Service](../../../../docs/framework/wcf/samples/basic-http-service.md) sample for more details about the HTTP binding for the service.</span></span> <span data-ttu-id="1405e-105">이 샘플에서는 서로 다른 바인딩을 사용하는 SOAP 및 HTTP를 통해 동일한 서비스를 노출하는 데 관련된 세부 정보를 중점적으로 다룹니다.</span><span class="sxs-lookup"><span data-stu-id="1405e-105">This sample focuses on the details that pertain to exposing the same service over SOAP and HTTP using different bindings.</span></span>  

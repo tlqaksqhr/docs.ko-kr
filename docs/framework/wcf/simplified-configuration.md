@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808512"
 ---
 # <a name="simplified-configuration"></a><span data-ttu-id="3facb-102">단순화된 구성</span><span class="sxs-lookup"><span data-stu-id="3facb-102">Simplified Configuration</span></span>
 <span data-ttu-id="3facb-103">Windows Communication Foundation (WCF) 서비스를 구성 하는 복잡 한 작업일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3facb-103">Configuring Windows Communication Foundation (WCF) services can be a complex task.</span></span> <span data-ttu-id="3facb-104">다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3facb-104">There are many different options and it is not always easy to determine what settings are required.</span></span> <span data-ttu-id="3facb-105">구성 파일 WCF 서비스의 유연성을 높이고, 하는 동안 문제를 발견 하기 어려운 대부분의 원본 서로입니다.</span><span class="sxs-lookup"><span data-stu-id="3facb-105">While configuration files increase the flexibility of WCF services, they also are the source for many hard to find problems.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="3facb-106">에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3facb-106"> addresses these problems and provides a way to reduce the size and complexity of service configuration.</span></span>  

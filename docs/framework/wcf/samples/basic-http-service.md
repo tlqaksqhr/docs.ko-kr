@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808860"
 ---
 # <a name="basic-http-service"></a><span data-ttu-id="ae239-102">기본 HTTP 서비스</span><span class="sxs-lookup"><span data-stu-id="ae239-102">Basic HTTP Service</span></span>
 <span data-ttu-id="ae239-103">이 샘플에는 많이 Windows Communication Foundation (WCF) REST 프로그래밍 모델을 사용 하 여 "POX" (Plain Old XML) 서비스 라고 하는 HTTP 기반, RPC 기반 서비스를 구현 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ae239-103">This sample demonstrates how to implement an HTTP-based, RPC-based service - popularly referred to as "POX" (Plain Old XML) service – using the Windows Communication Foundation (WCF) REST Programming model.</span></span> <span data-ttu-id="ae239-104">이 샘플은 두 가지 구성 요소로 구성 됩니다.: 자체 호스팅된 WCF HTTP 서비스 (Service.cs)와 서비스를 만들고를 호출 하는 콘솔 응용 프로그램 (Program.cs).</span><span class="sxs-lookup"><span data-stu-id="ae239-104">This sample consists of two components: a self-hosted WCF HTTP service (Service.cs) and a console application (Program.cs) that creates the service and makes calls to it.</span></span>  

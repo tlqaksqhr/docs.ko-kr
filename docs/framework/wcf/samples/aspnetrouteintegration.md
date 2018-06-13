@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804406"
 ---
 # <a name="aspnetrouteintegration"></a><span data-ttu-id="c879a-102">AspNetRouteIntegration</span><span class="sxs-lookup"><span data-stu-id="c879a-102">AspNetRouteIntegration</span></span>
 <span data-ttu-id="c879a-103">이 샘플에서는 ASP.NET 경로 사용 하 여 Windows Communication Foundation (WCF) 나머지 서비스를 호스트 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c879a-103">This sample demonstrates how to host a Windows Communication Foundation (WCF) REST service using ASP.NET routes.</span></span> <span data-ttu-id="c879a-104">[Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 샘플이이 시나리오의 자체 호스팅된 버전을 표시 하 고 심층에서 서비스 구현에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c879a-104">The [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample shows a self-hosted version of this scenario and discusses the service implementation in depth.</span></span> <span data-ttu-id="c879a-105">이 항목에서는 ASP.NET 통합 기능을 중점적으로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c879a-105">This topic focuses on the ASP.NET integration feature.</span></span> <span data-ttu-id="c879a-106">ASP.NET 라우팅에 대 한 자세한 내용은 참조 <xref:System.Web.Routing>합니다.</span><span class="sxs-lookup"><span data-stu-id="c879a-106">For more information about ASP.NET Routing, see <xref:System.Web.Routing>.</span></span>  

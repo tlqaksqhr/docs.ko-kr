@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806915"
 ---
 # <a name="virtual-directory-setup-instructions"></a><span data-ttu-id="daf8d-102">가상 디렉터리 설치 지침</span><span class="sxs-lookup"><span data-stu-id="daf8d-102">Virtual Directory Setup Instructions</span></span>
 <span data-ttu-id="daf8d-103">Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 폴더에 매핑되어 있는 servicemodelsamples 라는 공용 가상 디렉터리를 공유 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="daf8d-103">The Windows Communication Foundation (WCF) samples are intended to share a common virtual directory named servicemodelsamples that is mapped to the %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808610"
 ---
 # <a name="durable-instance-context"></a><span data-ttu-id="acfe4-102">영속 인스턴스 컨텍스트</span><span class="sxs-lookup"><span data-stu-id="acfe4-102">Durable Instance Context</span></span>
 <span data-ttu-id="acfe4-103">이 샘플에는 영 속 인스턴스 컨텍스트를 사용 하도록 설정 하려면 Windows Communication Foundation (WCF) 런타임 사용자 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="acfe4-103">This sample demonstrates how to customize the Windows Communication Foundation (WCF) runtime to enable durable instance contexts.</span></span> <span data-ttu-id="acfe4-104">여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="acfe4-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="acfe4-105">사용자 지정 저장소 메커니즘에 액세스하는 방법도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="acfe4-105">However, it also provides a way to access custom storage mechanisms.</span></span>  

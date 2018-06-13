@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806099"
 ---
 # <a name="services"></a><span data-ttu-id="fef17-102">서비스</span><span class="sxs-lookup"><span data-stu-id="fef17-102">Services</span></span>
 <span data-ttu-id="fef17-103">이 섹션에는 Windows Communication Foundation (WCF) 서비스를 보여 주는 샘플이 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef17-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) services.</span></span>  

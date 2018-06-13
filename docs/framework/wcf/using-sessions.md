@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808594"
 ---
 # <a name="using-sessions"></a><span data-ttu-id="3b77a-102">세션 사용</span><span class="sxs-lookup"><span data-stu-id="3b77a-102">Using Sessions</span></span>
 <span data-ttu-id="3b77a-103">Windows Communication Foundation (WCF) 응용 프로그램에서 한 *세션* 은 메시지 그룹을 대화에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b77a-103">In Windows Communication Foundation (WCF) applications, a *session* correlates a group of messages into a conversation.</span></span> <span data-ttu-id="3b77a-104">WCF 세션에서 사용할 수 있는 세션 개체와 다릅니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램의 경우 다른 동작을 지원 하 고 다른 방법으로 제어 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b77a-104">WCF sessions are different than the session object available in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, support different behaviors, and are controlled in different ways.</span></span> <span data-ttu-id="3b77a-105">이 항목에서는 WCF에서 세션을 사용 하는 기능을 설명 응용 프로그램 및 사용 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="3b77a-105">This topic describes the features that sessions enable in WCF applications and how to use them.</span></span>  

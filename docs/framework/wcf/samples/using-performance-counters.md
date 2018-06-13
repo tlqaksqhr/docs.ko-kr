@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807321"
 ---
 # <a name="using-performance-counters"></a><span data-ttu-id="f49a2-102">성능 카운터 사용</span><span class="sxs-lookup"><span data-stu-id="f49a2-102">Using Performance Counters</span></span>
 <span data-ttu-id="f49a2-103">이 샘플에는 사용자 정의 성능 카운터를 만드는 방법 및 Windows Communication Foundation (WCF) 성능 카운터에 액세스 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f49a2-103">This sample demonstrates how to access Windows Communication Foundation (WCF) performance counters and how to create user-defined performance counters.</span></span> <span data-ttu-id="f49a2-104">이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f49a2-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

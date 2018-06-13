@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809318"
 ---
 # <a name="tracing"></a><span data-ttu-id="387c5-102">추적</span><span class="sxs-lookup"><span data-stu-id="387c5-102">Tracing</span></span>
 <span data-ttu-id="387c5-103">Windows Communication Foundation (WCF) 오류 모니터링 및 분석에 대 한 응용 프로그램 계측 및 진단 데이터를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="387c5-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="387c5-104">응용 프로그램의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="387c5-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="387c5-105">종단 간 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="387c5-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  

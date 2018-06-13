@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808743"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a><span data-ttu-id="680d4-102">사용자 지정 메시지 인코더: 압축 인코더</span><span class="sxs-lookup"><span data-stu-id="680d4-102">Custom Message Encoder: Compression Encoder</span></span>
 <span data-ttu-id="680d4-103">이 샘플은 Windows Communication Foundation (WCF) 플랫폼을 사용 하 여 사용자 지정 인코더를 구현 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="680d4-103">This sample demonstrates how to implement a custom encoder using the Windows Communication Foundation (WCF) platform.</span></span>  

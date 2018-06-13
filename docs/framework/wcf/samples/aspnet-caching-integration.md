@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805410"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="d5fcf-102">ASP.NET 캐싱 통합</span><span class="sxs-lookup"><span data-stu-id="d5fcf-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="d5fcf-103">이 샘플에서는 WCF 웹 HTTP 프로그래밍 모델을 사용하여 ASP.NET 출력 캐시를 활용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5fcf-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="d5fcf-104">참조 하십시오는 [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 자체 호스팅 버전 심층에서 서비스 구현에 나와 있는이 시나리오의 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="d5fcf-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="d5fcf-105">이 항목에서는 ASP.NET 출력 캐시 통합 기능을 중점적으로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d5fcf-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803756"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="08f7e-102">신뢰할 수 있는 서비스</span><span class="sxs-lookup"><span data-stu-id="08f7e-102">Reliable Services</span></span>
 <span data-ttu-id="08f7e-103">큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="08f7e-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="08f7e-104">이 항목에서는 WCF의 신뢰할 수 있는 메시징 기능에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="08f7e-104">This topic explains the reliable messaging features of WCF.</span></span>  

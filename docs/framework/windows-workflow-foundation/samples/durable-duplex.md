@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809429"
 ---
 # <a name="durable-duplex"></a><span data-ttu-id="53f31-102">영속 이중</span><span class="sxs-lookup"><span data-stu-id="53f31-102">Durable Duplex</span></span>
 <span data-ttu-id="53f31-103">이 샘플에는 설정 및의 Windows WF (Workflow Foundation) 메시징 활동을 사용 하 여 영 속 이중 메시지 교환을 구성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53f31-103">This sample demonstrates how to set up and configure durable duplex message exchange using the messaging activities in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="53f31-104">영속 이중 메시지 교환은 오랜 기간 동안 발생하는 양방향 메시지 교환입니다.</span><span class="sxs-lookup"><span data-stu-id="53f31-104">A durable duplex message exchange is a two-way message exchange that takes place over a long period of time.</span></span> <span data-ttu-id="53f31-105">메시지 교환 수명 주기는 통신 채널 수명 주기와 서비스 인스턴스의 메모리 내 수명 주기보다 길 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53f31-105">The lifetime of the message exchange may be longer than the lifetime of the communication channel and the in-memory lifetime of the service instances.</span></span>  

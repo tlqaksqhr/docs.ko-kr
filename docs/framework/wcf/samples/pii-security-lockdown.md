@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809032"
 ---
 # <a name="pii-security-lockdown"></a><span data-ttu-id="bd4ef-102">PII 보안 잠금</span><span class="sxs-lookup"><span data-stu-id="bd4ef-102">PII Security Lockdown</span></span>
 <span data-ttu-id="bd4ef-103">이 샘플에는 Windows Communication Foundation (WCF) 서비스의 여러 보안 관련 기능을 제어 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bd4ef-103">This sample demonstrates how to control several security-related features of a Windows Communication Foundation (WCF) service by:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810085"
 ---
 # <a name="advanced-error-handling"></a><span data-ttu-id="21f91-102">고급 오류 처리</span><span class="sxs-lookup"><span data-stu-id="21f91-102">Advanced Error Handling</span></span>
 <span data-ttu-id="21f91-103">이 샘플 Windows Communication Foundation (WCF) 라우팅 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="21f91-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="21f91-104">라우팅 서비스는 쉽게 응용 프로그램에 내용 기반 라우터를 포함 하는 WCF 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="21f91-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="21f91-105">이 샘플에서는 라우팅 서비스가 트랜잭션과 멀티캐스트 같은 보다 복잡한 다른 메시징 개념을 사용하여 오류에서 적절하게 복구하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="21f91-105">This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>  

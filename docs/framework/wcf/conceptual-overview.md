@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804981"
 ---
 # <a name="conceptual-overview"></a><span data-ttu-id="872e5-102">개념적 개요</span><span class="sxs-lookup"><span data-stu-id="872e5-102">Conceptual Overview</span></span>
 <span data-ttu-id="872e5-103">이 항목에서는 메시징 시스템 및 클래스를 사용할 수 있도록 Windows Communication Foundation (WCF)에 대 한 정보를 요약 합니다.</span><span class="sxs-lookup"><span data-stu-id="872e5-103">This topic summarizes information about the Windows Communication Foundation (WCF) messaging system and the classes that support its use.</span></span>  

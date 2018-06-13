@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805696"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a><span data-ttu-id="d622c-102">Windows Communication Foundation 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="d622c-102">Windows Communication Foundation Bindings Overview</span></span>
 <span data-ttu-id="d622c-103">바인딩은 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 사항을 지정 하는 데 사용 되는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d622c-103">Bindings are objects that are used to specify the communication details that are required to connect to the endpoint of a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="d622c-104">WCF 서비스의 각 끝점에 대해 바인딩을 올바로 지정 해야 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="d622c-104">Each endpoint in a WCF service requires a binding to be well-specified.</span></span> <span data-ttu-id="d622c-105">이 항목에는 통신 세부 바인딩을 정의 하는 요소는 바인딩, 바인딩 종류 WCF에 포함 된 및 바인딩이 끝점에 대해 지정 하는 방법을 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d622c-105">This topic outlines the types of communication details that the bindings define, the elements of a binding, what bindings are included in WCF, and how a binding can be specified for an endpoint.</span></span>  

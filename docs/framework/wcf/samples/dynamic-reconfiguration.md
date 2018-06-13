@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810382"
 ---
 # <a name="dynamic-reconfiguration"></a><span data-ttu-id="59455-102">동적 재구성</span><span class="sxs-lookup"><span data-stu-id="59455-102">Dynamic Reconfiguration</span></span>
 <span data-ttu-id="59455-103">이 샘플 Windows Communication Foundation (WCF) 라우팅 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59455-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="59455-104">라우팅 서비스는 쉽게 응용 프로그램에 내용 기반 라우터를 포함 하는 WCF 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="59455-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="59455-105">이 샘플에서는 라우팅 서비스를 사용 하 여 통신 하도록 표준 WCF Calculator 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="59455-105">This sample adapts the standard WCF Calculator Sample to communicate using the routing service.</span></span> <span data-ttu-id="59455-106">이 샘플에서는 런타임 동안 라우팅 서비스를 동적으로 다시 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59455-106">This sample shows how the routing service can be dynamically reconfigured during runtime.</span></span>  

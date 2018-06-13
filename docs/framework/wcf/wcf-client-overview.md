@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808434"
 ---
 # <a name="wcf-client-overview"></a><span data-ttu-id="f39e4-102">WCF 클라이언트 개요</span><span class="sxs-lookup"><span data-stu-id="f39e4-102">WCF Client Overview</span></span>
 <span data-ttu-id="f39e4-103">이 섹션에서는 클라이언트 응용 프로그램에서 수행 하는 작업, 구성, 생성 및 Windows Communication Foundation (WCF) 클라이언트를 사용 하는 방법 및 클라이언트 응용 프로그램을 보호 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f39e4-103">This section describes what client applications do, how to configure, create, and use a Windows Communication Foundation (WCF) client, and how to secure client applications.</span></span>  

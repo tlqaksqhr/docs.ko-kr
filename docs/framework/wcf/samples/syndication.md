@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804517"
 ---
 # <a name="syndication"></a><span data-ttu-id="4c420-102">배포</span><span class="sxs-lookup"><span data-stu-id="4c420-102">Syndication</span></span>
 <span data-ttu-id="4c420-103">이 섹션에는 Windows Communication Foundation (WCF) 배포를 보여 주는 샘플이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c420-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) syndication.</span></span>  

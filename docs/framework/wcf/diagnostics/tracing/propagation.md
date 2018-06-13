@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803239"
 ---
 # <a name="propagation"></a><span data-ttu-id="7300d-102">전파</span><span class="sxs-lookup"><span data-stu-id="7300d-102">Propagation</span></span>
 <span data-ttu-id="7300d-103">이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="7300d-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  

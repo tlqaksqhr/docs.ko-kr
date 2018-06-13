@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806060"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a><span data-ttu-id="371a6-102">Windows Communication Foundation 서비스에 대한 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="371a6-102">Configuring Bindings for Windows Communication Foundation Services</span></span>
 <span data-ttu-id="371a6-103">응용 프로그램을 만들 때 응용 프로그램의 배포 후 관리자에게 결정을 맡겨야 할 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="371a6-103">When creating an application, you often want to defer decisions to the administrator after the deployment of the application.</span></span> <span data-ttu-id="371a6-104">예를 들어, 서비스 주소 또는 URI(Uniform Resource Identifier)가 무엇인지 미리 알 수 없는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="371a6-104">For example, there is often no way of knowing in advance what a service address, or Uniform Resource Identifier (URI), will be.</span></span> <span data-ttu-id="371a6-105">주소를 하드 코딩하는 대신 관리자가 서비스를 작성한 후에 이를 수행하도록 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="371a6-105">Instead of hard-coding an address, it is preferable to allow an administrator to do so after creating a service.</span></span> <span data-ttu-id="371a6-106">이러한 유연성은 구성을 통해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="371a6-106">This flexibility is accomplished through configuration.</span></span>  

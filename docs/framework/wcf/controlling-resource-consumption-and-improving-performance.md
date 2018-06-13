@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805527"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a><span data-ttu-id="c07ed-102">리소스 사용 제어 및 성능 향상</span><span class="sxs-lookup"><span data-stu-id="c07ed-102">Controlling Resource Consumption and Improving Performance</span></span>
 <span data-ttu-id="c07ed-103">이 항목에서는 다양 한 영역에서 Windows Communication Foundation (WCF) 아키텍처의 성능 메트릭에 영향을 및 리소스 소모를 사용 하는 다양 한 속성을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c07ed-103">This topic describes various properties in different areas of the Windows Communication Foundation (WCF) architecture that work to control resource consumption and affect performance metrics.</span></span>  

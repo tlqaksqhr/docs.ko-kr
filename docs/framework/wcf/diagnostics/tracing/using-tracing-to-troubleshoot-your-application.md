@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809159"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="c032c-102">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c032c-102">Using Tracing to Troubleshoot Your Application</span></span>
 <span data-ttu-id="c032c-103">이 단원에는 추적을 사용하여 응용 프로그램 문제를 해결할 수 있는 방법에 대해 설명하는 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c032c-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  

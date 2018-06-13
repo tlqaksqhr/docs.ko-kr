@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807790"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a><span data-ttu-id="48cc6-102">초보자를 위한 자습서 문제 해결</span><span class="sxs-lookup"><span data-stu-id="48cc6-102">Troubleshooting the Getting Started Tutorial</span></span>
 <span data-ttu-id="48cc6-103">이 항목에서는 초보자를 위한 자습서를 수행할 때 발생하는 가장 일반적인 문제 및 해결 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="48cc6-103">This topic lists the most common problems encountered when working through the Getting Started Tutorial and how to resolve them.</span></span>  

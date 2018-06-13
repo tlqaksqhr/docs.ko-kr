@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805566"
 ---
 # <a name="custom-demux"></a><span data-ttu-id="98630-102">사용자 지정 Demux</span><span class="sxs-lookup"><span data-stu-id="98630-102">Custom Demux</span></span>
 <span data-ttu-id="98630-103">이 샘플에서는 MSMQ 메시지 헤더 매핑할 수 있는 방법을 다양 한 서비스 작업에 Windows Communication Foundation (WCF) 사용 하는 서비스를 보여 줍니다. <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 에서처럼 하나의 서비스 작업을 사용 하 여 제한 되지 않습니다는 [ 메시지 큐를 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 및 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="98630-103">This sample demonstrates how MSMQ message headers can be mapped to different service operations so that Windows Communication Foundation (WCF) services that use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> are not limited to using one service operation as demonstrated in the [Message Queuing to Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) and [Windows Communication Foundation to Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) samples.</span></span>  

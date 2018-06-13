@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809471"
 ---
 # <a name="data-contract-surrogates"></a><span data-ttu-id="f305a-102">데이터 계약 서로게이트</span><span class="sxs-lookup"><span data-stu-id="f305a-102">Data Contract Surrogates</span></span>
 <span data-ttu-id="f305a-103">데이터 계약 *서로게이트* 데이터 계약 모델을 기반으로 하는 고급 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="f305a-103">The data contract *surrogate* is an advanced feature built upon the Data Contract model.</span></span> <span data-ttu-id="f305a-104">이 기능은 사용자가 형식을 메타데이터에 나타내거나 serialize 또는 deserialize하는 방식을 변경하려는 경우 형식 사용자 지정 및 대체에 사용하도록 디자인되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f305a-104">This feature is designed to be used for type customization and substitution in situations where users want to change how a type is serialized, deserialized or projected into metadata.</span></span> <span data-ttu-id="f305a-105">서로게이트는 데이터 계약이 형식에 대해 지정되지 않은 경우, 필드와 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 표시되지 않은 경우 또는 사용자가 스키마 변형을 동적으로 만들려는 경우 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f305a-105">Some scenarios where a surrogate may be used is when a data contract has not been specified for the type, fields and properties are not marked with the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute or users wish to dynamically create schema variations.</span></span>  

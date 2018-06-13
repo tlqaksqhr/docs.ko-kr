@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803383"
 ---
 # <a name="custom-binding"></a><span data-ttu-id="3a2a4-102">사용자 지정 바인딩</span><span class="sxs-lookup"><span data-stu-id="3a2a4-102">Custom Binding</span></span>
 <span data-ttu-id="3a2a4-103">이 단원에는 끝점 요소의 사용자 지정 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a2a4-103">This section contains samples that demonstrate using a custom binding attribute of an endpoint element.</span></span>  

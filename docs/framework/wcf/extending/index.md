@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803707"
 ---
 # <a name="extending-wcf"></a><span data-ttu-id="04049-102">WCF 확장</span><span class="sxs-lookup"><span data-stu-id="04049-102">Extending WCF</span></span>
 <span data-ttu-id="04049-103">Windows Communication Foundation (WCF) 수정 하 고 정확 하 게 제어 런타임 구성 요소 및 서비스 기반 응용 프로그램을 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04049-103">Windows Communication Foundation (WCF) allows you to modify and extend run time components to precisely control and extend service-based applications.</span></span> <span data-ttu-id="04049-104">이 섹션의 항목에서는 확장성 아키텍처에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="04049-104">The topics in this section go in depth about the extensibility architecture.</span></span> <span data-ttu-id="04049-105">기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="04049-105">For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

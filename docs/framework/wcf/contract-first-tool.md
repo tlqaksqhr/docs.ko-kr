@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806262"
 ---
 # <a name="contract-first-tool"></a><span data-ttu-id="c6e1a-102">계약 중심 도구</span><span class="sxs-lookup"><span data-stu-id="c6e1a-102">Contract-First Tool</span></span>
 <span data-ttu-id="c6e1a-103">서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c6e1a-103">Service contracts often need to be created from existing services.</span></span> <span data-ttu-id="c6e1a-104">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c6e1a-104">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], data contract classes can be created automatically from existing services using the contract-first tool.</span></span> <span data-ttu-id="c6e1a-105">계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c6e1a-105">To use the contract-first tool, the XML schema definition file (XSD) must be downloaded locally; the tool cannot import remote data contracts via HTTP.</span></span>  

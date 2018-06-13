@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807178"
 ---
 # <a name="wsstreamedhttpbinding"></a><span data-ttu-id="32835-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="32835-102">WSStreamedHttpBinding</span></span>
 <span data-ttu-id="32835-103">이 샘플에서는 HTTP 전송이 사용될 때 스트리밍 시나리오를 지원하도록 디자인된 바인딩을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="32835-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

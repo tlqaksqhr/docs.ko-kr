@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808093"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a><span data-ttu-id="10d25-102">방법: X.509 인증서에 대 한 암호화 공급자를 변경 개인 키</span><span class="sxs-lookup"><span data-stu-id="10d25-102">How to: Change the Cryptographic Provider for an X.509 Certificate&#39;s Private Key</span></span>
 <span data-ttu-id="10d25-103">이 항목에서는 X.509 인증서의 개인 키를 제공 하는 데 암호화 공급자를 변경 하는 방법과 Windows Communication Foundation (WCF) 보안 프레임 워크에 공급자를 통합 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="10d25-103">This topic shows how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) security framework.</span></span> <span data-ttu-id="10d25-104">인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="10d25-104">For more information about using certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  

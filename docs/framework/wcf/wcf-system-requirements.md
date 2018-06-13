@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804188"
 ---
 # <a name="wcf-system-requirements"></a><span data-ttu-id="23833-102">WCF 시스템 요구 사항</span><span class="sxs-lookup"><span data-stu-id="23833-102">WCF System Requirements</span></span>
 <span data-ttu-id="23833-103">Windows Communication Foundation (WCF)에 분산된 응용 프로그램을 만드는 데 사용 되는 통신 인프라입니다.</span><span class="sxs-lookup"><span data-stu-id="23833-103">Windows Communication Foundation (WCF) is a communication infrastructure that is used to create distributed applications.</span></span> <span data-ttu-id="23833-104">다음 실행 하는 WCF를 사용 하도록 설정 하는 요구 사항을 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="23833-104">The following lists the requirements that enable WCF to run.</span></span>  

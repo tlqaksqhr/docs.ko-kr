@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809653"
 ---
 # <a name="service-channel-listeners-and-channels"></a><span data-ttu-id="644e1-102">서비스: 채널 수신기 및 채널</span><span class="sxs-lookup"><span data-stu-id="644e1-102">Service: Channel Listeners and Channels</span></span>
 <span data-ttu-id="644e1-103">채널 개체에는 채널, 채널 수신기 및 채널 팩터리의 세 가지 범주가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e1-103">There are three categories of channel objects: channels, channel listeners and channel factories.</span></span> <span data-ttu-id="644e1-104">채널은 응용 프로그램과 채널 스택 사이의 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="644e1-104">Channels are the interface between the application and the channel stack.</span></span> <span data-ttu-id="644e1-105">채널 수신기는 받는(또는 수신) 쪽, 일반적으로 새 들어오는 메시지 또는 연결에 대한 응답으로 채널을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e1-105">Channel listeners are responsible for creating channels on the receive (or listen) side, typically in response to a new incoming message or connection.</span></span> <span data-ttu-id="644e1-106">채널 팩터리는 보내는 쪽에 끝점과 통신을 시작할 채널을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e1-106">Channel factories are responsible for creating channels on the send side to initiate communication with an endpoint.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805891"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="be6d7-102">메시지 교환 패턴 선택</span><span class="sxs-lookup"><span data-stu-id="be6d7-102">Choosing a Message Exchange Pattern</span></span>
 <span data-ttu-id="be6d7-103">결정 하는 사용자 지정 전송을 작성 하는 첫 번째 단계는 *메시지 교환 패턴* (즉, Mep)는 개발 중인 채널에 대 한 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="be6d7-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="be6d7-104">이 항목에서는 사용 가능한 옵션과 여러 가지 요구 사항에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="be6d7-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="be6d7-105">이에 설명 된 채널 개발 작업 목록에서 첫 번째 작업이 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="be6d7-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  

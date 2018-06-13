@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806515"
 ---
 # <a name="troubleshooting-setup-issues"></a><span data-ttu-id="5a56d-102">설치 문제 해결</span><span class="sxs-lookup"><span data-stu-id="5a56d-102">Troubleshooting Setup Issues</span></span>
 <span data-ttu-id="5a56d-103">이 항목에서는 Windows Communication Foundation (WCF) 설치 문제를 해결 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a56d-103">This topic describes how to troubleshoot Windows Communication Foundation (WCF) set up issues.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804081"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a><span data-ttu-id="1c2da-102">AJAX Service Using Complex Types 샘플</span><span class="sxs-lookup"><span data-stu-id="1c2da-102">AJAX Service Using Complex Types Sample</span></span>
 <span data-ttu-id="1c2da-103">이 샘플에는 복합 형식의 인스턴스를 만들고 서비스 및 클라이언트도 개체 JSON (JavaScript Notation) 사이 전송 하는 ASP.NET Asynchronous JavaScript and XML (AJAX) 서비스를 만들 Windows Communication Foundation (WCF)를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1c2da-103">This sample demonstrates how to use Windows Communication Foundation (WCF) to create an ASP.NET Asynchronous JavaScript and XML (AJAX) service that creates instances of complex types and sends them between service and client as JavaScript Object Notation (JSON).</span></span> <span data-ttu-id="1c2da-104">웹 브라우저 클라이언트에서 JavaScript 코드를 사용하여 AJAX 서비스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c2da-104">You can access an AJAX service by using JavaScript code from a Web browser client.</span></span> <span data-ttu-id="1c2da-105">기반으로 하는이 샘플은 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플.</span><span class="sxs-lookup"><span data-stu-id="1c2da-105">This sample builds on the [Basic AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md) sample.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809903"
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a><span data-ttu-id="2af62-102">어떤&#39;Windows Communication Foundation 4.5의 새로운 s</span><span class="sxs-lookup"><span data-stu-id="2af62-102">What&#39;s New in Windows Communication Foundation 4.5</span></span>
 <span data-ttu-id="2af62-103">이 항목에서는 Windows Communication Foundation (WCF)에 새로 추가 된 기능에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2af62-103">This topic discusses features new to Windows Communication Foundation (WCF).</span></span>  

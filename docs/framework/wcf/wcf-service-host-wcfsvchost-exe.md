@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807036"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a><span data-ttu-id="2bb99-102">WCF 서비스 호스트(WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="2bb99-102">WCF Service Host (WcfSvcHost.exe)</span></span>
 <span data-ttu-id="2bb99-103">Windows Communication Foundation (WCF) 서비스 호스트 (WcfSvcHost.exe)를 사용 하면 (F5) 자동으로 호스팅하고 테스트할 구현한 서비스를 Visual Studio 디버거를 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bb99-103">Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) allows you to launch the Visual Studio debugger (F5) to automatically host and test a service you have implemented.</span></span> <span data-ttu-id="2bb99-104">그런 다음 찾아 잠재적인 오류를 해결 하려면 WCF 테스트 클라이언트 (WcfTestClient.exe) 또는 사용자 고유의 클라이언트를 사용 하는 서비스를 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bb99-104">You can then test the service using WCF Test Client (WcfTestClient.exe), or your own client, to find and fix any potential errors.</span></span>  

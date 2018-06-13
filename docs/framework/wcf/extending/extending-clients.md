@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806658"
 ---
 # <a name="extending-clients"></a><span data-ttu-id="42871-102">클라이언트 확장</span><span class="sxs-lookup"><span data-stu-id="42871-102">Extending Clients</span></span>
 <span data-ttu-id="42871-103">호출 응용 프로그램에서 서비스 모델 계층은 응용 프로그램 코드의 메서드 호출을 아웃바운드 메시지로 변환하고, 이를 기본 채널에 제공하며, 결과를 다시 응용 프로그램 코드의 반환 값 및 out 매개 변수로 변환한 후 결과를 다시 호출자에게 반환하는 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="42871-103">In a calling application, the service model layer is responsible for translating method invocations in application code into outbound messages, pushing them to the underlying channels, translating results back into return values and out parameters in application code, and returning the results back to the caller.</span></span> <span data-ttu-id="42871-104">서비스 모델 확장은 클라이언트 또는 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장명 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="42871-104">Service model extensions modify or implement execution or communication behavior and features involving client or dispatcher functionality, custom behaviors, message and parameter interception, and other extensibility functionality.</span></span>  

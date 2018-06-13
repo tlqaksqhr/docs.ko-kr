@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807663"
 ---
 # <a name="trusted-facade-service"></a><span data-ttu-id="8eb47-102">신뢰된 외관 서비스</span><span class="sxs-lookup"><span data-stu-id="8eb47-102">Trusted Facade Service</span></span>
 <span data-ttu-id="8eb47-103">이 시나리오 샘플에서는 Windows Communication Foundation (WCF)을 사용 하 여 한 서비스에서 호출자의 id 정보를 이동 하는 방법을 보여 줍니다. 보안 인프라입니다.</span><span class="sxs-lookup"><span data-stu-id="8eb47-103">This scenario sample demonstrates how to flow caller's identity information from one service to another using Windows Communication Foundation (WCF) security infrastructure.</span></span>  

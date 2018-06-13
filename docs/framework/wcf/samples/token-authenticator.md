@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808334"
 ---
 # <a name="token-authenticator"></a><span data-ttu-id="5a9c7-102">Token Authenticator</span><span class="sxs-lookup"><span data-stu-id="5a9c7-102">Token Authenticator</span></span>
 <span data-ttu-id="5a9c7-103">이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a9c7-103">This sample demonstrates how to implement a custom token authenticator.</span></span> <span data-ttu-id="5a9c7-104">Windows Communication Foundation (WCF)의 한 토큰 인증자는 자체 일관성 및 id를 인증 토큰에 연결 된 확인 메시지와 함께 사용 되는 토큰의 유효성 검사에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a9c7-104">A token authenticator in Windows Communication Foundation (WCF) is used for validating the token used with the message, verifying that it is self-consistent, and authenticating the identity associated with the token.</span></span>  

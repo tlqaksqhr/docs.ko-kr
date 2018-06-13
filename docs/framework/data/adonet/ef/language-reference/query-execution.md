@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804822"
 ---
 # <a name="query-execution"></a><span data-ttu-id="342fb-102">쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="342fb-102">Query Execution</span></span>
 <span data-ttu-id="342fb-103">LINQ 쿼리가 사용자에 의해 작성되고 나면 명령 트리로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="342fb-103">After a LINQ query is created by a user, it is converted to a command tree.</span></span> <span data-ttu-id="342fb-104">명령 트리란 Entity Framework에 호환되는 쿼리 표현입니다.</span><span class="sxs-lookup"><span data-stu-id="342fb-104">A command tree is a representation of a query that is compatible with the Entity Framework.</span></span> <span data-ttu-id="342fb-105">변환된 명령 트리는 데이터 소스에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="342fb-105">The command tree is then executed against the data source.</span></span> <span data-ttu-id="342fb-106">쿼리 실행 시 모든 쿼리 식, 다시 말해서 쿼리의 모든 구성 요소가 계산되며 여기에는 결과 구체화에서 사용되는 식도 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="342fb-106">At query execution time, all query expressions (that is, all components of the query) are evaluated, including those expressions that are used in result materialization.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808240"
 ---
 # <a name="extending-dispatchers"></a><span data-ttu-id="c024a-102">디스패처 확장</span><span class="sxs-lookup"><span data-stu-id="c024a-102">Extending Dispatchers</span></span>
 <span data-ttu-id="c024a-103">디스패처는 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="c024a-103">Dispatchers are responsible for pulling incoming messages out of the underlying channels, translating them into method invocations in application code, and sending the results back to the caller.</span></span> <span data-ttu-id="c024a-104">디스패처 확장을 사용하여 이 처리를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c024a-104">Dispatcher extensions allow you to modify this processing.</span></span>  <span data-ttu-id="c024a-105">메시지의 내용 또는 매개 변수를 검사하거나 수정하는 메시지 또는 매개 변수 검사자를 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c024a-105">You can implement message or parameter inspectors that inspect or modify the contents of messages or parameters.</span></span>  <span data-ttu-id="c024a-106">메시지가 작업으로 라우트되는 방식을 변경하거나 일부 다른 기능을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c024a-106">You can change the way messages are routed to operations or provide some other functionality.</span></span>  

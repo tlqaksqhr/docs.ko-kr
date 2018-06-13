@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805748"
 ---
 # <a name="reliable-secure-profile"></a><span data-ttu-id="9b860-102">신뢰할 수 있는 보안 프로필</span><span class="sxs-lookup"><span data-stu-id="9b860-102">Reliable Secure Profile</span></span>
 <span data-ttu-id="9b860-103">이 샘플에서는 WCF를 구성 하는 방법을 보여 줍니다. 및 [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span><span class="sxs-lookup"><span data-stu-id="9b860-103">This sample demonstrates how to compose WCF and [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span></span> <span data-ttu-id="9b860-104">이 샘플의 구현을 설명는 [연결 만들기](http://go.microsoft.com/fwlink/?LinkId=178141) 함께 신뢰할 수 있는 메시징 및 선택적으로 구성 될 수 있는 채널에 보안 채널을 신뢰할 수 있는 보안 바인딩을 만드는 사양을 기반으로 rsp 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b860-104">This sample demonstrates the implementation of a [Make Connection](http://go.microsoft.com/fwlink/?LinkId=178141) channel which can be composed together with Reliable Messaging and optionally a secure channel to create a Reliable Secure Binding based on the RSP specification.</span></span>  

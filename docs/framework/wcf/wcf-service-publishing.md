@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806463"
 ---
 # <a name="wcf-service-publishing"></a><span data-ttu-id="706cf-102">WCF 서비스 게시</span><span class="sxs-lookup"><span data-stu-id="706cf-102">WCF Service Publishing</span></span>
 <span data-ttu-id="706cf-103">Windows Communication Foundation (WCF) 서비스 게시 사용 하면 실제로 테스트 목적으로 프로덕션 환경에 응용 프로그램을 배포 하려면 WCF 서비스 호스트 및 WCF 테스트 클라이언트에서 제공 하는 초기 개발 환경에서 진행 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="706cf-103">Windows Communication Foundation (WCF) Service Publishing assists you in progressing from the early development environment provided by WCF Service Host and WCF Test Client to actually deploying the application to a production environment for testing purposes.</span></span> <span data-ttu-id="706cf-104">최종 배포 계획에 커밋하기 전에 사용할 수 있습니다 Windows Communication Foundation (WCF) 서비스 게시 WCF 서비스가 올바르게 수행 하 고 게시할 준비가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="706cf-104">Before you commit to a final deployment plan, you can use Windows Communication Foundation (WCF) Service Publishing to verify that your WCF service performs correctly and is ready to be published.</span></span> <span data-ttu-id="706cf-105">또한 WCF 서비스 라이브러리를 테스트 하기 위한 다양 한 대상 위치에 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="706cf-105">You can also choose to deploy your WCF service libraries to various target locations for testing.</span></span>  

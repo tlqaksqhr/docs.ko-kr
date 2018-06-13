@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805170"
 ---
 # <a name="wcf-performance-counters"></a><span data-ttu-id="8d1b5-102">WCF 성능 카운터</span><span class="sxs-lookup"><span data-stu-id="8d1b5-102">WCF Performance Counters</span></span>
 <span data-ttu-id="8d1b5-103">Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d1b5-103">Windows Communication Foundation (WCF) includes a large set of performance counters to help you gauge your application's performance.</span></span>  

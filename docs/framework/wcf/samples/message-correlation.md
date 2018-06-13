@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806593"
 ---
 # <a name="message-correlation"></a><span data-ttu-id="ba9d5-102">메시지 상관 관계</span><span class="sxs-lookup"><span data-stu-id="ba9d5-102">Message Correlation</span></span>
 <span data-ttu-id="ba9d5-103">이 샘플에서는 요청/응답 시나리오에서 발신자와 수신자 응용 프로그램 간의 메시지 수 상관 관계 및 메시지 큐 (MSMQ) 응용 프로그램을 Windows Communication Foundation (WCF) 서비스에 MSMQ 메시지를 보낼 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ba9d5-103">This sample demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a Windows Communication Foundation (WCF) service and how messages can be correlated between sender and receiver applications in a request/response scenario.</span></span> <span data-ttu-id="ba9d5-104">이 샘플에서는 msmqIntegrationBinding 바인딩을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ba9d5-104">This sample uses the msmqIntegrationBinding binding.</span></span> <span data-ttu-id="ba9d5-105">이 경우 서비스는 자체 호스팅 콘솔 응용 프로그램으로, 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ba9d5-105">The service in this case is a self-hosted console application to allow you to observe the service that receives queued messages.</span></span> <span data-ttu-id="ba9d5-106">k</span><span class="sxs-lookup"><span data-stu-id="ba9d5-106">k</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804201"
 ---
 # <a name="message-encoder-extensibility"></a><span data-ttu-id="3ff1e-102">메시지 인코더 확장성</span><span class="sxs-lookup"><span data-stu-id="3ff1e-102">Message Encoder Extensibility</span></span>
 <span data-ttu-id="3ff1e-103">이 단원에는 사용자 지정 메시지 인코딩을 보여 주는 샘플이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ff1e-103">This section contains samples that demonstrate custom message encoding.</span></span>  

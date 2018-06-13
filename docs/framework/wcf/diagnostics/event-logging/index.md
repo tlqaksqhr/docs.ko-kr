@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804945"
 ---
 # <a name="event-logging-in-wcf"></a><span data-ttu-id="25a6d-102">WCF에서 이벤트 로깅</span><span class="sxs-lookup"><span data-stu-id="25a6d-102">Event Logging in WCF</span></span>
 <span data-ttu-id="25a6d-103">Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 이벤트를 추적합니다.</span><span class="sxs-lookup"><span data-stu-id="25a6d-103">Windows Communication Foundation (WCF) traces internal events in the Windows event log.</span></span>  

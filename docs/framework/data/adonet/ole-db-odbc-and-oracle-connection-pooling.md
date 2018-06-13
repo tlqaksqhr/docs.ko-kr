@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803126"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a><span data-ttu-id="6e1a8-102">OLE DB, ODBC 및 Oracle 연결 풀링</span><span class="sxs-lookup"><span data-stu-id="6e1a8-102">OLE DB, ODBC, and Oracle Connection Pooling</span></span>
 <span data-ttu-id="6e1a8-103">연결 풀링을 사용하면 응용 프로그램의 성능 및 확장성을 대폭 향상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6e1a8-103">Pooling connections can significantly enhance the performance and scalability of your application.</span></span> <span data-ttu-id="6e1a8-104">이 단원에서는 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자에 대한 연결 풀링에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6e1a8-104">This section discusses connection pooling for the .NET Framework data providers for OLE DB, ODBC and Oracle.</span></span>  

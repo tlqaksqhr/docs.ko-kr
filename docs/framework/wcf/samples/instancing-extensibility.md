@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804592"
 ---
 # <a name="instancing-extensibility"></a><span data-ttu-id="e376a-102">인스턴스 만들기 확장성</span><span class="sxs-lookup"><span data-stu-id="e376a-102">Instancing Extensibility</span></span>
 <span data-ttu-id="e376a-103">이 단원에는 사용자 지정 인스턴스 만들기를 보여 주는 샘플이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e376a-103">This section contains samples that demonstrate custom instancing.</span></span>  

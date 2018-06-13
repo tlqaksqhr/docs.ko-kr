@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804067"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a><span data-ttu-id="cbb10-102">WCF(Windows Communication Foundation) 샘플</span><span class="sxs-lookup"><span data-stu-id="cbb10-102">Windows Communication Foundation (WCF) Samples</span></span>
 <span data-ttu-id="cbb10-103">이러한 샘플 Windows Communication Foundation (WCF)의 다양 한 측면에 대 한 지침을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cbb10-103">These samples provide instruction on various aspects of Windows Communication Foundation (WCF).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808538"
 ---
 # <a name="best-practices-data-contract-versioning"></a><span data-ttu-id="b313a-102">최선의 방법: 데이터 계약 버전 관리</span><span class="sxs-lookup"><span data-stu-id="b313a-102">Best Practices: Data Contract Versioning</span></span>
 <span data-ttu-id="b313a-103">이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b313a-103">This topic lists the best practices for creating data contracts that can evolve easily over time.</span></span> <span data-ttu-id="b313a-104">데이터 계약에 대 한 자세한 내용은 참조 항목에서는 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b313a-104">For more information about data contracts, see the topics in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  

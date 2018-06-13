@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806541"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="22296-102">방법: 엔터프라이즈에서 끝점 잠그기</span><span class="sxs-lookup"><span data-stu-id="22296-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="22296-103">대형 엔터프라이즈에서는 응용 프로그램을 엔터프라이즈 보안 정책에 따라 개발해야 하는 경우가 종종 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22296-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="22296-104">다음 항목에서는 개발 하 고 컴퓨터에 설치 된 모든 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램이 유효성을 검사 하는 데 사용할 수 있는 클라이언트 끝점 유효성 검사기를 설치 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="22296-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

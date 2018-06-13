@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809809"
 ---
 # <a name="hosting"></a><span data-ttu-id="cc7b8-102">호스팅</span><span class="sxs-lookup"><span data-stu-id="cc7b8-102">Hosting</span></span>
 <span data-ttu-id="cc7b8-103">이 섹션에는 호스팅 Windows Communication Foundation (WCF) 서비스를 보여 주는 샘플이 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc7b8-103">This section contains samples that demonstrate hosting Windows Communication Foundation (WCF) services.</span></span>  

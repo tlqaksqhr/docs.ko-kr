@@ -5,6 +5,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33658319"
 ---
 | <span data-ttu-id="f18ca-101">대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="f18ca-101">Target Frameworks</span></span> | <span data-ttu-id="f18ca-102">기호</span><span class="sxs-lookup"><span data-stu-id="f18ca-102">Symbols</span></span> |
 | ------------------| ------- |

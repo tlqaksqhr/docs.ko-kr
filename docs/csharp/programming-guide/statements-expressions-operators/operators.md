@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457932"
 ---
 # <a name="operators-c-programming-guide"></a><span data-ttu-id="e7a77-102">연산자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e7a77-102">Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="e7a77-103">C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* 에 적용되는 프로그램 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e7a77-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="e7a77-104">증가 연산자(`++`)나 `new`같이 피연산자 하나를 사용하는 연산자를 *단항* 연산자라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7a77-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="e7a77-105">산술 연산자(`+`,`-`,`*`,`/`) 같이 피연산자 두 개를 사용하는 연산자를 *이항* 연산자라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7a77-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="e7a77-106">조건 연산자(`?:`)는 피연산자 세 개를 사용하며 이는 C#에서 유일한 삼진 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="e7a77-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  

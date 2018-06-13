@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809172"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="84764-102">끝점 만들기 개요</span><span class="sxs-lookup"><span data-stu-id="84764-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="84764-103">Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다.</span><span class="sxs-lookup"><span data-stu-id="84764-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="84764-104">끝점의 클라이언트는 WCF 서비스에서 제공 하는 기능에 대 한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="84764-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="84764-105">이 단원에서는 끝점의 구조에 대해 설명하고 구성 및 코드에서 끝점을 정의하는 방법을 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="84764-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

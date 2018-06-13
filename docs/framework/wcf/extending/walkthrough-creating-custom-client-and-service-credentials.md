@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808486"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="4c491-102">연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기</span><span class="sxs-lookup"><span data-stu-id="4c491-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="4c491-103">이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c491-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

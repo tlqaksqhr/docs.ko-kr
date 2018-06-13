@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810111"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="76ca5-102">WCF 클라이언트를 사용하여 서비스 액세스</span><span class="sxs-lookup"><span data-stu-id="76ca5-102">Accessing Services Using a WCF Client</span></span>
 <span data-ttu-id="76ca5-103">서비스를 만든 후에 다음 단계에서는 WCF 클라이언트 프록시를 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="76ca5-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="76ca5-104">클라이언트 응용 프로그램 WCF 클라이언트 프록시를 사용 하 여 서비스와 통신 합니다.</span><span class="sxs-lookup"><span data-stu-id="76ca5-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="76ca5-105">클라이언트 응용 프로그램은 일반적으로 서비스를 호출 하는 데 사용할 수 있는 WCF 클라이언트 코드를 생성 하는 서비스의 메타 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="76ca5-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>  

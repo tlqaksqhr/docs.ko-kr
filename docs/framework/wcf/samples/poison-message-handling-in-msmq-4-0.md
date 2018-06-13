@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809507"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="4328c-102">Poison Message Handling in MSMQ 4.0</span><span class="sxs-lookup"><span data-stu-id="4328c-102">Poison Message Handling in MSMQ 4.0</span></span>
 <span data-ttu-id="4328c-103">이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4328c-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="4328c-104">이 샘플에 따라는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플.</span><span class="sxs-lookup"><span data-stu-id="4328c-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="4328c-105">이 샘플에서는 `netMsmqBinding`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4328c-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="4328c-106">이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4328c-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

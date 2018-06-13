@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809796"
 ---
 # <a name="message-flow-overview"></a><span data-ttu-id="b05f2-102">메시지 흐름 개요</span><span class="sxs-lookup"><span data-stu-id="b05f2-102">Message Flow Overview</span></span>
 <span data-ttu-id="b05f2-103">상호 연결된 서비스가 포함된 분산 시스템에서는 서비스 간의 인과 관계를 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b05f2-103">In a distributed system containing interconnected services, it is necessary to determine causal relationships between the services.</span></span> <span data-ttu-id="b05f2-104">상태 모니터링, 문제 해결 및 근본 원인 분석과 같은 중요한 시나리오를 지원하기 위해 요청 흐름의 일부인 다양한 구성 요소를 이해하는 것이 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="b05f2-104">It is important to understand the various components that were part of a request flow to support critical scenarios such as health monitoring, troubleshooting, and root cause analysis.</span></span> <span data-ttu-id="b05f2-105">다양한 서비스 간 추적을 상호 연결할 수 있도록 하기 위해 .NET Framework 4에서는 다음 기능을 통한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b05f2-105">To enable the correlation of traces between various services, in the .NET Framework 4 we added support through the following features:</span></span>  

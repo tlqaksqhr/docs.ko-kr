@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809760"
 ---
 # <a name="activity-list"></a><span data-ttu-id="f8e45-102">동작 목록</span><span class="sxs-lookup"><span data-stu-id="f8e45-102">Activity List</span></span>
 <span data-ttu-id="f8e45-103">이 항목에서는 Windows Communication Foundation (WCF)에서 정의 되는 모든 작업을 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e45-103">This topic lists all the activities defined by Windows Communication Foundation (WCF).</span></span>  
