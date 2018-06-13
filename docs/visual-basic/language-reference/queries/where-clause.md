@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604044"
 ---
 # <a name="where-clause-visual-basic"></a>Where 절(Visual Basic)
 쿼리에 대 한 필터링 조건을 지정합니다.  

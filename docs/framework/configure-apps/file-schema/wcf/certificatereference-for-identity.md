@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747644"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt;의 &lt;ID&gt;
 X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id 가진 끝점과 연결 하는 보안 Windows Communication Foundation (WCF) 클라이언트는 서버가 나타내는 클레임이이 id 생성에 사용 되는 id 클레임 포함 함을 확인 합니다.  

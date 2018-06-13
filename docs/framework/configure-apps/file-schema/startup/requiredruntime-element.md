@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749984"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; 요소
 응용 프로그램에서 1.0 버전의 공용 언어 런타임만 지원하도록 지정합니다. 이 요소는 사용 되지 않으며 더 이상 사용 되지 않음을. [ `supportedRuntime` ](supportedruntime-element.md) 요소를 대신 사용 해야 합니다.

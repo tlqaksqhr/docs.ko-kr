@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566485"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
 이 항목에서는.NET Framework XAML 서비스에서 정의 된 공용 언어 런타임 (CLR) 특성을 설명 합니다. 또한 다른 CLR 특성.NET Framework에 정의 된 어셈블리 또는 형식에 대 한 응용 프로그램에 대 한 XAML 관련 시나리오를 설명 합니다. 이러한 CLR 특성으로 어셈블리, 형식 또는 멤버를 설정 하면 해당 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다. 정보 또는 사용 하 여.NET Framework XAML 서비스 XAML 노드 스트림을 직접 처리 하기 위한 전용된 XAML 판독기 및 XAML 작성기를 통해 모든 XAML 소비자에 게 제공 됩니다.  

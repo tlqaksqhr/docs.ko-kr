@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758778"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 .NET Framework Data Provider for Oracle에 포함 되어는 <xref:System.Data.OracleClient.OracleLob> Oracle을 사용 하는 데 사용 되는 클래스 **LOB** 데이터 형식입니다.  

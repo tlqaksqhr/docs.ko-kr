@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758219"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 기술 옵션 및 지침
 ADO.NET 데이터 플랫폼은 여러 릴리스에 걸쳐 만들어진 전략으로, 개발자가 개념적 엔터티 데이터 모델을 기반으로 프로그래밍할 수 있도록 하여 필요한 코딩 및 유지 관리 작업을 줄일 수 있도록 합니다. 이 플랫폼에는 ADO.NET Entity Framework와 관련 기술이 포함됩니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397548"
 ---
 # <a name="using-streams-on-the-network"></a>네트워크에서 스트림 사용
 네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다. 스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.  

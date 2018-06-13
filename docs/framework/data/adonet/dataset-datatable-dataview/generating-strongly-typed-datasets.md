@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758031"
 ---
 # <a name="generating-strongly-typed-datasets"></a>강력한 형식의 데이터 집합 생성
 XSD(XML 스키마 정의 언어) 표준과 호환되는 XML 스키마가 있으면 <xref:System.Data.DataSet>에 제공된 XSD.exe 도구를 사용하여 강력한 형식의 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]을 생성할 수 있습니다.  

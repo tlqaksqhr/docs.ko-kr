@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748141"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;수신기&gt; 요소에 대 한 &lt;추적&gt;
 저장소를 수집 하는 수신기를 지정 하 고 메시지를 라우팅합니다. 수신기는 추적 출력을 적절 한 대상에 전달 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566901"
 ---
 # <a name="storyboards-overview"></a>Storyboard 개요
 이 항목에서는 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.Storyboard> 개체를 구성 하 고 애니메이션을 적용 합니다. 대화형으로 조작 하는 방법을 설명 <xref:System.Windows.Media.Animation.Storyboard> 개체 및 대상 지정 구문 간접 속성에 설명 합니다.  

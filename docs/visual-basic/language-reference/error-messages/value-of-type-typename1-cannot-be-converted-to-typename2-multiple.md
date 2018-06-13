@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603693"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>형식의 값 &#39; &lt;typename1&gt; &#39; 변환할 수 없습니다 &#39; &lt;typename2&gt; &#39; (여러 파일 참조)
 형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >'입니다. 형식 불일치에 대 한 파일 참조가 섞여 있기 때문일 '\<filepath1 >' 프로젝트에서 '\<projectname1 >'에 대 한 파일 참조와 '\<filepath2 >' 프로젝트에서 '\<projectname2 >'입니다. 두 어셈블리가 동일하면 동일한 대상을 참조하도록 두 참조를 바꿔 보세요.  

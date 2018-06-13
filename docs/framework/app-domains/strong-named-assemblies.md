@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741947"
 ---
 # <a name="strong-named-assemblies"></a>강력한 이름의 어셈블리
 강력한 이름의 어셈블리는 어셈블리에 대한 고유한 ID를 만들어 어셈블리 충돌을 방지할 수 있습니다.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567408"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>AsyncCallback 대리자를 사용하여 비동기 작업 종료
 비동기 작업의 결과를 기다리는 동안 다른 작업을 수행할 수 있는 응용 프로그램은 작업이 완료될 때까지 차단되면 안 됩니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 명령을 계속 실행합니다.  

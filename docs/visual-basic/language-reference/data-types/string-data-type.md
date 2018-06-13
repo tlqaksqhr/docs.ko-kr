@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592121"
 ---
 # <a name="string-data-type-visual-basic"></a>String 데이터 형식(Visual Basic)
 0에서 65535 까지의 값에서 부호 없는 16 비트 (2 바이트) 코드 포인트의 시퀀스를 범위에 저장 합니다. 각 *코드 포인트*, 또는 문자 코드 단일 유니코드 문자를 나타냅니다. 0에서 약 2 십억 문자열로 포함할 수 있습니다 (2 ^31) 유니코드 문자입니다.  

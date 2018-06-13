@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395767"
 ---
 # <a name="creating-internet-requests"></a>인터넷 요청 만들기
 응용 프로그램은 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 메서드를 통해 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 이것은 전달된 URI 구성표에 따라 **WebRequest**에서 파생된 클래스를 만드는 정적 메서드입니다.  

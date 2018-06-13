@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762425"
 ---
 # <a name="facet"></a>패싯
 A *패싯* 세부 정보는 기본 형식 속성 정의를 추가 하는 데 사용 됩니다. A [속성](../../../../docs/framework/data/adonet/property.md) 정의 속성 형식에 대 한 정보를 포함 하지만 자주 자세히는 필요 합니다. 예를 들어, 개념적 모델의 엔터티 형식에는 값을 null로 설정할 수 없는 `String` 형식의 속성이 있을 수 있습니다. 패싯을 사용하면 이 수준의 세부 정보를 지정할 수 있습니다.  

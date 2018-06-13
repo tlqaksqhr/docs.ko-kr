@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604018"
 ---
 # <a name="-operator-visual-basic"></a>+= 연산자(Visual Basic)
 숫자 변수 또는 속성의 값에는 숫자 식의 값을 추가 하 고 변수 또는 속성에는 결과 할당 합니다. 연결을 사용할 수도 있습니다는 `String` 식에는 `String` 변수 또는 속성 및 결과 변수나 속성에 할당 합니다.  

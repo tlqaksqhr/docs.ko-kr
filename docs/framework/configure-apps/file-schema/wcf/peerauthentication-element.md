@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749818"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; 요소
 피어 투 피어 클라이언트에 대한 인증 옵션을 지정합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567590"
 ---
 # <a name="manipulating-strings-in-net"></a>.NET에서 문자열 조작
 .NET에서는 효율적으로 문자열을 생성, 비교 및 수정하고 대량 텍스트와 데이터를 빠르게 구문 분석하여 텍스트 패턴을 검색, 제거 및 바꿀 수 있도록 하는 광범위한 루틴 집합을 제공합니다.  

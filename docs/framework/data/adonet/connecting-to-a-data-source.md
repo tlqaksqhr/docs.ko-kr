@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757114"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>데이터 원본에 연결(ADO.NET)
 ADO.NET에서 사용 하는 **연결** 개체에 연결 문자열에 필요한 인증 정보를 제공 하 여 특정 데이터 원본에 연결 합니다. **연결** 개체를 사용 하면 데이터 원본의 유형에 따라 다릅니다.  

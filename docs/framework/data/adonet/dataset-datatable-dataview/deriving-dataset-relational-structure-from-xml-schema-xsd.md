@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759610"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
 이 단원에서는 XSD(XML 스키마 정의 언어) 스키마 문서에서 `DataSet`의 관계형 스키마를 빌드하는 방법을 간략하게 설명합니다. 일반적으로 각각에 대해 `complexType` 스키마 요소의 자식 요소를 테이블에 생성 됩니다는 `DataSet`합니다. 테이블 구조는 복합 형식의 정의에 의해 결정됩니다. 테이블에서 생성 됩니다는 `DataSet` 스키마의 최상위 요소에 대 한 합니다. 그러나 테이블에만 만들어집니다 최상위 수준에 대 한 `complexType` 요소 때는 `complexType` 안에 다른 요소가 중첩 되어 `complexType` 는 요소인 경우 중첩 된 `complexType` 요소는에 매핑됩니다는 `DataTable` 내는 `DataSet`합니다.  

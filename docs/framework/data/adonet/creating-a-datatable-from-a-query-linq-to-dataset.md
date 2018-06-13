@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758830"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>쿼리에서 DataTable 만들기(LINQ to DataSet)
 데이터 바인딩에는 일반적으로 <xref:System.Data.DataTable> 개체가 사용됩니다. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다. 데이터 작업이 수행되면 새 <xref:System.Data.DataTable>이 소스 <xref:System.Data.DataTable>에 다시 병합됩니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754612"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt;의 &lt;add&gt;
 로깅할 메시지 종류를 지정하는 XPath 필터입니다.  

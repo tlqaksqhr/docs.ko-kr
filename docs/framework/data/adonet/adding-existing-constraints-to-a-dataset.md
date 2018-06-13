@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758359"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>데이터 집합에 기존 제약 조건 추가
 **채우기** 의 메서드는 **DataAdapter** 채웁니다는 <xref:System.Data.DataSet> 는 테이블 열과 데이터 원본의 행만 하지만 제약 조건을 일반적으로 설정 하 여 데이터 원본에서 **채우기** 메서드는이 스키마 정보를 추가 하지 않습니다는 **DataSet** 기본적으로 합니다. 채우는 한 **데이터 집합** 데이터 소스의 기존 기본 키 제약 조건 정보로 호출할 수 있습니다는 **FillSchema** 의 메서드는 **DataAdapter**, 설정 또는 **MissingSchemaAction** 의 속성은 **DataAdapter** 를 **AddWithKey** 호출 하기 전에 **채우기**합니다. 이렇게 하면 해당 기본 키 제약 조건에는 **DataSet** 데이터 소스에서 반영 합니다. 외래 키 제약 조건 정보에 포함 되며에 표시 된 대로 명시적으로 만들어야 합니다 [DataTable 제약 조건](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)합니다.  

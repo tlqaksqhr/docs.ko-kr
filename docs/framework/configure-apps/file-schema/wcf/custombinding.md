@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751789"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 사용자에게 메시징 스택에 대한 모든 권한을 제공합니다.  

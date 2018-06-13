@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751780"
 ---
 # <a name="how-to-create-an-application-domain"></a>방법: 응용 프로그램 도메인 만들기
 공용 언어 런타임 호스트는 필요할 때 자동으로 응용 프로그램 도메인을 만듭니다. 그러나 사용자 고유의 응용 프로그램 도메인을 만들고 개인적으로 관리하려는 어셈블리를 해당 도메인에 로드할 수 있습니다. 코드를 실행할 응용 프로그램 도메인을 만들 수도 있습니다.  

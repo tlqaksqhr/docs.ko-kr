@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748713"
 ---
 # <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 사용자 지정 바인딩에 대한 트랜잭션 흐름 지원을 지정합니다.  

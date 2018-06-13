@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590948"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동
 이 섹션에서는 Visual Basic에서 파일/디렉터리 만들기, 삭제, 이동, 이름 바꾸기와 관련된 작업을 보여 줍니다.  

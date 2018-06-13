@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762340"
 ---
 # <a name="using-entity-sql"></a>USING(Entity SQL)
 쿼리 식에 사용되는 네임스페이스를 지정합니다.  

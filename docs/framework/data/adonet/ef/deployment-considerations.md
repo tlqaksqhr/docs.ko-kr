@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761261"
 ---
 # <a name="deployment-considerations-entity-framework"></a>배포 고려 사항(Entity Framework)
 이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 응용 프로그램 배포에 대한 정보를 제공합니다. Entity Framework에 대 한 자세한 내용은 참조 [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)합니다.  
