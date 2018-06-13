@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496590"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation의 큐
 이 섹션의 항목 큐에 대 한 Windows Communication Foundation (WCF) 지원에 설명 합니다. WCF 활용 Microsoft 메시지 큐 (이전의 MSMQ)를 전송 하 여 큐에 대 한 지원 하며 다음과 같은 시나리오를 지원 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593641"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;name1&gt; &#39; 모호 네임 스페이스 또는 형식에서 가져온 &#39; &lt;name2&gt;&#39;
 모호한 이름을 제공했으므로 다른 이름과 충돌합니다. Visual Basic 컴파일러에서는 충돌 해결 규칙이 없으므로 직접 이름을 구분 해야 합니다.  

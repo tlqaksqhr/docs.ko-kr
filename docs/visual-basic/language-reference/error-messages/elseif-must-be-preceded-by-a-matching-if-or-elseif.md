@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588150"
 ---
 # <a name="39elseif39-must-be-preceded-by-a-matching-39if39-or-39elseif39"></a>&#39;#ElseIf&#39; 짝이 되는 뒤에 야 &#39;#If&#39; 또는 &#39;#ElseIf&#39;
 `#ElseIf`는 조건부 컴파일 지시문입니다. `#ElseIf` 는 일치 하는 절 뒤에 야 `#If` 또는 `#ElseIf` 절.  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6cce181037ee4f4db3a828f98cc3e07dfb45aff3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461632"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT는.NET Framework 버전 2.0에서에서 도입 되었습니다. [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 두 가지 시나리오에서이 HRESULT를 반환 합니다.  

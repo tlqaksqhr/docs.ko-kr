@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397587"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>피어 이름 및 PNRP ID
 피어 이름은 통신의 끝점을 나타내며, 컴퓨터, 사용자, 그룹, 서비스 또는 IPv6 주소로 확인될 수 있는 피어와 연결된 모든 항목이 될 수 있습니다. 피어 이름 확인 프로토콜(PNRP)은 클라우드 멤버를 확인하는 데 사용되는 PNRP ID를 만드는 데 통계적으로 고유한 피어 이름을 사용합니다.  

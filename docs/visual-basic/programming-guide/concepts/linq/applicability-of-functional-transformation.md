@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643578"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>함수 변환 (Visual Basic)의 적용 여부
 순수 함수 변환은 광범위한 상황에서 적용 가능합니다.  

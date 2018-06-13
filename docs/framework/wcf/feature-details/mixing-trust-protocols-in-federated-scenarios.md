@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494467"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>페더레이션 시나리오에서 혼합 트러스트 프로토콜
 페더레이션 클라이언트가 트러스트 버전이 다른 서비스 및 STS(보안 토큰 서비스)와 통신하는 시나리오가 있을 수 있습니다. 서비스 WSDL에 STS와 버전이 다른 WS-Trust 요소가 있는 `RequestSecurityTokenTemplate` 어설션이 포함될 수 있습니다. 이러한 경우 Windows Communication Foundation (WCF) 클라이언트에서 수신한 Ws-trust 요소를 변환 합니다.는 `RequestSecurityTokenTemplate` STS 트러스트 버전과 일치 하도록 합니다. WCF에는 일치 하지 않는 트러스트 버전을 표준 바인딩 용 으로만 처리합니다. WCF에서 인식 되는 모든 표준 알고리즘 매개 변수를 사용 하면 표준 바인딩의 속합니다. 이 항목에서는 서비스와 STS 간의 다양 한 트러스트 설정 사용 하 여 WCF 동작에 설명 합니다.  

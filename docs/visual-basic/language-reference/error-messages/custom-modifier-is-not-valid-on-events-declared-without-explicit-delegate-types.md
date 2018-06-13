@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587524"
 ---
 # <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;사용자 지정&#39; 한정자 명시적 대리자 형식 없이 선언 된 이벤트에서 유효 하지 않습니다.
 사용자 지정이 아닌 이벤트와 달리는 `Custom Event` 선언에 필요는 `As` 이벤트 이름 다음에 이벤트에 대 한 대리자 형식을 명시적으로 지정 하는 절.  

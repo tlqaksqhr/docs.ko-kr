@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549580"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자는 인쇄 및 인쇄 시스템 관리의 새로운 풍부한 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다. 

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591913"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>응용 프로그램 설정 액세스(Visual Basic)
 이 섹션에는 `My.Settings` 개체 및 개체를 통해 수행할 수 있는 작업을 설명하는 항목이 포함됩니다.  

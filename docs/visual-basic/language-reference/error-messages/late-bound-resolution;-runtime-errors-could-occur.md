@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588781"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>런타임에 바인딩을 확인합니다. 런타임 오류가 발생할 수 있습니다.
 개체도 선언 된 변수에 할당 되는 [Object 데이터 형식](../../../visual-basic/language-reference/data-types/object-data-type.md)합니다.  

@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b8b6ba429a45c92dc6b6b5dcaa7c8a35b47385f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458298"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>Icorprofilerinfo7:: Applymetadata 메서드
 [.NET Framework 4.6.1 이상 버전에서 지원됨]  

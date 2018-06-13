@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599306"
 ---
 # <a name="optional-visual-basic"></a>Optional(Visual Basic)
 프로시저가 호출 될 때 프로시저 인수를 생략할 수 있도록 지정 합니다.  

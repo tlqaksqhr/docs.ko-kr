@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587373"
 ---
 # <a name="friend-assembly-reference-ltreferencegt-is-invalid"></a>Friend 어셈블리 참조 &lt;참조&gt; 사용할 수 없습니다
 Friend 어셈블리 참조 \<참조 > 사용할 수 없습니다. 강력한 이름의 서명된 어셈블리는 InternalsVisibleTo 선언에 공개 키를 지정해야 합니다.  

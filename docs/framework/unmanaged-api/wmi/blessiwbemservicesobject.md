@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457921"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 함수
 사용자 자격 증명을 지정 된 액세스를 허용 하는지 여부를 나타냅니다. [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) 개체입니다.   

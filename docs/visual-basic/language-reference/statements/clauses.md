@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596595"
 ---
 # <a name="clauses-visual-basic"></a>절(Visual Basic)
 이 단원의 항목에서는 Visual Basic 런타임에 절을 문서화합니다.  

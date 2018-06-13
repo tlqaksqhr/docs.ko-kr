@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460423"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
 시간 기반 형식 변환 되 면 지정된 된 형식으로 원시 성능 데이터 값을 하나 또는 두 개의 원시 성능 데이터 값으로 변환 합니다.   

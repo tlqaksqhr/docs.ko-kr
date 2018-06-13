@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e3478364a415b145bed879cda5cc5c41cf22254c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458795"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum 인터페이스
 생성 되는 고정된 개체의 컬렉션을 순차적으로 반복 하는 방법을 제공는 [Ngen.exe (네이티브 이미지 생성기)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)합니다.  

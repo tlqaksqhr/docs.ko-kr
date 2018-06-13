@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591809"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>값을 복사 &#39;ByRef&#39; 매개 변수 &#39; &lt;parametername&gt; &#39; 형식에서 일치 하는 인수에 다시 축소 됩니다 &#39; &lt;typename1&gt; &#39; &#39; &lt;typename2&gt;&#39;
 해당 매개 변수 형식으로 확대 되는 인수가 지정 된 프로시저를 호출 하 고 축소 인수에 매개 변수에서 변환 됩니다.  

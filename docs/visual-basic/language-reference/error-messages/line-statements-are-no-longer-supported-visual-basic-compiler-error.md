@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587881"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;줄&#39; 명령문은 더 이상 지원 (Visual Basic 컴파일러 오류)
 줄으로 된 문이 이상 지원 되지 않습니다. 파일 I/O 기능은 `Microsoft.VisualBasic.FileSystem.LineInput` 그래픽 기능으로 서 제공 `System.Drawing.Graphics.DrawLine`합니다.  

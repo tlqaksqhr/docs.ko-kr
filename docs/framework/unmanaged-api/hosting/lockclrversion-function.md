@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446092"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 호스트가 명시적으로 CLR을 초기화 하기 전에 프로세스에서 사용할 공용 언어 런타임 (CLR)의 버전은 결정할 수 있습니다.  

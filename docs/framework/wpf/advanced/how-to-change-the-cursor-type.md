@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543395"
 ---
 # <a name="how-to-change-the-cursor-type"></a>방법: 커서 형식 변경
 변경 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Input.Cursor> 에서 특정 요소 및 응용 프로그램에 대 한 마우스 포인터의 합니다.  

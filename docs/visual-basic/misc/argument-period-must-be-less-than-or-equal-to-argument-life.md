@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599033"
 ---
 # <a name="argument-39period39-must-be-less-than-or-equal-to-argument-39life39"></a>인수 &#39;기간&#39; 인수 보다 작거나 같아야 합니다 &#39;수명&#39;
 자산 감가상각이 계산되는 기간을 지정하는 `Period` 인수 값이 `Life` 인수 값보다 큽니다.  

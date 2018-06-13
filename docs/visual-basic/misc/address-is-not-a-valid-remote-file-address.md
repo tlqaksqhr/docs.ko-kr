@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599901"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;주소&gt; 올바른 원격 파일 주소가 아닙니다
 \<주소 > 올바른 원격 파일 주소가 아닙니다. 올바른 주소는 프로토콜, 경로 및 파일 이름을 포함해야 합니다.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493750"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>끝점: 주소, 바인딩 및 계약
 Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 된 *끝점* 서비스의 합니다. 끝점 클라이언트는 WCF 서비스에서 제공 하는 기능에 대 한 액세스를 제공 합니다.  

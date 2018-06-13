@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458109"
 ---
 # <a name="configuring-client-behaviors"></a>클라이언트 동작 구성
 두 가지 방법으로 동작을 구성 하는 Windows Communication Foundation (WCF): 참조에 정의 된 동작 구성을 하 여는 `<behavior>` 섹션 또는 프로그래밍 방식으로 호출 하는 클라이언트 응용 프로그램 구성 파일- 응용 프로그램입니다. 이 항목에서는 두 접근 방식 모두에 대해 설명합니다.  

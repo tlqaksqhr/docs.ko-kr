@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524585"
 ---
 # <a name="regions-in-gdi"></a>GDI+의 영역
 영역에는 출력 장치의 표시 영역의 일부입니다. 영역 (단일 사각형) 단순 또는 복합 (다각형 및 폐곡선 조합) 될 수 있습니다. 다음 그림에는 두 개의 영역을 보여 줍니다: 하나는 사각형에서 구현 되 고 다른 경로에서 구성 됩니다.  

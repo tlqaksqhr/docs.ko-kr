@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596852"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>구분 기호는 Nothing이나 빈 문자열일 수 없습니다.
 `TextFieldParser` 속성이 `Delimiters` 으로 설정되거나 빈 `Nothing` ("")이므로 파일에서 `String` 를 읽을 수 없습니다.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449470"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
 현재 메타 데이터 범위에 대 한 지정된 된 값에 지정된 된 옵션을 설정합니다. 옵션은 현재 메타 데이터 범위에 대 한 호출의 처리 방법을 제어 합니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459113"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 함수
 특정 방법에 대해 설정할 한정자를 검색 합니다.

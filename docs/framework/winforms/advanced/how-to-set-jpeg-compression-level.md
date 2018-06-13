@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525246"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>방법: JPEG 압축 수준 설정
 이미지를 디스크에 저장할 때 파일 크기를 최소화하거나 품질을 향상시키기 위해 이미지의 매개 변수를 수정해야 할 수 있습니다. 압축 수준을 수정하여 JPEG 이미지의 품질을 조정할 수 있습니다. JPEG 이미지를 저장할 때 압축 수준을 지정 하려면 만들어야 합니다는 <xref:System.Drawing.Imaging.EncoderParameters> 개체를 전달 하는 <xref:System.Drawing.Image.Save%2A> 의 메서드는 <xref:System.Drawing.Image> 클래스입니다. 초기화는 <xref:System.Drawing.Imaging.EncoderParameters> 하나로 구성 된 배열을 개체 <xref:System.Drawing.Imaging.EncoderParameter>합니다. 만들 때는 <xref:System.Drawing.Imaging.EncoderParameter>, 지정 된 <xref:System.Drawing.Imaging.Encoder.Quality> 인코더 및 원하는 압축 수준입니다.  
@@ -126,7 +127,7 @@ End Function
   
 -   A <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
--   **c:\\** 에 있는 `TestPhoto.jpg` 이미지 파일  
+-   **c:\\**에 있는 `TestPhoto.jpg` 이미지 파일  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 인코더에서 지원하는 매개 변수 확인](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  

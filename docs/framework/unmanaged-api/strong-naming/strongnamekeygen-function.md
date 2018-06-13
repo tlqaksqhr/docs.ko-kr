@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459168"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 함수
 강력한 이름 사용 하기 위해 새 공개/개인 키 쌍을 만듭니다.  

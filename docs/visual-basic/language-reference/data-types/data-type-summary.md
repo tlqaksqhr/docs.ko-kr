@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591796"
 ---
 # <a name="data-type-summary-visual-basic"></a>데이터 형식 요약(Visual Basic)
 다음 표에서 Visual Basic 데이터 형식, 해당 지 원하는 공용 언어 런타임 형식, 일반 저장소 할당, 및 해당 값 범위를 보여 줍니다.  

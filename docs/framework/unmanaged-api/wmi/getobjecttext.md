@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459641"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 함수
 관리 되는 MOF (Object Format) 구문에서 개체의 텍스트 렌더링을 반환합니다.

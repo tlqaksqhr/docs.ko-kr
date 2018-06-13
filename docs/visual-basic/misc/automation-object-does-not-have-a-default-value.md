@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599238"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a>자동화 개체에 기본값이 없습니다.
 Visual Basic 지정된 된 개체에 대 한 기본 멤버를 확인할 수 없습니다.  

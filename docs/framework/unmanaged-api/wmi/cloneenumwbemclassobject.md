@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460608"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 함수
 열거형의 현재 위치를 유지 하는 열거자의 논리적 복사본을 만듭니다.  

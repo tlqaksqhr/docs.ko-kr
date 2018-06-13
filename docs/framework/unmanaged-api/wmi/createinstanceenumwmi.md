@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461378"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 함수
 지정 된 선택 조건을 충족 하는 지정된 된 클래스의 인스턴스를 반환 하는 열거자를 반환 합니다. 

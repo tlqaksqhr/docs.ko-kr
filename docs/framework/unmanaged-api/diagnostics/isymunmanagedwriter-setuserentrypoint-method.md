@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426689"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 메서드
 이 모듈에 대 한 진입점인 사용자 정의 메서드를 지정 합니다. 예를 들어이 진입점에는 컴파일러에서 생성 된 스텁이 main 전에 대신 사용자의 주 방법일 수 있습니다.  

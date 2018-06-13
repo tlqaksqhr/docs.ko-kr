@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593222"
 ---
 # <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a>액세스 가능한 &#39;Main&#39; 에 있는 적절 한 시그니처가 메서드가 &#39; &lt;이름&gt;&#39;
 명령줄 응용 프로그램에 있어야는 `Sub Main` 정의 합니다. `Main` 으로 선언 해야 `Public Shared` 또는 클래스에 정의 되어 있는 경우 `Public` 모듈에서 정의 하는 경우.  

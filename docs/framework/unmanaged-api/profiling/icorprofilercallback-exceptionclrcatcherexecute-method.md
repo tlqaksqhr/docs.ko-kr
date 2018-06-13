@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451144"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute 메서드
 될 때 호출 된 `catch` 차단 예외가 공용 언어 런타임 (CLR) 자체 내에서 실행 됩니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  

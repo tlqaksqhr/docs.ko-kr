@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587334"
 ---
 # <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;eventname&gt; &#39; 은 (는) 이벤트 이므로 직접 호출할 수 없습니다
 ' <`eventname`>'은 (는) 이벤트 및 이므로 직접 호출할 수 없습니다. 사용 하 여 한 `RaiseEvent` 이벤트를 발생 시키는 문입니다.  

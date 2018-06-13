@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455574"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>프로파일링(관리되지 않는 API 참조)
 프로 파일링 API를 사용 하면 공용 언어 런타임 (CLR) 하 여 프로그램 실행을 모니터링 하려면 프로파일러에서 합니다.  

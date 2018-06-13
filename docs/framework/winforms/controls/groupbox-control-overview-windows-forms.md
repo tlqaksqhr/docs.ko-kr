@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525167"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤에 대 한 식별 가능한 그룹화를 제공 하는 데 사용 됩니다. 일반적으로 폼 함수로 세분화 하 그룹 상자를 사용 합니다. 예를 들어 어떤 야간 운송 같은 메일링 옵션을 지정 하는 주문 양식과 해야 합니다. 논리 시각적 표시를 사용자에 게 그룹 상자에서 모든 옵션에 그룹화 하 고 디자인 타임에 컨트롤을 모두 쉽게 이동할 수 있습니다-단일을 이동 하는 경우 <xref:System.Windows.Forms.GroupBox> 모든 포함 된 컨트롤이, 너무 제어 합니다.  

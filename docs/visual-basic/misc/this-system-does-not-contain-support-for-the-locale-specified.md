@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639775"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>이 시스템은 지정한 로캘을 지원하지 않습니다.
 `VbStrConv` 열거형을 사용하려고 하지만 시스템이 지정된 로캘을 지원하지 않습니다.  

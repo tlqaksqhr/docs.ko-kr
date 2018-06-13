@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591298"
 ---
 # <a name="exception-handling-task-parallel-library"></a>예외 처리(작업 병렬 라이브러리)
 작업 내에서 실행되는 사용자 코드에 의해 throw된 처리되지 않은 예외는 이 항목의 뒷부분에서 설명하는 특정 시나리오를 제외하고는 호출 스레드로 다시 전파됩니다. 정적 또는 인스턴스 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 또는 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` 메서드 중 하나를 사용할 때 예외가 전파되며 `try`/`catch` 문에 호출을 포함하여 예외를 처리할 수 있습니다. 어떤 작업이 연결된 자식 작업의 부모인 경우 또는 여러 작업에서 대기 중인 경우, 여러 개의 예외가 throw될 수 있습니다.  

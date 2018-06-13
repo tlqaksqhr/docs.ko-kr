@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493480"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>방법: 기본 WCF 웹 HTTP 서비스 만들기
 Windows Communication Foundation (WCF)를 사용 하 여 웹 끝점을 노출 하는 서비스를 만들 수 있습니다. 웹 끝점은 XML 또는 JSON으로 데이터를 보내며 SOAP 봉투가 없습니다. 이 항목에서는 이러한 끝점을 노출하는 방법을 보여 줍니다.  

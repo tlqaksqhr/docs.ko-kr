@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594782"
 ---
 # <a name="need-property-array-index"></a>속성 배열 인덱스가 필요합니다.
 이 속성 값은 단일 값이 아닌 배열로 구성됩니다. 액세스하려는 속성 배열에 대해 인덱스를 지정하지 않았습니다.  

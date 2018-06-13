@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641198"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)
 이 단원에서는 Office Open XML WordprocessingML 문서에 대한 상세한 정보를 제공하고 Open XML 문서의 문서 부분과 스타일 부분에 대한 예제를 보여 줍니다.  

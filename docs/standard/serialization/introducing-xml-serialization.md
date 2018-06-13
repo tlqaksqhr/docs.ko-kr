@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592225"
 ---
 # <a name="introducing-xml-serialization"></a>XML Serialization 소개
 serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세스입니다. 예를 들어 개체를 serialize하고 클라이언트와 서버 사이에 HTTP를 사용하여 인터넷을 통해 전송할 수 있습니다. 반면 deserialization은 스트림에서 개체를 다시 생성합니다.  

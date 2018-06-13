@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5f04d71e1709eed6c3a9f1af400f79b4722f4433
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457703"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly 함수
 지정한 어셈블리 파일에서 강력한 이름 토큰을 만듭니다.  

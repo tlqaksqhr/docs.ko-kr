@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592277"
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>방법: OvalShape 및 RectangleShape 컨트롤을 사용하여 도형 그리기(Visual Studio)
 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 컨트롤을 사용하여 디자인 타임과 런타임에 폼이나 컨테이너에서 원 또는 타원을 그릴 수 있습니다. <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 컨트롤을 사용하면 폼이나 컨테이너에서 정사각형, 직사각형 또는 모서리가 둥근 직사각형을 그릴 수 있습니다. 이 컨트롤을 사용하여 디자인 타임 및 런타임에 도형을 그릴 수도 있습니다.  

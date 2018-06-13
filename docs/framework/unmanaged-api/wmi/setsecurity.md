@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458753"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 함수
 현재 스레드와 연결 된 가장 토큰을 검색 합니다.   

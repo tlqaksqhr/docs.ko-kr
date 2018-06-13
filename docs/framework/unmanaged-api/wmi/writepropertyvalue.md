@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461086"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 함수
 속성 핸들에 의해 식별 된 속성에 지정된 된 수의 바이트를 씁니다.

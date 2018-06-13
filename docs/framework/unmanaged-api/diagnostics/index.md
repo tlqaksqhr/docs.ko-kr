@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425004"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>진단 기호 저장소(관리되지 않는 API 참조)
 진단 기호 저장소 API 컴파일러가 디버거에 사용에 대 한 기호 정보를 생성 하는 데를 사용 합니다.  

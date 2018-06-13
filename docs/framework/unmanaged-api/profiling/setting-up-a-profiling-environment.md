@@ -14,9 +14,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cc1fb16800fcf58770def23dae6b0fd0fbdd043
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462366"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]

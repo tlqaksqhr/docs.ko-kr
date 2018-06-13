@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590002"
 ---
 # <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>암시적으로 변환 &#39; &lt;typename1&gt; &#39; 를 &#39; &lt;typename2&gt; &#39; 의 값을 복사 &#39;ByRef&#39; 매개 변수 &#39; &lt; parametername&gt; &#39; 일치 하는 인수에 다시 합니다.
 프로시저를 호출는 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) 해당 매개 변수의 형식과 다른 형식의 인수입니다.  

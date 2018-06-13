@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587661"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>이전 함수 실행 시간이 초과되었으므로 함수를 실행할 수 없습니다.
 함수 실행 사용할 수 없습니다. 이전 함수 실행 시간이 초과 되었습니다. 함수 실행을 다시 활성화 하려면 단계별로 다시 실행 하거나 디버깅을 다시 시작 합니다.  

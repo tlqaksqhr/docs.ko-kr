@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443458"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 구조체
 참조 된 모듈 및 포함 된 어셈블리에 대 한 자세한 정보를 제공 합니다.  

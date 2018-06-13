@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d7577a24a023c38370f5ac1f8c471ce31409e75d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459341"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 구조체
 공개/개인 키 쌍의 공개 키를 이진 형식으로 나타냅니다.  

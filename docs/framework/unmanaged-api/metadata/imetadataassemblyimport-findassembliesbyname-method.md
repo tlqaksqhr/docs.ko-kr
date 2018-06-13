@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449288"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 메서드
 지정 된 어셈블리의 배열을 가져옵니다 `szAssemblyName` 참조를 확인 하는 것에 대 한 공용 언어 런타임 (CLR)에서 표준 규칙을 사용 하 여 매개 변수입니다.  

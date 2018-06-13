@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af896b67cda885613ffb268172c7773f2be17133
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455145"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 메서드
 시퀀스에서 열거자의 현재 위치부터 시작 하는 개체의 순차적인 컬렉션에서 지정 된 개수의 연속 개체를 가져옵니다.  
