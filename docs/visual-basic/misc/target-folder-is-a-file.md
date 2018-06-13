@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640608"
 ---
 # <a name="target-folder-is-a-file"></a>대상 폴더가 파일입니다.
 폴더 관련 작업을 수행하려는 동안 파일을 지정합니다.  

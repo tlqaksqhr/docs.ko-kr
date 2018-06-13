@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656128"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 오버플로 오류 설정 하거나 해제 하는 정수 연산에 대 한 검사를 설정 합니다.  

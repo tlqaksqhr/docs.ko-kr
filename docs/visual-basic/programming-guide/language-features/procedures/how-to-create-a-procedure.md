@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649265"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>방법: 프로시저 만들기(Visual Basic)
 선언문의 시작 사이 프로시저를 묶습니다 (`Sub` 또는 `Function`) 및 선언문의 끝 (`End Sub` 또는 `End Function`). 프로시저의 모든 코드이 문 사이 표시 됩니다.  

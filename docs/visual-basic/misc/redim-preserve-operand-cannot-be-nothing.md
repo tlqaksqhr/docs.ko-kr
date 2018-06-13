@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639378"
 ---
 # <a name="39redim39-preserve-operand-cannot-be-nothing"></a>&#39;ReDim&#39; Preserve 피연산자는 Nothing 일 수 없습니다
 `ReDim` 문에서 `Preserve` 키워드를 사용하여 마지막 차원이 아닌 배열의 차원을 변경하려고 했지만, 해당 피연산자에 대한 올바른 값을 제공하지 않았습니다.  

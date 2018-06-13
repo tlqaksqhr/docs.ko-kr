@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655286"
 ---
 # <a name="extension-methods-visual-basic"></a>확장 메서드(Visual Basic)
 확장 메서드는 개발자가 새 파생된 형식을 만들지 않고 이미 정의 되어 있는 데이터 형식에 사용자 지정 기능을 추가할 수를 사용 합니다. 확장 메서드는 기존 형식의 인스턴스 메서드인 것 처럼 호출할 수 있는 메서드를 작성할 수 있도록 설정 합니다.  

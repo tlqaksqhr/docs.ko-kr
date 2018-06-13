@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638488"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>UploadFile의 주소에는 파일 이름이 포함되어야 합니다.
 `UploadFile` 메서드를 사용하여 파일을 업로드하는 경우 대상 경로에 파일 이름을 제공해야 합니다.  

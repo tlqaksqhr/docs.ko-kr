@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650870"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>방법: 변수 값 저장 및 검색(Visual Basic)
 대입문의 왼쪽에 변수 이름을 입력 하 여 변수에 값을 저장 합니다.  
