@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569306"
 ---
 # <a name="create-new-nodes-in-the-dom"></a><span data-ttu-id="e6242-102">DOM에서 새 노드 만들기</span><span class="sxs-lookup"><span data-stu-id="e6242-102">Create New Nodes in the DOM</span></span>
 <span data-ttu-id="e6242-103"><xref:System.Xml.XmlDocument>에는 모든 노드 형식에 대한 create 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6242-103">The <xref:System.Xml.XmlDocument> has a create method for all of the node types.</span></span> <span data-ttu-id="e6242-104">필요에 따라 메서드에 이름을 제공하고, 텍스트 노드처럼 내용이 있는 노드에 대한 내용이나 기타 매개 변수를 지정하면 노드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6242-104">Supply the method with a name when required, and content or other parameters for those nodes that have content (for example, a text node), and the node is created.</span></span> <span data-ttu-id="e6242-105">다음은 적합한 노드를 만들기 위해 이름 및 몇 개의 매개 변수를 제공해야 하는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="e6242-105">The following methods are ones that need a name and a few other parameters filled to create an appropriate node.</span></span>  

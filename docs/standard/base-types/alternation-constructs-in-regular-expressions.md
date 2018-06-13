@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574737"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="56850-102">정규식의 교체 구문</span><span class="sxs-lookup"><span data-stu-id="56850-102">Alternation Constructs in Regular Expressions</span></span>
 <a name="top"></a> <span data-ttu-id="56850-103">교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="56850-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="56850-104">.NET에서는 다음 세 가지 교체 구문을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="56850-104">.NET supports three alternation constructs:</span></span>  

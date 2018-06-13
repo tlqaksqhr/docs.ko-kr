@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574822"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a><span data-ttu-id="41954-102">XML 문서에서 스키마 유추</span><span class="sxs-lookup"><span data-stu-id="41954-102">Inferring Schemas from XML Documents</span></span>
 <span data-ttu-id="41954-103">이 항목에서는 <xref:System.Xml.Schema.XmlSchemaInference> 클래스를 사용하여 XML 문서 구조에서 XSD(XML 스키마 정의 언어) 스키마를 유추하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="41954-103">This topic describes how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XML Schema definition language (XSD) schema from the structure of an XML document.</span></span>  

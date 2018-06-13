@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572842"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a><span data-ttu-id="e77a1-102">XslCompiledTransform 클래스에 대한 입력</span><span class="sxs-lookup"><span data-stu-id="e77a1-102">Inputs to the XslCompiledTransform Class</span></span>
 <span data-ttu-id="e77a1-103"><xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드는 소스 문서에 대한 세 가지 입력 형식을 허용합니다. 즉, <xref:System.Xml.XPath.IXPathNavigable> 인터페이스를 구현하는 개체, 소스 문서를 읽는 <xref:System.Xml.XmlReader> 개체 또는 문자열 URI를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="e77a1-103">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method accepts three input types for the source document: an object that implements the <xref:System.Xml.XPath.IXPathNavigable> interface, an <xref:System.Xml.XmlReader> object that reads the source document, or a string URI.</span></span>  

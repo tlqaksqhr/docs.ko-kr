@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567421"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a><span data-ttu-id="f7291-102">비동기 작업을 종료하여 응용 프로그램 실행 차단</span><span class="sxs-lookup"><span data-stu-id="f7291-102">Blocking Application Execution by Ending an Async Operation</span></span>
 <span data-ttu-id="f7291-103">비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 응용 프로그램은 작업이 완료될 때까지 차단되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7291-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="f7291-104">다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 응용 프로그램의 기본 스레드를 차단합니다.</span><span class="sxs-lookup"><span data-stu-id="f7291-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  

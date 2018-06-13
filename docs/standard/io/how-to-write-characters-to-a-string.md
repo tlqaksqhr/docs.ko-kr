@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572036"
 ---
 # <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="7693a-102">방법: 문자열에 문자 쓰기</span><span class="sxs-lookup"><span data-stu-id="7693a-102">How to: Write Characters to a String</span></span>
 <span data-ttu-id="7693a-103">다음 코드 예제는 문자 배열에서 문자열로 문자를 동기적 및 비동기적으로 씁니다.</span><span class="sxs-lookup"><span data-stu-id="7693a-103">The following code examples write characters synchronously and asynchronously from a character array into a string.</span></span>  

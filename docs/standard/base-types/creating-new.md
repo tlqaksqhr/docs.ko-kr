@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567821"
 ---
 # <a name="creating-new-strings-in-net"></a><span data-ttu-id="2e45a-102">.NET에서 새 문자열 만들기</span><span class="sxs-lookup"><span data-stu-id="2e45a-102">Creating New Strings in .NET</span></span>
 <span data-ttu-id="2e45a-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 간단한 할당을 사용하여 문자열을 만들 수 있으며, 클래스 생성자를 오버로드하여 여러 다양한 매개 변수를 사용한 문자열 생성도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="2e45a-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] allows strings to be created using simple assignment, and also overloads a class constructor to support string creation using a number of different parameters.</span></span> <span data-ttu-id="2e45a-104">또한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 문자열, 문자열 배열 또는 개체를 결합하여 새 문자열 개체를 만드는 여러 메서드를 <xref:System.String?displayProperty=nameWithType> 클래스에서 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2e45a-104">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also provides several methods in the <xref:System.String?displayProperty=nameWithType> class that create new string objects by combining several strings, arrays of strings, or objects.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570542"
 ---
 # <a name="changing-case-in-net"></a><span data-ttu-id="21666-102">.NET에서 대/소문자 바꾸기</span><span class="sxs-lookup"><span data-stu-id="21666-102">Changing Case in .NET</span></span>
 <span data-ttu-id="21666-103">사용자 입력을 수락하는 응용 프로그램을 작성하는 경우 데이터를 입력할 때 사용하는 대/소문자를 확신할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="21666-103">If you write an application that accepts input from a user, you can never be sure what case he or she will use to enter the data.</span></span> <span data-ttu-id="21666-104">특히 사용자 인터페이스에 표시하는 경우 문자열의 대/소문자를 일관되게 표시하려는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="21666-104">Often, you want strings to be cased consistently, particularly if you are displaying them in the user interface.</span></span> <span data-ttu-id="21666-105">다음 표에서는 세 가지 대/소문자 변경 메서드를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="21666-105">The following table describes three case-changing methods.</span></span> <span data-ttu-id="21666-106">처음 두 메서드는 문화권을 수락하는 오버로드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="21666-106">The first two methods provide an overload that accepts a culture.</span></span>  

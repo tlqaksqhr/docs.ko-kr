@@ -7,9 +7,10 @@ helpviewer_keywords:
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585829"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a><span data-ttu-id="43a44-102">Visual Basic 응용 프로그램에서 데이터에 액세스</span><span class="sxs-lookup"><span data-stu-id="43a44-102">Accessing data in Visual Basic applications</span></span>
 <span data-ttu-id="43a44-103">Visual Basic에는 데이터에 액세스하는 응용 프로그램 개발을 지원하기 위한 여러 가지 새로운 기능이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="43a44-103">Visual Basic includes several new features to assist in developing applications that access data.</span></span> <span data-ttu-id="43a44-104">[데이터 소스 창](/visualstudio/data-tools/add-new-data-sources)에서 양식으로 항목을 끌어 Windows 응용 프로그램에 대한 데이터 바인딩된 양식을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="43a44-104">Data-bound forms for Windows applications are created by dragging items from the [Data Sources Window](/visualstudio/data-tools/add-new-data-sources) onto the form.</span></span> <span data-ttu-id="43a44-105">**데이터 소스 창**에서 기존 컨트롤로 항목을 끌어 컨트롤을 데이터에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="43a44-105">You bind controls to data by dragging items from the **Data Sources Window** onto existing controls.</span></span>  

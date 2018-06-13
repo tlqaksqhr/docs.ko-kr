@@ -1,35 +1,27 @@
 ---
-title: '&#39; &lt;membername&gt;&#39; 모호 합니다. 상속 된 인터페이스 &#39; 걸쳐&lt; interfacename1&gt;&#39; 및 &#39;&lt; interfacename2&gt;&#39;'
+title: '&#39;&lt;membername&gt; &#39; 모호 합니다. 상속 된 인터페이스를 통해 &#39; &lt;interfacename1&gt; &#39; 및 &#39; &lt;interfacename2&gt;&#39;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30685
 - bc30685
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0bf4a9c263fd197cdd5d5b4886ee18e2ff112488
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585303"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="74055-102">&#39; &lt;membername&gt;&#39; 모호 합니다. 상속 된 인터페이스 &#39; 걸쳐&lt; interfacename1&gt;&#39; 및 &#39;&lt; interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="74055-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
-<span data-ttu-id="74055-103">동일한 이름 가진 둘 이상의 멤버가 여러 인터페이스에서 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="74055-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="69709-102">&#39;&lt;membername&gt; &#39; 모호 합니다. 상속 된 인터페이스를 통해 &#39; &lt;interfacename1&gt; &#39; 및 &#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="69709-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="69709-103">동일한 이름 가진 둘 이상의 멤버가 여러 인터페이스에서 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="69709-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="74055-104">**오류 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="74055-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="69709-104">**오류 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="69709-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="74055-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="74055-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="69709-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="69709-105">To correct this error</span></span>  
   
--   <span data-ttu-id="74055-106">기본 인터페이스에 사용할; 값 캐스팅 예를 들어:</span><span class="sxs-lookup"><span data-stu-id="74055-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="69709-106">기본 인터페이스에 사용할; 값 캐스팅 예를 들어:</span><span class="sxs-lookup"><span data-stu-id="69709-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -54,5 +46,5 @@ ms.lasthandoff: 10/18/2017
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="74055-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="74055-107">See Also</span></span>  
- [<span data-ttu-id="74055-108">인터페이스</span><span class="sxs-lookup"><span data-stu-id="74055-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="69709-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="69709-107">See Also</span></span>  
+ [<span data-ttu-id="69709-108">인터페이스</span><span class="sxs-lookup"><span data-stu-id="69709-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
