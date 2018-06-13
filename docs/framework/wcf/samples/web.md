@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805115"
 ---
 # <a name="web"></a><span data-ttu-id="d2456-102">웹</span><span class="sxs-lookup"><span data-stu-id="d2456-102">Web</span></span>
 <span data-ttu-id="d2456-103">이 단원에는 웹 호스팅 샘플이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2456-103">This section contains Web-hosted samples.</span></span>  

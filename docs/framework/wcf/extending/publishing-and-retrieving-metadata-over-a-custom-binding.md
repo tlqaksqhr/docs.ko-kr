@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803886"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a><span data-ttu-id="be2cb-102">사용자 지정 바인딩을 통해 메타데이터 게시 및 검색</span><span class="sxs-lookup"><span data-stu-id="be2cb-102">Publishing and Retrieving Metadata Over a Custom Binding</span></span>
 <span data-ttu-id="be2cb-103"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 끝점을 서비스에 추가할 수 있도록 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="be2cb-103">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> provides support for adding metadata endpoint to a service.</span></span> <span data-ttu-id="be2cb-104">이러한 메타 데이터 끝점에서 URL HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다.</span><span class="sxs-lookup"><span data-stu-id="be2cb-104">These metadata endpoints can respond to HTTP GET requests at a URL that has a `?wsdl` querystring and to WS-Transfer GET requests as defined in the WS-MetadataExchange (MEX) specification.</span></span> <span data-ttu-id="be2cb-105">MEX 끝점은 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="be2cb-105">MEX endpoints implement the <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contract.</span></span>  
