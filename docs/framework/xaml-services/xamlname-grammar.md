@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561893"
 ---
 # <a name="xamlname-grammar"></a>XamlName 문법
 XamlName 문법에 편의 위해 여기에 재현 되어 XAML 언어 사양 [MS XAML], 정의 된 특정 문법입니다.  

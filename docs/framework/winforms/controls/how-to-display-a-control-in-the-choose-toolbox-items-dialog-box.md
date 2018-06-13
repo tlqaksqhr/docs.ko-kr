@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531507"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시
 개발 하 고 컨트롤을 배포 하면 이러한 컨트롤에 표시 되도록 할 수 있습니다는 **도구 상자 항목 선택** 마우스 오른쪽 단추로 클릭할 때 표시 되는 대화 상자는 **도구 상자** 선택  **항목 선택**합니다. AssemblyFoldersEx 등록 절차를 사용 하 여이 대화 상자에 표시할 컨트롤을 설정할 수 있습니다.  

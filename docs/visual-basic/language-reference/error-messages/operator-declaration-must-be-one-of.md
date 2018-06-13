@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595022"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>연산자 선언 중 하나 여야 합니다: +,-, *,\,/, ^, &amp;, 같은, Mod, 및, Or, Xor, Not, &lt; &lt;, &gt; &gt;...
 오버 로드할 수 있는 연산자만 선언할 수 있습니다. 다음 표에서 연산자를 선언할 수 있습니다.  

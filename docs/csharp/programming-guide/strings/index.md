@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337196"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  

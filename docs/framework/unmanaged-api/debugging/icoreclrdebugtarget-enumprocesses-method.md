@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c09b70b5afb0561d32e55dd89df6cac083abc068
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422018"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 메서드
 원격 컴퓨터에서 실행 중인 프로세스를 열거합니다.  

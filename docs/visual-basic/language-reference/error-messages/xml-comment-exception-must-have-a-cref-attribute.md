@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597385"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>XML 주석 예외 있어야는 &#39;cref&#39; 특성
 \<예외 > 태그는 메서드에 의해 throw 될 수 있는 예외를 문서화 하는 방법을 제공 합니다. 필요한 `cref` 특성 설명서 생성기에서 확인 하는 멤버의 이름을 지정 합니다. 멤버가 있는 경우 문서 파일에서 정식 요소 이름으로 변환 됩니다.  

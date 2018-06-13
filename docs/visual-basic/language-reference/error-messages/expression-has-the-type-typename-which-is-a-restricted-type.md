@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587575"
 ---
 # <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>식에는 형식이 &#39; &lt;typename&gt; &#39; 제한 된 형식에서 상속 된 멤버에 액세스 하는 데 사용 될 수 없습니다 하며 &#39;개체&#39; 또는 &#39;ValueType&#39;
 식을 공용 언어 런타임 (CLR) 하 여 boxed 수 없는 형식으로 계산 하지만 boxing을 필요로 하는 멤버에 액세스 합니다.  

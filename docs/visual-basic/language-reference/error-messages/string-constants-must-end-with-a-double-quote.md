@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594808"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>문자열 상수는 큰따옴표로 끝나야 합니다.
 문자열 상수 시작 하 고 따옴표 끝나야 합니다.  

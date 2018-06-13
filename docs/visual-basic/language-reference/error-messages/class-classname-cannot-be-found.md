@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586492"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>클래스 &#39; &lt;classname&gt; &#39; 찾을 수 없습니다
 클래스의\<n a m e >' 찾을 수 없습니다. 대개 'Microsoft.VisualBasic.dll'이 일치하지 않으면 이러한 상황이 발생합니다.  

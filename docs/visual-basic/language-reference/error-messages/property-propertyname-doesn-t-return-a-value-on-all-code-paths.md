@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594216"
 ---
 # <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>속성 &#39; &lt;propertyname&gt; &#39; 대상이&#39;모든 코드 경로 에서만 값을 반환 하는 t
 속성 '\<propertyname >' 모든 코드 경로 대해서만 값을 반환 합니다. 이 결과를 사용하면 런타임에 null 참조 예외가 발생할 수 있습니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588437"
 ---
 # <a name="region-directive"></a>#Region 지시문
 Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.  

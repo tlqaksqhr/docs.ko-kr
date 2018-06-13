@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585771"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>상수 식 형식으로 표현 되지 &#39; &lt;typename&gt;&#39;
 대상 형식에 맞지 않는 상수를 평가 하려는 범위를 오버플로 때문에 일반적으로 합니다.  

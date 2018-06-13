@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594501"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>구조 &#39; &lt;structurename&gt; &#39; 인스턴스 멤버 변수 또는 표시 되지 않은 하나 이상의 이벤트 선언이 하나 이상 포함 해야 &#39;사용자 지정&#39;
 구조 정의 비공유 변수 또는 비공유 사용자 이벤트가 포함 되지 않습니다.  

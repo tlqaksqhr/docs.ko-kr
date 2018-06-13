@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406287"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 열거형
 어셈블리 옵션을 열거합니다.  

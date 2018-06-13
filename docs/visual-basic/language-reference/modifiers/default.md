@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595148"
 ---
 # <a name="default-visual-basic"></a>Default(Visual Basic)
 해당 클래스, 구조체 또는 인터페이스의 기본 속성으로 속성을 식별합니다.  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409934"
 ---
 # <a name="debugging-interfaces"></a>디버깅 인터페이스
 이 단원에서는 CLR(공용 언어 런타임)에서 실행되는 프로그램의 디버깅을 처리하는 관리되지 않는 인터페이스에 대해 설명합니다.  

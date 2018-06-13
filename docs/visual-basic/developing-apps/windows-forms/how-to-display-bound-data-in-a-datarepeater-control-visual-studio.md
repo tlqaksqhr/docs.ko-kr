@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589869"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>방법: DataRepeater 컨트롤의 바인딩된 데이터 표시(Visual Studio)
 가장 일반적인 용도 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤이 바인딩된 데이터베이스 또는 다른 데이터 원본에서 데이터를 표시 하는 것입니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422674"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 메서드
 현재 프레임에 대 한 컨텍스트를 반환 된 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 개체입니다.  

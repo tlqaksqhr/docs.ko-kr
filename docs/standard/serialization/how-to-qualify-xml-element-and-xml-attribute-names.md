@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585716"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>방법: XML 요소 및 XML 특성 이름 한정
 [코드 예제](#cpconworkingwithxmlnamespacesanchor1)  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593943"
 ---
 # <a name="unable-to-write-output-to-memory"></a>메모리에 출력을 쓸 수 없습니다.
 출력을 메모리에 쓰는 동안 문제가 발생했습니다.  

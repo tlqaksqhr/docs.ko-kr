@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334758"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Nullable 형식 boxing(C# 프로그래밍 가이드)
 Nullable 형식을 기반으로 하는 개체는 개체가 null이 아닌 경우에만 boxing됩니다. <xref:System.Nullable%601.HasValue%2A>가 `false`이면 boxing 대신 개체 참조가 `null`에 할당됩니다. 예:  

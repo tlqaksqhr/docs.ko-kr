@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589882"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>런타임에 바인딩 오버 로드 확인에 적용할 수 없습니다 &#39; &lt;procedurename&gt; &#39; 액세스 인스턴스가 인터페이스 형식 이므로
 컴파일러는 오버 로드 된 속성 또는 프로시저에 대 한 참조를 확인 하려고 합니다. 하지만 참조가 인수 형식 이므로 실패 `Object` 참조 하는 개체 인터페이스는 데이터 형식을 갖습니다. `Object` 인수를 사용 하면 컴파일러 바인딩이라고 참조를 확인할 수 있습니다.  

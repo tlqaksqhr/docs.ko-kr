@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595650"
 ---
 # <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39;&lt;typename&gt; &#39; 대리자 형식이
 '\<형식 이름 >' 대리자 형식이 있습니다. 대리자 구문에는 인수 목록으로 단일 AddressOf 식만 허용합니다. 종종 AddressOf 식은 대리자 구문 대신 사용할 수 있습니다.  

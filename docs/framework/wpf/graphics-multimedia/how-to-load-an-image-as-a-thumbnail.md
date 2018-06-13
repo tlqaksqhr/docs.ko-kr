@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562325"
 ---
 # <a name="how-to-load-an-image-as-a-thumbnail"></a>방법: 이미지를 축소판으로 로드
 다음 예에는 로드 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Image> 응용 프로그램 메모리를 절약 하기 위해 축소판 그림으로 합니다.  

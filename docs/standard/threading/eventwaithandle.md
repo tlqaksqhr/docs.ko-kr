@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592199"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> 클래스를 사용하면 여러 스레드가 신호를 보내고 신호를 대기하여 서로 통신할 수 있습니다. 이벤트 대기 핸들(단순히 이벤트라고도 함)은 하나 이상의 대기 스레드를 해제하기 위해 신호를 보낼 수 있는 대기 핸들입니다. 신호를 받은 후 이벤트 대기 핸들은 수동으로 또는 자동으로 다시 설정됩니다. <xref:System.Threading.EventWaitHandle> 클래스는 로컬 이벤트 대기 핸들(로컬 이벤트) 또는 명명된 시스템 이벤트 대기 핸들(모든 프로세스에 표시되는 명명된 이벤트 또는 시스템 이벤트)을 나타낼 수 있습니다.  

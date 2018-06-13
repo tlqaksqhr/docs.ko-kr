@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592591"
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하며 비동기 작업을 나타냅니다. 몇 가지 점에서 작업은 스레드 또는 <xref:System.Threading.ThreadPool> 작업 항목과 비슷하지만 추상화 수준은 더 높습니다. *작업 병렬 처리*는 동시에 실행되는 하나 이상의 독립적인 작업을 의미합니다. 작업을 사용할 때의 주된 이점 두 가지는 다음과 같습니다.  

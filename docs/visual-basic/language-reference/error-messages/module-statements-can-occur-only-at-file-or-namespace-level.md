@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593167"
 ---
 # <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a>&#39;모듈&#39; 문은 파일이 나 네임 스페이스 수준 에서만 사용할 수 있습니다
 `Module` 문이 소스 파일의 맨 위쪽에 표시 해야 직후 `Option` 및 `Imports` 문, 전역 특성 및 네임 스페이스 선언을 다른 모든 선언 앞입니다.  

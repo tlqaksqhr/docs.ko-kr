@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aa816ea9e6185791e09bcdb0e47c50761a5ebc6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422935"
 ---
 # <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer::GetStartAddress 메서드
 메모리 버퍼의 시작 주소를 가져옵니다.  

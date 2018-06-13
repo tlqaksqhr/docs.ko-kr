@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587533"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>문제 해결: 텍스트 파일 읽기 및 쓰기(Visual Basic)
 이 항목에서는 텍스트 파일로 작업할 때 발생하는 일반적인 문제를 설명하고 각 문제에 대한 접근 방법을 제안합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595107"
 ---
 # <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>가져오기에 지정 된 Namespace 또는 형식을 &#39; &lt;qualifiedelementname&gt; &#39; 대상이&#39;t public 멤버가 또는 형식을 찾을 수 없음
 Imports'에 지정 된 Namespace 또는 형식을\<qualifiedelementname >' public 멤버가 없거나 찾을 수 없습니다. 해당 네임 스페이스 또는 형식 정의 되어 있고 하나 이상의 public 멤버를 포함 합니다. 별칭 이름에는 다른 별칭 포함 되어 있지 않은지 확인 하십시오.  

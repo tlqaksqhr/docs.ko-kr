@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593969"
 ---
 # <a name="too-many-files"></a>파일이 너무 많습니다.
 운영 체제에서 허용 더 많은 파일이 루트 디렉터리에 생성 하거나 더 많은 파일에 지정 된 숫자 보다 열린는 **파일 =** config입니다. SYS 파일입니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590753"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 값 설정
 `My.Computer.Registry` 개체의 `CreateSubKey` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.  

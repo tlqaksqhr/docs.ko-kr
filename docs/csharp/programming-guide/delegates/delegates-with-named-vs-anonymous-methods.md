@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330767"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>대리자 비교: 명명된 메서드 및 무명 메서드(C# 프로그래밍 가이드)
 [대리자](../../../csharp/language-reference/keywords/delegate.md)는 명명된 메서드에 연결할 수 있습니다. 명명된 메서드를 사용하여 대리자를 인스턴스화하면 메서드가 매개 변수로 전달됩니다. 예를 들면 다음과 같습니다.  

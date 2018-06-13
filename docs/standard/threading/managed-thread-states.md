@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587725"
 ---
 # <a name="managed-thread-states"></a>관리되는 스레드 상태
 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 속성은 스레드의 현재 상태를 나타내는 비트 마스크를 제공합니다. 스레드는 항상 <xref:System.Threading.ThreadState> 열거형의 가능한 상태 중 하나 이상이며 동시에 여러 상태일 수 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586077"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 암호화
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화를 사용하면 데이터가 쉽게 읽혀질 염려 없이 중요한 XML을 저장하거나 전송할 수 있습니다.  이 절차에서는 Rijndael이라고도 하는 AES(고급 암호화 표준) 알고리즘을 사용하여 XML 요소를 암호 해독합니다.  

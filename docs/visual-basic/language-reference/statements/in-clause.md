@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597398"
 ---
 # <a name="in-clause-visual-basic"></a>In 절(Visual Basic)
 루프 변수가 트래버스하 그룹 지정는 `For Each` 루프 또는 컬렉션을 쿼리에서 지정는 `From`, `Join`, 또는 `Group Join` 절.  

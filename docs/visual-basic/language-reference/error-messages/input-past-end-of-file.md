@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586743"
 ---
 # <a name="input-past-end-of-file"></a>입력(값)이 파일의 끝을 넘습니다.
 중 하나는 `Input` 문에서 비어 있는 파일 또는 모든 데이터를 사용 하거나 사용에서 읽고는 `EOF` 파일 함수 이진 액세스를 위해 열렸습니다.  

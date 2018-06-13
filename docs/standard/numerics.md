@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588699"
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework의 숫자
 .NET Framework에서는 표준 숫자 정수 계열 및 부동 소수점 기본 형식과 <xref:System.Numerics.BigInteger>, 이론적 상한 또는 하한이 없는 정수 형식, <xref:System.Numerics.Complex>, 복소수를 나타내는 형식, <xref:System.Numerics> 네임스페이스에서 SIMD 사용 벡터 형식 집합을 지원합니다.  

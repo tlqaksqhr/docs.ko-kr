@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592173"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  

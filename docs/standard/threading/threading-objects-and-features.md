@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591329"
 ---
 # <a name="threading-objects-and-features"></a>스레딩 개체 및 기능
 .NET Framework에서는 다중 스레드 응용 프로그램을 만들고 관리하는 데 도움이 되는 많은 개체를 제공합니다. 관리되는 스레드는 <xref:System.Threading.Thread> 클래스를 통해 표현됩니다. <xref:System.Threading.ThreadPool> 클래스는 다중 스레드 백그라운드 작업을 쉽게 만들고 관리할 수 있게 해줍니다. <xref:System.ComponentModel.BackgroundWorker> 클래스는 사용자 인터페이스와 상호 작용하는 작업에 대해 동일한 기능을 수행합니다. <xref:System.Threading.Timer> 클래스는 정해진 간격마다 백그라운드 작업을 실행합니다.  

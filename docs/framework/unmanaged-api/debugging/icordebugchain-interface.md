@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32889a8e8867fc42b48413463095dda423f26b85
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409843"
 ---
 # <a name="icordebugchain-interface1"></a>ICorDebugChain Interface1
 실제 또는 논리 호출 스택의 세그먼트를 나타냅니다.  

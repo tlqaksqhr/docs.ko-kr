@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563045"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>방법: 복합 도형의 채우기 제어
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> 속성은 <xref:System.Windows.Media.GeometryGroup> 또는 <xref:System.Windows.Media.PathGeometry>, 복합 셰이프를 사용 하 여 지정된 된 지점 기 하 도형의 일부 인지 확인할 "규칙"을 지정 합니다. 두 개의 가능한 값에 대 한 <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> 및 <xref:System.Windows.Media.FillRule.Nonzero>합니다. 다음 섹션에서는 이러한 두 가지 규칙을 사용하는 방법을 설명합니다.  

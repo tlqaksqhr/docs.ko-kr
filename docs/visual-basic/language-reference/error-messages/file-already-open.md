@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586672"
 ---
 # <a name="file-already-open"></a>파일이 이미 열려 있습니다.
 경우에 따라 파일을 닫아야 다른 것 보다 먼저 `FileOpen` 또는 기타 작업이 발생할 수 있습니다. 이 오류의 가능한 원인:  

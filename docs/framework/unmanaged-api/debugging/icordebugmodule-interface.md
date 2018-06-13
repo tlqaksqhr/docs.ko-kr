@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db4a980929a644d2862a382f147505644313da7b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422239"
 ---
 # <a name="icordebugmodule-interface1"></a>ICorDebugModule Interface1
 실행 파일 또는 동적 연결 라이브러리 (DLL) 중 하나는 공용 언어 런타임 (CLR) 모듈을 나타냅니다.  

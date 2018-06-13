@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594844"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML 리터럴 및 XML 속성은 ASP.NET의 포함 코드에서 지원되지 않습니다.
 XML 리터럴과 XML 속성은 ASP.NET의 포함된 코드에서 지원 되지 않습니다. XML 기능을 사용 하려면 코드 숨김에 코드를 이동 합니다.  

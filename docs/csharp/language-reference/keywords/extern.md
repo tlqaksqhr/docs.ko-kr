@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172295"
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
 `extern` 한정자는 외부에서 구현되는 메서드를 선언하는 데 사용됩니다. `extern` 한정자는 일반적으로 Interop 서비스를 사용하여 비관리 코드를 호출할 때 `DllImport` 특성과 함께 사용됩니다. 이 경우 다음 예제에서와 같이 메서드를 `static`으로 선언해야 합니다.  

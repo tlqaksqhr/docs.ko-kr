@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335641"
 ---
 # <a name="programming-concepts-c"></a>프로그래밍 개념(C#)
 이 섹션에서는 C# 언어의 프로그래밍 개념을 설명합니다.  

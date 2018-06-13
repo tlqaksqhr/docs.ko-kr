@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586515"
 ---
 # <a name="managed-threading-basics"></a>관리되는 스레딩 기본 사항
 이 섹션의 첫 5개 항목은 관리되는 스레딩을 사용하는 시기를 결정하도록 돕고 몇 가지 기본 기능을 설명하도록 설계되었습니다. 추가 기능을 제공하는 클래스에 대한 내용은 [스레딩 개체 및 기능](../../../docs/standard/threading/threading-objects-and-features.md) 및 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  

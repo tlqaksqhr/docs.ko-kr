@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517993"
 ---
 # <a name="support-for-queries"></a>쿼리 지원
 SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장소에 기록합니다. 사용자는 이러한 속성을 기반으로 인스턴스를 쿼리할 수 있습니다. 다음은 잘 알려진 일부 속성 목록입니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589549"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>방법: 도형 간 탭 이동 사용(Visual Studio)
 Line 및 shape 컨트롤 `TabStop` 또는 `TabIndex` 있지만 속성을 계속 사용할 수 있습니다 그중에서 탭 이동 합니다. 다음 예제에서는 도형; 간에 탭은 CTRL과 탭 키를 누르면 단추 사이만 TAB 키를 누를 tab 합니다.  
