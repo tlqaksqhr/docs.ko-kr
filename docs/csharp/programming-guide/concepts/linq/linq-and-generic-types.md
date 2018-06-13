@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327739"
 ---
 # <a name="linq-and-generic-types-c"></a><span data-ttu-id="a06d1-102">LINQ 및 제네릭 형식(C#)</span><span class="sxs-lookup"><span data-stu-id="a06d1-102">LINQ and Generic Types (C#)</span></span>
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="a06d1-103"> 쿼리는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전 2.0에서 도입된 제네릭 형식을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="a06d1-103"> queries are based on generic types, which were introduced in version 2.0 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="a06d1-104">제네릭에 대한 세부 지식이 없어도 쿼리 작성을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a06d1-104">You do not need an in-depth knowledge of generics before you can start writing queries.</span></span> <span data-ttu-id="a06d1-105">그러나 다음 두 가지 기본 개념은 이해하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="a06d1-105">However, you may want to understand two basic concepts:</span></span>  

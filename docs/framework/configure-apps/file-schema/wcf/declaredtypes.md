@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747618"
 ---
 # <a name="ltdeclaredtypesgt"></a><span data-ttu-id="3b9de-102">&lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="3b9de-102">&lt;declaredTypes&gt;</span></span>
 <span data-ttu-id="3b9de-103">deserialize할 때 <xref:System.Runtime.Serialization.DataContractSerializer>에서 사용하는 알려진 형식을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3b9de-103">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  

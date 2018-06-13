@@ -1,14 +1,6 @@
 ---
-title: "GetRequestedRuntimeVersionForCLSID 함수"
-ms.custom: 
+title: GetRequestedRuntimeVersionForCLSID 함수
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetRequestedRuntimeVersionForCLSID
 api_location:
@@ -22,24 +14,21 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be55754bc626ce24c51eec7b10d9f46aec92cfe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432861"
 ---
-# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="1ab30-102">GetRequestedRuntimeVersionForCLSID 함수</span><span class="sxs-lookup"><span data-stu-id="1ab30-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
-<span data-ttu-id="1ab30-103">적절 한 공용 언어 런타임 정보를 가져옵니다 (CLR) 버전 지정 된 클래스에 대 한 `CLSID`합니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
+# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="38dcb-102">GetRequestedRuntimeVersionForCLSID 함수</span><span class="sxs-lookup"><span data-stu-id="38dcb-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
+<span data-ttu-id="38dcb-103">적절 한 공용 언어 런타임 정보를 가져옵니다 (CLR) 버전 지정 된 클래스에 대 한 `CLSID`합니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
   
- <span data-ttu-id="1ab30-104">이 함수에 더 이상 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="38dcb-104">이 함수에 더 이상 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ab30-105">구문</span><span class="sxs-lookup"><span data-stu-id="1ab30-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38dcb-105">구문</span><span class="sxs-lookup"><span data-stu-id="38dcb-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
@@ -51,42 +40,42 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1ab30-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1ab30-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="38dcb-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="38dcb-106">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="1ab30-107">[in]  `CLSID` 의 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-107">[in]  The `CLSID` of the component.</span></span>  
+ <span data-ttu-id="38dcb-107">[in]  `CLSID` 의 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-107">[in]  The `CLSID` of the component.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="1ab30-108">[out]  완료 되 면 버전 번호 문자열을 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="38dcb-108">[out]  완료 되 면 버전 번호 문자열을 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="1ab30-109">[in]  와이드 문자에서 크기의는 `pVersion` 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
+ <span data-ttu-id="38dcb-109">[in]  와이드 문자에서 크기의는 `pVersion` 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="1ab30-110">[out] 반환된 된 버퍼의 길이 (바이트)를 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-110">[out] The length, in bytes, of the returned buffer.</span></span>  
+ <span data-ttu-id="38dcb-110">[out] 반환된 된 버퍼의 길이 (바이트)를 합니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-110">[out] The length, in bytes, of the returned buffer.</span></span>  
   
  `dwResolutionFlags`  
- <span data-ttu-id="1ab30-111">[in]  CLSID_RESOLUTION_FLAGS 값 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="1ab30-112">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-112">The following values are supported:</span></span>  
+ <span data-ttu-id="38dcb-111">[in]  CLSID_RESOLUTION_FLAGS 값 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="38dcb-112">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-112">The following values are supported:</span></span>  
   
--   <span data-ttu-id="1ab30-113">CLSID_RESOLUTION_DEFAULT: (0x0) 해당 기본 interop 동작을 지정 해야 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
+-   <span data-ttu-id="38dcb-113">CLSID_RESOLUTION_DEFAULT: (0x0) 해당 기본 interop 동작을 지정 해야 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
   
--   <span data-ttu-id="1ab30-114">CLSID_RESOLUTION_REGISTERED: (0x1) 레지스트리를 검색 하 고 정책 shim을 지정 해야 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
+-   <span data-ttu-id="38dcb-114">CLSID_RESOLUTION_REGISTERED: (0x1) 레지스트리를 검색 하 고 정책 shim을 지정 해야 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1ab30-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="1ab30-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="38dcb-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="38dcb-115">Return Value</span></span>  
   
-|<span data-ttu-id="1ab30-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1ab30-116">HRESULT</span></span>|<span data-ttu-id="1ab30-117">설명</span><span class="sxs-lookup"><span data-stu-id="1ab30-117">Description</span></span>|  
+|<span data-ttu-id="38dcb-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="38dcb-116">HRESULT</span></span>|<span data-ttu-id="38dcb-117">설명</span><span class="sxs-lookup"><span data-stu-id="38dcb-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1ab30-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="1ab30-118">S_OK</span></span>|<span data-ttu-id="1ab30-119">함수 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-119">The function returned successfully.</span></span>|  
-|<span data-ttu-id="1ab30-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="1ab30-120">E_INVALIDARG</span></span>|<span data-ttu-id="1ab30-121">매개 변수 중 하나는 잘못 된 유형 또는 미디어 형식에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-121">One of the parameters has an invalid type or format.</span></span>|  
-|<span data-ttu-id="1ab30-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="1ab30-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="1ab30-123">`pVersion` 버퍼를 전체 버전 문자열을 보관할 만큼 크지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
-|<span data-ttu-id="1ab30-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="1ab30-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="1ab30-125">등록 된 지정 된 클래스가 없습니다 `CLSID`합니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-125">There is no class registered with the specified `CLSID`.</span></span>|  
-|<span data-ttu-id="1ab30-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="1ab30-126">E_POINTER</span></span>|<span data-ttu-id="1ab30-127">`dwLength`매개 변수가 null 이면 또는 `cchBuffer` 버전 문자열을 저장할 수 있도록 충분히 큰 있지만 `pVersion` null입니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
+|<span data-ttu-id="38dcb-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="38dcb-118">S_OK</span></span>|<span data-ttu-id="38dcb-119">함수 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-119">The function returned successfully.</span></span>|  
+|<span data-ttu-id="38dcb-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="38dcb-120">E_INVALIDARG</span></span>|<span data-ttu-id="38dcb-121">매개 변수 중 하나는 잘못 된 유형 또는 미디어 형식에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-121">One of the parameters has an invalid type or format.</span></span>|  
+|<span data-ttu-id="38dcb-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="38dcb-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="38dcb-123">`pVersion` 버퍼를 전체 버전 문자열을 보관할 만큼 크지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
+|<span data-ttu-id="38dcb-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="38dcb-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="38dcb-125">등록 된 지정 된 클래스가 없습니다 `CLSID`합니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-125">There is no class registered with the specified `CLSID`.</span></span>|  
+|<span data-ttu-id="38dcb-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="38dcb-126">E_POINTER</span></span>|<span data-ttu-id="38dcb-127">`dwLength` 매개 변수가 null 이면 또는 `cchBuffer` 버전 문자열을 저장할 수 있도록 충분히 큰 있지만 `pVersion` null입니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1ab30-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1ab30-128">Requirements</span></span>  
- <span data-ttu-id="1ab30-129">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1ab30-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38dcb-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="38dcb-128">Requirements</span></span>  
+ <span data-ttu-id="38dcb-129">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="38dcb-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1ab30-130">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1ab30-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="38dcb-130">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="38dcb-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1ab30-131">**.NET framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ab30-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="38dcb-131">**.NET framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38dcb-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ab30-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1ab30-132">See Also</span></span>  
- [<span data-ttu-id="1ab30-133">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="1ab30-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="38dcb-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="38dcb-132">See Also</span></span>  
+ [<span data-ttu-id="38dcb-133">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="38dcb-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

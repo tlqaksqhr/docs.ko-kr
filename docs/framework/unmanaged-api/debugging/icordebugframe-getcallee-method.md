@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugFrame::GetCallee 메서드"
-ms.custom: 
+title: ICorDebugFrame::GetCallee 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFrame.GetCallee
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 079d598e54f429fa4dd0b5c0c4cadbe2c66c1d50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d62f4f8a34123bcd3f0cbe56f1c1b958bcaa6ef2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413374"
 ---
-# <a name="icordebugframegetcallee-method"></a><span data-ttu-id="6cb54-102">ICorDebugFrame::GetCallee 메서드</span><span class="sxs-lookup"><span data-stu-id="6cb54-102">ICorDebugFrame::GetCallee Method</span></span>
-<span data-ttu-id="6cb54-103">이 프레임을 호출한 현재 체인에서 ICorDebugFrame 개체에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6cb54-103">Gets a pointer to the ICorDebugFrame object in the current chain that this frame called.</span></span>  
+# <a name="icordebugframegetcallee-method"></a><span data-ttu-id="f4ad7-102">ICorDebugFrame::GetCallee 메서드</span><span class="sxs-lookup"><span data-stu-id="f4ad7-102">ICorDebugFrame::GetCallee Method</span></span>
+<span data-ttu-id="f4ad7-103">이 프레임을 호출한 현재 체인에서 ICorDebugFrame 개체에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f4ad7-103">Gets a pointer to the ICorDebugFrame object in the current chain that this frame called.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6cb54-104">구문</span><span class="sxs-lookup"><span data-stu-id="6cb54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4ad7-104">구문</span><span class="sxs-lookup"><span data-stu-id="f4ad7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCallee (  
@@ -46,15 +35,15 @@ HRESULT GetCallee (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6cb54-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6cb54-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f4ad7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f4ad7-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="6cb54-106">[out] 주소에 대 한 포인터는 `ICorDebugFrame` 호출된 프레임을 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6cb54-106">[out] A pointer to the address of an `ICorDebugFrame` object that represents the called frame.</span></span> <span data-ttu-id="6cb54-107">이 값은 호출 프레임은 현재 체인에서 가장 안쪽 프레임 경우 null입니다.</span><span class="sxs-lookup"><span data-stu-id="6cb54-107">This value is null if the calling frame is the innermost frame in the current chain.</span></span>  
+ <span data-ttu-id="f4ad7-106">[out] 주소에 대 한 포인터는 `ICorDebugFrame` 호출된 프레임을 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4ad7-106">[out] A pointer to the address of an `ICorDebugFrame` object that represents the called frame.</span></span> <span data-ttu-id="f4ad7-107">이 값은 호출 프레임은 현재 체인에서 가장 안쪽 프레임 경우 null입니다.</span><span class="sxs-lookup"><span data-stu-id="f4ad7-107">This value is null if the calling frame is the innermost frame in the current chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6cb54-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6cb54-108">Requirements</span></span>  
- <span data-ttu-id="6cb54-109">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6cb54-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4ad7-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f4ad7-108">Requirements</span></span>  
+ <span data-ttu-id="f4ad7-109">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f4ad7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6cb54-110">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6cb54-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f4ad7-110">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f4ad7-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6cb54-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6cb54-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f4ad7-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4ad7-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6cb54-112">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6cb54-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f4ad7-112">**.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4ad7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

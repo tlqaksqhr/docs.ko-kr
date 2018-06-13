@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325210"
 ---
 # <a name="c-features-that-support-linq"></a><span data-ttu-id="db9df-102">LINQ를 지원하는 C# 기능</span><span class="sxs-lookup"><span data-stu-id="db9df-102">C# Features That Support LINQ</span></span>
 <span data-ttu-id="db9df-103">다음 섹션에서는 C# 3.0에 도입된 새로운 언어 구문을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="db9df-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="db9df-104">이러한 새 기능은 모두 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서 어느 정도 사용되지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]로 제한되지 않고 유용한 모든 컨텍스트에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db9df-104">Although these new features are all used to a degree with [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, they are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] and can be used in any context where you find them useful.</span></span>  

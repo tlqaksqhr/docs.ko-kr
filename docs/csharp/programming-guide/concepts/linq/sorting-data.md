@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332561"
 ---
 # <a name="sorting-data-c"></a><span data-ttu-id="51307-102">데이터 정렬(C#)</span><span class="sxs-lookup"><span data-stu-id="51307-102">Sorting Data (C#)</span></span>
 <span data-ttu-id="51307-103">정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="51307-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="51307-104">첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="51307-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="51307-105">두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51307-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  

@@ -1,48 +1,37 @@
 ---
-title: "방법: 검색 프록시에 등록할 검색 가능한 서비스 구현"
-ms.custom: 
+title: '방법: 검색 프록시에 등록할 검색 가능한 서비스 구현'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490599"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="421a1-102">방법: 검색 프록시에 등록할 검색 가능한 서비스 구현</span><span class="sxs-lookup"><span data-stu-id="421a1-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
-<span data-ttu-id="421a1-103">이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="421a1-104">이전 항목에서 [하는 방법: 검색 프록시를 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="421a1-105">이 항목에서는 검색 프록시에 알림 메시지([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 `Hello`)를 보내는 `Bye` 서비스를 만듭니다. 이러한 알림 메시지는 서비스가 검색 프록시에 해당 서비스를 등록하거나 등록 취소하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-105">In this topic, you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="06f72-102">방법: 검색 프록시에 등록할 검색 가능한 서비스 구현</span><span class="sxs-lookup"><span data-stu-id="06f72-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
+<span data-ttu-id="06f72-103">이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="06f72-104">이전 항목에서 [하는 방법: 검색 프록시를 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="06f72-105">이 항목에서는 알림 메시지를 보내는 WCF 서비스를 만들 (`Hello` 및 `Bye`) 검색 프록시에 프로그램이 등록 및 검색 프록시에 자체 등록을 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>  
   
-### <a name="to-define-the-service-contract"></a><span data-ttu-id="421a1-106">서비스 계약을 정의하려면</span><span class="sxs-lookup"><span data-stu-id="421a1-106">To define the service contract</span></span>  
+### <a name="to-define-the-service-contract"></a><span data-ttu-id="06f72-106">서비스 계약을 정의하려면</span><span class="sxs-lookup"><span data-stu-id="06f72-106">To define the service contract</span></span>  
   
-1.  <span data-ttu-id="421a1-107">`DiscoveryProxyExample` 솔루션에 `Service`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>  
+1.  <span data-ttu-id="06f72-107">`DiscoveryProxyExample` 솔루션에 `Service`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>  
   
-2.  <span data-ttu-id="421a1-108">다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-108">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="06f72-108">다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-108">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="421a1-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="421a1-109">System.ServiceModel</span></span>  
+    1.  <span data-ttu-id="06f72-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="06f72-109">System.ServiceModel</span></span>  
   
-    2.  <span data-ttu-id="421a1-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="421a1-110">System.ServiceModel.Discovery</span></span>  
+    2.  <span data-ttu-id="06f72-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="06f72-110">System.ServiceModel.Discovery</span></span>  
   
-3.  <span data-ttu-id="421a1-111">`CalculatorService`라는 프로젝트에 새 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-111">Add a new class to the project called `CalculatorService`.</span></span>  
+3.  <span data-ttu-id="06f72-111">`CalculatorService`라는 프로젝트에 새 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-111">Add a new class to the project called `CalculatorService`.</span></span>  
   
-4.  <span data-ttu-id="421a1-112">다음 using 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-112">Add the following using statements.</span></span>  
+4.  <span data-ttu-id="06f72-112">다음 using 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-112">Add the following using statements.</span></span>  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-5.  <span data-ttu-id="421a1-113">CalculatorService.cs 내에서 서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-113">Within CalculatorService.cs, define the service contract.</span></span>  
+5.  <span data-ttu-id="06f72-113">CalculatorService.cs 내에서 서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-113">Within CalculatorService.cs, define the service contract.</span></span>  
   
     ```csharp  
     // Define a service contract.  
@@ -60,7 +49,7 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-6.  <span data-ttu-id="421a1-114">CalculatorService.cs 내에서 서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-114">Also within CalculatorService.cs, implement the service contract.</span></span>  
+6.  <span data-ttu-id="06f72-114">CalculatorService.cs 내에서 서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-114">Also within CalculatorService.cs, implement the service contract.</span></span>  
   
     ```csharp  
     // Service class which implements the service contract.      
@@ -100,11 +89,11 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="421a1-115">서비스를 호스트하려면</span><span class="sxs-lookup"><span data-stu-id="421a1-115">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="06f72-115">서비스를 호스트하려면</span><span class="sxs-lookup"><span data-stu-id="06f72-115">To host the service</span></span>  
   
-1.  <span data-ttu-id="421a1-116">프로젝트를 만들 때 생성된 Program.cs 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-116">Open the Program.cs file that was generated when you created the project.</span></span>  
+1.  <span data-ttu-id="06f72-116">프로젝트를 만들 때 생성된 Program.cs 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-116">Open the Program.cs file that was generated when you created the project.</span></span>  
   
-2.  <span data-ttu-id="421a1-117">다음 using 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-117">Add the following using statements.</span></span>  
+2.  <span data-ttu-id="06f72-117">다음 using 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-117">Add the following using statements.</span></span>  
   
     ```csharp 
     using System;  
@@ -113,7 +102,7 @@ ms.lasthandoff: 12/22/2017
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  <span data-ttu-id="421a1-118">`Main()` 메서드 안에서 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-118">Within the `Main()` method, add the following code:</span></span>  
+3.  <span data-ttu-id="06f72-118">`Main()` 메서드 안에서 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-118">Within the `Main()` method, add the following code:</span></span>  
   
     ```csharp  
     // Define the base address of the service  
@@ -165,10 +154,10 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
- <span data-ttu-id="421a1-119">검색 가능한 서비스의 구현을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="421a1-120">계속 진행 하 [하는 방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>  
+ <span data-ttu-id="06f72-119">검색 가능한 서비스의 구현을 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="06f72-120">계속 진행 하 [하는 방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="421a1-121">예</span><span class="sxs-lookup"><span data-stu-id="421a1-121">Example</span></span>  
- <span data-ttu-id="421a1-122">다음은 이 항목에서 사용되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="421a1-122">This is the full listing of the code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="06f72-121">예제</span><span class="sxs-lookup"><span data-stu-id="06f72-121">Example</span></span>  
+ <span data-ttu-id="06f72-122">다음은 이 항목에서 사용되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="06f72-122">This is the full listing of the code used in this topic.</span></span>  
   
 ```csharp  
 // CalculatorService.cs  
@@ -295,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a><span data-ttu-id="421a1-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="421a1-123">See Also</span></span>  
- [<span data-ttu-id="421a1-124">WCF 검색</span><span class="sxs-lookup"><span data-stu-id="421a1-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [<span data-ttu-id="421a1-125">방법: 검색 프록시 구현</span><span class="sxs-lookup"><span data-stu-id="421a1-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [<span data-ttu-id="421a1-126">방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현</span><span class="sxs-lookup"><span data-stu-id="421a1-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a><span data-ttu-id="06f72-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="06f72-123">See Also</span></span>  
+ [<span data-ttu-id="06f72-124">WCF 검색</span><span class="sxs-lookup"><span data-stu-id="06f72-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [<span data-ttu-id="06f72-125">방법: 검색 프록시 구현</span><span class="sxs-lookup"><span data-stu-id="06f72-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="06f72-126">방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현</span><span class="sxs-lookup"><span data-stu-id="06f72-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

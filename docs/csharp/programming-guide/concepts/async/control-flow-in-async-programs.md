@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336625"
 ---
 # <a name="control-flow-in-async-programs-c"></a><span data-ttu-id="772a5-102">비동기 프로그램의 제어 흐름(C#)</span><span class="sxs-lookup"><span data-stu-id="772a5-102">Control Flow in Async Programs (C#)</span></span>
 <span data-ttu-id="772a5-103">`async` 및 `await` 키워드를 사용하면 비동기 프로그램을 더 쉽게 쓰고 유지 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="772a5-103">You can write and maintain asynchronous programs more easily by using the `async` and `await` keywords.</span></span> <span data-ttu-id="772a5-104">그러나 프로그램 작동 방식을 이해하지 못한다면 결과가 놀라울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="772a5-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="772a5-105">이 항목에서는 간단한 비동기 프로그램을 통해 제어 흐름을 추적하여 언제 메서드 간에 제어가 이동되고 매번 어떤 정보가 전달되는지 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="772a5-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>  

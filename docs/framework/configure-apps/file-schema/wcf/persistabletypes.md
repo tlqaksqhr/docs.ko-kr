@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747566"
 ---
 # <a name="ltpersistabletypesgt"></a><span data-ttu-id="6499e-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="6499e-102">&lt;persistableTypes&gt;</span></span>
 <span data-ttu-id="6499e-103">이 섹션에는 `persistableType` 요소 컬렉션이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6499e-103">This section contains a collection of `persistableType` elements.</span></span>  
