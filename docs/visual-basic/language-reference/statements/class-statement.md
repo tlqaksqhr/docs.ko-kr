@@ -18,6 +18,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235884"
 ---
 # <a name="class-statement-visual-basic"></a><span data-ttu-id="76883-102">Class 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="76883-102">Class Statement (Visual Basic)</span></span>
 <span data-ttu-id="76883-103">클래스의 이름을 선언 하 고 변수, 속성, 이벤트 및 클래스를 구성 하는 프로시저의 정의 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="76883-103">Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.</span></span>  

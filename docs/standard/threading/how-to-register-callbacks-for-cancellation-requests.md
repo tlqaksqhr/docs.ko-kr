@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583294"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a><span data-ttu-id="0df18-102">방법: 취소 요청에 대한 콜백 등록</span><span class="sxs-lookup"><span data-stu-id="0df18-102">How to: Register Callbacks for Cancellation Requests</span></span>
 <span data-ttu-id="0df18-103">다음 예제에서는 토큰을 만든 개체에 대한 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 호출로 인해 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true가 될 때 호출되는 대리자를 등록하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="0df18-103">The following example shows how to register a delegate that will be invoked when a <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> property becomes true due to a call to <xref:System.Threading.CancellationTokenSource.Cancel%2A> on the object that created the token.</span></span> <span data-ttu-id="0df18-104">이 기술은 통합된 취소 프레임워크를 기본적으로 지원하지 않는 비동기 작업을 취소하고 비동기 작업이 완료되기를 기다릴 수 있는 메서드의 차단을 해제하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0df18-104">Use this technique for cancelling asynchronous operations that do not natively support the unified cancellation framework, and for unblocking methods that might be waiting for an asynchronous operation to finish.</span></span>  

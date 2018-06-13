@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171917"
 ---
 # <a name="ampamp-operator-c-reference"></a><span data-ttu-id="a486b-102">&amp;&amp; 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a486b-102">&amp;&amp; Operator (C# Reference)</span></span>
 <span data-ttu-id="a486b-103">조건부 AND 연산자(`&&`)는 `bool` 피연산자의 논리적 AND를 수행하지만 필요할 경우 두 번째 피연산자만 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="a486b-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  

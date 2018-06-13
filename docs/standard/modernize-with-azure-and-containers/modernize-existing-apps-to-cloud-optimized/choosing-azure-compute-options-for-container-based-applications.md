@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958013"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a><span data-ttu-id="f5841-103">컨테이너 기반 응용 프로그램에 대 한 Azure 계산 플랫폼 선택</span><span class="sxs-lookup"><span data-stu-id="f5841-103">Choosing Azure compute platforms for container-based applications</span></span>
 

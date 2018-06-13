@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582941"
 ---
 # <a name="destroying-threads"></a><span data-ttu-id="91c3c-102">스레드 제거</span><span class="sxs-lookup"><span data-stu-id="91c3c-102">Destroying Threads</span></span>
 <span data-ttu-id="91c3c-103"><xref:System.Threading.Thread.Abort%2A> 메서드는 관리되는 스레드를 영구적으로 중지하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="91c3c-103">The <xref:System.Threading.Thread.Abort%2A> method is used to stop a managed thread permanently.</span></span> <span data-ttu-id="91c3c-104"><xref:System.Threading.Thread.Abort%2A>를 호출할 때 공용 언어 런타임이 대상 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw하며, 대상 스레드가 이를 catch할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91c3c-104">When you call <xref:System.Threading.Thread.Abort%2A>, the common language runtime throws a <xref:System.Threading.ThreadAbortException> in the target thread, which the target thread can catch.</span></span> <span data-ttu-id="91c3c-105">자세한 내용은 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="91c3c-105">For more information, see <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span>  

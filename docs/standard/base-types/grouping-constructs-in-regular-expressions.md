@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579823"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a><span data-ttu-id="0f7cc-102">정규식의 교체 그룹화 구문</span><span class="sxs-lookup"><span data-stu-id="0f7cc-102">Grouping Constructs in Regular Expressions</span></span>
 <span data-ttu-id="0f7cc-103">그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="0f7cc-103">Grouping constructs delineate the subexpressions of a regular expression and capture the substrings of an input string.</span></span> <span data-ttu-id="0f7cc-104">그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f7cc-104">You can use grouping constructs to do the following:</span></span>  

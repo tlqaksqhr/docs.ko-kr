@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235992"
 ---
 # <a name="property-statement"></a><span data-ttu-id="1a43e-102">Property Statement</span><span class="sxs-lookup"><span data-stu-id="1a43e-102">Property Statement</span></span>
 <span data-ttu-id="1a43e-103">속성을 저장 하 고 속성의 값을 검색 하는 데 사용 하는 속성 프로시저의 이름을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a43e-103">Declares the name of a property, and the property procedures used to store and retrieve the value of the property.</span></span>  

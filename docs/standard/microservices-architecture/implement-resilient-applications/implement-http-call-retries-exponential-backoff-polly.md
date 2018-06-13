@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576983"
 ---
 # <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a><span data-ttu-id="2a238-103">Polly와 함께 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현</span><span class="sxs-lookup"><span data-stu-id="2a238-103">Implementing HTTP call retries with exponential backoff with Polly</span></span>
 

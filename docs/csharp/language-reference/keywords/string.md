@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172164"
 ---
 # <a name="string-c-reference"></a><span data-ttu-id="9ff33-102">string(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="9ff33-102">string (C# Reference)</span></span>
 <span data-ttu-id="9ff33-103">`string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9ff33-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="9ff33-104">`string`는 .NET에서 <xref:System.String>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="9ff33-104">`string` is an alias for <xref:System.String> in .NET.</span></span>  

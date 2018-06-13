@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591939"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a><span data-ttu-id="1b022-102">연속 작업을 사용하여 작업 연결</span><span class="sxs-lookup"><span data-stu-id="1b022-102">Chaining Tasks by Using Continuation Tasks</span></span>
 <span data-ttu-id="1b022-103">비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하고 해당 작업에 데이터를 전달하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="1b022-103">In asynchronous programming, it is very common for one asynchronous operation, on completion, to invoke a second operation and pass data to it.</span></span> <span data-ttu-id="1b022-104">일반적으로 이 작업은 콜백 메서드를 통해 수행되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1b022-104">Traditionally, this has been done by using callback methods.</span></span> <span data-ttu-id="1b022-105">작업 병렬 라이브러리에서는 *연속 작업*이 동일한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1b022-105">In the Task Parallel Library, the same functionality is provided by *continuation tasks*.</span></span> <span data-ttu-id="1b022-106">연속 작업(연속이라고도 함)은 선행 작업이 완료될 때 다른 작업( *선행*이라고 함)이 호출하는 비동기 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="1b022-106">A continuation task (also known just as a continuation) is an asynchronous task that is invoked by another task, which is known as the *antecedent*, when the antecedent finishes.</span></span>  

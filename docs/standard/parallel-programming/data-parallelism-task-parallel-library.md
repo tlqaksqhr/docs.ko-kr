@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584659"
 ---
 # <a name="data-parallelism-task-parallel-library"></a><span data-ttu-id="f4804-102">데이터 병렬 처리(작업 병렬 라이브러리)</span><span class="sxs-lookup"><span data-stu-id="f4804-102">Data Parallelism (Task Parallel Library)</span></span>
 <span data-ttu-id="f4804-103">*데이터 병렬 처리*는 소스 컬렉션 또는 배열의 요소에서 동일한 작업이 동시에(즉, 병렬로) 수행되는 시나리오를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="f4804-103">*Data parallelism* refers to scenarios in which the same operation is performed concurrently (that is, in parallel) on elements in a source collection or array.</span></span> <span data-ttu-id="f4804-104">데이터 병렬 작업에서 소스 컬렉션은 여러 스레드가 서로 다른 세그먼트에서 동시에 작동할 수 있도록 분할됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4804-104">In data parallel operations, the source collection is partitioned so that multiple threads can operate on different segments concurrently.</span></span>  

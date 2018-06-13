@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058903"
 ---
 # <a name="interfaces"></a><span data-ttu-id="aa082-103">인터페이스</span><span class="sxs-lookup"><span data-stu-id="aa082-103">Interfaces</span></span>
 

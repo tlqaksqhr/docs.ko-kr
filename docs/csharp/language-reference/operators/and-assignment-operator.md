@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172050"
 ---
 # <a name="amp-operator-c-reference"></a><span data-ttu-id="360bb-102">&amp;= 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="360bb-102">&amp;= Operator (C# Reference)</span></span>
 <span data-ttu-id="360bb-103">AND 대입 연산자.</span><span class="sxs-lookup"><span data-stu-id="360bb-103">The AND assignment operator.</span></span>  

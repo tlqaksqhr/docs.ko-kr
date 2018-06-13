@@ -1,12 +1,6 @@
 ---
-title: "XML Serialization 예제"
-ms.custom: 
+title: XML Serialization 예제
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,24 +13,18 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 39cf89856b8096fb879ee42f068e96308c5f9660
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8d30afa0b517f31ded2bc5229927c698e476f790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592030"
 ---
-# <a name="examples-of-xml-serialization"></a><span data-ttu-id="fd3ae-102">XML Serialization 예제</span><span class="sxs-lookup"><span data-stu-id="fd3ae-102">Examples of XML Serialization</span></span>
-<span data-ttu-id="fd3ae-103">XML serialization은 간단한 것부터 복잡한 것까지 여러 형태를 가집니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="fd3ae-104">예를 들어 [XML Serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)에서처럼 공용 필드와 속성으로 간단하게 구성된 클래스를 직렬화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="fd3ae-105">다음 코드 예제에서는 XML serialization을 사용하여 특정 XML 스키마(XSD) 문서를 따르는 XML 스트림을 생성하는 방법을 포함한 여러 가지 고급 시나리오를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>  
+# <a name="examples-of-xml-serialization"></a><span data-ttu-id="c1d42-102">XML Serialization 예제</span><span class="sxs-lookup"><span data-stu-id="c1d42-102">Examples of XML Serialization</span></span>
+<span data-ttu-id="c1d42-103">XML serialization은 간단한 것부터 복잡한 것까지 여러 형태를 가집니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="c1d42-104">예를 들어 [XML Serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)에서처럼 공용 필드와 속성으로 간단하게 구성된 클래스를 직렬화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="c1d42-105">다음 코드 예제에서는 XML serialization을 사용하여 특정 XML 스키마(XSD) 문서를 따르는 XML 스트림을 생성하는 방법을 포함한 여러 가지 고급 시나리오를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>  
   
-## <a name="serializing-a-dataset"></a><span data-ttu-id="fd3ae-106">데이터 집합 serialize</span><span class="sxs-lookup"><span data-stu-id="fd3ae-106">Serializing a DataSet</span></span>  
- <span data-ttu-id="fd3ae-107">공용 클래스의 인스턴스를 serialize하는 것 이외에 다음 코드 예제에서 볼 수 있는 것처럼 <xref:System.Data.DataSet>의 인스턴스도 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>  
+## <a name="serializing-a-dataset"></a><span data-ttu-id="c1d42-106">데이터 집합 serialize</span><span class="sxs-lookup"><span data-stu-id="c1d42-106">Serializing a DataSet</span></span>  
+ <span data-ttu-id="c1d42-107">공용 클래스의 인스턴스를 serialize하는 것 이외에 다음 코드 예제에서 볼 수 있는 것처럼 <xref:System.Data.DataSet>의 인스턴스도 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>  
   
 ```vb  
 Private Sub SerializeDataSet(filename As String)  
@@ -82,8 +70,8 @@ private void SerializeDataSet(string filename){
 }  
 ```  
   
-## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="fd3ae-108">XmlElement 및 XmlNode serialize</span><span class="sxs-lookup"><span data-stu-id="fd3ae-108">Serializing an XmlElement and XmlNode</span></span>  
- <span data-ttu-id="fd3ae-109">다음 코드 예제에서처럼 <xref:System.Xml.XmlElement> 또는 <xref:System.Xml.XmlNode> 클래스의 인스턴스를 serialize할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-109">You can also serialize instances of a <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>  
+## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="c1d42-108">XmlElement 및 XmlNode serialize</span><span class="sxs-lookup"><span data-stu-id="c1d42-108">Serializing an XmlElement and XmlNode</span></span>  
+ <span data-ttu-id="c1d42-109">다음 코드 예제에서처럼 <xref:System.Xml.XmlElement> 또는 <xref:System.Xml.XmlNode> 클래스의 인스턴스를 serialize할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-109">You can also serialize instances of a <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>  
   
 ```vb  
 private Sub SerializeElement(filename As String)  
@@ -130,8 +118,8 @@ private void SerializeNode(string filename){
 }  
 ```  
   
-## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="fd3ae-110">복잡한 개체를 반환하는 필드가 포함된 클래스 serialize</span><span class="sxs-lookup"><span data-stu-id="fd3ae-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>  
- <span data-ttu-id="fd3ae-111">속성 또는 필드가 복합 개체(예: 배열 또는 클래스 인스턴스)를 반환하는 경우 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)는 그 개체를 주 XML 문서 내의 중첩된 요소로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-111">If a property or field returns a complex object (such as an array or a class instance), the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="fd3ae-112">예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-112">For example, the first class in the following code example returns an instance of the second class.</span></span>  
+## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="c1d42-110">복잡한 개체를 반환하는 필드가 포함된 클래스 serialize</span><span class="sxs-lookup"><span data-stu-id="c1d42-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>  
+ <span data-ttu-id="c1d42-111">속성 또는 필드가 복합 개체(예: 배열 또는 클래스 인스턴스)를 반환하는 경우 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)는 그 개체를 주 XML 문서 내의 중첩된 요소로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-111">If a property or field returns a complex object (such as an array or a class instance), the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="c1d42-112">예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-112">For example, the first class in the following code example returns an instance of the second class.</span></span>  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -154,7 +142,7 @@ public class Address
 }  
 ```  
   
- <span data-ttu-id="fd3ae-113">serialize된 XML 출력은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-113">The serialized XML output might resemble the following.</span></span>  
+ <span data-ttu-id="c1d42-113">serialize된 XML 출력은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-113">The serialized XML output might resemble the following.</span></span>  
   
 ```xml  
 <PurchaseOrder>  
@@ -164,8 +152,8 @@ public class Address
 </PurchaseOrder>  
 ```  
   
-## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="fd3ae-114">개체 배열 serialize</span><span class="sxs-lookup"><span data-stu-id="fd3ae-114">Serializing an Array of Objects</span></span>  
- <span data-ttu-id="fd3ae-115">다음 코드 예제에서처럼 개체 배열을 반환하는 필드를 serialize할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>  
+## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="c1d42-114">개체 배열 serialize</span><span class="sxs-lookup"><span data-stu-id="c1d42-114">Serializing an Array of Objects</span></span>  
+ <span data-ttu-id="c1d42-115">다음 코드 예제에서처럼 개체 배열을 반환하는 필드를 serialize할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -191,7 +179,7 @@ public class Item
 }  
 ```  
   
- <span data-ttu-id="fd3ae-116">두 항목이 순서 지정된 경우 serialize된 클래스 인스턴스는 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>  
+ <span data-ttu-id="c1d42-116">두 항목이 순서 지정된 경우 serialize된 클래스 인스턴스는 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>  
   
 ```xml  
 <PurchaseOrder xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -208,8 +196,8 @@ public class Item
 </PurchaseOrder>  
 ```  
   
-## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="fd3ae-117">ICollection 인터페이스를 구현하는 클래스 serialize</span><span class="sxs-lookup"><span data-stu-id="fd3ae-117">Serializing a Class that Implements the ICollection Interface</span></span>  
- <span data-ttu-id="fd3ae-118"><xref:System.Collections.ICollection> 인터페이스를 구현하여 컬렉션 클래스를 직접 만들고 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 이러한 클래스의 인스턴스를 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="fd3ae-119">클래스가 <xref:System.Collections.ICollection> 인터페이스를 구현할 때 클래스에 의해 포함된 컬렉션만 serialize됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="fd3ae-120">클래스에 추가된 모든 공용 속성이나 필드는 serialize되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="fd3ae-121">클래스에는 직렬화될 **Add** 메서드 및 **Item** 속성(C# 인덱서)이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>  
+## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="c1d42-117">ICollection 인터페이스를 구현하는 클래스 serialize</span><span class="sxs-lookup"><span data-stu-id="c1d42-117">Serializing a Class that Implements the ICollection Interface</span></span>  
+ <span data-ttu-id="c1d42-118"><xref:System.Collections.ICollection> 인터페이스를 구현하여 컬렉션 클래스를 직접 만들고 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 이러한 클래스의 인스턴스를 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="c1d42-119">클래스가 <xref:System.Collections.ICollection> 인터페이스를 구현할 때 클래스에 의해 포함된 컬렉션만 serialize됩니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="c1d42-120">클래스에 추가된 모든 공용 속성이나 필드는 serialize되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="c1d42-121">클래스에는 직렬화될 **Add** 메서드 및 **Item** 속성(C# 인덱서)이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>  
   
 ```vb  
 Imports System  
@@ -366,16 +354,16 @@ public class Employee{
 }  
 ```  
   
-## <a name="purchase-order-example"></a><span data-ttu-id="fd3ae-122">구매 주문 예제</span><span class="sxs-lookup"><span data-stu-id="fd3ae-122">Purchase Order Example</span></span>  
- <span data-ttu-id="fd3ae-123">다음 예제 코드를 잘라내어 파일 이름 확장명이 .cs 또는 .vb 텍스트 파일에 붙여넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="fd3ae-124">C# 또는 Visual Basic 컴파일러를 사용하여 파일을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="fd3ae-125">그런 다음 실행 파일의 이름을 입력하여 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-125">Then run it using the name of the executable.</span></span>  
+## <a name="purchase-order-example"></a><span data-ttu-id="c1d42-122">구매 주문 예제</span><span class="sxs-lookup"><span data-stu-id="c1d42-122">Purchase Order Example</span></span>  
+ <span data-ttu-id="c1d42-123">다음 예제 코드를 잘라내어 파일 이름 확장명이 .cs 또는 .vb 텍스트 파일에 붙여넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="c1d42-124">C# 또는 Visual Basic 컴파일러를 사용하여 파일을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="c1d42-125">그런 다음 실행 파일의 이름을 입력하여 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-125">Then run it using the name of the executable.</span></span>  
   
- <span data-ttu-id="fd3ae-126">이 예제에서는 간단한 시나리오를 사용하여 개체 인스턴스를 만들고 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 메서드를 사용하여 파일 스트림으로 serialize하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="fd3ae-127">XML 스트림은 파일에 저장되고 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 사용하여 동일한 파일을 읽어서 원본 개체의 복사본으로 재생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>  
+ <span data-ttu-id="c1d42-126">이 예제에서는 간단한 시나리오를 사용하여 개체 인스턴스를 만들고 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 메서드를 사용하여 파일 스트림으로 serialize하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="c1d42-127">XML 스트림은 파일에 저장되고 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 사용하여 동일한 파일을 읽어서 원본 개체의 복사본으로 재생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>  
   
- <span data-ttu-id="fd3ae-128">이 예제에서는 `PurchaseOrder`라는 클래스를 serialize한 다음 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="fd3ae-129">`Address`라는 public 필드를 `ShipTo`로 설정해야 하기 때문에 `Address`라는 두 번째 클래스도 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="fd3ae-130">마찬가지로 `OrderedItem` 개체의 배열을 `OrderedItem` 필드로 설정해야 하기 때문에 `OrderedItems` 클래스도 포함했습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="fd3ae-131">마지막으로 `Test`라는 클래스에는 클래스를 serialize하고 deserialize하는 코드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>  
+ <span data-ttu-id="c1d42-128">이 예제에서는 `PurchaseOrder`라는 클래스를 serialize한 다음 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="c1d42-129">`Address`라는 public 필드를 `ShipTo`로 설정해야 하기 때문에 `Address`라는 두 번째 클래스도 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="c1d42-130">마찬가지로 `OrderedItem` 개체의 배열을 `OrderedItem` 필드로 설정해야 하기 때문에 `OrderedItems` 클래스도 포함했습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="c1d42-131">마지막으로 `Test`라는 클래스에는 클래스를 serialize하고 deserialize하는 코드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>  
   
- <span data-ttu-id="fd3ae-132">`CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="fd3ae-133">메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 serialize하고 deserialize하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="fd3ae-134">코드는 serialize될 클래스 형식을 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="fd3ae-135">또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>  
+ <span data-ttu-id="c1d42-132">`CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="c1d42-133">메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 serialize하고 deserialize하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="c1d42-134">코드는 serialize될 클래스 형식을 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="c1d42-135">또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>  
   
- <span data-ttu-id="fd3ae-136">`ReadPo` 메서드는 조금 더 간단합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="fd3ae-137">deserialize할 개체를 만들고 그 값을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="fd3ae-138">`CreatePo` 메서드와 마찬가지로 먼저 <xref:System.Xml.Serialization.XmlSerializer>를 만들어 deserialize될 클래스의 형식을 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-138">As with the `CreatePo` method, you must first construct a <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="fd3ae-139">또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="fd3ae-140">개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="fd3ae-141">deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="fd3ae-142">그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="fd3ae-143">작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>  
+ <span data-ttu-id="c1d42-136">`ReadPo` 메서드는 조금 더 간단합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="c1d42-137">deserialize할 개체를 만들고 그 값을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="c1d42-138">`CreatePo` 메서드와 마찬가지로 먼저 <xref:System.Xml.Serialization.XmlSerializer>를 만들어 deserialize될 클래스의 형식을 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-138">As with the `CreatePo` method, you must first construct a <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="c1d42-139">또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="c1d42-140">개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="c1d42-141">deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="c1d42-142">그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="c1d42-143">작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>  
   
 ```vb  
 Imports System  
@@ -747,7 +735,7 @@ public class Test
 }  
 ```  
   
- <span data-ttu-id="fd3ae-144">XML 출력은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd3ae-144">The XML output might resemble the following.</span></span>  
+ <span data-ttu-id="c1d42-144">XML 출력은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1d42-144">The XML output might resemble the following.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -774,10 +762,10 @@ public class Test
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fd3ae-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fd3ae-145">See Also</span></span>  
- [<span data-ttu-id="fd3ae-146">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="fd3ae-146">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [<span data-ttu-id="fd3ae-147">특성을 사용하여 XML serialization 제어</span><span class="sxs-lookup"><span data-stu-id="fd3ae-147">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [<span data-ttu-id="fd3ae-148">XML serialization을 제어하는 특성</span><span class="sxs-lookup"><span data-stu-id="fd3ae-148">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- [<span data-ttu-id="fd3ae-149">XmlSerializer 클래스</span><span class="sxs-lookup"><span data-stu-id="fd3ae-149">XmlSerializer Class</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [<span data-ttu-id="fd3ae-150">방법: 개체 직렬화</span><span class="sxs-lookup"><span data-stu-id="fd3ae-150">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="fd3ae-151">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="fd3ae-151">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a><span data-ttu-id="c1d42-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c1d42-145">See Also</span></span>  
+ [<span data-ttu-id="c1d42-146">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="c1d42-146">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="c1d42-147">특성을 사용하여 XML serialization 제어</span><span class="sxs-lookup"><span data-stu-id="c1d42-147">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [<span data-ttu-id="c1d42-148">XML serialization을 제어하는 특성</span><span class="sxs-lookup"><span data-stu-id="c1d42-148">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [<span data-ttu-id="c1d42-149">XmlSerializer 클래스</span><span class="sxs-lookup"><span data-stu-id="c1d42-149">XmlSerializer Class</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+ [<span data-ttu-id="c1d42-150">방법: 개체 직렬화</span><span class="sxs-lookup"><span data-stu-id="c1d42-150">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="c1d42-151">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="c1d42-151">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

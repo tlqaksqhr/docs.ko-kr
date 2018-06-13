@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957893"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a><span data-ttu-id="c4cc6-103">하이브리드 클라우드 시나리오로 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="c4cc6-103">Migrate to hybrid cloud scenarios</span></span>
 

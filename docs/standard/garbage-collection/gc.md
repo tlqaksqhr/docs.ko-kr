@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578146"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a><span data-ttu-id="4e87c-103">자동 메모리 관리 및 가비지 수집</span><span class="sxs-lookup"><span data-stu-id="4e87c-103">Automatic memory management and garbage collection</span></span>
 

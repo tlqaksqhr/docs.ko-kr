@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579862"
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="1a1c8-102">Regular Expression 개체 모델</span><span class="sxs-lookup"><span data-stu-id="1a1c8-102">The Regular Expression Object Model</span></span>
 <a name="introduction"></a> <span data-ttu-id="1a1c8-103">이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1a1c8-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="1a1c8-104">여기에는 다음 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1a1c8-104">It contains the following sections:</span></span>  

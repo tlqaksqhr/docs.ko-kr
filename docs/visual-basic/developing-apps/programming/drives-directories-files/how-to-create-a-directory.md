@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583957"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a><span data-ttu-id="b2e89-102">방법: Visual Basic에서 디렉터리 만들기</span><span class="sxs-lookup"><span data-stu-id="b2e89-102">How to: Create a Directory in Visual Basic</span></span>
 <span data-ttu-id="b2e89-103">`My.Computer.FileSystem` 개체의 `CreateDirectory` 메서드를 사용하여 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b2e89-103">Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.</span></span>  

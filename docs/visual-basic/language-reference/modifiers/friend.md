@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234591"
 ---
 # <a name="friend-visual-basic"></a><span data-ttu-id="428c1-102">Friend(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="428c1-102">Friend (Visual Basic)</span></span>
 <span data-ttu-id="428c1-103">하나 이상의 선언 된 프로그래밍 요소를 해당 하는 어셈블리 내 에서만 액세스할 수 있도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="428c1-103">Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.</span></span>  

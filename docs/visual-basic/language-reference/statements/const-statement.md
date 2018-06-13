@@ -11,6 +11,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233849"
 ---
 # <a name="const-statement-visual-basic"></a><span data-ttu-id="f3bf2-102">Const 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3bf2-102">Const Statement (Visual Basic)</span></span>
 <span data-ttu-id="f3bf2-103">선언 하 고 하나 이상의 상수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3bf2-103">Declares and defines one or more constants.</span></span>  

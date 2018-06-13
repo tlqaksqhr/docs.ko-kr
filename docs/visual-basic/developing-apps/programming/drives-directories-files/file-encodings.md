@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582288"
 ---
 # <a name="file-encodings-visual-basic"></a><span data-ttu-id="4aa5c-102">파일 인코딩(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4aa5c-102">File Encodings (Visual Basic)</span></span>
 <span data-ttu-id="4aa5c-103">문자 인코딩이라고도 하는 파일 인코딩은 텍스트 처리 시 문자를 나타내는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4aa5c-103">File encodings, also known as character encodings, specify how to represent characters when text processing.</span></span> <span data-ttu-id="4aa5c-104">처리할 수 있거나 없는 언어 문자를 기준으로 특정 인코딩이 다른 인코딩보다 선호될 수 있지만, 일반적으로 유니코드가 선호됩니다.</span><span class="sxs-lookup"><span data-stu-id="4aa5c-104">One encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957993"
 ---
 # <a name="what-about-cloud-native-applications"></a><span data-ttu-id="ba10d-103">클라우드-네이티브 응용 프로그램은 어떻습니까?</span><span class="sxs-lookup"><span data-stu-id="ba10d-103">What about Cloud-Native applications?</span></span>
 

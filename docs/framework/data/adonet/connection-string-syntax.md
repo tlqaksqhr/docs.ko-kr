@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472752"
 ---
 # <a name="connection-string-syntax"></a><span data-ttu-id="da371-102">연결 문자열 구문</span><span class="sxs-lookup"><span data-stu-id="da371-102">Connection String Syntax</span></span>
 <span data-ttu-id="da371-103">각 .NET Framework 데이터 공급자에는 `Connection`뿐 아니라 공급자별 <xref:System.Data.Common.DbConnection> 속성에서 상속되는 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 개체가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da371-103">Each .NET Framework data provider has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property.</span></span> <span data-ttu-id="da371-104">각 공급자의 특정 연결 문자열 구문은 해당 `ConnectionString` 속성에 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da371-104">The specific connection string syntax for each provider is documented in its `ConnectionString` property.</span></span> <span data-ttu-id="da371-105">다음 표에서는 .NET Framework에 포함되어 있는 네 개의 데이터 공급자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="da371-105">The following table lists the four data providers that are included in the .NET Framework.</span></span>  
