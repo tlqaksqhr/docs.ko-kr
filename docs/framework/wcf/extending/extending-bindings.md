@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485807"
 ---
 # <a name="extending-bindings"></a>바인딩 확장명
 바인딩은 끝점에 연결하는 데 필요한 전송, 인코딩 및 프로토콜을 지정합니다. 바인딩 확장명 및 사용자 지정 바인딩은 응용 프로그램 기능을 지원하는 데 필요한 사용자 지정 통신 기능을 구현합니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444017"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 열거형
 관리 코드에서 수행된 호출 규칙의 형식을 설명하는 값을 포함합니다.  

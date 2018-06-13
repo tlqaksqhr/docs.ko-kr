@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364505"
 ---
 # <a name="group-elements-in-a-sequence"></a>시퀀스의 요소 그룹화
 <xref:System.Linq.Enumerable.GroupBy%2A> 연산자는 시퀀스의 요소를 그룹화합니다. 다음 예제에서는 Northwind 데이터베이스를 사용합니다.  

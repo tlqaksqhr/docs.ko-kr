@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638556"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a>값 &lt;argumentname&gt; 는 양수 여야 합니다
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> 속성 값은 0보다 커야 합니다.  

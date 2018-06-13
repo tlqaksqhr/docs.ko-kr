@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542082"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>연습: 백그라운드 작업을 사용하는 폼 구현
 완료 하는 데 오랜 시간이 걸리는 작업이 있으며 및 하지 않으려는 경우 사용자 인터페이스 (UI) 응답 하지 않거나 사용할 수 있습니다 "중지"는 <xref:System.ComponentModel.BackgroundWorker> 다른 스레드에서 작업을 실행 하는 클래스입니다.  

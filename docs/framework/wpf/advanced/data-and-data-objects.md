@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540321"
 ---
 # <a name="data-and-data-objects"></a>데이터 및 데이터 개체
 끌어서 놓기 작업의 일부로 전송 되는 데이터는 데이터 개체에 저장 됩니다.  개념적으로, 데이터 개체를 하나 이상의 다음 쌍으로 구성 됩니다.  

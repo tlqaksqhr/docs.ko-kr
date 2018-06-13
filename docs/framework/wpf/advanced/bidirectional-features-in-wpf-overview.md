@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541926"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼 달리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 혼합된 왼쪽에서 오른쪽을 마우스 오른쪽 단추로 같은 문서에 데이터를 유지 하는 예를 들어, 양방향 콘텐츠의 신속 하 게 개발을 지 원하는 많은 기능이 있습니다. 같은 시간에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 예: 아랍어 및 히브리어 사용자 양방향 기능이 필요한 사용자를 위한 뛰어난 경험을 만듭니다.  

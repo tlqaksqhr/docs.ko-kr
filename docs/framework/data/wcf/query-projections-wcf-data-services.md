@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365724"
 ---
 # <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션(WCF Data Services)
 프로젝션에는 메커니즘을 제공는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 엔터티의 특정 속성만 응답에서 반환 되는 지정 하 여 쿼리에서 반환 된 피드의 데이터 양을 줄일 수 있습니다. 자세한 내용은 참조 [OData: Select 시스템 쿼리 옵션 ($select)](http://go.microsoft.com/fwlink/?LinkId=186076)합니다.  

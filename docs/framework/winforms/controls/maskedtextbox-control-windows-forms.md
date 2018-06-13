@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539840"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 컨트롤(Windows Forms)
 이 항목에 대 한 다른 사용자에 게 연결 된 `MaskedTextBox` 제어 합니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539574"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 선택 모드
 응용 프로그램 내의 사용자 선택에 따라 작업을 수행 하려는 경우에 따라 한 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 작업에 따라 가능한 선택 항목의 종류를 제한 하는 것이 좋습니다. 예를 들어, 응용 프로그램에서 현재 선택 된 레코드에 대 한 보고서를 인쇄할 수 있습니다. 이 경우 구성 해야 할 수는 <xref:System.Windows.Forms.DataGridView> 컨트롤 항상 행 내에서 아무 곳 이나 클릭 하 여 전체 행을 선택한 한 번에 해당 행을 하나만 선택할 수 있습니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365698"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 엔터티 데이터를 데이터 서비스로 노출합니다. 이 엔터티 데이터에서 제공 되는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 때 데이터 소스는 관계형 데이터베이스입니다. 이 항목을 만드는 방법을 보여 줍니다.는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-기존 데이터베이스를 기반으로 하며 새 데이터 서비스를 만들려면이 데이터 모델을 사용 하는 Visual Studio 웹 응용 프로그램에서 데이터 모델을 기반으로 합니다.  

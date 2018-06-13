@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540662"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용
 사용 하는 경우는 <xref:System.Windows.Forms.DataGridView> 응용 프로그램에서 데이터 편집을 위해 종종 하려는 사용자에 게 데이터 저장소에 새 데이터 행을 추가 하는 기능을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 제어는 항상 마지막 행으로 표시 되어 새 레코드에 대 한 행을 제공 하 여이 기능을 지원 합니다. 행 머리글에 별표 (*) 기호로 표시 됩니다. 다음 섹션에서는 프로그램 새 레코드에 대 한 행을 사용 하도록 설정할 때 고려해 야 하는 기능 중 일부에 대해 설명 합니다.  

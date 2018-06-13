@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410149"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe(설치 관리자 도구)
 설치 관리자 도구는 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거하는 데 사용할 수 있는 명령줄 유틸리티입니다. 이 도구는 <xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 사용됩니다.  

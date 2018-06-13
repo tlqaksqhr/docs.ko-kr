@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539791"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
 (mdi 다중) 다중 문서 인터페이스 응용 프로그램의 경우 부모 폼의 메뉴에 메뉴 항목이 나 자식 폼에서 전체 메뉴를 병합할 수 있습니다.  

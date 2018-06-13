@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365542"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 SOAP 메시지 대신 HTTP 요청에 응답 하는 Windows Communication Foundation (WCF) 웹 서비스에 대 한 끝점을 구성 하는 데 사용 되는 바인딩 요소를 정의 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535953"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델 사용
 관리 되는 HTML 문서 개체 모델 (DOM) 기반으로 하는 래퍼를 제공는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Internet Explorer에서 노출 하는 HTML 클래스에 대 한 합니다. 이러한 클래스를 사용 하 여 HTML 페이지에서 호스트를 조작는 <xref:System.Windows.Forms.WebBrowser> 컨트롤 또는 처음부터 새 페이지를 만들 수 있습니다.  

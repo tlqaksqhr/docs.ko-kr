@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360669"
 ---
 # <a name="how-to-specify-database-data-types"></a>방법: 데이터베이스 데이터 형식 지정
 사용 하 여는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 속성에는 <xref:System.Data.Linq.Mapping.ColumnAttribute> T-SQL 테이블 선언에는 열을 정의 하는 정확한 텍스트를 지정 하는 특성입니다.  

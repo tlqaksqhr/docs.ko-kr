@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365919"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>비동기 작업(WCF Data Services)
 웹 응용 프로그램의 경우 내부 네트워크 내에서 실행되는 응용 프로그램보다 클라이언트와 서버 간에 보다 긴 대기 시간을 허용해야 합니다. 응용 프로그램의 성능과 사용자 환경을 최적화하려면 웹을 통해 <xref:System.Data.Services.Client.DataServiceContext> 서버에 액세스할 때 <xref:System.Data.Services.Client.DataServiceQuery%601> 및 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클래스의 비동기 메서드를 사용하는 것이 좋습니다.  

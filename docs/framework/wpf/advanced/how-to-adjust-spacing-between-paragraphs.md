@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542950"
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a>방법: 단락 사이 간격 조정
 이 예제에는 조정 하거나 한 유동 콘텐츠를 제거 하는 방법을 보여 줍니다.  

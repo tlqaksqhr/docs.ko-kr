@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638716"
 ---
 # <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>개체 원본이&#39;t이 속성 또는 메서드 (Visual Basic)를 지원 합니다.
 이 자동화 개체에 대해 존재하지 않는 메서드 또는 속성을 지정했습니다.  

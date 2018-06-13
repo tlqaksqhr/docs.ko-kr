@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388058"
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance MDA
 `pInvokeStackImbalance` MDA(관리 디버깅 도우미)는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정된 호출 규칙과 관리되는 서명의 매개 변수 선언을 기준으로 CLR에서 플랫폼 호출 후의 스택 깊이가 예상 스택 깊이와 일치하지 않음을 감지할 때 활성화됩니다.  

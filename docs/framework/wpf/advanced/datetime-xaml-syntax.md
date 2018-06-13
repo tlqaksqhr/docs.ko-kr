@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540565"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 구문
 와 같은 일부 컨트롤 <xref:System.Windows.Controls.Calendar> 및 <xref:System.Windows.Controls.DatePicker>를 사용 하는 속성이 <xref:System.DateTime> 유형입니다. 일반적으로 런타임에 코드 숨김으로 이러한 컨트롤에 대해 초기 날짜 또는 시간을 지정하지만 XAML로 초기 날짜 또는 시간을 지정할 수 있습니다. WPF XAML 파서에 처리의 구문 분석 <xref:System.DateTime> 기본 제공 XAML 텍스트 구문을 사용 하 여 값입니다. 이 항목의 세부 사항을 설명는 <xref:System.DateTime> XAML 텍스트 구문입니다.  

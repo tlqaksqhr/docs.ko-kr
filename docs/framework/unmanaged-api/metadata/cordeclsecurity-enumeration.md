@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443026"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 열거형
 선언적 보안을 사용하여 수행할 수 있는 보안 작업을 지정합니다.  

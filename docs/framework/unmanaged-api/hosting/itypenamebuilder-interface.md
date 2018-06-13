@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4d007085f74a92d75c6c9aeb704a3349a0efe35
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444368"
 ---
 # <a name="itypenamebuilder-interface"></a>ITypeNameBuilder 인터페이스
 형식 이름을 만들기 위한 메서드를 제공 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363219"
 ---
 # <a name="background-information"></a>배경 정보
 이 단원의 항목은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용에 대한 개념 및 기본 사용법을 확장하는 절차와 관련되어 있습니다.  

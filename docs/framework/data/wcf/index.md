@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365958"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](이전의 “ADO.NET Data Services”)는 [REST(Representational State Transfer)](http://go.microsoft.com/fwlink/?LinkId=113919)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]을 사용하는 서비스를 만들 수 있도록 하는 .NET Framework의 구성 요소입니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)의 엔터티-관계 규칙을 사용하여 리소스를 연결로 관련된 엔터티 집합으로 노출합니다.  

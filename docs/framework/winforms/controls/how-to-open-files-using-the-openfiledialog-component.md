@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542277"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>방법: OpenFileDialog 구성 요소를 사용하여 파일 열기
 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소에는 사용자가 자신의 컴퓨터 또는 네트워크에 있는 모든 컴퓨터의 폴더를 탐색 하 고 하나 이상의 파일을 선택 하려면 허용 합니다. 대화 상자에서 사용자가 선택한 파일의 경로와 이름을 반환합니다.  

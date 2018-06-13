@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364007"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
 이 작업에서는 Visual Studio에서 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 시작하고 웹 브라우저에서 선택적으로 피드 읽기를 사용하지 않도록 설정합니다. 또한 서비스 정의 문서를 검색 됩니다 있을 뿐만 아니라 노출 된 리소스를 웹 브라우저를 통해 HTTP GET 요청을 제출 하 여 데이터 서비스 리소스에 액세스 한 다음 있습니다.  

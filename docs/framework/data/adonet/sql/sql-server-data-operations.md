@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363453"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET에서 SQL Server 데이터 작업
 이 섹션에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 SQL Server의 기능 및 특징에 대해 설명합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536197"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 파일 저장
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 여러 형식 중 하나에 표시 하는 정보를 쓸 수 있습니다.  

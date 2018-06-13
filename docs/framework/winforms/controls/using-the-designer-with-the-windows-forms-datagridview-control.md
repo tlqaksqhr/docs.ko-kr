@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539827"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에 디자이너 사용
 Visual Studio에 대 한 디자이너 지원을 제공는 `DataGridView` 제어 코드를 작성 하지 않고도 여러 설정 작업을 수행할 수 있도록 합니다. 이러한 작업에는 열을 수정 하는 데이터 소스에 컨트롤 데이터를 표시 하는 데 사용 되는 바인딩 및 모양 및 컨트롤의 기본 동작을 조정 포함 됩니다.  

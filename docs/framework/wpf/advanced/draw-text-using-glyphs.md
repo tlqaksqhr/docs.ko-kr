@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542528"
 ---
 # <a name="draw-text-using-glyphs"></a>문자 모양을 사용하여 텍스트 그리기
 이 항목에서는 하위 수준에서 사용 하는 방법을 설명 <xref:System.Windows.Documents.Glyphs> 에 텍스트를 표시 하는 개체 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

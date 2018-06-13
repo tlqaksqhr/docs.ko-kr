@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409383"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 인증 모듈 개요
 WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Module)을 통한 ASP.NET 응용 프로그램의 페더레이션된 인증 지원이 포함되어 있습니다. 이 항목은 페더레이션된 인증의 작동 방식과 사용 방법을 이해하는 데 도움이 됩니다.  

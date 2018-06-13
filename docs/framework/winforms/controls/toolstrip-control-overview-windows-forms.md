@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542053"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결 된 클래스 도구 모음, 상태 표시줄 및 메뉴에 사용자 인터페이스 요소를 결합 하기 위한 공통 프레임 워크를 제공 합니다. <xref:System.Windows.Forms.ToolStrip> 컨트롤에 가로 또는 세로 공간을 공유할 수 있는 도구 모음에 내부 활성화 및 편집, 사용자 지정 레이아웃 및 래프팅 (rafting)을 포함 하는 풍부한 디자인 타임 환경을 제공 합니다.  

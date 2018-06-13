@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541835"
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에는 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 설명서에서 일반적으로 기본 요소 클래스라고 하는 네 가지 클래스에서 파생된 클래스가 많습니다. 이러한 클래스는 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다. <xref:System.Windows.DependencyObject> 클래스도 관련 되는지, 둘 다의 공통 기본 클래스 이므로 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>  

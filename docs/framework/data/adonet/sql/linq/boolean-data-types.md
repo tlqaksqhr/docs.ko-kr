@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361574"
 ---
 # <a name="boolean-data-types"></a>Boolean 데이터 형식
 부울 연산자는 단락(short-circuiting) 동작이 변환되지 않는 것을 제외하고 CLR(공용 언어 런타임)에서 예상대로 동작합니다. 예를 들어 Visual Basic `AndAlso` 연산자는 `And` 연산자와 같이 동작합니다. C# `&&` 연산자는 `&` 연산자와 같이 동작합니다.  

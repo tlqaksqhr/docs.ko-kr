@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365331"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 지원 된 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri로 주소를 지정할 수 있는 리소스가 포함 된 피드로 데이터를 노출할 수 있습니다. 이러한 리소스의 엔터티-관계 규칙에 따라 표시 되는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)합니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  

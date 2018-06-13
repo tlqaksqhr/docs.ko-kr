@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5042f59b3716d077cc441585004e075b765c0cfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407857"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3 인터페이스
 컨테이너 어셈블리 및 해당 포함 된에 대 한 지원을 제공 하기 위한 ICorDebugAssembly 인터페이스를 논리적으로 확장 합니다.  

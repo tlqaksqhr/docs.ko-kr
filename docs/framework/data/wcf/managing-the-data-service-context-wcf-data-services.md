@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365230"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>데이터 서비스 컨텍스트 관리(WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> 클래스는 지정한 데이터 서비스에 대해 지원되는 작업을 캡슐화합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 서비스는 상태 비저장 특성을 갖지만 컨텍스트는 그렇지 않습니다. 따라서 사용할 수는 <xref:System.Data.Services.Client.DataServiceContext> 변경 관리 등의 기능을 지원 하기 위해 데이터 서비스와의 상호 작용 간에 클라이언트에서 상태를 유지 관리 하는 클래스입니다. 또한 이 클래스는 ID를 관리하고 변경 내용을 추적합니다.  

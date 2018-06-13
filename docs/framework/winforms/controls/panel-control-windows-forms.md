@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536724"
 ---
 # <a name="panel-control-windows-forms"></a>Panel 컨트롤(Windows Forms)
 Windows Forms `Panel` 컨트롤은 다른 컨트롤에 대 한 식별 가능한 그룹화를 제공 하는 데 사용 됩니다. 일반적으로 폼 함수로 세분화 하 패널을 사용 합니다. `Panel` 제어는 비슷합니다는 <xref:System.Windows.Forms.GroupBox> 제어; 그러나만 `Panel` 컨트롤에서 스크롤 막대를 가질 수 있습니다 및만 해당는 <xref:System.Windows.Forms.GroupBox> 컨트롤 캡션을 표시 합니다.  

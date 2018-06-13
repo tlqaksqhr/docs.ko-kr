@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365217"
 ---
 # <a name="external-mapping"></a>외부 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 *외부 매핑*을 사용 하 여 별도 XML 파일을 데이터베이스의 데이터 모델 및 개체 모델 사이의 매핑을 지정 하는 프로세스입니다. 외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.  

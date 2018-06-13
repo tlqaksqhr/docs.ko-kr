@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488984"
 ---
 # <a name="data-contract-serializer"></a>데이터 계약 Serializer
 사용 하 여 Windows Communication Foundation (WCF) 인프라는 <xref:System.Runtime.Serialization.DataContractSerializer> 기본 serializer로 클래스입니다. 이 단원의 항목에서는 클래스를 독립 실행형 serializer로 사용하기 위한 자세한 정보를 제공합니다.  

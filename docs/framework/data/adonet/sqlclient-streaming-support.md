@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364738"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
 SQL Server 및 응용 프로그램 간의 스트리밍 지원 (의 새로운 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)])는 서버 (문서, 이미지 및 미디어 파일)에서 구조화 되지 않은 데이터를 지원 합니다. SQL Server 데이터베이스를 사용 하는 이진 대형 개체 (Blob)을 저장할 수 있지만 BLOB를 검색 하는 다량의 메모리를 사용할 수 있습니다.  

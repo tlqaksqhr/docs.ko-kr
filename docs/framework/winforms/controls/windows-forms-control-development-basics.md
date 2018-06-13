@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541143"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms 컨트롤 개발 기본 사항
 Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 되는 클래스는 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 다음 목록에서는 Windows Forms 컨트롤 개발 하기 위한 일반적인 시나리오를 설명 합니다.  

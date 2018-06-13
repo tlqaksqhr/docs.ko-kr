@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536359"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Windows Forms 컨트롤의 다중 스레딩
 대부분의 응용 프로그램을 만들면 사용자 인터페이스 (UI) 응답성 다른 스레드에서 시간이 많이 걸리는 작업을 수행 하 여 됩니다. 여러 가지 도구에 사용할 수 있는 다중 스레딩을 포함 하 여 Windows Forms 컨트롤은 <xref:System.Threading> 네임 스페이스는 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> 메서드를 및 `BackgroundWorker` 구성 요소입니다.  
