@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495004"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가
 Windows Communication Foundation (WCF)를 사용 하면 서비스를 이용 하는 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 사용 가능한 ASP.NET AJAX 사용 끝점을 만들 수 있습니다. 이와 같은 끝점을 만들려면 다른 모든 Windows Communication Foundation (WCF) 끝점 에서처럼 구성 파일을 사용 하거나 구성 요소가 필요 하지 않은 메서드를 사용 합니다. 이 항목에서는 구성 방법을 보여 줍니다.  

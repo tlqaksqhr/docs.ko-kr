@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604798"
 ---
 # <a name="xor-operator-visual-basic"></a>배타적 or 연산자(Visual Basic)
 에 두 논리 제외를 수행 `Boolean` 식 또는 두 숫자 식에 비트 제외 합니다.  

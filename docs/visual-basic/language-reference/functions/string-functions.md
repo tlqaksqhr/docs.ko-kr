@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604148"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
 다음 표에서 Visual Basic에서는 검색 하 고 문자열을 조작 하는 함수를 나열 합니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603849"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 연산자(Visual Basic)
 반환 된 <xref:System.Type> 지정된 된 형식에 대 한 개체입니다. <xref:System.Type> 개체의 속성, 메서드 및 이벤트와 같은 형식에 대 한 정보를 제공 합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602790"
 ---
 # <a name="statements-visual-basic"></a>문(Visual Basic)
 이 단원의 항목에는 Visual Basic 선언 및 실행 가능 문과 많은 문에 적용되는 중요한 목록의 테이블이 포함되어 있습니다.  

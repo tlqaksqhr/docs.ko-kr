@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07d6dcc1873e24f84f97c877e8198c27eceef0c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420793"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule 인터페이스
 로드된 모듈에 대한 정보를 제공합니다.  

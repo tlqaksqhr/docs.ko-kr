@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518504"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>활동 정의 범위 지정 및 표시 유형
 활동 정의의 범위 지정 및 표시 유형은 개체의 범위 지정 및 표시 유형과 마찬가지로 다른 개체나 활동이 활동의 멤버에 액세스하는 기능입니다. 활동 정의는 다음 구현을 통해 수행됩니다.  

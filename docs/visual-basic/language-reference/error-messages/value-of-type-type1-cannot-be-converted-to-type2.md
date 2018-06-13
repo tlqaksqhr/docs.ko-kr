@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602764"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>형식의 값 &#39;type1&#39; 변환할 수 없습니다 &#39;유형 2&#39;
 'Type1' 형식의 값을 'type2'로 변환할 수 없습니다. 'Value' 속성을 사용 하 여 첫 번째 요소의 문자열 값을 가져올 '\<parentElement >'입니다.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604538"
 ---
 # <a name="math-functions-visual-basic"></a>수학 함수(Visual Basic)
 메서드는 <xref:System.Math?displayProperty=nameWithType> 클래스 삼각, 로그 및 기타 일반 수학 함수를 제공 합니다.  

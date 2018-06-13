@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639417"
 ---
 # <a name="set-not-supported-read-only-property"></a>Set은 지원되지 않습니다(읽기 전용 속성).
 읽기 전용 속성을 설정하거나 변경하려고 했습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639235"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>이 시스템은 중국어 간체 로캘을 지원하지 않습니다.
 `VbStrConv.SimplifiedChinese` 열거형 멤버를 사용하려고 하지만 시스템에서 중국어 간체 로캘을 지원하지 않습니다.  

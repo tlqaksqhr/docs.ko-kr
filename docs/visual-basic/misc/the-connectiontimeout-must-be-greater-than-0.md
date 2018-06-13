@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640545"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout은 0보다 커야 합니다.
 업로드 및 다운로드 된 파일 하는 경우는 [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)를 지정 해야 합니다는 `connectionTimeout` 보다 큰 `0`합니다.  

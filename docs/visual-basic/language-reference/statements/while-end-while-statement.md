@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604733"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 문(Visual Basic)
 지정한 조건이으로 일련의 문 실행 `True`합니다.  

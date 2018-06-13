@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517883"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>사용자 지정 형식의 Switch 활동 사용 방법
 이 샘플에서는 <xref:System.Activities.Statements.Switch%601> 활동을 사용하도록 설정하여 런타임에 사용자 정의 복합 형식을 계산하는 방법에 대해 설명합니다. 가장 일반적인 절차적 프로그래밍 언어는 [전환](http://go.microsoft.com/fwlink/?LinkId=180521) 문은 변수의 조건부 계산에 따라 실행 논리를 선택 합니다. 일반적으로 `switch` 문은 정적으로 계산할 수 있는 식에 대해 작동합니다. 예를 들어 C#에서는 <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String> 등의 기본 형식과 열거형 형식만 지원됩니다.  

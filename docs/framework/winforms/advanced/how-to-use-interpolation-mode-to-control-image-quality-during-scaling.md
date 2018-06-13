@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522361"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리
 보간 모드는 <xref:System.Drawing.Graphics> 방식에 영향을 미칩니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이미지 크기를 조절 (까지 확장 및 축소) 합니다. <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형 다음 목록에 표시 되는 다음과 같은 몇 가지 보간 모드를 정의 합니다.  

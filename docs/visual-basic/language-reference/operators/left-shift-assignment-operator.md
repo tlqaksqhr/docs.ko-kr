@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600729"
 ---
 # <a name="ltlt-operator-visual-basic"></a>&lt;&lt;= 연산자 (Visual Basic)
 변수 또는 속성의 값에 산술 왼쪽된 시프트를 수행 하 고 변수 또는 속성에 다시 결과 할당 합니다.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604291"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 하위 항목 축 속성(Visual Basic)
 다음의 하위 항목에 대 한 액세스를 제공:는 <xref:System.Xml.Linq.XElement> 개체는 <xref:System.Xml.Linq.XDocument> 개체, 컬렉션을 <xref:System.Xml.Linq.XElement> 개체 또는 컬렉션을 <xref:System.Xml.Linq.XDocument> 개체입니다.  

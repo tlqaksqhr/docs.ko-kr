@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601952"
 ---
 # <a name="is-operator-visual-basic"></a>Is 연산자(Visual Basic)
 두 개체 참조 변수를 비교합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638569"
 ---
 # <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a>필드 &#39; &lt;fieldname&gt; &#39; 형식의 &#39; &lt;typename&gt; &#39; 은 &#39;읽기 전용&#39;
 `ReadOnly`로 선언된 필드에 쓰려고 했습니다.  

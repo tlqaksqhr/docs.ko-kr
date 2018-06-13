@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603524"
 ---
 # <a name="return-statement-visual-basic"></a>Return 문(Visual Basic)
 제어를 호출한 코드로 반환는 `Function`, `Sub`, `Get`, `Set`, 또는 `Operator` 프로시저입니다.  

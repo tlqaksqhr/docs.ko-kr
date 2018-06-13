@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522046"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사
 간단한 그래픽, 애니메이션을 적용할 때 발생할 수 깜빡임을 또는 부적합 한 다른 시각 효과가 있습니다. 이 문제는 한 가지 방법은 그래픽에는 "bitblt" 프로세스를 사용 하는 것입니다. Bitblt는는 "비트 블록 전송을"는 색 데이터 픽셀의 원점 사각형에서 대상 사각형을 픽셀입니다.  

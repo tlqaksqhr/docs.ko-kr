@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601860"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-1-to-255"></a>인수 &#39; &lt;argumentname&gt; &#39; 범위는 1에서 255 사이 여야 합니다.
 0에서 255 사이의 범위를 벗어나므로 인수가 올바르지 않습니다.  

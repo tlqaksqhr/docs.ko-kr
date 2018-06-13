@@ -86,6 +86,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605084"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
 이러한 함수는 인라인으로 컴파일됩니다 변환 코드는 식을 계산 하는 코드의 일부입니다. 경우에 따라 성능이 향상 되는 변환을 수행 하는 프로시저에 대 한 호출이 있습니다. 각 함수는 식을 특정 데이터 형식으로 강제 변환합니다.  

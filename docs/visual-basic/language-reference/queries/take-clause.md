@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604031"
 ---
 # <a name="take-clause-visual-basic"></a>Take 절(Visual Basic)
 컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  

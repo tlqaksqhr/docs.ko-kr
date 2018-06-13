@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602842"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit(Visual Basic)
 클래스를 기본 클래스로 사용할 수 있는지와에서 직접 개체를 만들 수 없음을 지정 합니다.  

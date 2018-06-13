@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa9f039cb7eaa7ccd22bad36098c00a697d818d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443975"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager 인터페이스
 공용 언어 런타임 (CLR) Win32 동기화 기능을 사용 하지 않고 호스트를 호출 하 여 동기화 기본 형식을 만드는 데 사용할 수 있는 메서드를 제공 합니다.  

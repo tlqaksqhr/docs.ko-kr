@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604967"
 ---
 # <a name="using-statement-visual-basic"></a>Using 문(Visual Basic)
 시작을 선언는 `Using` 차단 하 고 블록이 제어 되는 시스템 리소스를 선택적으로 가져옵니다.  
