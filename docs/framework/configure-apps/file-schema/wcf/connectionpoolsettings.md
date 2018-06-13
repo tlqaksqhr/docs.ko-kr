@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748154"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="c3f8a-102">&lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="c3f8a-102">&lt;connectionPoolSettings&gt;</span></span>
 <span data-ttu-id="c3f8a-103">명명된 파이프 바인딩의 추가 연결 풀 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c3f8a-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  

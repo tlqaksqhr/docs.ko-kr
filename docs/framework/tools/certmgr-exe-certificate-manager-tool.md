@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409921"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a><span data-ttu-id="9bc80-102">Certmgr.exe(인증서 관리자 도구)</span><span class="sxs-lookup"><span data-stu-id="9bc80-102">Certmgr.exe (Certificate Manager Tool)</span></span>
 <span data-ttu-id="9bc80-103">인증서 관리자 도구(Certmgr.exe)를 사용하면 인증서, CTL(인증서 신뢰 목록) 및 CRL(인증서 해지 목록)을 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9bc80-103">The Certificate Manager tool (Certmgr.exe) manages certificates, certificate trust lists (CTLs), and certificate revocation lists (CRLs).</span></span>  
