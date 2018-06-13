@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579810"
 ---
 # <a name="standard-date-and-time-format-strings"></a><span data-ttu-id="6c8eb-102">표준 날짜 및 시간 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="6c8eb-102">Standard Date and Time Format Strings</span></span>
 <span data-ttu-id="6c8eb-103">표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6c8eb-103">A standard date and time format string uses a single format specifier to define the text representation of a date and time value.</span></span> <span data-ttu-id="6c8eb-104">공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6c8eb-104">Any date and time format string that contains more than one character, including white space, is interpreted as a custom date and time format string; for more information, see [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).</span></span> <span data-ttu-id="6c8eb-105">표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c8eb-105">A standard or custom format string can be used in two ways:</span></span>  

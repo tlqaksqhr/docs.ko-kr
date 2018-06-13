@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756321"
 ---
 # <a name="ltargumentgt"></a><span data-ttu-id="bc37f-102">&lt;argument&gt;</span><span class="sxs-lookup"><span data-stu-id="bc37f-102">&lt;argument&gt;</span></span>
 <span data-ttu-id="bc37f-103">활동 상태 쿼리와 연결된 인수를 나타내는 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="bc37f-103">A configuration element that represents an argument associated with an activity state query.</span></span>  

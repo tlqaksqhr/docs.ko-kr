@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317985"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="26999-102">방법: 파일이 어셈블리인지 확인(C#)</span><span class="sxs-lookup"><span data-stu-id="26999-102">How to: Determine If a File Is an Assembly (C#)</span></span>
 <span data-ttu-id="26999-103">파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="26999-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="26999-104">어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](../../../../../docs/framework/app-domains/assembly-manifest.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="26999-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  

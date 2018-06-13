@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581682"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a><span data-ttu-id="fb7d6-102">방법: 간단한 Parallel.ForEach 루프 작성</span><span class="sxs-lookup"><span data-stu-id="fb7d6-102">How to: Write a Simple Parallel.ForEach Loop</span></span>
 <span data-ttu-id="fb7d6-103">이 예제는 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 루프를 사용하여 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 데이터 소스에 대해 데이터 병렬 처리를 사용하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="fb7d6-103">This example shows how to use a <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> loop to enable data parallelism over any <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> data source.</span></span>  

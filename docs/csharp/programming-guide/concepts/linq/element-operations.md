@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317449"
 ---
 # <a name="element-operations-c"></a><span data-ttu-id="129b7-102">요소 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="129b7-102">Element Operations (C#)</span></span>
 <span data-ttu-id="129b7-103">요소 작업은 시퀀스에서 특정 단일 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="129b7-103">Element operations return a single, specific element from a sequence.</span></span>  
