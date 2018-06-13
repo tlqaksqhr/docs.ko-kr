@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396300"
 ---
 # <a name="requesting-data"></a>데이터 요청
 현재 인터넷의 분산된 운영 환경에서 실행되는 응용 프로그램을 개발하려면 모든 형식의 리소스에서 데이터를 검색하기 위한 효율적이고 사용하기 쉬운 메서드가 필요합니다. 플러그형 프로토콜을 사용하면 단일 인터페이스를 사용하여 여러 인터넷 프로토콜에서 데이터를 검색하는 응용 프로그램을 개발할 수 있습니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393844"
 ---
 # <a name="pnrp-clouds"></a>PNRP 클라우드
 PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 노드 집합을 나타냅니다. “클라우드”라는 용어는 “피어 메시” 및 “피어 투 피어 그래프”와 동의어입니다.  

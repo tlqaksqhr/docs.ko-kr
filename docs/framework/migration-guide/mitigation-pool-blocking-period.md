@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389956"
 ---
 # <a name="mitigation-pool-blocking-period"></a>완화: 풀 차단 기간
 Azure SQL 데이터베이스 연결에 대한 연결 풀 차단 기간이 제거되었습니다.  

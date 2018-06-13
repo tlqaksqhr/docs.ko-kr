@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565015"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 태그 확장명
 태그 확장을 통해 XAML에서 개체의 배열에 대 한 일반 지원을 제공합니다. 이에 해당 하는 `x:ArrayExtension` [MS XAML]에서 XAML 형식입니다.  

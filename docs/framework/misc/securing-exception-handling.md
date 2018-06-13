@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393044"
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
 Visual c + + 및 Visual Basic에서 스택 추가 필터 식을 전에 실행할 **마지막** 문. **catch** 블록에 연결 된 후 실행 되는 해당 필터는 **마지막** 문. 자세한 내용은 참조 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다. 이 섹션에서는이 순서에 따른 보안 위험을 검사 합니다. 다음 의사 코드 예제에서는 필터 문 순서를 보여 줍니다 및 **마지막** 문을 실행 합니다.  

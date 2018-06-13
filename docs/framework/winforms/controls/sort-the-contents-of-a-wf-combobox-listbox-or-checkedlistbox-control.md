@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535648"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬
 Windows Forms 컨트롤은 데이터 바인딩 때 정렬 하지 않습니다. 정렬 된 데이터를 표시 하려면 정렬을 지 원하는 데이터 원본을 사용 하 여 한 다음 결과 정렬할 데이터 원본. 정렬을 지 원하는 데이터 원본 데이터 뷰, 데이터 뷰, 관리자 및 정렬 된 배열입니다.  

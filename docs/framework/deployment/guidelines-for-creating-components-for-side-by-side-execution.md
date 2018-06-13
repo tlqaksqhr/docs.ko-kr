@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391035"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Side-by-Side 실행용 구성 요소를 만들기 위한 지침
 다음 일반 지침에 따라 Side-by-Side 실행용으로 디자인된 관리되는 응용 프로그램 또는 구성 요소를 만듭니다.  

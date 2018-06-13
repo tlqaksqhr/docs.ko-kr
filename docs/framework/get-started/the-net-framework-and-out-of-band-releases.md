@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390288"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 및 번외 릴리스
 .NET Framework는 기존의 데스크톱 및 웹 응용 프로그램뿐만 아니라 Windows Phone 및 Windows 스토어 앱과 같은 서로 다른 플랫폼을 수용하고 코드 재사용을 최대화하는 방향으로 발전하고 있습니다. 정기적인 .NET Framework 릴리스 이외에 새로운 기능인 OOB(Out Of Band)도 릴리스하여 플랫폼 간 개발을 향상시키거나 새 기능을 도입합니다. 이 항목에서는 .NET Framework 및 해당 OOB 릴리스의 향후 방향에 대해 설명합니다.  

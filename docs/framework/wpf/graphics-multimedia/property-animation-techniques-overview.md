@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566745"
 ---
 # <a name="property-animation-techniques-overview"></a>속성 애니메이션 기술 개요
 이 항목에서는 storyboard, 로컬 애니메이션, 클록 및 프레임당 애니메이션 등, 속성에 애니메이션 효과를 주는 다양한 접근 방법을 설명합니다.  

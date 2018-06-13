@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542339"
 ---
 # <a name="flow-content"></a>유동 콘텐츠
 호스팅에 대 한 적합 한 유동 콘텐츠를 만들기 위한 구성 요소를 제공 하는 유동 콘텐츠 요소는 <xref:System.Windows.Documents.FlowDocument>합니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393590"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>예: 데이터를 바인딩하는 경우 예외 처리
 > [!NOTE]

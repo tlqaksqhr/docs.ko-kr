@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756035"
 ---
 # <a name="creating-autoincrement-columns"></a>AutoIncrement 열 만들기
 열에 고유 값을 지정하려면 테이블에 새 행을 추가할 때 열 값이 자동으로 증가하도록 설정합니다. 자동 증분 만들려면 <xref:System.Data.DataColumn>설정는 <xref:System.Data.DataColumn.AutoIncrement%2A> 열의 속성 **true**합니다. <xref:System.Data.DataColumn> 다음에 정의 된 값으로 시작는 <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 속성, 각 행의 값을 추가 하 고는 **AutoIncrement** 열에 정의 된 값 만큼 증가 <xref:System.Data.DataColumn.AutoIncrementStep%2A> 열의 속성입니다.  

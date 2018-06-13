@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535430"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 컨트롤
 `ToolStripPanel` 컨트롤은 <xref:System.Windows.Forms.ToolStripContainer>의 4개 패널 및 중앙 패널이 필요하지 않은 경우 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 도킹 및 정렬할 때 도구 영역 내에서 가로 또는 세로 공간을 공유할 수 있게 해줍니다.  

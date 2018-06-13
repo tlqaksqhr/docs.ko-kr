@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279986"
 ---
 # <a name="select-clause-c-reference"></a>select 절(C# 참조)
 쿼리 식에서 `select` 절은 쿼리를 실행할 때 생성되는 값의 형식을 지정합니다. 결과는 모든 이전 절의 평가와 `select` 절 자체의 모든 계산을 기반으로 합니다. 쿼리 식은 `select` 절이나 [group](../../../csharp/language-reference/keywords/group-clause.md) 절로 끝나야 합니다.  

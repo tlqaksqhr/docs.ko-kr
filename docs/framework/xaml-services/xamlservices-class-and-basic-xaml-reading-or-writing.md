@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565914"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 클래스 및 기본 XAML 읽기 또는 쓰기
 <xref:System.Xaml.XamlServices> 는 .NET Framework XAML 서비스에서 제공되는 클래스로, 이 클래스를 사용하여 XAML 노드 스트림에 대한 특정 액세스가 필요 없는 XAML 시나리오 또는 해당 노드에서 가져온 XAML 형식 시스템의 정보를 처리할 수 있습니다. <xref:System.Xaml.XamlServices> API는 XAML 로드 경로를 지원하는 `Load` 또는 `Parse` , XAML 저장 경로를 지원하는 `Save` , 로드 경로와 저장 경로를 연결하는 기술을 제공하는 `Transform` 으로 요약할 수 있습니다. `Transform` 은 XAML 스키마를 다른 스키마로 변경하는 데 사용할 수 있습니다. 이 항목에서는 이러한 각 API 분류를 요약하고 특정 메서드 오버로드 간의 차이점을 설명합니다.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393908"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>방법: 전역 프록시 선택 재정의
 이 예제에서는 전역 프록시 선택을 포트 80의 `alternateproxy`라는 프록시 서버로 재정의하는 **WebRequest**를 www.contoso.com에 보냅니다.  

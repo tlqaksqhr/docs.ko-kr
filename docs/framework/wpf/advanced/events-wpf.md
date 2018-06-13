@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542589"
 ---
 # <a name="events-wpf"></a>이벤트(WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.  

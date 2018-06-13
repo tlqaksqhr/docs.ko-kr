@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566235"
 ---
 # <a name="opacity-masks-overview"></a>불투명 마스크 개요
 불투명 마스크를 사용하여 요소 또는 시각적 개체의 부분을 투명하게 또는 부분적으로 투명하게 만들 수 있습니다. 적용 불투명 마스크를 만들려면는 <xref:System.Windows.Media.Brush> 에 <xref:System.Windows.UIElement.OpacityMask%2A> 요소의 속성 또는 <xref:System.Windows.Media.Visual>합니다.  브러시가 요소 또는 시각적 개체에 매핑되고, 각 브러시 픽셀의 불투명도 값을 사용하여 요소 또는 시각적 개체의 각 해당 픽셀에 대한 결과 불투명도가 결정됩니다.  

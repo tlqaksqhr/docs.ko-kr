@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392020"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>성능 카운터 및 In-Process Side-By-Side 응용 프로그램
 성능 모니터(Perfmon.exe)를 사용하면 런타임별로 성능 카운터를 구분할 수 있습니다. 이 항목에서는 이 기능을 사용하는 데 필요한 레지스트리 변경 사항에 대해 설명합니다.  

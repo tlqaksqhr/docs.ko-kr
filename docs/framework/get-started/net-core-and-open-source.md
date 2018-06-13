@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389254"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.

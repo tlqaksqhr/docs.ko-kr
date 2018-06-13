@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757127"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand 및 DbException
 <xref:System.Data.Common.DbProviderFactory>와 <xref:System.Data.Common.DbConnection>을 만든 다음 명령과 데이터 판독기를 사용하여 데이터 소스에서 데이터를 검색할 수 있습니다.  

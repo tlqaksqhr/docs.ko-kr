@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393057"
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 응용 프로그램 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  

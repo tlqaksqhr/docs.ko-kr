@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391048"
 ---
 # <a name="making-an-image-easier-to-debug"></a>쉽게 디버깅할 수 있도록 이미지 만들기
 비관리 코드를 컴파일할 때 IDE 스위치 또는 명령줄 옵션을 설정하여 디버깅할 실행 가능 이미지를 구성할 수 있습니다. 예를 들어 Visual C++에서 /**Zi** 명령줄 옵션을 사용하여 디버그 기호 파일(확장 확장자는 .pdb)을 생성하도록 요청할 수 있습니다. 마찬가지로 /**Od** 명령줄 옵션을 사용하면 최적화를 사용하지 않게 설정하도록 컴파일러에 지시합니다. 결과적으로 코드가 더 느리게 실행되지만, 디버그하기가 쉬워지므로 이 옵션은 필수여야 합니다.  

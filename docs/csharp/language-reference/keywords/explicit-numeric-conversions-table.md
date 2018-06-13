@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218386"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>명시적 숫자 변환 표(C# 참조)
 명시적 숫자 변환은 캐스트 식을 사용하여 숫자 형식을 암시적 변환이 없는 다른 숫자 형식으로 변환하는 데 사용됩니다. 다음 표에는 이러한 변환이 나와 있습니다.  

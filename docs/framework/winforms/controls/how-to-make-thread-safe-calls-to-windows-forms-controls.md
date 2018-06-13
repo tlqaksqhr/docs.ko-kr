@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541861"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출
 Windows Forms 응용 프로그램의 성능을 개선하기 위해 다중 스레딩을 사용하는 경우에는 스레드로부터 안전한 방식으로 컨트롤을 호출할 수 있습니다.  
