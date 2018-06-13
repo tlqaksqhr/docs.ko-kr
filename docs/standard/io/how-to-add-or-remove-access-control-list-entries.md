@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573425"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a><span data-ttu-id="61c8f-102">방법: Access Control 목록 항목 추가 또는 제거</span><span class="sxs-lookup"><span data-stu-id="61c8f-102">How to: Add or Remove Access Control List Entries</span></span>
 <span data-ttu-id="61c8f-103">파일에서 ACL(Access Control 목록) 항목을 추가 또는 제거하려면 파일 또는 디렉터리에서 <xref:System.Security.AccessControl.FileSecurity> 또는 <xref:System.Security.AccessControl.DirectorySecurity> 개체를 가져오고 수정한 다음 파일 또는 디렉터리에 다시 적용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c8f-103">To add or remove Access Control List (ACL) entries to or from a file, the <xref:System.Security.AccessControl.FileSecurity> or <xref:System.Security.AccessControl.DirectorySecurity> object must be obtained from the file or directory, modified, and then applied back to the file or directory.</span></span>  

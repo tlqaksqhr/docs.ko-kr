@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571076"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a><span data-ttu-id="a1f28-102">방법: Web Forms 응용 프로그램에서 이벤트 사용</span><span class="sxs-lookup"><span data-stu-id="a1f28-102">How to: Consume Events in a Web Forms Application</span></span>
 <span data-ttu-id="a1f28-103">ASP.NET Web Forms 응용 프로그램의 주된 활용 방식은 웹 페이지에 컨트롤을 채운 다음 사용자가 클릭하는 컨트롤에 따라 특정 작업을 수행하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a1f28-103">A common scenario in ASP.NET Web Forms applications is to populate a webpage with controls, and then perform a specific action based on which control the user clicks.</span></span> <span data-ttu-id="a1f28-104">예를 들어, <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> 컨트롤은 사용자가 웹 페이지에서 해당 컨트롤을 클릭하면 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="a1f28-104">For example, a <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> control raises an event when the user clicks it in the webpage.</span></span> <span data-ttu-id="a1f28-105">이벤트를 처리하면 응용 프로그램이 해당 단추 클릭에 대해 적절한 응용 프로그램 논리를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1f28-105">By handling the event, your application can perform the appropriate application logic for that button click.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571253"
 ---
 # <a name="commonly-used-collection-types"></a><span data-ttu-id="06ff9-102">일반적으로 사용되는 컬렉션 형식</span><span class="sxs-lookup"><span data-stu-id="06ff9-102">Commonly Used Collection Types</span></span>
 <span data-ttu-id="06ff9-103">컬렉션 형식은 해시 테이블, 큐, 스택, 모음, 사전 및 목록과 같은 데이터 컬렉션의 일반적인 변형입니다.</span><span class="sxs-lookup"><span data-stu-id="06ff9-103">Collection types are the common variations of data collections, such as hash tables, queues, stacks, bags, dictionaries, and lists.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577217"
 ---
 # <a name="editing-xml-schemas"></a><span data-ttu-id="ce04e-102">XML 스키마 편집</span><span class="sxs-lookup"><span data-stu-id="ce04e-102">Editing XML Schemas</span></span>
 <span data-ttu-id="ce04e-103">XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="ce04e-103">Editing an XML schema is one of the most important features of the Schema Object Model (SOM).</span></span> <span data-ttu-id="ce04e-104">SOM의 모든 pre-schema-compilation 속성을 사용하여 XML 스키마에서 기존 값을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce04e-104">All of the pre-schema-compilation properties of the SOM can be used to change the existing values in an XML schema.</span></span> <span data-ttu-id="ce04e-105">그런 다음 XML 스키마를 다시 컴파일하여 변경 내용을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce04e-105">The XML schema can then be recompiled to reflect the changes.</span></span>  

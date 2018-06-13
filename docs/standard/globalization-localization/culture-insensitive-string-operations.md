@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574052"
 ---
 # <a name="culture-insensitive-string-operations"></a><span data-ttu-id="0b904-102">문화권을 구분하지 않는 문자열 작업</span><span class="sxs-lookup"><span data-stu-id="0b904-102">Culture-Insensitive String Operations</span></span>
 <span data-ttu-id="0b904-103">문화권 구분 문자열 작업은 문화권별로 사용자에게 결과를 표시하도록 디자인된 응용 프로그램을 만드는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b904-103">Culture-sensitive string operations can be an advantage if you are creating applications designed to display results to users on a per-culture basis.</span></span> <span data-ttu-id="0b904-104">기본적으로 문화권 구분 메서드는 사용할 문화권을 현재 스레드의 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 속성에서 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0b904-104">By default, culture-sensitive methods obtain the culture to use from the <xref:System.Globalization.CultureInfo.CurrentCulture%2A> property for the current thread.</span></span>  
