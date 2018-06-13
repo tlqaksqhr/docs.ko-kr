@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547029"
 ---
 # <a name="how-to-implement-icommandsource"></a>방법: ICommandSource 구현
 구현 하 여 명령 소스를 만드는 방법을 보여 주는이 예제 <xref:System.Windows.Input.ICommandSource>합니다.  명령 소스는 명령을 호출 하는 방법을 알고 있는 개체입니다.  <xref:System.Windows.Input.ICommandSource> 세 멤버를 노출 하는 인터페이스: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, 및 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>합니다.  <xref:System.Windows.Input.ICommandSource.Command%2A> 호출 되는 명령이입니다. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 명령 소스 명령을 처리 하는 메서드에 전달 되는 사용자 정의 데이터 형식입니다. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 명령이 실행 되는 개체입니다.  

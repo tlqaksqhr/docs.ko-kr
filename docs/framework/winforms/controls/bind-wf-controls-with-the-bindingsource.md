@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527565"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩
 컨트롤은 런타임 시 사용자가 변경 하 고 수 응용 프로그램과 관련 된 데이터에 저장 되도록 폼에 컨트롤을 추가 하 고 응용 프로그램에 대 한 사용자 인터페이스를 확인 한, 후 데이터 원본에 바인딩할 수 있습니다.  
