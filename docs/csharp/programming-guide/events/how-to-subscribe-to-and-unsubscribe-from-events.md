@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336205"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a><span data-ttu-id="b1d5e-102">방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="b1d5e-102">How to: Subscribe to and Unsubscribe from Events (C# Programming Guide)</span></span>
 <span data-ttu-id="b1d5e-103">해당 이벤트가 발생할 때 호출되는 사용자 지정 코드를 작성하려는 경우 다른 클래스에 의해 게시되는 이벤트를 구독합니다.</span><span class="sxs-lookup"><span data-stu-id="b1d5e-103">You subscribe to an event that is published by another class when you want to write custom code that is called when that event is raised.</span></span> <span data-ttu-id="b1d5e-104">예를 들어 사용자가 단추를 클릭할 때 응용 프로그램에서 유용한 작업을 수행하도록 하려면 단추의 `click` 이벤트를 구독할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1d5e-104">For example, you might subscribe to a button's `click` event in order to make your application do something useful when the user clicks the button.</span></span>  

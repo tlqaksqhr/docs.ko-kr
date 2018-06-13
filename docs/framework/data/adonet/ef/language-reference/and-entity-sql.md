@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763789"
 ---
 # <a name="ampamp-and-entity-sql"></a><span data-ttu-id="8e480-102">&amp;&amp; (및) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8e480-102">&amp;&amp; (AND) (Entity SQL)</span></span>
 <span data-ttu-id="8e480-103">두 식이 `true` 이면 `true`를 반환하고, 그렇지 않으면 `false` 또는 `NULL`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8e480-103">Returns `true` if both expressions are `true`; otherwise, `false` or `NULL`.</span></span>  

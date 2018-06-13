@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213212"
 ---
 # <a name="c-compiler-errors"></a><span data-ttu-id="83e98-102">C# 컴파일러 오류</span><span class="sxs-lookup"><span data-stu-id="83e98-102">C# Compiler Errors</span></span>
 <span data-ttu-id="83e98-103">일부 C# 컴파일러 오류는 오류가 생성된 이유 및 경우에 따라 오류 수정 방법을 설명하는 항목이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83e98-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="83e98-104">특정 오류 메시지에 대해 도움말을 사용할 수 있는지 여부를 확인하려면 다음 단계 중 하나를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="83e98-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  

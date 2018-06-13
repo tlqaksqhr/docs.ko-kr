@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219042"
 ---
 # <a name="how-to-search-strings"></a><span data-ttu-id="e1cb8-102">방법: 문자열 검색</span><span class="sxs-lookup"><span data-stu-id="e1cb8-102">How to: search strings</span></span>
 

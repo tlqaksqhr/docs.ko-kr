@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336367"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a><span data-ttu-id="5f898-102">연결된 쿼리의 성능(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="5f898-102">Performance of Chained Queries (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="5f898-103">LINQ(및 LINQ to XML)의 가장 큰 이점 중 하나는 연결된 쿼리가 보다 크고 복잡한 하나의 쿼리처럼 잘 수행될 수 있다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="5f898-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  

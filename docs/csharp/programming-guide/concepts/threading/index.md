@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335837"
 ---
 # <a name="threading-c"></a><span data-ttu-id="a62f4-102">스레딩(C#)</span><span class="sxs-lookup"><span data-stu-id="a62f4-102">Threading (C#)</span></span>
 <span data-ttu-id="a62f4-103">스레딩을 사용하면 C# 프로그램에서 동시 처리를 수행할 수 있으므로 한 번에 여러 작업을 진행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a62f4-103">Threading enables your C# program to perform concurrent processing so that you can do more than one operation at a time.</span></span> <span data-ttu-id="a62f4-104">예를 들어 스레딩을 사용하여 사용자의 입력을 모니터링하고, 백그라운드 작업을 수행하고, 동시 입력 스트림을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a62f4-104">For example, you can use threading to monitor input from the user, perform background tasks, and handle simultaneous streams of input.</span></span>  

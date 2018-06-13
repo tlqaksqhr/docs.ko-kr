@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765882"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="7d497-102">식별자(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7d497-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="7d497-103">식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="7d497-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="7d497-104"> 두 종류의 식별자를 제공: 단순 식별자와 따옴표 붙은 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="7d497-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

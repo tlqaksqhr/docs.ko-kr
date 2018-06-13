@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338353"
 ---
 # <a name="serializing-xml-trees-c"></a><span data-ttu-id="16755-102">XML 트리 serialize(C#)</span><span class="sxs-lookup"><span data-stu-id="16755-102">Serializing XML Trees (C#)</span></span>
 <span data-ttu-id="16755-103">XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="16755-103">Serializing an XML tree means generating XML from the XML tree.</span></span> <span data-ttu-id="16755-104">파일, <xref:System.IO.TextWriter> 클래스의 구체적 구현 또는 <xref:System.Xml.XmlWriter>의 구체적 구현으로 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16755-104">You can serialize to a file, to a concrete implementation of the <xref:System.IO.TextWriter> class, or to a concrete implementation of an <xref:System.Xml.XmlWriter>.</span></span>  

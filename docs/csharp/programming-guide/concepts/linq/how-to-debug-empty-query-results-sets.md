@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329763"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a><span data-ttu-id="0801a-102">방법: 빈 쿼리 결과 집합 디버그(C#)</span><span class="sxs-lookup"><span data-stu-id="0801a-102">How to: Debug Empty Query Results Sets (C#)</span></span>
 <span data-ttu-id="0801a-103">XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="0801a-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
