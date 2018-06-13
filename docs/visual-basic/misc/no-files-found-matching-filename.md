@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634932"
 ---
 # <a name="no-files-found-matching-39ltfilenamegt39"></a>일치 하는 파일이 &#39; &lt;파일 이름&gt;&#39;
 파일 이름이 잘못되었거나 파일이 존재하지 않습니다.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a1588a37891d6a73c49cb1b9ccbc81d9dcdb7e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420419"
 ---
 # <a name="icordebugprocess2-interface1"></a>ICorDebugProcess2 Interface1
 관리 코드를 실행 하는 프로세스를 나타내는 ICorDebugProcess 인터페이스를 논리적으로 확장 합니다.  

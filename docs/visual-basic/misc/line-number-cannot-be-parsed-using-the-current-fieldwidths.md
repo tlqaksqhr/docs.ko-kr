@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637920"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>줄 &lt;번호&gt; 현재 FieldWidths를 사용 하 여 구문 분석할 수 없습니다
 해당 필드의 너비가 지정된 것과 다르기 때문에 지정한 줄을 구문 분석할 수 없습니다.  

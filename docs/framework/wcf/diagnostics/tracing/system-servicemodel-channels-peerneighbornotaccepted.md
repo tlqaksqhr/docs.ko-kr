@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479923"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotaccepted"></a>System.ServiceModel.Channels.PeerNeighborNotAccepted
 피어 환경이 허용되지 않았습니다.  

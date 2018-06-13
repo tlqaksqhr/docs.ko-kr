@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494093"
 ---
 # <a name="client-architecture"></a>클라이언트 아키텍처
 응용 프로그램 Windows Communication Foundation (WCF) 클라이언트 개체를 사용 하 여 서비스 작업을 호출 합니다. 이 항목에서는 WCF 클라이언트 개체, WCF 클라이언트 채널 및 상호 관계 기본 채널 아키텍처를 설명 합니다. WCF 클라이언트 개체의 기본적인 개요를 참조 하십시오. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다. 채널 계층에 대 한 자세한 내용은 참조 [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469654"
 ---
 # <a name="core-communications-utilities"></a>핵심 통신: 유틸리티
 이 항목에서는 핵심 통신 유틸리티에서 생성된 모든 예외를 보여 줍니다.  

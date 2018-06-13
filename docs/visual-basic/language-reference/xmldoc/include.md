@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602738"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;포함&gt; (Visual Basic)
 형식 및 소스 코드에서 멤버를 설명 하는 다른 파일을 가리킵니다.  

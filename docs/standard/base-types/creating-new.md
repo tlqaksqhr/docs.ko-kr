@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567821"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET에서 새 문자열 만들기
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 간단한 할당을 사용하여 문자열을 만들 수 있으며, 클래스 생성자를 오버로드하여 여러 다양한 매개 변수를 사용한 문자열 생성도 지원합니다. 또한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 문자열, 문자열 배열 또는 개체를 결합하여 새 문자열 개체를 만드는 여러 메서드를 <xref:System.String?displayProperty=nameWithType> 클래스에서 제공합니다.  

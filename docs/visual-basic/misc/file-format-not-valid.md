@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637376"
 ---
 # <a name="file-format-not-valid"></a>파일 형식이 잘못되었습니다.
 파일을 구성 요소에 로드하려고 했지만 파일의 데이터 형식이 구성 요소와 호환되지 않거나, 구성 요소 데이터를 파일에 저장하려고 했지만 데이터 형식이 파일의 형식과 호환되지 않습니다.  

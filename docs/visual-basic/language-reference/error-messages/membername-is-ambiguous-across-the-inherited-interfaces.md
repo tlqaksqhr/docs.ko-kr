@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585303"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;membername&gt; &#39; 모호 합니다. 상속 된 인터페이스를 통해 &#39; &lt;interfacename1&gt; &#39; 및 &#39; &lt;interfacename2&gt;&#39;
 동일한 이름 가진 둘 이상의 멤버가 여러 인터페이스에서 상속 합니다.  

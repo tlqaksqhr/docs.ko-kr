@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548817"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32와 WPF 간에 메시지 루프 공유
 와 상호 운용성에 대 한 메시지 루프를 구현 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], 기존 사용 하 여 메시지에 대 한 루프 노출을 <xref:System.Windows.Threading.Dispatcher> 또는 별도 메시지 루프에 만들어는 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 쪽 상호 작용 코드의 합니다.  

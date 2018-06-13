@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636850"
 ---
 # <a name="can39t-perform-requested-operation-visual-basic"></a>수&#39;t 요청 된 작업 (Visual Basic)를 수행 합니다.
 프로젝트의 현재 상태를 무효화하기 때문에 작업을 수행할 수 없습니다. 예를 들어 실행되는 코드를 프로그래밍 방식으로 수정하려 했을 수 있습니다.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583369"
 ---
 # <a name="attributes-visual-basic"></a>특성(Visual Basic)
 Visual Basic 개체가 비관리 코드와 상호 작용을 허용 하는 몇 가지 특성이 및 모듈 멤버에 모듈 이름 없이 액세스할 수 있는 특성 하나를 제공 합니다. 다음 표에서 Visual Basic에서 사용 되는 특성을 나열 합니다.  

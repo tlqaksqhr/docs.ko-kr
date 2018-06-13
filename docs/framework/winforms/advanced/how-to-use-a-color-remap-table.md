@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522475"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>방법: 색 매핑 변경 테이블 사용
 다시 매핑하는 색 다시 매핑 테이블에 따라 이미지의 색을 변환의 프로세스입니다. 색 매핑 변경 테이블은 배열을 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 각 <xref:System.Drawing.Imaging.ColorMap> 배열의 개체에는 <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 속성 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성입니다.  

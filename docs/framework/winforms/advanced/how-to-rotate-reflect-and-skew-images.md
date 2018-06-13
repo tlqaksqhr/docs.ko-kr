@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523457"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 이미지 회전, 반사 및 기울이기
 있습니다 수 회전, 반사 및 기울이기 이미지 원본 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이 대 한 대상 지점을 지정 하 여 합니다. 세 개의 대상 지점 평행 사변형에 원본 사각형이 이미지 매핑되는 3x3 유사 변형을 결정 합니다.  

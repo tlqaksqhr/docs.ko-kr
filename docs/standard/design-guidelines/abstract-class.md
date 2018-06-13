@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570568"
 ---
 # <a name="abstract-class-design"></a>추상 클래스 디자인
 **X 하지 않으면** 추상 형식에 public 또는 protected 내부 생성자를 정의 합니다.  

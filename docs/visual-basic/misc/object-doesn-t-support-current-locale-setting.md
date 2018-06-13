@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636804"
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>개체 원본이&#39;t 지원 현재 로캘 설정 (Visual Basic)
 현재 프로젝트에 대한 로캘 설정을 지원하지 않는 개체에 액세스하려고 했습니다.  

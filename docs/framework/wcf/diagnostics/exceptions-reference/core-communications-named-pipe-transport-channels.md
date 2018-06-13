@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468334"
 ---
 # <a name="core-communications-named-pipe-transport-channels"></a>핵심 통신: 명명된 파이프 전송 채널
 이 항목에서는 명명된 파이프 전송 채널에 의해 생성된 모든 예외를 보여 줍니다.  

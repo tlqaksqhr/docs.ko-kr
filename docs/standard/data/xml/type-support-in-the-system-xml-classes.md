@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569696"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml 클래스의 형식 지원
 .NET Framework 버전 2.0에서는 형식 지원 기능을 포함하도록 핵심 XML 클래스가 향상되었습니다. <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> 및 <xref:System.Xml.XPath.XPathNavigator> 클래스에는 XML 스키마 형식과 CLR(공용 언어 런타임) 형식 간의 변환 기능을 비롯한 형식 지원 기능이 들어 있습니다.  

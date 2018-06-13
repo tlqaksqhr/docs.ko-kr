@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521617"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>방법: 사용자 지정 파선 그리기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 에 나열 된 몇 가지 대시 스타일을 제공 된 <xref:System.Drawing.Drawing2D.DashStyle> 열거형입니다. 해당 표준 대시 스타일 사용자 요구에 적합 하지 않는 경우 사용자 지정 대시 패턴을 만들 수 있습니다.  

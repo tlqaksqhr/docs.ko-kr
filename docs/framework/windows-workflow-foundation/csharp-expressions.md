@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520057"
 ---
 # <a name="c-expressions"></a>C# 식
 부터는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식에서 Windows WF (Workflow Foundation)를 지원 됩니다. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대상으로 만들어진 새 C# 워크플로 프로젝트에서는 C# 식을 사용하고, Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.  

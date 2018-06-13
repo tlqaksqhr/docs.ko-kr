@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493339"
 ---
 # <a name="peer-meshes"></a>피어 메시
 A *메시* 은 서로 통신할 수 있는 고유한 메시 ID로 식별 되 고 피어 노드의 명명된 된 컬렉션 (상호 연결 된 그래프) 각 노드는 다른 여러 노드에 연결됩니다. 잘 연결된 메시에서는 모든 두 노드 간에 경로가 있으며 메시의 가장 바깥쪽 가장자리에 있는 노드 사이에 홉 수가 상대적으로 적습니다. 또한 일부 노드 또는 연결이 끊어지는 경우에도 메시가 연결된 상태로 유지됩니다. 메시의 활성 노드는 다른 피어가 찾을 수 있도록 해당 메시 ID를 사용하여 끝점 정보를 게시합니다.  

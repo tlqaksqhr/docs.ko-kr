@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474222"
 ---
 # <a name="end-to-end-tracing"></a>종단 간 추적
 종단 간 (e2e) 추적을 사용 하면 개발자가 Windows Communication Foundation (WCF) 인프라의 용량 계획 및 성능 분석을 위한 추적을 제공 하기 위해 또는 코드 경로가 실패 한 이유를 조사 하는 코드의 실행 상태를 추적할 수 있습니다. Windows Communication Foundation (WCF) 오류의 원인을 진단 하기 위해 세 가지 상관 관계 메커니즘을 제공: 동작, 전송 및 전파 합니다.  

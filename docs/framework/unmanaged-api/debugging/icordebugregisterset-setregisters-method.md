@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6f577302c9b75f3f6cbe3f7ca8d551c9186c397
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420318"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters 메서드
 `SetRegisters` .NET Framework 버전 2.0에서에서 구현 되지 않았습니다. 이 메서드를 호출 하지 마십시오.  
