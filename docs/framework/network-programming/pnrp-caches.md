@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397483"
 ---
 # <a name="pnrp-caches"></a><span data-ttu-id="85f28-102">PNRP 캐시</span><span class="sxs-lookup"><span data-stu-id="85f28-102">PNRP Caches</span></span>
 <span data-ttu-id="85f28-103">PNRP(피어 이름 확인 프로토콜) 캐시는 한 피어에서 유지 관리되며 알고리즘 방식으로 선택된 피어 끝점의 로컬 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="85f28-103">Peer Name Resolution Protocol (PNRP) caches are local collections of algorithmically selected peer endpoints maintained on the peer.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591783"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a><span data-ttu-id="22445-102">.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22445-102">Basics of .NET Framework File I/O and the File System (Visual Basic)</span></span>
 <span data-ttu-id="22445-103"><xref:System.IO> 네임스페이스의 클래스는 드라이브, 파일 및 디렉터리 작업에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="22445-103">Classes in the <xref:System.IO> namespace are used to work with drives, files, and directories.</span></span>  

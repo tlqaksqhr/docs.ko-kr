@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591314"
 ---
 # <a name="semaphore-and-semaphoreslim"></a><span data-ttu-id="d5e8e-102">세마포 및 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="d5e8e-102">Semaphore and SemaphoreSlim</span></span>
 <span data-ttu-id="d5e8e-103">로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는</span><span class="sxs-lookup"><span data-stu-id="d5e8e-103">The <xref:System.Threading.Semaphore?displayProperty=nameWithType> class represents a named (systemwide) or local semaphore.</span></span> <span data-ttu-id="d5e8e-104">Win32 세마포 개체를 묶는 씬 래퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="d5e8e-104">It is a thin wrapper around the Win32 semaphore object.</span></span> <span data-ttu-id="d5e8e-105">Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.</span><span class="sxs-lookup"><span data-stu-id="d5e8e-105">Win32 semaphores are counting semaphores, which can be used to control access to a pool of resources.</span></span>  

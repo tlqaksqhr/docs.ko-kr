@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389463"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a><span data-ttu-id="37b4b-102">완화: 응용 프로그램 도메인 간 개체의 deserialization</span><span class="sxs-lookup"><span data-stu-id="37b4b-102">Mitigation: Deserialization of Objects Across App Domains</span></span>
 <span data-ttu-id="37b4b-103">경우에 따라 앱이 다양한 응용 프로그램을 기반으로 하여 두 개 이상의 응용 프로그램 도메인을 사용하면 여러 응용 프로그램 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="37b4b-103">In some cases, when an app uses two or more app domains with different application bases, the attempt to deserialize objects in the logical call context across app domains throws an exception.</span></span>  

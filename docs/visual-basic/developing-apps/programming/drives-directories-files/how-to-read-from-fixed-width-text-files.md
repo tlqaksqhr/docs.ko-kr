@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588676"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a><span data-ttu-id="0c5de-102">방법: Visual Basic에서 고정 너비 텍스트 파일 읽기</span><span class="sxs-lookup"><span data-stu-id="0c5de-102">How to: read from fixed-width text files in Visual Basic</span></span>
 <span data-ttu-id="0c5de-103">`TextFieldParser` 개체는 로그와 같은 구조적 텍스트 파일을 쉽고 효율적으로 구문 분석하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0c5de-103">The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.</span></span>  

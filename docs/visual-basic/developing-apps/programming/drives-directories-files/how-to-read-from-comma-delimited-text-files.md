@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588884"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a><span data-ttu-id="4cd87-102">방법: Visual Basic에서 쉼표로 구분된 텍스트 파일 읽기</span><span class="sxs-lookup"><span data-stu-id="4cd87-102">How to: read from comma-delimited text files in Visual Basic</span></span>
 <span data-ttu-id="4cd87-103">`TextFieldParser` 개체는 로그와 같은 구조적 텍스트 파일을 쉽고 효율적으로 구문 분석하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4cd87-103">The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="4cd87-104">`TextFieldType` 속성은 구분된 파일인지 또는 고정 너비 텍스트 필드가 있는 파일인지를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4cd87-104">The `TextFieldType` property defines whether it is a delimited file or one with fixed-width fields of text.</span></span>  

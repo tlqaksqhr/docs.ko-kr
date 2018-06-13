@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397028"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a><span data-ttu-id="949af-102">방법: 동적 메서드 정의 및 실행</span><span class="sxs-lookup"><span data-stu-id="949af-102">How to: Define and Execute Dynamic Methods</span></span>
 <span data-ttu-id="949af-103">다음 절차에서는 간단한 동적 메서드 및 클래스 인스턴스에 바인딩된 동적 메서드를 정의하고 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="949af-103">The following procedures show how to define and execute a simple dynamic method and a dynamic method bound to an instance of a class.</span></span> <span data-ttu-id="949af-104">동적 메서드에 대한 자세한 내용은 <xref:System.Reflection.Emit.DynamicMethod> 클래스 및 [리플렉션 내보내기 동적 메서드 시나리오](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="949af-104">For more information on dynamic methods, see the <xref:System.Reflection.Emit.DynamicMethod> class and [Reflection Emit Dynamic Method Scenarios](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).</span></span>  

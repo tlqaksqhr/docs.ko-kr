@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396950"
 ---
 # <a name="how-to-create-a-socket"></a><span data-ttu-id="ba3e8-102">방법: 소켓 만들기</span><span class="sxs-lookup"><span data-stu-id="ba3e8-102">How to: Create a Socket</span></span>
 <span data-ttu-id="ba3e8-103">소켓을 사용하여 원격 장치와 통신하려면 먼저 프로토콜 및 네트워크 주소 정보를 사용하여 소켓을 초기화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ba3e8-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="ba3e8-104"><xref:System.Net.Sockets.Socket> 클래스에 대한 생성자에는 소켓이 연결을 만드는 데 사용하는 주소 패밀리, 소켓 형식 및 프로토콜 형식을 지정하는 매개 변수가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ba3e8-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  

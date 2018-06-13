@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579108"
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a><span data-ttu-id="ff06c-103">CQRS 마이크로 서비스에서 읽기/쿼리 구현</span><span class="sxs-lookup"><span data-stu-id="ff06c-103">Implementing reads/queries in a CQRS microservice</span></span>
 

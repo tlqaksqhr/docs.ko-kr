@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591978"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a><span data-ttu-id="e9298-103">.NET 마이크로 서비스 및 웹 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="e9298-103">Securing .NET Microservices and Web Applications</span></span>
 

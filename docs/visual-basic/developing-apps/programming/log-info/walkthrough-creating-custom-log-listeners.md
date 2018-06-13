@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591653"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a><span data-ttu-id="31d7c-102">연습: 사용자 지정 로그 수신기 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31d7c-102">Walkthrough: Creating Custom Log Listeners (Visual Basic)</span></span>
 <span data-ttu-id="31d7c-103">이 연습에서는 사용자 지정 로그 수신기를 만들고 `My.Application.Log` 개체의 출력을 수신 대기하도록 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="31d7c-103">This walkthrough demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.</span></span>  

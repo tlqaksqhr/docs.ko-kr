@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588910"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a><span data-ttu-id="06ff2-102">방법: Visual Basic에서 직렬 포트에 연결된 모뎀 전화 접속</span><span class="sxs-lookup"><span data-stu-id="06ff2-102">How to: Dial Modems Attached to Serial Ports in Visual Basic</span></span>
 <span data-ttu-id="06ff2-103">이 항목에서는 Visual Basic에서 `My.Computer.Ports`를 사용하여 모뎀으로 전화를 거는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="06ff2-103">This topic describes how to use `My.Computer.Ports` to dial a modem in Visual Basic.</span></span>  

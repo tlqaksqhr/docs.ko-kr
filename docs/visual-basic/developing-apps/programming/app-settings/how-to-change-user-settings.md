@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591991"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a><span data-ttu-id="03b60-102">방법: Visual Basic에서 사용자 설정 변경</span><span class="sxs-lookup"><span data-stu-id="03b60-102">How to: Change User Settings in Visual Basic</span></span>
 <span data-ttu-id="03b60-103">설정의 `My.Settings` 개체에 대한 속성에 새 값을 할당하여 사용자 설정을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03b60-103">You can change a user setting by assigning a new value to the setting's property on the `My.Settings` object.</span></span>  

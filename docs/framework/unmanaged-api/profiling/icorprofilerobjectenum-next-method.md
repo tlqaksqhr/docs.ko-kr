@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerObjectEnum::Next 메서드"
-ms.custom: 
+title: ICorProfilerObjectEnum::Next 메서드
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerObjectEnum.Next
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dfeec7c3ee2038b77549e53b10534d817b667687
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: af896b67cda885613ffb268172c7773f2be17133
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455145"
 ---
-# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="f75a5-102">ICorProfilerObjectEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="f75a5-102">ICorProfilerObjectEnum::Next Method</span></span>
-<span data-ttu-id="f75a5-103">시퀀스에서 열거자의 현재 위치부터 시작 하는 개체의 순차적인 컬렉션에서 지정 된 개수의 연속 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f75a5-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="9c600-102">ICorProfilerObjectEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="9c600-102">ICorProfilerObjectEnum::Next Method</span></span>
+<span data-ttu-id="9c600-103">시퀀스에서 열거자의 현재 위치부터 시작 하는 개체의 순차적인 컬렉션에서 지정 된 개수의 연속 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9c600-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f75a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="f75a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9c600-104">구문</span><span class="sxs-lookup"><span data-stu-id="9c600-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -49,24 +38,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f75a5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f75a5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9c600-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9c600-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="f75a5-106">[in] 검색할 개체 수입니다.</span><span class="sxs-lookup"><span data-stu-id="f75a5-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="9c600-106">[in] 검색할 개체 수입니다.</span><span class="sxs-lookup"><span data-stu-id="9c600-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="f75a5-107">[out] 배열 `ObjectID` 각각 검색 된 개체를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f75a5-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
+ <span data-ttu-id="9c600-107">[out] 배열 `ObjectID` 각각 검색 된 개체를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9c600-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="f75a5-108">[out] `objects` 배열에 실제로 반환된 모듈 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f75a5-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
+ <span data-ttu-id="9c600-108">[out] `objects` 배열에 실제로 반환된 모듈 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9c600-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f75a5-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f75a5-109">Requirements</span></span>  
- <span data-ttu-id="f75a5-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f75a5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9c600-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9c600-109">Requirements</span></span>  
+ <span data-ttu-id="9c600-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c600-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f75a5-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f75a5-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9c600-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9c600-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f75a5-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f75a5-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9c600-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c600-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f75a5-113">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f75a5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9c600-113">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c600-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f75a5-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f75a5-114">See Also</span></span>  
- [<span data-ttu-id="f75a5-115">ICorProfilerObjectEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f75a5-115">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9c600-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9c600-114">See Also</span></span>  
+ [<span data-ttu-id="9c600-115">ICorProfilerObjectEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9c600-115">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

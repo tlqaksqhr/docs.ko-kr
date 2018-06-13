@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589433"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="b71da-102">방법: Visual Basic에서 파일에 텍스트 쓰기</span><span class="sxs-lookup"><span data-stu-id="b71da-102">How to: Write Text to Files in Visual Basic</span></span>
 <span data-ttu-id="b71da-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드를 사용하여 파일에 텍스트를 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b71da-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="b71da-104">지정한 파일이 없으면 새로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="b71da-104">If the specified file does not exist, it is created.</span></span>  
