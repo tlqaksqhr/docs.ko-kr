@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761534"
 ---
 # <a name="intersect-entity-sql"></a><span data-ttu-id="cc2d5-102">INTERSECT(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="cc2d5-102">INTERSECT (Entity SQL)</span></span>
 <span data-ttu-id="cc2d5-103">INTERSECT 피연산자의 왼쪽과 오른쪽에 있는 두 쿼리 식에서 반환된 고유한 값의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="cc2d5-103">Returns a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span> <span data-ttu-id="cc2d5-104">모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc2d5-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

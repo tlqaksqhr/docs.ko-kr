@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763945"
 ---
 # <a name="getschema-and-schema-collections"></a><span data-ttu-id="af703-102">GetSchema 및 Schema 컬렉션</span><span class="sxs-lookup"><span data-stu-id="af703-102">GetSchema and Schema Collections</span></span>
 <span data-ttu-id="af703-103">**연결** 각.NET Framework 관리 공급자 구현에 클래스는 **GetSchema** 메서드는 현재 연결 되어 있는 데이터베이스에 대 한 스키마 정보를 검색 하는 데 사용 되 고 반환 된 스키마 정보는 **GetSchema** 의 형태로 제공 메서드는 <xref:System.Data.DataTable>합니다.</span><span class="sxs-lookup"><span data-stu-id="af703-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="af703-104">**GetSchema** 메서드는 스키마 컬렉션이 반환 되도록 지정 하 고 반환 될 정보의 양을 제한 하기 위한 선택적 매개 변수를 제공 하는 오버 로드 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="af703-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  

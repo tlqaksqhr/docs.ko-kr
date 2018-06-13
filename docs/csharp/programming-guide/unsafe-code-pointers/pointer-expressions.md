@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330335"
 ---
 # <a name="pointer-expressions-c-programming-guide"></a><span data-ttu-id="802b9-102">포인터 식(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="802b9-102">Pointer Expressions (C# Programming Guide)</span></span>
 <span data-ttu-id="802b9-103">이 섹션에서는 다음 포인터 식에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="802b9-103">In this section, the following pointer expressions are discussed:</span></span>  

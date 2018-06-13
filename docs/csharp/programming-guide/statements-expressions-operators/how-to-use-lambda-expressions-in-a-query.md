@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328138"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a><span data-ttu-id="4825d-102">방법: 쿼리에 람다 식 사용(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="4825d-102">How to: Use Lambda Expressions in a Query (C# Programming Guide)</span></span>
 <span data-ttu-id="4825d-103">람다 식은 쿼리 구문에 직접 사용하지 않고 메서드 호출에 사용하며, 쿼리 식에 메서드 호출이 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4825d-103">You do not use lambda expressions directly in query syntax, but you do use them in method calls, and query expressions can contain method calls.</span></span> <span data-ttu-id="4825d-104">실제로 일부 쿼리 작업은 메서드 구문으로만 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4825d-104">In fact, some query operations can only be expressed in method syntax.</span></span> <span data-ttu-id="4825d-105">쿼리 구문과 메서드 구문 간의 차이점에 대한 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4825d-105">For more information about the difference between query syntax and method syntax, see [Query Syntax and Method Syntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  

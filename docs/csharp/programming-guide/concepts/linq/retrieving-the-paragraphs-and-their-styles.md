@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335350"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a><span data-ttu-id="99b67-102">단락 및 해당 스타일 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="99b67-102">Retrieving the Paragraphs and Their Styles (C#)</span></span>
 <span data-ttu-id="99b67-103">이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="99b67-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="99b67-104">또한 각 단락의 스타일도 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="99b67-104">It also identifies the style of each paragraph.</span></span>  

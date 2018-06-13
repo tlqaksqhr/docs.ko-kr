@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325944"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="03cc2-102">방법: 요소의 단순 값 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="03cc2-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
 <span data-ttu-id="03cc2-103">이 항목에서는 요소의 부분 값을 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="03cc2-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="03cc2-104">단일 문자열로 연결된 모든 하위 요소의 값을 포함하는 상세 값과 달리 부분 값은 특정 요소의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="03cc2-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

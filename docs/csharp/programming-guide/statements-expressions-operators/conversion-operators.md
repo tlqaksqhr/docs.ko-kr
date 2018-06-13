@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334716"
 ---
 # <a name="conversion-operators-c-programming-guide"></a><span data-ttu-id="eda32-102">변환 연산자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="eda32-102">Conversion Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="eda32-103">C#을 사용하면 프로그래머가 클래스 또는 구조체를 다른 클래스 또는 구조체나 기본 형식으로/에서 변환할 수 있도록 클래스 또는 구조체에서 변환을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eda32-103">C# enables programmers to declare conversions on classes or structs so that classes or structs can be converted to and/or from other classes or structs, or basic types.</span></span> <span data-ttu-id="eda32-104">변환은 연산자처럼 정의되며 변환 결과의 형식에 따라 이름이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="eda32-104">Conversions are defined like operators and are named for the type to which they convert.</span></span> <span data-ttu-id="eda32-105">변환할 인수의 형식이나 변환 결과의 형식 중 하나만 포함 형식이어야 하며 둘 다 포함 형식이면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eda32-105">Either the type of the argument to be converted, or the type of the result of the conversion, but not both, must be the containing type.</span></span>  

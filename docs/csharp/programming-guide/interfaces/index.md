@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337589"
 ---
 # <a name="interfaces-c-programming-guide"></a><span data-ttu-id="19524-102">인터페이스(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="19524-102">Interfaces (C# Programming Guide)</span></span>
 <span data-ttu-id="19524-103">인터페이스에는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는[ 구조체](../../../csharp/language-reference/keywords/struct.md)에서 구현할 수 있는 관련 기능 그룹에 대한 정의가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="19524-103">An interface contains definitions for a group of related functionalities that a [class](../../../csharp/language-reference/keywords/class.md) or a [struct](../../../csharp/language-reference/keywords/struct.md) can implement.</span></span>  
