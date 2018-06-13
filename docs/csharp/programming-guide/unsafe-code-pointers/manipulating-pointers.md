@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339680"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a>포인터 조작(C# 프로그래밍 가이드)
 이 섹션에는 다음 포인터 작업이 포함되어 있습니다.  

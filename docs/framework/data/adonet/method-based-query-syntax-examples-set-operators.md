@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764816"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 집합 연산자(LINQ to DataSet)
 이 항목의 예제에 사용 하는 방법을 보여 주기는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, 및 <xref:System.Linq.Enumerable.Union%2A> 데이터 행 집합에 대해 값 기반 비교 연산을 수행 하는 연산자입니다.[ 데이터에는 데이터 집합 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) 참조 [Datarow 비교](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) 대 한 자세한 내용은 <xref:System.Data.DataRowComparer>합니다.  

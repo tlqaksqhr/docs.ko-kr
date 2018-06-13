@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357948"
 ---
 # <a name="convert-a-sequence-to-an-array"></a>시퀀스를 배열로 변환
 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 시퀀스에서 배열을 만듭니다.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356330"
 ---
 # <a name="serialization"></a>Serialization
 이 항목에서는 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능입니다. 디자인 타임에 코드 생성 도중 serialization을 추가하는 방법과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 클래스의 런타임 serialization 동작에 대한 정보가 제공됩니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766324"
 ---
 # <a name="walkthrough-sql-generation"></a>연습: SQL 생성
 이 항목에서는에서 SQL 생성이 생기는 [샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616)합니다. 다음 Entity SQL 쿼리는 샘플 공급자에 포함된 모델을 사용합니다.  
