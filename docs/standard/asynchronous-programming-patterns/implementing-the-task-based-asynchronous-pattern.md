@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576519"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a><span data-ttu-id="c9ed2-102">작업 기반 비동기 패턴 구현</span><span class="sxs-lookup"><span data-stu-id="c9ed2-102">Implementing the Task-based Asynchronous Pattern</span></span>
 <span data-ttu-id="c9ed2-103">TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있습니다. 즉 Visual Studio에서 C# 또는 Visual Basic 컴파일러를 사용하여 구현하거나, 수동으로 구현하거나, 컴파일러와 수동 방식을 함께 사용하여 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c9ed2-103">You can implement the Task-based Asynchronous Pattern (TAP) in three ways: by using the C# and Visual Basic compilers in Visual Studio, manually, or through a combination of the compiler and manual methods.</span></span> <span data-ttu-id="c9ed2-104">다음 섹션에서는 각 방법에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c9ed2-104">The following sections discuss each method in detail.</span></span> <span data-ttu-id="c9ed2-105">TAP 패턴을 사용하면 계산 바운드 및 I/O 바운드 비동기 작업을 모두 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c9ed2-105">You can use the TAP pattern to implement both compute-bound and I/O-bound asynchronous operations.</span></span> <span data-ttu-id="c9ed2-106">각 작업 유형에 대해서는 [워크로드](#workloads) 섹션에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c9ed2-106">The [Workloads](#workloads) section discusses each type of operation.</span></span>

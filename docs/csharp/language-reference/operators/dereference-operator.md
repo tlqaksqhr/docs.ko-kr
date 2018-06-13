@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171982"
 ---
 # <a name="-gt-operator-c-reference"></a><span data-ttu-id="8354c-102">-&gt; 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="8354c-102">-&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="8354c-103">`->` 연산자는 포인터 역참조와 멤버 액세스를 결합합니다.</span><span class="sxs-lookup"><span data-stu-id="8354c-103">The `->` operator combines pointer dereferencing and member access.</span></span>  

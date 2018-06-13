@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172112"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="986cc-102">delegate(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="986cc-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="986cc-103">delegate 형식의 선언은 메서드 시그니처와 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="986cc-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="986cc-104">반환 값이 있으며 모든 형식의 매개 변수를 개수에 관계없이 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="986cc-104">It has a return value and any number of parameters of any type:</span></span>  

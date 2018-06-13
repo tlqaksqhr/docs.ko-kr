@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457218"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="d842d-102">?: 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="d842d-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="d842d-103">일반적으로 3개로 구성된 조건 연산자로 알려진 조건 연산자(`?:`)는 부울 식의 값에 따라 두 값 중 하나를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d842d-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="d842d-104">다음은 조건 연산자의 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="d842d-104">Following is the syntax for the conditional operator.</span></span>  

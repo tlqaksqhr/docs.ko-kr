@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312198"
 ---
 # <a name="install-the-net-framework-for-developers"></a><span data-ttu-id="f750d-102">개발자용 .NET Framework 설치</span><span class="sxs-lookup"><span data-stu-id="f750d-102">Install the .NET Framework for developers</span></span>
 

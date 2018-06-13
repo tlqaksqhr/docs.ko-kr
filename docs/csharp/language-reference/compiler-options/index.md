@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472518"
 ---
 # <a name="c-compiler-options"></a><span data-ttu-id="275b3-102">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="275b3-102">C# Compiler Options</span></span>
 <span data-ttu-id="275b3-103">컴파일러는 실행 파일(.exe), 동적 연결 라이브러리(.dll) 또는 코드 모듈(.netmodule)을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="275b3-103">The compiler produces executable (.exe) files, dynamic-link libraries (.dll), or code modules (.netmodule).</span></span>  

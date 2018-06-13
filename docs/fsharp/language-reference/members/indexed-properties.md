@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235943"
 ---
 # <a name="indexed-properties"></a><span data-ttu-id="e30b9-103">인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="e30b9-103">Indexed Properties</span></span>
 

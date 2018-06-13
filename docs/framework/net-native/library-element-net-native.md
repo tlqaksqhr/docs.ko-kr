@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311977"
 ---
 # <a name="ltlibrarygt-element-net-native"></a><span data-ttu-id="516d5-102">&lt;라이브러리&gt; 요소(.NET 네이티브)</span><span class="sxs-lookup"><span data-stu-id="516d5-102">&lt;Library&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="516d5-103">런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="516d5-103">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>  

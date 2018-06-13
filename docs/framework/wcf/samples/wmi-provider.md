@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807308"
 ---
 # <a name="wmi-provider"></a><span data-ttu-id="b3801-102">WMI Provider</span><span class="sxs-lookup"><span data-stu-id="b3801-102">WMI Provider</span></span>
 <span data-ttu-id="b3801-103">이 샘플에서는 WCF에 포함 된 Windows Management Instrumentation (WMI) 공급자를 사용 하 여 런타임에 Windows Communication Foundation (WCF) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b3801-103">This sample demonstrates how to gather data from Windows Communication Foundation (WCF) services at runtime by using the Windows Management Instrumentation (WMI) provider that is built into WCF.</span></span> <span data-ttu-id="b3801-104">또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b3801-104">Also, this sample demonstrates how to add a user-defined WMI object to a service.</span></span> <span data-ttu-id="b3801-105">이 샘플에 대 한 WMI 공급자를 활성화는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에서 데이터를 수집 하는 방법을 보여 줍니다는 `ICalculator` 런타임에 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="b3801-105">The sample activates the WMI provider for the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and demonstrates how to gather data from the `ICalculator` service at runtime.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234680"
 ---
 # <a name="delegate-statement"></a><span data-ttu-id="e308d-102">Delegate 문</span><span class="sxs-lookup"><span data-stu-id="e308d-102">Delegate Statement</span></span>
 <span data-ttu-id="e308d-103">대리자를 선언 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e308d-103">Used to declare a delegate.</span></span> <span data-ttu-id="e308d-104">대리자는 참조 형식 참조 하는 `Shared` 메서드는 형식 또는 개체의 인스턴스 메서드.</span><span class="sxs-lookup"><span data-stu-id="e308d-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="e308d-105">매개 변수 및 반환 형식을 일치 하는 프로시저가 대리자 클래스의 인스턴스를 만드는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e308d-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="e308d-106">다음 대리자 인스턴스를 통해 프로시저에 나중에 호출 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e308d-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  

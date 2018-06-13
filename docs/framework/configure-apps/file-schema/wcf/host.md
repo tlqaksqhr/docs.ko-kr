@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233732"
 ---
 # <a name="lthostgt"></a><span data-ttu-id="26ac4-102">&lt;호스트&gt;</span><span class="sxs-lookup"><span data-stu-id="26ac4-102">&lt;host&gt;</span></span>
 <span data-ttu-id="26ac4-103">서비스 호스트의 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="26ac4-103">Specifies settings for a service host.</span></span>  

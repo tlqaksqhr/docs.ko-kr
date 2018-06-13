@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457372"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="2ba69-102">형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="2ba69-102">Constraints on type parameters (C# Programming Guide)</span></span>
 

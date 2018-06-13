@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571126"
 ---
 # <a name="type-conversion-tables-in-net"></a><span data-ttu-id="69f10-102">.NET의 형식 변환표</span><span class="sxs-lookup"><span data-stu-id="69f10-102">Type Conversion Tables in .NET</span></span>
 <span data-ttu-id="69f10-103">확대 변환은 한 형식의 값을 크기가 같거나 더 큰 다른 형식으로 변환할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="69f10-103">Widening conversion occurs when a value of one type is converted to another type that is of equal or greater size.</span></span> <span data-ttu-id="69f10-104">축소 변환은 한 형식의 값을 크기가 더 작은 다른 형식의 값으로 변환할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="69f10-104">A narrowing conversion occurs when a value of one type is converted to a value of another type that is of a smaller size.</span></span> <span data-ttu-id="69f10-105">이 항목의 표에서는 두 가지 유형의 변환에서 모두 나타나는 동작을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="69f10-105">The tables in this topic illustrate the behaviors exhibited by both types of conversions.</span></span>  

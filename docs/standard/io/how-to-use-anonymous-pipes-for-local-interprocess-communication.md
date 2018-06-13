@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573181"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a><span data-ttu-id="d3b58-102">방법: 로컬 프로세스 간 통신에 익명 파이프 사용</span><span class="sxs-lookup"><span data-stu-id="d3b58-102">How to: Use Anonymous Pipes for Local Interprocess Communication</span></span>
 <span data-ttu-id="d3b58-103">익명 파이프는 로컬 컴퓨터에서 프로세스 간 통신을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d3b58-103">Anonymous pipes provide interprocess communication on a local computer.</span></span> <span data-ttu-id="d3b58-104">명명된 파이프보다 적은 기능을 제공하지만 오버로드를 더 적게 필요로 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3b58-104">They offer less functionality than named pipes, but also require less overhead.</span></span> <span data-ttu-id="d3b58-105">익명 파이프를 사용하면 로컬 컴퓨터에서 프로세스 간 통신을 더욱 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3b58-105">You can use anonymous pipes to make interprocess communication on a local computer easier.</span></span> <span data-ttu-id="d3b58-106">네트워크를 통한 통신에는 익명 파이프를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d3b58-106">You cannot use anonymous pipes for communication over a network.</span></span>  

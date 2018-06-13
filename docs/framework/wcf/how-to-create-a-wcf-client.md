@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806275"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="7512e-102">방법: Windows Communication Foundation 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="7512e-102">How to: Create a Windows Communication Foundation Client</span></span>
 <span data-ttu-id="7512e-103">Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데 필요한 6 가지 작업 중 네 번째 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="7512e-103">This is the fourth of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="7512e-104">모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="7512e-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

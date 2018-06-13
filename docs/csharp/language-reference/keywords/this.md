@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172037"
 ---
 # <a name="this-c-reference"></a><span data-ttu-id="26ef1-103">this(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="26ef1-103">this (C# Reference)</span></span>
 <span data-ttu-id="26ef1-104">`this` 키워드는 클래스의 현재 인스턴스를 가리키며 확장 메서드의 첫 번째 매개 변수에 대한 한정자로도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="26ef1-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34234375"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="fef3a-102">Checked 및 Unchecked(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="fef3a-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="fef3a-103">checked 컨텍스트 또는 unchecked 컨텍스트에서 C# 문을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef3a-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="fef3a-104">checked 컨텍스트에서는 산술 오버플로가 있으면 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="fef3a-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="fef3a-105">unchecked 컨텍스트에서는 산술 오버플로가 무시되고 대상 형식에 맞지 않는 상위 비트가 삭제되어 해당 결과가 잘립니다.</span><span class="sxs-lookup"><span data-stu-id="fef3a-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457498"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a><span data-ttu-id="eda85-102">방법: bool?에서 bool로 안전하게 캐스팅(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="eda85-102">How to: Safely Cast from bool? to bool (C# Programming Guide)</span></span>
 <span data-ttu-id="eda85-103">`bool?` nullable 형식은 세 가지 값 `true`, `false` 및 `null`을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eda85-103">The `bool?` nullable type can contain three different values: `true`, `false`, and `null`.</span></span> <span data-ttu-id="eda85-104">따라서 `bool?` 형식은 `if`, `for` 또는 `while`과 같은 조건에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eda85-104">Therefore, the `bool?` type cannot be used in conditionals such as with `if`, `for`, or `while`.</span></span> <span data-ttu-id="eda85-105">예를 들어 다음 코드는 컴파일러 오류를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="eda85-105">For example, the following code causes a compiler error.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172635"
 ---
 # <a name="readonly-c-reference"></a><span data-ttu-id="12dc6-102">readonly(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="12dc6-102">readonly (C# Reference)</span></span>
 <span data-ttu-id="12dc6-103">`readonly` 키워드는 필드에 사용할 수 있는 한정자입니다.</span><span class="sxs-lookup"><span data-stu-id="12dc6-103">The `readonly` keyword is a modifier that you can use on fields.</span></span> <span data-ttu-id="12dc6-104">필드 선언에 `readonly` 한정자가 포함되어 있는 경우 선언에 의해 추가된 필드에 대한 할당은 선언의 일부로서 또는 같은 클래스의 생성자에서만 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12dc6-104">When a field declaration includes a `readonly` modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570549"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="d6ec6-102">msxsl:node-set() 함수에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="d6ec6-102">Support for the msxsl:node-set() Function</span></span>
 <span data-ttu-id="d6ec6-103">`msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d6ec6-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="d6ec6-104">결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="d6ec6-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  

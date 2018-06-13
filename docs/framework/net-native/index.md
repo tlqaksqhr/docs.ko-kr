@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457309"
 ---
 # <a name="compiling-apps-with-net-native"></a><span data-ttu-id="54c71-102">.NET 네이티브로 앱 컴파일</span><span class="sxs-lookup"><span data-stu-id="54c71-102">Compiling Apps with .NET Native</span></span>
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="54c71-103"> Visual Studio 2015 및 이상 버전에 포함 된 Windows 앱 빌드 및 배포에 대 한 미리 컴파일 기술입니다.</span><span class="sxs-lookup"><span data-stu-id="54c71-103"> is a precompilation technology for building and deploying Windows apps that is included with Visual Studio 2015 and later versions.</span></span> <span data-ttu-id="54c71-104">관리 코드(C# 또는 Visual Basic)로 작성되었으며 .NET Framework 및 Windows 10의 대상을 네이티브 코드로 지정하는 앱의 릴리스 버전을 자동으로 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="54c71-104">It automatically compiles the release version of apps that are written in managed code (C# or Visual Basic) and that target the .NET Framework and Windows 10 to native code.</span></span>  

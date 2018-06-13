@@ -7,6 +7,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172243"
 ---
 # <a name="protected-internal-c-reference"></a><span data-ttu-id="f5477-102">protected internal(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f5477-102">protected internal (C# Reference)</span></span>
 <span data-ttu-id="f5477-103">`protected internal` 키워드 조합은 멤버 액세스 한정자입니다.</span><span class="sxs-lookup"><span data-stu-id="f5477-103">The `protected internal` keyword combination is a member access modifier.</span></span> <span data-ttu-id="f5477-104">protected internal 멤버는 포함하는 클래스에서 파생된 형식이나 현재 어셈블리에서 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5477-104">A protected internal member is accessible from the current assembly or from types that are derived from the containing class.</span></span> <span data-ttu-id="f5477-105">`protected internal` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f5477-105">For a comparison of `protected internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

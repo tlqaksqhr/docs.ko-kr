@@ -14,6 +14,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312042"
 ---
 # <a name="net-framework-tools"></a><span data-ttu-id="17ab3-102">.NET Framework 도구</span><span class="sxs-lookup"><span data-stu-id="17ab3-102">.NET Framework Tools</span></span>
 <span data-ttu-id="17ab3-103">.NET Framework 도구를 사용하면 .NET Framework를 대상으로 하는 응용 프로그램 및 구성 요소를 보다 쉽게 만들고 배포하고 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="17ab3-103">The .NET Framework tools make it easier for you to create, deploy, and manage applications and components that target the .NET Framework.</span></span>  

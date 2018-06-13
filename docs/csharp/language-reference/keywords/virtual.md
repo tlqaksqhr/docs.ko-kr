@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172648"
 ---
 # <a name="virtual-c-reference"></a><span data-ttu-id="a4e7e-102">virtual(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a4e7e-102">virtual (C# Reference)</span></span>
 <span data-ttu-id="a4e7e-103">`virtual` 키워드는 메서드, 속성, 인덱서 또는 이벤트 선언을 수정하고 파생 클래스에서 재정의하도록 허용하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4e7e-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="a4e7e-104">예를 들어 이 메서드는 이를 상속하는 모든 클래스에서 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4e7e-104">For example, this method can be overridden by any class that inherits it:</span></span>  

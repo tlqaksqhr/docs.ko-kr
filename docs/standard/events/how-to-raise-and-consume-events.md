@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572725"
 ---
 # <a name="how-to-raise-and-consume-events"></a><span data-ttu-id="40dde-102">방법: 이벤트 발생 및 사용</span><span class="sxs-lookup"><span data-stu-id="40dde-102">How to: Raise and Consume Events</span></span>
 <span data-ttu-id="40dde-103">이 항목의 예제에서는 이벤트로 작업하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="40dde-103">The examples in this topic show how to work with events.</span></span> <span data-ttu-id="40dde-104">여기서 <xref:System.EventHandler> 대리자, <xref:System.EventHandler%601> 대리자 및 사용자 지정 대리자의 예제를 통해 데이터를 사용하거나 사용하지 않는 이벤트를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="40dde-104">They include examples of the <xref:System.EventHandler> delegate, the <xref:System.EventHandler%601> delegate, and a custom delegate, to illustrate events with and without data.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592511"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a><span data-ttu-id="2e2e8-102">연습: Visual Basic에서 파일과 디렉터리 조작</span><span class="sxs-lookup"><span data-stu-id="2e2e8-102">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>
 <span data-ttu-id="2e2e8-103">이 연습에서는 Visual Basic에서 파일 I/O의 기본 개념을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="2e2e8-103">This walkthrough provides an introduction to the fundamentals of file I/O in Visual Basic.</span></span> <span data-ttu-id="2e2e8-104">디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2e2e8-104">It describes how to create a small application that lists and examines text files in a directory.</span></span> <span data-ttu-id="2e2e8-105">선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2e2e8-105">For each selected text file, the application provides file attributes and the first line of content.</span></span> <span data-ttu-id="2e2e8-106">로그 파일에 정보를 기록하는 옵션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2e2e8-106">There is an option to write information to a log file.</span></span>  

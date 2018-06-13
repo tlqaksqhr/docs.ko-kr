@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171865"
 ---
 # <a name="private-c-reference"></a><span data-ttu-id="fcf4a-102">private(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="fcf4a-102">private (C# Reference)</span></span>
 <span data-ttu-id="fcf4a-103">`private` 키워드는 멤버 액세스 한정자입니다.</span><span class="sxs-lookup"><span data-stu-id="fcf4a-103">The `private` keyword is a member access modifier.</span></span> 

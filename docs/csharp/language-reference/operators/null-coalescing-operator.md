@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458107"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="f0c66-103">??</span><span class="sxs-lookup"><span data-stu-id="f0c66-103">??</span></span> <span data-ttu-id="f0c66-104">연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f0c66-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="f0c66-105">`??` 연산자는 null 병합 연산자라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="f0c66-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="f0c66-106">이 연산자는 피연산자가 null이 아닐 경우 왼쪽 피연산자를 반환하고 null일 경우 오른쪽 피연산자를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f0c66-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  
