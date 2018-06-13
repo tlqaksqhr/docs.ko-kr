@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401332"
 ---
 # <a name="use-caching-in-ui-automation"></a>UI 자동화의 캐싱 사용
 > [!NOTE]

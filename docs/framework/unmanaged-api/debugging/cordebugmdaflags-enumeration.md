@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404861"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 열거형
 MDA(관리 디버깅 도우미)가 실행된 스레드의 상태를 지정합니다.  

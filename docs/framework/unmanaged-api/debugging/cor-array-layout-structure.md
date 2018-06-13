@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406398"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 구조체
 메모리 내 배열 개체의 레이아웃에 대한 정보를 제공합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398728"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>방법: 리플렉션 전용 컨텍스트에 어셈블리 로드
 리플렉션 전용 로드 컨텍스트를 사용하면 다른 플랫폼이나 다른 버전의 .NET Framework에 대해 컴파일된 어셈블리를 검사할 수 있습니다. 이 컨텍스트에 로드된 코드는 검사할 수만 있고 실행할 수 없습니다. 즉, 생성자를 실행할 수 없기 때문에 개체를 만들 수 없습니다. 코드를 실행할 수 없기 때문에 종속성이 자동으로 로드되지 않습니다. 종속성을 검사하려면 직접 로드해야 합니다.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359714"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 사용자 정의 함수
 사용자 정의 함수는 매개 변수를 사용하고 계산이나 다른 작업을 수행한 다음 결과를 반환할 수 있는 루틴입니다. Microsoft Visual Basic .NET 또는 Microsoft Visual C# 등의 Microsoft .NET Framework 프로그래밍 언어로 사용자 정의 함수를 작성할 수 있습니다.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e2746073fbc6adfd7090aa9b3cc38e46c4411744
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400187"
 ---
 # <a name="getscope-method1"></a>GetScope Method1
 가져오기 범위를 가져옵니다.  

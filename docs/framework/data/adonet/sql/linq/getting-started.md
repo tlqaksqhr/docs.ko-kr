@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360033"
 ---
 # <a name="getting-started"></a>시작
 사용 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 사용할 수 있습니다는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 기술 SQL 액세스 하는 메모리 내 컬렉션에 액세스 하는 것 처럼 데이터베이스입니다.  

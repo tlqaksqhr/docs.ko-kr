@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398835"
 ---
 # <a name="working-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
 XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특정 스키마를 따라야 하는 헤더를 비롯한 잘 정의된 XML로 구성되어야 하기 때문에 이러한 파일을 수동으로 만드는 경우 오류가 발생하기 쉽습니다. 또는 .NET Framework 클래스 라이브러리의 형식 및 멤버를 사용하여 프로그래밍 방식으로 .resx 파일을 만들 수 있습니다. .NET Framework 클래스 라이브러리를 사용하여 .resx 파일에 저장된 리소스를 검색할 수도 있습니다. 이 항목에서는 <xref:System.Resources> 네임스페이스의 형식 및 멤버를 사용하여 .resx 파일로 작업하는 방법에 대해 설명합니다.  

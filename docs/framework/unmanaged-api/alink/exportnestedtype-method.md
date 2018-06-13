@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407571"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 메서드
 내보낼 수 있도록 중첩 된 형식을 지정합니다. [ExportType 메서드](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) 중첩 된 형식을 내보낼, 수도 있지만이 방법은 빠릅니다.  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406280"
 ---
 # <a name="constants-unmanaged-api-reference"></a>상수(관리되지 않는 API 참조)
 이 항목에서는 언어 유형, 언어 공급 업체 및 CorSym.idl에 정의 된 문서 형식 상수를 설명 합니다.  

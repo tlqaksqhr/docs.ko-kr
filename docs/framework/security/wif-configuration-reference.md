@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399248"
 ---
 # <a name="wif-configuration-reference"></a>WIF 구성 참조
 구성 파일에 요소를 추가하여 응용 프로그램에서 WIF(Windows Identity Foundation)를 구성할 수 있습니다. 이 항목에는 WIF 구성 요소에 대한 참조 항목의 링크가 포함되어 있습니다.  

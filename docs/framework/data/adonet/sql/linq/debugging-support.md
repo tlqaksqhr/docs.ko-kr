@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361775"
 ---
 # <a name="debugging-support"></a>디버깅 지원
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트에 대해 일반 디버깅을 지원합니다.  또한 참조 [LINQ 디버깅](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) 또는 [LINQ 디버깅](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\))합니다.  

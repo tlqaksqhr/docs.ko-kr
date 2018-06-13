@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360085"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>언어 기능 및 라이브러리 형식 간의 관계
 

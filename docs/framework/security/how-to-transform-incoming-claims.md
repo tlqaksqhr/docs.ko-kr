@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400174"
 ---
 # <a name="how-to-transform-incoming-claims"></a>방법: 들어오는 클레임 변환
 ## <a name="applies-to"></a>적용 대상  
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  **참조 관리자** 창에서 **System.IdentityModel**을 선택하고 **확인**을 클릭합니다.  
   
-5.  **Class1.cs**를 열거나 이 파일이 없는 경우 **ClaimsTransformation**을 마우스 오른쪽 단추로 클릭하고 **추가**, **클래스…**를 차례로 클릭합니다.  
+5.  **Class1.cs**를 열거나 이 파일이 없는 경우 **ClaimsTransformation**을 마우스 오른쪽 단추로 클릭하고 **추가**, **클래스…** 를 차례로 클릭합니다.  
   
 6.  지시문을 사용하여 다음을 코드 파일에 추가합니다.  
   

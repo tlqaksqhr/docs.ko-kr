@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8db3b02ba4766d046fc549eec8add31f51069
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407922"
 ---
 # <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
 제공 된 `Next` 지정된 된 수를 반환 하는 메서드 `ICorDebugAppDomainEnum` 열거형의 다음 위치에서 시작 하는 값입니다. 이 인터페이스는 "ICorDebugEnum"의 하위 클래스입니다.  

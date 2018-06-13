@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405605"
 ---
 # <a name="wif-code-sample-index"></a>WIF 코드 샘플 인덱스
 Windows Identity Foundation 4.5에 대한 코드 샘플은 다음과 같습니다.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d0e7f20be3f18e49dcc1b986460d5da0c3d7777
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401942"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction 메서드
 이 "ICorDebugCode"와 연결 된 "ICorDebugFunction을"을 가져옵니다.  

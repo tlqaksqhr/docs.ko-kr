@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400057"
 ---
 # <a name="wif-how-to39s-index"></a>WIF 방법 인덱스
 -   [방법: WIF를 사용하여 클레임 인식 ASP.NET MVC 웹 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  

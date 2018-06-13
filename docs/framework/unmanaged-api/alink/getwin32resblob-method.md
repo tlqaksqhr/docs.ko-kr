@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403294"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 메서드
 Win32 리소스 blob를 검색합니다. 어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.  

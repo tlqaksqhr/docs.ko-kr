@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401631"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId 메서드
 응용 프로그램 도메인의 고유 식별자를 가져옵니다.  

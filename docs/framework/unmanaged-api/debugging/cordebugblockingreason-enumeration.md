@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe5e1267b619d5900ed9af55dd6079a8f38d6550
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406902"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 열거형
 지정된 개체에서 스레드가 차단될 수 있는 이유를 지정합니다.  

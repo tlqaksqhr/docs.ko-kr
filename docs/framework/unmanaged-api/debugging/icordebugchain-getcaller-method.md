@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405145"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller 메서드
 이 체인을 호출한 체인을 가져옵니다.  

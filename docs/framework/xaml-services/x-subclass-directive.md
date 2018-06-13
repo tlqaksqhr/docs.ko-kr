@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566420"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 지시문
 XAML 태그 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. 기반으로 하는 partial 클래스를 만드는 대신 `x:Class`, 제공 된 `x:Class` 중간 클래스로 생성 한 다음 제공 된 파생된 클래스는 기반으로 해야 하 고 `x:Class`합니다.  
