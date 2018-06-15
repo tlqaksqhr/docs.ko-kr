@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231514"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>연습: DataRepeater 컨트롤의 데이터 표시(Visual Studio)
 이 연습에서는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤의 바인딩된 데이터를 표시하는 작업을 처음부터 끝까지 보여 주는 기본 시나리오를 제공합니다.  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="prerequisite"></a>필수 조건  
  이 연습을 수행하려면 Northwind 샘플 데이터베이스가 있어야 합니다.  
   
- 이 데이터베이스가 개발 컴퓨터에 없는 경우 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088)에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
+ 개발 컴퓨터에이 데이터베이스가 없는 경우에 Microsoft 다운로드 센터에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
 ## <a name="overview"></a>개요  
  이 연습의 첫 번째 부분은 다음과 같은 네 가지 주요 작업으로 구성됩니다.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/04/2018
   
     -   Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 클릭합니다.  
   
-         -또는-  
+         또는  
   
     -   **새 연결** 을 클릭하여 새 데이터 연결을 구성합니다. 자세한 내용은 참조 [새 연결 추가](/visualstudio/data-tools/add-new-connections)합니다.  
   

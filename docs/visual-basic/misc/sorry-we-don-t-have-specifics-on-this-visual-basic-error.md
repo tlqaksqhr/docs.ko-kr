@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231465"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 하지만 우리 않는&#39;t이 Visual Basic 오류에 대 한 구체적인 정보가
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
   
- [Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Visual Basic 언어](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Visual Basic 언어 구문 및 컴파일러의 일반적인 토론 질문에 대 한 포럼을 제공 합니다.  
   
- [Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Visual Basic Interop 및 업그레이드](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual Basic로 업그레이드 및 상호 운용성 기능을 사용 합니다.  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  
   
- [Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Visual Basic 일반](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  에 대 한 질문에 대 한 포럼을 제공 하지 않으며 다른 포럼에서 다루지 않는 Visual Basic을 사용한 합니다.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
