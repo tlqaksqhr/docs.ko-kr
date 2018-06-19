@@ -1,25 +1,26 @@
 ---
-title: .NET Framework 응용 프로그램 전역화 및 지역화
-ms.date: 03/30/2017
+title: .NET 응용 프로그램 전역화 및 지역화
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251001"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework 응용 프로그램 전역화 및 지역화
+# <a name="globalizing-and-localizing-net-applications"></a>.NET 응용 프로그램 전역화 및 지역화
 하나 이상의 언어로 지역화할 수 있는 응용 프로그램을 포함하여 [지역화 대비 응용 프로그램](http://msdn.microsoft.com/goglobal/bb978433.aspx)의 개발에는 전역화, 지역화 가능성 검토 및 지역화의 세 가지 단계가 포함됩니다.  
   
  [전역화](../../../docs/standard/globalization-localization/globalization.md)  
@@ -37,11 +38,11 @@ ms.lasthandoff: 05/04/2018
   
 -   그 결과, 보다 안정적이며 버그 발생이 적은 지역화된 응용 프로그램이 구현됩니다.  
   
- .NET Framework에서는 전 세계를 대상으로 지역화되는 응용 프로그램 개발을 위해 광범위한 지원을 제공합니다. 특히 .NET Framework 클래스 라이브러리의 많은 형식 멤버는 현재 사용자의 문화권 또는 지정된 문화권의 규약을 반영하는 값을 반환함으로써 전역화를 지원합니다. 또한 .NET Framework는 응용 프로그램 지역화 프로세스를 용이하게 하는 위성 어셈블리를 지원합니다.  
+ .NET에서는 전 세계를 대상으로 지역화되는 응용 프로그램 개발을 위해 광범위한 지원을 제공합니다. 특히 .NET 클래스 라이브러리의 많은 형식 멤버는 현재 사용자의 문화권 또는 지정된 문화권의 규약을 반영하는 값을 반환함으로써 전역화를 지원합니다. 또한 .NET은 응용 프로그램 지역화 프로세스를 용이하게 하는 위성 어셈블리를 지원합니다.  
   
  자세한 내용은 [세계화 설명서](/globalization/)를 참조하세요.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [전역화](../../../docs/standard/globalization-localization/globalization.md)  
  문화권과 언어에 중립적인 응용 프로그램을 디자인하고 코딩하는 것을 포함하여 지역화 대비 응용 프로그램을 만드는 첫 번째 단계를 설명합니다.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
  특정 지역 또는 문화권에 대한 응용 프로그램 사용자 인터페이스 사용자 지정을 포함하는 지역화된 응용 프로그램을 만드는 최종 단계를 설명합니다.  
   
  [문화권을 구분하지 않는 문자열 작업](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- 기본적으로 문화권에 따라 다른 .NET Framework 메서드 및 클래스를 사용하여 문화권을 구분하지 않는 결과를 얻는 방법에 대해 설명합니다.  
+ 기본적으로 문화권에 따라 다른 .NET 메서드 및 클래스를 사용하여 문화권을 구분하지 않는 결과를 얻는 방법에 대해 설명합니다.  
   
  [지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  전역화 및 지역화 구현과 world-ready ASP.NET 응용 프로그램 개발을 위한 최선의 구현 방법을 소개합니다.  

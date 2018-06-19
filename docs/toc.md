@@ -72,6 +72,8 @@
 ## [macOS 필수 조건](core/macos-prerequisites.md)
 ## [Linux 필수 구성 요소](core/linux-prerequisites.md)
 ## [.NET Core의 새로운 기능](core/whats-new/index.md)
+### [.NET Core 2.1의 새로운 기능](core/whats-new/dotnet-core-2-1.md)
+### [.NET Core 2.0의 새로운 기능](core/whats-new/dotnet-core-2-0.md)
 ## [자습서](core/tutorials/index.md)
 ### [Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축](core/tutorials/using-on-windows-full-solution.md)
 ### [macOS에서 .NET Core 시작](core/tutorials/using-on-macos.md)
@@ -96,6 +98,7 @@
 ### [CLI 도구를 사용한 앱 배포](core/deploying/deploy-with-cli.md)
 ### [Visual Studio를 사용한 앱 배포](core/deploying/deploy-with-vs.md)
 ### [플랫폼 간 도구로 NuGet 패키지 만들기](core/deploying/creating-nuget-packages.md)
+### [자체 포함된 배포 런타임 롤포워드](core/deploying/runtime-patch-selection.md)
 ### [런타임 패키지 저장소](core/deploying/runtime-store.md)
 ## [Docker](core/docker/index.md)
 ### [.NET 및 Docker 소개](core/docker/intro-net-docker.md)
@@ -122,20 +125,23 @@
 ## [.NET Core SDK 개요](core/sdk.md)
 ## [.NET Core CLI 도구](core/tools/index.md)
 ### [원격 분석](core/tools/telemetry.md)
+### [전역 도구](core/tools/global-tools.md)
 ### [확장성 모델](core/tools/extensibility.md)
 ### [연속 통합](core/tools/using-ci-with-cli.md)
 ### [사용자 지정 템플릿](core/tools/custom-templates.md)
 ### [dotnet](core/tools/dotnet.md)
 ### [dotnet build](core/tools/dotnet-build.md)
+### [dotnet build-server](core/tools/dotnet-build-server.md)
 ### [dotnet clean](core/tools/dotnet-clean.md)
 ### [dotnet help](core/tools/dotnet-help.md)
 ### [dotnet install-script](core/tools/dotnet-install-script.md)
 ### [dotnet migrate](core/tools/dotnet-migrate.md)
 ### [dotnet msbuild](core/tools/dotnet-msbuild.md)
 ### [dotnet new](core/tools/dotnet-new.md)
-### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
-### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
-### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
+### dotnet nuget
+#### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
+#### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
+#### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
 ### [dotnet pack](core/tools/dotnet-pack.md)
 ### [dotnet publish](core/tools/dotnet-publish.md)
 ### [dotnet restore](core/tools/dotnet-restore.md)
@@ -143,6 +149,11 @@
 ### [dotnet sln](core/tools/dotnet-sln.md)
 ### [dotnet store](core/tools/dotnet-store.md)
 ### [dotnet test](core/tools/dotnet-test.md)
+### dotnet tool
+#### [dotnet tool install](core/tools/dotnet-tool-install.md)
+#### [dotnet tool list](core/tools/dotnet-tool-list.md)
+#### [dotnet tool uninstall](core/tools/dotnet-tool-uninstall.md)
+#### [dotnet tool update](core/tools/dotnet-tool-update.md)
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### 프로젝트 수정 명령
 #### 참조
@@ -155,6 +166,7 @@
 ### [global.json](core/tools/global-json.md)
 ## [.NET Core 추가 도구](core/additional-tools/index.md)
 ### [WCF Web Service Reference 공급자](core/additional-tools/wcf-web-service-reference-guide.md)
+### [dotnet-svcutil](core/additional-tools/dotnet-svcutil-guide.md)
 ### [XML Serializer Generator](core/additional-tools/xml-serializer-generator.md)
 ## [.NET Framework에서 이식](core/porting/index.md)
 ### [.NET Core용 프로젝트 구성](core/porting/project-structure.md)
@@ -215,10 +227,11 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [C#의 새로운 기능](csharp/whats-new/index.md)
-### [C# 7.2의 새로운 기능](csharp/whats-new/csharp-7-2.md)
-### [C# 7.1의 새로운 기능](csharp/whats-new/csharp-7-1.md)
-### [C# 7.0의 새로운 기능](csharp/whats-new/csharp-7.md)
-### [C# 6의 새로운 기능](csharp/whats-new/csharp-6.md)
+### [C# 7.3](csharp/whats-new/csharp-7-3.md)
+### [C# 7.2](csharp/whats-new/csharp-7-2.md)
+### [C# 7.1](csharp/whats-new/csharp-7-1.md)
+### [C# 7.0](csharp/whats-new/csharp-7.md)
+### [C# 6](csharp/whats-new/csharp-6.md)
 ### [C# 버전 기록](csharp/whats-new/csharp-version-history.md)
 ### [언어와 프레임워크 간 관계](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
@@ -549,6 +562,7 @@
 ### [연습: COM 개체를 사용한 상속 구현](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [언어 참조](visual-basic/language-reference/index.md)
+### [언어 버전 구성](visual-basic/language-reference/configure-language-version.md)
 ### [글꼴 표시 및 코드 규칙](visual-basic/language-reference/typographic-and-code-conventions.md)
 ### [Visual Basic 런타임 라이브러리 멤버](visual-basic/language-reference/runtime-library-members.md)
 ### [키워드](visual-basic/language-reference/keywords/index.md)
@@ -1117,11 +1131,12 @@
 <!-- ML.NET Content -->
 # [ML.NET 가이드](machine-learning/index.md)
 ## [자습서](machine-learning/tutorials/index.md)
-### [감정 분석(분류)](machine-learning/tutorials/sentiment-analysis.md)
+### [감정 분석(이진 분류)](machine-learning/tutorials/sentiment-analysis.md)
 ### [택시 요금 예측기(회귀)](machine-learning/tutorials/taxi-fare.md)
 ## [리소스](machine-learning/resources/index.md)
-### [Machine Learning 용어](machine-learning/resources/glossary.md)
-### [Machine Learning 기본](machine-learning/resources/basics.md)
+### [기계 학습 용어](machine-learning/resources/glossary.md)
+### [기계 학습 기본 사항](machine-learning/resources/basics.md)
+### [기계 학습 작업](machine-learning/resources/tasks.md)
 
 <!-- End ML.NET Content -->
 
