@@ -2,12 +2,12 @@
 title: 계산 식(F#)
 description: '제어 흐름 구문 및 바인딩을 사용 하 여 결합 하 고 시퀀스를 지정할 수 있는 F #에서 계산을 작성 하기 위한 편리한 구문을 만드는 방법에 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566615"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207435"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -15,6 +15,7 @@ F #에서 계산 식 시퀀스를 지정할 수 있으며 제어 흐름 구문 �
 
 
 ## <a name="built-in-workflows"></a>기본 제공 워크플로
+
 시퀀스 식은 비동기 워크플로 및 쿼리 식 이므로 계산 식의 예입니다. 자세한 내용은 참조 [시퀀스](sequences.md), [비동기 워크플로](asynchronous-workflows.md), 및 [쿼리 식](query-expressions.md)합니다.
 
 특정 시퀀스 식 및 비동기 워크플로 모두에 공통 된 기능과 계산 식에 대 한 기본 구문을 보여 줍니다.

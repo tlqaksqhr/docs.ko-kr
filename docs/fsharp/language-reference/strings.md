@@ -2,12 +2,12 @@
 title: 문자열(F#)
 description: "F # 'string' 유형의 변경할 수 없는 텍스트의 유니코드 문자 시퀀스로 나타내는 하는 방법에 대해 알아봅니다."
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564861"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207107"
 ---
 # <a name="strings"></a>문자열
 
@@ -17,7 +17,7 @@ ms.locfileid: "33564861"
 `string` 형식은 변경할 수 없는 텍스트를 일련의 유니코드 문자로 나타냅니다. `string`은 .NET Framework에서 `System.String`의 별칭입니다.
 
 ## <a name="remarks"></a>설명
-문자열 리터럴은 따옴표 (") 문자로 구분 됩니다. 백슬래시 문자 (\) 특수 문자를 인코딩하는 데 사용 됩니다. 백슬래시와 함께 다음 문자 라고는 *이스케이프 시퀀스*합니다. 이스케이프 시퀀스가 지원 F # 문자열 리터럴은 다음 표에 나와 있습니다.
+문자열 리터럴은 따옴표 (") 문자로 구분 됩니다. 백슬래시 문자 ( \\ ) 특수 문자를 인코딩하는 데 사용 됩니다. 백슬래시와 함께 다음 문자 라고는 *이스케이프 시퀀스*합니다. 이스케이프 시퀀스가 지원 F # 문자열 리터럴은 다음 표에 나와 있습니다.
 
 |문자|이스케이프 시퀀스|
 |---------|---------------|

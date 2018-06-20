@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208636"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows Forms 응용 프로그램 강화
 Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 응용 프로그램을 향상시키는 데 사용할 수 있는 다양한 기능이 포함되어 있습니다. 다음 항목에서는 이러한 기능과 사용 방법을 설명합니다.  
@@ -30,7 +31,7 @@ Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 응용 �
  [Windows Forms 응용 프로그램의 네트워킹](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  Windows Forms에서 네트워킹을 사용하는 방법을 설명하고 보여 주는 항목의 링크를 포함합니다.  
   
- [Windows Forms 전역화](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Windows Forms 응용 프로그램 전역화](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  Windows Forms 응용 프로그램을 전역화하는 방법을 보여 주는 항목의 링크를 포함합니다.  
   
  [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

@@ -2,12 +2,12 @@
 title: 동적 업데이트
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520359"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207523"
 ---
 # <a name="dynamic-update"></a>동적 업데이트
 동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다. 이를 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 도입된 동적 업데이트 기능에 대해 간략하게 설명합니다.  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  동적 업데이트를 적용한 후에는 워크플로 인스턴스를 다시 시작할 수 있습니다. 이때 새로 업데이트된 정의와 <xref:System.Activities.WorkflowIdentity>를 사용해야 합니다.  
   
 > [!NOTE]
->  작업에 대 한 자세한 내용은 <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowIdentity>, 참조[및 버전 관리를 사용 하 여 WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)합니다.  
+>  작업에 대 한 자세한 내용은 <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowIdentity>, 참조 [및 버전 관리를 사용 하 여 WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)합니다.  
   
  다음 예제에서는 이전 예제에서 컴파일된 `MortgageWorkflow_v1.1.xaml` 워크플로를 업데이트된 워크플로 정의를 사용하여 로드하고 다시 시작합니다.  
   

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 5014891b4edfa062f16d2c4b97c4d162d014fcd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563560"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207471"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 언어 기능
-XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의 약식 용어입니다. XAML 2009에서는 여러 가지 새로운 지시문과 구문이 도입되었습니다. 여기에는[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md), [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md), [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md), [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md), 공용 언어 기본 형식에 대한 기본 제공 형식(예: `x:Char`)이 포함됩니다.  
+XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의 약식 용어입니다. XAML 2009에서는 여러 가지 새로운 지시문과 구문이 도입되었습니다. 여기에 [X:arguments 지시문](../../../docs/framework/xaml-services/x-arguments-directive.md); [X:factorymethod 지시문](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [X:reference 태그 확장](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [X:typearguments 지시문 ](../../../docs/framework/xaml-services/x-typearguments-directive.md); 및 공용 언어 기본 형식에 대 한 기본 제공 형식 (예를 들어 `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>WPF 및 Visual Studio의 XAML 2009 지원  

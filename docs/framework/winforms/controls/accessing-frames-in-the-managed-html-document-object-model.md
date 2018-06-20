@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: a9bd6bb730ff84a48c180c7f1ac435afbf75fbc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b48a93cef2ea8fd2d39f58d8f458c4b287a10154
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525519"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207510"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델의 프레임에 액세스
 일부 HTML 문서 중 구성 됩니다 *프레임*, 고유한 HTML 문서를 포함할 수 있는 창입니다. 프레임을 사용하면 탐색 모음과 같이 페이지 조각 하나 이상이 정적으로 유지되지만 다른 프레임의 콘텐츠가 지속적으로 바뀌는 HTML 페이지를 쉽게 만들 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "33525519"
   
  <xref:System.Windows.Forms.HtmlWindow.Open%2A> 및 <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> 메서드를 사용하여 연 창에도 이 규칙이 적용됩니다. <xref:System.Windows.Forms.WebBrowser> 컨트롤에 호스트된 페이지와 다른 도메인에 있는 창을 열면 해당 창을 이동하거나 콘텐츠를 검사할 수 없습니다. <xref:System.Windows.Forms.WebBrowser> 컨트롤을 통해 Windows Forms 기반 응용 프로그램을 배포하는 데 사용된 웹 사이트를 표시하는 경우에도 이들 제한 사항이 적용됩니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 배포 기술을 사용하여 웹 사이트 A에서 응용 프로그램을 설치하고 <xref:System.Windows.Forms.WebBrowser>를 사용하여 웹 사이트 B를 표시하면 웹 사이트 B의 데이터에 액세스할 수 없습니다.  
   
- 사이트 간 스크립팅 하는 방법에 대 한 자세한 내용은 참조[에 대 한 프레임 간 스크립팅 및 보안](http://msdn.microsoft.com/library/ms533028.aspx)합니다.  
+ 사이트 간 스크립팅 하는 방법에 대 한 자세한 내용은 참조 [에 대 한 프레임 간 스크립팅 및 보안](http://msdn.microsoft.com/library/ms533028.aspx)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [FRAME 요소 &#124; frame 개체](http://msdn.microsoft.com/library/ms535250.aspx)  

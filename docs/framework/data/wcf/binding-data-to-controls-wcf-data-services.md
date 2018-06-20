@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a38727a638f7764c01db5da6506b705267b7bd6e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365568"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207484"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>컨트롤에 데이터 바인딩(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 `ComboBox`, `ListView` 등의 컨트롤을 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스에 바인딩할 수 있습니다. <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속되는 이 컬렉션에는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드의 데이터가 포함됩니다. 이 클래스는 항목이 추가 또는 제거될 때 알림을 제공하는 동적 데이터 컬렉션을 나타냅니다. 인스턴스를 사용 하는 경우 <xref:System.Data.Services.Client.DataServiceCollection%601> 데이터 바인딩에 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 개체에서 추적 되는지 확인 하 여 이러한 이벤트를 처리 하는 클라이언트 라이브러리는 <xref:System.Data.Services.Client.DataServiceContext> 바인딩된 UI 요소의 데이터와 동기화 된 상태로 유지 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "33365568"
  <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스는 <xref:System.Collections.Specialized.INotifyCollectionChanged> 인터페이스를 간접적으로 구현하여 개체가 컬렉션에 추가 또는 제거된 경우 컨텍스트에 알립니다. <xref:System.Data.Services.Client.DataServiceCollection%601>과 함께 사용된 데이터 서비스 형식 개체는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스도 구현하여 바인딩 컬렉션의 개체 속성이 변경된 경우 <xref:System.Data.Services.Client.DataServiceCollection%601>에 알려야 합니다.  
   
 > [!NOTE]
->  사용 하는 경우는 **서비스 참조 추가** 대화 또는[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 도구에 `/dataservicecollection` 클라이언트 데이터 서비스 클래스를 생성 하려면 옵션에서 생성 된 데이터 클래스는 를구현합니다.<xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스입니다. 자세한 내용은 참조 [하는 방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)합니다.  
+>  사용 하는 경우는 **서비스 참조 추가** 대화 또는 [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 도구에 `/dataservicecollection` 클라이언트 데이터 서비스 클래스를 생성 하려면 옵션에서 생성 된 데이터 클래스는 를구현합니다.<xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스입니다. 자세한 내용은 참조 [하는 방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)합니다.  
   
 ## <a name="creating-the-binding-collection"></a>바인딩 컬렉션 만들기  
  제공된 <xref:System.Data.Services.Client.DataServiceCollection%601> 인스턴스와 선택적으로 실행 시 <xref:System.Data.Services.Client.DataServiceContext> 인스턴스를 반환하는 <xref:System.Data.Services.Client.DataServiceQuery%601> 또는 LINQ 쿼리를 통해 클래스 생성자 메서드 중 하나를 호출하여 <xref:System.Collections.Generic.IEnumerable%601> 클래스의 새 인스턴스를 만듭니다. 이 <xref:System.Collections.Generic.IEnumerable%601> 구체화 되는 바인딩 컬렉션에 대 한 개체의 소스를 제공 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 자세한 내용은 참조 [개체 구체화](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)합니다. 기본적으로 컬렉션에 삽입된 항목 및 바인딩된 개체의 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext>에 의해 자동으로 추적됩니다. 이러한 변경 내용을 수동으로 추적 해야 할 경우 사용 하는 생성자 메서드 중 하나를 호출는 `trackingMode` 매개 변수 값을 지정 하 고 <xref:System.Data.Services.Client.TrackingMode.None>합니다.  

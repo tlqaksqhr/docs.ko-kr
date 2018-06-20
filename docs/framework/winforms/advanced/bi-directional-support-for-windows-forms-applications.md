@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208611"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 응용 프로그램에 대한 양방향 지원
 Visual Studio를 사용 하 여 예: 아랍어 및 히브리어 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  
@@ -116,6 +117,7 @@ Visual Studio를 사용 하 여 예: 아랍어 및 히브리어 양방향 (오�
   
  일부 컨트롤은 봉인됩니다. 따라서 해당 컨트롤에서 새 컨트롤을 파생시킬 수 없습니다. 여기에는 <xref:System.Windows.Forms.ImageList> 및 <xref:System.Windows.Forms.ProgressBar> 컨트롤이 포함됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [ASP.NET 웹 응용 프로그램에 대한 양방향 지원](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Windows Forms 전역화](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+[ASP.NET 웹 응용 프로그램에 대한 양방향 지원](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Windows Forms 응용 프로그램 전역화](globalizing-windows-forms.md)

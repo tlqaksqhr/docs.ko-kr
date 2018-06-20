@@ -4,16 +4,16 @@ description: 검색 및 패딩을 사용 하 여 암호 블록 체인 (CBC) 모�
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327460"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208693"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>타이밍 ֳ 패딩을 사용 하 여 CBC 모드 대칭 암호 해독
 
-현재 알려진된 암호화 연구에 따라 Microsoft 있다고 인식 하는 매우 특정 한 상황을 제외 하 고는 더 이상 확인할 수 있는 안쪽 여백 되었을 때 대칭 암호화의 암호 블록 체인 (CBC) 모드를 사용 하 여 암호화 된 데이터를 해독 하는 안전 암호 텍스트의 무결성을 확인 하지 않고 적용 합니다.
+Microsoft가 확인할 수 있는 안쪽 여백을 제외 하 고는 암호 텍스트의 무결성을 확인 하지 않고 적용 된 경우에 대칭 암호화의 암호 블록 체인 (CBC) 모드를 사용 하 여 암호화 된 데이터를 해독 하는 안전 더 이상 인지 매우 구체적인 경우입니다. 이 결정을이 내리도록 현재 알려진된 암호화 연구를 기반으로 합니다. 
 
 ## <a name="introduction"></a>소개
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565901"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207549"
 ---
 # <a name="xkey-directive"></a>x:Key 지시문
 고유 하 게 생성 되 고 XAML 정의 사전에서 참조 하는 요소를 식별 합니다. 추가 `x:Key` XAML 개체 요소 값은 예를 들어 WPF에에서 리소스 사전에 리소스를 식별 하는 가장 일반적인 방법은 <xref:System.Windows.ResourceDictionary>합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "33565901"
   
  키 및 이름을 사용 하 여 다른 지시문 및 언어 요소 (`x:Key` 비교 `x:Name`)의 기본 XAML 정의 합니다. 키와 이름 WPF 정의와 이러한 개념 중 응용 프로그램에서 다양 한 상황에 사용도 됩니다. 자세한 내용은 참조 [WPF XAML 이름 범위](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)합니다.  
   
- 앞서 설명한 것 처럼 키의 값 태그 확장을 통해 제공 될 수 있습니다 및 문자열 값이 아닌 일 수 있습니다. 값은 예제 WPF 시나리오 `x:Key` 될 수 있습니다는[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)합니다. 특정 컨트롤의 스타일을 완전히 바꾸지 않고 모양과 및 해당 컨트롤의 동작에 영향을 주는 사용자 지정 스타일 리소스에 대 한 해당 유형의 스타일 키를 노출 합니다. 이러한 키의 예로 <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>합니다.  
+ 앞서 설명한 것 처럼 키의 값 태그 확장을 통해 제공 될 수 있습니다 및 문자열 값이 아닌 일 수 있습니다. 값은 예제 WPF 시나리오 `x:Key` 될 수 있습니다는 [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)합니다. 특정 컨트롤의 스타일을 완전히 바꾸지 않고 모양과 및 해당 컨트롤의 동작에 영향을 주는 사용자 지정 스타일 리소스에 대 한 해당 유형의 스타일 키를 노출 합니다. 이러한 키의 예로 <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>합니다.  
   
  WPF 병합 된 사전 기능 키 고유성 및 키 조회 동작에 대 한 추가 고려 사항을 소개합니다. 자세한 내용은 [병합된 리소스 사전](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)을 참조하세요.  
   
