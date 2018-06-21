@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522046"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270437"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사
 간단한 그래픽, 애니메이션을 적용할 때 발생할 수 깜빡임을 또는 부적합 한 다른 시각 효과가 있습니다. 이 문제는 한 가지 방법은 그래픽에는 "bitblt" 프로세스를 사용 하는 것입니다. Bitblt는는 "비트 블록 전송을"는 색 데이터 픽셀의 원점 사각형에서 대상 사각형을 픽셀입니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "33522046"
  아래 예제에서는 도형 폼에서 그려지는 해당 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다. 그런 다음 <xref:System.Drawing.Graphics.CopyFromScreen%2A> 셰이프를 복제 하는 메서드를 사용 합니다.  
   
 > [!NOTE]
->  폼의 설정 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 속성을 `true` 그래픽 기반 코드의 하면는 <xref:System.Windows.Forms.Control.Paint> 이중 버퍼링 된 이벤트 수입니다. 아래 코드를 사용 하는 경우 모든 큰 성능 향상 수 있게 됩니다, 하는 동안 설정 하는 것 보다 복잡 한 그래픽 조작이 코드로 작업할 때 염두에서에 둬야 합니다.  
+>  폼의 설정 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 속성을 `true` 그래픽 기반 코드의 하면는 <xref:System.Windows.Forms.Control.Paint> 이중 버퍼링 된 이벤트 수입니다. 아래 코드를 사용 하는 경우에 아무런 성능 향상 수 있게 됩니다, 하는 동안 설정 하는 것 보다 복잡 한 그래픽 조작이 코드로 작업할 때 염두에서에 둬야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  
