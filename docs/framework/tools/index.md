@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ec8a5b1f665196fee62a4556e59201f45a6bff
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312042"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314687"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 .NET Framework 도구를 사용하면 .NET Framework를 대상으로 하는 응용 프로그램 및 구성 요소를 보다 쉽게 만들고 배포하고 관리할 수 있습니다.  
   
-이 단원에서 설명하는 대부분의 .NET Framework 도구는 Visual Studio와 함께 자동으로 설치됩니다. Visual Studio를 다운로드하려면 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지를 방문하세요.
+이 단원에서 설명하는 대부분의 .NET Framework 도구는 Visual Studio와 함께 자동으로 설치됩니다. Visual Studio를 다운로드하려면 [Visual Studio 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지를 방문하세요.
   
  어셈블리 캐시 뷰어(Shfusion.dll)를 제외한 모든 도구는 명령줄에서 실행할 수 있습니다. Shfusion.dll에 액세스하려면 파일 탐색기를 사용해야 합니다.  
   
