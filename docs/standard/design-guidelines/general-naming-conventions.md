@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578042"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338106"
 ---
 # <a name="general-naming-conventions"></a>일반 명명 규칙
 이 섹션에서는 일반 명명 규칙 단어 선택 관련 된 약어 및 머리글자어 및 권장 사항을 사용 하 여 언어별 이름을 사용 하지 않도록 하는 방법에 대 한 지침을 설명 합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "33578042"
   
  **✓ 않습니다** 선호 기존 API의 새 버전을 나타내는 접두사 보다는 접미사를 추가 합니다.  
   
- 이 설명서를 검색할 때 검색 도움이 또는 Intellisense를 사용 하 여 합니다. 대부분의 브라우저와 Intellisense 식별자 사전순으로 표시 되므로 새로운 Api에 가까운 이전 버전의 API 구성할 수 됩니다.  
+ 이 설명서를 검색할 때 검색 도움이 또는 IntelliSense를 사용 하 여 합니다. 대부분의 브라우저와 IntelliSense 식별자 사전순으로 표시 되므로 새로운 Api에 가까운 이전 버전의 API 구성할 수 됩니다.  
   
  **✓ 고려** 접두사 또는 접미사를 추가 하는 대신 새로운, 하지만 의미 있는 식별자를 사용 하 여 합니다.  
   
