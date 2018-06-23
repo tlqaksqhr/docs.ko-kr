@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ceb4d79bb88e41e62f3ee136b6beb3324b3dbd7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 876bf9bf952aa9591a9ccbe51baaca9c5c71388e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809718"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314778"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 
@@ -308,7 +308,7 @@ Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내�
 
     [!code-xaml[ExpenseIt#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#12)]
 
-6. 설정의 <xref:System.Windows.Controls.Panel.Background%2A> 의 <xref:System.Windows.Controls.Grid> 되도록는 *watermark.png* 사이 다음 XAML 위치를 추가 하 여 이미지 파일의 `<Grid>` 및 `<\/Grid>` 태그:
+6. 설정의 <xref:System.Windows.Controls.Panel.Background%2A> 의 <xref:System.Windows.Controls.Grid> 되도록는 *watermark.png* 사이 다음 XAML 위치를 추가 하 여 이미지 파일의 `<Grid>` 및 `</Grid>` 태그:
 
     [!code-xaml[ExpenseIt#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#14)]
 

@@ -4,12 +4,12 @@ description: 리프트 이동 하 고 기존 응용 프로그램을 Azure 클라
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 3fcfdca68e05494785148cbbe149cdc2f812c577
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 10af3a8ce1b9f501d7b646c8d49fcecab29af821
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956385"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314801"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>기존.NET 응용 프로그램을 Azure 클라우드 및 Windows 컨테이너를 현대화 할 (2nd edition)
 
@@ -21,7 +21,7 @@ Microsoft Corporation의 사업부
 One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-Copyright © Microsoft corporation 2018  
+Copyright © 2018 by Microsoft Corporation  
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제할 수 없습니다.
 
@@ -121,7 +121,7 @@ Microsoft 및에 나열 된 상표 http://www.microsoft.com "상표" 웹 페이�
 
 - **클라우드 인프라 준비** (rehost 또는 basic 리프트 & 이동): 대부분의 조직에서는 원하는 첫 번째 단계로, 신속 하 게 클라우드 마이그레이션 전략을 실행 합니다. 이 경우 응용 프로그램은 다시 호스트 된 합니다. 대부분의 재호스팅은 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 및 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) 같은 클라우드 도구 기반의 Azure로 마이그레이션하는 데 도움이 되는 지침, 정보 및 메커니즘을 제공하는 서비스인 [Azure Migrate](https://aka.ms/azuremigrate)를 사용하여 자동화할 수 있습니다. 레거시 앱을 클라우드로 이동할 때 자산에 대한 인프라 세부 정보를 파악할 수 있도록 수동으로 재호스팅을 설정할 수도 있습니다. 거의 Azure에서 Vm에 응용 프로그램를 이동할 수는 예를 들어 사소한 구성 변경만와 수정한 것입니다. 이 경우 네트워킹은 온-프레미스 환경과 비슷합니다. Azure에서 가상 네트워크를 만드는 경우에 특히 비슷합니다.
 
-- **클라우드 액세스에 최적화 된** (관리 되는 서비스와 Windows 컨테이너):이 모델은 응용 프로그램의 핵심 아키텍처를 변경 하지 않고는 클라우드에서 같은 몇 가지 중요 한 이점을 얻을 수 있도록 몇 가지 중요 한 배포 최적화를 수행 하는 방법에 대 한 합니다. 여기서 기본 단계는 기존의 .NET Framework 응용 프로그램에 [Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/) 지원을 추가하는 것입니다. 이러한 중요 한 단계 (컨테이너 화) 전반적인 리프트 및 shift 작업 light 이므로 코드를 건드리지 필요 하지 않습니다. [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 또는 Visual Studio 같은 도구와 [Docker](https://www.docker.com/)용 도구를 사용할 수 있습니다. Visual Studio는 ASP.NET 응용 프로그램 및 Windows 컨테이너 이미지에 대한 스마트 기본값을 자동으로 선택합니다. 이러한 도구는 신속한 내부 루프와 Azure로 컨테이너를 가져올 수 있는 빠른 경로를 제공합니다. 여러 환경에 배포할 때 민첩성이 향상됩니다. 그런 다음 프로덕션으로 이동 배포할 수 있습니다 하 여 Windows 컨테이너 [컨테이너에 대 한 Azure 웹 앱](https://azure.microsoft.com/en-us/services/app-service/containers/), [Azure 컨테이너 인스턴스 (ACI) 및 Windows Server 2016와 컨테이너는 IaaS 접근 방식을 선호 하는 경우와 Azure Vm입니다. 같은 orchestrators에 약간 더 복잡 한 다중 컨테이너 응용 프로그램에 대 한 [Azure 서비스 패브릭](https://azure.microsoft.com/services/service-fabric/) 또는 [Azure Kubernetes 서비스 (AKS/ACS)](https://azure.microsoft.com/en-us/services/container-service/)합니다. 이 초기 현대화 중에 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) 같은 도구를 사용한 모니터링, [Visual Studio Team Services](https://www.visualstudio.com/team-services/)를 사용하는 앱 수명 주기에 대한 CI/CD 파이프라인, Azure에 제공되는 여러 데이터 리소스 서비스와 같은 클라우드의 자산을 추가할 수도 있습니다. 예를 들어 원래 기존의 [ASP.NET Web Forms](https://www.asp.net/web-forms) 또는 [ASP.NET MVC](https://www.asp.net/mvc)를 사용하여 개발되었지만 이제 Windows 컨테이너를 사용하여 배포할 모놀리식 웹앱을 수정할 수 있습니다. Windows 컨테이너를 사용할 경우 응용 프로그램의 핵심 아키텍처를 변경하지 않고 데이터도 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/)의 데이터베이스로 마이그레이션해야 합니다.
+- **클라우드 액세스에 최적화 된** (관리 되는 서비스와 Windows 컨테이너):이 모델은 응용 프로그램의 핵심 아키텍처를 변경 하지 않고는 클라우드에서 같은 몇 가지 중요 한 이점을 얻을 수 있도록 몇 가지 중요 한 배포 최적화를 수행 하는 방법에 대 한 합니다. 여기서 기본 단계는 기존의 .NET Framework 응용 프로그램에 [Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/) 지원을 추가하는 것입니다. 이러한 중요 한 단계 (컨테이너 화) 전반적인 리프트 및 shift 작업 light 이므로 코드를 건드리지 필요 하지 않습니다. [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 또는 Visual Studio 같은 도구와 [Docker](https://www.docker.com/)용 도구를 사용할 수 있습니다. Visual Studio는 ASP.NET 응용 프로그램 및 Windows 컨테이너 이미지에 대한 스마트 기본값을 자동으로 선택합니다. 이러한 도구는 신속한 내부 루프와 Azure로 컨테이너를 가져올 수 있는 빠른 경로를 제공합니다. 여러 환경에 배포할 때 민첩성이 향상됩니다. 그런 다음 프로덕션으로 이동 배포할 수 있습니다 하 여 Windows 컨테이너 [컨테이너에 대 한 Azure 웹 앱](https://azure.microsoft.com/en-us/services/app-service/containers/), [Azure 컨테이너 인스턴스 (ACI) 및 Windows Server 2016와 컨테이너는 IaaS 접근 방식을 선호 하는 경우와 Azure Vm입니다. 같은 orchestrators에 약간 더 복잡 한 다중 컨테이너 응용 프로그램에 대 한 [Azure 서비스 패브릭](https://azure.microsoft.com/services/service-fabric/) 또는 [Azure Kubernetes 서비스 (AKS/ACS)](https://azure.microsoft.com/en-us/services/container-service/)합니다. 이 초기 현대화 중에 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) 같은 도구를 사용한 모니터링, [Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/)를 사용하는 앱 수명 주기에 대한 CI/CD 파이프라인, Azure에 제공되는 여러 데이터 리소스 서비스와 같은 클라우드의 자산을 추가할 수도 있습니다. 예를 들어 원래 기존의 [ASP.NET Web Forms](https://www.asp.net/web-forms) 또는 [ASP.NET MVC](https://www.asp.net/mvc)를 사용하여 개발되었지만 이제 Windows 컨테이너를 사용하여 배포할 모놀리식 웹앱을 수정할 수 있습니다. Windows 컨테이너를 사용할 경우 응용 프로그램의 핵심 아키텍처를 변경하지 않고 데이터도 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/)의 데이터베이스로 마이그레이션해야 합니다.
 
 - **클라우드-네이티브**:, 도입 된 설계 생각해 야 [클라우드 네이티브](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) 작업을 수행 하는 여러 독립적인 개발 팀에서 대규모 또는 복잡 한 응용 프로그램을 대상으로 하는 경우 응용 프로그램 개발 하 고 자치 적으로 배포할 수 있는 다른 microservices 합니다. 마이크로 서비스 당 granularized와 독립적인 확장성 인해 또한 이러한 아키텍처 접근 방법 매우 중요 한 데 따르는 어려움과 복잡성 맞서게 하지만 PaaS 클라우드를 사용 하 여 크게 간소화할 수 있습니다 및 orchestrators 좋아요 [Azure Kubernetes 서비스 (AKS/ACS)](https://azure.microsoft.com/en-us/services/container-service/) (Kubernetes 관리 됨), [Azure 서비스 패브릭 및 [Azure 함수](https://azure.microsoft.com/services/functions/) 서버가 없는 접근 방식에 대 한 합니다. 이러한 모든 방법 (예: microservices 및 서버 없이) 일반적으로 클라우드에 대 한 설계 하 고 새 코드를 작성 해야 할-특정 PaaS 플랫폼에 적용 되는 코드 또는 microservices와 같은 특정 아키텍처에 맞게 조정 해야 하는 코드입니다.
 

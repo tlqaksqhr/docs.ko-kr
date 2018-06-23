@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529885"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314765"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms의 자동 배율 조정
 자동 크기 조정은 한 컴퓨터에서 특정 디스플레이 해상도 또는 시스템 글꼴로 디자인된 폼과 해당 컨트롤이 다른 디스플레이 해상도 또는 시스템 글꼴을 사용하는 다른 컴퓨터에서 제대로 표시될 수 있게 합니다. 이 기능은 사용자 및 다른 개발자 컴퓨터 둘 다의 네이티브 Windows 및 기타 응용 프로그램과 일치하도록 폼과 해당 컨트롤의 크기가 지능적으로 조정되도록 합니다. 자동 크기 조정 및 시각적 스타일에 대한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 지원을 통해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램은 각 사용자 컴퓨터의 네이티브 Windows 응용 프로그램과 비교하여 일관된 모양과 느낌을 유지할 수 있습니다.
@@ -42,14 +42,6 @@ ms.locfileid: "33529885"
 - 자동 크기 조정이 <xref:System.Windows.Forms.Form> 클래스에서만 구현되고 <xref:System.Windows.Forms.ContainerControl> 클래스에서는 구현되지 않았습니다. 따라서 사용자 정의 컨트롤이 폼과 동일한 해상도로 디자인되고 디자인 타임에 폼에 배치된 경우에만 제대로 크기가 조정되었습니다.
 
 - 컴퓨터 해상도가 동일한 경우에만 여러 개발자가 동시에 폼과 해당 자식 컨트롤을 디자인할 수 있었습니다. 마찬가지로, 폼의 상속이 부모 폼과 연결된 해상도에 따라 달라지도록 했습니다.
-
-> [!NOTE]
-> 극단적인 차이점을 디스플레이 Dpi, 특히 최신 2-1의 장치에서에서 여전히.NET Framework 및 Visual Studio의 최신 버전으로 발생할 수 있습니다. 서로 다른 DPI 디스플레이 사용 하 여 팀에서이 문제를 해결 하려면 Visual Studio 있는지 항상 확인 Windows Forms 디자이너에는 항상 96 DPI에서 레이아웃 계산 기반 하므로 비 DPI 인식 모드로 시작 합니다. 이 위해 Visual Studio의 HighDPI 인식 하지 않으려면 다음 레지스트리 키를 설정 하기만 합니다.
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 버전 2.0에서 도입된 최신 레이아웃 관리자(예: <xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel>)와 호환되지 않습니다.
 

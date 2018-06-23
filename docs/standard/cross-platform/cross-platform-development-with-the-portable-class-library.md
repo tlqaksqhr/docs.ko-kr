@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579667"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314941"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발
 Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프로젝트 형식으로 Microsoft 플랫폼용 플랫폼 간 앱 및 라이브러리를 신속하고 쉽게 빌드할 수 있습니다.  
@@ -51,8 +51,8 @@ Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프�
 |Visual Studio Express 2010 버전|아니요.|  
 |Visual Studio 2012 Professional, Premium 또는 Ultimate|예. Windows Phone 8.0 지원에 대 한 설치는 [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)합니다.|  
 |Visual Studio Express 2012 버전|아니요.|  
-|Visual Studio 2013 Professional, Premium 또는 Ultimate|예. Windows Phone 8.1 지원을 설치는 [최신 버전의 Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/)합니다.|  
-|Windows 용 visual Studio Community 2013|예, 설치할 때는 [최신 버전의 Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), 업데이트 2 포함 합니다.|  
+|Visual Studio 2013 Professional, Premium 또는 Ultimate|예. Windows Phone 8.1 지원을 설치는 [최신 버전의 Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/)합니다.|  
+|Windows 용 visual Studio Community 2013|예, 설치할 때는 [최신 버전의 Visual Studio Community 2013](https://visualstudio.microsoft.com/vs/older-downloads/), 업데이트 2 포함 합니다.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>이식 가능한 클래스 라이브러리 프로젝트 만들기  
