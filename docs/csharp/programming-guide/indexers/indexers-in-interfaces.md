@@ -5,12 +5,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: cb039755b7440cbfd1f782cc118d11a03b47da04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120b6e72a6ab906437c593d6eb33024d1df8f52b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331125"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207967"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>인터페이스의 인덱서(C# 프로그래밍 가이드)
 [interface](../../../csharp/language-reference/keywords/interface.md)에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서 접근자와 [class](../../../csharp/language-reference/keywords/class.md) 인덱서 접근자 간에는 다음과 같은 차이점이 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "33331125"
  앞의 예제에서는 인터페이스 멤버의 정규화된 이름을 사용하여 명시적 인터페이스 멤버 구현을 사용할 수 있습니다. 예:  
   
 ```  
-public string ISomeInterface.this[int index]   
+string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -43,7 +43,7 @@ public string ISomeInterface.this[int index]
  그러나 정규화된 이름은 클래스가 동일한 인덱서 시그니처로 둘 이상의 인터페이스를 구현할 때 모호성을 피하기 위해서만 필요합니다. 예를 들어 `Employee` 클래스가 두 인터페이스 `ICitizen` 및 `IEmployee`를 구현하고 두 인터페이스의 인덱서 시그니처가 같으면 명시적 인터페이스 멤버 구현이 필요합니다. 즉, 다음과 같은 인덱서 선언이 있다고 가정합니다.  
   
 ```  
-public string IEmployee.this[int index]   
+string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -51,7 +51,7 @@ public string IEmployee.this[int index]
  이 선언은 `IEmployee` 인터페이스의 인덱서를 구현합니다. 또한 다음과 같은 선언이 있다고 가정합니다.  
   
 ```  
-public string ICitizen.this[int index]
+string ICitizen.this[int index]
 {   
 }   
 ```  

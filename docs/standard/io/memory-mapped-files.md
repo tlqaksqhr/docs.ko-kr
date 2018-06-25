@@ -7,15 +7,16 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - memory-mapped files
-- inter-process communiation
+- inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cf2d7f36dbfffe1c86e32eec5137840837612f4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208199"
 ---
 # <a name="memory-mapped-files"></a>메모리 매핑된 파일
 메모리 매핑된 파일에는 가상 메모리에 있는 파일의 내용이 포함됩니다. 파일과 메모리 공간 사이의 매핑을 사용하면 여러 프로세스를 포함한 응용 프로그램이 메모리에 직접 읽고 쓰는 방식으로 파일을 수정할 수 있습니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 네이티브 Windows 함수가 메모리 매핑된 파일에 액세스할 때와 같은 방식으로 관리 코드를 사용하여 메모리 매핑된 파일에 액세스할 수 있습니다. 이에 대해서는 [메모리 매핑된 파일 관리](https://msdn.microsoft.com/library/ms810613.aspx)에 설명되어 있습니다.  

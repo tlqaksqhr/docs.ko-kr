@@ -3,12 +3,12 @@ title: 의미 체계 분석 시작
 description: 이 자습서는 .NET Compiler SDK를 사용하여 의미 체계 분석으로 작업하는 방법의 개요를 제공합니다.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 360d31b86a677adfe51ebd6752fca8475814fd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358754"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270463"
 ---
 # <a name="get-started-with-semantic-analysis"></a>의미 체계 분석 시작
 
@@ -131,7 +131,7 @@ Press any key to continue . . .
 
 LINQ 쿼리 구문을 사용하여 전체 쿼리를 빌드한 다음, 콘솔에서 모든 메서드 이름을 표시할 수 있습니다.
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 프로그램을 빌드하고 실행합니다. 다음과 같은 내용이 출력됩니다.
 

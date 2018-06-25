@@ -12,16 +12,19 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e58d14eb29939ea1b91b5bdb75f691f5233d8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401123"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270476"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
   
+> [!WARNING]
+> 강력한 이름을 보안용으로 사용하지 마세요. 강력한 이름은 고유한 ID를 제공할 뿐입니다.
+
  강력한 이름 지정 및 강력한 이름의 어셈블리에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md) 및 [방법: 강력한 이름으로 어셈블리 서명](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)을 참조하세요.  
   
  강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 이 도구를 시작하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  

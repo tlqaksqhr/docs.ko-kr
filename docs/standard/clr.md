@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7887c1142b721249526a318257149e419affd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572293"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315123"
 ---
 # <a name="common-language-runtime-clr-overview"></a>CLR(공용 언어 런타임) 개요
 
@@ -32,7 +32,7 @@ ms.locfileid: "33572293"
 컴파일러와 도구는 공용 언어 런타임의 기능을 노출하며 관리되는 이 실행 환경을 활용하는 코드를 작성할 수 있게 해줍니다. 런타임을 대상으로 하는 언어 컴파일러를 사용하여 개발한 코드를 관리 코드라고 합니다. 이 코드에서는 언어 간 통합, 언어 간 예외 처리, 향상된 보안, 버전 관리 및 배포 지원, 구성 요소 상호 작용을 위한 간단한 모델, 디버깅 및 프로파일링 서비스 등의 기능을 이용합니다.
 
 > [!NOTE]
-> 형식 시스템, 메타데이터의 형식 및 런타임 환경(가상 실행 시스템)은 모두 공용 표준인 ECMA Common Language Infrastructure 사양으로 정의하기 때문에 컴파일러 및 도구에서 공용 언어 런타임이 사용할 수 있는 출력을 생성할 수 있습니다. 자세한 내용은 [ECMA C# 및 공용 언어 인프라 사양](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 참조하세요.
+> 형식 시스템, 메타데이터의 형식 및 런타임 환경(가상 실행 시스템)은 모두 공용 표준인 ECMA Common Language Infrastructure 사양으로 정의하기 때문에 컴파일러 및 도구에서 공용 언어 런타임이 사용할 수 있는 출력을 생성할 수 있습니다. 자세한 내용은 [ECMA C# 및 공용 언어 인프라 사양](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 참조하세요.
 
 런타임에서 관리 코드에 서비스를 제공할 수 있게 하려면 언어 컴파일러에서 사용자 코드의 형식, 멤버 및 참조를 설명하는 메타데이터를 내보내야 합니다. 메타데이터는 코드와 함께 저장되며 로드 가능한 모든 공용 언어 런타임 PE(이식 가능한 실행) 파일에는 메타데이터가 포함되어 있습니다. 런타임에서는 메타데이터를 사용하여 클래스를 찾고 로드하며, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.
 

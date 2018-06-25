@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 2ded01ef3192e0f34d586cd63d93b894b5347e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275027"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208072"
 ---
 # <a name="-operator-c-reference"></a>() 연산자(C# 참조)
 괄호는 식에서 연산의 순서를 지정하는 데 사용될 뿐만 아니라 다음 작업을 수행하는 데도 사용됩니다.  
@@ -32,8 +32,6 @@ ms.locfileid: "33275027"
  `()` 연산자를 오버로드할 수 없습니다.  
   
  자세한 내용은 [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)을 참조하세요.  
-  
- 캐스트 식은 모호한 구문이 될 수 있습니다. 예를 들어 `(x)–y` 식은 캐스트 식(-y를 형식 x로 캐스트) 또는 괄호로 묶은 식과 결합된 더하기 식으로 해석될 수 있습니다.  
   
  메서드 호출에 대한 자세한 내용은 [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)를 참조하세요.  
   

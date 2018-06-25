@@ -3,12 +3,12 @@ title: C#의 클래스 및 개체 - C# 언어 둘러보기
 description: C#을 처음 사용하시나요? 클래스, 개체 및 상속 개요 읽어보기
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1a8c34588cce21f4f4164df57aa8044074c23783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357344"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298294"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -207,7 +207,7 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 ### <a name="method-overloading"></a>메서드 오버로드
 
-메서드 *오버로드*는 동일한 클래스가 고유한 시그니처를 갖는 한, 동일한 이름을 갖도록 허용합니다. 오버로드된 메서드의 호출을 컴파일할 때 컴파일러는 *오버로드 확인*을 사용하여 호출할 특정 메서드를 결정합니다. 오버로드 확인은 인수와 가장 적합하게 일치하는 단일 메서드를 찾으며, 최상의 일치 메서드를 찾을 수 있는 경우 오류를 보고합니다. 다음 예제에서는 실제로 진행되는 오버로드 확인을 보여 줍니다. `Main` 메서드의 각 호출에 대한 주석은 실제로 호출되는 메서드를 보여 줍니다.
+메서드 *오버로드*는 동일한 클래스가 고유한 시그니처를 갖는 한, 동일한 이름을 갖도록 허용합니다. 오버로드된 메서드의 호출을 컴파일할 때 컴파일러는 *오버로드 확인*을 사용하여 호출할 특정 메서드를 결정합니다. 오버로드 확인은 인수와 가장 적합하게 일치하는 단일 메서드를 찾으며, 최상의 일치 메서드를 찾을 수 있는 경우 오류를 보고합니다. 다음 예제에서는 실제로 진행되는 오버로드 확인을 보여 줍니다. `UsageExample` 메서드의 각 호출에 대한 주석은 실제로 호출되는 메서드를 보여 줍니다.
 
 [!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 

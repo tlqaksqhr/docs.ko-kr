@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580174"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314928"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core를 선택할 경우
 
@@ -25,9 +25,9 @@ ms.locfileid: "33580174"
 
 .NET Core는 개발 플랫폼으로 macOS도 지원합니다. 그러나 Docker 호스트에 컨테이너를 배포할 때는 (현재) 호스트가 Linux 또는 Windows를 기반으로 해야 합니다. 예를 들어 개발 환경에서는 Mac에서 실행되는 Linux VM을 사용할 수 있습니다.
 
-[Visual Studio](https://www.visualstudio.com/)는 Windows를 위한 IDE(통합 개발 환경)를 제공하며 Docker 개발을 지원합니다. 
+[Visual Studio](https://visualstudio.microsoft.com/)는 Windows를 위한 IDE(통합 개발 환경)를 제공하며 Docker 개발을 지원합니다. 
 
-[Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)은 Xamarin Studio의 확장인 IDE로, 2017년 중반부터 Docker를 지원합니다.
+[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)은 Xamarin Studio의 확장인 IDE로, 2017년 중반부터 Docker를 지원합니다.
 
 또한 macOS, Linux 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com/)를 사용할 수 있습니다. VS Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. VS Code는 가벼운 편집기이므로 Mac에서 컨테이너화된 앱을 개발할 때 Docker CLI 및 [.NET Core CLI(명령줄 인터페이스) 도구](../../../core/tools/index.md)와 함께 사용할 수 있습니다. Sublime Text, Emacs, vi 같은 대부분의 타사 편집기와, .NET 언어에 대한 IntelliSense 지원을 제공하는 오픈 소스 OmniSharp 프로젝트를 사용해서도 .NET Core를 대상으로 할 수 있습니다. IDE 및 편집기 외에도 지원되는 모든 플랫폼에 .NET Core CLI를 사용할 수 있습니다.
 

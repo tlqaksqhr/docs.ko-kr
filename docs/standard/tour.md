@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592264"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314645"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -25,7 +25,7 @@ ms.locfileid: "33592264"
 
 ## <a name="programming-languages"></a>프로그래밍 언어
 
-.NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
+.NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
 
 Microsoft는 C#, F# 및 VB(Visual Basic)라는 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
 

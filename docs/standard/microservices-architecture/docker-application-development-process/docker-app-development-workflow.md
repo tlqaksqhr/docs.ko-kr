@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 2eb205e85300f22108b866e8446d6730d89ae6cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e29e88a104050230b7816da6793120d61de7bc6
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579680"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314954"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -67,7 +67,7 @@ Docker 응용 프로그램 개발은 Docker 없이 응용 프로그램을 개발
     [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
 
 -   **Visual Studio 2017**
-    [*https://www.visualstudio.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+    [*https://visualstudio.microsoft.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![](./media/image4.png)
 
