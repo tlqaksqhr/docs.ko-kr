@@ -2,12 +2,12 @@
 title: C# 언어 버전 선택 - C# 가이드
 description: 특정 컴파일러 버전을 사용하여 구문 유효성 검사를 수행하도록 컴파일러 구성
 ms.date: 05/24/2018
-ms.openlocfilehash: 2056a99544d0cac94bc7cc79e8cd8793b1bcff78
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 9b91e62168ced0f373e1a55def8b279dc64833d8
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566369"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207984"
 ---
 # <a name="select-the-c-language-version"></a>C# 언어 버전 선택
 
@@ -88,7 +88,7 @@ Visual Studio에서 버전을 설정할 수 있습니다. 솔루션 탐색기에
 </Project>
 ```
 
-이제 해당 파일을 포함하는 디렉터리의 모든 하위 디렉터리에 있는 빌드는 C# 버전 7.3 구문을 사용합니다. 자세한 내용은 [빌드 사용자 지정](/visualstudio/msbuild/customize-your-build.md)에 대한 문서를 참조하세요.
+이제 해당 파일을 포함하는 디렉터리의 모든 하위 디렉터리에 있는 빌드는 C# 버전 7.3 구문을 사용합니다. 자세한 내용은 [빌드 사용자 지정](/visualstudio/msbuild/customize-your-build)에 대한 문서를 참조하세요.
 
 ## <a name="set-the-langversion-compiler-option"></a>langversion 컴파일러 옵션 설정
 
