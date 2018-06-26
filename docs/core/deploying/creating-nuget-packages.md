@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219458"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207800"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>플랫폼 간 도구로 NuGet 패키지를 만드는 방법
 

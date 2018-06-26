@@ -4,16 +4,16 @@ description: macOS 컴퓨터에서.NET Core 응용 프로그램을 개발, 배�
 author: guardrex
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: b1f4d3b49be7ba5349197187d6576b78db58798c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31fee3bbc85daa66019b63e50b48509b79606fce
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219081"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315068"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS에서 .NET Core의 필수 구성 요소
 
-이 문서에서는 macOS 컴퓨터에서.NET Core 응용 프로그램을 개발, 배포 및 실행하기 위해 필요한 지원되는 macOS 버전 및 .NET Core 종속성을 보여 줍니다. 다음에 나오는 지원되는 OS 버전 및 종속성은 Mac에서 .NET Core 앱을 개발하기 위한 세 가지 방법, 즉 [즐겨 사용하는 편집기를 통한 명령줄](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/) 및 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)에 적용됩니다.
+이 문서에서는 macOS 컴퓨터에서.NET Core 응용 프로그램을 개발, 배포 및 실행하기 위해 필요한 지원되는 macOS 버전 및 .NET Core 종속성을 보여 줍니다. 다음에 나오는 지원되는 OS 버전 및 종속성은 Mac에서 .NET Core 앱을 개발하기 위한 세 가지 방법, 즉 [즐겨 사용하는 편집기를 통한 명령줄](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/) 및 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)에 적용됩니다.
 
 ## <a name="supported-macos-versions"></a>지원되는 macOS 버전
 
@@ -102,11 +102,11 @@ echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
-.NET Core SDK를 사용하여 .NET Core 응용 프로그램을 개발하기 위해 원하는 편집기를 사용할 수 있습니다. 그러나 통합 개발 환경의 Mac에서 .NET Core 응용 프로그램을 개발하려는 경우 [Mac용 Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/)를 사용할 수 있습니다. 
+.NET Core SDK를 사용하여 .NET Core 응용 프로그램을 개발하기 위해 원하는 편집기를 사용할 수 있습니다. 그러나 통합 개발 환경의 Mac에서 .NET Core 응용 프로그램을 개발하려는 경우 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/visual-studio-mac/)를 사용할 수 있습니다. 
 
 Visual Studio for Mac을 사용하여 macOS에서 .NET Core로 개발하려면 다음이 필요합니다.
 
 * 지원되는 macOS 운영 체제 버전
 * OpenSSL(.NET Core 1.x 전용, .NET Core 2.x는 macOS에서 기본적으로 제공되는 보안 서비스를 사용함)
 * .NET Core SDK for Mac
-* [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+* [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)

@@ -4,12 +4,12 @@ description: 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 82cd7c09dd595a8273eb88a4caaf34782fa10ac4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd8262a7d2fa03ab06f9f85e91c298f52e3c0849
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214545"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315149"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작
 
@@ -28,7 +28,7 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
 필수 구성 요소와 Visual Studio for Mac을 이미 설치한 경우 이 섹션을 건너뛰고 [프로젝트 만들기](#creating-a-project)를 계속 진행합니다. 다음 단계에 따라 필수 구성 요소 및 Visual Studio for Mac을 설치합니다.
 
-[Visual Studio for Mac 설치 관리자](https://www.visualstudio.com/vs/visual-studio-mac/)를 다운로드합니다. 설치 관리자를 실행합니다. 사용권 계약을 읽은 다음 동의합니다. 설치하는 동안 플랫폼 간 모바일 앱 개발 기술인 Xamarin을 설치할 기회가 제공됩니다. Xamarin 및 관련된 구성 요소의 설치는 .NET Core 개발에서 선택 사항입니다. Visual Studio for Mac 설치 프로세스에 대한 연습을 진행하려면 [Visual Studio for Mac 소개](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)를 참조하세요. 설치가 완료되면 Visual Studio for Mac IDE를 시작합니다.
+[Visual Studio for Mac 설치 관리자](https://visualstudio.microsoft.com/vs/visual-studio-mac/)를 다운로드합니다. 설치 관리자를 실행합니다. 사용권 계약을 읽은 다음 동의합니다. 설치하는 동안 플랫폼 간 모바일 앱 개발 기술인 Xamarin을 설치할 기회가 제공됩니다. Xamarin 및 관련된 구성 요소의 설치는 .NET Core 개발에서 선택 사항입니다. Visual Studio for Mac 설치 프로세스에 대한 연습을 진행하려면 [Visual Studio for Mac 소개](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)를 참조하세요. 설치가 완료되면 Visual Studio for Mac IDE를 시작합니다.
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
