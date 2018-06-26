@@ -3,12 +3,13 @@ title: dotnet nuget locals 명령 - .NET Core CLI
 description: dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696873"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>개요
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>설명
 
@@ -30,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 
 `CACHE_LOCATION`
 
-다음 값 중 하나입니다.
+나열하거나 지울 캐시 위치입니다. 다음 값 중 하나를 허용합니다.
 
 * `all` - 지정된 작업이 모든 캐시 형식 즉, http-request 캐시, 전역 패키지 캐시 및 임시 캐시에 적용됨을 나타냅니다.
 * `http-cache` - 지정된 작업이 http-request 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
@@ -39,21 +43,21 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="options"></a>옵션
 
+`--force-english-output`
+
+고정 영어 기반 문화권을 사용하여 응용 프로그램을 강제로 실행합니다.
+
 `-h|--help`
 
 명령에 대한 간단한 도움말을 출력합니다.
 
 `-c|--clear`
 
-지우기 옵션은 지정된 캐시 유형에 지우기 작업을 수행합니다. 캐시 디렉터리의 콘텐츠는 재귀적으로 삭제됩니다. 실행 중인 사용자/그룹에게 캐시 디렉터리의 파일에 대한 사용 권한이 있어야 합니다. 그렇지 않은 경우에는 지우지 않은 파일/폴더가 있음을 나타내는 오류가 표시됩니다.
+지우기 옵션은 지정된 캐시 유형에 지우기 작업을 실행합니다. 캐시 디렉터리의 콘텐츠는 재귀적으로 삭제됩니다. 실행 중인 사용자/그룹에게 캐시 디렉터리의 파일에 대한 사용 권한이 있어야 합니다. 그렇지 않은 경우에는 지우지 않은 파일/폴더가 있음을 나타내는 오류가 표시됩니다.
 
 `-l|--list`
 
-목록 옵션은 지정된 캐시 형식의 위치를 표시하는 데 사용됩니다. 
-
-`--force-english-output`
-
-명령줄 출력이 영어로 강제로 표시됩니다.
+목록 옵션은 지정된 캐시 형식의 위치를 표시하는 데 사용됩니다.
 
 ## <a name="examples"></a>예제
 

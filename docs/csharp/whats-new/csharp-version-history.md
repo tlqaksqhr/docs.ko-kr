@@ -3,11 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696977"
 ---
 # <a name="the-history-of-c"></a>C#의 역사 #
 
@@ -53,7 +54,7 @@ C# 버전 3.0은 Visual Studio 2008과 함께 2007년말에 출시되었지만 �
 
 되돌아보면, 이러한 특징은 대부분 필연적이고 불가분한 것입니다. 이러한 모든 특징은 전략적으로 잘 맞습니다. 일반적으로 C# 버전의 핵심 기능은 LINQ(Language-Integrated Query)라고도 하는 쿼리 식이라 생각합니다.
 
-더 미묘한 뷰가 LINQ가 생성되는 기반인 식 tress, 람다 식 및 익명 형식을 검사합니다. 하지만 두 경우 모두 C# 3.0은 혁신적인 개념을 제공합니다. C# 3.0은 C#을 하이브리드 개체 지향/기능 언어로 전환하기 위한 토대를 마련하기 시작했습니다.
+더 미묘한 뷰는 LINQ가 생성되는 기반인 식 트리, 람다 식 및 익명 형식을 검사합니다. 하지만 두 경우 모두 C# 3.0은 혁신적인 개념을 제공합니다. C# 3.0은 C#을 하이브리드 개체 지향/기능 언어로 전환하기 위한 토대를 마련하기 시작했습니다.
 
 특히, 이제 무엇보다도 컬렉션에 대한 작업을 수행할 수 있는 SQL 스타일의 선언적 쿼리를 작성할 수 있습니다. 정수 목록의 평균을 계산하는 `for` 루프를 작성하는 대신 이제 간단하게 `list.Average()`로 처리할 수 있습니다. 쿼리 식과 확장 메서드의 조합은 정수 목록을 훨씬 더 효율적으로 보이게 해줍니다.
 
@@ -98,7 +99,7 @@ C# 버전 5.0은 매우 집중된 버전의 언어였습니다. 해당 버전에
 - [Null 전파자](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [문자열 보간](../language-reference/tokens/interpolated.md)
 - [nameof 연산자](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [사전 이니셜라이저](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [인덱스 이니셜라이저](csharp-6.md#index-initializers)
 
 이러한 각 기능은 그 자체로 흥미롭습니다. 그러나 전체적으로 살펴보면 흥미로운 패턴을 볼 수 있습니다. 이 버전에서 C#은 언어 상용구를 제거하여 코드를 더 간결하고 읽기 쉽게 만들었습니다. 따라서 깔끔하고 간단한 코드를 좋아하는 사람들에게 이 언어 버전은 큰 선물이었습니다.
 

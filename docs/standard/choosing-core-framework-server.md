@@ -3,12 +3,13 @@ title: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현에 대한 가이드입니다.
 author: cartermp
 ms.author: mairaw
-ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.date: 06/19/2018
+ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298190"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -65,7 +66,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Contai
 
 ## <a name="when-to-choose-net-framework"></a>.NET Framework를 선택하는 경우
 
-.NET Core는 새 응용 프로그램 및 응용 프로그램 패턴에 상당한 이점을 제공합니다. 그러나 많은 기존 시나리오에서는 .NET Framework를 자연스럽게 선택합니다. 일부 서버 응용 프로그램에서는 .NET Framework가 .NET Core로 대체되지 않습니다.
+.NET Core는 새 응용 프로그램 및 응용 프로그램 패턴에 상당한 이점을 제공합니다. 그러나 .NET Framework는 많은 기존 시나리오에서 계속 자연스럽게 선택되며 .NET Framework는 모든 서버 응용 프로그램에서 .NET Core로 대체되지 않습니다.
 
 ### <a name="current-net-framework-applications"></a>현재 .NET Framework 응용 프로그램
 
@@ -87,8 +88,6 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Contai
 * ASP.NET Web Forms 응용 프로그램: ASP.NET Web Forms는 .NET Framework에서만 사용할 수 있습니다. ASP.NET Core는 ASP.NET Web Forms에 사용할 수 없습니다. .NET Core에 ASP.NET Web Forms를 적용할 계획은 없습니다.
 
 * ASP.NET 웹 페이지 응용 프로그램: ASP.NET 웹 페이지는 ASP.NET Core에 포함되지 않습니다. ASP.NET Core [Razor 페이지](/aspnet/core/mvc/razor-pages/)는 웹 페이지와 많은 유사점이 있습니다.
-
-* ASP.NET SignalR 서버/클라이언트 구현: 현재 [ASP.NET SignalR](https://github.com/aspnet/SignalR)은 ASP.NET Core 2.1과 함께 미리 보기 모드로 제공됩니다.
 
 * WCF 서비스 구현. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도 WCF 서버 구현은 현재 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core에 대한 현재 계획의 일부가 아니지만 차후에 고려될 예정입니다.
 

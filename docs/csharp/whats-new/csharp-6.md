@@ -3,12 +3,12 @@ title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483491"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565880"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -38,6 +38,8 @@ C#의 6.0 릴리스에는 개발자의 생산성을 개선하는 많은 기능�
     - 컬렉션 이니셜라이저는 멤버 메서드 이외에 액세스 가능한 확장 메서드를 사용할 수 있습니다.
 * [향상된 오버로드 확인](#improved-overload-resolution):
     - 이전에 모호한 호출을 생성한 일부 구문이 이제 제대로 확인됩니다.
+* [`deterministic` 컴파일러 옵션](#deterministic-compiler-output):
+    - deterministic 컴파일러 옵션은 동일한 소스의 후속 컴파일이 동일한 이진 출력을 생성하도록 보장합니다.
 
 이러한 기능의 전반적인 영향은 더 읽기 쉬운 더 간결한 코드를 작성한다는 것입니다. 많은 일반적인 사례에 대한 더 적은 의례가 구문에 포함됩니다. 더 적은 의례로 디자인 의도를 더 쉽게 파악할 수 있습니다. 이러한 기능을 알고 있으면 생산성이 향상되고 더 읽기 쉬운 코드를 작성하고 언어의 구문보다 핵심 기능에 더 집중하게 됩니다.
 
@@ -388,3 +390,12 @@ C#의 이전 버전에서는 메서드 그룹 구문을 통한 해당 메서드 
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 C# 6 컴파일러에서는 `Task.Run(Func<Task>())`가 더 나은 선택인지 제대로 결정합니다.
+
+### <a name="deterministic-compiler-output"></a>deterministic 컴파일러 출력
+
+`-deterministic` 옵션은 컴파일러가 동일한 원본 파일의 연속적인 컴파일을 위해 바이트 단위의 동일한 출력 어셈블리를 생성하도록 지시합니다.
+
+기본적으로 컴파일이 실행될 때마다 고유한 출력이 생성됩니다. 컴파일러는 임의의 숫자에서 생성된 GUID와 타임스탬프를 추가합니다. 바이트별 출력을 비교하여 빌드 간 일관성을 유지하려면 이 옵션을 사용합니다.
+
+자세한 내용은 [-deterministic 컴파일러 옵션](../language-reference/compiler-options/deterministic-compiler-option.md) 문서를 참조하세요.
+

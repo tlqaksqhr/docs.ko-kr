@@ -2,14 +2,15 @@
 title: SQL Server에서 동적 보안 SQL 작성
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753476"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 동적 보안 SQL 작성
-SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 파괴될 수 있습니다.  
+SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 제거될 수 있습니다.  
   
  SQL Server는 구문상 유효한 쿼리가 수신되면 모두 실행하기 때문에 SQL 문을 생성하는 모든 프로시저에 삽입 취약성이 있는지 검토해야 합니다. 매개 변수화된 데이터인 경우에도 숙련된 공격자에 의해 조작될 가능성이 있습니다. 동적 SQL을 사용하는 경우 쿼리 문자열에는 매개 변수 값을 직접 포함하지 않도록 하고 명령은 매개 변수화해야 합니다.  
   
@@ -45,9 +46,9 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
   
  SQL Server에서는 동적 SQL을 실행하는 사용자 정의 함수 및 저장 프로시저를 사용하여 사용자에게 데이터에 대한 액세스 권한을 부여하는 방법이 도입되었습니다.  
   
--   가장을 사용 하 여 TRANSACT-SQL EXECUTE AS와 절에 설명 된 대로 [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)합니다.  
+-   [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)에 설명된 대로 Transact-SQL EXECUTE AS 절과 함께 가장을 사용합니다.  
   
--   에 설명 된 대로 인증서를 사용 하는 저장된 프로시저에 서명 [SQL Server에서 저장 프로시저 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)합니다.  
+-   [SQL Server에서 저장 프로시저에 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)에 설명된 대로 인증서로 저장 프로시저를 서명합니다.  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 절은 호출자의 권한을 EXECUTE AS 절에 지정된 사용자의 권한으로 바꿉니다. 중첩된 저장 프로시저 또는 트리거는 프록시 사용자의 보안 컨텍스트에서 실행됩니다. 이로 인해 행 수준 보안을 사용하거나 감사가 필요한 응용 프로그램이 중단될 수 있습니다. 사용자의 ID를 반환하는 일부 함수는 원래 호출자가 아니라 EXECUTE AS 절에 지정된 사용자를 반환합니다. 실행 컨텍스트는 프로시저 실행 후 또는 REVERT 문이 실행될 때만 원래 호출자로 되돌아갑니다.  
@@ -56,15 +57,14 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
  인증서로 서명된 저장 프로시저가 실행될 때는 인증서 사용자에게 부여된 권한이 호출자의 권한과 병합됩니다. 실행 컨텍스트는 동일하게 유지되고 인증서 사용자는 호출자를 가장하지 않습니다. 저장 프로시저에 서명하려면 몇 가지 단계를 구현해야 합니다. 프로시저가 수정될 때마다 다시 서명해야 합니다.  
   
 ### <a name="cross-database-access"></a>데이터베이스 간 액세스  
- 동적으로 생성된 SQL 문이 실행되는 경우에는 데이터베이스 간 소유권 체인이 작동하지 않습니다. 다른 데이터베이스의 데이터에 액세스 하는 저장된 프로시저를 만들고 두 데이터베이스 모두에 존재 하는 인증서로 프로시저에 서명 하 여 SQL Server에서이 문제를 해결할 작업할 수 있습니다. 이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
+ 동적으로 생성된 SQL 문이 실행되는 경우에는 데이터베이스 간 소유권 체인이 작동하지 않습니다. SQL Server에서는 다른 데이터베이스의 데이터에 액세스하는 저장 프로시저를 만들고 두 데이터베이스 모두에 존재하는 인증서로 프로시저에 서명하여 이 문제를 피할 수 있습니다. 이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[저장 프로시저](http://go.microsoft.com/fwlink/?LinkId=98233) 및 [SQL 주입](http://go.microsoft.com/fwlink/?LinkId=98234) SQL Server 온라인 설명서의|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
-|[새로운 SQL 잘라내기 공격 및 대처 방법](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) MSDN Magazine의 합니다.|문자 및 문자열, SQL 삽입, 자르기 공격에 의한 수정을 차단하는 방법을 설명합니다.|  
+|[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](/sql/relational-databases/security/sql-injection)(SQL Server 온라인 설명서)|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

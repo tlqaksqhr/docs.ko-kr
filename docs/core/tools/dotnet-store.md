@@ -3,12 +3,13 @@ title: dotnet store 명령
 description: "'dotnet store' 명령은 지정된 어셈블리를 런타임 패키지 저장소에 저장합니다."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696327"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-*패키지 저장소 매니페스트 파일*은 저장할 패키지 목록이 포함된 XML 파일입니다. 매니페스트 파일 형식은 *csproj* 형식과 호환됩니다. 따라서 원하는 패키지를 참조하는 *csproj* 프로젝트 파일을 `-m|--manifest` 옵션과 함께 사용하여 런타임 패키지 저장소에 어셈블리를 저장할 수 있습니다. 여러 매니페스트 파일을 지정하려면 각 파일에 대해 옵션 및 경로를 반복합니다. `--manifest packages1.csproj --manifest packages2.csproj`.
+*패키지 저장소 매니페스트 파일*은 저장할 패키지 목록이 포함된 XML 파일입니다. 매니페스트 파일 형식은 SDK 스타일 프로젝트 형식과 호환됩니다. 따라서 원하는 패키지를 참조하는 프로젝트 파일을 `-m|--manifest` 옵션과 함께 사용하여 런타임 패키지 저장소에 어셈블리를 저장할 수 있습니다. 여러 매니페스트 파일을 지정하려면 각 파일에 대해 옵션 및 경로를 반복합니다. 예: `--manifest packages1.csproj --manifest packages2.csproj`
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[런타임 패키지 저장소](../deploying/runtime-store.md)   
+[런타임 패키지 저장소](../deploying/runtime-store.md)

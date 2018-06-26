@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728643"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 응용 프로그램 호환성
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/04/2018
 * 프로젝트 파일에서 대상 프레임워크 지정
 * 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
 
-대상으로 지정된 버전보다 더 새로운 버전에서 실행될 경우 .NET Framework는 특수 동작을 사용하여 대상으로 지정된 이전 버전을 모방합니다. 즉, 앱은 Framework의 더 새로운 버전에서 실행되지만 이전 버전에서 실행되는 것처럼 동작합니다. .NET Framework 버전 간의 대부분의 호환성 문제는 이 특수 모델을 통해 완화됩니다.
+대상으로 지정된 버전보다 더 새로운 버전에서 실행될 경우 .NET Framework는 특수 동작을 사용하여 대상으로 지정된 이전 버전을 모방합니다. 즉, 앱은 Framework의 더 새로운 버전에서 실행되지만 이전 버전에서 실행되는 것처럼 동작합니다. .NET Framework 버전 간의 대부분의 호환성 문제는 이 특수 모델을 통해 완화됩니다. 응용 프로그램의 대상이 되는 .NET Framework 버전은 코드가 실행되는 응용 프로그램 도메인의 항목 어셈블리의 대상 버전에 따라 결정됩니다. 해당 응용 프로그램 도메인에 로드된 모든 추가 어셈블리는 이 .NET Framework 버전을 대상으로 합니다. 예를 들어, 실행 파일의 경우, 실행 파일의 대상 프레임워크는 해당 AppDomain의 모든 어셈블리가 실행되는 호환 모드입니다.
 
 ## <a name="runtime-changes"></a>런타임 변경 내용
 

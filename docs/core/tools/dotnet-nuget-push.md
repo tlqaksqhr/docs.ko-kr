@@ -3,12 +3,13 @@ title: dotnet nuget push 명령 - .NET Core CLI
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 090b11646a81859eeadb5fe9d36b43721fc70a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/01/2018
+ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728578"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -20,7 +21,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>개요
 
-`dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+---
 
 ## <a name="description"></a>설명
 
@@ -34,15 +53,41 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="options"></a>옵션
 
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-d|--disable-buffering`
+
+메모리 사용량을 줄이려면 HTTP(S) 서버로 푸시할 때 버퍼링을 사용하지 않도록 설정합니다.
+
+`--force-english-output`
+
+고정 영어 기반 문화권을 사용하여 응용 프로그램을 강제로 실행합니다.
+
 `-h|--help`
 
 명령에 대한 간단한 도움말을 출력합니다.
+
+`-k|--api-key <API_KEY>`
+
+서버에 대한 API 키입니다.
+
+`-n|--no-symbols`
+
+기호를 푸시하지 않습니다(있는 경우).
+
+`--no-service-endpoint`
+
+소스 URL에 “api/v2/package”를 추가하지 마세요.
 
 `-s|--source <SOURCE>`
 
 서버 URL을 지정합니다. 이 옵션은 NuGet 구성 파일에 `DefaultPushSource` 구성 값이 설정되어 있지 않을 때 필요합니다.
 
-`--symbol-source <SOURCE>`
+`-sk|--symbol-api-key <API_KEY>`
+
+기호 서버에 대한 API 키입니다.
+
+`-ss|--symbol-source <SOURCE>`
 
 기호 서버 URL을 지정합니다.
 
@@ -50,33 +95,91 @@ ms.lasthandoff: 05/04/2018
 
 서버에 푸시하기 위한 제한 시간(초)을 지정합니다. 기본값은 300 초(5 분)입니다. 0(0초)을 지정하면 기본값이 적용됩니다.
 
-`-k|--api-key <API_KEY>`
-
-서버에 대한 API 키입니다.
-
-`--symbol-api-key <API_KEY>`
-
-기호 서버에 대한 API 키입니다.
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-d|--disable-buffering`
 
 메모리 사용량을 줄이려면 HTTP(S) 서버로 푸시할 때 버퍼링을 사용하지 않도록 설정합니다.
 
+`--force-english-output`
+
+고정 영어 기반 문화권을 사용하여 응용 프로그램을 강제로 실행합니다.
+
+`-h|--help`
+
+명령에 대한 간단한 도움말을 출력합니다.
+
+`-k|--api-key <API_KEY>`
+
+서버에 대한 API 키입니다.
+
 `-n|--no-symbols`
 
 기호를 푸시하지 않습니다(있는 경우).
 
+`-s|--source <SOURCE>`
+
+서버 URL을 지정합니다. 이 옵션은 NuGet 구성 파일에 `DefaultPushSource` 구성 값이 설정되어 있지 않을 때 필요합니다.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+기호 서버에 대한 API 키입니다.
+
+`-ss|--symbol-source <SOURCE>`
+
+기호 서버 URL을 지정합니다.
+
+`-t|--timeout <TIMEOUT>`
+
+서버에 푸시하기 위한 제한 시간(초)을 지정합니다. 기본값은 300 초(5 분)입니다. 0(0초)을 지정하면 기본값이 적용됩니다.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-d|--disable-buffering`
+
+메모리 사용량을 줄이려면 HTTP(S) 서버로 푸시할 때 버퍼링을 사용하지 않도록 설정합니다.
+
 `--force-english-output`
 
-기록되는 모든 출력은 영어로 강제로 표시됩니다.
+고정 영어 기반 문화권을 사용하여 응용 프로그램을 강제로 실행합니다.
+
+`-h|--help`
+
+명령에 대한 간단한 도움말을 출력합니다.
+
+`-k|--api-key <API_KEY>`
+
+서버에 대한 API 키입니다.
+
+`-n|--no-symbols`
+
+기호를 푸시하지 않습니다(있는 경우).
+
+`-s|--source <SOURCE>`
+
+서버 URL을 지정합니다. 이 옵션은 NuGet 구성 파일에 `DefaultPushSource` 구성 값이 설정되어 있지 않을 때 필요합니다.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+기호 서버에 대한 API 키입니다.
+
+`-ss|--symbol-source <SOURCE>`
+
+기호 서버 URL을 지정합니다.
+
+`-t|--timeout <TIMEOUT>`
+
+서버에 푸시하기 위한 제한 시간(초)을 지정합니다. 기본값은 300 초(5 분)입니다. 0(0초)을 지정하면 기본값이 적용됩니다.
+
+---
 
 ## <a name="examples"></a>예제
 
-기본 푸시 소스에 *foo.nupkg*를 푸시하여 API 키를 제공합니다.
+기본 푸시 소스에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-사용자 지정 푸시 소스 `http://customsource`에 *foo.nupkg*를 푸시하여 API 키를 제공합니다.
+사용자 지정 푸시 소스 `http://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
@@ -88,7 +191,7 @@ ms.lasthandoff: 05/04/2018
 
 `dotnet nuget push foo.symbols.nupkg`
 
-360초 제한 시간을 지정하여 기본 푸시 소스에 *foo.nupkg*를 푸시합니다.
+360초 시간 제한을 지정하여 기본 푸시 소스에 *foo.nupkg*를 푸시합니다.
 
 `dotnet nuget push foo.nupkg --timeout 360`
 

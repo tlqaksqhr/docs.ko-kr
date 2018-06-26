@@ -3,12 +3,13 @@ title: dotnet build 명령 - .NET Core CLI
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697133"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -46,7 +47,7 @@ dotnet build [-h|--help]
 
 `dotnet build`는 MSBuild를 사용하여 프로젝트를 빌드하므로 병렬 및 증분 빌드를 모두 지원합니다. 자세한 내용은 [증분 빌드](/visualstudio/msbuild/incremental-builds)를 참조하세요.
 
-해당 옵션 외에도, `dotnet build` 명령은 속성 설정에 대한 `/p` 또는 로거를 정의하는 `/l`처럼 MSBuild 옵션도 수락합니다. 이러한 옵션에 대한 자세한 내용은 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. 
+해당 옵션 외에도, `dotnet build` 명령은 속성 설정에 대한 `/p` 또는 로거를 정의하는 `/l`처럼 MSBuild 옵션도 수락합니다. 이러한 옵션에 대한 자세한 내용은 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 확인하세요.
 
 프로젝트가 실행 가능한지 아닌지 여부는 프로젝트 파일의 `<OutputType>` 속성으로 확인할 수 있습니다. 다음 예제에서는 실행 코드를 생성하는 프로젝트를 보여 줍니다.
 
@@ -56,7 +57,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-라이브러리를 생성하려면 `<OutputType>` 속성을 생략합니다. 빌드된 출력의 주요 차이점은 라이브러리에 대한 IL DLL이 진입점을 포함하지 않으며 실행할 수 없다는 것입니다. 
+라이브러리를 생성하려면 `<OutputType>` 속성을 생략합니다. 빌드된 출력의 주요 차이점은 라이브러리에 대한 IL DLL이 진입점을 포함하지 않으며 실행할 수 없다는 것입니다.
 
 ## <a name="arguments"></a>인수
 
@@ -78,7 +79,7 @@ dotnet build [-h|--help]
 
 `--force`
 
- 마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
+마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ dotnet build [-h|--help]
 
 `--no-dependencies`
 
-프로젝트 간(P2P) 참조를 무시하고 빌드하도록 지정된 루트 프로젝트만 빌드합니다.
+프로젝트 간(P2P) 참조를 무시하고 지정된 루트 프로젝트만 빌드합니다.
 
 `--no-incremental`
 
-빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 따라서 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
+빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 이 플래그로 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
 
 `--no-restore`
 
-빌드하는 동안 암시적 복원을 수행하지 않습니다.
+빌드하는 동안 암시적 복원을 실행하지 않습니다.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ dotnet build [-h|--help]
 
 `--no-dependencies`
 
-프로젝트 간(P2P) 참조를 무시하고 빌드하도록 지정된 루트 프로젝트만 빌드합니다.
+프로젝트 간(P2P) 참조를 무시하고 지정된 루트 프로젝트만 빌드합니다.
 
 `--no-incremental`
 
-빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 따라서 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
+빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 이 플래그로 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696441"
 ---
 # <a name="try-catch-c-reference"></a>try-catch(C# 참조)
 try-catch 문은 `try` 블록에 이어 서로 다른 예외에 대한 처리기를 지정하는 하나 이상의 `catch` 절로 구성됩니다.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  같은 try-catch 문에서 특정 `catch` 절을 두 개 이상 사용할 수 있습니다. 이 경우 `catch` 절은 순서대로 검사되므로 `catch` 절의 순서가 중요합니다. 더 구체적인 예외를 덜 구체적인 예외보다 먼저 catch합니다. 나중에 나타나는 블록에 도달할 수 없도록 catch 블록 순서를 지정하면 컴파일러에서 오류가 발생합니다.  
   
- `catch` 인수를 사용하여 처리할 예외를 필터링할 수 있습니다.  예외를 추가로 검사하는 조건자 식을 사용하여 예외를 처리할지 결정할 수도 있습니다.  조건자 식에서 false를 반환하면 처리기 검색이 계속됩니다.  
+ `catch` 인수를 사용하여 처리할 예외를 필터링할 수 있습니다.  예외를 추가로 검사하는 예외 필터를 사용하여 예외를 처리할지 결정할 수도 있습니다.  예외 필터가 false를 반환하면 처리기 검색이 계속됩니다.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- 필터 덕분에 스택이 손상되지 않으므로 예외 필터는 catch하고 다시 throw하는 것이 좋습니다(아래 내용 참조).  나중에 나타나는 처리기가 스택을 덤프하면 예외가 다시 throw된 마지막 위치가 아니라 예외가 원래 발생한 위치를 확인할 수 있습니다.  예외 필터 식의 일반적으로 사용법은 로깅입니다.  로그에도 출력되는 항상 false를 반환하는 조건자 함수를 만들 수 있고, 예외를 처리하고 다시 throw할 필요 없이 진행되는 대로 예외를 기록할 수 있습니다.  
+ 필터 덕분에 스택이 손상되지 않으므로 예외 필터는 catch하고 다시 throw하는 것이 좋습니다(아래 내용 참조).  나중에 나타나는 처리기가 스택을 덤프하면 예외가 다시 throw된 마지막 위치가 아니라 예외가 원래 발생한 위치를 확인할 수 있습니다.  예외 필터 식의 일반적으로 사용법은 로깅입니다.  로그에도 출력되는 항상 false를 반환하는 필터를 만들 수 있고, 예외를 처리하고 다시 throw할 필요 없이 진행되는 대로 예외를 기록할 수 있습니다.  
   
  [throw](../../../csharp/language-reference/keywords/throw.md) 문을 `catch` 블록에서 사용하여 `catch` 문에 의해 catch된 예외를 다시 throw할 수 있습니다. 다음 예제에서는 <xref:System.IO.IOException> 예외에서 소스 정보를 추출하고 예외를 부모 메서드에 throw합니다.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> 예외 필터를 사용하여 유사한 결과를 더 깔끔하게 얻을 수도 있습니다(물론 이 문서의 앞 부분에서 설명한 것처럼 스택을 수정하지 않음). 다음 예제에서는 이전 예제와 같은 호출자에 대한 유사한 동작을 보여 줍니다. `e.Data`가 `null`일 때 함수는 호출자에게 `InvalidCastException`을 다시 throw합니다.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  `try` 블록 내부에서 선언된 변수만 초기화합니다. 그렇지 않으면 블록의 예외가 완료되기 전에 다른 예외가 발생할 수 있습니다. 예를 들어 다음 코드 예제에서 `n` 변수는 `try` 블록 내부에서 초기화됩니다. `Write(n)` 문의 `try` 블록 외부에서 이 변수를 사용하려고 하면 컴파일러 오류가 발생합니다.  
   
 ```csharp  

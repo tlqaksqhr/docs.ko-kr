@@ -3,26 +3,19 @@ title: 값 형식과 참조 의미 체계
 description: 구조 복사를 안전하게 최소화하는 언어 기능 이해
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566282"
 ---
 # <a name="reference-semantics-with-value-types"></a>값 형식과 참조 의미 체계
 
 값 형식을 사용할 경우의 장점은 대개 힙 할당을 할 필요가 없다는 것입니다.
 단점은 값 형식이 값으로 복사된다는 점입니다. 이러한 장단점 간에 균형을 잡으려고 하니 많은 양의 데이터에서 작동하는 알고리즘을 최적화하기가 어렵습니다. C# 7.2의 새로운 언어 기능은 값 형식으로 pass-by-reference 의미 체계를 가능하게 하는 메커니즘을 제공합니다. 이러한 기능을 현명하게 사용하여 할당 및 복사 작업을 최소화하세요. 이 문서에서는 이러한 새로운 기능을 살펴봅니다.
 
-이 문서의 샘플 코드 상당수는 C# 7.2에 추가된 기능을 보여 줍니다. 이러한 기능을 사용하려면 C# 7.2 이상을 사용하도록 프로젝트를 구성해야 합니다. Visual Studio를 사용하여 선택할 수 있습니다. 각 프로젝트에 대해 메뉴에서 **프로젝트**를 선택한 다음 **속성**을 선택합니다. **빌드** 탭을 선택하고 **고급**을 클릭합니다. 여기서 언어 버전을 구성합니다. “7.2” 또는 “latest”를 선택합니다.  또는 *csproj* 파일을 편집하고 다음 노드를 추가할 수 있습니다.
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-값에 “7.2” 또는 “latest”를 사용할 수 있습니다.
+이 문서의 샘플 코드 상당수는 C# 7.2에 추가된 기능을 보여 줍니다. 이러한 기능을 사용하려면 C# 7.2 이상을 사용하도록 프로젝트를 구성해야 합니다. 언어 버전 설정에 대한 자세한 내용은 [언어 버전 구성](language-reference/configure-language-version.md)을 참조하세요.
 
 ## <a name="passing-arguments-by-readonly-reference"></a>읽기 전용 참조로 인수 전달
 

@@ -3,12 +3,13 @@ title: dotnet pack 명령 - .NET Core CLI
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696821"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>개요
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -51,7 +51,7 @@ dotnet pack [-h|--help]
 
 `PROJECT`
 
-압축할 프로젝트입니다. [csproj file](csproj.md) 파일 또는 디렉터리에 대한 경로입니다. 생략하면 현재 디렉터리로 기본 설정됩니다.
+압축할 프로젝트입니다. [csproj file](csproj.md) 파일 또는 디렉터리에 대한 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
 ## <a name="options"></a>옵션
 
@@ -61,7 +61,9 @@ dotnet pack [-h|--help]
 
 빌드 구성을 정의합니다. 기본값은 `Debug`입니다.
 
-`--force` 마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
+`--force`
+
+마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ NuGet 패키지에 소스 파일을 포함합니다. 소스 파일은 `nupkg`의
 
 `--no-build`
 
-압축하기 전에 프로젝트를 빌드하지 않습니다.
+압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
 
 `--no-dependencies`
 
@@ -85,13 +87,13 @@ NuGet 패키지에 소스 파일을 포함합니다. 소스 파일은 `nupkg`의
 
 `--no-restore`
 
-명령을 실행할 때 암시적 복원을 수행하지 않습니다.
+명령을 실행할 때 암시적 복원을 실행하지 않습니다.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 지정된 디렉터리에 빌드된 패키지를 배치합니다.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
 

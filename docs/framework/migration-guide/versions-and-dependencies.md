@@ -1,18 +1,18 @@
 ---
 title: .NET Framework 버전 및 종속성
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 05/31/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b3a32e21573ae7f2e59655b191278e4aec7c4ab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7c2c3ca038508b63533a7e17f6ceb6ebf1ad6842
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457617"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728617"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 .NET Framework의 각 버전에는 CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 기타 관리되는 라이브러리가 포함되어 있습니다. 이 항목에서는 버전별 .NET Framework의 주요 기능에 대해 설명하고 기본 CLR 버전 및 관련 개발 환경에 대한 정보를 제공하며 Windows 운영 체제별로 설치된 버전을 확인합니다.  
@@ -45,9 +45,13 @@ ms.locfileid: "34457617"
 |2.0|2.0|-   제네릭<br />-   ASP.NET 추가 기능<br />-   [자세히...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|[지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조|  
 |1.1|1.1|-   ASP.NET 및 ADO.NET 업데이트<br />-   Side-by-Side 실행<br />-   [자세히...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|[지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조|  
 |1.0|1.0|.NET Framework 첫 번째 버전|Visual Studio .NET|-|-|[지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조|  
-  
- 사용 중인 응용 프로그램이 특정 버전에 종속적일 수 있고 해당 버전을 제거하면 응용 프로그램이 중단될 수 있으므로 컴퓨터에 설치된 .NET Framework의 모든 버전은 일반적으로 제거하면 안 됩니다. 여러 버전의 .NET Framework를 동시에 단일 컴퓨터에서 로드할 수 있습니다. 즉, 이전 버전을 제거하지 않고도 .NET Framework를 설치할 수 있습니다. 자세한 내용은 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오.  
-  
+
+**참고**
+
+<sup>\*</sup>&nbsp;&nbsp;[제어판(Windows) 또는 서버 관리자 (Windows Server)를 통해 이 운영 체제에서 .NET Framework를 사용하도록 설정해야 합니다](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
+
+ 사용 중인 응용 프로그램이 특정 버전에 종속적일 수 있고 해당 버전을 제거하면 응용 프로그램이 중단될 수 있으므로 컴퓨터에 설치된 .NET Framework의 모든 버전은 일반적으로 제거하면 안 됩니다. 여러 버전의 .NET Framework를 동시에 단일 컴퓨터에서 로드할 수 있습니다. 즉, 이전 버전을 제거하지 않고도 .NET Framework를 설치할 수 있습니다. 자세한 내용은 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오.
+
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>.NET Framework 앱의 대상을 버전 4.5 이상으로 지정 및 앱 실행  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 컴퓨터에서 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 대체하는 내부 업데이트이고, 마찬가지로 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대체하는 내부 업데이트이므로 같은 런타임 버전을 사용하지만, 어셈블리 버전이 업데이트되어 새로운 형식과 멤버를 포함합니다. 이러한 업데이트 중 하나를 설치한 후 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 또는 .NET Framework 4.7용 앱은 다시 컴파일하지 않고도 계속 실행되어야 합니다. 하지만 그 반대의 경우는 성립되지 않습니다. 이전 버전의 .NET Framework에서 이후 버전의 .NET Framework를 대상으로 하는 앱을 실행하지 않는 것이 좋습니다. 예를 들어 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱을 실행하지 않는 것이 좋습니다. 다음과 같은 지침이 적용됩니다.  
   

@@ -10,35 +10,36 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: 4dd4f4acc3a4a944411c0b39ef91fcd12a4cf5b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6ef78cd7e1578745f0bde5c0e9e799bb5e641a9
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805609"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>방법: 명령을 지원하지 않는 컨트롤에 명령 후크
-후크 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.Controls.Control> 는 않는 하지 기본적으로 명령에 대 한 지원.  여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.  
+다음 예제는 <xref:System.Windows.Input.RoutedCommand>를 명령에 대한 지원을 기본 제공하지 않는 <xref:System.Windows.Controls.Control>에 후크하는 방법을 보여줍니다.  여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.  
   
-## <a name="example"></a>예제  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 응용 프로그램 프로그래머가 자주 접하게 되는 공용 명령의 라이브러리를 제공합니다.  클래스는 명령 라이브러리를 구성 하는: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, 및 <xref:System.Windows.Documents.EditingCommands>합니다.  
+## <a name="example"></a>예  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 응용 프로그램 프로그래머가 자주 접하게 되는 공용 명령의 라이브러리를 제공합니다.  명령 라이브러리를 구성하는 클래스는 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> 및 <xref:System.Windows.Documents.EditingCommands>입니다.  
   
- 정적 <xref:System.Windows.Input.RoutedCommand> 이러한 클래스를 구성 하는 개체 명령 논리를 제공 하지 않습니다.  사용 하 여 명령과와 연결 된 명령에 대 한 논리는 <xref:System.Windows.Input.CommandBinding>합니다.  많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기본적으로 명령은 라이브러리에서 명령 중 일부에 대 한 지원.  <xref:System.Windows.Controls.TextBox>예를 들어와 같은 다양 한 응용 프로그램 편집 명령을 지원 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, 및 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>합니다.  응용 프로그램 개발자는 이러한 명령을 컨트롤과 함께 사용하기 위해 별도로 해야 하는 작업은 없습니다.  경우는 <xref:System.Windows.Controls.TextBox> 가 명령 대상 명령이 실행 될 때 사용 하 여 명령을 처리할 수 있으므로 <xref:System.Windows.Input.CommandBinding> 컨트롤에 내장 되어 있습니다.  
+ 이러한 클래스를 구성하는 정적 <xref:System.Windows.Input.RoutedCommand> 개체는 명령 논리를 제공하지 않습니다.  명령 논리는 <xref:System.Windows.Input.CommandBinding>이 있는 명령과 연결됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 많은 컨트롤은 명령 라이브러리의 일부 명령에 대한 지원을 기본 제공합니다.  예를 들어 <xref:System.Windows.Controls.TextBox>는 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> 및 <xref:System.Windows.Input.ApplicationCommands.Undo%2A> 등의 많은 응용 프로그램 편집 명령을 지원합니다.  응용 프로그램 개발자는 이러한 명령을 컨트롤과 함께 사용하기 위해 별도로 해야 하는 작업은 없습니다.  명령이 실행될 때 <xref:System.Windows.Controls.TextBox>가 명령 대상인 경우는 컨트롤에 내장되어 있는 <xref:System.Windows.Input.CommandBinding>을 사용하여 명령을 처리할 수 있습니다.  
   
- 다음을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Button> 에 대 한 명령 소스로 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령입니다.  A <xref:System.Windows.Input.CommandBinding> 지정된 된 연결 하 만들어집니다 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 와 <xref:System.Windows.Input.RoutedCommand>합니다.  
+ 다음은 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령에 대한 명령 소스로 <xref:System.Windows.Controls.Button>을 사용하는 방법을 표시합니다.  지정된 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>를 <xref:System.Windows.Input.RoutedCommand>와 연결하는 <xref:System.Windows.Input.CommandBinding>을 만듭니다.  
   
- 첫째, 명령 소스가 만들어집니다.  A <xref:System.Windows.Controls.Button> 명령 원본으로 사용 됩니다.  
+ 먼저, 명령 소스를 만듭니다.  <xref:System.Windows.Controls.Button>은 명령 소스로 사용됩니다.  
   
  [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- 다음으로 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 만들어집니다.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> 열면는 <xref:System.Windows.MessageBox> 명령이 실행 되었음을 나타내는입니다.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 설정는 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 속성을 `true`합니다.  일반적으로 수 있는 실행 처리기를 현재 명령 대상에서 명령을 실행할 수 있습니다 하는 경우 보다 강력한 확인을 수행 합니다.  
+ 다음으로, <xref:System.Windows.Input.ExecutedRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>를 만듭니다.  <xref:System.Windows.Input.ExecutedRoutedEventHandler>는 단순히 <xref:System.Windows.MessageBox>를 열어 명령이 실행되었음을 나타냅니다.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler>는 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 속성을 `true`로 설정합니다.  일반적으로 실행 가능 처리기는 현재 명령 대상에서 명령을 실행할 수 있는지 확인하려면 보다 강력한 확인 작업을 수행합니다.  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- 마지막으로, 한 <xref:System.Windows.Input.CommandBinding> 루트에 만들어집니다 <xref:System.Windows.Window> 라우트된 이벤트 처리기를 연결 하는 응용 프로그램의는 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령입니다.  
+ 마지막으로, <xref:System.Windows.Input.CommandBinding>은 라우팅된 이벤트 처리기를 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령에 연결하는 응용 프로그램의 <xref:System.Windows.Window> 루트에 만들어집니다.  
   
  [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
