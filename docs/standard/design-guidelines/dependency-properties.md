@@ -5,11 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948487"
 ---
 # <a name="dependency-properties"></a>종속성 속성
 종속성 속성 DP ()은 예를 들어 유형 변수 (필드)를 저장 하는 대신 속성 저장소의 해당 값을 저장 하는 일반 속성입니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
  연결된 된 속성의 좋은 예는 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 속성입니다. 만 관련 되 고 "연결 되어" 단추를 모눈으로 단추를 표에 포함 되어 있으면 이지만 속성 단추 (하지 표의) 열의 위치를 나타냅니다.  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
   
  연결된 된 속성의 정의 같습니다 대부분의 일반 종속성 속성을 제외 하 고 접근자 Get 및 Set 메서드를 정적으로 표시 됩니다.  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  
