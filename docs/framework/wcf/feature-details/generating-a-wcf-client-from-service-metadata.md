@@ -2,12 +2,12 @@
 title: 서비스 메타데이터에서 WCF 클라이언트 생성
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494019"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027930"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>서비스 메타데이터에서 WCF 클라이언트 생성
 이 항목에서는 Svcutil.exe의 여러 가지 스위치를 사용하여 메타데이터 문서에서 클라이언트를 생성하는 방법에 대해 설명합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "33494019"
   
 -   한 DISCO 요청 (사용 하는 [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET 웹 서비스에서) 주어진된 주소에 있습니다.  
   
- Svcutil.exe는 WSDL(웹 서비스 기술 언어)을 기반으로 하는 클라이언트 또는 서비스로부터 받은 정책 파일을 생성합니다. UPN(User Principal Name)은 사용자 이름을 "@"으로 연결한 다음 FQDN(정규화된 도메인 이름)을 추가하여 생성합니다. 그러나 Active Directory에 등록 한 사용자의이 형식은 올바르지 않으며 도구에서 생성 한 UPN으로 인해 다음과 같은 오류 메시지와 함께 Kerberos 인증의는 실패: **로그온 시도가 실패 했습니다.** 이 문제를 해결하려면 이 도구에서 생성한 클라이언트 파일을 수동으로 수정합니다.  
+ Svcutil.exe는 WSDL(웹 서비스 기술 언어)을 기반으로 하는 클라이언트 또는 서비스로부터 받은 정책 파일을 생성합니다. 사용자 계정 이름 (UPN) 사용 하 여 사용자 이름을 연결 하 여 생성 됩니다 "\@" 다음 정규화 된 도메인 이름 (FQDN)을 추가 합니다. 그러나 Active Directory에 등록 한 사용자의이 형식은 올바르지 않으며 도구에서 생성 한 UPN으로 인해 다음과 같은 오류 메시지와 함께 Kerberos 인증의는 실패: **로그온 시도가 실패 했습니다.** 이 문제를 해결하려면 이 도구에서 생성한 클라이언트 파일을 수동으로 수정합니다.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
