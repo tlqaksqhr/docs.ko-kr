@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539454"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071148"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>방법: Windows Forms 응용 프로그램에서 글꼴 구성표 변경에 응답
 Windows 운영 체제에서 사용자 표시의 기본 글꼴 확대 하거나 축소 하도록 시스템 수준 글꼴 설정을 변경할 수 있습니다. 이러한 글꼴 설정을 변경 하는 것은 화면에 텍스트를 읽을 수 있는 더 큰 유형 필요 하 고 시각 장애가 있는 사용자는 사용자에 게 중요 합니다. 글꼴 구성표 변경 될 때마다는 양식 및 포함 된 모든 텍스트의 크기를 늘리거나 하 여 이러한 변경에 대응 하 여 Windows Forms 응용 프로그램을 조정할 수 있습니다. 동적으로 글꼴 크기의 변경 내용을 수용 하기 위해 폼을 하려는 경우를 폼 코드를 추가할 수 있습니다.  
@@ -40,13 +40,13 @@ Windows 운영 체제에서 사용자 표시의 기본 글꼴 확대 하거나 �
   
 5.  에 대 한 처리기를 구현 하는 마지막으로 <xref:System.Windows.Forms.Form.FormClosing> 분리 하는 이벤트는 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 이벤트 처리기입니다.  
   
-> [!IMPORTANT]
->  이 코드를 포함 하는 오류를 사용 하면 응용 프로그램에서 메모리 누수를 발생 합니다.  
+     > [!IMPORTANT]
+     > 이 코드를 포함 하는 오류를 사용 하면 응용 프로그램에서 메모리 누수를 발생 합니다.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  코드를 컴파일하고 실행합니다.  
+6.  코드를 컴파일하고 실행합니다.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>수동으로 Windows XP에서 글꼴 구성표를 변경 하려면  
   
@@ -56,9 +56,9 @@ Windows 운영 체제에서 사용자 표시의 기본 글꼴 확대 하거나 �
   
 3.  **글꼴 크기** 드롭다운 목록 상자에서 새 글꼴 크기를 선택 합니다.  
   
-     폼에 응답 하 여 바탕 화면 글꼴 구성표에 대 한 런타임 변경 알 수 있습니다. 사용자 간에 변경 될 때 **보통**, **큰 글꼴**, 및 **아주 큰 글꼴**, 폼 글꼴이 변경 되 고 크기가 올바르게 조정 합니다.  
+     폼이 바탕 화면 글꼴 구성표의 런타임 변경 내용에 반응 이제 알 수 있습니다. 사용자 간에 변경 될 때 **보통**, **큰 글꼴**, 및 **아주 큰 글꼴**, 폼 글꼴이 변경 되 고 크기가 올바르게 조정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   

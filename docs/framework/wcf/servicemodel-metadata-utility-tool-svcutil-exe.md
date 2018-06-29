@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509153"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071333"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
 ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비스 모델 코드를 생성하고, 서비스 모델 코드에서 메타데이터 문서를 생성하는 데 사용됩니다.  
@@ -66,7 +66,7 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
  BasicHttpContextbinding 끝점이 있는 서비스의 경우 Svcutil.exe는 대신 `allowCookies` 특성이 `true`로 설정된 BasicHttpBinding을 생성합니다. 서버의 컨텍스트에 쿠키가 사용됩니다. 서비스가 쿠키를 사용할 때 클라이언트에서 컨텍스트를 관리하려면 컨텍스트 바인딩을 사용하도록 구성을 수동으로 수정할 수 있습니다.  
   
 > [!CAUTION]
->  Svcutil.exe는 WSDL을 기반으로 하는 클라이언트 또는 서비스에서 받은 정책 파일을 생성합니다. UPN(User Principal Name)은 사용자 이름, "@" 및 FQDN(정규화된 도메인 이름)을 연결하여 생성됩니다. 그러나 Active Directory에 등록한 사용자의 경우에는 이 형식은 유효하지 않으며 도구에서 생성한 UPN으로 인해 "로그온하지 못했습니다."라는 오류 메시지와 함께 Kerberos 인증 오류가 발생합니다. 이 문제를 해결하려면 이 도구에서 생성한 클라이언트 파일을 수동으로 수정해야 합니다.  
+>  Svcutil.exe는 WSDL을 기반으로 하는 클라이언트 또는 서비스에서 받은 정책 파일을 생성합니다. 사용자 계정 이름 (UPN) 사용자 이름, 연결 하 여 생성 됩니다 "\@" 및 정규화 된 도메인 이름 (FQDN)입니다. 그러나 Active Directory에 등록한 사용자의 경우에는 이 형식은 유효하지 않으며 도구에서 생성한 UPN으로 인해 "로그온하지 못했습니다."라는 오류 메시지와 함께 Kerberos 인증 오류가 발생합니다. 이 문제를 해결하려면 이 도구에서 생성한 클라이언트 파일을 수동으로 수정해야 합니다.  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

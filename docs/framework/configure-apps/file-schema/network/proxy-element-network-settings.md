@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744449"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072516"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;프록시&gt; 요소 (네트워크 설정)
 프록시 서버를 정의합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "32744449"
 |**특성**|**설명**|  
 |-------------------|---------------------|  
 |`autoDetect`|프록시를 자동으로 검색할지 여부를 지정 합니다. 기본값은 `unspecified`입니다.|  
-|`bypassonlocal`|로컬 리소스에 대 한 프록시를 바이패스 하는지 여부를 지정 합니다. 로컬 리소스에는 로컬 서버 포함 (http://localhost, http://loopback, 또는 http://127.0.0.1) 및 마침표가 없는 URI (http://webserver)합니다. 기본값은 `unspecified`입니다.|  
+|`bypassonlocal`|로컬 리소스에 대 한 프록시를 바이패스 하는지 여부를 지정 합니다. 로컬 리소스에는 로컬 서버 포함 (`http://localhost`, `http://loopback`, 또는 `http://127.0.0.1`) 및 마침표 없는 URI (`http://webserver`). 기본값은 `unspecified`입니다.|  
 |`proxyaddress`|프록시 사용 하는 URI를 지정 합니다.|  
 |`scriptLocation`|구성 스크립트의 위치를 지정합니다.|  
 |`usesystemdefault`|Internet Explorer 프록시 설정을 사용할지 여부를 지정 합니다. 경우 설정 `true`, 후속 특성에는 Internet Explorer 프록시 설정은 재정의 됩니다. 기본값은 `unspecified`입니다.|  
@@ -76,7 +76,7 @@ ms.locfileid: "32744449"
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 Internet Explorer 프록시의 기본값을 사용 하 여, 프록시 주소를 지정 및 로컬 액세스에 대 한 프록시를 무시 합니다.  
   
 ```xml  

@@ -2,12 +2,12 @@
 title: '방법: 여러 원본 (LINQ) (Visual Basic)에서 개체 컬렉션 채우기'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948451"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070865"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>방법: 여러 원본 (LINQ) (Visual Basic)에서 개체 컬렉션 채우기
 
@@ -25,7 +25,6 @@ ms.locfileid: "36948451"
 다음 예제에서는 명명된 형식 `Student`를 사용하여 스프레드시트 데이터를 시뮬레이트하는 두 개의 메모리 내 문자열 컬렉션의 병합된 데이터를 .csv 형식으로 저장하는 방법을 보여 줍니다. 첫 번째 문자열 컬렉션은 학생 이름과 ID를 나타내고, 두 번째 컬렉션은 학생 ID(첫 번째 열)와 4개의 시험 점수를 나타냅니다. ID는 외래 키로 사용됩니다.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 만들기 하 고 다음 옵션 중 하나를 대상으로 하는 프로젝트를 컴파일하십시오.
 
-- .NET framework 버전 3.5 이상이 System.Core.dll에 대 한 참조입니다.
+- .NET framework 버전 3.5 System.Core.dll에 대 한 참조입니다.
+- .NET framework 버전 4.0 이상이 합니다.
 - .NET core 버전 1.0 이상이 있습니다.
 
 ## <a name="see-also"></a>참고자료

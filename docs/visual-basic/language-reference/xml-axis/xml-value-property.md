@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 31c9ce2774d6c6182403885a4438c4aa6bf143ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604187"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071621"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 속성(Visual Basic)
 컬렉션의 첫 번째 요소 값에 대 한 액세스를 제공 <xref:System.Xml.Linq.XElement> 개체입니다.  
@@ -47,7 +47,7 @@ object.Value
   
  <xref:System.Xml.Linq.XElement.Value%2A> 속성을 구현 하는 형식에 대 한 확장 속성은 `IEnumerable(Of XElement)`합니다. 이 확장 속성의 바인딩을 확장 메서드의 바인딩과 같은:는 형식이 인터페이스 중 하나를 구현 하는 이름이 "Value" 속성을 정의 하는 경우 해당 속성 보다 우선적으로 확장 속성입니다. 즉,이 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 구현 하는 클래스의 새 속성을 정의 하 여 재정의할 수 있습니다 `IEnumerable(Of XElement)`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Xml.Linq.XElement.Value%2A> 속성 컬렉션의 첫 번째 노드에 액세스 하려면 <xref:System.Xml.Linq.XElement> 개체입니다. 이 예제에서는 자식 축 속성 이라는 모든 자식 노드의 컬렉션을 사용 하 여 `phone` 에 `contact` 개체입니다.  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
@@ -56,7 +56,7 @@ object.Value
   
  `Phone number: 206-555-0144`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 컬렉션에서 XML 특성의 값을 가져오는 방법을 보여 줍니다 <xref:System.Xml.Linq.XAttribute> 개체입니다. 이 예제에서는 특성 축 속성을 사용 하 여의 값을 표시 하는 `type` 특성의 모든는 `phone` 요소입니다.  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  

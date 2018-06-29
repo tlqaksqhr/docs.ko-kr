@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 9cfd1d6cc7c278fd7e95c13df0a6f801cfabbc33
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749168"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071294"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID를 디자인 타임에 지정할 수 있습니다. 클라이언트와 서비스 간의 핸드셰이크 프로세스에서 Windows Communication Foundation (WCF) 인프라는 id가 확인 하는 일치 하는 예상 되는 서비스 항목이 요소의 값 및 인증 될 수 있습니다. 자세한 내용은 참조 [서비스 Id 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
@@ -48,7 +48,7 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
 |dns|서비스를 인증하는 데 사용되는 X.509 인증서의 DNS를 지정합니다. 이 요소에는 문자열인 `value` 특성이 포함되며 실제 ID가 포함됩니다.|  
 |rsa|클라이언트에 서비스를 인증하는 데 사용되는 X.509 인증서의 RSA 필드 값을 지정합니다. 이 요소에는 문자열인 `value` 특성이 포함되며 실제 ID가 포함됩니다.|  
 |servicePrincipalName|서비스의 인스턴스를 고유하게 식별하기 위해 클라이언트에서 사용하는 사용자 이름인 SPN(서버 사용자 이름) ID를 지정합니다. 이 요소에는 문자열인 `value` 특성이 포함되며 실제 사용자 이름이 포함됩니다. 이 요소는 <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement> 형식입니다.|  
-|userPrincipalName|네트워크 사용자의 로그온 이름 형식인 UPN(User Principal Name) ID를 지정합니다. UPN은 Active Directory에서 사용하는 사용자 개체 이름 뒤에 @ 기호가 오고 그 다음에 일반적으로 DNS(Domain Name System) 부모 도메인이 붙는 형태로 구성됩니다. 예를 들어, Fabrikam.com 도메인 트리에 있는 Jeff 사용자 계정 이름 해야할 [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)합니다.  이 요소에는 문자열인 `value` 특성이 포함되며 실제 사용자 이름이 포함됩니다. 이 요소는 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement> 형식입니다.|  
+|userPrincipalName|네트워크 사용자의 로그온 이름 형식인 UPN(User Principal Name) ID를 지정합니다. 사용자 계정 이름 뒤의 Active Directory에 사용 되는 사용자 개체 이름으로 구성 됩니다는 at 기호 (\@) 한 다음, 일반적으로 부모 도메인 Domain Name System. 예를 들어, Fabrikam.com 도메인 트리에 있는 Jeff 사용자 계정 이름 해야할 [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)합니다.  이 요소에는 문자열인 `value` 특성이 포함되며 실제 사용자 이름이 포함됩니다. 이 요소는 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   

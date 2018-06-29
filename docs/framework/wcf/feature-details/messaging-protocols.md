@@ -2,12 +2,12 @@
 title: 메시징 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496639"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072724"
 ---
 # <a name="messaging-protocols"></a>메시징 프로토콜
 Windows Communication Foundation (WCF) 채널 스택에서 인코딩 및 전송 채널 내부 메시지 표현을 통신 형식으로 변환 하 고 특정 전송을 사용 하 여 보낼을 합니다. 웹 서비스 상호 운용성을 위해 사용되는 가장 일반적인 전송은 HTTP이고, 웹 서비스에 사용되는 가장 일반적인 인코딩은 XML 기반 SOAP 1.1, SOAP 1.2 및 MTOM(Message Transmission Optimization Mechanism)입니다.  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132: HTTP Content-Type 헤더에는 큰따옴표로 묶은 `application/xop+xml` 값을 가진 형식 매개 변수가 있어야 합니다.  
   
- 큰따옴표 사용 요구 사항이 없으면 RFC 2387 텍스트에서 모든 multipart/related 미디어 형식 매개 변수에 가장 가능성이 높은 포함 되어 등의 문자는 예약 "@" or "/" 큰따옴표가 필요 합니다.  
+ 큰따옴표 사용 요구 사항이 없으면 RFC 2387 텍스트에서 모든 multipart/related 미디어 형식 매개 변수가 주로 같은 예약 된 문자를 포함할 수 "\@" 또는 "/" 큰따옴표 필요 표시합니다.  
   
 -   R4133: HTTP Content-Type 헤더에는 SOAP 1.x 봉투를 포함하는 MIMI 부분의 Content-ID 헤더 값이 큰따옴표로 묶인 시작 매개 변수가 있어야 합니다. 시작 매개 변수가 생략된 경우 첫 번째 MIME 부분에 SOAP 1.x 봉투가 포함되어야 합니다.  
   
