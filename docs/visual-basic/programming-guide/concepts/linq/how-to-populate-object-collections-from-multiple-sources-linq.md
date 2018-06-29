@@ -2,30 +2,29 @@
 title: '방법: 여러 원본 (LINQ) (Visual Basic)에서 개체 컬렉션 채우기'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948451"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070865"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="e4466-102">방법: 여러 원본 (LINQ) (Visual Basic)에서 개체 컬렉션 채우기</span><span class="sxs-lookup"><span data-stu-id="e4466-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="61b1d-102">방법: 여러 원본 (LINQ) (Visual Basic)에서 개체 컬렉션 채우기</span><span class="sxs-lookup"><span data-stu-id="61b1d-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="e4466-103">이 예제에서는 여러 소스의 데이터를 새 형식의 시퀀스에 병합하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
+<span data-ttu-id="61b1d-103">이 예제에서는 여러 소스의 데이터를 새 형식의 시퀀스에 병합하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e4466-104">메모리 내 데이터 또는 데이터는 데이터베이스에 여전히 데이터와 파일 시스템에 연결 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="e4466-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="e4466-105">이러한 도메인 간 조인을 사용하면 데이터베이스 쿼리 및 다른 소스 유형에 대해 조인 작업이 정의될 수 있는 다양한 방법으로 인해 정의되지 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="e4466-106">또한 데이터베이스의 데이터 양이 충분히 큰 경우 이러한 작업으로 인해 메모리 부족 예외가 발생할 수 있는 위험이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="e4466-107">데이터베이스의 데이터를 메모리 내 데이터에 조인하려면 먼저 데이터베이스 쿼리에서 `ToList` 또는 `ToArray`를 호출한 다음 반환된 컬렉션에서 조인을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
+> <span data-ttu-id="61b1d-104">메모리 내 데이터 또는 데이터는 데이터베이스에 여전히 데이터와 파일 시스템에 연결 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="61b1d-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="61b1d-105">이러한 도메인 간 조인을 사용하면 데이터베이스 쿼리 및 다른 소스 유형에 대해 조인 작업이 정의될 수 있는 다양한 방법으로 인해 정의되지 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="61b1d-106">또한 데이터베이스의 데이터 양이 충분히 큰 경우 이러한 작업으로 인해 메모리 부족 예외가 발생할 수 있는 위험이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="61b1d-107">데이터베이스의 데이터를 메모리 내 데이터에 조인하려면 먼저 데이터베이스 쿼리에서 `ToList` 또는 `ToArray`를 호출한 다음 반환된 컬렉션에서 조인을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
 
-## <a name="to-create-the-data-file"></a><span data-ttu-id="e4466-108">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="e4466-108">To create the data file</span></span>
+## <a name="to-create-the-data-file"></a><span data-ttu-id="61b1d-108">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="61b1d-108">To create the data file</span></span>
 
-- <span data-ttu-id="e4466-109">에 설명 된 대로 names.csv 및 scores.csv 파일을 프로젝트 폴더에 복사 [하는 방법: 콘텐츠 조인에서 서로 다른 파일 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>
+- <span data-ttu-id="61b1d-109">에 설명 된 대로 names.csv 및 scores.csv 파일을 프로젝트 폴더에 복사 [하는 방법: 콘텐츠 조인에서 서로 다른 파일 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="e4466-110">예</span><span class="sxs-lookup"><span data-stu-id="e4466-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="61b1d-110">예</span><span class="sxs-lookup"><span data-stu-id="61b1d-110">Example</span></span>
 
-<span data-ttu-id="e4466-111">다음 예제에서는 명명된 형식 `Student`를 사용하여 스프레드시트 데이터를 시뮬레이트하는 두 개의 메모리 내 문자열 컬렉션의 병합된 데이터를 .csv 형식으로 저장하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="e4466-112">첫 번째 문자열 컬렉션은 학생 이름과 ID를 나타내고, 두 번째 컬렉션은 학생 ID(첫 번째 열)와 4개의 시험 점수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="e4466-113">ID는 외래 키로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-113">The ID is used as the foreign key.</span></span>
+<span data-ttu-id="61b1d-111">다음 예제에서는 명명된 형식 `Student`를 사용하여 스프레드시트 데이터를 시뮬레이트하는 두 개의 메모리 내 문자열 컬렉션의 병합된 데이터를 .csv 형식으로 저장하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="61b1d-112">첫 번째 문자열 컬렉션은 학생 이름과 ID를 나타내고, 두 번째 컬렉션은 학생 ID(첫 번째 열)와 4개의 시험 점수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="61b1d-113">ID는 외래 키로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-113">The ID is used as the foreign key.</span></span>
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -101,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-<span data-ttu-id="e4466-114">에 [Select 절](../../../../visual-basic/language-reference/queries/select-clause.md) 절, 개체 이니셜라이저는 인스턴스화하는 데 사용할 각 새로운 `Student` 두 소스의 데이터를 사용 하 여 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
+<span data-ttu-id="61b1d-114">에 [Select 절](../../../../visual-basic/language-reference/queries/select-clause.md) 절, 개체 이니셜라이저는 인스턴스화하는 데 사용할 각 새로운 `Student` 두 소스의 데이터를 사용 하 여 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
 
-<span data-ttu-id="e4466-115">쿼리의 결과 저장할 수 없다면 익명 형식 명명 된 형식 보다 더 편리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="e4466-116">명명된 형식은 쿼리가 실행되는 메서드 외부로 쿼리 결과를 전달하는 경우에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="e4466-117">다음 예제는 앞의 예제와 동일한 작업을 수행하지만 명명된 형식 대신 무명 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>
+<span data-ttu-id="61b1d-115">쿼리의 결과 저장할 수 없다면 익명 형식 명명 된 형식 보다 더 편리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="61b1d-116">명명된 형식은 쿼리가 실행되는 메서드 외부로 쿼리 결과를 전달하는 경우에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="61b1d-117">다음 예제는 앞의 예제와 동일한 작업을 수행하지만 명명된 형식 대신 무명 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -129,13 +128,14 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="e4466-118">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="e4466-118">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="61b1d-118">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="61b1d-118">Compiling the code</span></span>
 
-<span data-ttu-id="e4466-119">만들기 하 고 다음 옵션 중 하나를 대상으로 하는 프로젝트를 컴파일하십시오.</span><span class="sxs-lookup"><span data-stu-id="e4466-119">Create and compile a project that targets one of the following options:</span></span>
+<span data-ttu-id="61b1d-119">만들기 하 고 다음 옵션 중 하나를 대상으로 하는 프로젝트를 컴파일하십시오.</span><span class="sxs-lookup"><span data-stu-id="61b1d-119">Create and compile a project that targets one of the following options:</span></span>
 
-- <span data-ttu-id="e4466-120">.NET framework 버전 3.5 이상이 System.Core.dll에 대 한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-120">.NET Framework version 3.5 or higher with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="e4466-121">.NET core 버전 1.0 이상이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4466-121">.NET Core version 1.0 or higher.</span></span>
+- <span data-ttu-id="61b1d-120">.NET framework 버전 3.5 System.Core.dll에 대 한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-120">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="61b1d-121">.NET framework 버전 4.0 이상이 합니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-121">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="61b1d-122">.NET core 버전 1.0 이상이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61b1d-122">.NET Core version 1.0 or higher.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e4466-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="e4466-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61b1d-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="61b1d-123">See also</span></span>
 
-[<span data-ttu-id="e4466-123">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4466-123">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+[<span data-ttu-id="61b1d-124">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="61b1d-124">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
