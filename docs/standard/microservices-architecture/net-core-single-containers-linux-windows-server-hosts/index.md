@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591096"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105529"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux 또는 Windows Nano 서버 호스트에 단일 컨테이너 기반 .NET Core 웹 응용 프로그램 배포
 
@@ -142,4 +142,5 @@ services:
 Docker 지원을 추가하는 마법사는 실행 중인 Docker 프로세스와 통신합니다. 마법사를 시작할 때 Docker가 실행되고 있지 않은 경우 마법사가 올바르게 실행되지 않습니다. 또한 마법사는 올바른 Docker 지원을 추가하기 위해 현재 선택한 컨테이너를 검사합니다. Windows 컨테이너에 대한 지원을 추가하려는 경우 구성된 Windows 컨테이너를 통해 Docker가 실행되는 동안 마법사를 실행해야 합니다. Linux 컨테이너에 대한 지원을 추가하려는 경우 구성된 Linux 컨테이너를 통해 Docker가 실행되는 동안 마법사를 실행해야 합니다.
 
 >[!div class="step-by-step"]
-[이전] (../docker-application-development-process/docker-app-development-workflow.md) [다음] (../containerize-net-framework-applications/index.md)
+[이전](../docker-application-development-process/docker-app-development-workflow.md)
+[다음](../containerize-net-framework-applications/index.md)

@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576245"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106193"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
 
@@ -59,4 +59,5 @@ VSTS를 통해 개발자는 VSTS-Git, GitHub, 모든 원격 Git 리포지토리 
 따라서 Microsoft는 컨테이너화된 Docker 응용 프로그램의 전체 수명 주기에 대한 완벽한 기반을 제공합니다. 그러나 *원하는 대로 선택하고 기존 도구 및 프로세스와 통합할 수 있게 해주는 제품과 기술의 모음*입니다. 광범위한 접근법의 유연성과 심층적인 기능의 강력함은 컨테이너화된 Docker 응용 프로그램 개발 분야에서 Microsoft가 유리한 위치를 점할 수 있게 해줍니다.
 
 >[!div class="step-by-step"]
-[이전] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [다음] (../design-develop-containerized-apps/index.md)
+[이전](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[다음](../design-develop-containerized-apps/index.md)

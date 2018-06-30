@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 6525e5f80ebb0551e4f85904a467d862aa4133ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f4a3b7675365aa4d1e33328f756439398f3a4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567733"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105239"
 ---
 # <a name="design-docker-applications"></a>Docker 응용 프로그램 디자인
 
@@ -19,4 +19,5 @@ ms.locfileid: "33567733"
 
 
 >[!div class="step-by-step"]
-[이전] [다음] (공통-컨테이너-디자인-principles.md) (index.md)
+[이전](index.md)
+[다음](common-container-design-principles.md)

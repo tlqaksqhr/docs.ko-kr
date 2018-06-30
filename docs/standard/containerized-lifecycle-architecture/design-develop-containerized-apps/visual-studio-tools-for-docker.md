@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314713"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104894"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Visual Studio Tools를 사용 하 여 Docker (Visual Studio Windows에서)에 대 한
 
@@ -71,4 +71,5 @@ multicontainer를 배포할 수 응용 프로그램을 실행할 때 단일 dock
 
 
 >[!div class="step-by-step"]
-[이전] (docker-앱-내부-루프-workflow.md) [다음] (set-up-windows-containers-with-powershell.md)
+[이전](docker-apps-inner-loop-workflow.md)
+[다음](set-up-windows-containers-with-powershell.md)

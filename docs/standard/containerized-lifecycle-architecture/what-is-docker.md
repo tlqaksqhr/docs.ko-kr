@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: c566c4104f21ff6a55646d96e141cde4c7722735
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2dfff13f00d4ea0e57161c21d7773eead41c28ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569670"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105387"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
@@ -53,4 +53,5 @@ Docker 컨테이너에 기존 Vm의 그림 1-3: 비교
 
 
 >[!div class="step-by-step"]
-[이전] (index.md) [다음] (docker-terminology.md)
+[이전](index.md)
+[다음](docker-terminology.md)

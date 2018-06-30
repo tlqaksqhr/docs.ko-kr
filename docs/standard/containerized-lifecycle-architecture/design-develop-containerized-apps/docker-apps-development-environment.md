@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3da7816127982c3657129561975eed6d1f5aad5a
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696782"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104509"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
@@ -48,4 +48,5 @@ Docker 응용 프로그램 및 대부분의 언어와 Microsoft 도구를 개발
 
 
 >[!div class="step-by-step"]
-[이전] (오케스트레이션-높은-확장성-availability.md) [다음] (docker-앱-내부-루프-workflow.md)
+[이전](orchestrate-high-scalability-availability.md)
+[다음](docker-apps-inner-loop-workflow.md)

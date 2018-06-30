@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61bc9ca6fed8f5249dcb125619aa1b07f290ba7e
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574786"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106881"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 기반 응용 프로그램에 대한 개발 프로세스
 
@@ -46,4 +46,5 @@ ms.locfileid: "33574786"
 
 
 >[!div class="step-by-step"]
-[이전](../architect-microservice-container-applications/using-azure-service-fabric.md) [다음](docker-app-development-workflow.md)
+[이전](../architect-microservice-container-applications/using-azure-service-fabric.md)
+[다음](docker-app-development-workflow.md)

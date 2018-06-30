@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 37313c4eb437b6b7a362456a7d1ee3b3aecb6020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 276071a5d55015f2feecc27020ad614684907b4c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569427"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105213"
 ---
 # <a name="soa-applications"></a>SOA 응용 프로그램
 
@@ -21,4 +21,5 @@ SOA 과도 한 용어 되었으며 다른 사람에 게 많은 다른 것을 의
 
 
 >[!div class="step-by-step"]
-[이전] [다음] (오케스트레이션-높은-확장성-availability.md) (state-and-data-in-docker-applications.md)
+[이전](state-and-data-in-docker-applications.md)
+[다음](orchestrate-high-scalability-availability.md)

@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568734"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106365"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 컨테이너, 이미지 및 레지스트리
 
@@ -34,4 +34,5 @@ Docker 용어 및 개념의 그림 1-4: 분류
 -   이미지와 선택한 배포 환경 사이에는 최소 네트워크 대기 시간이 요구됩니다. 예를 들어 프로덕션 환경의 Azure 이면를 싶을 네트워크 대기 시간이 최소화 됩니다 되도록 이미지를 Azure 컨테이너 레지스트리에 저장 합니다. 프로덕션 환경이 동일한 로컬 네트워크 내에서 사용 가능한 온-프레미스 Docker Trusted Registry인 경우에도 마찬가지입니다.
 
 >[!div class="step-by-step"]
-[이전] (docker-terminology.md) [다음] (Docker-응용 프로그램-수명 주기/index.md)
+[이전](docker-terminology.md)
+[다음](Docker-application-lifecycle/index.md)

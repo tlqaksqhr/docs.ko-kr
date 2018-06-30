@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b27be902779c7e22a568c679362851f745ea494d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569683"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105451"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 응용 프로그램의 상태 및 데이터
 
@@ -51,4 +51,5 @@ A [데이터 볼륨 컨테이너](https://docs.docker.com/v1.8/userguide/dockerv
 
 
 >[!div class="step-by-step"]
-[이전] (모놀리식-applications.md) [다음] (soa applications.md)
+[이전](monolithic-applications.md)
+[다음](soa-applications.md)

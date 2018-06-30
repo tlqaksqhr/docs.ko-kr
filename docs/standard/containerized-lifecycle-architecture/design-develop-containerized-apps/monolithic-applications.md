@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: fe25fa8772c60625c5564d5e7194957366a6010a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572751"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106621"
 ---
 # <a name="monolithic-applications"></a>단일 응용 프로그램
 
@@ -71,4 +71,5 @@ Azure 앱 서비스를 사용 하 여의 직관적인 얻을 수 있습니다 �
 
 
 >[!div class="step-by-step"]
-[이전] (공통-컨테이너-디자인-principles.md) [다음] (state-and-data-in-docker-applications.md)
+[이전](common-container-design-principles.md)
+[다음](state-and-data-in-docker-applications.md)

@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 0fa43263e789bba5b720792e7e8dc5321af795b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c7de61f421cf2c45cd3c5ee9afc5a388e985b52
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576222"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105565"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 공동 작업을 위한 기반으로 컨테이너
 
@@ -68,4 +68,5 @@ DevOps는 목적지는 여행을 고려 되어야 합니다. 수 성공을 보�
 -   대부분의 오픈 소스에 대 한 투자를 포함 하 여 기존 DevOps 투자와 잘 플러그 앤 플레이
 
 >[!div class="step-by-step"]
-[이전] [다음]을 (index.md) (... /Microsoft-platform-tools-containerized-apps/index.md)
+[이전](index.md)
+[다음](../Microsoft-platform-tools-containerized-apps/index.md)

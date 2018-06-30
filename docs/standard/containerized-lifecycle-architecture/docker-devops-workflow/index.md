@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b4a88725de78f59c62aac1bd33764db6b2e0887e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b915c53b70192139c64c63d8b47110263e1621d0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768491"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104467"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 응용 프로그램 DevOps 워크플로
 
@@ -35,4 +35,5 @@ Microsoft 도구는 Visual Studio Team Services 또는 Team Foundation Server를
 
 
 >[!div class="step-by-step"]
-[이전] (../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md) [다음] (docker-application-outer-loop-devops-workflow.md)
+[이전](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+[다음](docker-application-outer-loop-devops-workflow.md)

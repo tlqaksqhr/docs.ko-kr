@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568981"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104640"
 ---
 # <a name="key-takeaways"></a>핵심 내용
 
@@ -26,4 +26,4 @@ ms.locfileid: "33568981"
 Visual Studio Team Services는 Azure에 기반을 둔 단순한 Docker 환경 또는 고급 마이크로 서비스 및 컨테이너 오케스트레이터를 비롯한 지속적인 배포 파이프라인의 Docker 환경에 지정된 DevOps 환경을 매우 간소화합니다.
 
 >[!div class="step-by-step"]
-[이전] (../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+[이전](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

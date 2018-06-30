@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b483214e7bd039a71ae642aa26e69d63222af8ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580129"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104444"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -17,4 +17,5 @@ ms.locfileid: "33580129"
 
 
 >[!div class="step-by-step"]
-[이전](../container-docker-introduction/docker-containers-images-registries.md) [다음](general-guidance.md)
+[이전](../container-docker-introduction/docker-containers-images-registries.md)
+[다음](general-guidance.md)

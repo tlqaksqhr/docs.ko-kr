@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 47685bfd8dca50c5e93be7574ea6ef30a49cbede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4192ff1d67a3f70bb5eeb9a36245cfd35bafb53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568799"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105633"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>프로덕션 환경에서 구성 및 microservices 기반 응용 프로그램을 실행 합니다.
 
@@ -35,4 +35,5 @@ Orchestrators 및 스케줄러에서 제공 하는 기능은 개발 하 고 처�
 
 
 >[!div class="step-by-step"]
-[이전] [다음] (관리-프로덕션-docker-environments.md) (index.md)
+[이전](index.md)
+[다음](manage-production-docker-environments.md)

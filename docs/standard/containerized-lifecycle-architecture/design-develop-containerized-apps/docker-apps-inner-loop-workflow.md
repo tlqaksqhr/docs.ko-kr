@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579212"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105591"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱에 대 한 내부 루프 개발 워크플로
 
@@ -122,7 +122,7 @@ Docker에서 응용 프로그램을 실행 하는 방법을 알 수 있도록 �
 
 **자세한 내용은** .NET Core 응용 프로그램에 대 한 Docker 이미지를 작성 하는 방법에 대 한 정보로 이동 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>합니다.
 
-사용자 고유의 이미지를 작성 하는 방법에 대 한 자세한 내용은 이동 [ https://docs.docker.com/engine/\자습서/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)합니다.
+사용자 고유의 이미지를 작성 하는 방법에 대 한 자세한 내용은 이동 [ https://docs.docker.com/engine/\ 자습서/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)합니다.
 
 **다중 플랫폼 이미지 리포지토리와**
 
@@ -255,8 +255,9 @@ Node.js 및.NET Core 컨테이너 등의 다른 플랫폼을 사용 하는 경�
 
 또한 디버그할 수.NET Core 컨테이너 Docker에서 Visual Studio를 사용 하는 경우 다음 섹션에 설명 된 대로 합니다.
 
-**추가 정보:** 이동 Node.js Docker 컨테이너를 디버깅 하는 방법에 대 한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 [ https://blogs.msdn.microsoft.com/\ \ 사용자\_ed/2016/02/27 / visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)합니다.
+**추가 정보:** 이동 Node.js Docker 컨테이너를 디버깅 하는 방법에 대 한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 [ https://blogs.msdn.microsoft.com/\ 사용자\_ed/2016/02/27 / visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)합니다.
 
 
 >[!div class="step-by-step"]
-[이전] (docker-앱-개발-environment.md) [다음] (visual-studio-도구-에-docker.md)
+[이전](docker-apps-development-environment.md)
+[다음](visual-studio-tools-for-docker.md)

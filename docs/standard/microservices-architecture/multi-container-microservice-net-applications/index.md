@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 297a53d6d6d37b1fa4a0e021919c9df86edeca03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571958"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104480"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발
 
@@ -21,4 +21,5 @@ ms.locfileid: "33571958"
 
 
 >[!div class="step-by-step"]
-[이전](../containerize-net-framework-applications/index.md) [다음](microservice-application-design.md)
+[이전](../containerize-net-framework-applications/index.md)
+[다음](microservice-application-design.md)

@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579004"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106164"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계
 
@@ -107,7 +107,7 @@ Visual Studio Team Services 계정에 다음 구성 요소를 설치 하는 Visu
 
 **자세한 내용은** 파이프라인와 연습을 보려면 다음 사이트를 방문 하십시오. Visual Studio Team Services Docker CI 어셈블하는 방법에 대 한 자세한를 읽으려면:
 
-Docker 컨테이너와 Visual Studio Team Services 에이전트를 실행: [ https://hub.docker.com/r/\ 에이전트에서 microsoft/vsts /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Docker 컨테이너와 Visual Studio Team Services 에이전트를 실행: [ https://hub.docker.com/r/\ microsoft/vsts-에이전트 /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 VSTS Docker 확장: <https://aka.ms/vstsdockerextension>
 
@@ -234,4 +234,5 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 모니터링 및 진단이 100 %DevOps 영역 내에서 경우에 모니터링 하는 프로세스와 테스트 또는 베타 환경에 대 한 개발 팀에서 수행 하는 분석 됩니다. 이 부하 테스트를 수행 하 여 또는 베타 또는 QA 환경에 베타 테스터에서 새 버전을 시도 하는 위치를 모니터링 하 여 수행 됩니다.
 
 >[!div class="step-by-step"]
-[이전] [다음]을 (index.md) (... /run-manage-monitor-docker-environments/index.md)
+[이전](index.md)
+[다음](../run-manage-monitor-docker-environments/index.md)

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578835"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106517"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
 
@@ -186,4 +186,5 @@ Visual Studio 통합은 솔루션에 Docker 지원을 추가하는 과정의 일
 개발 환경에서는 동일한 OS에서 모든 컨테이너를 실행해야 합니다. Windows용 Docker CE는 Windows 기반 컨테이너와 Linux 기반 컨테이너의 실행을 동시에 지원하지 않습니다. 프로덕션 환경에서는 단일 Docker 호스트(또는 클러스터)의 Windows 컨테이너에서 카탈로그 마이크로 서비스를 실행할지 아니면 다른 Docker 호스트의 Linux 컨테이너에서 실행 중인 카탈로그 마이크로 서비스 인스턴스와 Web Forms 응용 프로그램을 통신하도록 설정할지 결정할 수 있습니다. 이는 네트워크 대기 시간을 최적화하려는 방법에 따라 달라집니다. 대부분의 경우 간편한 배포 및 통신 대기 시간 단축을 위해 응용 프로그램에서 사용하는 마이크로 서비스가 동일한 Docker 호스트(또는 Swarm)에서 실행되기를 원합니다. 이러한 구성에서는 마이크로 서비스 인스턴스와 영구 데이터 저장소를 위한 고가용성 서버 간 통신만 유일하게 비용이 많이 듭니다.
 
 >[!div class="step-by-step"]
-[이전](../net-core-single-containers-linux-windows-server-hosts/index.md) [다음](../multi-container-microservice-net-applications/index.md)
+[이전](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[다음](../multi-container-microservice-net-applications/index.md)

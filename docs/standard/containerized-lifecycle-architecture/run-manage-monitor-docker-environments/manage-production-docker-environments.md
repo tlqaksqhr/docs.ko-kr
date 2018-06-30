@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5ecf1fbc164ff4170951894abc071908f45178d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169ffa7ba61fa5dff09229410adb534f8e34a35c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573883"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104587"
 ---
 # <a name="manage-production-docker-environments"></a>프로덕션 Docker 환경 관리
 
@@ -46,4 +46,5 @@ Azure 가상 컴퓨터 크기 집합을 사용 하 여 이러한 클러스터를
 
 
 >[!div class="step-by-step"]
-[이전] [다음] (모니터-컨테이너 화 된-응용 프로그램-services.md) (run-microservices-based-applications-in-production.md)
+[이전](run-microservices-based-applications-in-production.md)
+[다음](monitor-containerized-application-services.md)
