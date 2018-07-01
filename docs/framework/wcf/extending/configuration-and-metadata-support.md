@@ -2,12 +2,12 @@
 title: 구성 및 메타데이터 지원
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486726"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140153"
 ---
 # <a name="configuration-and-metadata-support"></a>구성 및 메타데이터 지원
 이 항목에서는 바인딩 및 바인딩 요소에 대한 구성 및 메타데이터 지원을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  사용자 지정 바인딩 요소는 서비스 끝점이 해당 바인딩 요소의 기능을 표현하도록 WSDL 바인딩에서 정책 어설션을 내보낼 수 있습니다. 다음 예제 코드에서 가져온 것은 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플.  
   
 #### <a name="policy-export"></a>정책 내보내기  
- `UdpTransportBindingElement` 구현 형식 '<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 정책을 내보낼 지원을 추가 합니다. 그 결과, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
+ `UdpTransportBindingElement` 구현 입력 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 정책을 내보낼 지원을 추가 합니다. 그 결과, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
   
  <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>에서는 채널이 멀티캐스트 모드인 경우 UDP용 어설션 및 다른 어설션을 추가합니다. 이는 멀티캐스트 모드가 통신 스택의 구성 방법에 영향을 주므로 양쪽 모두에서 조정되어야 하기 때문입니다.  
   
