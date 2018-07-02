@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Microsoft Azure를 사용하여 최신 웹 응용 
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582901"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208194"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
@@ -71,10 +71,10 @@ SPA는 주소 표시줄에 의미 있는 URL을 표시하여 현재 작업을 �
 SPA를 작성하려면 JavaScript 및/또는 TypeScript와 클라이언트 쪽 프로그래밍 기술 및 라이브러리에 익숙해야 합니다. 팀은 Angular와 같은 SPA 프레임워크를 사용하여 최신 JavaScript를 작성하는 데 능숙해야 합니다.
 
 > ### <a name="references--spa-frameworks"></a>참조 - SPA 프레임워크
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **인기 있는 JavaScript 프레임워크 4개 비교**  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **Angular**  
+> <https://angular.io>
+> - **JavaScript 프레임워크 비교**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **응용 프로그램이 다른(내부 또는 공용) 클라이언트용 API를 이미 노출해야 하는 경우**
 

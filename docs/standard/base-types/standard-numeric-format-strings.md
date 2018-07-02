@@ -1,6 +1,6 @@
 ---
 title: 표준 숫자 형식 문자열
-ms.date: 09/10/2017
+ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,13 +18,15 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1cad76c234ce73772d3b65b11596ab0e4e0ae3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208208"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 형식 문자열
+
 표준 숫자 서식 문자열은 일반 숫자 형식의 서식을 지정하는 데 사용됩니다. 표준 숫자 서식 문자열은 `Axx` 형식을 취합니다. 여기서  
   
 -   `A`는 *서식 지정자*라는 단일 영문자입니다. 공백을 포함하여 영문자가 두 개 이상 포함된 숫자 서식 문자열은 사용자 지정 숫자 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.  
@@ -64,24 +66,27 @@ ms.lasthandoff: 05/04/2018
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>표준 숫자 서식 문자열 사용  
- 표준 숫자 서식 문자열을 사용하여 다음 두 가지 방법 중 하나로 숫자 값의 서식을 정의할 수 있습니다.  
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+
+표준 숫자 서식 문자열을 사용하여 다음 두 가지 방법 중 하나로 숫자 값의 서식을 정의할 수 있습니다.  
   
 -   이 서식 문자열은 `ToString` 매개 변수가 있는 `format` 메서드의 오버로드에 전달될 수 있습니다. 다음 예제에서는 숫자 값의 서식을 현재 문화권(이 예제의 경우 en-US)의 통화 문자열로 지정합니다.  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
-     [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
 -   이 형식 문자열은 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
-     [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
      필요에 따라 `alignment` 인수를 제공하여 숫자 필드의 너비 및 해당 값이 오른쪽 맞춤인지 또는 왼쪽 맞춤인지 지정할 수 있습니다. 다음 예제에서는 28자 필드의 통화 값을 왼쪽 맞춤으로, 14자 필드의 통화 값을 오른쪽 맞춤으로 지정합니다.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
-     [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
 -   보간된 문자열의 보간된 식 항목에서 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 C# 참조의 [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 토픽 또는 Visual Basic 참조의 [문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 토픽을 참조하세요.  
@@ -110,7 +115,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 통화 서식 지정자를 사용하여 <xref:System.Double> 값의 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [표로 이동](#table)  
@@ -130,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 10진수 서식 지정자를 사용하여 <xref:System.Int32> 값의 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
- [!code-csharp[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
  [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]  
   
  [표로 이동](#table)  
@@ -154,7 +159,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 지수 서식 지정자를 사용하여 <xref:System.Double> 값의 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [표로 이동](#table)  
@@ -176,7 +181,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 고정 소수점 서식 지정자를 사용하여 <xref:System.Double> 및 <xref:System.Int32> 값의 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [표로 이동](#table)  
@@ -205,10 +210,10 @@ ms.lasthandoff: 05/04/2018
  
 <xref:System.Double> 값과 함께 사용될 때 “G17” 형식 지정자는 원래 <xref:System.Double> 값이 성공적으로 라운드트립되도록 합니다. 이는 <xref:System.Double>이 최대 17자의 전체 유효 자릿수를 제공하는 IEEE 754-2008 규격의 배정밀도(`binary64`) 부동 소수점 숫자이기 때문입니다. 일부 경우에 “R”이 배정밀도 부동 소수점 값을 성공적으로 라운드트립하지 못하기 때문에 [“R” 형식 지정자](#RFormatString) 대신 사용하는 것이 좋습니다. 다음 예제는 이러한 사례를 한 가지 보여줍니다.
 
-[!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-<xref:System.Single> 값과 함께 사용될 때 “G9” 형식 지정자는 원래 <xref:System.Single> 값이 성공적으로 라운드트립되도록 합니다. 이는 <xref:System.Single>이 최대 9자의 전체 유효 자릿수를 제공하는 IEEE 754-2008 규격의 단정밀도(`binary32`) 부동 소수점 숫자이기 때문입니다. 일부 경우에 “R”이 단정밀도 부동 소수점 값을 성공적으로 라운드트립하지 못하기 때문에 [“R” 형식 지정자](#RFormatString) 대신 사용하는 것이 좋습니다.
+<xref:System.Single> 값과 함께 사용될 때 “G9” 형식 지정자는 원래 <xref:System.Single> 값이 성공적으로 라운드트립되도록 합니다. 이는 <xref:System.Single>이 최대 9자의 전체 유효 자릿수를 제공하는 IEEE 754-2008 규격의 단정밀도(`binary32`) 부동 소수점 숫자이기 때문입니다. 성능을 위해 ["R" 형식 지정자](#RFormatString) 대신 사용하는 것이 좋습니다.
 
  결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
@@ -221,7 +226,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 일반 서식 지정자를 사용하여 분류된 부동 소수점 값에 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [표로 이동](#table)  
@@ -244,7 +249,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 숫자 서식 지정자를 사용하여 분류된 부동 소수점 값에 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [표로 이동](#table)  
@@ -269,7 +274,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 백분율 서식 지정자를 사용하여 부동 소수점 값에 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [표로 이동](#table)  
@@ -278,7 +283,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="the-round-trip-r-format-specifier"></a>라운드트립("R") 서식 지정자  
  라운드트립(“R”) 형식 지정자는 문자열로 변환된 숫자 값이 같은 숫자 값으로 다시 구문 분석되도록 시도합니다. 이 서식은 <xref:System.Single>, <xref:System.Double> 및 <xref:System.Numerics.BigInteger> 형식에만 사용할 수 있습니다.  
 
-일부 경우에 “R” 형식 지정자는 <xref:System.Double> 및 <xref:System.Single> 값에 대해 원래 값을 성공적으로 라운드트립하지 못하고 비교적 낮은 성능을 제공합니다. 대신 <xref:System.Double> 값에는 [“G17”](#GFormatString) 형식 지정자, <xref:System.Single> 값에는 [“G9”](#GFormatString) 형식 지정자를 사용하여 원래 값을 라운드트립하는 것이 좋습니다.
+<xref:System.Double> 값의 경우 "R" 형식 지정자가 원래 값을 성공적으로 라운드트립하지 못하는 경우가 있습니다. 또한 <xref:System.Double> 및 <xref:System.Single> 값 모두에 상대적으로 낮은 성능을 제공합니다. 대신 <xref:System.Double> 값에는 [“G17”](#GFormatString) 형식 지정자, <xref:System.Single> 값에는 [“G9”](#GFormatString) 형식 지정자를 사용하여 원래 값을 라운드트립하는 것이 좋습니다.
 
  이 지정자를 사용하여 <xref:System.Numerics.BigInteger> 값의 서식을 지정하면 해당 문자열 표현에 <xref:System.Numerics.BigInteger> 값의 모든 유효 자릿수가 포함됩니다.  
   
@@ -294,7 +299,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 라운드트립 형식 지정자를 사용하여 <xref:System.Numerics.BigInteger> 값의 서식을 지정합니다.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -302,7 +307,7 @@ ms.lasthandoff: 05/04/2018
   
  `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [표로 이동](#table)  
@@ -318,7 +323,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 16진수 서식 지정자를 사용하여 <xref:System.Int32> 값의 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
- [!code-csharp[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
  [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]  
   
  [표로 이동](#table)  
@@ -343,11 +348,13 @@ ms.lasthandoff: 05/04/2018
 ### <a name="floating-point-infinities-and-nan"></a>부동 소수점 무한대 및 NaN  
  서식 문자열에 관계없이 <xref:System.Single> 또는 <xref:System.Double> 부동 소수점 형식의 값이 양의 무한대, 음의 무한대 또는 NaN(Not a Number)이면 서식이 지정된 문자열은 각각 현재 적용 가능한 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> 개체에서 지정하는 해당 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 또는 <xref:System.Globalization.NumberFormatInfo> 속성의 값입니다.  
   
-<a name="example"></a>   
 ## <a name="example"></a>예  
+ 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+ 
  다음 예제에서는 en-US 문화권 및 모든 표준 숫자 서식 지정자를 사용하여 정수 숫자 값과 부동 소수점 숫자 값의 서식을 지정합니다. 이 코드 예제에서는 두 개의 특정 숫자 형식(<xref:System.Double> 및 <xref:System.Int32>)을 사용하지만 다른 기타 숫자 기본 형식(<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> 및 <xref:System.Single>)을 사용해도 유사한 결과가 생성됩니다.  
   
- [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목  

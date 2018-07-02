@@ -4,12 +4,12 @@ description: ML.NET에서 지원되는 다양한 기계 학습 작업을 살펴�
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34860697"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207728"
 ---
 # <a name="machine-learning-tasks"></a>기계 학습 작업
 
@@ -29,13 +29,17 @@ ms.locfileid: "34860697"
 * 환자에게 특정 질병이 있는지 여부 진단.
 * 전자 메일을 “스팸”으로 표시할지 여부 결정.
 
-## <a name="multi-class-classification"></a>다중 클래스 분류
+자세한 내용은 Wikipedia에서 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)(이진 분류) 문서를 참조하세요.
+
+## <a name="multiclass-classification"></a>다중 클래스 분류
 
 데이터 인스턴스의 클래스(범주)를 예측하는 데 사용되는 [감독된 기계 학습](glossary.md#supervised-machine-learning) 작업입니다. 분류 알고리즘의 입력은 레이블이 지정된 예제 집합입니다. 각 레이블은 0~k-1 사이의 정수입니다. 여기서 k는 클래스 수입니다. 분류 알고리즘의 출력은 분류자로, 레이블이 없는 새 인스턴스의 클래스를 예측하는 데 사용할 수 있습니다. 다중 클래스 분류 시나리오의 예는 다음과 같습니다.
 
 * 개의 품종을 “시베리안 허스키”, “골든 리트리버”, “푸들” 등으로 결정.
 * 동영상 리뷰를 “긍정적”, “중립” 또는 “부정적”으로 이해.
 * 호텔 리뷰를 “위치”, “가격”, “청결도” 등으로 범주화.
+
+자세한 내용은 Wikipedia에서 [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)(다중 클래스 분류) 문서를 참조하세요.
 
 ## <a name="regression"></a>재발
 

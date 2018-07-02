@@ -4,12 +4,12 @@ description: Linux 컴퓨터에서 .NET Core 응용 프로그램을 개발, 배�
 author: jralexander
 ms.author: johalex
 ms.date: 06/01/2018
-ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 62493d45bd5839119fd98adb6db52d8d53ce4de5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728549"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314824"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -197,7 +197,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
+> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
 
 |런타임/SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
 |---------------------------------|----------------|----------------|----------------------------|----------------------------|
@@ -253,7 +253,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
+> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
 
 |런타임/SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
@@ -306,7 +306,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
+> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
 
 |런타임/SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
@@ -363,7 +363,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview/)해야 합니다.
+> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
 
 * .NET Core 런타임 2.1.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0)
 * .NET Core SDK 2.1.300 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300)
@@ -423,7 +423,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 미리 보기 1 이상을 설치](https://www.visualstudio.com/vs/preview)해야 합니다.
+> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
 
 **SUSE Linux Enterprise Server**
 

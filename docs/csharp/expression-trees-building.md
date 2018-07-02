@@ -3,12 +3,12 @@ title: 식 트리 작성
 description: 식 트리를 빌드하기 위한 기술을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216316"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207191"
 ---
 # <a name="building-expression-trees"></a>식 트리 작성
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 더하기 식을 작성했으면 람다 식을 만들 수 있습니다.
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-이 식은 인수가 없기 때문에 매우 간단한 LambdaExpression입니다.
+이 식은 인수가 없기 때문에 매우 간단한 람다 식입니다.
 이 섹션의 뒷부분에서는 인수를 매개 변수에 매핑하고 더 복잡한 식을 작성하는 방법을 살펴봅니다.
 
 이 식처럼 간단한 식의 경우 모든 호출을 단일 문으로 결합할 수 있습니다.

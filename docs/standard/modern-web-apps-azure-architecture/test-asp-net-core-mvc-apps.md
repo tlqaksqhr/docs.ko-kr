@@ -4,17 +4,17 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 7b4bcb1c39ddbbc104820558532b03bc9341804e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592563"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208203"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
 > _"제품 단위 테스트가 마음에 들지 않으면 대부분의 고객도 이 테스트를 좋아하지 않을 것입니다."_
-> - 익명 -
+>  _-익명-_
 
 ## <a name="summary"></a>요약
 
@@ -38,7 +38,7 @@ ms.locfileid: "33592563"
 
 LocalFileImageService 구현 클래스는 id가 지정된 특정 폴더에서 이미지 파일의 바이트를 가져와서 반환하기 위한 논리를 구현합니다.
 
-```cs
+```csharp
 public class LocalFileImageService : IImageService
 {
     private readonly IHostingEnvironment _env;
@@ -53,6 +53,13 @@ public class LocalFileImageService : IImageService
             var contentRoot = _env.ContentRootPath + "//Pics";
             var path = Path.Combine(contentRoot, id + ".png");
             return File.ReadAllBytes(path);
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new CatalogImageMissingException(ex);
+        }
+    }
+}
 ```
 
 ### <a name="functional-tests"></a>기능 테스트
@@ -101,19 +108,19 @@ Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예�
 
 테스트 이름은 일관된 방식으로 각 테스트의 기능을 나타내는 이름으로 지정해야 합니다. 크게 성공한 한 가지 방법은 테스트할 클래스와 메서드에 따라 테스트 클래스의 이름을 지정하는 것입니다. 이에 따라 많은 소규모 테스트 클래스가 만들어지지만 각 테스트에서 수행하는 역할이 매우 명확하게 됩니다. 테스트할 클래스와 메서드를 식별하도록 테스트 클래스 이름을 설정하면 테스트 메서드 이름을 사용하여 테스트할 동작을 지정할 수 있습니다. 여기에는 예상되는 동작과 이 동작을 생성해야 하는 모든 입력 또는 가정이 포함되어야 합니다. 몇 가지 테스트 이름 예제는 다음과 같습니다.
 
--   CatalogControllerGetImage.CallsImageServiceWithId
+- CatalogControllerGetImage.CallsImageServiceWithId
 
--   CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- CatalogControllerGetImage.LogsWarningGivenImageMissingException
 
--   CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
 
--   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
 이 방법의 변형은 다음과 같이 각 테스트 클래스 이름을 "Should"로 끝내고 시제를 약간 수정합니다.
 
--   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 일부 팀에서는 두 번째 명명 방법이 다소 장황하지만 더 명확하다고 생각합니다. 어떤 경우이든 테스트 동작에 대한 통찰력을 제공하는 명명 규칙을 사용하여 하나 이상의 테스트가 실패하는 경우 해당 이름에서 실패한 사례에 대해 분명하게 파악할 수 있도록 합니다. 테스트 결과에서 볼 때 값이 제공되지 않으므로 테스트 이름은 ControllerTests.Test1과 같이 모호하게 지정하지 마세요.
 
@@ -131,7 +138,7 @@ Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예�
 
 단위 테스트를 위해 코드를 리팩터링해야 하는 경우가 있습니다. 여기에는 인프라에 대해 직접 코딩하는 대신 테스트하려는 코드의 추상화에 액세스하기 위해 추상화 식별 및 종속성 주입 사용이 자주 포함됩니다. 예를 들어 이미지를 표시하는 다음과 같은 간단한 작업 메서드를 살펴보겠습니다.
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
@@ -146,7 +153,7 @@ public IActionResult GetImage(int id)
 
 파일 시스템 동작을 직접 단위 테스트할 수 없고 경로를 테스트할 수 없는 경우 테스트할 대상은 무엇일까요? 단위 테스트를 가능하게 하기 위해 리팩터링한 후에 오류 처리와 같은 일부 테스트 사례와 누락된 동작을 발견할 수 있습니다. 파일을 찾을 수 없는 경우 메서드에서 어떻게 할까요? 어떻게 해야 할까요? 이 예제에서 리팩터링된 메서드는 다음과 같습니다.
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")\]
 public IActionResult GetImage(int id)
 {
@@ -168,21 +175,11 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>ASP.NET Core 앱 통합 테스트
 
-```cs
-    }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 이 서비스는 별도의 서비스로 리팩터링되기 전에 CatalogController 코드에서 수행한 것처럼 IHostingEnvironment를 사용합니다. 이 코드는 IHostingEnvironment를 사용하는 컨트롤러의 유일한 코드였기 때문에 CatalogController의 생성자에서 해당 종속성이 제거되었습니다.
 
 이 서비스가 제대로 작동하는지 테스트하려면 알려진 테스트 이미지 파일을 만들고 서비스에서 지정된 특정 입력을 반환하는지 확인해야 합니다. 실제로 테스트하려는 동작(여기서는 파일 시스템에서 읽기)에서 모의 개체를 사용하지 않도록 주의해야 합니다. 그러나 모의 개체는 여전히 통합 테스트를 설정하는 데 유용할 수 있습니다. 이 경우 IHostingEnvironment를 모의하여 ContentRootPath에서 테스트 이미지에 사용할 폴더를 가리킬 수 있습니다. 작업 통합 테스트 클래스 전체는 다음과 같습니다.
 
-```cs
+```csharp
 public class LocalFileImageServiceGetImageBytesById
 {
     private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
@@ -224,7 +221,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 ASP.NET Core 응용 프로그램의 경우 TestServer 클래스를 사용하면 기능 테스트를 매우 쉽게 작성할 수 있습니다. 응용 프로그램에서 일반적으로 수행하는 것처럼 WebHostBuilder를 사용하여 TestServer를 구성합니다. 이 WebHostBuilder는 응용 프로그램의 실제 호스트와 동일하게 구성해야 하지만, 테스트를 더 쉽게 수행할 수 있는 측면은 모두 수정할 수 있습니다. 대부분의 경우 동일한 TestServer를 여러 테스트 사례에 다시 사용하므로 다시 사용할 수 있는 메서드(아마도 기본 클래스)에 캡슐화할 수 있습니다.
 
-```cs
+```csharp
 public abstract class BaseWebTest
 {
     protected readonly HttpClient _client;
@@ -234,14 +231,14 @@ public abstract class BaseWebTest
     {
         _client = GetClient();
     }
-    
+
     protected HttpClient GetClient()
     {
         var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
         _contentRoot = GetProjectPath("src", startupAssembly);
         var builder = new WebHostBuilder()
         .UseContentRoot(_contentRoot)
-        .UseStartup&lt;Startup&gt;();
+        .UseStartup<Startup>();
         var server = new TestServer(builder);
         var client = server.CreateClient();
         return client;
@@ -251,7 +248,7 @@ public abstract class BaseWebTest
 
 GetProjectPath 메서드는 웹 프로젝트(샘플 솔루션 다운로드)에 대한 실제 경로를 반환하기만 합니다. 이 경우 WebHostBuilder는 웹 응용 프로그램의 콘텐츠 루트의 위치를 간단하게 지정하고 실제 웹 응용 프로그램에서 사용하는 동일한 Startup 클래스를 참조합니다. TestServer를 사용하려면 표준 System.Net.HttpClient 형식을 사용하여 요청을 작성합니다. TestServer는 TestServer에서 실행되는 응용 프로그램에 요청할 준비가 된 미리 구성된 클라이언트를 제공하는 유용한 CreateClient 메서드를 노출합니다. ASP.NET Core 응용 프로그램에 대한 기능 테스트를 작성하는 경우 이 클라이언트(위의 기본 테스트에서 보호된 \_client 멤버로 설정됨)를 사용합니다.
 
-```cs
+```csharp
 public class CatalogControllerGetImage : BaseWebTest
 {
     [Fact]

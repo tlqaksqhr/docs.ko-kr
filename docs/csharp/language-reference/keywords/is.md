@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289219"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207997"
 ---
 # <a name="is-c-reference"></a>is(C# 참조) #
 
@@ -75,7 +75,7 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
 
 여기서 *expr*은 일부 형식의 인스턴스로 평가되는 식이고 *type*은 *expr*의 결과가 변환될 형식의 이름이며 *varname*은 `is` 테스트가 `true`인 경우 *expr*의 결과가 변환되는 개체입니다. 
 
-`is` 식은 다음 중 하나에 해당되는 경우 `true`입니다.
+*expr*이 `null`이 아니고 다음 중 하나가 true일 경우 `is` 식은 `true`입니다.
 
 - *expr*이 *type*과 동일한 형식의 인스턴스입니다.
 
@@ -85,7 +85,7 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
 
 - *expr*이 *type* 인터페이스를 구현하는 형식의 인스턴스입니다.
 
-*exp*가 `true`이고 `is`가 `if` 문에서 사용되는 경우 *varname*이 할당되며 `if` 문 내의 로컬 범위만 갖습니다.
+*expr*이 `true`이고 `is`가 `if` 문에서 사용되는 경우 *varname*이 할당되며 `if` 문 내의 로컬 범위만 갖습니다.
 
 다음 예제에서는 `is` 형식 패턴을 사용하여 형식의 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 메서드 구현을 제공합니다.
 

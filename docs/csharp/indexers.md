@@ -3,12 +3,12 @@ title: 인덱서
 description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱싱된 속성을 구현하는 방법 및 C# 인덱서에 대해 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 73f79f58cd20187a6fd0de29f53f1a31a269e0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218301"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207497"
 ---
 # <a name="indexers"></a>인덱서
 

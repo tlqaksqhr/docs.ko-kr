@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389517"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270450"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 및 Windows Server 2016에 .NET Framework 설치
 
@@ -66,7 +66,7 @@ Windows 10 1507 또는 1511을 사용 중인 경우 .NET Framework 4.7.2를 설�
 
 - 이후 버전이 이미 설치되어 있으면 컴퓨터에 이전 버전의 .NET Framework를 설치할 수 없습니다.
 
-- .NET Framework 4.x 버전은 .NET Framework 4.0~해당 버전용으로 빌드된 응용 프로그램을 실행하는 데 사용할 수 있습니다. 예를 들어 .NET Framework 4.7은 .NET Framework 4.0~4.7용으로 빌드된 응용 프로그램을 실행하는 데 사용할 수 있습니다. 최신 버전(.NET Framework 4.7.1)은 4.0으로 시작하는 모든 .NET Framework 버전으로 빌드된 응용 프로그램을 실행하는 데 사용할 수 있습니다.
+- .NET Framework 4.x 버전은 .NET Framework 4.0~해당 버전용으로 빌드된 응용 프로그램을 실행하는 데 사용할 수 있습니다. 예를 들어 .NET Framework 4.7은 .NET Framework 4.0~4.7용으로 빌드된 응용 프로그램을 실행하는 데 사용할 수 있습니다. 최신 버전(.NET Framework 4.7.2)은 4.0으로 시작되는 모든 .NET Framework 버전으로 빌드된 응용 프로그램을 실행하는 데 사용할 수 있습니다.
 
 다운로드할 수 있는 모든 .NET Framework 버전 목록은 [.NET 다운로드](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) 페이지를 참조하세요.
 

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579758"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207640"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 응용 프로그램 계층 구현
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 이것이 명령을 명령 처리기와 연관시키는 코드입니다. 처리기는 단지 간단한 클래스이지만 RequestHandler&lt;T&gt;를 상속받으며 MediatR은 올바른 페이로드로 호출되는지 확인합니다.
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>MeadiatR의 동작을 사용하여 명령을 처리하는 경우 교차 편집 문제 적용
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>MediatR의 동작을 사용하여 명령을 처리하는 경우 교차 편집 문제 적용
 
 한 가지가 더 있습니다. 중재자(mediator) 파이프라인에 교차 편집 문제를 적용할 수 있습니다. Autofac 등록 모듈 코드의 끝에서 동작 형식, 특히 LoggingBehavior 클래스 및 ValidatorBehavior 클래스를 어떻게 등록하는지 볼 수도 있습니다. 하지만 다른 사용자 지정 동작도 추가할 수 있습니다.
 
@@ -827,12 +827,12 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 ##### <a name="the-mediator-pattern"></a>중재자(mediator) 패턴
 
--   **Mediator pattern**(중재자(mediator) 패턴)
+-   **중재자(mediator) 패턴**
     [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>데코레이터(decorator) 패턴
 
--   **Decorator pattern**(데코레이터(decorator) 패턴)
+-   **데코레이터(decorator) 패턴**
     [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR(Jimmy Bogard)

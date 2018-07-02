@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570613"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207175"
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 
@@ -39,7 +39,7 @@ ms.locfileid: "33570613"
 
 많은 라이브러리 개발자가 한 소스에서 여러 플랫폼별 라이브러리를 생성하는 형태(조건부 컴파일 지시문 사용)에서 이식 가능한 라이브러리로 전환했습니다. 이식 가능한 라이브러리 내에서 플랫폼별 기능에 액세스하기 위한 [여러 가지 방법](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)이 있으며, [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)가 현재 가장 광범위하게 사용되는 기술입니다.
 
-### <a name="net-standard-class-libraries"></a>.NET Standard 클래스 라이브러리
+## <a name="net-standard-class-libraries"></a>.NET 표준 클래스 라이브러리
 
 .NET Standard 라이브러리는 플랫폼별 및 이식 가능한 라이브러리 개념을 대체합니다. 기본 플랫폼의 모든 기능을 표시한다는 점에서 플랫폼별 라이브러리입니다(가상 플랫폼 또는 플랫폼 교차 부분 아님). 또한 지원되는 모든 플랫폼에서 작동한다는 점에서 이식 가능한 라이브러리입니다.
 
@@ -60,6 +60,6 @@ ms.locfileid: "33570613"
 
 자세한 내용은 [.NET 표준](net-standard.md) 항목을 참조하세요.
 
-### <a name="mono-class-libraries"></a>Mono 클래스 라이브러리
+## <a name="mono-class-libraries"></a>Mono 클래스 라이브러리
 
 위에서 설명한 세 가지 형식의 라이브러리를 포함하여 클래스 라이브러리는 Mono에서 지원됩니다. Mono는 Microsoft .NET Framework의 플랫폼 간 구현으로 간주되는 경우가 많습니다(맞음). 부분적으로 이는 플랫폼별 .NET Framework 라이브러리를 수정하거나 컴파일하지 않고 Mono 런타임에서 실행할 수 있기 때문이었습니다. 이 특성은 이식 가능한 클래스 라이브러리를 만들기 전에 구현되었으므로 한 방향으로만 작동한다는 제약에도 불구하고 .NET Framework와 Mono 간에 이진 이식성을 사용하는 것이 당연했습니다.

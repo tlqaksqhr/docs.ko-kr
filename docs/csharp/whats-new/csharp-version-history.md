@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696977"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207536"
 ---
 # <a name="the-history-of-c"></a>C#의 역사 #
 
@@ -18,9 +18,22 @@ ms.locfileid: "34696977"
 
 시간을 거슬러 올라가 보면 C# 버전 1.0은 Java와 매우 흡사했습니다. [ECMA에 대해 명시된 설계 목표의 일부](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)로 "단순하고 현대적인 범용 개체 지향 언어"를 추구했습니다.  당시에 Java와 같은 형태는 이러한 초기 설계 목표를 달성한 것을 의미했습니다.
 
-그러나 지금 다시 C# 1.0을 돌이켜보면 조금 어지러워질 것입니다. 기본 제공 비동기 기능과 당연한 것으로 여겨지는 제네릭과 관련된 멋진 기능 중 일부가 부족했습니다. 사실, 제네릭이 아예 없었습니다.  그리고 [LINQ](../linq/index.md)는 아직 사용할 수 없습니다. 나올 때까지 몇 년이 걸릴 것입니다.
+그러나 지금 다시 C# 1.0을 돌이켜보면 조금 어지러워질 것입니다. 기본 제공 비동기 기능과 당연한 것으로 여겨지는 제네릭과 관련된 멋진 기능 중 일부가 부족했습니다. 사실, 제네릭이 아예 없었습니다.  그리고 [LINQ](../linq/index.md)는 아직 사용할 수 없습니다. 그러한 추가 사항은 나올 때까지 몇 년이 걸릴 것입니다.
 
 C# 버전 1.0은 오늘날보다 기능이 없는 편이었습니다. 좀 더 자세한 코드를 작성해야 했습니다. 하지만 출발점이 필요했습니다. C# 버전 1.0은 Windows 플랫폼에서 Java를 대체하는 실용적인 방법이었습니다.
+
+C# 1.0의 주요 기능에는 다음이 포함되어 있습니다.
+
+- [클래스](../programming-guide/classes-and-structs/classes.md)
+- [구조체](../programming-guide/classes-and-structs/structs.md)
+- [인터페이스](../programming-guide/interfaces/index.md)
+- [이벤트](../events-overview.md)
+- [속성](../properties.md)
+- [대리자](../delegates-overview.md)
+- [식](../programming-guide/statements-expressions-operators/expressions.md)
+- [문](../programming-guide/statements-expressions-operators/statements.md)
+- [특성](../programming-guide/concepts/attributes/index.md)
+- 리터럴
 
 ## <a name="c-version-20"></a>C# 버전 2.0
 
@@ -33,11 +46,18 @@ C# 버전 1.0은 오늘날보다 기능이 없는 편이었습니다. 좀 더 �
 - [반복기](../programming-guide/concepts/iterators.md)
 - [공변성(Covariance) 및 반공변성(Contravariance)](../programming-guide/concepts/covariance-contravariance/index.md)
 
-C#은 매우 일반적인 OO(개체 지향) 언어로 시작되었지만 C# 버전 2.0을 통해 급격히 바뀌었습니다. C#이 자리를 잡은 후 개발자들은 몇 가지 심각한 고민을 겪었습니다. 대대적인 문제였죠.
+기존 기능에 추가된 기타 C# 2.0 기능은 다음과 같습니다.
 
-제네릭을 사용하면 형식을 안전하게 유지하면서 임의의 형식에서 작동할 수 있는 형식 및 메서드가 있습니다. 따라서 예를 들어 <xref:System.Collections.Generic.List%601>를 사용하면 `List<string>` 또는 `List<int>`를 사용하고 이를 반복하는 동안 문자열이나 정수에 형식이 안전한 작업을 수행할 수 있습니다. 이는 모든 작업에 대해 `ListInt` 상속자를 만들거나 `Object`에서 캐스팅하는 것보다 좋습니다.
+- getter/setter 별도의 액세스 가능
+- 메서드 그룹 변환(대리자)
+- 정적 클래스
+- 대리자 유추
 
-C# 버전 2.0에서는 반복기라는 기능이 도입되었습니다. 간단히 말해서 `List`(또는 다른 열거 가능 형식)의 항목을 `foreach` 루프로 반복할 수 있습니다. 이를 언어의 첫 번째 클래스 부분에 사용하면 언어의 가독성과 사용자의 코드 추론 능력이 크게 향상됩니다.
+C#은 일반적인 OO(개체 지향) 언어로 시작되었지만 C# 버전 2.0을 통해 급격히 바뀌었습니다. C#이 자리를 잡은 후 개발자들은 몇 가지 심각한 고민을 겪었습니다. 이후 대대적인 문제가 발생했습니다.
+
+제네릭을 사용하면 형식을 안전하게 유지하면서 임의의 형식에서 형식 및 메서드를 작동할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601>를 사용하면 `List<string>` 또는 `List<int>`를 사용하고 이를 반복하는 동안 해당 문자열이나 정수에 형식이 안전한 작업을 수행할 수 있습니다. 제네릭을 사용하는 것은 모든 작업에서 `ArrayList`에서 파생되거나 `Object`에서 캐스팅한 `ListInt`를 만드는 것보다 좋습니다.
+
+C# 버전 2.0에서는 반복기라는 기능이 도입되었습니다. 간단히 말해서, 반복기를 사용하면 `List`(또는 다른 열거 가능 형식)의 모든 항목을 `foreach` 루프로 검사할 수 있습니다. 반복기를 언어의 첫 번째 클래스 부분에 사용하면 언어의 가독성과 사용자의 코드 추론 능력이 크게 향상됩니다.
 
 그리고 이때까지 C#은 Java를 따라잡으려는 노력을 계속했습니다. Java는 이미 제네릭 및 반복기가 포함된 버전을 출시했습니다. 하지만 언어가 계속 발전함에 따라 곧 변경될 것입니다.
 
@@ -51,6 +71,9 @@ C# 버전 3.0은 Visual Studio 2008과 함께 2007년말에 출시되었지만 �
 - [람다 식](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [식 트리](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [확장 메서드](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [암시적 형식 지역 변수](../language-reference/keywords/var.md)
+- [부분 메서드](../language-reference/keywords/partial-method.md)
+- 개체 및 컬렉션 이니셜라이저
 
 되돌아보면, 이러한 특징은 대부분 필연적이고 불가분한 것입니다. 이러한 모든 특징은 전략적으로 잘 맞습니다. 일반적으로 C# 버전의 핵심 기능은 LINQ(Language-Integrated Query)라고도 하는 쿼리 식이라 생각합니다.
 
@@ -75,11 +98,11 @@ C# 버전 4.0은 버전 3.0의 혁신적인 상태를 유지하느라 힘든 시
 
 주요 기능은 `dynamic` 키워드였습니다. `dynamic` 키워드는 C# 버전 4.0에 컴파일 시간에 컴파일러를 재정의하는 기능을 도입했습니다. 동적 키워드를 사용하면 JavaScript와 같이 동적으로 형식화된 언어와 유사한 구조를 만들 수 있습니다. `dynamic x = "a string"`을 만든 다음, 6을 추가하여 다음에 수행해야 할 작업을 런타임에 맡길 수 있습니다.
 
-이렇게 하면 오류가 발생할 수 있지만 언어 내에서 훌륭한 기능을 사용할 수 있습니다.
+동적 바인딩은 오류를 유발할 수 있지만 언어 내에서 훌륭한 기능도 제공합니다.
 
 ## <a name="c-version-50"></a>C# 버전 5.0
 
-C# 버전 5.0은 매우 집중된 버전의 언어였습니다. 해당 버전에 대한 거의 모든 노력은 다른 획기적인 언어 개념으로 옮겨갔습니다.  다음은 주요 기능 목록입니다.
+C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한 거의 모든 노력은 다른 획기적인 언어 개념인 비동기 프로그래밍을 위한 `async` 및 `await` 모델로 옮겨 갔습니다.  다음은 주요 기능 목록입니다.
 
 - [비동기 멤버](../async.md)
 - [호출자 정보 특성](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
@@ -90,7 +113,7 @@ C# 버전 5.0은 매우 집중된 버전의 언어였습니다. 해당 버전에
 
 ## <a name="c-version-60"></a>C# 버전 6.0
 
-버전 3.0과 5.0에서 C#은 개체 지향 언어에 몇 가지 인상적인 기능을 추가했습니다. 버전 6.0에서 지배적인 핵심 기능을 수행하지 않는 대신 언어의 사용자를 만족시키는 많은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
+버전 3.0과 5.0에서 C#은 개체 지향 언어의 주요 새 기능을 추가했습니다. 버전 6.0에서 지배적인 핵심 기능을 수행하지 않는 대신 C# 프로그래밍을 보다 생산적으로 만드는 많은 작은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
 
 - [정적 가져오기](../language-reference/keywords/using-static.md)
 - [예외 필터](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
@@ -100,6 +123,11 @@ C# 버전 5.0은 매우 집중된 버전의 언어였습니다. 해당 버전에
 - [문자열 보간](../language-reference/tokens/interpolated.md)
 - [nameof 연산자](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
 - [인덱스 이니셜라이저](csharp-6.md#index-initializers)
+
+기타 새로운 기능은 다음과 같습니다.
+
+- Catch/Finally 블록의 Await
+- Getter 전용 속성의 기본값
 
 이러한 각 기능은 그 자체로 흥미롭습니다. 그러나 전체적으로 살펴보면 흥미로운 패턴을 볼 수 있습니다. 이 버전에서 C#은 언어 상용구를 제거하여 코드를 더 간결하고 읽기 쉽게 만들었습니다. 따라서 깔끔하고 간단한 코드를 좋아하는 사람들에게 이 언어 버전은 큰 선물이었습니다.
 
@@ -116,8 +144,16 @@ C# 버전 5.0은 매우 집중된 버전의 언어였습니다. 해당 버전에
 - [확장된 식 본문 멤버](./csharp-7.md#more-expression-bodied-members)
 - [참조 로컬 및 반환](./csharp-7.md#ref-locals-and-returns)
 
+이러한 기능에는 다음이 포함됩니다.
+
+- [삭제](../discards.md)
+- [이진 리터럴](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
+- [자릿수 구분 기호](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
+- 참조 반환 및 로컬
+- [Throw 식](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+
 이러한 모든 기능은 개발자에게 멋진 새 기능과 이전보다 훨씬 깔끔한 코드를 작성할 수 있는 기회를 제공합니다. 하이라이트는 `out` 키워드와 함께 사용할 변수의 선언을 압축하고 튜플을 통해 여러 개의 반환 값을 허용하는 것입니다.
 
-그러나 C#은 더욱 광범위하게 사용되고 있습니다. .NET Core는 이제 모든 운영 체제를 대상으로 하며 클라우드와 휴대성에 확실히 집중하고 있습니다.  이는 새 기능을 제공하는 것 외에도 언어 디자이너가 많이 생각하고 시간을 투자하게 만듭니다.
+그러나 C#은 더욱 광범위하게 사용되고 있습니다. .NET Core는 이제 모든 운영 체제를 대상으로 하며 클라우드와 휴대성에 확실히 집중하고 있습니다.  이는 새로운 기능을 제공하는 것 외에도 언어 디자이너가 많이 생각하고 시간을 투자하게 만듭니다.
 
 _아티클_ [_NDepend 블로그에 최초로 게시됨_](https://blog.ndepend.com/c-versions-look-language-history/)_, Erik Dietrich 및 Patrick Smacchia 제공_

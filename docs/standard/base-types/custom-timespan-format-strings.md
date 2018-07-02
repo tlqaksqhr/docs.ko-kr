@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f65e8bb1a61bad458cb33a3bf9d2553479c750e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208213"
 ---
 # <a name="custom-timespan-format-strings"></a>사용자 지정 TimeSpan 서식 문자열
 <xref:System.TimeSpan> 형식 문자열은 서식 지정 작업에서 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 <xref:System.TimeSpan> 형식 지정자와 임의 개수의 리터럴 문자로 구성됩니다. [표준 TimeSpan 형식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)이 아닌 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/04/2018
 |"FFFFFF"|시간 간격의 1/1000000초입니다. 뒤에 오는 소수 자릿수 0은 표시되지 않습니다.<br /><br /> 추가 정보: ["FFFFFF" 사용자 지정 형식 지정자](#F6_Specifier)|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|시간 간격의 1/10000000초입니다. 뒤에 오는 소수 자릿수 0이나 연속 일곱 자리 0은 표시되지 않습니다.<br /><br /> 추가 정보: ["FFFFFFF" 사용자 지정 형식 지정자](#F7_Specifier)|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |‘*string*’|리터럴 문자열 구분 기호입니다.<br /><br /> 추가 정보: [기타 문자](#Other)|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|이스케이프 문자입니다.<br /><br /> 추가 정보: [기타 문자](#Other)|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\\|이스케이프 문자입니다.<br /><br /> 추가 정보: [기타 문자](#Other)|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |기타 문자|이스케이프되지 않은 다른 모든 문자는 사용자 지정 형식 지정자로 해석됩니다.<br /><br /> 추가 정보: [기타 문자](#Other)|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

@@ -3,13 +3,13 @@ title: dotnet new 명령 - .NET Core CLI
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/12/2018
+ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570465"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207784"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -151,8 +151,8 @@ dotnet new [-h|--help]
 
 만들 템플릿의 언어입니다. 허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조). 일부 템플릿의 경우 유효하지 않습니다.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 일부 셸은 `#`을 특수 문자로 해석합니다. 이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -202,8 +202,8 @@ dotnet new [-h|--help]
 
 만들 템플릿의 언어입니다. 허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조). 일부 템플릿의 경우 유효하지 않습니다.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 일부 셸은 `#`을 특수 문자로 해석합니다. 이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -243,8 +243,8 @@ dotnet new [-h|--help]
 
 만들 템플릿의 언어입니다. 허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조). 일부 템플릿의 경우 유효하지 않습니다.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 일부 셸은 `#`을 특수 문자로 해석합니다. 이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -502,13 +502,13 @@ dotnet new [-h|--help]
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-.NET Core 2.0을 대상으로 인증 없이 현재 디렉터리에 새 ASP.NET Core C# MVC 응용 프로그램 프로젝트를 만듭니다.
+인증 없이 현재 디렉터리에 새 ASP.NET Core C# MVC 응용 프로그램 프로젝트를 만듭니다.
 
-`dotnet new mvc -au None -f netcoreapp2.0`
+`dotnet new mvc -au None`
 
-.NET Core 2.0을 대상으로 새 xUnit 응용 프로그램을 만듭니다.
+새 xUnit 응용 프로그램을 만듭니다.
 
-`dotnet new xunit --framework netcoreapp2.0`
+`dotnet new xunit`
 
 MVC에 대해 사용할 수 있는 모든 템플릿을 나열합니다.
 

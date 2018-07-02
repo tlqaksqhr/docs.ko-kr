@@ -1,113 +1,107 @@
 ---
 title: for(C# 참조)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306529"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208007"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
-`for` 루프를 사용하면 지정된 식이 `false`로 계산될 때까지 문 또는 문의 블록을 반복해서 실행할 수 있습니다. 이러한 종류의 루프는 배열을 반복하는 데 유용하며 루프를 반복할 횟수를 미리 알고 있는 다른 응용 프로그램에 유용합니다.
-  
-## <a name="example"></a>예
+`for` 문은 지정된 부울 식이 `true`로 평가되는 동안 명령문 또는 명령문 블록을 실행합니다.
 
-다음 예제에서 `i` 값은 콘솔에 기록되며 루프를 반복할 때마다 1씩 증가합니다.
+`for` 문 블록 내 원하는 지점에서 [break](break.md) 문을 사용하여 루프를 중단하거나 [continue](continue.md) 문을 사용하여 루프의 다음 반복을 한 단계 실행할 수 있습니다. [goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `for` 루프를 종료할 수도 있습니다.
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-이전 예제에서 [for 문](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)은 다음 작업을 수행합니다.
-  
-1.  먼저 `i` 변수의 초기 값을 설정합니다. 이 단계는 루프가 반복되는 횟수에 관계없이 한 번만 수행됩니다. 이 초기화가 루프 프로세스 외부에서 발생한다고 생각할 수 있습니다.
-  
-2.  조건(`i <= 5`)을 평가하기 위해 `i` 값을 5와 비교합니다.
-  
-    -   `i`가 5보다 작거나 같으면 조건이 `true`로 평가되고 다음 작업이 수행됩니다.  
-  
-        1.  루프 본문의 `Console.WriteLine` 문이 `i` 값을 표시합니다.  
-  
-        2.  `i`의 값이 1씩 증가합니다.  
-  
-        3.  루프가 2단계의 시작 부분으로 돌아가 조건을 다시 평가합니다.  
-  
-    -   `i`가 5보다 크면 조건이 `false`로 평가되고 루프를 종료합니다.  
-  
-`i`의 초기 값이 5보다 크면 루프의 본문이 한 번도 실행되지 않습니다.
+## <a name="structure-of-the-for-statement"></a>`for` 문의 구조
 
-## <a name="sections-of-a-for-statement"></a>for 문의 섹션
+`for` 문은 *initializer*, *condition* 및 *iterator* 섹션을 정의합니다.
   
-모든 [for 문](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)은 ‘이니셜라이저’, ‘조건’ 및 ‘반복기’ 섹션을 정의합니다. 이러한 섹션은 일반적으로 루프가 반복되는 횟수를 결정합니다.  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-섹션은 다음과 같은 용도로 사용됩니다.
-  
--   이니셜라이저 섹션은 초기 조건을 설정합니다. 이 섹션의 문은 루프가 시작되기 전에 한 번만 실행됩니다. 섹션에는 다음 두 가지 옵션 중 하나만 포함될 수 있습니다.  
-  
-    -   첫 번째 예제와 같이 로컬 루프 변수의 선언 및 초기화(`int i = 1`). 변수는 루프에 로컬이며 루프 외부에서 액세스할 수 없습니다.  
-  
-    -   쉼표로 구분된 다음 목록의 문 식 0개 이상  
-  
-        -   [assignment](../../../csharp/language-reference/operators/assignment-operator.md) 문  
-  
-        -   메서드 호출  
-  
-        -   접두사 또는 후위 [increment](../../../csharp/language-reference/operators/increment-operator.md) 식(예: `++i` 또는`i++`)  
-  
-        -   접두사 또는 후위 [decrement](../../../csharp/language-reference/operators/decrement-operator.md) 식(예: `--i` 또는`i--`)  
-  
-        -   [new](../../../csharp/language-reference/keywords/new-operator.md)를 사용하여 개체 만들기  
-  
-        -   [await](../../../csharp/language-reference/keywords/await.md) 식  
-  
--   조건 섹션에는 루프를 종료할지 다시 실행할지를 결정하기 위해 평가되는 부일 식이 포함되어 있습니다.  
-  
--   반복기 섹션은 루프의 본문을 반복할 때마다 수행되는 업을 정의합니다. 반복기 섹션에는 다음과 같은 문 식이 쉼표로 구분되어 0개 이상 포함됩니다.  
-  
-    -   [assignment](../../../csharp/language-reference/operators/assignment-operator.md) 문  
-  
-    -   메서드 호출  
-  
-    -   접두사 또는 후위 [increment](../../../csharp/language-reference/operators/increment-operator.md) 식(예: `++i` 또는`i++`)  
-  
-    -   접두사 또는 후위 [decrement](../../../csharp/language-reference/operators/decrement-operator.md) 식(예: `--i` 또는`i--`)  
-  
-    -   [new](../../../csharp/language-reference/keywords/new-operator.md)를 사용하여 개체 만들기  
-  
-    -   [await](../../../csharp/language-reference/keywords/await.md) 식  
-  
--   루프의 본문은 문, 빈 문 또는 0개 이상의 문을 중괄호로 묶어 만드는 문 블록으로 구성됩니다.  
-  
-     [break](../../../csharp/language-reference/keywords/break.md) 키워드를 사용하여 `for` 루프를 중단하거나, [continue](../../../csharp/language-reference/keywords/continue.md) 키워드를 사용하여 다음 반복을 단계 실행할 수 있습니다. 또한 [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) 또는 [throw](../../../csharp/language-reference/keywords/throw.md) 문을 사용하여 루프를 종료할 수 있습니다.  
-  
-이 항목의 첫 번째 예제에서는 섹션에 대해 다음 중에서 선택할 수 있는 가장 일반적인 종류의 `for` 루프를 보여줍니다.
-  
--   이니셜라이저는 루프의 반복 횟수를 유지 관리하는 로컬 루프 변수 `i`를 선언하고 초기화합니다.  
-  
--   조건은 알려진 최종 값 5에 대해 루프 변수의 값을 확인합니다.  
-  
--   반복기 섹션에서는 후위 increment 문 `i++`를 사용하여 루프의 각 반복을 기록합니다.
+```
 
-## <a name="more-examples"></a>추가 예제
+세 개의 섹션은 모두 선택 사항입니다. 루프의 본문은 명령문 또는 명령문 블록입니다.
+
+다음 예제에서는 모든 섹션이 정의된 `for` 문을 보여 줍니다.
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a>*initializer* 섹션
+
+*initializer* 섹션의 명령문은 루프로 유입되기 전에 한 번만 실행됩니다. *initializer* 섹션은 다음 중 하나입니다.
+
+- 루프 외부에서 액세스할 수 없는 로컬 루프 변수의 선언 및 초기화
+
+- 쉼표로 구분된 다음 목록의 0개 이상의 명령문 식:
+
+  - [assignment](../operators/assignment-operator.md) 문
+
+  - 메서드 호출  
+
+  - 접두사 또는 후위 [increment](../operators/increment-operator.md) 식(예: `++i` 또는`i++`)  
+
+  - 접두사 또는 후위 [decrement](../operators/decrement-operator.md) 식(예: `--i` 또는`i--`)  
+
+  - [new](new-operator.md) 키워드를 사용하여 개체 만들기
+
+  - [await](await.md) 식
+
+위의 예제에서 *initializer* 섹션은 로컬 루프 변수 `i`를 선언하고 초기화합니다.
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a>*condition* 섹션
+
+*condition* 섹션이 있으면 부울 식이어야 합니다. 이 식은 모든 루프 반복 전에 평가됩니다. *condition* 섹션이 없거나 부울 식이 `true`로 평가되는 경우, 다음 루프 반복이 실행되고 그렇지 않으면 루프가 종료됩니다.
+
+위의 예제에서 *condition* 섹션은 로컬 루프 변수의 값에 따라 루프가 종료되는지 여부를 결정합니다.
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a>*iterator* 섹션
+
+*iterator* 섹션은 루프의 본문을 반복할 때마다 수행되는 작업을 정의합니다. *iterator* 섹션에는 쉼표로 구분된 다음 명령문 식이 0개 이상 포함됩니다.  
+
+- [assignment](../operators/assignment-operator.md) 문
+
+- 메서드 호출  
+
+- 접두사 또는 후위 [increment](../operators/increment-operator.md) 식(예: `++i` 또는`i++`)  
+
+- 접두사 또는 후위 [decrement](../operators/decrement-operator.md) 식(예: `--i` 또는`i--`)  
+
+- [new](new-operator.md) 키워드를 사용하여 개체 만들기
+
+- [await](await.md) 식
+
+위 예제의 *iterator* 섹션은 로컬 루프 변수를 증가시킵니다.
+
+```csharp
+i++
+```
+
+## <a name="examples"></a>예제
+
+다음 예제에서는 *initializer* 섹션에서 외부 루프 변수에 값 할당, *initializer* 및 *iterator* 섹션에서 메서드 호출, *iterator* 섹션에서 두 변수의 값 변경과 같이 `for` 문 섹션의 여러 가지 덜 일반적인 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
   
-다음 예제에서는 이니셜라이저 섹션에서 외부 루프 변수에 값 할당, 이니셜라이저와 반복기 섹션에서 `Console.WriteLine` 메서드 호출, 반복기 섹션에서 두 변수의 값 변경과 같이 여러 가지 덜 일반적인 선택 항목을 보여줍니다.
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+다음 예제에서는 무한 `for` 루프를 정의합니다.
   
-`for` 문을 정의하는 모든 식은 선택 사항입니다. 예를 들어 다음 문은 무한 루프를 만듭니다.
-  
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
@@ -116,9 +110,9 @@ for (initializer; condition; iterator)
 ## <a name="see-also"></a>참고 항목
 
 [for 문(C# 언어 사양)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[C# 참조](../../../csharp/language-reference/index.md)  
-[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-[C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[C# 참조](../index.md)  
+[C# 프로그래밍 가이드](../../programming-guide/index.md)  
+[C# 키워드](index.md)  
+[foreach, in](foreach-in.md)  
 [for 문(C++)](/cpp/cpp/for-statement-cpp)  
-[반복 문](../../../csharp/language-reference/keywords/iteration-statements.md)
+[반복 문](iteration-statements.md)

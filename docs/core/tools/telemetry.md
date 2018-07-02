@@ -1,21 +1,21 @@
 ---
-title: .NET Core CLI 도구 원격 분석
-description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용 정보를 수집하는 .NET Core 도구 원격 분석 기능을 살펴봅니다.
+title: .NET Core SDK 원격 분석
+description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용 정보를 수집하는 .NET Core SDK 원격 분석 기능을 살펴봅니다.
 author: richlander
 ms.author: mairaw
-ms.date: 08/04/2017
-ms.openlocfilehash: 4c04867f5db512ef53c23ec41ea66db570a82021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/20/2018
+ms.openlocfilehash: f60a1eaa7b869676dfbb67529e7878ca9b9ca34a
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216085"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314879"
 ---
-# <a name="net-core-cli-tools-telemetry"></a>.NET Core CLI 도구 원격 분석
+# <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
-[.NET Core SDK](index.md)에는 사용 정보를 수집하는 [원격 분석 기능](https://github.com/dotnet/cli/pull/2145)이 포함되어 있습니다. .NET 팀이 개선을 위해 도구 사용 방법을 이해하는 것이 중요합니다. 자세한 내용은 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)를 참조하세요.
+[.NET Core SDK](index.md)에는 사용 정보를 수집하는 [원격 분석 기능](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)이 포함되어 있습니다. .NET 팀이 이 도구를 개선하려면 이 도구가 어떻게 사용되는지 이해해야 합니다. 자세한 내용은 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)를 참조하세요.
 
-수집된 데이터는 익명이며 Microsoft 및 커뮤니티에서 사용할 집계 형식으로 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 게시됩니다. 
+수집된 데이터는 익명이며 Microsoft 및 커뮤니티에서 사용할 집계 형식으로 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 게시됩니다.
 
 ## <a name="scope"></a>범위
 
@@ -33,10 +33,9 @@ ms.locfileid: "33216085"
 - `dotnet restore`
 - `dotnet run`
 
+## <a name="how-to-opt-out"></a>옵트아웃(opt out)하는 방법
 
-## <a name="behavior"></a>동작
-
-.NET Core CLI 도구 원격 분석 기능은 기본적으로 사용됩니다. `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정하여 원격 분석 기능을 옵트아웃(opt out)합니다.
+.NET Core SDK 원격 분석 기능은 기본적으로 사용됩니다. `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정하여 원격 분석 기능을 옵트아웃(opt out)합니다.
 
 ## <a name="data-points"></a>데이터 요소
 
@@ -63,11 +62,12 @@ ms.locfileid: "33216085"
 
 이 기능은 사용자 이름이나 전자 메일 주소 등의 개인 데이터를 수집하지 않습니다. 코드를 검사하지 않고 이름, 리포지토리 또는 작성자와 같은 중요한 프로젝트 수준 데이터를 추출하지 않습니다. 데이터는 [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 기술을 사용하여 Microsoft 서버로 안전하게 전송되고, 제한된 액세스를 기준으로 보관되고, 안전한 [Azure Storage](https://azure.microsoft.com/services/storage/) 시스템에서 엄격한 보안 제어에 따라 게시됩니다.
 
-도구를 사용하여 무엇을 빌드하는지가 아니라 도구 사용 방법과 도구가 제대로 작동하는지 알고자 합니다. 원격 분석이 중요한 데이터를 수집하고 있는지 또는 데이터가 안전하지 않거나 부적절한 방식으로 처리되고 있는지 의심스러운 경우 조사를 위해 [dotnet/cli 리포지토리 문제에서 문제를 보고](https://github.com/dotnet/cli/issues)하세요.
+.NET 팀은 도구를 사용하여 무엇을 빌드하는지가 아니라, 도구 사용 방법과 도구가 제대로 작동하는지 알고자 합니다. 원격 분석이 중요한 데이터를 수집하고 있는지 또는 데이터가 안전하지 않거나 부적절한 방식으로 처리되고 있는지 의심스러운 경우 조사를 위해 [dotnet/cli](https://github.com/dotnet/cli/issues) 리포지토리에서 문제를 보고하세요.
 
 ## <a name="published-data"></a>게시된 데이터
 
 게시된 데이터는 분기별로 제공되고 [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)(.NET Core SDK 사용 데이터)에 나열됩니다. 데이터 파일 열은 다음과 같습니다.
+
 - 타임스탬프
 - 발생&#8224;
 - 명령
@@ -77,7 +77,7 @@ ms.locfileid: "33216085"
 - OSVersion
 - SDKVersion
 
-&#8224;*발생* 열에는 해당 날짜에 해당 행 메트릭에 대한 해당 명령 사용의 집계 개수가 표시됩니다. 
+&#8224;*발생* 열에는 해당 날짜에 해당 행 메트릭에 대한 해당 명령 사용의 집계 개수가 표시됩니다.
 
 &#8225;일반적으로 *지리* 열에는 국가 이름이 표시됩니다. 경우에 따라 연구원이 남극에서 .NET Core를 사용하거나 위치 데이터가 정확하지 않아 남극 대륙이 이 열에 표시됩니다.
 
@@ -92,13 +92,13 @@ ms.locfileid: "33216085"
 [2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
 [2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
 [2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+[2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
+[2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
+[2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
 
-표준 URL 형식을 사용하여 추가 데이터 집합이 게시됩니다. `<YEAR>`를 연도로 바꾸고 `<QUARTER>`를 해당 연도의 분기로 바꿉니다(`1`, `2`, `3` 또는 `4` 사용). 파일은 *TSV*(탭으로 구분된 값) 형식입니다. 
+표준 URL 형식을 사용하여 추가 데이터 집합이 게시됩니다. `<YEAR>`를 연도로 바꾸고 `<QUARTER>`를 해당 연도의 분기로 바꿉니다(`1`, `2`, `3` 또는 `4` 사용). 파일은 *TSV*(탭으로 구분된 값) 형식입니다.
 
-```
-https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv
-```
+`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
 
 ## <a name="license"></a>라이선스
 
@@ -110,22 +110,26 @@ https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUAR
 
 ## <a name="disclosure"></a>공개
 
-사용자가 명령 중 하나를 처음 실행하면(예: `dotnet restore`) .NET Core CLI 도구에 다음 텍스트가 표시됩니다. 실행 중인 SDK 버전에 따라 텍스트가 약간 달라질 수 있습니다. 이 "첫 실행" 경험이 Microsoft가 사용자에게 데이터 수집에 대해 알리는 방법입니다.
+.NET Core SDK는 [.NET Core CLI 명령](index.md) 중 하나(예: `dotnet restore`)를 처음 실행할 때 다음 텍스트를 표시합니다. 실행 중인 SDK 버전에 따라 텍스트가 약간 달라질 수 있습니다. 이 "첫 실행" 경험이 Microsoft가 사용자에게 데이터 수집에 대해 알리는 방법입니다.
 
 ```console
 Welcome to .NET Core!
 ---------------------
-Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
- 
+Learn more about .NET Core: https://aka.ms/dotnet-docs
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+
 Telemetry
---------------
-The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
-You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
-You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. 
+The data is anonymous and doesn't include command-line arguments. 
+The data is collected by Microsoft and shared with the community. 
+You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
 ## <a name="see-also"></a>참고 항목
 
 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)  
-[Telemetry reference source (dotnet/cli repo; release/2.0.0 branch)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry) (원격 분석 참조 소스(dotnet/cli 리포지토리, 릴리스/2.0.0 분기))  
-[.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)(.NET Core SDK 사용 데이터)
+[원격 분석 참조 소스(dotnet/cli 리포지토리)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)  
+[.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)(.NET Core SDK 사용 데이터)  

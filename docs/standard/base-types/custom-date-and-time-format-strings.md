@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208218"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 형식 문자열
 날짜 및 시간 형식 문자열은 형식 지정 작업에서 생성되는 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값의 텍스트 표현을 정의합니다. 또한 문자열을 날짜 및 시간으로 성공적으로 변환하기 위해 구문 분석 작업에 필요한 날짜 및 시간 값의 표현을 정의할 수 있습니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 날짜 및 시간 형식 지정자로 구성됩니다. [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)이 아닌 문자열은 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/04/2018
 |"/"|날짜 구분 기호입니다.<br /><br /> 추가 정보: ["/" 사용자 지정 형식 지정자](#dateSeparator)|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*string*"<br /><br /> '*string*'|리터럴 문자열 구분 기호입니다.<br /><br /> 추가 정보: [리터럴 문자](#Literals)|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|뒤에 오는 문자를 사용자 지정 형식 지정자로 정의합니다.<br /><br /> 추가 정보: [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)|2009-06-15T13:45:30 (%h) -> 1|  
-|\|이스케이프 문자입니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals) 및 [이스케이프 문자 사용](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\\|이스케이프 문자입니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals) 및 [이스케이프 문자 사용](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |기타 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.<br /><br /> 추가 정보: [리터럴 문자](#Literals)|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  다음 단원에서는 각 사용자 지정 날짜 및 시간 형식 지정자에 대한 추가 정보를 제공합니다. 다른 설명이 없는 각 지정자는 <xref:System.DateTime> 값에 사용할 때와 <xref:System.DateTimeOffset> 값에 사용할 때 동일한 문자열을 생성합니다.  
