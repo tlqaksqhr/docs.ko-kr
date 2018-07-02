@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램의 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cbadb13109c51ba53530011a17006b585573f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576795"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105371"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기
 
@@ -58,4 +58,5 @@ ms.locfileid: "33576795"
 
 
 >[!div class="step-by-step"]
-[이전] (microservices-addressability-service-registry.md) [다음] (resilient-high-availability-microservices.md)
+[이전](microservices-addressability-service-registry.md)
+[다음](resilient-high-availability-microservices.md)

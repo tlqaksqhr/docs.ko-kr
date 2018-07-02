@@ -4,12 +4,12 @@ description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 �
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218360"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028047"
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core로 이식 - 라이브러리
 
@@ -72,18 +72,6 @@ AppDomain은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 
 CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중요한 코드와 선언적인 방식으로 분리할 수 있지만 [더 이상 보안 경계로서 지원되지는 않습니다](~/docs/framework/misc/security-transparent-code.md). 이 기능은 Silverlight에서 많이 사용됩니다. 
 
 최소한의 권한으로 프로세스를 실행하려면 가상화, 컨테이너 또는 사용자 계정과 같은 운영 체제에서 제공하는 보안 경계를 사용할 수 있습니다.
-
-### <a name="globaljson"></a>global.json
-
-*global.json* 파일은 .NET Core 도구 버전의 프로젝트를 설정할 수 있는 선택적 파일입니다. .NET Core의 야간 빌드를 사용 중이고 특정 버전의 SDK를 지정하려면 *global.json* 파일로 버전을 지정하세요. 이 파일은 일반적으로 현재 작업 디렉터리 또는 부모 디렉터리 중 하나에 있습니다. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>PCL 프로젝트 변환
 

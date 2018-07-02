@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578172"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106151"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -201,4 +201,5 @@ docker-compose.yml의 코드는 Redis 이미지에 기반하여 basket.data라�
 
 
 >[!div class="step-by-step"]
-[이전](multi-container-applications-docker-compose.md) [다음](integration-event-based-microservice-communications.md)
+[이전](multi-container-applications-docker-compose.md)
+[다음](integration-event-based-microservice-communications.md)

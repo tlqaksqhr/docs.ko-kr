@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-ms.openlocfilehash: 03638893978779fcfd34544363d935fa5e609481
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 706fb36e687976a2cb8704658856023296131d63
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288826"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027878"
 ---
 # <a name="ushort-c-reference"></a>ushort(C# 참조)
 
 `ushort` 키워드는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 데이터 형식을 나타냅니다.  
   
-|형식|범위|크기|.NET Framework 형식|  
+|형식|범위|크기|.NET 형식|  
 |----------|-----------|----------|-------------------------|  
 |`ushort`|0 ~ 65,535|부호 없는 16비트 정수|<xref:System.UInt16?displayProperty=nameWithType>|  
   

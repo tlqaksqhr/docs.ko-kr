@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 28acbe67b85637550fdb1f5e290a9abb60bf5c65
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172178"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027891"
 ---
 # <a name="byte-c-reference"></a>byte(C# 참조)
 
 `byte`는 다음 표에 나와 있는 값을 저장하는 정수 형식을 나타냅니다.  
   
-|형식|범위|크기|.NET Framework 형식|  
+|형식|범위|크기|.NET 형식|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 ~ 255|부호 없는 8비트 정수|<xref:System.Byte?displayProperty=nameWithType>|  
   

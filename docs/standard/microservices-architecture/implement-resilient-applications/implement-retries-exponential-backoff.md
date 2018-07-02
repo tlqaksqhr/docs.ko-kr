@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7f909c6f81abce80bfdf118112271f1f87254793
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee5dd711484ba7861eedbd9613fda1209736d5b6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571425"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106920"
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a>지수 백오프를 사용하여 다시 시도 구현
 
@@ -19,4 +19,5 @@ ms.locfileid: "33571425"
 
 
 >[!div class="step-by-step"]
-[이전] (partial-failure-strategies.md) [다음] (implement-resilient-entity-framework-core-sql-connections.md)
+[이전](partial-failure-strategies.md)
+[다음](implement-resilient-entity-framework-core-sql-connections.md)

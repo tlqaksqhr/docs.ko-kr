@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4b57a0ed8c4e8a4cd36ef5cef4b40de0595f1284
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575878"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105695"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 
@@ -38,4 +38,5 @@ API에 특성이나 매개 변수를 추가하는 경우처럼 API 변경이 작
 
 
 >[!div class="step-by-step"]
-[이전] (asynchronous-message-based-communication.md) [다음] (microservices-addressability-service-registry.md)
+[이전](asynchronous-message-based-communication.md)
+[다음](microservices-addressability-service-registry.md)

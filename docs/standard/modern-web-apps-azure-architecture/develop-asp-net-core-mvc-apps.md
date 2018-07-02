@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 59f0d46dadb736ad55e53f6715b7ca1b62e9cec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592407"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106595"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -277,7 +277,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 [실제 ASP.NET Core MVC 필터](https://msdn.microsoft.com/magazine/mt767699.aspx) MSDN 문서에서 필터 구현에 대한 자세한 내용을 알아보고 작업용 샘플을 다운로드할 수 있습니다.
 
 > ### <a name="references--structuring-applications"></a>참고 자료 - 응용 프로그램 구성
-> - **영역**  
+> - **Areas**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN – ASP.NET Core MVC용 기능 분할**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
@@ -552,4 +552,5 @@ Azure에서 응용 프로그램을 호스팅하는 경우 Microsoft Azure Applic
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[이전] (common-client-side-web-technologies.md) [다음] (work-with-data-in-asp-net-core-apps.md)
+[이전](common-client-side-web-technologies.md)
+[다음](work-with-data-in-asp-net-core-apps.md)

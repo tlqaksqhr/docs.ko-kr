@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577680"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105822"
 ---
 # <a name="using-azure-service-fabric"></a>Azure Service Fabric 사용
 
@@ -89,4 +89,5 @@ Azure Service Fabric에서 컨테이너 지원에 대한 자세한 내용은 [Se
 Docker 컨테이너 자체는 상태 비저장입니다. 상태 저장 서비스를 구현하려면 앞에서 언급한 추가 규범 및 상위 수준 프레임워크 중 하나가 필요합니다. 
 
 >[!div class="step-by-step"]
-[이전] (scalable-available-multi-container-microservice-applications.md) [다음] (../docker-application-development-process/index.md)
+[이전](scalable-available-multi-container-microservice-applications.md)
+[다음](../docker-application-development-process/index.md)

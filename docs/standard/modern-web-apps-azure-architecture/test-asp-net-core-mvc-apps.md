@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208203"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106504"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 이 기능 테스트는 해당 위치에 있을 수 있는 모든 미들웨어, 필터, 바인더 등을 포함하여 ASP.NET Core MVC 응용 프로그램 스택 전체를 수행합니다. 지정된 경로("/catalog/pic/1")가 알려진 위치에 있는 파일에 대해 예상된 바이트 배열을 반환하는지 확인합니다. 실제 웹 서버를 설정하지 않아도 이렇게 하므로 테스트를 위해 실제 웹 서버를 사용할 때 발생할 수 있는 많은 오류(예: 방화벽 설정 문제)를 방지할 수 있습니다. TestServer에 대해 실행되는 기능 테스트는 일반적으로 통합 및 단위 테스트보다 느리지만 네트워크를 통해 테스트 웹 서버에 실행되는 테스트보다 훨씬 빠릅니다.
 
 >[!div class="step-by-step"]
-[이전] (work-with-data-in-asp-net-core-apps.md) [다음] (development-process-for-azure.md)
+[이전](work-with-data-in-asp-net-core-apps.md)
+[다음](development-process-for-azure.md)

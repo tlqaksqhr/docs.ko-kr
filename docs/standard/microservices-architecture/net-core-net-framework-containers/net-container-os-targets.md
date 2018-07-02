@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 53b279a3325ae0fb662cd91a6f7f454b765196ff
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: fca5cf280d5abb85da78413a6eed463a2ffe6a88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251014"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104881"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너에서 대상으로 지정할 OS
 
@@ -50,4 +50,5 @@ Dockerfile 파일에 이미지 이름을 추가할 때는 다음 예제에서처
 
 
 >[!div class="step-by-step"]
-[이전] (container-framework-choice-factors.md) [다음] (official-net-docker-images.md)
+[이전](container-framework-choice-factors.md)
+[다음](official-net-docker-images.md)

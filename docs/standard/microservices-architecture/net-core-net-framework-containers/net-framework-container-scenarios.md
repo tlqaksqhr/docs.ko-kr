@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 2fdf0c24999891e48e1867e8fa7b4ba0f5302850
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251037"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106712"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -65,4 +65,5 @@ ms.locfileid: "35251037"
 
 
 >[!div class="step-by-step"]
-[이전] (net-core-container-scenarios.md) [다음] (container-framework-choice-factors.md)
+[이전](net-core-container-scenarios.md)
+[다음](container-framework-choice-factors.md)

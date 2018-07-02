@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Microsoft Azure를 사용하여 최신 웹 응용 
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208194"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104768"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
@@ -92,4 +92,5 @@ SPA를 작성하려면 JavaScript 및/또는 TypeScript와 클라이언트 쪽 �
   | 다양하고 복잡한 사용자 인터페이스 요구 사항 | **제한적** | **적합** |
 
 >[!div class="step-by-step"]
-[이전] (modern-web-applications-characteristics.md) [다음](architectural-principles.md)
+[이전](modern-web-applications-characteristics.md)
+[다음](architectural-principles.md)

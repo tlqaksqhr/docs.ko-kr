@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 1b2569caa7e7a6a899a6765d2e39d0fff8e37e2f
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: eff87dbfad84ba5521f029064115a5fc54ee574b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251196"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106112"
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>열거형 형식 대신 열거형 클래스 사용
 
@@ -127,4 +127,5 @@ public class CardType : Enumeration
 
 
 >[!div class="step-by-step"]
-[이전] (implement-value-objects.md) [다음] (domain-model-layer-validations.md)
+[이전](implement-value-objects.md)
+[다음](domain-model-layer-validations.md)

@@ -4,12 +4,12 @@ description: '컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 26e3d6b4cd1df051c00cef4ee8370ca9c213363e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577266"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105197"
 ---
 # <a name="handling-partial-failure"></a>부분 실패 처리
 
@@ -41,4 +41,5 @@ ms.locfileid: "33577266"
 
 
 >[!div class="step-by-step"]
-[이전] (index.md) [다음] (partial-failure-strategies.md)
+[이전](index.md)
+[다음](partial-failure-strategies.md)

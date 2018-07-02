@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1cdd938fb53e194a80f0eb3e6bc82ebed271af49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578214"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106319"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>마이크로 서비스의 복원력 및 고가용성
 
@@ -78,4 +78,5 @@ ms.locfileid: "33578214"
 
 
 >[!div class="step-by-step"]
-[이전] (microservice-based-composite-ui-shape-layout.md) [다음] (scalable-available-multi-container-microservice-applications.md)
+[이전](microservice-based-composite-ui-shape-layout.md)
+[다음](scalable-available-multi-container-microservice-applications.md)

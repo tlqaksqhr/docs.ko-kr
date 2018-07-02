@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579147"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072958"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "33579147"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>용량 및 길이 설정  
- <xref:System.Text.StringBuilder>는 캡슐화되는 문자열에서 문자 수를 확장할 수 있는 동적 개체이지만, 보관할 수 있는 최대 문자 수 값을 지정할 수 있습니다. 이 값을 개체의 용량이라고 하며, 현재 <xref:System.Text.StringBuilder>에 보관된 문자열의 길이와 혼동해서는 안 됩니다. 예를 들어 길이가 5인 “Hello” 문자열을 사용하여 <xref:System.Text.StringBuilder> 클래스의 새 인스턴스를 만들고 개체의 최대 용량을 25로 지정할 수 있습니다. <xref:System.Text.StringBuilder>를 수정할 경우 용량에 도달할 때까지 자체 크기를 다시 할당할 수 없습니다. 이 경우 새 공간이 자동으로 할당되고 용량이 두 배로 증가합니다. 오버로드된 생성자 중 하나를 사용하여 <xref:System.Text.StringBuilder> 클래스의 용량을 지정할 수 있습니다. 다음 예에서는 `MyStringBuilder` 개체를 최대 25개 공간으로 확장할 수 있도록 지정합니다.  
+ <xref:System.Text.StringBuilder>는 캡슐화되는 문자열에서 문자 수를 확장할 수 있는 동적 개체이지만, 보관할 수 있는 최대 문자 수 값을 지정할 수 있습니다. 이 값을 개체의 용량이라고 하며, 현재 <xref:System.Text.StringBuilder>에 보관된 문자열의 길이와 혼동해서는 안 됩니다. 예를 들어 길이가 5인 “Hello” 문자열을 사용하여 <xref:System.Text.StringBuilder> 클래스의 새 인스턴스를 만들고 개체의 최대 용량을 25로 지정할 수 있습니다. <xref:System.Text.StringBuilder>를 수정할 경우 용량에 도달할 때까지 자체 크기를 다시 할당할 수 없습니다. 이 경우 새 공간이 자동으로 할당되고 용량이 두 배로 증가합니다. 오버로드된 생성자 중 하나를 사용하여 <xref:System.Text.StringBuilder> 클래스의 용량을 지정할 수 있습니다. 다음 예에서는 `myStringBuilder` 개체를 최대 25개 공간으로 확장할 수 있도록 지정합니다.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579355"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105773"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>DDD 중심 마이크로 서비스 설계
 
@@ -106,4 +106,5 @@ Entity Framework Core와 같은 대부분의 최신 ORM 프레임워크에서는
 
 
 >[!div class="step-by-step"]
-[이전] (cqrs-microservice-reads.md) [다음] (microservice-domain-model.md)
+[이전](cqrs-microservice-reads.md)
+[다음](microservice-domain-model.md)

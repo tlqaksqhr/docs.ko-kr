@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65084296cd4fb462670d0c4927b741a698a59da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584659"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070956"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>데이터 병렬 처리(작업 병렬 라이브러리)
 *데이터 병렬 처리*는 소스 컬렉션 또는 배열의 요소에서 동일한 작업이 동시에(즉, 병렬로) 수행되는 시나리오를 가리킵니다. 데이터 병렬 작업에서 소스 컬렉션은 여러 스레드가 서로 다른 세그먼트에서 동시에 작동할 수 있도록 분할됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "33584659"
 |[방법: 간단한 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|<xref:System.Collections.Generic.IEnumerable%601> 소스 컬렉션에 대한 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 작성하는 방법을 설명합니다.|  
 |[방법: Parallel.For 루프에서 중지 또는 중단](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|모든 스레드가 작업 알림을 받도록 병렬 루프에서 중지 또는 중단하는 방법을 설명합니다.|  
 |[방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|각 스레드가 다른 스레드에 표시되지 않는 전용 변수를 유지 관리하는 <xref:System.Threading.Tasks.Parallel.For%2A> 루프를 작성하는 방법 및 루프 완료 시 모든 스레드의 결과를 동기화하는 방법을 설명합니다.|  
-|[방법: 스레드 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|각 스레드가 다른 스레드에 표시되지 않는 전용 변수를 유지 관리하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 작성하는 방법 및 루프 완료 시 모든 스레드의 결과를 동기화하는 방법을 설명합니다.|  
+|[방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|각 스레드가 다른 스레드에 표시되지 않는 전용 변수를 유지 관리하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 작성하는 방법 및 루프 완료 시 모든 스레드의 결과를 동기화하는 방법을 설명합니다.|  
 |[방법: Parallel.For 또는 ForEach 루프 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|<xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 병렬 루프를 취소하는 방법을 설명합니다.|  
 |[방법: 작은 루프 본문 속도 개선](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|루프 본문이 매우 작을 때 실행을 가속화하는 한 가지 방법을 설명합니다.|  
 |[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|작업 병렬 라이브러리에 대해 간략하게 설명합니다.|  

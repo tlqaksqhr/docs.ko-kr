@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: e8552f79a4196c161ec70d7ea46156215e52db26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578887"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105464"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 응용 프로그램 오케스트레이션
 
@@ -135,4 +135,5 @@ ACS는 현재 Azure의 표준 A, D, DS, G 및 GS 시리즈 Linux 가상 머신�
 
 
 >[!div class="step-by-step"]
-[이전] (resilient-high-availability-microservices.md) [다음] (using-azure-service-fabric.md)
+[이전](resilient-high-availability-microservices.md)
+[다음](using-azure-service-fabric.md)

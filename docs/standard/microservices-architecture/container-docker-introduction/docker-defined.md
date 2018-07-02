@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576196"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106803"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
@@ -58,4 +58,5 @@ Windows 또는 macOS에서 [Docker CE(Community Edition)](https://www.docker.com
 Docker 개발자는 “내 컴퓨터에서 작동하는데 왜 프로덕션 환경에서는 안되지?”라고 말하지 않습니다. “Docker에서 실행된다”고 말합니다. Docker 패키지 앱은 지원되는 모든 Docker 환경에서 실행할 수 있습니다. Docker 패키지 앱은 모든 배포 대상(개발, QA, 준비, 프로덕션)에서 일관되게 실행됩니다.
 
 >[!div class="step-by-step"]
-[이전] (index.md) [다음] (docker-terminology.md)
+[이전](index.md)
+[다음](docker-terminology.md)

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592576"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104081"
 ---
 # <a name="general-guidance"></a>일반 지침
 
@@ -47,4 +47,5 @@ Docker에서 .NET Framework를 사용하면 배포 문제 최소화를 통해 �
 
 
 >[!div class="step-by-step"]
-[이전] (index.md) [다음] (net-core-container-scenarios.md)
+[이전](index.md)
+[다음](net-core-container-scenarios.md)

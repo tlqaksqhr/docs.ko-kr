@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0e384fabca88d8ad6f93ae626140fb3d5dcaf971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589326"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105302"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>의사 결정 테이블: Docker에 사용할 .NET Framework
 
@@ -58,4 +58,5 @@ ms.locfileid: "33589326"
     - *.NET Core*에 제공되는 클라이언트 API를 사용하는 경우 *Linux 컨테이너 및 Windows 컨테이너* 중에 선택할 수도 있습니다.
 
 >[!div class="step-by-step"]
-[이전] (net-framework-container-scenarios.md) [다음] (net-container-os-targets.md)
+[이전](net-framework-container-scenarios.md)
+[다음](net-container-os-targets.md)

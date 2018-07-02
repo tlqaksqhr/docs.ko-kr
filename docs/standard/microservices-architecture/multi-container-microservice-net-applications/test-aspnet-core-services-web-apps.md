@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582677"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104402"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -124,4 +124,5 @@ public class PrimeWebDefaultRequestShould
 컴포즈 응용 프로그램이 실행되면 Visual Studio를 실행하는 경우 중단점 및 예외를 이용할 수 있습니다. 또는 Docker 컨테이너를 지원하는 Visual Studio Team Services 또는 다른 CI/CD 시스템의 CI 파이프라인에서 자동으로 통합 테스트를 실행할 수 있습니다.
 
 >[!div class="step-by-step"]
-[이전] (subscribe-events.md) [다음] (../microservice-ddd-cqrs-patterns/index.md)
+[이전](subscribe-events.md)
+[다음](../microservice-ddd-cqrs-patterns/index.md)

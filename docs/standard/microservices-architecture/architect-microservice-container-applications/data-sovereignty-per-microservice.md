@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d739cc33dec372f6bd9569c05d034dcd25be8395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577295"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106868"
 ---
 # <a name="data-sovereignty-per-microservice"></a>마이크로 서비스별 데이터 주권
 
@@ -63,4 +63,5 @@ DDD는 실제 경계를 분산된 마이크로 서비스의 형태로 가져오�
 
 
 >[!div class="step-by-step"]
-[이전] (microservices-architecture.md) [다음] (logical-versus-physical-architecture.md)
+[이전](microservices-architecture.md)
+[다음](logical-versus-physical-architecture.md)

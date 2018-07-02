@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: e01d07f4006982b21ff952b89375b0ab0d8f36b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583057"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105809"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 응용 프로그램의 특징
 
@@ -77,4 +77,5 @@ ASP.NET Core 외에도, 기존 ASP.NET 4.x는 웹 응용 프로그램을 빌드�
 > <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[이전] (index.md) [다음] (choose-between-traditional-web-and-single-page-apps.md)
+[이전](index.md)
+[다음](choose-between-traditional-web-and-single-page-apps.md)

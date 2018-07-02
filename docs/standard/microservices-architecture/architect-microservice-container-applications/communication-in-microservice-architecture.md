@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 12899f7ee0f95ccc38d7de152c316442e9bcc8e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578926"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106014"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 
@@ -109,4 +109,5 @@ ms.locfileid: "33578926"
 
 
 >[!div class="step-by-step"]
-[이전] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) [다음] (asynchronous-message-based-communication.md)
+[이전](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+[다음](asynchronous-message-based-communication.md)

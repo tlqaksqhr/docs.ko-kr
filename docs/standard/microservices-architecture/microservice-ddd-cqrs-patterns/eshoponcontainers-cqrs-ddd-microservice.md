@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805476"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106751"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -64,4 +64,5 @@ CQRS 및 대부분의 DDD 패턴(DDD 계층이나 집계가 있는 도메인 모
 
 
 >[!div class="step-by-step"]
-[이전] (apply-simplified-microservice-cqrs-ddd-patterns.md) [다음] (cqrs-microservice-reads.md)
+[이전](apply-simplified-microservice-cqrs-ddd-patterns.md)
+[다음](cqrs-microservice-reads.md)

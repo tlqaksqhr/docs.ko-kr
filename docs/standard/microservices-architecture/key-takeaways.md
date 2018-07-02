@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578185"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105516"
 ---
 # <a name="key-takeaways"></a>핵심 내용
 
@@ -38,4 +38,4 @@ ms.locfileid: "33578185"
 **오케스트레이터.** Azure Container Service(Kubernetes, Mesos DC/OS, Docker Swarm) 및 Azure Service Fabric에 제공되는 것과 같은 컨테이너 기반 오케스트레이터는 상당한 복잡성과 확장성 요구, 지속적인 진화가 필요한 모든 프로덕션용 마이크로 서비스 기반 응용 프로그램 및 다중 컨테이너 응용 프로그램에 필수적입니다. 이 가이드에서는 오케스트레이터와 마이크로 서비스 기반 및 컨테이너 기반 솔루션에서 이들의 역할에 대해 소개했습니다. 응용 프로그램 요구 사항으로 인해 복잡한 컨테이너화된 앱으로 전환하려는 경우, 오케스트레이터에 대해 자세히 알아볼 수 있는 추가 리소스를 찾아보는 것이 좋습니다.
 
 >[!div class="step-by-step"]
-[이전] (secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+[이전](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

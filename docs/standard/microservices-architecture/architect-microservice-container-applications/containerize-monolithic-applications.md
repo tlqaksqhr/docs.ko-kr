@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f5d00c6ce4c965d66937dae3f8e5453883afb4b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e5b7a8202a0af26c8d61e315c3aa8f592ed45d9
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577253"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105925"
 ---
 # <a name="containerizing-monolithic-applications"></a>모놀리식 응용 프로그램 컨테이너화
 
@@ -73,4 +73,5 @@ Visual Studio 2017의 컨테이너 지원은 그림 4-4에 표시된 대로 응�
 
 
 >[!div class="step-by-step"]
-[이전] (index.md) [Next] (docker-application-state-data.md)
+[이전](index.md)
+[다음](docker-application-state-data.md)

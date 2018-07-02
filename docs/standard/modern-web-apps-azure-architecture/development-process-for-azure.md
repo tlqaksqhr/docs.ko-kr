@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 66f321d4671364fa1f7eebef98d53210098b5ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585491"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106855"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -113,4 +113,5 @@ Azure에 배포할 ASP.NET Core 응용 프로그램 개발은 일반적인 응�
 
 
 >[!div class="step-by-step"]
-[이전] (test-asp-net-core-mvc-apps.md) [다음] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[이전](test-asp-net-core-mvc-apps.md)
+[다음](azure-hosting-recommendations-for-asp-net-web-apps.md)

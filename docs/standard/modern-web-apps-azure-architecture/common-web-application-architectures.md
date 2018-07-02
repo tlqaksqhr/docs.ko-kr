@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Microsoft Azure를 사용하여 현대식 웹 응�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 943163ca4c82ad75f177ebe73559d909e7292c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb9a1d68d4c7c66c6adab3a5e932ee37c3ea22b0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592498"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106425"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 응용 프로그램 아키텍처
 
@@ -225,4 +225,5 @@ Docker 이미지로 업데이트를 배포하는 것이 훨씬 더 빠르고 네
 > - **마이크로 서비스 설계 전자책** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[이전] (architectural-principles.md) [다음] (common-client-side-web-technologies.md)
+[이전](architectural-principles.md)
+[다음](common-client-side-web-technologies.md)

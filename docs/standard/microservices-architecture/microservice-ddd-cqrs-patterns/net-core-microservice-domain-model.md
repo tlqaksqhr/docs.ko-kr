@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e836eda7fdc7b55ca7d1fe2ef5bf48a2d4ecb5a3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579565"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106267"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현 
 
@@ -180,4 +180,5 @@ EF Core 1.1 이상의 기능을 사용하여 열을 필드에 매핑하면 속�
 
 
 >[!div class="step-by-step"]
-[이전] (microservice-domain-model.md) [다음t] (seedwork-domain-model-base-classes-interfaces.md)
+[이전](microservice-domain-model.md)
+[다음](seedwork-domain-model-base-classes-interfaces.md)

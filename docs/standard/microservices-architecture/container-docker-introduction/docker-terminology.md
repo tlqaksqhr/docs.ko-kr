@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 9bbeff8c467e762e682fdaf99c8a11851b291db8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95f073a7db763abd295647d41d2e96e6d6d71067
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576648"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106790"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -47,4 +47,5 @@ ms.locfileid: "33576648"
 
 
 >[!div class="step-by-step"]
-[이전] (docker-defined.md) [Next] (docker-containers-images-registries.md)
+[이전](docker-defined.md)
+[다음](docker-containers-images-registries.md)

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: b9d612186e1051644e8d4ae9476b8fafd811deb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567343"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071433"
 ---
 # <a name="async-overview"></a>비동기 개요
 
@@ -37,7 +37,7 @@ ms.locfileid: "33567343"
 
 자세한 내용은 [비동기에 대한 자세한 설명](async-in-depth.md) 항목을 참조하세요.
 
-[비동기 프로그래밍 패턴](/asynchronous-programming-patterns/index.md) 항목은 .NET에서 지원되는 세 가지 비동기 프로그래밍 패턴에 대한 개요를 제공합니다.  
+[비동기 프로그래밍 패턴](asynchronous-programming-patterns/index.md) 항목은 .NET에서 지원되는 세 가지 비동기 프로그래밍 패턴에 대한 개요를 제공합니다.  
   
 -   [APM(비동기 프로그래밍 모델)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md)(레거시)  
   
