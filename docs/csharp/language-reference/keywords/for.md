@@ -1,124 +1,118 @@
 ---
 title: for(C# 참조)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306529"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208007"
 ---
-# <a name="for-c-reference"></a><span data-ttu-id="42e81-102">for(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="42e81-102">for (C# reference)</span></span>
+# <a name="for-c-reference"></a><span data-ttu-id="904ac-102">for(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="904ac-102">for (C# reference)</span></span>
 
-<span data-ttu-id="42e81-103">`for` 루프를 사용하면 지정된 식이 `false`로 계산될 때까지 문 또는 문의 블록을 반복해서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-103">By using a `for` loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to `false`.</span></span> <span data-ttu-id="42e81-104">이러한 종류의 루프는 배열을 반복하는 데 유용하며 루프를 반복할 횟수를 미리 알고 있는 다른 응용 프로그램에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-104">This kind of loop is useful for iterating over arrays and for other applications in which you know in advance how many times you want the loop to iterate.</span></span>
-  
-## <a name="example"></a><span data-ttu-id="42e81-105">예</span><span class="sxs-lookup"><span data-stu-id="42e81-105">Example</span></span>
+<span data-ttu-id="904ac-103">`for` 문은 지정된 부울 식이 `true`로 평가되는 동안 명령문 또는 명령문 블록을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-103">The `for` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span>
 
-<span data-ttu-id="42e81-106">다음 예제에서 `i` 값은 콘솔에 기록되며 루프를 반복할 때마다 1씩 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-106">In the following example, the value of `i` is written to the console and incremented by 1 during each iteration of the loop:</span></span>
+<span data-ttu-id="904ac-104">`for` 문 블록 내 원하는 지점에서 [break](break.md) 문을 사용하여 루프를 중단하거나 [continue](continue.md) 문을 사용하여 루프의 다음 반복을 한 단계 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-104">At any point within the `for` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="904ac-105">[goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `for` 루프를 종료할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-105">You also can exit a `for` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-<span data-ttu-id="42e81-107">이전 예제에서 [for 문](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)은 다음 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-107">The [for statement](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) in the previous example performs the following actions:</span></span>
-  
-1.  <span data-ttu-id="42e81-108">먼저 `i` 변수의 초기 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-108">First, the initial value of variable `i` is established.</span></span> <span data-ttu-id="42e81-109">이 단계는 루프가 반복되는 횟수에 관계없이 한 번만 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-109">This step happens only once, regardless of how many times the loop repeats.</span></span> <span data-ttu-id="42e81-110">이 초기화가 루프 프로세스 외부에서 발생한다고 생각할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-110">You can think of this initialization as happening outside the looping process.</span></span>
-  
-2.  <span data-ttu-id="42e81-111">조건(`i <= 5`)을 평가하기 위해 `i` 값을 5와 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-111">To evaluate the condition (`i <= 5`), the value of `i` is compared to 5.</span></span>
-  
-    -   <span data-ttu-id="42e81-112">`i`가 5보다 작거나 같으면 조건이 `true`로 평가되고 다음 작업이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-112">If `i` is less than or equal to 5, the condition evaluates to `true`, and the following actions occur.</span></span>  
-  
-        1.  <span data-ttu-id="42e81-113">루프 본문의 `Console.WriteLine` 문이 `i` 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-113">The `Console.WriteLine` statement in the body of the loop displays the value of `i`.</span></span>  
-  
-        2.  <span data-ttu-id="42e81-114">`i`의 값이 1씩 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-114">The value of `i` is incremented by 1.</span></span>  
-  
-        3.  <span data-ttu-id="42e81-115">루프가 2단계의 시작 부분으로 돌아가 조건을 다시 평가합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-115">The loop returns to the start of step 2 to evaluate the condition again.</span></span>  
-  
-    -   <span data-ttu-id="42e81-116">`i`가 5보다 크면 조건이 `false`로 평가되고 루프를 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-116">If `i` is greater than 5, the condition evaluates to `false`, and you exit the loop.</span></span>  
-  
-<span data-ttu-id="42e81-117">`i`의 초기 값이 5보다 크면 루프의 본문이 한 번도 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-117">Note that, if the initial value of `i` is greater than 5, the body of the loop doesn't run even once.</span></span>
+## <a name="structure-of-the-for-statement"></a><span data-ttu-id="904ac-106">`for` 문의 구조</span><span class="sxs-lookup"><span data-stu-id="904ac-106">Structure of the `for` statement</span></span>
 
-## <a name="sections-of-a-for-statement"></a><span data-ttu-id="42e81-118">for 문의 섹션</span><span class="sxs-lookup"><span data-stu-id="42e81-118">Sections of a for statement</span></span>
+<span data-ttu-id="904ac-107">`for` 문은 *initializer*, *condition* 및 *iterator* 섹션을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-107">The `for` statement defines *initializer*, *condition*, and *iterator* sections:</span></span>
   
-<span data-ttu-id="42e81-119">모든 [for 문](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)은 ‘이니셜라이저’, ‘조건’ 및 ‘반복기’ 섹션을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-119">Every [for statement](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) defines *initializer*, *condition*, and *iterator* sections.</span></span> <span data-ttu-id="42e81-120">이러한 섹션은 일반적으로 루프가 반복되는 횟수를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-120">These sections usually determine how many times the loop iterates.</span></span>  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-<span data-ttu-id="42e81-121">섹션은 다음과 같은 용도로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-121">The sections serve the following purposes:</span></span>
-  
--   <span data-ttu-id="42e81-122">이니셜라이저 섹션은 초기 조건을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-122">The initializer section sets the initial conditions.</span></span> <span data-ttu-id="42e81-123">이 섹션의 문은 루프가 시작되기 전에 한 번만 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-123">The statements in this section run only once, before you enter the loop.</span></span> <span data-ttu-id="42e81-124">섹션에는 다음 두 가지 옵션 중 하나만 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-124">The section can contain only one of the following two options.</span></span>  
-  
-    -   <span data-ttu-id="42e81-125">첫 번째 예제와 같이 로컬 루프 변수의 선언 및 초기화(`int i = 1`).</span><span class="sxs-lookup"><span data-stu-id="42e81-125">The declaration and initialization of a local loop variable, as the first example shows (`int i = 1`).</span></span> <span data-ttu-id="42e81-126">변수는 루프에 로컬이며 루프 외부에서 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-126">The variable is local to the loop and can't be accessed from outside the loop.</span></span>  
-  
-    -   <span data-ttu-id="42e81-127">쉼표로 구분된 다음 목록의 문 식 0개 이상</span><span class="sxs-lookup"><span data-stu-id="42e81-127">Zero or more statement expressons from the following list, separated by commas.</span></span>  
-  
-        -   <span data-ttu-id="42e81-128">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) 문</span><span class="sxs-lookup"><span data-stu-id="42e81-128">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) statement</span></span>  
-  
-        -   <span data-ttu-id="42e81-129">메서드 호출</span><span class="sxs-lookup"><span data-stu-id="42e81-129">invocation of a method</span></span>  
-  
-        -   <span data-ttu-id="42e81-130">접두사 또는 후위 [increment](../../../csharp/language-reference/operators/increment-operator.md) 식(예: `++i` 또는`i++`)</span><span class="sxs-lookup"><span data-stu-id="42e81-130">prefix or postfix [increment](../../../csharp/language-reference/operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
-  
-        -   <span data-ttu-id="42e81-131">접두사 또는 후위 [decrement](../../../csharp/language-reference/operators/decrement-operator.md) 식(예: `--i` 또는`i--`)</span><span class="sxs-lookup"><span data-stu-id="42e81-131">prefix or postfix [decrement](../../../csharp/language-reference/operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
-  
-        -   <span data-ttu-id="42e81-132">[new](../../../csharp/language-reference/keywords/new-operator.md)를 사용하여 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="42e81-132">creation of an object by using [new](../../../csharp/language-reference/keywords/new-operator.md)</span></span>  
-  
-        -   <span data-ttu-id="42e81-133">[await](../../../csharp/language-reference/keywords/await.md) 식</span><span class="sxs-lookup"><span data-stu-id="42e81-133">[await](../../../csharp/language-reference/keywords/await.md) expression</span></span>  
-  
--   <span data-ttu-id="42e81-134">조건 섹션에는 루프를 종료할지 다시 실행할지를 결정하기 위해 평가되는 부일 식이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-134">The condition section contains a boolean expression that’s evaluated to determine whether the loop should exit or should run again.</span></span>  
-  
--   <span data-ttu-id="42e81-135">반복기 섹션은 루프의 본문을 반복할 때마다 수행되는 업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-135">The iterator section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="42e81-136">반복기 섹션에는 다음과 같은 문 식이 쉼표로 구분되어 0개 이상 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-136">The iterator section contains zero or more of the following statement expressions, separated by commas:</span></span>  
-  
-    -   <span data-ttu-id="42e81-137">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) 문</span><span class="sxs-lookup"><span data-stu-id="42e81-137">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) statement</span></span>  
-  
-    -   <span data-ttu-id="42e81-138">메서드 호출</span><span class="sxs-lookup"><span data-stu-id="42e81-138">invocation of a method</span></span>  
-  
-    -   <span data-ttu-id="42e81-139">접두사 또는 후위 [increment](../../../csharp/language-reference/operators/increment-operator.md) 식(예: `++i` 또는`i++`)</span><span class="sxs-lookup"><span data-stu-id="42e81-139">prefix or postfix [increment](../../../csharp/language-reference/operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
-  
-    -   <span data-ttu-id="42e81-140">접두사 또는 후위 [decrement](../../../csharp/language-reference/operators/decrement-operator.md) 식(예: `--i` 또는`i--`)</span><span class="sxs-lookup"><span data-stu-id="42e81-140">prefix or postfix [decrement](../../../csharp/language-reference/operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
-  
-    -   <span data-ttu-id="42e81-141">[new](../../../csharp/language-reference/keywords/new-operator.md)를 사용하여 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="42e81-141">creation of an object by using [new](../../../csharp/language-reference/keywords/new-operator.md)</span></span>  
-  
-    -   <span data-ttu-id="42e81-142">[await](../../../csharp/language-reference/keywords/await.md) 식</span><span class="sxs-lookup"><span data-stu-id="42e81-142">[await](../../../csharp/language-reference/keywords/await.md) expression</span></span>  
-  
--   <span data-ttu-id="42e81-143">루프의 본문은 문, 빈 문 또는 0개 이상의 문을 중괄호로 묶어 만드는 문 블록으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-143">The body of the loop consists of a statement, an empty statement, or a block of statements, which you create by enclosing zero or more statements in braces.</span></span>  
-  
-     <span data-ttu-id="42e81-144">[break](../../../csharp/language-reference/keywords/break.md) 키워드를 사용하여 `for` 루프를 중단하거나, [continue](../../../csharp/language-reference/keywords/continue.md) 키워드를 사용하여 다음 반복을 단계 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-144">You can break out of a `for` loop by using the [break](../../../csharp/language-reference/keywords/break.md) keyword, or you can step to the next iteration by using the [continue](../../../csharp/language-reference/keywords/continue.md) keyword.</span></span> <span data-ttu-id="42e81-145">또한 [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) 또는 [throw](../../../csharp/language-reference/keywords/throw.md) 문을 사용하여 루프를 종료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-145">You also can exit any loop by using a [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statement.</span></span>  
-  
-<span data-ttu-id="42e81-146">이 항목의 첫 번째 예제에서는 섹션에 대해 다음 중에서 선택할 수 있는 가장 일반적인 종류의 `for` 루프를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-146">The first example in this topic shows the most typical kind of `for` loop, which makes the following choices for the sections:</span></span>
-  
--   <span data-ttu-id="42e81-147">이니셜라이저는 루프의 반복 횟수를 유지 관리하는 로컬 루프 변수 `i`를 선언하고 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-147">The initializer declares and initializes a local loop variable, `i`, that maintains a count of the iterations of the loop.</span></span>  
-  
--   <span data-ttu-id="42e81-148">조건은 알려진 최종 값 5에 대해 루프 변수의 값을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-148">The condition checks the value of the loop variable against a known final value, 5.</span></span>  
-  
--   <span data-ttu-id="42e81-149">반복기 섹션에서는 후위 increment 문 `i++`를 사용하여 루프의 각 반복을 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-149">The iterator section uses a postfix increment statement, `i++`, to tally each iteration of the loop.</span></span>
+```
 
-## <a name="more-examples"></a><span data-ttu-id="42e81-150">추가 예제</span><span class="sxs-lookup"><span data-stu-id="42e81-150">More examples</span></span>
+<span data-ttu-id="904ac-108">세 개의 섹션은 모두 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-108">All three sections are optional.</span></span> <span data-ttu-id="904ac-109">루프의 본문은 명령문 또는 명령문 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-109">The body of the loop is either a statement or a block of statements.</span></span>
+
+<span data-ttu-id="904ac-110">다음 예제에서는 모든 섹션이 정의된 `for` 문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-110">The following example shows the `for` statement with all of the sections defined:</span></span>
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a><span data-ttu-id="904ac-111">*initializer* 섹션</span><span class="sxs-lookup"><span data-stu-id="904ac-111">The *initializer* section</span></span>
+
+<span data-ttu-id="904ac-112">*initializer* 섹션의 명령문은 루프로 유입되기 전에 한 번만 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-112">The statements in the *initializer* section are executed only once, before entering the loop.</span></span> <span data-ttu-id="904ac-113">*initializer* 섹션은 다음 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-113">The *initializer* section is either of the following:</span></span>
+
+- <span data-ttu-id="904ac-114">루프 외부에서 액세스할 수 없는 로컬 루프 변수의 선언 및 초기화</span><span class="sxs-lookup"><span data-stu-id="904ac-114">The declaration and initialization of a local loop variable, which can't be accessed from outside the loop.</span></span>
+
+- <span data-ttu-id="904ac-115">쉼표로 구분된 다음 목록의 0개 이상의 명령문 식:</span><span class="sxs-lookup"><span data-stu-id="904ac-115">Zero or more statement expressions from the following list, separated by commas:</span></span>
+
+  - <span data-ttu-id="904ac-116">[assignment](../operators/assignment-operator.md) 문</span><span class="sxs-lookup"><span data-stu-id="904ac-116">[assignment](../operators/assignment-operator.md) statement</span></span>
+
+  - <span data-ttu-id="904ac-117">메서드 호출</span><span class="sxs-lookup"><span data-stu-id="904ac-117">invocation of a method</span></span>  
+
+  - <span data-ttu-id="904ac-118">접두사 또는 후위 [increment](../operators/increment-operator.md) 식(예: `++i` 또는`i++`)</span><span class="sxs-lookup"><span data-stu-id="904ac-118">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
+
+  - <span data-ttu-id="904ac-119">접두사 또는 후위 [decrement](../operators/decrement-operator.md) 식(예: `--i` 또는`i--`)</span><span class="sxs-lookup"><span data-stu-id="904ac-119">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
+
+  - <span data-ttu-id="904ac-120">[new](new-operator.md) 키워드를 사용하여 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="904ac-120">creation of an object by using [new](new-operator.md) keyword</span></span>
+
+  - <span data-ttu-id="904ac-121">[await](await.md) 식</span><span class="sxs-lookup"><span data-stu-id="904ac-121">[await](await.md) expression</span></span>
+
+<span data-ttu-id="904ac-122">위의 예제에서 *initializer* 섹션은 로컬 루프 변수 `i`를 선언하고 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-122">The *initializer* section in the example above declares and initializes the local loop variable `i`:</span></span>
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a><span data-ttu-id="904ac-123">*condition* 섹션</span><span class="sxs-lookup"><span data-stu-id="904ac-123">The *condition* section</span></span>
+
+<span data-ttu-id="904ac-124">*condition* 섹션이 있으면 부울 식이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-124">The *condition* section, if present, must be a boolean expression.</span></span> <span data-ttu-id="904ac-125">이 식은 모든 루프 반복 전에 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-125">That expression is evaluated before every loop iteration.</span></span> <span data-ttu-id="904ac-126">*condition* 섹션이 없거나 부울 식이 `true`로 평가되는 경우, 다음 루프 반복이 실행되고 그렇지 않으면 루프가 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-126">If the *condition* section is not present or the boolean expression evaluates to `true`, the next loop iteration is executed; otherwise, the loop is exited.</span></span>
+
+<span data-ttu-id="904ac-127">위의 예제에서 *condition* 섹션은 로컬 루프 변수의 값에 따라 루프가 종료되는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-127">The *condition* section in the example above determines if the loop terminates based on the value of the local loop variable:</span></span>
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a><span data-ttu-id="904ac-128">*iterator* 섹션</span><span class="sxs-lookup"><span data-stu-id="904ac-128">The *iterator* section</span></span>
+
+<span data-ttu-id="904ac-129">*iterator* 섹션은 루프의 본문을 반복할 때마다 수행되는 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-129">The *iterator* section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="904ac-130">*iterator* 섹션에는 쉼표로 구분된 다음 명령문 식이 0개 이상 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-130">The *iterator* section contains zero or more of the following statement expressions, separated by commas:</span></span>  
+
+- <span data-ttu-id="904ac-131">[assignment](../operators/assignment-operator.md) 문</span><span class="sxs-lookup"><span data-stu-id="904ac-131">[assignment](../operators/assignment-operator.md) statement</span></span>
+
+- <span data-ttu-id="904ac-132">메서드 호출</span><span class="sxs-lookup"><span data-stu-id="904ac-132">invocation of a method</span></span>  
+
+- <span data-ttu-id="904ac-133">접두사 또는 후위 [increment](../operators/increment-operator.md) 식(예: `++i` 또는`i++`)</span><span class="sxs-lookup"><span data-stu-id="904ac-133">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
+
+- <span data-ttu-id="904ac-134">접두사 또는 후위 [decrement](../operators/decrement-operator.md) 식(예: `--i` 또는`i--`)</span><span class="sxs-lookup"><span data-stu-id="904ac-134">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
+
+- <span data-ttu-id="904ac-135">[new](new-operator.md) 키워드를 사용하여 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="904ac-135">creation of an object by using [new](new-operator.md) keyword</span></span>
+
+- <span data-ttu-id="904ac-136">[await](await.md) 식</span><span class="sxs-lookup"><span data-stu-id="904ac-136">[await](await.md) expression</span></span>
+
+<span data-ttu-id="904ac-137">위 예제의 *iterator* 섹션은 로컬 루프 변수를 증가시킵니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-137">The *iterator* section in the example above increments the local loop variable:</span></span>
+
+```csharp
+i++
+```
+
+## <a name="examples"></a><span data-ttu-id="904ac-138">예제</span><span class="sxs-lookup"><span data-stu-id="904ac-138">Examples</span></span>
+
+<span data-ttu-id="904ac-139">다음 예제에서는 *initializer* 섹션에서 외부 루프 변수에 값 할당, *initializer* 및 *iterator* 섹션에서 메서드 호출, *iterator* 섹션에서 두 변수의 값 변경과 같이 `for` 문 섹션의 여러 가지 덜 일반적인 사용법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-139">The following example illustrates several less common usages of the `for` statement sections: assigning a value to an external loop variable in the *initializer* section, invoking a method in both the *initializer* and the *iterator* sections, and changing the values of two variables in the *iterator* section.</span></span> <span data-ttu-id="904ac-140">**Run**을 선택하여 예제 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-140">Select **Run** to run the example code.</span></span> <span data-ttu-id="904ac-141">그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-141">After that you can modify the code and run it again.</span></span>
   
-<span data-ttu-id="42e81-151">다음 예제에서는 이니셜라이저 섹션에서 외부 루프 변수에 값 할당, 이니셜라이저와 반복기 섹션에서 `Console.WriteLine` 메서드 호출, 반복기 섹션에서 두 변수의 값 변경과 같이 여러 가지 덜 일반적인 선택 항목을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-151">The following example illustrates several less common choices: assigning a value to an external loop variable in the initializer section, invoking the `Console.WriteLine` method in both the initializer and the iterator sections, and changing the values of two variables in the iterator section.</span></span>
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+<span data-ttu-id="904ac-142">다음 예제에서는 무한 `for` 루프를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="904ac-142">The following example defines the infinite `for` loop:</span></span>
   
-<span data-ttu-id="42e81-152">`for` 문을 정의하는 모든 식은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-152">All of the expressions that define a `for` statement are optional.</span></span> <span data-ttu-id="42e81-153">예를 들어 다음 문은 무한 루프를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="42e81-153">For example, the following statement creates an infinite loop:</span></span>
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="42e81-154">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="42e81-154">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="904ac-143">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="904ac-143">C# language specification</span></span>  
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
   
-## <a name="see-also"></a><span data-ttu-id="42e81-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="42e81-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="904ac-144">참고 항목</span><span class="sxs-lookup"><span data-stu-id="904ac-144">See also</span></span>
 
-[<span data-ttu-id="42e81-156">for 문(C# 언어 사양)</span><span class="sxs-lookup"><span data-stu-id="42e81-156">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[<span data-ttu-id="42e81-157">C# 참조</span><span class="sxs-lookup"><span data-stu-id="42e81-157">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-[<span data-ttu-id="42e81-158">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="42e81-158">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-[<span data-ttu-id="42e81-159">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="42e81-159">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-[<span data-ttu-id="42e81-160">foreach, in</span><span class="sxs-lookup"><span data-stu-id="42e81-160">foreach, in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
-[<span data-ttu-id="42e81-161">for 문(C++)</span><span class="sxs-lookup"><span data-stu-id="42e81-161">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)  
-[<span data-ttu-id="42e81-162">반복 문</span><span class="sxs-lookup"><span data-stu-id="42e81-162">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
+[<span data-ttu-id="904ac-145">for 문(C# 언어 사양)</span><span class="sxs-lookup"><span data-stu-id="904ac-145">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
+[<span data-ttu-id="904ac-146">C# 참조</span><span class="sxs-lookup"><span data-stu-id="904ac-146">C# Reference</span></span>](../index.md)  
+[<span data-ttu-id="904ac-147">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="904ac-147">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+[<span data-ttu-id="904ac-148">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="904ac-148">C# Keywords</span></span>](index.md)  
+[<span data-ttu-id="904ac-149">foreach, in</span><span class="sxs-lookup"><span data-stu-id="904ac-149">foreach, in</span></span>](foreach-in.md)  
+[<span data-ttu-id="904ac-150">for 문(C++)</span><span class="sxs-lookup"><span data-stu-id="904ac-150">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)  
+[<span data-ttu-id="904ac-151">반복 문</span><span class="sxs-lookup"><span data-stu-id="904ac-151">Iteration Statements</span></span>](iteration-statements.md)
