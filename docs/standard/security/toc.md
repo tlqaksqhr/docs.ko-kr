@@ -31,3 +31,4 @@
 ### [보안 및 사용자 입력](security-and-user-input.md)
 ### [보안 및 경합 상태](security-and-race-conditions.md)
 ### [보안 및 빠른 코드 생성](security-and-on-the-fly-code-generation.md)
+### [패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성](vulnerabilities-cbc-mode.md)

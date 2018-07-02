@@ -1,4 +1,5 @@
 # [파일 및 스트림 I/O](index.md)
+## [Windows 시스템의 파일 경로 형식](file-path-formats.md)
 ## [공통적인 I/O 작업](common-i-o-tasks.md)
 ### [방법: 디렉터리 복사](how-to-copy-directories.md)
 ### [방법: 디렉터리 및 파일 열거](how-to-enumerate-directories-and-files.md)

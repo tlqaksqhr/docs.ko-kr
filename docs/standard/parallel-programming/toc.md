@@ -4,7 +4,7 @@
 #### [방법: 간단한 Parallel.For 루프 작성](how-to-write-a-simple-parallel-for-loop.md)
 #### [방법: 간단한 Parallel.ForEach 루프 작성](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [방법: 스레드 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [방법: Parallel.For 또는 ForEach 루프 취소](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [방법: 병렬 루프의 예외 처리](how-to-handle-exceptions-in-parallel-loops.md)
 #### [방법: 작은 루프 본문 속도 개선](how-to-speed-up-small-loop-bodies.md)

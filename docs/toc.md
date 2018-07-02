@@ -91,6 +91,7 @@
 ### [종속성 관리](core/tools/dependencies.md)
 ### [csproj 형식에 대한 추가 사항](core/tools/csproj.md)
 ## 마이그레이션
+### [.NET Core 2.0 ~ 2.1](core/migration/20-21.md)
 ### [csproj 형식으로 마이그레이션](core/migration/index.md)
 ### [project.json 및 csproj 간 매핑](core/tools/project-json-to-csproj.md)
 ### [DNX에서 마이그레이션](core/migration/from-dnx.md)
@@ -119,7 +120,6 @@
 ### [게시된 출력 단위 테스트](core/testing/unit-testing-published-output.md)
 ### [Visual Studio를 사용한 Live Unit Testing .NET Core 프로젝트](/visualstudio/test/live-unit-testing-start)
 ## [버전 관리](core/versions/index.md)
-### [.NET Core 지원](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [런타임 식별자 카탈로그](core/rid-catalog.md)
 ## [.NET Core SDK 개요](core/sdk.md)
@@ -414,7 +414,7 @@
 ### [네임스페이스](fsharp/language-reference/namespaces.md)
 ### [모듈](fsharp/language-reference/modules.md)
 ### [가져오기 선언: open 키워드](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [시그니처](fsharp/language-reference/signatures.md)
+### [시그니처 파일](fsharp/language-reference/signature-files.md)
 ### [측정 단위](fsharp/language-reference/units-of-measure.md)
 ### [XML 문서](fsharp/language-reference/xml-documentation.md)
 ### [지연 계산](fsharp/language-reference/lazy-computations.md)
