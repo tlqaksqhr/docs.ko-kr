@@ -3,12 +3,13 @@ title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/07/2018
+ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251037"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -22,15 +23,15 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지 사용
 
-타사 라이브러리는 [.NET 표준](../../net-standard.md)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Framework 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 크게 증가되었으며, .NET Core 2.0에서는 응용 프로그램이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work) 참조).
+타사 라이브러리는 [.NET 표준](../../net-standard.md)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Standard 라이브러리 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 크게 증가하였으며, .NET Core 2.x에서는 응용 프로그램이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work) 참조).
 
 그러나 .NET Standard 2.0 및 .NET Core 2.0 이후의 뛰어난 발전에도 불구하고 특정 NuGet 패키지에서 Windows를 실행해야 하고 .NET Core를 지원하지 않는 경우가 있을 수도 있습니다. 이러한 패키지가 응용 프로그램에 매우 중요한 경우 Windows 컨테이너에서 .NET Framework를 사용해야 합니다.
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 .NET 기술 사용 
 
-일부 .NET Framework 기술은 .현재 버전의 NET Core(이 문서를 작성한 시점 이후 버전 2.0)에서 사용할 수 없습니다. 그 중 일부는 이후 .NET Core 릴리스(.NET Core 2.x)에서 사용할 수 있지만, 다른 일부는 .NET Core에서 대상으로 하는 새 응용 프로그램 패턴에 적용되지 않으며 사용하지 못할 수도 있습니다.
+일부 .NET Framework 기술은 현재 버전의 .NET Core(이 문서를 작성한 시점 이후 버전 2.1)에서 사용할 수 없습니다. 그 중 일부는 이후 .NET Core 릴리스(.NET Core 2.x)에서 사용할 수 있지만, 다른 일부는 .NET Core에서 대상으로 하는 새 응용 프로그램 패턴에 적용되지 않으며 사용하지 못할 수도 있습니다.
 
-다음 목록에서는 .NET Core 2.0에서 사용할 수 없는 대부분의 기술을 보여 줍니다.
+다음 목록에서는 .NET Core 2.1에서 사용할 수 없는 대부분의 기술을 보여 줍니다.
 
 -   ASP.NET Web Forms. 이 기술은 .NET Framework에서만 사용할 수 있습니다. 현재 .NET Core에 ASP.NET Web Forms를 적용할 계획은 없습니다.
 

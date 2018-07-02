@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591978"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106699"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 응용 프로그램 보안
 
@@ -250,4 +250,5 @@ JWT 전달자 인증 미들웨어는 인증 기관을 사용할 수 없는 경�
 
 
 >[!div class="step-by-step"]
-[이전] (../implement-resilient-applications/monitor-app-health.md) [다음] (authorization-net-microservices-web-applications.md)
+[이전](../implement-resilient-applications/monitor-app-health.md)
+[다음](authorization-net-microservices-web-applications.md)

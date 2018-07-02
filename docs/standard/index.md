@@ -6,18 +6,20 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457013"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105174"
 ---
 # <a name="net-guide"></a>.NET 가이드
 
 .NET 가이드는 .NET에 대한 많은 정보를 제공합니다.  .NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 .NET 설명서의 다른 섹션을 탐색할 수 있습니다.
 
 ## <a name="new-to-net"></a>.NET을 처음 사용하는 경우
+
+.NET에 대한 대략적인 개요는 [.NET이란?](https://www.microsoft.com/net/learn/what-is-dotnet)을 체크 아웃하세요.
 
 .NET을 처음 사용하는 경우 [시작](get-started.md) 문서를 확인하세요.
 

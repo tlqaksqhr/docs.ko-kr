@@ -6,11 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f539efe15ce68a77890538430a170da64ff325e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827341"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 
 * **개발:** 우선 순위는 신속하게 변경 내용을 반복하고 변경 내용을 디버그하는 기능에 초점을 둡니다. 이미지의 크기는 중요하지 않으며 코드를 변경하고 변경 내용을 신속하게 확인할 수 있나요?
 
-* **빌드:** 이 이미지는 컴파일러 및 이진 파일을 최적화하는 다른 종속성을 포함하는 앱을 컴파일하는 데 필요한 모든 항목을 포함합니다.  빌드 이미지를 사용하여 프로덕션 이미지로 배치하는 자산을 만듭니다. 빌드 이미지는 연속 통합 또는 빌드 환경에서 사용됩니다. 이 방법은 빌드 에이전트가 빌드 이미지 인스턴스에서 응용 프로그램(필요한 모든 종속성과 함께)을 컴파일하고 빌드할 수 있도록 합니다. 빌드 에이전트는 이 Docker 이미지를 실행하는 방법만 알고 있으면 됩니다.
+* **빌드:** 이 이미지는 컴파일러 및 이진 파일을 최적화하는 다른 종속성을 포함하는 앱을 컴파일하는 데 필요한 모든 항목을 포함합니다.  빌드 이미지를 사용하여 프로덕션 이미지로 배치하는 자산을 만듭니다. 빌드 이미지는 지속적인 통합 또는 빌드 환경에서 사용됩니다. 이 방법은 빌드 에이전트가 빌드 이미지 인스턴스에서 응용 프로그램(필요한 모든 종속성과 함께)을 컴파일하고 빌드할 수 있도록 합니다. 빌드 에이전트는 이 Docker 이미지를 실행하는 방법만 알고 있으면 됩니다.
 
 * **프로덕션:** 이미지를 얼마나 빠르게 배포하고 시작할 수 있나요? 이 이미지는 작기 때문에 Docker 레지스트리에서 Docker 호스트로 네트워크 성능이 최적화됩니다. 콘텐츠를 실행할 준비가 되면 Docker 실행부터 결과 처리까지 가장 빠른 시간에 수행할 수 있습니다. 동적 코드 컴파일은 Docker 모델에 필요하지 않습니다. 이 이미지에 배치되는 콘텐츠는 이진 파일과 응용 프로그램을 실행하는 데 필요한 콘텐츠로 제한됩니다.
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
     * .js 및 .css 파일
 
 
-프로덕션 이미지에 `dotnet publish` 명령 출력을 포함하는 이유는 해당 크기를 최소로 유지하기 위해서입니다.
+프로덕션 이미지에 `dotnet publish` 명령 출력을 포함하는 이유는 크기를 최소로 유지하기 위해서입니다.
 
 일부 .NET Core 이미지는 다른 태그 간의 계층을 공유하므로 최신 태그를 다운로드하는 것은 비교적 간단한 프로세스입니다. 컴퓨터에 이전 버전이 이미 있는 경우 이 아키텍처는 필요한 디스크 공간을 줄입니다.
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/04/2018
 
 위의 목표를 달성하기 위해 [`microsoft/dotnet`](https://hub.docker.com/r/microsoft/dotnet/)에서 이미지 변형을 제공합니다.
 
-* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) 이 이미지는 .NET Core 및 CLI(명령줄 도구)가 포함된 .NET Core SDK를 포함합니다. 이 이미지는 **개발 시나리오**에 매핑됩니다. 로컬 개발, 디버깅 및 단위 테스트에 이 이미지를 사용합니다. 이 이미지는 **빌드** 시나리오에도 사용할 수 있습니다. `microsoft/dotnet:sdk`를 사용하면 항상 최신 버전을 제공합니다.
+* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.1-sdk`) 이 이미지는 .NET Core 및 CLI(명령줄 도구)가 포함된 .NET Core SDK를 포함합니다. 이 이미지는 **개발 시나리오**에 매핑됩니다. 로컬 개발, 디버깅 및 단위 테스트에 이 이미지를 사용합니다. 이 이미지는 **빌드** 시나리오에도 사용할 수 있습니다. `microsoft/dotnet:sdk`를 사용하면 항상 최신 버전을 제공합니다.
 
 > [!TIP]
 > 필요한 것이 확실하지 않은 경우 `microsoft/dotnet:<version>-sdk` 이미지를 사용하려고 합니다. "de facto" 이미지로 삭제 컨테이너로 사용되도록 디자인되었으며(소스 코드 탑재 및 앱을 시작하도록 컨테이너 시작) 기본 이미지로 다른 이미지를 빌드하도록 디자인되었습니다.
@@ -79,9 +80,9 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="samples-to-explore"></a>탐색할 샘플
 
-* [이 ASP.NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp)은 프로덕션용 ASP.NET Core 앱에 대한 Docker 이미지를 빌드하는 것과 관련한 모범 사례 패턴을 보여 줍니다. 샘플은 Linux 컨테이너와 Windows 컨테이너 둘 다에서 작동합니다.
+* [이 ASP.NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp)은 프로덕션용 ASP.NET Core 앱에 대한 Docker 이미지를 빌드하는 것과 관련한 모범 사례 패턴을 보여 줍니다. 샘플은 Linux 컨테이너와 Windows 컨테이너 둘 다에서 작동합니다.
 
-* 이 .NET Core Docker 샘플은 [프로덕션용 .NET Core 앱에 대한 Docker 이미지를 빌드](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)하는 것과 관련한 모범 사례 패턴을 보여 줍니다.
+* 이 .NET Core Docker 샘플은 [프로덕션용 .NET Core 앱에 대한 Docker 이미지를 빌드](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)하는 것과 관련한 모범 사례 패턴을 보여 줍니다.
 
 ## <a name="your-first-aspnet-core-docker-app"></a>첫 번째 ASP.NET Core Docker 앱
 
@@ -101,9 +102,9 @@ ms.lasthandoff: 05/04/2018
 
 빌드하고 실행하려면 다음 항목을 설치합니다.
 
-#### <a name="net-core-20-sdk"></a>.NET Core 2.0 SDK
+#### <a name="net-core-21-sdk"></a>.NET Core 2.1 SDK
 
-* [.NET Core SDK 2.0](https://www.microsoft.com/net/core)을 설치합니다.
+* [.NET Core SDK 2.1](https://www.microsoft.com/net/core)을 설치합니다.
 
 * 아직 없는 경우 즐겨 찾는 코드 편집기를 설치합니다.
 
@@ -112,7 +113,7 @@ ms.lasthandoff: 05/04/2018
 
 #### <a name="installing-docker-client"></a>Docker 클라이언트 설치
 
-[Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) 이상의 Docker 클라이언트를 설치합니다.
+[Docker 18.03](https://docs.docker.com/release-notes/docker-ce/) 이상의 Docker 클라이언트를 설치합니다.
 
 Docker 클라이언트를 다음에 설치할 수 있습니다.
 
@@ -136,22 +137,26 @@ Docker 클라이언트를 다음에 설치할 수 있습니다.
 
 ### <a name="getting-the-sample-application"></a>샘플 응용 프로그램 가져오기
 
-샘플을 가져오는 가장 쉬운 방법은 다음 지침을 사용하여 git로 [샘플 리포지토리](https://github.com/dotnet/dotnet-docker-samples)를 복제하는 것입니다. 
+샘플을 가져오는 가장 쉬운 방법은 다음 지침을 사용하여 git로 [.NET Core Docker 리포지토리](https://github.com/dotnet/dotnet-docker)를 복제하는 것입니다. 
 
 ```console
-git clone https://github.com/dotnet/dotnet-docker-samples/
+git clone https://github.com/dotnet/dotnet-docker
 ```
 
-.NET Core Docker 샘플 리포지토리에서 zip으로 리포지토리(작음)를 다운로드할 수도 있습니다.
+.NET Core Docker 리포지토리에서 zip으로 리포지토리(작음)를 다운로드할 수도 있습니다.
 
 ### <a name="run-the-aspnet-app-locally"></a>ASP.NET 앱을 로컬로 실행
 
 참조 지점으로 응용 프로그램을 컨테이너화하기 전에 먼저 로컬로 응용 프로그램을 실행합니다.
 
-다음 명령을 사용하여 .NET Core 2.0 SDK와 함께 응용 프로그램을 로컬로 빌드하고 실행할 수 있습니다(지침에서는 리포지토리의 루트를 가정).
+다음 명령을 사용하여 .NET Core 2.1 SDK와 함께 응용 프로그램을 로컬로 빌드하고 실행할 수 있습니다(지침에서는 리포지토리의 루트를 가정).
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+cd aspnetapp // project scope
+
 dotnet run
 ```
 
@@ -162,7 +167,10 @@ dotnet run
 다음 명령을 사용하여 Linux 컨테이너를 사용하는 Docker에서 샘플을 빌드하고 실행할 수 있습니다(지침에서는 리포지토리의 루트를 가정).
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
@@ -177,7 +185,10 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 다음 명령을 사용하여 Windows 컨테이너를 사용하는 Docker에서 샘플을 빌드하고 실행할 수 있습니다(지침에서는 리포지토리의 루트를 가정).
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
@@ -215,7 +226,7 @@ Ethernet adapter Ethernet:
 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 프로덕션에 로컬로 배포할 준비가 된 응용 프로그램을 만들 수 있습니다.
 
 ```console
-dotnet publish -c release -o published
+dotnet publish -c Release -o published
 ```
 
 > [!NOTE]
@@ -235,10 +246,10 @@ dotnet published/aspnetapp.dll
 
 ### <a name="docker-images-used-in-this-sample"></a>이 샘플에 사용된 Docker 이미지
 
-이 샘플에서는 다음 Docker 이미지가 사용됨
+이 샘플의 dockerfile에서는 다음 Docker 이미지가 사용됩니다.
 
-* `microsoft/aspnetcore-build:2.0`
-* `microsoft/aspnetcore:2.0`
+* `microsoft/dotnet:2.1-sdk`
+* `microsoft/dotnet:2.1-aspnetcore-runtime`
 
 지금까지 다음 작업을 수행했습니다.
 > [!div class="checklist"]

@@ -4,18 +4,18 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577061"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805476"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
 EShopOnContainers 참조 응용 프로그램의 주문 마이크로 서비스 설계는 CQRS 원칙을 기준으로 합니다. 그러나 명령에서 쿼리를 분리하고 두 작업에 동일한 데이터베이스를 사용하는 가장 간단한 방식을 사용합니다.
 
-이러한 패턴의 핵심이자 중요한 점은 쿼리가 멱등이라는 점입니다.즉 시스템에 몇 번을 쿼리하던 시스템의 상태가 변하지 않습니다. 심지어 주문 마이크로 서비스가 같은 데이터베이스를 사용하더라도 트랜잭션 논리 "쓰기" 도메인 모델과 다른 "읽기" 데이터 모델을 사용할 수도 있습니다.  따라서 간단한 CQRS 접근 방법입니다.
+이러한 패턴의 핵심이자 중요한 점은 쿼리가 idempotent라는 점입니다. 즉 시스템에 몇 번을 쿼리하던 시스템의 상태가 변하지 않습니다. 심지어 주문 마이크로 서비스가 같은 데이터베이스를 사용하더라도 트랜잭션 논리 “쓰기” 도메인 모델과 다른 “읽기” 데이터 모델을 사용할 수도 있습니다. 따라서 간단한 CQRS 접근 방법입니다.
 
 반면에 트랜잭션과 데이터 업데이트를 트리거하는 명령은 시스템에서 상태를 바꿀 수 있습니다. 명령에서는 복잡성과 끊임없이 변화하는 비즈니스 규칙을 처리하는 데 중의가 필요합니다. 이것이 더 나은 모델링 시스템을 위해 DDD 기법을 적용하는 부분입니다.
 

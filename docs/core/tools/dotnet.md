@@ -3,12 +3,13 @@ title: dotnet 명령 - .NET Core CLI
 description: dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2018
-ms.openlocfilehash: c56ed032ccef6c6fd19a13214b04b384ffff28d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/04/2018
+ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805661"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -20,7 +21,12 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>개요
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
@@ -36,13 +42,59 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet`은 CLI(명령줄 인터페이스) 도구 체인에 대한 일반 드라이버입니다. 자체적으로 호출되어 간단한 사용 방법을 제공합니다.
 
-각 특정 기능은 명령으로 구현됩니다. 기능을 사용하려면 [`dotnet build`](dotnet-build.md)와 같이 `dotnet`뒤에 명령을 지정합니다. 명령 다음에 오는 모든 인수는 고유한 인수입니다.
+각 특정 기능은 명령으로 구현됩니다. 기능을 사용하려면 `dotnet` 뒤에 명령을 지정합니다(예: [`dotnet build`](dotnet-build.md)). 명령 다음에 오는 모든 인수는 고유한 인수입니다.
 
 `dotnet` 자체가 명령으로 사용되는 유일한 경우는 [프레임워크 종속 앱](../deploying/index.md)을 실행하는 경우입니다. `dotnet` 동사 뒤에 응용 프로그램 DLL을 지정하여 응용 프로그램을 실행합니다(예: `dotnet myapp.dll`).
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`--additional-deps <PATH>`
+
+추가적인 *deps.json* 파일의 경로입니다.
+
+`--additionalprobingpath <PATH>`
+
+검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`-d|--diagnostics`
+
+진단 출력을 사용합니다.
+
+`--fx-version <VERSION>`
+
+응용 프로그램 실행에 사용할 설치된 .NET Core 런타임의 버전입니다.
+
+`-h|--help`
+
+명령에 대한 간단한 도움말을 출력합니다. `dotnet`과 함께 사용되는 경우 사용 가능한 명령 목록도 출력합니다.
+
+`--info`
+
+현재 운영 체제, 버전에 대한 SHA 커밋 및 기타 정보 등 CLI 도구 및 환경에 대한 자세한 정보를 출력합니다.
+
+`--list-runtimes`
+
+설치된 .NET Core 런타임을 표시합니다.
+
+`--list-sdks`
+
+설치된 .NET Core SDK를 표시합니다.
+
+`--roll-forward-on-no-candidate-fx`
+
+ 후보 공유 프레임워크에서는 롤포워드하지 않습니다.
+
+`-v|--verbosity <LEVEL>`
+
+명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 모든 명령에서 지원되지 않습니다. 이 옵션을 사용할 수 있는지 확인하려면 특정 명령 페이지를 참조하세요.
+
+`--version`
+
+사용 중인 .NET Core SDK 버전을 출력합니다.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -116,7 +168,26 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="general"></a>일반
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+| 명령                                       | 함수                                                            |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)               | .NET Core 응용 프로그램을 빌드합니다.                                     |
+| [dotnet build-server](dotnet-build-server.md) | 빌드에서 시작된 서버와 상호 작용합니다.                          |
+| [dotnet clean](dotnet-clean.md)               | 빌드 출력을 정리합니다.                                                |
+| [dotnet help](dotnet-help.md)                 | 명령에 대한 자세한 온라인 설명서를 표시합니다.           |
+| [dotnet migrate](dotnet-migrate.md)           | 유효한 Preview 2 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.  |
+| [dotnet msbuild](dotnet-msbuild.md)           | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.                        |
+| [dotnet new](dotnet-new.md)                   | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.                |
+| [dotnet pack](dotnet-pack.md)                 | 코드의 NuGet 패키지를 만듭니다.                               |
+| [dotnet publish](dotnet-publish.md)           | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다. |
+| [dotnet restore](dotnet-restore.md)           | 지정된 응용 프로그램에 대한 종속성을 복원합니다.                  |
+| [dotnet run](dotnet-run.md)                   | 소스에서 응용 프로그램을 실행합니다.                                   |
+| [dotnet sln](dotnet-sln.md)                   | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.       |
+| [dotnet store](dotnet-store.md)               | 어셈블리를 런타임 패키지 저장소에 저장합니다.                     |
+| [dotnet test](dotnet-test.md)                 | Test Runner를 사용하여 테스트를 실행합니다.                                     |
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | 명령                             | 함수                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -175,9 +246,34 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 [dotnet nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 [dotnet nuget push](dotnet-nuget-push.md) | 서버에 패키지를 푸시하고 게시합니다.
 
+### <a name="global-tools-commands"></a>전역 도구 명령
+
+[.NET Core 전역 도구](global-tools.md)는 .NET Core SDK 2.1.300부터 사용할 수 있습니다.
+
+명령 | 함수
+--- | ---
+[dotnet tool install](dotnet-tool-install.md) | 컴퓨터에 전역 도구를 설치합니다.
+[dotnet tool list](dotnet-tool-list.md) | 컴퓨터의 기본 디렉터리 또는 지정된 경로에 현재 설치된 모든 전역 도구를 나열합니다.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | 컴퓨터에서 전역 도구를 제거합니다.
+[dotnet tool update](dotnet-tool-update.md) | 컴퓨터에서 전역 도구를 업데이트합니다.
+
+### <a name="additional-tools"></a>추가 도구
+
+.NET Core SDK 2.1.300부터는 `DotnetCliToolReference`을 사용하여 프로젝트별로만 사용할 수 있었던 여러 도구를 .NET Core SDK의 일부로 사용할 수 있습니다. 사용 가능한 도구는 다음과 같습니다.
+
+| 도구                                              | 함수                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| dev-certs                                         | 개발 인증서를 만들고 관리합니다.                |
+| [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 명령줄 도구입니다.                    |
+| sql-cache                                         | SQL Server 캐시 명령줄 도구입니다.                         |
+| [user-secrets](/aspnet/core/security/app-secrets) | 개발 사용자 비밀을 관리합니다.                            |
+| [watch](/aspnet/core/tutorials/dotnet-watch)      | 파일이 변경될 때 명령을 실행하는 파일 감시자를 시작합니다. |
+
+각 도구에 대한 자세한 내용을 보려면 `dotnet <tool-name> --help`를 실행합니다.
+
 ## <a name="examples"></a>예제
 
-컴파일하고 실행할 수 있는 샘플 .NET Core 콘솔 응용 프로그램을 초기화합니다.
+새 .NET Core 콘솔 응용 프로그램을 만듭니다.
 
 `dotnet new console`
 
@@ -197,7 +293,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="environment-variables"></a>환경 변수
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -209,7 +305,29 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-.NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`(값 `true`, `1` 또는 `yes` 허용)로 설정하고, 원격 분석 기능을 옵트인하려면 `false`(값 `false`, `0` 또는 `no` 허용)로 설정합니다. 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
+.NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+전역 위치에서 .NET Core 런타임, 공유 프레임워크 또는 SDK가 확인되는지 여부를 지정합니다. 설정하지 않은 경우 기본값은 `true`입니다. 전역 위치에서 확인하지 않고 격리된 .NET Core 설치를 가지려면 `false`로 설정합니다(값 `0` 또는 `false`는 허용됨). 다중 수준의 조회에 대한 자세한 내용은 [다중 수준 SharedFX 조회](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)를 참조하세요.
+
+`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
+
+부 버전 롤포워드를 사용하지 않도록 설정합니다. 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`DOTNET_PACKAGES`
+
+주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%HOME%\NuGet\Packages`로 지정됩니다.
+
+`DOTNET_SERVICING`
+
+런타임을 로드할 때 공유 호스트에서 사용할 서비스 인덱스의 위치를 지정합니다.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+.NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
@@ -227,6 +345,6 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-.NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`(값 `true`, `1` 또는 `yes` 허용)로 설정하고, 원격 분석 기능을 옵트인하려면 `false`(값 `false`, `0` 또는 `no` 허용)로 설정합니다. 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
+.NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
 
 ---

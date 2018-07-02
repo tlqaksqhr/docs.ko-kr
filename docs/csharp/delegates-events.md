@@ -3,11 +3,12 @@ title: 대리자 및 이벤트
 description: .NET Core 설명서에서 대리자 및 이벤트에 대한 정보를 찾을 수 있는 위치를 확인합니다.
 ms.date: 06/20/2016
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b802a7aa8ef3e9ab0c05af23186d124dcc07bdb5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826830"
 ---
 # <a name="delegates--events"></a>대리자 및 이벤트
 
@@ -45,3 +46,4 @@ ms.lasthandoff: 05/04/2018
 
     이 문서에서는 설계에서 이벤트 및 대리자 사용을 구분하는 방법에 대해 설명합니다.
  
+GitHub 샘플 리포지토리에서 [대리자 샘플](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) 및 [이벤트 샘플](https://github.com/dotnet/samples/tree/master/csharp/events)을 다운로드할 수 있습니다.
