@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592355"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106306"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 응용 프로그램 정의 
 
@@ -431,7 +431,7 @@ docker-compose는 .env 파일의 각 줄이 &lt;변수&gt;=&lt;값&gt; 형식이
 -   **Docker Compose 개요**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **여러 Compose 파일**
+-   **다중 계산 파일**
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>최적화된 ASP.NET Core Docker 이미지 빌드
@@ -548,4 +548,5 @@ Visual Studio를 사용하는 경우 이러한 모든 단계가 내부적으로 
 
 
 >[!div class="step-by-step"]
-[이전] (data-driven-crud-microservice.md) [다음] (database-server-container.md)
+[이전](data-driven-crud-microservice.md)
+[다음](database-server-container.md)

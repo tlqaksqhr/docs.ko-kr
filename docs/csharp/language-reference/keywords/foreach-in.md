@@ -1,6 +1,6 @@
 ---
 title: foreach, in(C# 참조)
-ms.date: 05/24/2018
+ms.date: 06/29/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 7613590686f7f7ec6439da4a2bb672e524ab01e8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d3ce1122c54c14b1baf35641f28d062a2855d335
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565708"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140270"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in(C# 참조)
 
@@ -35,7 +35,11 @@ ms.locfileid: "34565708"
 
 다음 예제에서는 인터페이스를 구현하지 않는 <xref:System.Span%601?displayProperty=nameWithType> 형식의 인스턴스와 함께 `foreach` 문을 사용합니다.
 
-[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+
+C# 7.3부터는 열거자의 `Current` 속성이 [참조 반환 값](../../programming-guide/classes-and-structs/ref-returns.md)(`ref T` 여기서 `T`는 컬렉션 요소의 형식임)을 반환하는 경우 `ref` 또는 `ref readonly` 한정자를 사용하여 반복 변수를 선언할 수 있습니다. 다음 예제에서는 `ref` 반복 변수를 사용하여 stackalloc 배열의 각 항목 값을 설정합니다. `ref readonly` 버전은 컬렉션을 반복하여 모든 값을 인쇄합니다. `readonly` 선언은 암시적 로컬 변수 선언을 사용합니다. 명시적으로 변수 선언을 입력하므로 `ref` 또는 `ref readonly`에서 암시적 변수 선언을 사용할 수 있습니다.
+
+[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574675"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104571"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 
@@ -30,7 +30,7 @@ ms.locfileid: "33574675"
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 모바일 앱의 유효성 검사
 
 -   **텍스트 입력 유효성 검사 및 오류 표시**
-    [*https://developer.xamarin.com/recipes/ios/standard\_컨트롤/텍스트\_필드/유효성 검사\_입력/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **유효성 검사 콜백**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
@@ -65,4 +65,5 @@ ms.locfileid: "33574675"
 
 
 >[!div class="step-by-step"]
-[이전] (domain-model-layer-validations.md) [다음] (domain-events-design-implementation.md)
+[이전](domain-model-layer-validations.md)
+[다음](domain-events-design-implementation.md)

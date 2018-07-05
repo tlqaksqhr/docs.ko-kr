@@ -1,20 +1,21 @@
 ---
 title: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319171"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071837"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)
+
 이 예제에서는 일치하는 키로 사용되는 공통 값을 공유하는 두 개의 쉼표로 구분된 파일의 데이터를 조인하는 방법을 보여 줍니다. 이 방법은 두 스프레드시트나 한 스프레드시트와 다른 형식으로 된 파일의 데이터를 하나의 새 파일로 결합해야 하는 경우에 유용할 수 있습니다. 모든 종류의 구조적 텍스트에서 작동하도록 예제를 수정할 수 있습니다.  
   
-### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
+## <a name="to-create-the-data-files"></a>데이터 파일을 만들려면
   
-1.  다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 스프레드시트 데이터를 나타냅니다. 열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.  
+1.  다음 줄을 *scores.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 스프레드시트 데이터를 나타냅니다. 열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ ms.locfileid: "33319171"
     122, 94, 92, 91, 91  
     ```  
   
-2.  다음 줄을 names.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.  
+2.  다음 줄을 *names.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,8 +50,12 @@ ms.locfileid: "33319171"
     ```  
   
 ## <a name="example"></a>예  
-  
-```csharp  
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class JoinStrings  
 {  
     static void Main()  
@@ -78,7 +83,7 @@ class JoinStrings
             let nameFields = name.Split(',')  
             from id in scores  
             let scoreFields = id.Split(',')  
-            where nameFields[2] == scoreFields[0]  
+            where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
             select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
@@ -102,26 +107,32 @@ class JoinStrings
     }  
 }  
 /* Output:  
-Merge two spreadsheets:  
-Adams, 99, 82, 81, 79  
-Fakhouri, 99, 86, 90, 94  
-Feng, 93, 92, 80, 87  
-Garcia, 97, 89, 85, 82  
-Garcia, 35, 72, 91, 70  
-Garcia, 92, 90, 83, 78  
-Mortensen, 88, 94, 65, 91  
-O'Donnell, 75, 84, 91, 39  
-Omelchenko, 97, 92, 81, 60  
-Tucker, 68, 79, 88, 92  
-Tucker, 94, 92, 91, 91  
-Zabokritski, 96, 85, 91, 60  
-12 total names in list  
+Merge two spreadsheets:
+Omelchenko, 97, 92, 81, 60
+O'Donnell, 75, 84, 91, 39
+Mortensen, 88, 94, 65, 91
+Garcia, 97, 89, 85, 82
+Garcia, 35, 72, 91, 70
+Fakhouri, 99, 86, 90, 94
+Feng, 93, 92, 80, 87
+Garcia, 92, 90, 83, 78
+Tucker, 68, 79, 88, 92
+Adams, 99, 82, 81, 79
+Zabokritski, 96, 85, 91, 60
+Tucker, 94, 92, 91, 91
+12 total names in list
  */  
-```  
+```
+
+## <a name="compiling-the-code"></a>코드 컴파일
+
+다음 옵션 중 하나를 대상으로 하는 프로젝트를 만들고 컴파일합니다.
+
+- System.Core.dll에 대한 참조를 포함한 .NET Framework 버전 3.5
+- .NET Framework 버전 4.0 이상
+- .NET Core 버전 1.0 이상
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
-  
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
  [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

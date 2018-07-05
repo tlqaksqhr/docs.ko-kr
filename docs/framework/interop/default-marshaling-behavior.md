@@ -1,6 +1,6 @@
 ---
 title: 기본 마샬링 동작
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457406"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028073"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변환, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -113,9 +113,11 @@ interface DelegateTest : IDispatch {
 ```  
   
  다른 모든 관리되지 않는 함수 포인터를 역참조할 수 있는 것과 마찬가지로 함수 포인터도 역참조할 수 있습니다.  
-  
+
+이 예제에서 두 개의 대리자가 <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>으로 마샬링되면 결과는 `int` 및 `int`에 대한 포인터입니다. 대리자 형식이 마샬링되기 때문에 여기에서 `int`는 void(`void*`)에 대한 포인터를 나타냅니다. 이 항목은 메모리에서 대리자의 주소입니다. 즉, 여기서 `int`가 함수 포인터의 크기를 나타내므로 이 결과는 32비트 Windows 시스템에 해당됩니다.
+
 > [!NOTE]
->  비관리 코드에서 보유한 관리되는 대리자에 대한 함수 포인터 참조는 공용 언어 런타임이 관리되는 개체에서 가비지 수집을 수행할 수 없도록 차단하지 않습니다.  
+>  비관리 코드에서 보유한 관리되는 대리자에 대한 함수 포인터 참조는 공용 언어 런타임이 관리되는 개체에서 가비지 컬렉션을 수행할 수 없도록 차단하지 않습니다.  
   
  예를 들어 다음 코드는 `SetChangeHandler` 메서드에 전달된 `cb` 개체 참조가 `Test` 메서드의 수명을 초과하여 `cb` 연결을 유지하지 않으므로 잘못된 것입니다. `cb` 개체가 가비지 수집되고 나면 `SetChangeHandler`에 전달된 함수 포인터가 더이상 유효하지 않습니다.  
   

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: bee9a6215d2952f6c7f71607b1c4b1f44d1c0faf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579134"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106410"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -86,7 +86,7 @@ ms.locfileid: "33579134"
 ## <a name="additional-resources"></a>추가 자료
 
 -   **이벤트 기반 메시징**
-    [*http://soapatterns.org/design\_패턴/이벤트\_기반\_메시징*](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **게시/구독 채널**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
@@ -101,11 +101,12 @@ ms.locfileid: "33579134"
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **최종 일관성**
-    [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 
 >[!div class="step-by-step"]
-[이전] (communication-in-microservice-architecture.md) [다음] (maintain-microservice-apis.md)
+[이전](communication-in-microservice-architecture.md)
+[다음](maintain-microservice-apis.md)

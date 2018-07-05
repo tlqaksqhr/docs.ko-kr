@@ -1,6 +1,6 @@
 ---
 title: 사용자 지정 숫자 형식 문자열
-ms.date: 03/30/2017
+ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,16 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa1ab1d9a9ff3d652ce97d4fe7e6d04f744aea98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579238"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106530"
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
+
 하나 이상의 사용자 지정 숫자 서식 지정자로 구성된 사용자 지정 숫자 서식 문자열을 만들어 숫자 데이터의 서식을 지정하는 방법을 정의할 수 있습니다. 사용자 지정 숫자 서식 문자열은 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)이 아닌 모든 서식 문자열입니다.  
   
+
  사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다. <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md)을 통해서도 사용자 지정 숫자 형식 문자열을 사용할 수 있습니다. [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 기능은 사용자 지정 숫자 형식 문자열도 지원합니다.  
   
 > [!TIP]
@@ -45,11 +47,13 @@ ms.locfileid: "33579238"
 |"‰"|천분율 자리 표시자|숫자에 1000을 곱하고 결과 문자열에 지역화된 천분율 기호를 삽입합니다.<br /><br /> 추가 정보: ["‰" 사용자 지정 지정자](#SpecifierPerMille)|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|지수 표기법|적어도 하나의 0이 뒤에 오면 지수 표기법을 사용하여 결과의 서식을 지정합니다. "E" 또는 "e" 문자는 결과 문자열에 표시되는 지수 기호의 대/소문자를 나타냅니다. "E" 또는 "e" 문자 뒤에 오는 0의 수에 따라 지수의 최소 자릿수가 결정됩니다. 더하기 기호(+)는 기호 문자가 항상 지수 앞에 온다는 것을 나타냅니다. 빼기 기호(-)는 기호 문자가 음의 지수 앞에만 온다는 것을 나타냅니다.<br /><br /> 추가 정보: ["E" 및 "e" 사용자 지정 지정자](#SpecifierExponent)|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|이스케이프 문자|뒤에 오는 문자가 사용자 지정 형식 지정자가 아닌 리터럴로 해석되도록 합니다.<br /><br /> 추가 정보: [“\\” 이스케이프 문자](#SpecifierEscape)|987654 ("\\###00\\#") -> #987654#|  
-|'*string*'<br /><br /> "*string*"|리터럴 문자열 구분 기호|괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
+|'*string*'<br /><br /> "*string*"|리터럴 문자열 구분 기호|괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.<br/><br/>추가 정보: [리터럴 문자](#character-literals)|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
 |;|섹션 구분 기호|양수, 음수 및 0에 따라 별도의 서식 문자열을 사용하여 섹션을 정의합니다.<br /><br /> 추가 정보: [";" 섹션 구분 기호](#SectionSeparator)|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|기타|다른 모든 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.|68 ("# °") -> 68 °|  
+|기타|다른 모든 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.<br/><br/>추가 정보: [리터럴 문자](#character-literals)|68 ("# °") -> 68 °|  
   
  다음 단원에서는 각 사용자 지정 숫자 서식 지정자에 대해 자세히 설명합니다.  
+
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>"0" 사용자 지정 지정자  
@@ -60,7 +64,7 @@ ms.locfileid: "33579238"
  다음 예제에서는 0 자리 표시자가 포함된 사용자 지정 서식 문자열을 사용하여 여러 가지 값을 표시합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [표로 이동](#table)  
@@ -76,13 +80,13 @@ ms.locfileid: "33579238"
  다음 예제에서는 숫자 자리 표시자가 포함된 사용자 지정 서식 문자열을 사용하여 여러 가지 값을 표시합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  빈 숫자나 선행 0이 공백으로 대체되는 결과 문자열을 반환하려면 다음 예제와 같이 [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md) 을 사용하고 필드 너비를 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [표로 이동](#table)  
@@ -96,7 +100,7 @@ ms.locfileid: "33579238"
  다음 예제에서는 "." 서식 지정자를 사용하여 여러 결과 문자열에서 소수점의 위치를 정의합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [표로 이동](#table)  
@@ -116,13 +120,13 @@ ms.locfileid: "33579238"
  다음 예제에서는 쉼표를 그룹 구분 기호로 사용하는 방법을 보여 줍니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  다음 예제에서는 쉼표를 숫자 배율 지정자로 사용하는 방법을 보여 줍니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [표로 이동](#table)  
@@ -134,7 +138,7 @@ ms.locfileid: "33579238"
  다음 예제에서는 "%" 사용자 지정 지정자가 포함된 여러 가지 사용자 지정 서식 문자열을 정의합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [표로 이동](#table)  
@@ -146,7 +150,7 @@ ms.locfileid: "33579238"
  다음 예제에서는 "‰" 사용자 지정 지정자가 포함된 사용자 지정 서식 문자열을 정의합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [표로 이동](#table)  
@@ -158,13 +162,13 @@ ms.locfileid: "33579238"
  다음 예제에서는 과학적 표기법 지정자를 사용하여 여러 가지 숫자 값에 서식을 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [표로 이동](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>“\\” 이스케이프 문자  
+## <a name="the--escape-character"></a>"\\" 이스케이프 문자  
  서식 문자열의 "#", "0", ".", ",", "%" 및 "‰" 기호는 리터럴 문자가 아닌 서식 지정자로 해석됩니다. 사용자 지정 서식 문자열에서 이러한 문자가 있는 위치에 따라 대문자 및 소문자 "E"와 + 및 - 기호도 서식 지정자로 해석될 수 있습니다.  
   
  문자가 서식 지정자로 해석되지 않도록 하려면 해당 문자 앞에 이스케이프 문자인 백슬래시를 삽입하면 됩니다. 이스케이프 문자는 뒤에 오는 문자가 변경되지 않은 상태로 결과 문자열에 포함되어야 하는 문자 리터럴임을 나타냅니다.  
@@ -177,7 +181,7 @@ ms.locfileid: "33579238"
  다음 예제에서는 이스케이프 문자를 사용하여 서식 지정 작업에서 “#”, “0” 및 “\\” 문자가 이스케이프 문자나 형식 지정자로 해석되지 않도록 합니다. 이 C# 예제에서는 추가 백슬래시를 사용하여 백슬래시가 리터럴 문자로 해석되도록 합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
- [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
  [표로 이동](#table)  
@@ -197,11 +201,43 @@ ms.locfileid: "33579238"
  다음 예제에서는 ";" 서식 지정자를 사용하여 양수, 음수 및 0의 서식을 각각 다르게 지정합니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
- [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
  [표로 이동](#table)  
+
+## <a name="character-literals"></a>문자 리터럴  
+ 
+사용자 지정 숫자 서식 문자열에서 나타나는 서식 지정자는 리터럴 문자가 아닌 서식 지정 문자로 해석됩니다. 여기에는 다음과 같은 문자가 포함됩니다.  
+
+- [0](#Specifier0)
+- [\#](#SpecifierD)
+- [%](#SpecifierPct)
+- [‰](#SpecifierPerMille)
+- '
+- [\\](#SpecifierEscape)
+- [.](#SpecifierPt)
+- [,](#SpecifierTh)
+- 서식 문자열의 해당 위치에 따라 [E 또는 e](#SpecifierExponent)
+
+다른 모든 문자는 항상 문자 리터럴로 해석되며, 형식 지정 작업에서 변경되지 않고 결과 문자열에 포함됩니다.  구문 분석 작업에서는 입력 문자열의 문자와 정확히 일치해야 하며, 비교 시 대/소문자를 구분합니다.  
   
+다음 예제에서는 리터럴 문자 단위(이 경우에는 천)의 일반적인 사용을 한 가지 보여줍니다.
+  
+ [!code-csharp-interactive[literal characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal2.cs#1)]
+ [!code-vb[literal characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal2.vb#1)]  
+  
+ 문자가 결과 문자열에 포함되거나 입력 문자열에서 성공적으로 구문 분석될 수 있도록 하기 위해 문자를 서식 지정 문자가 아니라 리터럴 문자로 해석되도록 지정하는 두 가지 방법이 있습니다.  
+  
+- 서식 지정 문자를 이스케이프하는 방법입니다. 자세한 내용은 ["\\" 이스케이프 문자](#SpecifierEscape)를 참조하세요.
+  
+- 전체 리터럴 문자열을 따옴표 아포스트로피로 묶습니다.
+
+다음 예제에서는 사용자 지정 숫자 서식 문자열에서 예약된 문자를 포함하는 두 가지 방법을 사용합니다.  
+  
+     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
+     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+    
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>노트  
   
@@ -223,13 +259,13 @@ ms.locfileid: "33579238"
  다음 예제에서는 두 개의 사용자 지정 숫자 서식 문자열을 보여 줍니다. 두 경우 모두에서 숫자 자리 표시자(`#`)는 숫자 데이터를 표시하며, 다른 모든 문자는 결과 문자열에 복사됩니다.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
- [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
  [표로 이동](#table)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Globalization.NumberFormatInfo>  
+ <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
  [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [방법: 숫자 앞에 0으로 채우기](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  

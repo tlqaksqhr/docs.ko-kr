@@ -3,12 +3,12 @@ title: C#의 클래스 및 개체 - C# 언어 둘러보기
 description: C#을 처음 사용하시나요? 클래스, 개체 및 상속 개요 읽어보기
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298294"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140283"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -55,7 +55,7 @@ ms.locfileid: "36298294"
 
 ## <a name="accessibility"></a>액세스 가능성
 
-클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다. 액세스 가능성은 5가지 형태로 제공됩니다. 이러한 내용은 아래에 간략하게 정리되어 있습니다.
+클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다. 액세스 가능성은 여섯 가지 형태로 제공됩니다. 이러한 내용은 아래에 간략하게 정리되어 있습니다.
 
 * `public`
     - 액세스가 제한되지 않음
@@ -64,7 +64,7 @@ ms.locfileid: "36298294"
 * `internal`
     - 현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨
 * `protected internal`
-    - 포함하는 클래스 또는 포함하는 클래스에서 파생된 클래스로만 액세스가 제한됨
+    - 포함되는 클래스, 포함되는 클래스에서 파생된 클래스 또는 동일한 어셈블리 내의 클래스로만 액세스가 제한됨
 * `private`
     - 이 클래스로만 액세스가 제한됨
 * `private protected`

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860689"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207729"
 ---
 # <a name="machine-learning-glossary"></a>기계 학습 용어집
 
@@ -33,7 +33,7 @@ ms.locfileid: "34860689"
 
 ## <a name="binary-classification"></a>이진 분류
 
-[레이블](#label)이 두 클래스 중 하나에만 해당하는 [분류](#classification) 사례입니다. 자세한 내용은 Wikipedia에서 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)(이진 분류) 문서를 참조하세요.
+[레이블](#label)이 두 클래스 중 하나에만 해당하는 [분류](#classification) 사례입니다. 자세한 내용은 [기계 학습 작업](tasks.md) 항목의 [이진 분류](tasks.md#binary-classification) 섹션을 참조하세요.
 
 ## <a name="classification"></a>분류
 
@@ -85,7 +85,7 @@ ms.locfileid: "34860689"
 
 ## <a name="multiclass-classification"></a>다중 클래스 분류
 
-[레이블](#label)이 세 개 이상의 클래스 중 하나인 [분류](#classification) 사례입니다. 자세한 내용은 Wikipedia에서 [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)(다중 클래스 분류) 문서를 참조하세요.
+[레이블](#label)이 세 개 이상의 클래스 중 하나인 [분류](#classification) 사례입니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [이진 분류](tasks.md#multiclass-classification) 섹션을 참조하세요.
 
 ## <a name="n-gram"></a>N-gram
 
@@ -113,7 +113,7 @@ ms.locfileid: "34860689"
 
 ## <a name="regression"></a>재발
 
-출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다.
+출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [회귀](tasks.md#regression) 섹션을 참조하세요.
 
 ## <a name="relative-absolute-error"></a>상대 절대 오차
 

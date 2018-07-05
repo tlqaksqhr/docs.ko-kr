@@ -4,12 +4,12 @@ description: dotnet test 및 MSTest를 사용하여 샘플 솔루션을 단계�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: b76e577d3950dd13b038f47c1b133e3529867c38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216098"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105604"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -17,7 +17,7 @@ ms.locfileid: "33216098"
 
 ### <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
-셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-dotnet-test*라는 디렉터리를 만듭니다. 이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 클래스 라이브러리 및 테스트 프로젝트에 대한 새 솔루션 파일을 만듭니다. 다음으로 *PrimeService* 디렉터리를 만듭니다. 다음 개요에는 지금까지의 디렉터리 및 파일 구조가 나와 있습니다.
+셸 창을 엽니다. 솔루션을 저장할 *unit-testing-using-mstest*라는 디렉터리를 만듭니다. 이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 클래스 라이브러리 및 테스트 프로젝트에 대한 새 솔루션 파일을 만듭니다. 다음으로 *PrimeService* 디렉터리를 만듭니다. 다음 개요에는 지금까지의 디렉터리 및 파일 구조가 나와 있습니다.
 
 ```
 /unit-testing-using-mstest

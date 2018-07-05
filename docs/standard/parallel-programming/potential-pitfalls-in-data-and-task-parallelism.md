@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da87531ff7f20181e1e5499acb8152d0fbadc8af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592394"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073231"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
 대부분의 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>는 일반 순차적 루프에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 루프를 병렬화하는 작업은 순차적 코드에서 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성을 도입합니다. 이 항목에서는 병렬 루프를 작성할 때 주의해야 할 사항을 나열합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "33592394"
  일부 경우에서 병렬 루프는 순차적 루프보다 더 느리게 실행될 수 있습니다. 반복이 적고 빠른 사용자 대리인이 있는 병렬 루프의 속도가 훨씬 빠를 가능성이 없다는 것이 경험적인 기본 규칙입니다. 그러나 많은 요인이 성능에 관련되므로 항상 실제 결과를 측정하는 것이 좋습니다.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>공유 메모리 위치에 쓰기 방지  
- 순차적 코드에서는 정적 변수 또는 클래스 필드에서 읽거나 쓰는 것은 일반적입니다. 그러나 여러 스레드가 해당 변수에 동시에 액세스할 때마다 경합 상태가 발생할 가능성이 큽니다. 잠금을 사용하여 변수에 대한 액세스를 동기화할 수 있지만 동기화의 비용으로 성능이 저하될 수 있습니다. 따라서 가능한 한 병렬 루프에서 공유된 상태에 대한 액세스를 방지하거나 최소한의 제한으로 액세스하는 것이 좋습니다. 이를 수행하는 가장 좋은 방법은 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 변수를 사용하여 루프 실행 중 스레드 로컬 상태를 저장하는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>의 오버로드를 사용하는 것입니다. 자세한 내용은 [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) 및 [방법: 스레드 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)을 참조하세요.  
+ 순차적 코드에서는 정적 변수 또는 클래스 필드에서 읽거나 쓰는 것은 일반적입니다. 그러나 여러 스레드가 해당 변수에 동시에 액세스할 때마다 경합 상태가 발생할 가능성이 큽니다. 잠금을 사용하여 변수에 대한 액세스를 동기화할 수 있지만 동기화의 비용으로 성능이 저하될 수 있습니다. 따라서 가능한 한 병렬 루프에서 공유된 상태에 대한 액세스를 방지하거나 최소한의 제한으로 액세스하는 것이 좋습니다. 이를 수행하는 가장 좋은 방법은 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 변수를 사용하여 루프 실행 중 스레드 로컬 상태를 저장하는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>의 오버로드를 사용하는 것입니다. 자세한 내용은 [방법: 스레드 지역 변수를 사용하여 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) 및 [방법: 파티션 지역 변수를 사용하여 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)을 참조하세요.  
   
 ## <a name="avoid-over-parallelization"></a>과도한 병렬화 방지  
  병렬 루프를 사용하여 소스 컬렉션을 분할하고 작업자 스레드를 동기화하는 오버헤드 비용이 발생합니다. 병렬화의 이점은 컴퓨터의 프로세서 수로 더 제한됩니다. 하나의 프로세서에서 여러 계산 바인딩된 스레드를 실행하여 얻을 수 있는 속도 향상이 없습니다. 따라서 루프를 과도하게 병렬화하지 않도록 주의해야 합니다.  

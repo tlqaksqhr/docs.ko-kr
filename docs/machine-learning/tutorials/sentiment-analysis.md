@@ -4,12 +4,12 @@ description: 감정 예측을 통해 적절한 작업을 수행하는 방법을 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314840"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948620"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용
 
@@ -113,13 +113,13 @@ ms.locfileid: "36314840"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-최근에 다운로드한 파일의 경로를 포함할 세 개의 전역 변수를 만들어야 합니다.
+최근에 다운로드한 파일의 경로를 포함할 세 개의 전역 필드를 만들어야 합니다.
 
 * `_dataPath`에는 모델을 학습시키는 데 사용되는 데이터 집합의 경로가 포함됩니다.
 * `_testDataPath`에는 모델을 평가하는 데 사용되는 데이터 집합의 경로가 포함됩니다.
 * `_modelPath`에는 학습된 모델이 저장되는 경로가 포함됩니다.
 
-`Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 최근에 다운로드한 파일을 지정합니다.
+`Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 경로를 지정합니다.
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

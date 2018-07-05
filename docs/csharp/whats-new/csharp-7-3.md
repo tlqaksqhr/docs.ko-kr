@@ -2,12 +2,12 @@
 title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
-ms.openlocfilehash: 1d1aca2564c26315cf8b3af60a863ea3c70fd385
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827100"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106777"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
 
@@ -72,7 +72,7 @@ class C
 {
     static S s = new S();
 
-    public void M()
+    unsafe public void M()
     {
         fixed (int* ptr = s.myFixedField)
         {
@@ -93,7 +93,7 @@ ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-자세한 내용은 [`ref` 반환 및 `ref` 지역 변수](../programming-guide/classes-and-structs/ref-returns.md)에 대한 문서를 참조하세요.
+자세한 내용은 [`ref` 반환 및 `ref` 지역](../programming-guide/classes-and-structs/ref-returns.md)에 대한 아티클 및 [`foreach`](../language-reference/keywords/foreach-in.md)에 대한 아티클을 참조하세요.
 
 ### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc` 배열이 이니셜라이저를 지원함
 

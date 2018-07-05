@@ -1,5 +1,5 @@
 ---
-title: class(C# 참조)
+title: class 키워드(C# 참조)
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216754"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948513"
 ---
 # <a name="class-c-reference"></a>class(C# 참조)
 
@@ -21,12 +21,13 @@ ms.locfileid: "33216754"
 ```csharp
 class TestClass
 {
-    // Methods, properties, fields, events, delegates 
+    // Methods, properties, fields, events, delegates
     // and nested classes go here.
 }
 ```
 
 ## <a name="remarks"></a>설명
+
 C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 기본 클래스에서만 구현을 상속할 수 있습니다. 그러나 한 클래스는 두 개 이상의 인터페이스를 구현할 수 있습니다. 다음 표에는 클래스 상속 및 인터페이스 구현에 대한 예제가 나와 있습니다.
 
 |상속|예|
@@ -73,11 +74,13 @@ C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 �
 - [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>예
+
 다음 예제에서는 클래스 필드, 생성자 및 메서드를 선언하는 방법을 보여 줍니다. 또한 개체 인스턴스화 및 인스턴스 데이터 출력을 보여 줍니다. 이 예제에서는 두 개의 클래스가 선언됩니다. 첫 번째 클래스인 `Child`는 private 필드 2개(`name` 및 `age`), public 생성자 2개, public 메서드 1개를 포함합니다. 두 번째 클래스인 `StringTest`는 `Main`을 포함하는 데 사용됩니다.
 
-[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>설명
+
 이전 예제에서 private 필드(`name` 및 `age`)는 `Child` 클래스의 public 메서드를 통해서만 액세스할 수 있습니다. 예를 들어 다음과 같은 문을 사용하여 `Main` 메서드에서 자식의 이름을 출력할 수 없습니다.
 
 ```csharp
@@ -91,10 +94,12 @@ Console.Write(child1.name);   // Error
 마지막으로 기본 생성자(`child3`)를 사용하여 만들어진 개체의 경우 연령 필드는 기본적으로 0으로 초기화되었습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>참고 항목
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)
+
+[C# 참조](../../../csharp/language-reference/index.md)  
+[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+[C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+[참조 형식](../../../csharp/language-reference/keywords/reference-types.md)

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579459"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106254"
 ---
 # <a name="designing-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -134,7 +134,7 @@ public class Order : Entity, IAggregateRoot
 #### <a name="additional-resources"></a>추가 자료
 
 -   **Vaughn Vernon. 효과적인 집계 디자인 - 1부: 단일 집계 모델링**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_커뮤니티\_에세이\_집계\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon. 효과적인 집계 디자인 - 2부: 집계 연동하기**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
@@ -153,4 +153,5 @@ public class Order : Entity, IAggregateRoot
 
 
 >[!div class="step-by-step"]
-[이전] (ddd-oriented-microservice.md) [다음] (net-core-microservice-domain-model.md)
+[이전](ddd-oriented-microservice.md)
+[다음](net-core-microservice-domain-model.md)

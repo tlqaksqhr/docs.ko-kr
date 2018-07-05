@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592446"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106579"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -320,7 +320,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
 -   **이벤트 기반 메시징**
-    [*http://soapatterns.org/design\_패턴/이벤트\_기반\_메시징*](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
@@ -332,7 +332,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **최종 일관성**
-    [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Philip Brown. 바인딩된 컨텍스트 통합 전략**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
@@ -353,7 +353,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **CAP 원리**
-    [*https://en.wikipedia.org/wiki/CAP\_원리*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **CAP 원리란?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
@@ -367,15 +367,16 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Eric Brewer. CAP 12년 후: "규칙"이 변경되는 방식**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **외부(DTC) 트랜잭션에 참여**(MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **외부(DTC) 트랜잭션에 참여**(MSMQ)[*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure Service Bus. 조정된 메시징: 중복 검색**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **안정성 가이드**(RabbitMQ 설명서) [*https://www.rabbitmq.com/reliability.html\#소비자*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **안정성 가이드**(RabbitMQ 설명서)[*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[이전] (rabbitmq-event-bus-development-test-environment.md) [다음] (test-aspnet-core-services-web-apps.md)
+[이전](rabbitmq-event-bus-development-test-environment.md)
+[다음](test-aspnet-core-services-web-apps.md)

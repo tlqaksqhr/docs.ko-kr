@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579875"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948607"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 <a name="top"></a> 정규식은 정규식 엔진이 입력 텍스트에서 찾으려고 하는 패턴입니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문으로 구성됩니다.  간략하게 살펴보려면 [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)을 참조하세요.  
@@ -93,8 +93,8 @@ ms.locfileid: "33579875"
   
 |어설션|설명|무늬|일치 항목|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|일치 항목이 문자열 또는 줄의 시작 부분에서 시작해야 합니다.|`^\d{3}`|"901-333-"의<br /><br /> "901"|  
-|`$`|일치 항목이 문자열의 끝이나 줄 또는 문자열의 끝에 있는 `\n` 앞에 있어야 합니다.|`-\d{3}$`|"-901-333"의<br /><br /> "-333"|  
+|`^`|기본적으로 일치 항목은 문자열의 시작 부분에서 시작되어야 합니다. 다중 선에서는 줄의 시작 부분에서 시작되어야 합니다.|`^\d{3}`|"901-333-"의<br /><br /> "901"|  
+|`$`|기본적으로 일치 항목은 문자열의 끝부분 또는 문자열의 끝부분 `\n` 앞에서 발생해야 합니다. 다중 선에서는 줄의 끝부분 또는 줄의 끝 `\n` 앞에서 발생해야 합니다.|`-\d{3}$`|"-901-333"의<br /><br /> "-333"|  
 |`\A`|일치 항목이 문자열의 시작 부분에 있어야 합니다.|`\A\d{3}`|"901-333-"의<br /><br /> "901"|  
 |`\Z`|일치 항목이 문자열의 끝이나 문자열의 끝에 있는 `\n` 앞에 있어야 합니다.|`-\d{3}\Z`|"-901-333"의<br /><br /> "-333"|  
 |`\z`|일치 항목이 문자열의 끝에 있어야 합니다.|`-\d{3}\z`|"-901-333"의<br /><br /> "-333"|  

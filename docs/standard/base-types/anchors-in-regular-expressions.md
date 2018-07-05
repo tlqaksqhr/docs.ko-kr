@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578029"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948591"
 ---
 # <a name="anchors-in-regular-expressions"></a>정규식의 앵커
 <a name="top"></a> 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여 줍니다.  
   
 |앵커|설명|  
 |------------|-----------------|  
-|`^`|일치 항목이 문자열 또는 줄의 시작 부분에서 시작해야 합니다. 자세한 내용은 [문자열 또는 줄의 시작](#Start)을 참조하세요.|  
-|`$`|일치 항목이 문자열 또는 줄의 끝 부분이나 문자열 또는 줄의 끝에 있는 `\n` 앞에 있어야 합니다. 자세한 내용은 [문자열 또는 줄의 끝](#End)을 참조하세요.|  
+|`^`|기본적으로 일치 항목은 문자열의 시작 부분에서 발생해야 합니다. 다중 선에서는 줄의 시작 부분에서 발생해야 합니다. 자세한 내용은 [문자열 또는 줄의 시작](#Start)을 참조하세요.|  
+|`$`|기본적으로 일치 항목은 문자열의 끝부분 또는 문자열의 끝부분 `\n` 앞에서 발생해야 합니다. 다중 선에서는 줄의 끝부분 또는 줄의 끝 `\n` 앞에서 발생해야 합니다. 자세한 내용은 [문자열 또는 줄의 끝](#End)을 참조하세요.|  
 |`\A`|일치 항목이 문자열의 시작 부분에만 있어야 합니다(여러 줄 지원 없음). 자세한 내용은 [문자열의 시작만](#StartOnly)을 참조하세요.|  
 |`\Z`|일치 항목이 문자열의 끝이나 문자열의 끝에 있는 `\n` 앞에 있어야 합니다. 자세한 내용은 [문자열의 끝 또는 줄 바꿈 종료 전](#EndOrNOnly)을 참조하세요.|  
 |`\z`|일치 항목이 문자열의 끝 부분에만 있어야 합니다. 자세한 내용은 [문자열의 끝만](#EndOnly)을 참조하세요.|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578029"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>문자열 또는 줄의 시작: ^  
- `^` 앵커는 다음 패턴이 문자열의 첫 번째 문자 위치에서 시작하도록 지정합니다. `^` 기호를 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과 함께 사용하는 경우([정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md) 참조) 일치 항목이 각 줄의 시작 부분에 있어야 합니다.  
+ 기본적으로 `^` 앵커는 다음 패턴이 문자열의 첫 번째 문자 위치에서 시작하도록 지정합니다. `^` 기호를 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과 함께 사용하는 경우([정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md) 참조) 일치 항목이 각 줄의 시작 부분에 있어야 합니다.  
   
  다음 예제에서는 일부 전문 야구팀이 있던 기간(년)에 대한 정보를 추출하는 정규식에서 `^` 앵커를 사용합니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드의 오버로드 두 개를 호출합니다.  
   

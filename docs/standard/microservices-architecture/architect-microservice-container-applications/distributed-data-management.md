@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7d173133ab7c803c7ab48b39c50b02ee4f3b1721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578939"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106491"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>분산 데이터 관리를 위한 과제 및 해결 방법
 
@@ -84,10 +84,10 @@ ACID 방식 또는 2단계 커밋 트랜잭션은 마이크로 서비스 원칙�
 ## <a name="additional-resources"></a>추가 자료
 
 -   **CAP 원리**
-    [*https://en.wikipedia.org/wiki/CAP\_원리*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **최종 일관성**
-    [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **데이터 일관성 입문서**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
@@ -109,4 +109,5 @@ ACID 방식 또는 2단계 커밋 트랜잭션은 마이크로 서비스 원칙�
 
 
 >[!div class="step-by-step"]
-[이전] (logical-versus-physical-architecture.md) [다음] (identify-microservice-domain-model-boundaries.md)
+[이전](logical-versus-physical-architecture.md)
+[다음](identify-microservice-domain-model-boundaries.md)
