@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579771"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071866"
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
 <a name="top"></a> 역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장된 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579771"
 |`[-.\w]*`|하이픈, 마침표 또는 단어 문자가 0개 이상 일치하는 항목을 찾습니다.|  
 |`[0-9A-Z]`|일치하는 영숫자 문자를 찾습니다.|  
 |`([-.\w]*[0-9A-Z])*`|영숫자 문자로 이어지는 하이픈, 마침표 또는 단어 문자가 0개 이상 조합된 일치하는 항목을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
-|`@`|"@" 기호를 찾습니다.|  
+|`@`|"\@" 기호를 찾습니다.|  
   
  두 번째 정규식 패턴 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`은 긍정 lookbehind 어설션을 사용합니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579771"
 |`[0-9A-Z]`|일치하는 영숫자 문자를 찾습니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
 |`[-.\w]*`|하이픈, 마침표 또는 단어 문자가 0개 이상 포함된 일치하는 항목을 찾습니다.|  
 |`(?<=[0-9A-Z])`|마지막으로 일치한 문자를 다시 확인하고 영숫자인 경우 검색을 계속합니다. 영숫자 문자는 마침표, 하이픈 및 모든 단어 문자로 구성되는 집합의 하위 집합입니다.|  
-|`@`|"@" 기호를 찾습니다.|  
+|`@`|"\@" 기호를 찾습니다.|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>lookahead 어설션  
