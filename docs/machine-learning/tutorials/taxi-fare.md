@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314967"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948633"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>자습서: ML.NET을 사용하여 뉴욕 택시 요금 예측(회귀)
 
@@ -82,7 +82,7 @@ ms.locfileid: "36314967"
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
 1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *TaxiTrip.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
-1. 새 파일에 다음 `using` 문을 추가합니다.
+1. 새 파일에 다음 `using` 지시문을 추가합니다.
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ ms.locfileid: "36314967"
 
 ## <a name="define-data-and-model-paths"></a>데이터 및 모델 경로 정의
 
-*Program.cs* 파일로 돌아가 데이터 집합이 있는 파일에 대한 경로를 저장하고 모델을 저장할 3개의 전역 상수를 만듭니다.
+*Program.cs* 파일로 돌아가서 데이터 집합이 있는 파일 및 모델을 저장할 파일에 대한 경로를 저장하는 세 개의 필드를 추가합니다.
 
-* `_datapath`에는 모델을 학습시키는 데 사용되는 데이터 집합의 경로가 포함됩니다.
-* `_testdatapath`에는 모델을 평가하는 데 사용되는 데이터 집합의 경로가 포함됩니다.
-* `_modelpath`에는 학습된 모델이 저장되는 경로가 포함됩니다.
+* `_datapath`에는 모델을 학습하는 데 사용되는 데이터 집합이 있는 파일에 대한 경로가 포함됩니다.
+* `_testdatapath`에는 모델을 평가하는 데 사용되는 데이터 집합이 있는 파일에 대한 경로가 포함됩니다.
+* `_modelpath`에는 학습된 모델이 저장되는 파일에 대한 경로가 포함됩니다.
 
-`Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 경로를 지정합니다.
+`Main` 메서드 바로 위에 다음 코드를 추가하여 해당 경로를 지정합니다.
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+위의 코드를 컴파일하려면 *Program.cs* 파일의 맨 위에 있는 다음 `using` 지시문을 추가합니다.
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>학습 파이프라인 만들기
 
-*Program.cs* 파일 맨 위에 다음 추가 `using` 문을 추가합니다.
+*Program.cs* 파일 맨 위에 다음 추가 `using` 지시문을 추가합니다.
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>데이터 로드 및 변환
 
-학습 파이프 라인이 수행하는 첫 번째 단계는 학습 데이터 집합에서 데이터를 로드하는 것입니다. 이 경우 학습 데이터 집합은 `_datapath` 상수로 정의된 경로의 텍스트 파일에 저장됩니다. 이 파일에는 열 이름으로 된 헤더가 있으므로 데이터를 로드하는 동안 첫 번째 행을 무시해야 합니다. 파일의 열은 쉼표(“,”)로 구분됩니다. `Train` 메서드에 다음 코드를 추가합니다.
+학습 파이프 라인이 수행하는 첫 번째 단계는 학습 데이터 집합에서 데이터를 로드하는 것입니다. 이 경우에 학습 데이터 집합은 `_datapath` 필드로 정의된 경로로 텍스트 파일에 저장됩니다. 이 파일에는 열 이름으로 된 헤더가 있으므로 데이터를 로드하는 동안 첫 번째 행을 무시해야 합니다. 파일의 열은 쉼표(“,”)로 구분됩니다. `Train` 메서드에 다음 코드를 추가합니다.
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ pipeline.Add(new FastTreeRegressor());
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-또한 파일의 맨 위에서 다음 `using` 문도 추가해야 합니다.
+또한 파일의 맨 위에 있는 다음 `using` 지시문도 추가해야 합니다.
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
