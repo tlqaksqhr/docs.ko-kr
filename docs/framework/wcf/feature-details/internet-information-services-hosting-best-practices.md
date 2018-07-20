@@ -33,7 +33,7 @@ ms.locfileid: "33495764"
  중간 계층 시나리오는 또한 `svcutil /a` 옵션에서 생성된 비동기 API를 사용하여 성능을 향상시킵니다. `/a` 옵션을 사용 하면은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성할 `BeginXXX/EndXXX` 에서 원격 서비스에 대 한 실행 시간이 긴 호출 수 있는 각 서비스 작업에 대 한 메서드 백그라운드 스레드입니다.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>멀티홈 또는 여러 개의 이름이 지정된 시나리오의 WCF  
- 컴퓨터 집합이 공용 외부 이름을 공유 하는 IIS 웹 팜 내에서 WCF 서비스를 배포할 수 있습니다 (같은 http://www.contoso.com) 다른 호스트 이름으로 개별적으로 해결 되지만 (예를 들어 http://www.contoso.com 서로 다른 컴퓨터에 트래픽을 명명 된 http://machine1.internal.contoso.com 및 http://machine2.internal.contoso.com)합니다. 이 배포 시나리오는 WCF에서 완벽 하 게 지원 하지만 서비스의 메타 데이터 (웹 서비스 기술 언어)에 올바른 (외부) 호스트 이름을 표시 하려면 WCF 서비스를 호스팅하는 IIS 웹 사이트의 특수 한 구성이 있어야 합니다.  
+ 컴퓨터 집합이 공용 외부 이름을 공유 하는 IIS 웹 팜 내에서 WCF 서비스를 배포할 수 있습니다 (같은 http://www.contoso.com) 다른 호스트 이름으로 개별적으로 해결 되지만 (예를 들어 http://www.contoso.com 서로 다른 컴퓨터에 트래픽을 명명 된 http://machine1.internal.contoso.com 및 http://machine2.internal.contoso.com) 합니다. 이 배포 시나리오는 WCF에서 완벽 하 게 지원 하지만 서비스의 메타 데이터 (웹 서비스 기술 언어)에 올바른 (외부) 호스트 이름을 표시 하려면 WCF 서비스를 호스팅하는 IIS 웹 사이트의 특수 한 구성이 있어야 합니다.  
   
  올바른 호스트 이름을 생성 하는 WCF 서비스 메타 데이터에 표시 하려면 명시적 호스트 이름을 사용 하도록 WCF 서비스를 호스팅하는 IIS 웹 사이트에 대 한 기본 id를 구성 합니다. 예를 들어 www.contoso.com 팜 내 상주 하는 컴퓨터의 IIS 사이트 바인딩을 사용할지 * HTTP에 대 한 경우 및 \*: 443:www.contoso.com HTTPS에 대 한 합니다.  
   
