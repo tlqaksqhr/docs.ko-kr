@@ -3,20 +3,20 @@ title: '샘플 XML 파일: Customers 및 Orders(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
 ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647747"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244059"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="963d3-102">샘플 XML 파일: Customers 및 Orders(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="963d3-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
-<span data-ttu-id="963d3-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="963d3-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="963d3-104">이 파일에는 고객과 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="963d3-104">This file contains customers and orders.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="0b8e6-102">샘플 XML 파일: Customers 및 Orders(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0b8e6-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
+<span data-ttu-id="0b8e6-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="0b8e6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="0b8e6-104">이 파일에는 고객과 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b8e6-104">This file contains customers and orders.</span></span>  
   
- <span data-ttu-id="963d3-105">[샘플 XSD 파일: Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) 항목에는 이 문서의 유효성을 검사하는 데 사용할 수 있는 XSD가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="963d3-105">The topic [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="963d3-106">이 항목에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="963d3-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+ <span data-ttu-id="0b8e6-105">[샘플 XSD 파일: Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) 항목에는 이 문서의 유효성을 검사하는 데 사용할 수 있는 XSD가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b8e6-105">The topic [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="0b8e6-106">이 항목에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0b8e6-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="963d3-107">사용 하 여이 관계를 활용 하는 LINQ 쿼리 작성에 대 한 예제는 `Join` 절 참조 [하는 방법: 두 컬렉션 조인 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="963d3-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="0b8e6-107">사용 하 여이 관계를 활용 하는 LINQ 쿼리 작성의 예는 `Join` 절을 참조 하세요 [방법: 두 컬렉션 조인 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0b8e6-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxml"></a><span data-ttu-id="963d3-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="963d3-108">CustomersOrders.xml</span></span>  
+## <a name="customersordersxml"></a><span data-ttu-id="0b8e6-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="0b8e6-108">CustomersOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -434,5 +434,5 @@ ms.locfileid: "33647747"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="963d3-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="963d3-109">See Also</span></span>  
- [<span data-ttu-id="963d3-110">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="963d3-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="0b8e6-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0b8e6-109">See Also</span></span>  
+ [<span data-ttu-id="0b8e6-110">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0b8e6-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

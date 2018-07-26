@@ -1,18 +1,18 @@
 ---
-title: 'Namespace1의 샘플 XML 파일: 숫자 데이터'
+title: '1의 샘플 XML 파일: 숫자 데이터'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
 ms.openlocfilehash: 71ff5229d4f2342880bdf50f288355a676b78722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644734"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244311"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="75e64-102">샘플 XML 파일: 네임스페이스의 숫자 데이터</span><span class="sxs-lookup"><span data-stu-id="75e64-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="75e64-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="75e64-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="75e64-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75e64-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="75e64-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75e64-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="cc565-102">샘플 XML 파일: 네임스페이스의 숫자 데이터</span><span class="sxs-lookup"><span data-stu-id="cc565-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="cc565-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cc565-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cc565-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc565-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="cc565-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc565-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="75e64-106">데이터</span><span class="sxs-lookup"><span data-stu-id="75e64-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="cc565-106">데이터</span><span class="sxs-lookup"><span data-stu-id="cc565-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -55,5 +55,5 @@ ms.locfileid: "33644734"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="75e64-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="75e64-107">See Also</span></span>  
- [<span data-ttu-id="75e64-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="75e64-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cc565-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cc565-107">See Also</span></span>  
+ [<span data-ttu-id="cc565-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cc565-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

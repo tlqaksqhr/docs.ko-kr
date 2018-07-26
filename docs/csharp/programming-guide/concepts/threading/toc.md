@@ -3,6 +3,5 @@
 ## [다중 스레드 프로시저의 매개 변수 및 반환 값](parameters-and-return-values-for-multithreaded-procedures.md)
 ## [연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩](walkthrough-multithreading-with-the-backgroundworker-component.md)
 ## [스레드 동기화](thread-synchronization.md)
-## [스레드 타이머](thread-timers.md)
 ## [스레드 풀링](thread-pooling.md)
 ### [방법: 스레드 풀 사용](how-to-use-a-thread-pool.md)
