@@ -5,11 +5,11 @@ helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
 ms.openlocfilehash: b8c44ebbdc89d72398c3380d708b45d0b7dfdad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324176"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198460"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화(C# 프로그래밍 가이드)
 <xref:System.Collections.Generic.Dictionary`2>에는 키/값 쌍의 컬렉션이 있습니다. 해당 <xref:System.Collections.Generic.Dictionary`2.Add*> 메서드는 두 개의 매개 변수를 사용하며, 하나는 키에, 다른 하나는 값에 사용됩니다. <xref:System.Collections.Generic.Dictionary`2> 또는 여러 매개 변수를 사용하는 `Add` 메서드를 초기화하려면 다음 예제와 같이 각 매개 변수 집합을 중괄호로 묶습니다.  

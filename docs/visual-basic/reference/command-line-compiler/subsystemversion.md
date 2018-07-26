@@ -1,5 +1,5 @@
 ---
-title: -/subsystemversion (Visual Basic)
+title: -subsystemversion (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
@@ -9,13 +9,13 @@ ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 22eb8aa1cd86dba4a1a65edf31a3b18df7085a33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654452"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245482"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-/subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.  
   
 > [!NOTE]

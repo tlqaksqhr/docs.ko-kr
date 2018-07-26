@@ -3,11 +3,11 @@ title: '연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644188"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245477"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의 형식 포함
 강력한 이름의 관리되는 어셈블리에서 형식 정보를 포함하는 경우 응용 프로그램에서 유형을 느슨하게 연결하여 버전 독립성을 확보할 수 있습니다. 즉, 각 버전에 대해 컴파일하지 않고도 관리되는 라이브러리의 여러 버전에서 형식을 사용하도록 프로그램을 작성할 수 있습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "33644188"
   
 -   포함된 인터페이스는 `ComImport` 특성 및 `Guid` 특성(그리고 고유한 GUID)으로 주석이 추가됩니다.  
   
--   어셈블리는 `ImportedFromTypeLib` 특성이나 `PrimaryInteropAssembly` 특성, 그리고 어셈블리 수준의 `Guid` 특성으로 주석이 추가됩니다. (기본적으로 Visual Basic 프로젝트 템플릿에 포함 어셈블리 수준 `Guid` 특성입니다.)  
+-   어셈블리는 `ImportedFromTypeLib` 특성이나 `PrimaryInteropAssembly` 특성, 그리고 어셈블리 수준의 `Guid` 특성으로 주석이 추가됩니다. (기본적으로 Visual Basic 프로젝트 템플릿 포함 어셈블리 수준의 `Guid` 특성입니다.)  
   
  포함할 수 있는 공용 인터페이스를 지정한 후에 이러한 인터페이스를 구현하는 런타임 클래스를 만들 수 있습니다. 그런 다음 클라이언트 프로그램은 공용 인터페이스가 포함된 어셈블리를 참조하고 참조의 `Embed Interop Types` 속성을 `True`로 설정하여 디자인 타임에 해당 인터페이스의 형식 정보를 포함할 수 있습니다. 이는 명령줄 컴파일러를 사용하고 `/link` 컴파일러 옵션을 사용하여 어셈블리를 참조하는 것과 같습니다. 그러면 클라이언트 프로그램은 해당 인터페이스로 형식이 지정된 런타임 개체의 인스턴스를 로드할 수 있습니다. 강력한 이름의 런타임 어셈블리의 새 버전을 만들면 업데이트된 런타임 어셈블리로 클라이언트 프로그램을 다시 컴파일할 필요가 없습니다. 대신, 클라이언트 프로그램은 공용 인터페이스에 대해 포함된 형식 정보를 통해 사용 가능한 런타임 어셈블리 버전을 계속 사용합니다.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "33644188"
   
 7.  **도구** 메뉴에서 **GUID 만들기**를 클릭합니다. **GUID 만들기** 대화 상자에서 **레지스트리 형식**과 **복사**를 차례로 클릭합니다. **끝내기**를 클릭합니다.  
   
-8.  `Guid` 특성에서 샘플 GUID를 삭제하고, **GUID 만들기** 대화 상자에서 복사한 GUID를 붙여 넣습니다. 중괄호 제거 ({})에서 복사 된 GUID입니다.  
+8.  `Guid` 특성에서 샘플 GUID를 삭제하고, **GUID 만들기** 대화 상자에서 복사한 GUID를 붙여 넣습니다. 복사된 GUID에서 중괄호({})를 제거합니다.  
   
 9. **프로젝트** 메뉴에서 **모든 파일 표시**를 클릭합니다.  
   
-10. **솔루션 탐색기**를 확장 하 고는 **My Project** 폴더입니다. AssemblyInfo.vb를 두 번 클릭 합니다. 파일에 다음 특성을 추가합니다.  
+10. **솔루션 탐색기**를 확장 합니다 **My Project** 폴더입니다. AssemblyInfo.vb를 두 번 클릭 합니다. 파일에 다음 특성을 추가합니다.  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  

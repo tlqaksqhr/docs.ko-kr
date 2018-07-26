@@ -8,11 +8,11 @@ helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
 ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269572"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243628"
 ---
 # <a name="protected-c-reference"></a>protected(C# 참조)
 `protected` 키워드는 멤버 액세스 한정자입니다. 

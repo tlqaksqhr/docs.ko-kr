@@ -3,11 +3,11 @@ title: private protected (C# Reference)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457253"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961134"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# Reference)
 `private protected` 키워드 조합은 멤버 액세스 한정자입니다. private protected 멤버는 포함하는 클래스에서 파생된 형식으로 액세스할 수 있지만 포함하는 어셈블리 내에서만 가능합니다. `private protected` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 

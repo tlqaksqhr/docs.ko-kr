@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955968"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961497"
 ---
 # <a name="event-c-reference"></a>event(C# 참조)
 `event` 키워드는 게시자 클래스에서 이벤트를 선언하는 데 사용됩니다.  

@@ -11,22 +11,22 @@ ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dd00fca2f2b24386773ac4868763cfb868e6b37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650909"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244766"
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 명령줄 컴파일러
 
-Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일하는 대신을 제공 합니다. 이 섹션에는 Visual Basic 컴파일러 옵션에 대 한 설명을 포함합니다.
+Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE) 내에서 프로그램을 컴파일하는 대신을 제공 합니다. 이 섹션에서는 Visual Basic 컴파일러 옵션에 대해 설명 합니다.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>단원 내용
 
 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Visual Studio IDE에서 프로그램을 컴파일하는 대신으로 제공 되는 Visual Basic 명령줄 컴파일러에 설명 합니다.
+Visual Studio IDE 내에서 프로그램을 컴파일하는 대신 제공 되는 Visual Basic 명령줄 컴파일러를 설명 합니다.
 
 [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 컴파일러 옵션 사전순 목록

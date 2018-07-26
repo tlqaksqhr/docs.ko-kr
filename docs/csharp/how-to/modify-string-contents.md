@@ -4,11 +4,11 @@ ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: 99102fe90f5f675235e2993b7dd99f59214862d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217879"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243751"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>방법: C#에서 문자열 내용 수정 #
 

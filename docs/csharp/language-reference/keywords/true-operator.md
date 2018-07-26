@@ -5,11 +5,11 @@ helpviewer_keywords:
 - true operator [C#]
 ms.assetid: acaba817-5da5-4364-b3b2-2e5c75ec1839
 ms.openlocfilehash: 71f522b3860f7461f5c52dd77bb424f7ba0f9bf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275082"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960117"
 ---
 # <a name="true-operator-c-reference"></a>true 연산자(C# 참조)
 [bool](../../../csharp/language-reference/keywords/bool.md) 값 `true`를 반환하여 피연산자가 true임을 나타내고, true가 아니면 `false`를 반환합니다.  

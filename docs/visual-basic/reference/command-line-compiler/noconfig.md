@@ -7,14 +7,14 @@ helpviewer_keywords:
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
 ms.openlocfilehash: bce2d98a8915e80cdecd7b67029b0c872cf70140
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650844"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959581"
 ---
 # <a name="-noconfig"></a>-noconfig
-지정 하는 컴파일러 참조 하지 않아야 하면 자동으로 자주 사용 되는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 또는 가져오기는 `System` 및 `Microsoft.VisualBasic` 네임 스페이스입니다.  
+컴파일러는 자동으로 참조 하지는 일반적으로 사용 되는 지정 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 또는 가져오기 합니다 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -23,17 +23,17 @@ ms.locfileid: "33650844"
 ```  
   
 ## <a name="remarks"></a>설명  
- `-noconfig` 옵션을 사용 하 여 Vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.rsp 파일을 컴파일하지 않도록 컴파일러 명령입니다. Vbc.rsp 파일을 자주 사용 되는 참조 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 및 가져오기는 `System` 및 `Microsoft.VisualBasic` 네임 스페이스입니다. 컴파일러는 암시적으로 System.dll 어셈블리를 참조 하지 않는 한는 `-nostdlib` 옵션을 지정 합니다. `-nostdlib` Vbc.rsp로 컴파일하거나 System.dll 어셈블리를 자동으로 참조 하지 않도록 컴파일러 옵션을 명령입니다.  
+ `-noconfig` 옵션 하 Vbc.exe 파일과 동일한 디렉터리에 위치한 Vbc.rsp 파일을 컴파일하지 않도록 컴파일러에 지시 합니다. Vbc.rsp 파일 참조는 일반적으로 사용 되는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 및 가져오기는 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다. 컴파일러는 암시적으로 System.dll 어셈블리를 참조 하지 않는 한는 `-nostdlib` 옵션을 지정 합니다. `-nostdlib` 옵션은 Vbc.rsp로 컴파일하지 또는 System.dll 어셈블리를 자동으로 참조 하지 않도록 컴파일러 지시 합니다.  
   
 > [!NOTE]
 >  Mscorlib.dll 및 Microsoft.VisualBasic.dll 어셈블리는 항상 참조 합니다.  
   
- 모든 Vbc.exe 컴파일에 포함 되어야 하는 추가 컴파일러 옵션을 지정 하려면 Vbc.rsp 파일을 수정할 수 있습니다 (지정 하는 경우를 제외 하 고는 `-noconfig` 옵션). 자세한 내용은 [@ (지시 파일 지정)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)을 참조하세요.  
+ Vbc.exe 컴파일할 때마다 포함 되어야 하는 추가 컴파일러 옵션을 지정 하려면 Vbc.rsp 파일을 수정할 수 있습니다 (지정 하는 경우를 제외 하 고는 `-noconfig` 옵션). 자세한 내용은 [@ (지시 파일 지정)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)을 참조하세요.  
   
- 컴파일러에 전달 된 옵션 처리는 `vbc` 마지막 명령입니다. 따라서 명령줄에 모든 옵션은 Vbc.rsp 파일에 동일한 옵션의 설정을 재정의합니다.  
+ 컴파일러에 전달 된 옵션을 처리 합니다 `vbc` 마지막 명령입니다. 따라서 명령줄의 모든 옵션은 Vbc.rsp 파일에 동일한 옵션의 설정을 재정의합니다.  
   
 > [!NOTE]
->  `-noconfig` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다.  
+>  `-noconfig` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 있는 명령줄에서 컴파일할 경우에 사용할 수 있는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)  

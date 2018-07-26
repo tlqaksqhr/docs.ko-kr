@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
 ms.openlocfilehash: b66cfacc2203e0e529c19b5c566abad6c676f149
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273970"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245572"
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 선언 한정자로 사용되는 `new` 키워드는 기본 클래스에서 상속된 멤버를 명시적으로 숨깁니다. 상속된 멤버를 숨기면 파생 버전의 멤버로 기본 클래스 버전의 멤버를 대신하게 됩니다. `new` 한정자를 사용하지 않고 멤버를 숨길 수도 있지만 컴파일러 경고가 발생합니다. `new`를 사용하여 멤버를 명시적으로 숨기면 이 경고가 발생하지 않습니다.  

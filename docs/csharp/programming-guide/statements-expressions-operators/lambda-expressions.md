@@ -8,17 +8,18 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340647"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937051"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
-람다 식은 [대리자](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 또는 [식 트리](../../../csharp/programming-guide/delegates/using-delegates.md) 형식을 만드는 데 사용할 수 있는 [익명 함수](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 입니다. 람다 식을 사용하여 인수로 전달되거나 함수 호출 값으로 반환되는 로컬 함수를 쓸 수 있습니다. 람다 식은 LINQ 쿼리 식을 작성하는 데 특히 유용합니다.  
+
+람다 식은 [대리자](anonymous-methods.md) 또는 [식 트리](../delegates/using-delegates.md) 형식을 만드는 데 사용할 수 있는 [익명 함수](../concepts/expression-trees/index.md) 입니다. 람다 식을 사용하여 인수로 전달되거나 함수 호출 값으로 반환되는 로컬 함수를 쓸 수 있습니다. 람다 식은 LINQ 쿼리 식을 작성하는 데 특히 유용합니다.
   
- 람다 식을 만들려면 람다 연산자 [=>](../../../csharp/language-reference/operators/lambda-operator.md)왼쪽에 입력 매개 변수를 지정하고(있는 경우) 다른 쪽에 식이나 문 블록을 삽입합니다. 예를 들어 람다 식 `x => x * x` 는 이름이 `x` 인 매개 변수를 지정하고 `x` 제곱 값을 반환합니다. 다음 예제와 같이 대리자 형식에 이 식을 할당할 수도 있습니다.  
+람다 식을 만들려면 람다 연산자 [=>](../../../csharp/language-reference/operators/lambda-operator.md)왼쪽에 입력 매개 변수를 지정하고(있는 경우) 다른 쪽에 식이나 문 블록을 삽입합니다. 예를 들어 람다 식 `x => x * x` 는 이름이 `x` 인 매개 변수를 지정하고 `x` 제곱 값을 반환합니다. 다음 예제와 같이 대리자 형식에 이 식을 할당할 수도 있습니다.  
   
 ```csharp  
 delegate int del(int i);  
@@ -58,8 +59,9 @@ namespace ConsoleApplication1
   
  무명 메서드에 적용되는 모든 제한은 람다 식에도 적용됩니다. 자세한 내용은 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 참조하세요.  
   
-## <a name="expression-lambdas"></a>식 람다  
- => 연산자의 오른쪽에 식이 있는 람다 식을 *식 람다*라고 합니다. 식 람다는 [식 트리](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.  
+## <a name="expression-lambdas"></a>식 람다
+
+ => 연산자의 오른쪽에 식이 있는 람다 식을 *식 람다*라고 합니다. 식 람다는 [식 트리](../concepts/expression-trees/index.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
   
 ```csharp
 (input-parameters) => expression

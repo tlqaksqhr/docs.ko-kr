@@ -6,11 +6,11 @@ helpviewer_keywords:
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
 ms.openlocfilehash: 95ccbe3ab5bf2d326e1154af0b169972a24f7e38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269616"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245088"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out(제네릭 한정자)(C# 참조)
 제네릭 형식 매개 변수에서 `out` 키워드는 형식 매개 변수를 공변(covariant)으로 지정합니다. 제네릭 인터페이스 및 대리자에서 `out` 키워드를 사용할 수 있습니다.  

@@ -1,6 +1,6 @@
 ---
 title: 여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578224"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245500"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
-.NET Framework를 사용할 수 있습니다 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식을 여러 플랫폼에서 클래스 라이브러리의 리소스에 액세스할 수 있도록 합니다. 이 프로젝트 형식은 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 사용할 수 있으며 .NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.  
+.NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식에 여러 플랫폼에서 클래스 라이브러리의 리소스에에서 액세스할 수 있는지 확인 합니다. 이 프로젝트 형식은 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 사용할 수 있으며 .NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트는 응용 프로그램에서 사용할 수 있는 <xref:System.Resources> 네임스페이스에서 형식의 매우 제한된 하위 집합만 만들지만 <xref:System.Resources.ResourceManager> 클래스를 사용하여 리소스를 검색할 수 있습니다. 그러나 Visual Studio를 사용하여 응용 프로그램을 만들려면 <xref:System.Resources.ResourceManager> 클래스를 직접 사용하는 대신에 Visual Studio가 생성한 강력한 형식의 래퍼를 사용하여야 합니다.  
   
- Visual Studio에서 강력한 형식의 래퍼를 만들려면, 기본 리소스 파일의 설정 **액세스 한정자** 를 Visual Studio 리소스 디자이너 **공용**합니다. 이를 통해 강력한 형식의 ResourceManager 래퍼를 포함하는 [resourceFileName].designer.cs 또는 [resourceFileName].designer.vb 파일을 만듭니다. 강력한 형식의 리소스 래퍼를 사용 하는 방법에 대 한 자세한 내용은의 "생성 하는 강력한 형식의 리소스 클래스" 섹션을 참조 하십시오.는 [Resgen.exe (리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 항목입니다.  
+ Visual Studio를 강력한 형식의 래퍼를 만들려면 주 리소스 파일의 설정 **액세스 한정자** Visual Studio 리소스 디자이너에서 **공용**합니다. 이를 통해 강력한 형식의 ResourceManager 래퍼를 포함하는 [resourceFileName].designer.cs 또는 [resourceFileName].designer.vb 파일을 만듭니다. 강력한 형식의 리소스 래퍼를 사용 하는 방법에 대 한 자세한 내용은의 "강력한 형식의 리소스 클래스 생성" 섹션을 참조 합니다 [Resgen.exe (리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 항목입니다.  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]의 리소스 관리자  
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에서 리소스에 대한 모든 액세스는 <xref:System.Resources.ResourceManager> 클래스에서 처리됩니다. <xref:System.Resources> 및 <xref:System.Resources.ResourceReader> 같은 <xref:System.Resources.ResourceSet> 네임스페이스의 형식은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에서 액세스할 수 없기 때문에 리소스 액세스에 사용할 수 없습니다.  
@@ -65,7 +67,7 @@ ms.locfileid: "33578224"
 |NameLength|25|  
 |제목|직원 데이터베이스|  
   
- 다음 코드 정의 `UILibrary` 라는 리소스 관리자 래퍼를 사용 하는 클래스 `resources` Visual Studio에서 생성 된 때는 **액세스 한정자** 파일에 변경 된 **공용** . UILibrary 클래스는 필요에 따라 문자열 데이터를 구문 분석합니다. . 클래스는 `MyCompany.Employees` 네임스페이스에 있습니다.  
+ 다음 코드는 정의 `UILibrary` 라는 리소스 관리자 래퍼를 사용 하는 클래스 `resources` Visual Studio에서 생성 된 때를 **액세스 한정자** 파일에 변경 된 **공개** . UILibrary 클래스는 필요에 따라 문자열 데이터를 구문 분석합니다. . 클래스는 `MyCompany.Employees` 네임스페이스에 있습니다.  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
@@ -80,7 +82,7 @@ ms.locfileid: "33578224"
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>예제: 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 다음의 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 예제에는 프랑스어(프랑스) 및 영어(미국) 문화권에 대한 리소스가 포함됩니다. 영어 (미국) 문화권은 응용 프로그램의 기본 문화권입니다. 해당 리소스의 표에 표시 됩니다는 [이전 섹션](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)합니다. 프랑스어(프랑스) 문화권의 리소스 이름은 LibResources.fr-FR.resx라고 하며 다음 표에 나열된 문자열 리소스로 구성됩니다. `UILibrary` 클래스의 소스 코드는 이전 단원에 나와 있는 것과 동일합니다.  
+ 다음의 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 예제에는 프랑스어(프랑스) 및 영어(미국) 문화권에 대한 리소스가 포함됩니다. 영어 (미국) 문화권은 앱의 기본 문화권; 해당 리소스의 표에 표시 됩니다는 [이전 섹션](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)합니다. 프랑스어(프랑스) 문화권의 리소스 이름은 LibResources.fr-FR.resx라고 하며 다음 표에 나열된 문자열 리소스로 구성됩니다. `UILibrary` 클래스의 소스 코드는 이전 단원에 나와 있는 것과 동일합니다.  
   
 |리소스 이름|리소스 값|  
 |-------------------|--------------------|  

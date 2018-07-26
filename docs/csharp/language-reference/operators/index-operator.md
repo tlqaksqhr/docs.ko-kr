@@ -10,11 +10,11 @@ helpviewer_keywords:
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
 ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286031"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961447"
 ---
 # <a name="-operator-c-reference"></a>[] 연산자(C# 참조)
 대괄호(`[]`)는 배열, 인덱서 및 특성에 사용됩니다. 포인터에 사용할 수도 있습니다.  

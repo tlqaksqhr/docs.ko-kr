@@ -8,11 +8,11 @@ helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
 ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171865"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960809"
 ---
 # <a name="private-c-reference"></a>private(C# 참조)
 `private` 키워드는 멤버 액세스 한정자입니다. 

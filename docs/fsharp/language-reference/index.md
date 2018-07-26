@@ -1,17 +1,17 @@
 ---
 title: F# 언어 참조
-description: '언어 토큰, 개념, 형식, 식 및 구문 컴파일러 지원 항목에 대 한이 참조에서 F # 언어 기능 정보를 찾습니다.'
+description: '언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 항목에 대 한이 참조에서 F # 언어 기능 정보를 찾아보십시오.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566693"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937087"
 ---
 # <a name="f-language-reference"></a>F# 언어 참조
 
-이 섹션은 F # 언어,.NET을 대상으로 하는 다중 패러다임 프로그래밍 언어에 대 한 참조입니다. F# 언어는 함수형, 개체 지향 그리고 명령형의 프로그래밍 모델을 지원합니다.
+이 섹션은 F # 언어에서.NET을 대상으로 하는 다중 패러다임 프로그래밍 언어에 대 한 참조입니다. F# 언어는 함수형, 개체 지향 그리고 명령형의 프로그래밍 모델을 지원합니다.
 
 
 ## <a name="f-tokens"></a>F# 토큰
@@ -63,7 +63,7 @@ ms.locfileid: "33566693"
 |제목|설명|
 |-----|-----------|
 |[값](values/index.md)|특정 형식을 가진 변경 불가능한 수량인 값에 대해 설명합니다. 값은 정수 또는 부동 소수점 숫자, 문자 또는 텍스트, 목록, 시퀀스, 배열, 튜플, 구분된 공용 구조체, 레코드, 클래스 형식 또는 함수 값이 될 수 있습니다.|
-|[기본 형식](primitive-types.md)|기본 F# 언어에 사용되는 기본 형식에 대해 설명합니다. 또한 각 유형의 해당 .NET 형식과 최소 및 최대값을 제공합니다.|
+|[기본 형식](basic-types.md)|F # 언어에서 사용 되는 기본 기본 형식을 설명 합니다. 또한 각 유형의 해당 .NET 형식과 최소 및 최대값을 제공합니다.|
 |[단위 형식](unit-type.md)|특정 값이 없음을 나타내는 형식인 `unit` 형식에 대해 설명합니다. `unit` 형식은 다른 값이 없거나 필요하지 않을 때 표시자 역할을 하는 단일 값만 포함합니다.|
 |[문자열](strings.md)|F#의 문자열에 대해 설명합니다. `string` 형식은 유니코드 문자 시퀀스로 변경할 수 없는 텍스트를 나타냅니다. `string`은 .NET Framework에서 `System.String`의 별칭입니다.|
 |[튜플](tuples.md)|가능한 여러 형식의 명명되지는 않았지만 순서가 지정된 값에 대한 그룹화인 튜플에 대해 설명합니다.|

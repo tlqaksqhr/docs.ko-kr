@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
 ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312094"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245722"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 *클래스*는 기타 형식, 메서드 및 이벤트의 변수를 그룹화하여 자체 사용자 지정 형식을 만들 수 있는 구문입니다. 클래스는 청사진과 비슷합니다. 클래스는 형식의 데이터 및 동작을 정의합니다. 클래스가 정적으로 선언되지 않으면 클라이언트 코드는 클래스의 ‘인스턴스’를 만들 수 있습니다. 이러한 인스턴스는 변수에 할당된 ‘개체’입니다. 클래스의 인스턴스는 모든 클래스에 대한 참조가 범위를 벗어날 때까지 메모리에 남습니다. 이때 CLR는 변수를 가비지 수집에 적격한 것으로 표시합니다. 클래스가 [정적](../../../csharp/language-reference/keywords/static.md)으로 선언되면 인스턴스를 만들 수 없고 클라이언트 코드는 클래스 자체를 통해서만 클래스에 액세스할 수 있습니다. 자세한 내용은 [static 클래스 및 static 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  

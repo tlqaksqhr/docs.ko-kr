@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
 ms.openlocfilehash: 2ba3c574897ae5f1ec66e3810e23f0af74bd8872
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268923"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243949"
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 개체를 만들고 생성자를 호출하는 데 사용됩니다. 예:  

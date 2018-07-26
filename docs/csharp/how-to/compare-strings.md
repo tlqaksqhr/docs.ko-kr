@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218110"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961308"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C#에서 문자열을 비교하는 방법 #
 

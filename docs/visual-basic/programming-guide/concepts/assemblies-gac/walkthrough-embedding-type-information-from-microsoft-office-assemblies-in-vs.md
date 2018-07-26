@@ -3,11 +3,11 @@ title: '연습: Visual Studio (Visual Basic)에서 Microsoft Office 어셈블리
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643824"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244055"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 Microsoft Office 어셈블리의 형식 정보 포함
 COM 개체를 참조하는 응용 프로그램에 형식 정보를 포함하면 PIA(Primary Interop Assembly)가 필요하지 않게 됩니다. 또한 포함된 형식 정보를 사용하면 응용 프로그램의 버전 독립성을 구현할 수 있습니다. 즉, 각 버전에 대해 특정 PIA를 요구하지 않고 COM 라이브러리의 여러 버전에서 형식을 사용하도록 프로그램을 작성할 수 있습니다. 이는 Microsoft Office 라이브러리의 개체를 사용하는 응용 프로그램의 일반적인 시나리오입니다. 형식 정보를 포함하면 각 Microsoft Office 버전용 프로그램 또는 PIA를 다시 배포하지 않고도 동일한 프로그램 빌드를 서로 다른 컴퓨터에 있는 다른 버전의 Microsoft Office에서 작동할 수 있습니다.  
@@ -29,7 +29,7 @@ COM 개체를 참조하는 응용 프로그램에 형식 정보를 포함하면 
   
 3.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **콘솔 응용 프로그램**을 선택합니다. **이름** 상자에 `CreateExcelWorkbook`을 입력하고 **확인** 단추를 선택합니다. 새 프로젝트가 만들어집니다.  
   
-4.  CreateExcelWorkbook 프로젝트에 대 한 바로 가기 메뉴를 연 다음 선택 **속성**합니다. 선택 된 **참조** 탭 합니다. **추가** 단추를 선택합니다.  
+4.  CreateExcelWorkbook 프로젝트의 바로 가기 메뉴를 열고 선택한 **속성**합니다. 선택 된 **참조가** 탭 합니다. **추가** 단추를 선택합니다.  
   
 5.  **.NET** 탭에서 `Microsoft.Office.Interop.Excel`의 최신 버전을 선택합니다. 예를 들어 **Microsoft.Office.Interop.Excel 14.0.0.0**입니다. **확인** 단추를 선택합니다.  
   
