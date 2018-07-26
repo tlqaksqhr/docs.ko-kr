@@ -2,12 +2,12 @@
 title: 스레딩(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: 6f7290b611d8314391d66397bd5f0f43928b8338
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd1530a2b03c01b0a1cba0ce3ed4e18f2bf29046
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651867"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874835"
 ---
 # <a name="threading-visual-basic"></a>스레딩(Visual Basic)
 스레딩을 사용하면 Visual Basic 프로그램에서 동시 처리를 수행할 수 있으므로 한 번에 여러 작업을 진행할 수 있습니다. 예를 들어 스레딩을 사용하여 사용자의 입력을 모니터링하고, 백그라운드 작업을 수행하고, 동시 입력 스트림을 처리할 수 있습니다.  
@@ -41,7 +41,6 @@ ms.locfileid: "33651867"
 |[다중 스레드 프로시저의 매개 변수 및 반환 값(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|다중 스레드 응용 프로그램을 사용하여 매개 변수를 전달하고 반환하는 방법을 설명합니다.|  
 |[연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|간단한 다중 스레드 응용 프로그램을 만드는 방법을 보여 줍니다.|  
 |[스레드 동기화(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|스레드 조작을 제어하는 방법을 설명합니다.|  
-|[스레드 타이머(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|일정한 간격으로 별도의 스레드에서 프로시저를 실행하는 방법을 설명합니다.|  
 |[스레드 풀링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|시스템에서 관리하는 작업자 스레드 풀을 사용하는 방법을 설명합니다.|  
 |[방법: 스레드 풀 사용(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|스레드 풀에서 여러 스레드의 동기화된 사용을 보여 줍니다.|  
 |[스레딩](../../../../standard/threading/index.md)|.NET Framework에서 스레딩을 구현하는 방법을 설명합니다.|

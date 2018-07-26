@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aea23daff28b50678b9fa7902857fc302494c4a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62d9213e58aaabd0b4001d5c6a7fd6fd375eba2e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387733"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874860"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>방법: 형식 라이브러리에서 Interop 어셈블리 생성
 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)는 COM 형식 라이브러리에 포함된 coclass 및 인터페이스를 메타데이터로 변환하는 명령줄 도구입니다. 이 도구는 형식 정보에 대한 interop 어셈블리 및 네임스페이스를 자동으로 만듭니다. 클래스 메타데이터가 제공된 후 관리되는 클라이언트는 COM 형식 인스턴스를 만들고 .NET 인스턴스인 것처럼 메서드를 호출할 수 있습니다. Tlbimp.exe는 전체 형식 라이브러리를 메타데이터로 즉시 변환하지만 형식 라이브러리에 정의된 형식 하위 집합에 대한 형식 정보를 생성할 수는 없습니다.  
@@ -32,13 +32,13 @@ ms.locfileid: "33387733"
  다음 명령은 `Loanlib` 네임스페이스에서 Loanlib.dll 어셈블리를 생성합니다.  
   
 ```  
-tlbimp Loanlib.dll  
+tlbimp Loanlib.tlb  
 ```  
   
  다음 명령은 변경된 이름(LOANLib.dll)을 가진 interop 어셈블리를 생성합니다.  
   
 ```  
-tlbimp LoanLib.dll /out: LOANLib.dll  
+tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

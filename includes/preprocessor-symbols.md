@@ -1,11 +1,11 @@
 ---
 ms.custom: updateeachrelease
 ms.openlocfilehash: f8be002c1d2e34889204ae2c1c50aa87ccdd080e
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36749180"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37878515"
 ---
 | 대상 프레임워크 | 기호 |
 | ------------------| ------- |

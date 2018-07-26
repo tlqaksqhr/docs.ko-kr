@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 78e852e2f1894f92e5b43228faedfad0d78981fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364479"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874597"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 데이터베이스 서버에 연결하는 과정은 일반적으로 시간이 많이 걸리는 여러 단계로 이루어져 있습니다. 즉, 소켓이나 명명된 파이프 같은 실제 채널을 설정하고 서버와의 초기 핸드셰이크를 발생시키며 연결 문자열 정보를 구문 분석할 뿐 아니라 서버에 연결을 인증하고 현재 트랜잭션에 인리스트먼트하기 위해 검사를 실행해야 하는 등의 단계를 거쳐야 합니다.  
   
- 실제로 대부분의 응용 프로그램에서는 연결을 위해 구성을 하나만 사용하거나 몇 개의 서로 다른 구성을 사용하기도 합니다. 따라서 응용 프로그램이 실행되는 동안 여러 개의 동일한 연결이 반복해서 열리고 닫히게 됩니다. 연결을 여는 비용을 최소화 하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 이라는 최적화 기법을 사용 하 여 *연결 풀링*합니다.  
+ 실제로 대부분의 응용 프로그램에서는 연결을 위해 구성을 하나만 사용하거나 몇 개의 서로 다른 구성을 사용하기도 합니다. 따라서 응용 프로그램이 실행되는 동안 여러 개의 동일한 연결이 반복해서 열리고 닫히게 됩니다. 연결을 여는 비용을 최소화 하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 이라는 최적화 기법을 사용 하 여 *연결 풀링을*합니다.  
   
- 연결 풀링을 사용하면 새 연결을 열어야 하는 횟수가 줄어듭니다. *풀러* 실제 연결의 소유권을 유지 관리 합니다. 주어진 각 연결 구성에 대해 활성 연결 집합을 활성화된 상태로 유지하여 연결을 관리합니다. 사용자가 연결에 `Open`을 호출할 때마다 풀러는 풀에서 사용 가능한 연결을 찾습니다. 풀링된 연결이 있으면 새 연결을 여는 대신 이를 호출자에게 반환합니다. 응용 프로그램에서 연결에 `Close`를 호출하면 풀러는 실제로 연결을 닫는 대신 풀링된 활성 연결 집합에 이를 반환합니다. 연결이 풀로 반환되면 다음에 `Open`을 호출할 때 다시 사용할 수 있는 준비를 갖추게 됩니다.  
+ 연결 풀링을 사용하면 새 연결을 열어야 하는 횟수가 줄어듭니다. 합니다 *풀러* 실제 연결의 소유권을 유지 관리 합니다. 주어진 각 연결 구성에 대해 활성 연결 집합을 활성화된 상태로 유지하여 연결을 관리합니다. 사용자가 연결에 `Open`을 호출할 때마다 풀러는 풀에서 사용 가능한 연결을 찾습니다. 풀링된 연결이 있으면 새 연결을 여는 대신 이를 호출자에게 반환합니다. 응용 프로그램에서 연결에 `Close`를 호출하면 풀러는 실제로 연결을 닫는 대신 풀링된 활성 연결 집합에 이를 반환합니다. 연결이 풀로 반환되면 다음에 `Open`을 호출할 때 다시 사용할 수 있는 준비를 갖추게 됩니다.  
   
  구성이 동일한 연결만 풀링할 수 있습니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서는 각 구성마다 하나씩, 여러 개의 풀을 동시에 유지합니다. 연결은 연결 문자열을 기준으로 풀로 나뉘며 통합 보안을 사용하는 경우에는 Windows ID를 기준으로 합니다. 또한 연결은 트랜잭션에 인리스트먼트되었는지 여부에 따라 풀링되기도 합니다. <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>를 사용할 때는 <xref:System.Data.SqlClient.SqlCredential> 인스턴스가 연결 풀에 영향을 줍니다. <xref:System.Data.SqlClient.SqlCredential>의 개별 인스턴스는 사용자 ID 및 암호가 동일한 경우에도 서로 다른 연결 풀을 사용합니다.  
   
@@ -67,13 +67,12 @@ using (SqlConnection connection = new SqlConnection(
  연결 풀러는 연결이 다시 풀로 회수될 때 연결을 다시 할당하여 연결 요청을 처리합니다. 최대 풀 크기에 도달했는데 사용 가능한 연결이 없으면 요청이 대기됩니다. 그러면 풀러는 시간 제한(기본값 15초)에 도달할 때까지 연결을 회수합니다. 연결 제한 시간을 초과하기 전에 풀러가 요청을 처리하지 못하면 예외가 throw됩니다.  
   
 > [!CAUTION]
->  사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. 중 하나를 사용 하 여 수행할 수 있습니다는 `Close` 또는 `Dispose` 의 메서드는 `Connection` 개체 또는 내부 모든 연결을 열면는 `using` C#에서는 문이 또는 `Using` Visual Basic의 문. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 참조 [문을 사용 하 여](~/docs/csharp/language-reference/keywords/using-statement.md) 또는 [하는 방법: 시스템 리소스 해제](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) Visual basic의 경우.  
+>  사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. 중 하나를 사용 하 여 수행할 수 있습니다 합니다 `Close` 또는 `Dispose` 의 메서드는 `Connection` 개체 또는 내에서 모든 연결을 열면 됩니다는 `using` C#의 문은 또는 `Using` Visual Basic의 문. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 [문을 사용 하 여](~/docs/csharp/language-reference/keywords/using-statement.md) 또는 [방법: 시스템 리소스를 삭제](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) Visual Basic에 대 한 합니다.  
   
 > [!NOTE]
->  클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 참조 [가비지 수집](../../../../docs/standard/garbage-collection/index.md)합니다.  
+>  클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](../../../../docs/standard/garbage-collection/index.md)합니다.  
   
-> [!NOTE]
->  연결이 연결 풀에서 페치되거나 연결 풀로 반환되는 경우 서버에서 로그인 및 로그아웃 이벤트가 발생하지 않습니다. 이는 연결이 연결 풀에서 반환될 때 실제로 닫히지 않기 때문입니다. 자세한 내용은 참조 [Audit Login 이벤트 클래스](http://msdn2.microsoft.com/library/ms190260.aspx) 및 [Audit Logout 이벤트 클래스](http://msdn2.microsoft.com/library/ms175827.aspx) SQL Server 온라인 설명서의 합니다.  
+연결 열기 및 닫기와 연결 된 이벤트에 대 한 자세한 내용은 참조 하세요. [Audit Login 이벤트 클래스](/sql/relational-databases/event-classes/audit-login-event-class) 하 고 [Audit Logout 이벤트 클래스](/sql/relational-databases/event-classes/audit-logout-event-class) SQL Server 설명서에서.  
   
 ## <a name="removing-connections"></a>연결 제거  
  연결이 4-8분 정도 유휴 상태였거나 풀러에서 서버와 연결하기 어렵다는 것을 감지하면 연결 풀러는 풀에서 연결을 제거합니다. 이러한 연결은 서버와 통신하려는 시도가 있어야만 감지할 수 있습니다. 서버에 더 이상 연결되지 않는 연결이 있으면 그 연결은 잘못된 연결로 표시됩니다. 잘못된 연결은 연결이 닫혀 있거나 회수되는 경우에만 연결 풀에서 제거됩니다.  
@@ -125,10 +124,10 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>응용 프로그램 역할 및 연결 풀링  
- `sp_setapprole` 시스템 저장 프로시저를 호출하여 SQL Server 응용 프로그램 역할을 활성화한 후에는 해당 연결의 보안 컨텍스트를 다시 설정할 수 없습니다. 그러나 풀링이 활성화된 경우 연결이 풀로 반환되고 풀링된 연결이 다시 사용될 때 오류가 발생합니다. 자세한 내용은 기술 자료 문서를 참조 하십시오. "[OLE DB 리소스 풀링의 SQL 응용 프로그램 역할 오류](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ `sp_setapprole` 시스템 저장 프로시저를 호출하여 SQL Server 응용 프로그램 역할을 활성화한 후에는 해당 연결의 보안 컨텍스트를 다시 설정할 수 없습니다. 그러나 풀링이 활성화된 경우 연결이 풀로 반환되고 풀링된 연결이 다시 사용될 때 오류가 발생합니다. 자세한 내용은 기술 자료 문서를 참조 하세요. "[OLE DB 리소스 풀링의 SQL 응용 프로그램 역할 오류](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>응용 프로그램 역할의 대안  
- 응용 프로그램 역할 대신 사용할 수 있는 보안 메커니즘을 사용하는 것이 좋습니다. 자세한 내용은 참조 [SQL Server의 응용 프로그램 역할 만들기](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)합니다.  
+ 응용 프로그램 역할 대신 사용할 수 있는 보안 메커니즘을 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server의 응용 프로그램 역할 만들기](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [연결 풀링](../../../../docs/framework/data/adonet/connection-pooling.md)  

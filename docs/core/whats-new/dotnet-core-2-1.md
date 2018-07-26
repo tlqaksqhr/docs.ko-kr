@@ -4,12 +4,12 @@ description: .NET Core 2.1에서 볼 수 있는 새로운 기능에 대해 알�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826934"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874574"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -218,11 +218,11 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 <xref:System.Net.Http.SocketsHttpHandler>는 .NET Core 2.1의 기본 구현입니다. 그러나 <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> 메서드를 호출하여 이전 <xref:System.Net.Http.HttpClientHandler> 클래스를 사용하도록 응용 프로그램을 구성할 수 있습니다.
 
 ```csharp
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
 ```
 
 ```vb
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 ```
 
 환경 변수를 사용하여 <xref:System.Net.Http.SocketsHttpHandler>를 기반으로 한 소켓 구현 사용을 옵트아웃할 수도 있습니다. 이를 수행하려면 `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER`를 `false` 또는 0으로 설정합니다.
