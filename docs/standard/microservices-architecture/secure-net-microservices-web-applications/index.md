@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106699"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937035"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 응용 프로그램 보안
 
@@ -43,7 +43,7 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 ASP.NET Core ID가 구성되면 서비스의 Startup.Configure 메서드에서 app.UseIdentity를 호출하여 사용할 수 있습니다.
 
-ASP.NET 코드 ID를 통해 다음과 같은 몇 가지 시나리오를 사용할 수 있습니다.
+ASP.NET Core ID를 통해 다음과 같은 몇 가지 시나리오를 사용할 수 있습니다.
 
 -   UserManager 형식(userManager.CreateAsync)을 사용하여 새 사용자 정보를 만듭니다.
 

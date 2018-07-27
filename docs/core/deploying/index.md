@@ -4,12 +4,12 @@ description: .NET Core 응용 프로그램 배포.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212677"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792428"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포
 
@@ -41,7 +41,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 ## <a name="self-contained-deployments-scd"></a>자체 포함 배포(SCD)
 
-자체 포함 배포에서는 앱과 필요한 타사 종속성 외에도 앱을 빌드하는 데 사용한 .NET Core 버전도 배포합니다. SCD를 만들 때 다양한 플랫폼의 [.NET Core에 대한 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)을 포함하지 않으므로 앱을 실행하려면 이러한 종속성이 있어야 합니다.
+자체 포함 배포에서는 앱과 필요한 타사 종속성 외에도 앱을 빌드하는 데 사용한 .NET Core 버전도 배포합니다. SCD를 만들 때 다양한 플랫폼의 [.NET Core에 대한 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)을 포함하지 않으므로 앱을 실행하려면 이러한 종속성이 있어야 합니다. 런타임 시 버전 바인딩에 대한 자세한 내용은 [.NET Core의 버전 바인딩](../versions/selection.md)에 대한 아티클을 참조하세요.
 
 FDD 및 SCD 배포는 별도의 호스트 실행 파일을 사용하므로 게시자 서명이 있는 SCD에 대해 호스트 실행 파일에 서명할 수 있습니다.
 

@@ -4,12 +4,12 @@ description: .NET Core 버전 관리의 작동 방식을 이해합니다.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298242"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792324"
 ---
 # <a name="net-core-versioning"></a>.NET Core 버전 관리
 
@@ -32,6 +32,15 @@ ms.locfileid: "36298242"
 * `Microsoft.NETCore.App` 메타패키지
 
 단일 버전 번호를 사용하면 어떤 버전의 SDK를 사용자의 개발 컴퓨터에 설치해야 할지 그리고 프로덕션 환경이 프로비전되는 시점에 공유 프레임워크의 해당 버전이 무엇이 되어야 할지를 보다 쉽게 알 수 있습니다. SDK 또는 런타임을 다운로드할 때 표시되는 버전 번호가 동일하게 됩니다.
+
+### <a name="version-selection"></a>버전 선택 영역
+
+.NET Core는 다양한 시나리오에서 사용되는 .NET Core 런타임 및 SDK의 버전을 결정하는 정책 집합을 적용합니다. 이러한 시나리오 및 정책은 [버전 선택 영역](selection.md)에 대한 아티클에서 완전히 탐색합니다.
+
+다음 역할을 수행할 때 이러한 정책을 고려할 수 있습니다.
+
+* 보안 및 안정성 업데이트를 비롯한 .NET Core의 쉽고 효율적인 배포를 사용하도록 설정합니다.
+* 개발자가 대상 런타임과 독립적으로 최신 도구 및 명령을 사용하도록 설정합니다.
 
 ### <a name="installers"></a>설치 관리자
 

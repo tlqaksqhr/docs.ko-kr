@@ -3,13 +3,13 @@ title: 복원력 있는 응용 프로그램 구현
 description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 복원력 있는 응용 프로그램 구현
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ddb0f54b15735b9192d2088495947588f59829a0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106053"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875126"
 ---
 # <a name="implementing-resilient-applications"></a>복원력 있는 응용 프로그램 구현
 
