@@ -2,12 +2,12 @@
 title: 스레딩(C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874668"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296184"
 ---
 # <a name="threading-c"></a>스레딩(C#)
 스레딩을 사용하면 C# 프로그램에서 동시 처리를 수행할 수 있으므로 한 번에 여러 작업을 진행할 수 있습니다. 예를 들어 스레딩을 사용하여 사용자의 입력을 모니터링하고, 백그라운드 작업을 수행하고, 동시 입력 스트림을 처리할 수 있습니다.  
@@ -38,8 +38,6 @@ ms.locfileid: "37874668"
 |제목|설명|  
 |-----------|-----------------|  
 |[다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|스레드를 만들고 사용하는 방법을 설명합니다.|  
-|[다중 스레드 프로시저의 매개 변수 및 반환 값(C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|다중 스레드 응용 프로그램을 사용하여 매개 변수를 전달하고 반환하는 방법을 설명합니다.|  
-|[연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|간단한 다중 스레드 응용 프로그램을 만드는 방법을 보여 줍니다.|  
 |[스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|스레드 조작을 제어하는 방법을 설명합니다.|  
 |[스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|시스템에서 관리하는 작업자 스레드 풀을 사용하는 방법을 설명합니다.|  
 |[방법: 스레드 풀 사용(C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|스레드 풀에서 여러 스레드의 동기화된 사용을 보여 줍니다.|  
