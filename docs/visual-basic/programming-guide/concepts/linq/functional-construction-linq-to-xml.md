@@ -3,11 +3,11 @@ title: 함수 생성 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644292"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333015"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>함수 생성 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다. 함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "33644292"
   
  예를 들면 다음과 같습니다.  
   
- 이러한 기능을 사용 하 여 XML 트리를 만드는 및의 결과 사용 하는 코드를 작성 XML 리터럴을 사용 하 여 코드를 작성할 수 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML 트리를 만들 때 쿼리:  
+ 이러한 기능을 사용 하는 XML 트리를 만드는 및 결과 사용 하는 코드를 쓸 XML 리터럴을 사용 하는 코드를 작성할 수 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML 트리를 만들면 쿼리:  
   
 ```vb  
 Dim srcTree As XElement = _  

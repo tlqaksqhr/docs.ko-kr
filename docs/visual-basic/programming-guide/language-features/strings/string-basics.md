@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654062"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332677"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic의 문자열 기본
 `String` 데이터 형식은 일련의 문자를 나타내며, 각각은 차례로 `Char` 데이터 형식의 인스턴스를 나타냅니다. 이 항목에서는 Visual Basic에서 문자열의 기본 개념을 소개 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "33654062"
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- 이 코드에서는 컴파일러가 두번째 큰따옴표 다음 문자열을 종료하고 문자열의 나머지 부분이 코드로 해석되기 때문에 오류가 생성됩니다. 이 문제를 해결 하기 위해 Visual Basic에는 두 따옴표를 하나의 따옴표로 문자열에 리터럴 문자열의 해석 합니다. 다음 예제에서는 문자열에 큰따옴표를 포함하는 올바른 방법을 보여 줍니다.  
+ 이 코드에서는 컴파일러가 두번째 큰따옴표 다음 문자열을 종료하고 문자열의 나머지 부분이 코드로 해석되기 때문에 오류가 생성됩니다. 이 문제를 해결 하려면 Visual Basic를 하나의 따옴표로 문자열에서 리터럴 문자열에 두 개의 따옴표를 해석 합니다. 다음 예제에서는 문자열에 큰따옴표를 포함하는 올바른 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
 ms.openlocfilehash: c298f996322f5ad80b4e76ecf2dd33b4205e3f42
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244366"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332638"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>액세스 가능한 오버 로드 된 &#39; &lt;methodname&gt; &#39; 축소 변환 없이이 인수로 호출할 수 있습니다: &lt;목록&gt;
 오버로드된 메서드를 호출했지만 축소 변환 없이 제공된 인수 목록과 메서드를 일치시킬 수 없습니다.  
