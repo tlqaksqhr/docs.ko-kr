@@ -1,21 +1,21 @@
 ---
-title: My.Computer 개체
+title: My.Computer 개체 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597349"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323042"
 ---
 # <a name="mycomputer-object"></a>My.Computer 개체
 오디오, 시계, 키보드, 파일 시스템과 같은 컴퓨터 구성 요소를 조작하기 위한 속성을 제공합니다.  
   
 ## <a name="remarks"></a>설명  
- 메서드 및 속성에 대 한 내용은 `My.Computer` 개체, 참조 <xref:Microsoft.VisualBasic.Devices.Computer>합니다. 기본 클래스 <xref:Microsoft.VisualBasic.Devices.ServerComputer> 모든 프로젝트에서 사용할 수 있는 멤버를 제공 합니다.  
+ 메서드 및 속성에 대 한 자세한 합니다 `My.Computer` 개체를 참조 하십시오 <xref:Microsoft.VisualBasic.Devices.Computer>합니다. 기본 클래스 <xref:Microsoft.VisualBasic.Devices.ServerComputer> 모든 프로젝트에서 사용할 수 있는 멤버를 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
