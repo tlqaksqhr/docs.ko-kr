@@ -3,26 +3,26 @@ title: 함수 생성 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644292"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333015"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a><span data-ttu-id="881e5-102">함수 생성 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="881e5-102">Functional Construction (LINQ to XML) (Visual Basic)</span></span>
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="881e5-103">에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-103"> provides a powerful way to create XML elements called *functional construction*.</span></span> <span data-ttu-id="881e5-104">함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-104">Functional construction is the ability to create an XML tree in a single statement.</span></span>  
+# <a name="functional-construction-linq-to-xml-visual-basic"></a><span data-ttu-id="f0329-102">함수 생성 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0329-102">Functional Construction (LINQ to XML) (Visual Basic)</span></span>
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="f0329-103">에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-103"> provides a powerful way to create XML elements called *functional construction*.</span></span> <span data-ttu-id="f0329-104">함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-104">Functional construction is the ability to create an XML tree in a single statement.</span></span>  
   
- <span data-ttu-id="881e5-105">함수 생성을 가능하게 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 프로그래밍 인터페이스의 몇 가지 주요 기능은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-105">There are several key features of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programming interface that enable functional construction:</span></span>  
+ <span data-ttu-id="f0329-105">함수 생성을 가능하게 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 프로그래밍 인터페이스의 몇 가지 주요 기능은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-105">There are several key features of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programming interface that enable functional construction:</span></span>  
   
--   <span data-ttu-id="881e5-106"><xref:System.Xml.Linq.XElement> 생성자는 내용에 대한 다양한 형식의 인수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-106">The <xref:System.Xml.Linq.XElement> constructor takes various types of arguments for content.</span></span> <span data-ttu-id="881e5-107">예를 들어, 자식 요소가 되는 다른 <xref:System.Xml.Linq.XElement> 개체를 전달할 수 있으며</span><span class="sxs-lookup"><span data-stu-id="881e5-107">For example, you can pass another <xref:System.Xml.Linq.XElement> object, which becomes a child element.</span></span> <span data-ttu-id="881e5-108">요소의 특성이 되는 <xref:System.Xml.Linq.XAttribute> 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-108">You can pass an <xref:System.Xml.Linq.XAttribute> object, which becomes an attribute of the element.</span></span> <span data-ttu-id="881e5-109">또는 문자열로 변환되고 요소의 텍스트 내용이 되는 다른 모든 형식의 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-109">Or you can pass any other type of object, which is converted to a string and becomes the text content of the element.</span></span>  
+-   <span data-ttu-id="f0329-106"><xref:System.Xml.Linq.XElement> 생성자는 내용에 대한 다양한 형식의 인수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-106">The <xref:System.Xml.Linq.XElement> constructor takes various types of arguments for content.</span></span> <span data-ttu-id="f0329-107">예를 들어, 자식 요소가 되는 다른 <xref:System.Xml.Linq.XElement> 개체를 전달할 수 있으며</span><span class="sxs-lookup"><span data-stu-id="f0329-107">For example, you can pass another <xref:System.Xml.Linq.XElement> object, which becomes a child element.</span></span> <span data-ttu-id="f0329-108">요소의 특성이 되는 <xref:System.Xml.Linq.XAttribute> 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-108">You can pass an <xref:System.Xml.Linq.XAttribute> object, which becomes an attribute of the element.</span></span> <span data-ttu-id="f0329-109">또는 문자열로 변환되고 요소의 텍스트 내용이 되는 다른 모든 형식의 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-109">Or you can pass any other type of object, which is converted to a string and becomes the text content of the element.</span></span>  
   
--   <span data-ttu-id="881e5-110"><xref:System.Xml.Linq.XElement> 생성자는 `params` 형식의 <xref:System.Object> 배열을 사용하므로 생성자에 개수에 관계없이 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-110">The <xref:System.Xml.Linq.XElement> constructor takes a `params` array of type <xref:System.Object>, so that you can pass any number of objects to the constructor.</span></span> <span data-ttu-id="881e5-111">따라서 복잡한 내용을 가진 요소를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-111">This enables you to create an element that has complex content.</span></span>  
+-   <span data-ttu-id="f0329-110"><xref:System.Xml.Linq.XElement> 생성자는 `params` 형식의 <xref:System.Object> 배열을 사용하므로 생성자에 개수에 관계없이 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-110">The <xref:System.Xml.Linq.XElement> constructor takes a `params` array of type <xref:System.Object>, so that you can pass any number of objects to the constructor.</span></span> <span data-ttu-id="f0329-111">따라서 복잡한 내용을 가진 요소를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-111">This enables you to create an element that has complex content.</span></span>  
   
--   <span data-ttu-id="881e5-112">개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-112">If an object implements <xref:System.Collections.Generic.IEnumerable%601>, the collection in the object is enumerated, and all items in the collection are added.</span></span> <span data-ttu-id="881e5-113">컬렉션에 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-113">If the collection contains <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, each item in the collection is added separately.</span></span> <span data-ttu-id="881e5-114">이것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과를 생성자에 전달할 수 있도록 하기 때문에 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-114">This is important because it lets you pass the results of a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to the constructor.</span></span>  
+-   <span data-ttu-id="f0329-112">개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-112">If an object implements <xref:System.Collections.Generic.IEnumerable%601>, the collection in the object is enumerated, and all items in the collection are added.</span></span> <span data-ttu-id="f0329-113">컬렉션에 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-113">If the collection contains <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, each item in the collection is added separately.</span></span> <span data-ttu-id="f0329-114">이것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과를 생성자에 전달할 수 있도록 하기 때문에 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-114">This is important because it lets you pass the results of a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to the constructor.</span></span>  
   
- <span data-ttu-id="881e5-115">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-115">The following is an example:</span></span>  
+ <span data-ttu-id="f0329-115">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-115">The following is an example:</span></span>  
   
- <span data-ttu-id="881e5-116">이러한 기능을 사용 하 여 XML 트리를 만드는 및의 결과 사용 하는 코드를 작성 XML 리터럴을 사용 하 여 코드를 작성할 수 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML 트리를 만들 때 쿼리:</span><span class="sxs-lookup"><span data-stu-id="881e5-116">These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:</span></span>  
+ <span data-ttu-id="f0329-116">이러한 기능을 사용 하는 XML 트리를 만드는 및 결과 사용 하는 코드를 쓸 XML 리터럴을 사용 하는 코드를 작성할 수 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML 트리를 만들면 쿼리:</span><span class="sxs-lookup"><span data-stu-id="f0329-116">These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -44,7 +44,7 @@ Dim xmlTree As XElement = _
 Console.WriteLine(xmlTree)  
 ```  
   
- <span data-ttu-id="881e5-117">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="881e5-117">This example produces the following output:</span></span>  
+ <span data-ttu-id="f0329-117">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f0329-117">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -56,5 +56,5 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="881e5-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="881e5-118">See Also</span></span>  
- [<span data-ttu-id="881e5-119">XML 트리 만들기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="881e5-119">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="f0329-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f0329-118">See Also</span></span>  
+ [<span data-ttu-id="f0329-119">XML 트리 만들기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0329-119">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
