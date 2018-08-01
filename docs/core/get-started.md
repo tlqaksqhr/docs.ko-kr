@@ -1,57 +1,87 @@
 ---
 title: .NET Core 시작
 description: Windows, Linux 및 macOS에서 .NET Core 응용 프로그램을 빌드하는 방법을 알아볼 수 있는 리소스를 찾아보세요.
-author: johalex
-ms.author: johalex
-ms.date: 09/14/2017
-ms.openlocfilehash: 7e70cd4ba9891403f6b5890aa585dafb77c76898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+author: thraka
+ms.author: adegeo
+ms.date: 06/27/2018
+ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212952"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792402"
 ---
-# <a name="get-started-with-net-core"></a><span data-ttu-id="d8e5b-103">.NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="d8e5b-103">Get started with .NET Core</span></span>
+# <a name="get-started-with-net-core"></a><span data-ttu-id="344df-103">.NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="344df-103">Get started with .NET Core</span></span>
 
-<span data-ttu-id="d8e5b-104">.NET Core는 [Windows](#windows), [Linux](#linux) 및 [macOS/OS X](#os-x--macos)에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-104">.NET Core runs on [Windows](#windows), [Linux](#linux), and [macOS / OS X](#os-x--macos).</span></span>
+<span data-ttu-id="344df-104">이 문서에서는 .NET Core로 시작하는 데 필요한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="344df-104">This article provides information on getting started with .NET Core.</span></span> <span data-ttu-id="344df-105">Windows, Linux 및 macOS에서 .NET Core를 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-105">.NET Core can be installed on Windows, Linux, and macOS.</span></span> <span data-ttu-id="344df-106">원하는 텍스트 편집기에서 코딩하고 플랫폼 간 라이브러리 및 응용 프로그램을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-106">You can code in your favorite text editor and produce cross-platform libraries and applications.</span></span> 
 
-## <a name="windows"></a><span data-ttu-id="d8e5b-105">Windows</span><span class="sxs-lookup"><span data-stu-id="d8e5b-105">Windows</span></span>
+<span data-ttu-id="344df-107">.NET Core가 무엇인지 또는 다른 .NET 기술과 어떻게 관련있는지에 대해 잘 모를 경우 [.NET이란](https://www.microsoft.com/net/learn/what-is-dotnet) 개요로 시작하세요.</span><span class="sxs-lookup"><span data-stu-id="344df-107">If you're unsure what .NET Core is, or how it relates to other .NET technologies, start with the [What is .NET](https://www.microsoft.com/net/learn/what-is-dotnet) overview.</span></span> <span data-ttu-id="344df-108">간단히 말해 .NET Core는 오픈 소스의 플랫폼 간 .NET의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="344df-108">Put simply, .NET Core is an open-source, cross-platform, implementation of .NET.</span></span>
 
-<span data-ttu-id="d8e5b-106">[Windows](https://www.microsoft.com/net/core#windows)에 .NET Core를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-106">Install .NET Core on [Windows](https://www.microsoft.com/net/core#windows).</span></span> 
+## <a name="create-an-application"></a><span data-ttu-id="344df-109">응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="344df-109">Create an application</span></span>
 
-<span data-ttu-id="d8e5b-107">다음 단계별 자습서에 따라 .NET Core 앱 개발을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-107">You can get started developing .NET Core apps by following these step-by-step tutorials.</span></span>
+<span data-ttu-id="344df-110">먼저 사용자의 컴퓨터에 [.NET Core SDK](https://www.microsoft.com/net/download/)를 다운로드하여 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="344df-110">First, download and install the [.NET Core SDK](https://www.microsoft.com/net/download/) on your computer.</span></span>
 
-* <span data-ttu-id="d8e5b-108">[Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드](./tutorials/with-visual-studio.md) - C# 및 Visual Studio 2017을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드, 디버그 및 게시하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-108">[Building a C# Hello World Application with .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md) - Learn to build, debug, and publish a simple .NET Core console application using C# and Visual Studio 2017.</span></span>
-* <span data-ttu-id="d8e5b-109">[Visual Studio 2017에서 C# 및 .NET Core를 사용하여 클래스 라이브러리 빌드](./tutorials/library-with-visual-studio.md) - Visual Studio 2017을 사용하여 C#으로 작성된 클래스 라이브러리를 빌드하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-109">[Building a class library with C# and .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md) - Learn how to build a class library written in C# using Visual Studio 2017.</span></span>
-* <span data-ttu-id="d8e5b-110">[Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 응용 프로그램 빌드](./tutorials/vb-with-visual-studio.md) - Visual Basic 및 Visual Studio 2017을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드, 디버그 및 게시하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-110">[Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md) - Learn to build, debug, and publish a simple .NET Core console application using Visual Basic and Visual Studio 2017.</span></span> 
-* <span data-ttu-id="d8e5b-111">[Visual Studio 2017에서 Visual Basic 및 .NET Core를 사용하여 클래스 라이브러리 빌드](./tutorials/vb-library-with-visual-studio.md) - Visual Studio 2017을 사용하여 Visual Basic으로 작성된 클래스 라이브러리를 빌드하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-111">[Build a class library with Visual Basic and .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md) - Learn how to build a class library written in Visual Basic using Visual Studio 2017.</span></span>
-* <span data-ttu-id="d8e5b-112">[Get started with Visual Studio Code using C# and .NET Core on Windows(Windows에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작)](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - 이 [Channel9](https://channel9.msdn.com) 비디오는 Microsoft의 경량 플랫폼 간 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 설치하고 사용하여 .NET Core에서 첫 번째 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-112">[Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core.</span></span>
-* <span data-ttu-id="d8e5b-113">[Get Started with .NET Core and Visual Studio 2017(.NET Core 및 Visual Studio 2017 시작)](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - 이 [Channel9](https://channel9.msdn.com) 비디오는 Microsoft의 전기능 IDE인 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)을 설치하고 사용하여 .NET Core에서 첫 번째 플랫폼 간 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-113">[Get Started with .NET Core and Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft's fully-featured IDE, to create your first cross-platform console application in .NET Core.</span></span>
-* <span data-ttu-id="d8e5b-114">[명령줄을 사용하여 .NET Core 시작](tutorials/using-with-xplat-cli.md) - [.NET Core 플랫폼 간 CLI(명령줄 인터페이스)](tools/index.md)로 모든 코드 편집기를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-114">[Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) - Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).</span></span>
+<span data-ttu-id="344df-111">다음으로 **PowerShell**, **명령 프롬프트** 또는 **Bash**와 같은 터미널을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="344df-111">Next, open a terminal such as **PowerShell**, **Command Prompt**, or **bash**.</span></span> <span data-ttu-id="344df-112">다음 `dotnet` 명령을 입력하여 C# 응용 프로그램을 만들고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="344df-112">Type the following `dotnet` commands to create and run a C# application.</span></span>
 
-<span data-ttu-id="d8e5b-115">지원되는 Windows 버전 목록은 [Windows 개발을 위한 필수 조건](windows-prerequisites.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-115">See the [Prerequisites for Windows development](windows-prerequisites.md) topic for a list of the supported Windows versions.</span></span>
+```console
+dotnet new console --output sample1
+dotnet run --project sample1
+```
 
-## <a name="linux"></a><span data-ttu-id="d8e5b-116">Linux</span><span class="sxs-lookup"><span data-stu-id="d8e5b-116">Linux</span></span>
+<span data-ttu-id="344df-113">다음과 같은 내용이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="344df-113">You should see the following output:</span></span>
 
-<span data-ttu-id="d8e5b-117">[Linux](https://www.microsoft.com/net/core#linuxredhat)에 .NET Core를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-117">Install .NET Core on [Linux](https://www.microsoft.com/net/core#linuxredhat).</span></span>
+```console
+Hello World!
+```
 
-<span data-ttu-id="d8e5b-118">다음 단계별 자습서에 따라 .NET Core 앱 개발을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-118">You can get started developing .NET Core apps by following these step-by-step tutorials.</span></span>
+<span data-ttu-id="344df-114">지금까지</span><span class="sxs-lookup"><span data-stu-id="344df-114">Congratulations!</span></span> <span data-ttu-id="344df-115">간단한 .NET Core 응용 프로그램을 만들었습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-115">You've created a simple .NET Core application.</span></span> <span data-ttu-id="344df-116">또한 [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md)(Windows만 해당) 또는 [Mac용 Visual Studio](tutorials/using-on-mac-vs.md)(macOS만 해당)를 사용하여 .NET Core 응용 프로그램을 만들 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-116">You can also use [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md) (Windows only), or [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (macOS only), to create a .NET Core application.</span></span>
 
-* <span data-ttu-id="d8e5b-119">[명령줄을 사용하여 .NET Core 시작](tutorials/using-with-xplat-cli.md) - [.NET Core 플랫폼 간 CLI(명령줄 인터페이스)](tools/index.md)로 모든 코드 편집기를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-119">[Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) - Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).</span></span>
-* <span data-ttu-id="d8e5b-120">[Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)(Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작) - 이 [Channel9](https://channel9.msdn.com) 비디오는 Microsoft의 경량 플랫폼 간 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 설치하고 사용하여 Ubuntu 14.04의 .NET Core에서 첫 번째 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-120">[Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core on Ubuntu 14.04.</span></span>
+## <a name="tutorials"></a><span data-ttu-id="344df-117">자습서</span><span class="sxs-lookup"><span data-stu-id="344df-117">Tutorials</span></span>
 
-<span data-ttu-id="d8e5b-121">지원되는 Linux 배포판 및 버전 목록은 [Linux 개발을 위한 필수 조건](linux-prerequisites.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-121">See the [Prerequisites for Linux development](linux-prerequisites.md) topic for a list of the supported Linux distros and versions.</span></span>
+<span data-ttu-id="344df-118">다음 단계별 자습서에 따라 .NET Core 응용 프로그램 개발을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-118">You can get started developing .NET Core applications by following these step-by-step tutorials.</span></span>
 
-## <a name="os-x--macos"></a><span data-ttu-id="d8e5b-122">OS X/macOS</span><span class="sxs-lookup"><span data-stu-id="d8e5b-122">OS X / macOS</span></span>
+# <a name="windowstabwindows"></a>[<span data-ttu-id="344df-119">Windows</span><span class="sxs-lookup"><span data-stu-id="344df-119">Windows</span></span>](#tab/windows)
 
-<span data-ttu-id="d8e5b-123">[macOS](https://www.microsoft.com/net/core#macos)용 .NET Core를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-123">Install .NET Core for [macOS](https://www.microsoft.com/net/core#macos).</span></span> <span data-ttu-id="d8e5b-124">.NET Core는 OS X El Capitan(버전 10.11)과 macOS Sierra(버전 10.12)에서 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-124">.NET Core is supported on OS X El Capitan (version 10.11) and macOS Sierra (version 10.12).</span></span>
+* [<span data-ttu-id="344df-120">Visual Studio 2017에서 .NET Core를 사용하여 C# “Hello World” 응용 프로그램 빌드.</span><span class="sxs-lookup"><span data-stu-id="344df-120">Build a C# "Hello World" Application with .NET Core in Visual Studio 2017.</span></span>](./tutorials/with-visual-studio.md)
 
-<span data-ttu-id="d8e5b-125">다음 단계별 자습서에 따라 .NET Core 앱 개발을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-125">You can get started developing .NET Core apps by following these step-by-step tutorials.</span></span>
+* [<span data-ttu-id="344df-121">Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드.</span><span class="sxs-lookup"><span data-stu-id="344df-121">Build a C# class library with .NET Core in Visual Studio 2017.</span></span>](./tutorials/library-with-visual-studio.md)
 
-* <span data-ttu-id="d8e5b-126">[Get started with Visual Studio Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)(macOS에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작) - 이 [Channel9](https://channel9.msdn.com) 비디오는 Microsoft의 경량 플랫폼 간 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 설치하고 사용하여 .NET Core에서 첫 번째 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-126">[Get started with Visual Studio Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) - This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core.</span></span> 
-* <span data-ttu-id="d8e5b-127">[Visual Studio Code를 사용하여 macOS에서 .NET Core 시작](tutorials/using-on-macos.md) - 단위 테스트, 타사 라이브러리 및 디버깅 도구 사용 방법 등 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계 및 워크플로의 둘러보기입니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-127">[Getting started with .NET Core on macOS, using Visual Studio Code](tutorials/using-on-macos.md) - A tour of the steps and workflow to create a .NET Core Solution using Visual Studio Code that includes unit tests, third-party libraries and how to use the debugging tools.</span></span>
-* <span data-ttu-id="d8e5b-128">[명령줄을 사용하여 .NET Core 시작](tutorials/using-with-xplat-cli.md) - [.NET Core 플랫폼 간 CLI(명령줄 인터페이스)](tools/index.md)로 모든 코드 편집기를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-128">[Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) - Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).</span></span>
-* <span data-ttu-id="d8e5b-129">[Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](tutorials/using-on-mac-vs.md) - 이 자습서에서는 Visual Studio for Mac을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-129">[Getting started with .NET Core on macOS using Visual Studio for Mac](tutorials/using-on-mac-vs.md) - This tutorial shows you how to build a simple .NET Core console application using Visual Studio for Mac.</span></span>
-* <span data-ttu-id="d8e5b-130">[Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](tutorials/using-on-mac-vs-full-solution.md) - 이 자습서에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 전체 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-130">[Building a complete .NET Core solution on macOS using Visual Studio for Mac](tutorials/using-on-mac-vs-full-solution.md) - This tutorial shows you how to build a complete .NET Core solution that includes a reusable library and unit testing.</span></span>
+* [<span data-ttu-id="344df-122">Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic “Hello World” 응용 프로그램 빌드.</span><span class="sxs-lookup"><span data-stu-id="344df-122">Build a Visual Basic "Hello World" application with .NET Core in Visual Studio 2017.</span></span>](./tutorials/vb-with-visual-studio.md)
 
-<span data-ttu-id="d8e5b-131">지원되는 OS X/macOS 버전 목록은 [macOS 개발을 위한 필수 구성 요소](macos-prerequisites.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8e5b-131">See the [Prerequisites for macOS development](macos-prerequisites.md) topic for a list of the supported OS X / macOS versions.</span></span>
+* [<span data-ttu-id="344df-123">Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드.</span><span class="sxs-lookup"><span data-stu-id="344df-123">Build a class library with Visual Basic and .NET Core in Visual Studio 2017.</span></span>](./tutorials/vb-library-with-visual-studio.md)  
+
+* <span data-ttu-id="344df-124">[Visual Studio Code 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)에 관한 비디오 시청.</span><span class="sxs-lookup"><span data-stu-id="344df-124">Watch a video on [how to install and use Visual Studio Code and .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).</span></span>
+
+* <span data-ttu-id="344df-125">[Visual Studio 2017 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)에 관한 비디오 시청.</span><span class="sxs-lookup"><span data-stu-id="344df-125">Watch a video on [how to install and use Visual Studio 2017 and .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).</span></span>
+
+* [<span data-ttu-id="344df-126">명령줄을 사용하여 .NET Core 시작.</span><span class="sxs-lookup"><span data-stu-id="344df-126">Getting started with .NET Core using the command-line.</span></span>](tutorials/using-with-xplat-cli.md)
+
+<span data-ttu-id="344df-127">지원되는 Windows 버전 목록은 [Windows 개발을 위한 필수 조건](windows-prerequisites.md) 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="344df-127">See the [Prerequisites for Windows development](windows-prerequisites.md) article for a list of the supported Windows versions.</span></span>
+
+# <a name="linuxtablinux"></a>[<span data-ttu-id="344df-128">Linux</span><span class="sxs-lookup"><span data-stu-id="344df-128">Linux</span></span>](#tab/linux)
+
+<span data-ttu-id="344df-129">다음 단계별 자습서에 따라 .NET Core 응용 프로그램 개발을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-129">You can get started developing .NET Core application by following these step-by-step tutorials.</span></span>
+
+* [<span data-ttu-id="344df-130">명령줄을 사용하여 .NET Core 시작.</span><span class="sxs-lookup"><span data-stu-id="344df-130">Getting started with .NET Core using the command-line.</span></span>](tutorials/using-with-xplat-cli.md)
+
+* <span data-ttu-id="344df-131">[Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 관한 비디오 시청.</span><span class="sxs-lookup"><span data-stu-id="344df-131">Watch a video on [getting started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span></span>
+
+<span data-ttu-id="344df-132">지원되는 Linux 배포판 및 버전 목록은 [Linux 개발을 위한 필수 조건](linux-prerequisites.md) 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="344df-132">See the [Prerequisites for Linux development](linux-prerequisites.md) article for a list of the supported Linux distros and versions.</span></span>
+
+# <a name="macostabmacos"></a>[<span data-ttu-id="344df-133">macOS</span><span class="sxs-lookup"><span data-stu-id="344df-133">macOS</span></span>](#tab/macos)
+
+<span data-ttu-id="344df-134">다음 단계별 자습서에 따라 .NET Core 응용 프로그램 개발을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="344df-134">You can get started developing .NET Core application by following these step-by-step tutorials.</span></span>
+
+* <span data-ttu-id="344df-135">[macOS에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)에 관한 비디오 시청.</span><span class="sxs-lookup"><span data-stu-id="344df-135">Watch a video on [Getting started with Visual Studio Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).</span></span>
+
+* [<span data-ttu-id="344df-136">Visual Studio Code를 사용하여 macOS에서 .NET Core 시작.</span><span class="sxs-lookup"><span data-stu-id="344df-136">Getting started with .NET Core on macOS, using Visual Studio Code.</span></span>](tutorials/using-on-macos.md)
+
+* [<span data-ttu-id="344df-137">명령줄을 사용하여 .NET Core 시작.</span><span class="sxs-lookup"><span data-stu-id="344df-137">Getting started with .NET Core using the command-line.</span></span>](tutorials/using-with-xplat-cli.md)
+
+* [<span data-ttu-id="344df-138">Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작.</span><span class="sxs-lookup"><span data-stu-id="344df-138">Getting started with .NET Core on macOS using Visual Studio for Mac.</span></span>](tutorials/using-on-mac-vs.md)
+
+* [<span data-ttu-id="344df-139">Mac용 Visual Studio를 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드.</span><span class="sxs-lookup"><span data-stu-id="344df-139">Build a complete .NET Core solution on macOS using Visual Studio for Mac.</span></span>](tutorials/using-on-mac-vs-full-solution.md)
+
+<span data-ttu-id="344df-140">지원되는 OS X/macOS 버전 목록은 [macOS 개발을 위한 필수 구성 요소](macos-prerequisites.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="344df-140">See the [Prerequisites for macOS development](macos-prerequisites.md) article for a list of the supported OS X / macOS versions.</span></span>
+
+***

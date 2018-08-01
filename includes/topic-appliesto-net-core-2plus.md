@@ -1,1 +1,1 @@
-<span data-ttu-id="e8677-101">**이 항목에 적용 됩니다: ✓** .NET Core SDK 2.x</span><span class="sxs-lookup"><span data-stu-id="e8677-101">**This topic applies to: ✓** .NET Core SDK 2.x</span></span>
+<span data-ttu-id="96bda-101">**이 항목은 ✓** .NET Core SDK 2.0 이상 버전에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="96bda-101">**This topic applies to: ✓** .NET Core SDK 2.0 and later versions</span></span>

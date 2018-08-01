@@ -3,22 +3,22 @@ title: 지수 백오프를 사용하여 다시 시도 구현
 description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 지수 백오프를 사용하여 다시 시도 구현
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ee5dd711484ba7861eedbd9613fda1209736d5b6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: a5ab15299ecb501691c26bbc6d377e22a38ee51e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106920"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874366"
 ---
-# <a name="implementing-retries-with-exponential-backoff"></a><span data-ttu-id="3389c-103">지수 백오프를 사용하여 다시 시도 구현</span><span class="sxs-lookup"><span data-stu-id="3389c-103">Implementing retries with exponential backoff</span></span>
+# <a name="implement-retries-with-exponential-backoff"></a><span data-ttu-id="9d1a4-103">지수 백오프를 사용하여 다시 시도 구현</span><span class="sxs-lookup"><span data-stu-id="9d1a4-103">Implement retries with exponential backoff</span></span>
 
-<span data-ttu-id="3389c-104">[ *지수 백오프를 사용하여 다시 시도*](https://docs.microsoft.com/azure/architecture/patterns/retry)는 최대 다시 시도 횟수에 도달할 때까지 대기 시간이 기하급수적으로 증가하면서 다시 시도하려고 하는 기술입니다([지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)).</span><span class="sxs-lookup"><span data-stu-id="3389c-104">[*Retries with exponential backoff*](https://docs.microsoft.com/azure/architecture/patterns/retry) is a technique that attempts to retry an operation, with an exponentially increasing wait time, until a maximum retry count has been reached (the [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff)).</span></span> <span data-ttu-id="3389c-105">이 기술은 클라우드 리소스가 어떤 이유로든 몇 초간 일시적으로 사용할 수 없다는 팩트를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3389c-105">This technique embraces the fact that cloud resources might intermittently be unavailable for more than a few seconds for any reason.</span></span> <span data-ttu-id="3389c-106">예를 들어 오케스트레이터는 클러스터에서 부하 분산을 위해 컨테이너를 다른 노드로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3389c-106">For example, an orchestrator might be moving a container to another node in a cluster for load balancing.</span></span> <span data-ttu-id="3389c-107">이 시간 동안 일부 요청이 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3389c-107">During that time, some requests might fail.</span></span> <span data-ttu-id="3389c-108">또 다른 예로 SQL Azure와 같은 데이터베이스를 들 수 있습니다. SQL Azure에서는 부하 분산을 위해 데이터베이스를 다른 서버로 옮길 수 있으므로 데이터베이스를 몇 초간 사용할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3389c-108">Another example could be a database like SQL Azure, where a database can be moved to another server for load balancing, causing the database to be unavailable for a few seconds.</span></span>
+<span data-ttu-id="9d1a4-104">[ *지수 백오프를 사용하여 다시 시도*](https://docs.microsoft.com/azure/architecture/patterns/retry)는 최대 다시 시도 횟수에 도달할 때까지 대기 시간이 기하급수적으로 증가하면서 다시 시도하려고 하는 기술입니다([지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)).</span><span class="sxs-lookup"><span data-stu-id="9d1a4-104">[*Retries with exponential backoff*](https://docs.microsoft.com/azure/architecture/patterns/retry) is a technique that attempts to retry an operation, with an exponentially increasing wait time, until a maximum retry count has been reached (the [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff)).</span></span> <span data-ttu-id="9d1a4-105">이 기술은 클라우드 리소스가 어떤 이유로든 몇 초간 일시적으로 사용할 수 없다는 팩트를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1a4-105">This technique embraces the fact that cloud resources might intermittently be unavailable for more than a few seconds for any reason.</span></span> <span data-ttu-id="9d1a4-106">예를 들어 오케스트레이터는 클러스터에서 부하 분산을 위해 컨테이너를 다른 노드로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d1a4-106">For example, an orchestrator might be moving a container to another node in a cluster for load balancing.</span></span> <span data-ttu-id="9d1a4-107">이 시간 동안 일부 요청이 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d1a4-107">During that time, some requests might fail.</span></span> <span data-ttu-id="9d1a4-108">또 다른 예로 SQL Azure와 같은 데이터베이스를 들 수 있습니다. SQL Azure에서는 부하 분산을 위해 데이터베이스를 다른 서버로 옮길 수 있으므로 데이터베이스를 몇 초간 사용할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9d1a4-108">Another example could be a database like SQL Azure, where a database can be moved to another server for load balancing, causing the database to be unavailable for a few seconds.</span></span>
 
-<span data-ttu-id="3389c-109">지수 백오프를 사용하여 다시 시도 논리를 구현하는 많은 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3389c-109">There are many approaches to implement retries logic with exponential backoff.</span></span>
+<span data-ttu-id="9d1a4-109">지수 백오프를 사용하여 다시 시도 논리를 구현하는 많은 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d1a4-109">There are many approaches to implement retries logic with exponential backoff.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="3389c-110">[이전](partial-failure-strategies.md)
-[다음](implement-resilient-entity-framework-core-sql-connections.md)</span><span class="sxs-lookup"><span data-stu-id="3389c-110">[Previous](partial-failure-strategies.md)
+<span data-ttu-id="9d1a4-110">[이전](partial-failure-strategies.md)
+[다음](implement-resilient-entity-framework-core-sql-connections.md)</span><span class="sxs-lookup"><span data-stu-id="9d1a4-110">[Previous](partial-failure-strategies.md)
 [Next](implement-resilient-entity-framework-core-sql-connections.md)</span></span>
