@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578423"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937116"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "33578423"
  이벤트 기반 비동기 패턴을 구현하는 경우 클래스가 올바르게 동작하고 클래스의 클라이언트가 해당 동작을 사용할 수 있도록 보장하는 다양한 보장을 제공해야 합니다.  
   
 ### <a name="completion"></a>완료  
- 성공적인 완료, 오류 또는 취소가 있는 경우 항상 *MethodName***Completed** 이벤트 처리기를 호출합니다. 응용 프로그램이 유휴 상태로 유지되고 절대 완료되지 않는 상황이 응용 프로그램에 발생해서는 안 됩니다. 이 규칙에 대한 한 가지 예외는 비동기 작업 자체가 절대 완료되지 않도록 디자인된 경우입니다.  
+ 성공적인 완료, 오류 또는 취소가 있는 경우 항상 <em>MethodName</em>**Completed** 이벤트 처리기를 호출합니다. 응용 프로그램이 유휴 상태로 유지되고 절대 완료되지 않는 상황이 응용 프로그램에 발생해서는 안 됩니다. 이 규칙에 대한 한 가지 예외는 비동기 작업 자체가 절대 완료되지 않도록 디자인된 경우입니다.  
   
 ### <a name="completed-event-and-eventargs"></a>완료된 이벤트 및 EventArgs  
- 별개의 각 *MethodName***Async** 메서드의 경우 다음 디자인 요구 사항을 적용합니다.  
+ 별개의 각 <em>MethodName</em>**Async** 메서드의 경우 다음 디자인 요구 사항을 적용합니다.  
   
--   동일한 클래스에서 *MethodName***Completed** 이벤트를 메서드로 정의합니다.  
+-   동일한 클래스에서 <em>MethodName</em>**Completed** 이벤트를 메서드로 정의합니다.  
   
--   <xref:System.EventArgs> 클래스에서 파생되는 *MethodName***Completed** 이벤트에 대한 <xref:System.ComponentModel.AsyncCompletedEventArgs> 클래스 및 수반하는 대리자를 정의합니다. 기본 클래스 이름은 *MethodName***CompletedEventArgs** 형식이어야 합니다.  
+-   <xref:System.EventArgs> 클래스에서 파생되는 <em>MethodName</em>**Completed** 이벤트에 대한 <xref:System.ComponentModel.AsyncCompletedEventArgs> 클래스 및 수반하는 대리자를 정의합니다. 기본 클래스 이름은 *MethodName***CompletedEventArgs** 형식이어야 합니다.  
   
 -   <xref:System.EventArgs> 클래스가 *MethodName* 메서드의 반환 값에 관련되도록 합니다. <xref:System.EventArgs> 클래스를 사용할 경우 개발자가 결과를 캐스팅할 필요가 없도록 해야 합니다.  
   

@@ -1,23 +1,21 @@
 ---
 title: ASP.NET Core 앱에서 데이터 작업
-description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계 | asp에서 데이터 작업
+description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계 | ASP.NET Core 앱에서 데이터 작업
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106177"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404660"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
 > "데이터는 귀중한 자산이며 시스템 자체보다 더 오래 지속됩니다."
-
-Tim Berners-Lee
-
-## <a name="summary"></a>요약
+>
+> Tim Berners-Lee
 
 데이터 액세스는 거의 모든 소프트웨어 응용 프로그램에서 중요한 부분입니다. ASP.NET Core는 Entity Framework Core(및 Entity Framework 6)를 포함한 다양한 데이터 액세스 옵션을 지원하며, 모든 .NET 데이터 액세스 프레임워크와 함께 작동할 수 있습니다. 어떤 데이터 액세스 프레임워크를 선택할 것인지는 응용 프로그램 요구 사항에 따라 다릅니다. ApplicationCore 및 UI 프로젝트에서 이러한 옵션을 추상화하고, 인프라에서 구현 세부 사항을 캡슐화하면 느슨하게 결합된 테스트 가능 소프트웨어를 만드는 데 도움이 됩니다.
 
@@ -35,7 +33,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-EF Core를 사용하려면 DbContext 서브클래스가 필요합니다. 이 클래스는 응용 프로그램에서 작업할 엔터티 컬렉션을 나타내는 속성을 보유합니다. EShopOnWeb 샘플에는 항목, 브랜드 및 형식에 대한 컬렉션을 제공하는 CatalogContext가 포함되어 있습니다.
+EF Core를 사용하려면 <xref:Microsoft.EntityFrameworkCore.DbContext>의 서브클래스가 필요합니다. 이 클래스는 응용 프로그램에서 작업할 엔터티 컬렉션을 나타내는 속성을 보유합니다. EShopOnWeb 샘플에는 항목, 브랜드 및 형식에 대한 컬렉션을 제공하는 CatalogContext가 포함되어 있습니다.
 
 ```csharp
 public class CatalogContext : DbContext
@@ -116,7 +114,7 @@ EF Core는 엔터티를 가져오고 저장하기 위한 동기 및 비동기 �
 
 ### <a name="fetching-related-data"></a>관련 데이터 가져오기
 
-EF Core는 엔터티를 검색할 때 엔터티와 함께 데이터베이스에 직접 저장되는 모든 속성을 채웁니다. 관련 엔터티 목록 같은 탐색 속성은 채워지지 않으며 값이 Null로 설정될 수 있습니다. 이렇게 되면 EF Core가 데이터를 필요 이상으로 가져오지 않으며, 이는 요청을 신속하게 처리하고 효율적인 방식으로 응답을 반환해야 하는 웹 응용 프로그램에서 매우 중요합니다. *즉시 로드*를 사용하여 엔터티와의 관계를 포함하려면 다음과 같이 쿼리에서 Include 확장 메서드를 사용하여 속성을 지정합니다.
+EF Core는 엔터티를 검색할 때 엔터티와 함께 데이터베이스에 직접 저장되는 모든 속성을 채웁니다. 관련 엔터티 목록 같은 탐색 속성은 채워지지 않으며 값이 Null로 설정될 수 있습니다. 이렇게 되면 EF Core가 데이터를 필요 이상으로 가져오지 않으며, 이는 요청을 신속하게 처리하고 효율적인 방식으로 응답을 반환해야 하는 웹 응용 프로그램에서 매우 중요합니다. _즉시 로드_를 사용하여 엔터티와의 관계를 포함하려면 다음과 같이 쿼리에서 Include 확장 메서드를 사용하여 속성을 지정합니다.
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -127,13 +125,15 @@ var brandsWithItems = await _context.CatalogBrands
 
 여러 관계를 포함할 수 있으며, ThenInclude를 사용하여 하위 관계를 포함할 수도 있습니다. EF Core는 엔터티의 결과 집합을 검색하는 단일 쿼리를 실행합니다.
 
-관련 데이터를 로드하는 또 다른 옵션은 *명시적 로드*를 사용하는 것입니다. 명시적 로드를 사용하면 이미 검색된 엔터티에 추가 데이터를 로드할 수 있습니다. 이 방법은 데이터베이스에 대한 별도의 요청이 개입되므로 요청당 데이터베이스 왕복 횟수를 최소화해야 하는 웹 응용 프로그램에는 사용하지 않는 것이 좋습니다.
+관련 데이터를 로드하는 또 다른 옵션은 _명시적 로드_를 사용하는 것입니다. 명시적 로드를 사용하면 이미 검색된 엔터티에 추가 데이터를 로드할 수 있습니다. 이 방법은 데이터베이스에 대한 별도의 요청이 개입되므로 요청당 데이터베이스 왕복 횟수를 최소화해야 하는 웹 응용 프로그램에는 사용하지 않는 것이 좋습니다.
 
-*지연 로드*는 응용 프로그램에서 참조하는 관련 데이터를 자동으로 로드하는 기능입니다. 현재 EF Core에서 지원되지 않지만, 명시적 로드와 마찬가지로 웹 응용 프로그램에서는 일반적으로 사용하지 않는 것이 좋습니다.
+_지연 로드_는 응용 프로그램에서 참조하는 관련 데이터를 자동으로 로드하는 기능입니다. EF Core는 버전 2.1에서 지연 로드에 대한 지원이 추가되었습니다. 지연 로드는 기본적으로 사용하지 않도록 설정되어 있으며 `Microsoft.EntityFrameworkCore.Proxies`를 설치해야 합니다. 명시적 로드와 마찬가지로 지연 로드는 각 웹 요청 내에서 수행되는 추가 데이터베이스 쿼리에서 사용되기 때문에 일반적으로 웹 응용 프로그램에 대해 사용하지 않도록 설정되어 있습니다. 아쉽게도 지연 로드에서 발생하는 오버헤드는 대기 시간이 적고 테스트에 사용되는 데이터 집합이 작은 경우 개발 시기에 종종 간과됩니다. 단, 더 많은 사용자, 더 많은 데이터 및 더 긴 대기 시간의 프로덕션에서는 추가 데이터베이스 요청으로 인해 웹 응용 프로그램의 성능이 저하되어 지연 로드를 과도하게 사용하게 됩니다.
+
+[웹 응용 프로그램에서 지연 로드 엔터티 방지](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
 ### <a name="resilient-connections"></a>복원력 있는 연결
 
-SQL 데이터베이스 같은 외부 리소스를 사용할 수 없는 경우가 있습니다. 일시적으로 사용할 수 없는 경우 예외가 발생하지 않도록 하기 위해 응용 프로그램에서 재시도 논리를 사용할 수 있습니다. 이 기술을 보통 *연결 복원력*이라고 부릅니다. 최대 다시 시도 횟수에 도달할 때까지 대기 시간이 기하급수적으로 증가하면서 다시 시도하는 [지수 백오프를 사용하여 다시 시도](https://docs.microsoft.com/azure/architecture/patterns/retry) 기술을 구현할 수 있습니다. 이 기술은 클라우드 리소스가 어떤 이유로든 짧은 시간 동안 일시적으로 사용할 수 없다는 팩트를 포함합니다.
+SQL 데이터베이스 같은 외부 리소스를 사용할 수 없는 경우가 있습니다. 일시적으로 사용할 수 없는 경우 예외가 발생하지 않도록 하기 위해 응용 프로그램에서 재시도 논리를 사용할 수 있습니다. 이 기술을 보통 _연결 복원력_이라고 부릅니다. 최대 다시 시도 횟수에 도달할 때까지 대기 시간이 기하급수적으로 증가하면서 다시 시도하는 [지수 백오프를 사용하여 다시 시도](https://docs.microsoft.com/azure/architecture/patterns/retry) 기술을 구현할 수 있습니다. 이 기술은 클라우드 리소스가 어떤 이유로든 짧은 시간 동안 일시적으로 사용할 수 없다는 팩트를 포함합니다.
 
 Azure SQL DB의 경우, Entity Framework Core는 이미 내부 데이터베이스 연결 복원력과 다시 시도 논리를 제공합니다. 그러나 복원력 있는 EF 코어 연결을 원할 경우 각 DbContext 연결에 대한 Entity Framework 실행 전략을 사용해야 합니다.
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction 및 여러 DbContexts를 사용한 실행 전략 및 명시적 트랜잭션 
-  
-  EF 코어 연결에서 다시 시도가 설정되면, EF 코어를 사용하여 수행하는 각 작업은 자체적으로 다시 시도할 수 있는 작업이 됩니다. 일시적인 오류가 발생할 경우 SaveChanges에 대한 각 쿼리와 각 호출이 하나의 단위로 다시 시도됩니다.
-  
-  그러나 코드가 BeginTransaction을 사용하여 트랜잭션을 시작한 경우, 하나의 단위로 처리해야 하는 자신만의 작업 그룹을 정의하게 됩니다. 오류가 발생하면 트랜잭션 내부의 모든 항목이 롤백됩니다. EF 실행 전략(다시 시도 정책)을 사용할 때 해당 트랜잭션을 실행하려고 시도하고 여러 DbContexts의 여러 SaveChanges를 포함하면 다음과 같은 예외가 표시됩니다.
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction 및 여러 DbContexts를 사용한 실행 전략 및 명시적 트랜잭션
+
+EF 코어 연결에서 다시 시도가 설정되면, EF 코어를 사용하여 수행하는 각 작업은 자체적으로 다시 시도할 수 있는 작업이 됩니다. 일시적인 오류가 발생할 경우 SaveChanges에 대한 각 쿼리와 각 호출이 하나의 단위로 다시 시도됩니다.
+
+그러나 코드가 BeginTransaction을 사용하여 트랜잭션을 시작한 경우, 하나의 단위로 처리해야 하는 자신만의 작업 그룹을 정의하게 됩니다. 오류가 발생하면 트랜잭션 내부의 모든 항목이 롤백됩니다. EF 실행 전략(다시 시도 정책)을 사용할 때 해당 트랜잭션을 실행하려고 시도하고 여러 DbContexts의 여러 SaveChanges를 포함하면 다음과 같은 예외가 표시됩니다.
 
 System.InvalidOperationException: 구성된 실행 전략 'SqlServerRetryingExecutionStrategy’는 사용자가 시작한 트랜잭션을 지원하지 않습니다. 'DbContext.Database.CreateExecutionStrategy()'에서 반환된 실행 전략을 사용하여 트랜잭션을 다시 시도가 가능한 단위로 트랜잭션의 모든 작업을 실행합니다.
 
@@ -176,7 +176,7 @@ System.InvalidOperationException: 구성된 실행 전략 'SqlServerRetryingExec
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 첫 번째 DbContext는 \_catalogContext이고 두 번째 DbContext는 \_integrationEventLogService 개체 내에 있습니다. 마지막으로, 커밋 작업은 EF 실행 전략을 사용하여 여러 DbContexts를 수행합니다.
 
 > ### <a name="references--entity-framework-core"></a>참조 - Entity Framework Core
+>
 > - **EF Core Docs**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **EF Core: 관련 데이터**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **ASPNET 응용 프로그램에서 엔터티 지연 로드 방지**  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core 또는 마이크로 ORM
 
@@ -271,8 +272,7 @@ NoSQL 데이터베이스는 일반적으로 [ACID](https://en.wikipedia.org/wiki
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-Azure DocumentDB는 완전히 관리되는 NoSQL 데이터베이스 서비스로 스키마 없는 클라우드 기반 데이터 저장소를 제공합니다. DocumentDB는 신속하고 예측 가능한 성능, 고가용성, 탄력적인 크기 조정, 글로벌 배포를 위해 설계되었습니다. NoSQL 데이터베이스임에도 불구하고, 개발자가 풍부하고 친숙한 SQL 쿼리 기능을 JSON 데이터에 사용할 수 있습니다. DocumentDB의 모든 리소스는 JSON 문서로 저장됩니다. 리소스는 메타데이터를 포함하고 있는 *항목* 및 항목 컬렉션인 *피드*로 관리됩니다. 그림 8-2는 여러 DocumentDB 리소스 간의 관계를 보여줍니다.
-
+Azure DocumentDB는 완전히 관리되는 NoSQL 데이터베이스 서비스로 스키마 없는 클라우드 기반 데이터 저장소를 제공합니다. DocumentDB는 신속하고 예측 가능한 성능, 고가용성, 탄력적인 크기 조정, 글로벌 배포를 위해 설계되었습니다. NoSQL 데이터베이스임에도 불구하고, 개발자가 풍부하고 친숙한 SQL 쿼리 기능을 JSON 데이터에 사용할 수 있습니다. DocumentDB의 모든 리소스는 JSON 문서로 저장됩니다. 리소스는 메타데이터를 포함하고 있는 _항목_ 및 항목 컬렉션인 _피드_로 관리됩니다. 그림 8-2는 여러 DocumentDB 리소스 간의 관계를 보여줍니다.
 
 ![JSON NoSQL 데이터베이스인 DocumentDB의 리소스 간 계층 관계](./media/image8-2.png)
 
@@ -282,25 +282,25 @@ DocumentDB 쿼리 언어는 JSON 문서를 쿼리하는 데 사용되는 단순�
 
 **참조 – DocumentDB**
 
--   DocumentDB 소개\
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- DocumentDB 소개\
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>다른 지속성 옵션
 
 관계형 및 NoSQL 저장소 옵션 외에도, ASP.NET Core 응용 프로그램은 Azure Storage를 사용하여 다양한 데이터 형식 및 파일을 클라우드 기반의 확장 가능한 방식으로 저장할 수 있습니다. Azure Storage는 대규모로 확장할 수 있으므로 처음에는 적은 양의 데이터를 저장하는 것으로 시작하고, 이후에 응용 프로그램에 필요하면 수백 테라바이트를 저장하도록 강화할 수 있습니다. Azure Storage는 다음과 같은 네 가지 데이터를 지원합니다.
 
--   구조화되지 않은 텍스트 또는 이진 저장소를 위한 Blob Storage. 개체 저장소라고도 합니다.
+- 구조화되지 않은 텍스트 또는 이진 저장소를 위한 Blob Storage. 개체 저장소라고도 합니다.
 
--   구조화된 데이터 집합을 위한 Table Storage. 행 키를 통해 액세스할 수 있습니다.
+- 구조화된 데이터 집합을 위한 Table Storage. 행 키를 통해 액세스할 수 있습니다.
 
--   신뢰할 수 있는 큐 기반 메시지를 위한 Queue Storage.
+- 신뢰할 수 있는 큐 기반 메시지를 위한 Queue Storage.
 
--   Azure 가상 머신과 온-프레미스 응용 프로그램 간의 공유 파일 액세스를 위한 File Storage.
+- Azure 가상 머신과 온-프레미스 응용 프로그램 간의 공유 파일 액세스를 위한 File Storage.
 
 **참조 – Azure Storage**
 
--   Azure Storage 소개\
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure Storage 소개\
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>캐싱
 
@@ -316,16 +316,17 @@ ASP.NET Core는 두 가지 수준의 응답 캐시를 지원합니다. 첫 번�
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+이전 예제에서는 응답에 다음 헤더가 추가되어 클라이언트가 최대 60초 동안 결과를 캐시하도록 지시합니다.
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+서버측 메모리 내 캐싱을 응용 프로그램에 추가하려면 Microsoft.AspNetCore.ResponseCaching NuGet 패키지를 참조한 다음, 응답 캐싱 미들웨어를 추가해야 합니다. 이 미들웨어는 스타트업에서 ConfigureServices 및 Configure 모두에 구성됩니다.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -339,11 +340,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-응답 캐싱 미들웨어는 사용자 지정할 수 있는 조건 집합에 따라 자동으로 응답을 캐싱합니다. 기본적으로 GET 또는 HEAD 메서드를 통해 요청된 200(확인) 응답만 캐시됩니다. 또한 요청에는 캐시 컨트롤: 공용 헤더가 포함된 응답이 있어야 하고, 권한 부여 또는 Set-Cookie에 대한 헤더를 포함할 수 없습니다. [응답 캐싱 미들웨어에서 사용하는 캐싱 조건 전체 목록](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching)을 참조하세요.
+응답 캐싱 미들웨어는 사용자 지정할 수 있는 조건 집합에 따라 자동으로 응답을 캐싱합니다. 기본적으로 GET 또는 HEAD 메서드를 통해 요청된 200(확인) 응답만 캐시됩니다. 또한 요청에는 캐시 컨트롤: 공용 헤더가 포함된 응답이 있어야 하고, 권한 부여 또는 Set-Cookie에 대한 헤더를 포함할 수 없습니다. [응답 캐싱 미들웨어에서 사용하는 캐싱 조건 전체 목록](/aspnet/core/performance/caching/middleware#conditions-for-caching)을 참조하세요.
 
 ### <a name="data-caching"></a>데이터 캐싱
 
-전체 웹 응답 캐싱 대신(또는 외에도) 개별 데이터 쿼리의 결과를 캐싱할 수 있습니다. 이 경우 웹 서버에서 메모리 내 캐싱을 사용하거나 [분산된 캐시](https://docs.microsoft.com/aspnet/core/performance/caching/distributed)를 사용할 수 있습니다. 이 섹션에서는 메모리 내 캐싱을 구현하는 방법을 보여줍니다.
+전체 웹 응답 캐싱 대신(또는 외에도) 개별 데이터 쿼리의 결과를 캐싱할 수 있습니다. 이 경우 웹 서버에서 메모리 내 캐싱을 사용하거나 [분산된 캐시](/aspnet/core/performance/caching/distributed)를 사용할 수 있습니다. 이 섹션에서는 메모리 내 캐싱을 구현하는 방법을 보여줍니다.
 
 ConfigureServices에서 메모리(또는 분산) 캐싱 지원 추가:
 
@@ -374,7 +375,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -383,7 +384,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -393,7 +394,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -415,7 +416,7 @@ services.AddScoped<CatalogService>();
 
 이 상태에서 카탈로그 데이터를 가져오는 데이터베이스 호출은 요청마다 만들어지는 것이 아니라 분당 한 번만 만들어집니다. 사이트의 트래픽에 따라, 이는 데이터베이스에 대해 만들어지는 쿼리 수, 그리고 현재 이 서비스에서 노출하는 세 쿼리에 의존하는 홈페이지의 평균 페이지 로드 시간에 매우 큰 영향을 미칠 수 있습니다.
 
-캐싱이 구현될 때 발생하는 문제는 *부실 데이터*, 다시 말해서 원본에서 변경되었지만 오래된 버전이 캐시에 남아 있는 데이터입니다. 이 문제를 완화하는 간단한 방법은 캐시 기간을 짧게 하는 것입니다. 사용량이 많은 응용 프로그램의 경우 데이터가 캐시되는 길이를 연장해서 얻을 수 있는 이점이 제한적이기 때문입니다. 예를 들어 단일 데이터베이스 쿼리를 만들고 초당 10회 요청되는 페이지를 고려해 보세요. 이 페이지가 1분 동안 캐시되면 분당 데이터베이스 쿼리 수가 600에서 1로 99.8% 감소합니다. 그 대신 캐시 기간을 1시간으로 하면 전체 감소율이 99.997%가 되겠지만, 부실 데이터 가능성 및 잠재적 연령이 크게 증가합니다.
+캐싱이 구현될 때 발생하는 문제는 _부실 데이터_, 다시 말해서 원본에서 변경되었지만 오래된 버전이 캐시에 남아 있는 데이터입니다. 이 문제를 완화하는 간단한 방법은 캐시 기간을 짧게 하는 것입니다. 사용량이 많은 응용 프로그램의 경우 데이터가 캐시되는 길이를 연장해서 얻을 수 있는 이점이 제한적이기 때문입니다. 예를 들어 단일 데이터베이스 쿼리를 만들고 초당 10회 요청되는 페이지를 고려해 보세요. 이 페이지가 1분 동안 캐시되면 분당 데이터베이스 쿼리 수가 600에서 1로 99.8% 감소합니다. 그 대신 캐시 기간을 1시간으로 하면 전체 감소율이 99.997%가 되겠지만, 부실 데이터 가능성 및 잠재적 연령이 크게 증가합니다.
 
 또 다른 방법은 캐시에 포함된 데이터가 업데이트될 때 선제적으로 캐시 항목을 제거하는 것입니다. 키를 알고 있으면 개별 항목을 제거할 수 있습니다.
 
@@ -436,6 +437,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+캐싱은 반복해서 데이터베이스에서 동일한 값을 요청하는 웹 페이지의 성능을 크게 향상시킬 수 있습니다. 캐싱을 적용하기 전에 데이터 액세스 및 페이지 성능을 측정하고, 개선이 필요한 경우에만 캐싱을 적용해야 합니다. 캐싱은 웹 서버 메모리 리소스를 사용하고 응용 프로그램의 복잡성을 증가시키므로 이 기술을 조급하게 활용하지 않는 것이 중요합니다.
 
 >[!div class="step-by-step"]
 [이전](develop-asp-net-core-mvc-apps.md)

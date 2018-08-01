@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339659"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936956"
 ---
 # <a name="expressions-c-programming-guide"></a>식(C# 프로그래밍 가이드)
 *expression*은 단일 값, 개체, 메서드 또는 네임스페이스로 평가될 수 있는 하나 이상의 피연산자 및 0개 이상의 연산자 시퀀스입니다. 식은 리터럴 값, 메서드 호출, 연산자 및 피연산자, *단순 이름* 등으로 구성될 수 있습니다. 단순한 이름이란 변수, 형식 멤버, 메서드 매개 변수, 네임스페이스 또는 형식의 이름일 수 있습니다.  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>람다 식  
  람다 식은 이름이 없지만 입력 매개 변수와 여러 개의 문을 사용할 수 있는 "인라인 메서드"를 나타냅니다. 메서드에 인수를 전달하기 위해 LINQ에서 광범위하게 사용됩니다. 람다 식은 사용되는 컨텍스트에 따라 대리자 또는 식 트리로 컴파일됩니다. 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
   
-## <a name="expression-trees"></a>식 트리  
- 식 트리를 사용하면 식을 데이터 구조로 나타낼 수 있습니다. 쿼리 식을 SQL 데이터베이스 등의 다른 일부 컨텍스트에서 의미 있는 코드로 변환하기 위해 LINQ 공급자에서 광범위하게 사용됩니다. 자세한 내용은 [식 트리](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)를 참조하세요.  
+## <a name="expression-trees"></a>식 트리
+
+식 트리를 사용하면 식을 데이터 구조로 나타낼 수 있습니다. 쿼리 식을 SQL 데이터베이스 등의 다른 일부 컨텍스트에서 의미 있는 코드로 변환하기 위해 LINQ 공급자에서 광범위하게 사용됩니다. 자세한 내용은 [식 트리(C#)](../concepts/expression-trees/index.md)를 참조하세요.
   
 ## <a name="expression-body-definitions"></a>식 본문 정의
 

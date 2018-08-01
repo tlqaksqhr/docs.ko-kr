@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570980"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198879"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현 시기 결정
 이벤트 기반 비동기 패턴은 클래스의 비동기 동작을 표시하기 위한 패턴을 제공합니다. 이 패턴의 도입에 따라 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 비동기 동작을 표시하기 위한 두 가지 패턴 즉, <xref:System.IAsyncResult?displayProperty=nameWithType> 인터페이스를 기반으로 하는 비동기 패턴 및 이벤트 기반 패턴을 정의합니다. 이 항목에서는 두 패턴을 모두 구현하는 것이 적절한 경우에 대해 설명합니다.  
   
- <xref:System.IAsyncResult> 인터페이스를 사용한 비동기 프로그래밍에 대한 자세한 내용은 [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)를 참조하세요.  
+ <xref:System.IAsyncResult> 인터페이스를 사용한 비동기 프로그래밍에 대한 자세한 내용은 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.  
   
 ## <a name="general-principles"></a>일반 원칙  
  일반적으로 가능한 경우 언제든 이벤트 기반 비동기 패턴을 사용하여 비동기 기능을 표시해야 합니다. 그러나 이벤트 기반 패턴이 충족할 수 없는 몇 가지 요구 사항이 있습니다. 이러한 경우 이벤트 기반 패턴 외에도 <xref:System.IAsyncResult> 패턴을 구현해야 할 수 있습니다.  

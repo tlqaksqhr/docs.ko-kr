@@ -3,20 +3,18 @@ title: 아키텍처 원칙
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계 | 아키텍처 원칙
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105861"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404440"
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
 > "건축업자가 프로그래머의 프로그램 작성 방식에 따라 건물을 짓는다면 가장 먼저 도착하는 딱따구리가 문명을 파괴할 것입니다."  
 > _\- Gerald Weinberg_
-
-## <a name="summary"></a>요약
 
 유지 관리를 염두에 두고 소프트웨어 솔루션을 설계 및 디자인해야 합니다. 이 섹션에서 설명한 원칙은 깔끔하고 유지 가능한 응용 프로그램으로 이어지는 아키텍처를 결정하는 데 도움이 될 수 있습니다. 일반적으로 이러한 원칙은 응용 프로그램의 다른 부분과 긴밀하게 연결되지는 않지만 명시적 인터페이스 또는 메시지 시스템을 통해 통신하는 개별 구성 요소로 응용 프로그램을 구축하는 방법을 안내합니다.
 
@@ -64,7 +62,7 @@ ms.locfileid: "37105861"
 
 이 원칙을 응용 프로그램 아키텍처에 적용하고 논리적 엔드포인트까지 확대하면 마이크로 서비스를 얻게 됩니다. 지정된 마이크로 서비스에는 단일 책임이 있어야 합니다. 시스템 동작을 확장해야 하는 경우 일반적으로 기존 마이크로 서비스에 책임을 추가하는 것보다는 마이크로 서비스를 추가하는 것이 더 좋습니다.
 
-[마이크로 서비스 아키텍처에 대해 자세히 알아보기](http://aka.ms/MicroservicesEbook)
+[마이크로 서비스 아키텍처에 대해 자세히 알아보기](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY(반복 금지)
 
@@ -81,17 +79,17 @@ ms.locfileid: "37105861"
 
 다음은 이 원칙에 위배되는 몇 가지 예입니다.
 
--   필수 기본 클래스
+- 필수 기본 클래스.
 
--   필수 인터페이스 구현
+- 필수 인터페이스 구현.
 
--   자신을 저장할 책임이 있는 클래스(활성 레코드 패턴)
+- 자신을 저장할 책임이 있는 클래스(예: 활성 레코드 패턴).
 
--   필수 기본 생성자
+- 필수 기본 생성자.
 
--   가상 키워드가 필요한 속성
+- 가상 키워드가 필요한 속성.
 
--   지속성 관련 필수 특성
+- 지속성 관련 필수 특성.
 
 위의 기능 또는 동작을 갖고 있는 클래스의 요구 사항은 지속될 형식과 선택하는 지속성 기술 간의 결합을 추가하므로, 나중에 새로운 데이터 액세스 전략을 채택하기가 더 어려워집니다.
 
@@ -103,19 +101,20 @@ ms.locfileid: "37105861"
 
 > ### <a name="references--modern-web-applications"></a>참조 - 최신 웹 응용 프로그램
 > - **문제의 분리**  
-> <http://deviq.com/separation-of-concerns/>
-> - **캡슐화** <http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **캡슐화**  
+> <https://deviq.com/encapsulation/>
 > - **종속성 반전 원칙**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **명시적 종속성 원칙**  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **반복 금지**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **지속성 무시**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **바인딩된 컨텍스트**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [이전](choose-between-traditional-web-and-single-page-apps.md)
 [다음](common-web-application-architectures.md)

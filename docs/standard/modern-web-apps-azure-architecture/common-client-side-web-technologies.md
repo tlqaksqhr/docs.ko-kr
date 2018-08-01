@@ -3,20 +3,18 @@ title: 일반 클라이언트측 웹 기술
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 응용 프로그램 설계 | 일반 클라이언트측 웹 기술
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106764"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404608"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
 > “웹 사이트는 안팎으로 보기에 좋아야 합니다.”  
 > _- Paul Cookson_
-
-## <a name="summary"></a>요약
 
 ASP.NET Core 응용 프로그램은 웹 응용 프로그램이며 일반적으로 HTML, CSS 및 JavaScript와 같은 클라이언트측 웹 기술에 의존합니다. 레이아웃과 스타일(CSS), 동작(JavaScript를 통해)에서 페이지(HTML)의 콘텐츠를 분리하면 복잡한 웹앱에서 관심사 분리 원칙을 활용할 수 있습니다. 이러한 관심사가 긴밀히 연결되어 있지 않으면 향후에 응용 프로그램의 구조, 디자인 또는 동작을 더 쉽게 변경할 수 있습니다.
 
@@ -38,7 +36,7 @@ CSS(CSS 스타일시트)는 HTML 요소의 모양과 레이아웃을 제어하�
 
 ### <a name="css-preprocessors"></a>CSS 프로세서
 
-CSS 스타일시트에는 조건부 논리, 변수 및 다른 프로그래밍 언어의 기능에 대한 지원이 부족합니다. 따라서 같은 색, 글꼴 또는 기타 설정이 HTML 요소 및 CSS 클래스의 여러 다른 변형에 적용되는 것처럼 큰 스타일 시트에는 종종 많은 반복이 포함됩니다. CSS 프로세서는 변수 및 논리에 대한 지원을 추가하여 [DRY 원칙](http://deviq.com/don-t-repeat-yourself/)을 따르는 사용자의 스타일시트에 도움이 될 수 있습니다.
+CSS 스타일시트에는 조건부 논리, 변수 및 다른 프로그래밍 언어의 기능에 대한 지원이 부족합니다. 따라서 같은 색, 글꼴 또는 기타 설정이 HTML 요소 및 CSS 클래스의 여러 다른 변형에 적용되는 것처럼 큰 스타일 시트에는 종종 많은 반복이 포함됩니다. CSS 프로세서는 변수 및 논리에 대한 지원을 추가하여 [DRY 원칙](https://deviq.com/don-t-repeat-yourself/)을 따르는 사용자의 스타일시트에 도움이 될 수 있습니다.
 
 가장 인기 있는 CSS 프로세서는 Sass와 LESS입니다. 둘 다 CSS를 확장하며 이전 버전과 호환됩니다. 즉, 일반 CSS 파일은 유효한 Sass 또는 LESS 파일입니다. Sass는 Ruby를 기반으로 하며, LESS는 JavaScript를 기반으로 합니다. 일반적으로 둘 다 로컬 개발 프로세스의 일환으로 실행합니다. 둘 다 Gulp 또는 Grunt 작업을 사용하여 실행할 수 있도록 Visual Studio의 기본 제공 지원뿐만 아니라 사용 가능한 명령줄 도구가 있습니다.
 
@@ -48,13 +46,13 @@ JavaScript는 ECMAScript 언어 사양에 표준화된 동적이고 해석된 �
 
 웹 응용 프로그램에서 JavaScript를 작업할 때 일반적으로 수행해야 하는 다음과 같은 몇 가지 작업이 있습니다.
 
--   HTML 요소를 선택하고 해당 값을 검색 및/또는 업데이트
+- HTML 요소를 선택하고 해당 값을 검색 및/또는 업데이트.
 
--   데이터에 대한 Web API 쿼리
+- 데이터에 대한 Web API 쿼리.
 
--   Web API에 대한 명령 전송(및 해당 결과가 포함된 콜백에 응답)
+- Web API에 대한 명령 전송(및 해당 결과가 포함된 콜백에 응답).
 
--   유효성 검사 수행
+- 유효성 검사 수행.
 
 이러한 작업은 모두 JavaScript만 사용하여 수행할 수도 있지만, 이러한 작업을 쉽게 수행할 수 있도록 해주는 다양한 라이브러리가 있습니다. 이러한 라이브러리 중 첫 번째이자 가장 성공적인 것은 jQuery로, 웹 페이지에서 이러한 작업을 간소화하는 데 꾸준히 많이 사용됩니다. SPA(단일 페이지 응용 프로그램)의 경우 jQuery는 Angular 및 React가 제공하는 원하는 기능을 많이 제공하지 않습니다.
 
@@ -100,9 +98,9 @@ export class AppComponent { name = 'Angular'; }
 
 DOM 요소 대신 구성 요소 및 템플릿을 사용하면 Angular 앱은 추상화의 상위 수준에서 작업할 수 있으며 JavaScript만(“바닐라 JS”라고 함) 또는 jQuery를 사용하여 작성된 앱보다 전체 코드가 더 적습니다. 또한 Angular는 클라이언트 쪽 스크립트 파일을 구성하는 방식에 몇 가지 순서를 적용합니다. 규칙에 따라 Angular 앱은 앱 폴더에 모듈 및 구성 요소 스크립트 파일이 포함된 일반적인 폴더 구조를 사용합니다. 앱의 빌드, 배포 및 테스트와 관련된 Angular 스크립트는 일반적으로 상위 폴더에 위치합니다.
 
-또한 Angular는 CLI(명령줄 인터페이스) 도구를 적절히 사용합니다. 로컬에서 Angular 개발을 시작하면(이미 git 및 npm이 설치되어 있다고 가정) 바로 GitHub에서 리포지토리 복제가 구성되고 \`npm install\` 및 \`npm start\`가 실행됩니다. 이 외에 Angular는 프로젝트를 만들고, 파일을 추가하고, 테스트, 묶음 및 배포 작업을 지원할 수 있는 자체 CLI 도구를 함께 제공합니다. 이 CLI 도구 친화성 덕분에 Angular는 특별히 탁월한 CLI 지원이 특징인 ASP.NET Core와 호환됩니다.
+또한 Angular는 CLI(명령줄 인터페이스) 도구를 적절히 사용합니다. 로컬에서 Angular 개발을 시작하면(이미 git 및 npm이 설치되어 있다고 가정) 바로 GitHub에서 리포지토리 복제가 구성되고 `npm install` 및 `npm start`가 실행됩니다. 이 외에 Angular는 프로젝트를 만들고, 파일을 추가하고, 테스트, 묶음 및 배포 작업을 지원할 수 있는 자체 CLI 도구를 함께 제공합니다. 이 CLI 도구 친화성 덕분에 Angular는 특별히 탁월한 CLI 지원이 특징인 ASP.NET Core와 호환됩니다.
 
-Microsoft는 Angular SPA 구현을 포함하는 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture)라는 참조 응용 프로그램을 개발했습니다. 이 앱에는 온라인 상점의 장바구니를 관리하고, 해당 카탈로그의 항목을 로드 및 표시하며, 주문 생성을 처리하는 Angular 모듈이 포함됩니다. [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)에서 샘플 응용 프로그램을 보고 다운로드할 수 있습니다.
+Microsoft는 Angular SPA 구현을 포함하는 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)라는 참조 응용 프로그램을 개발했습니다. 이 앱에는 온라인 상점의 장바구니를 관리하고, 해당 카탈로그의 항목을 로드 및 표시하며, 주문 생성을 처리하는 Angular 모듈이 포함됩니다. [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)에서 샘플 응용 프로그램을 보고 다운로드할 수 있습니다.
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ React는 전체 프레임워크가 아니므로 라우팅, 웹 API 호출 및 �
 
 SPA를 지원하기에 어떤 JavaScript 프레임워크가 최선인지를 고려할 때는 다음 고려 사항을 염두에 두어야 합니다.
 
--   팀이 프레임워크 및 해당 종속성에 대해 잘 알고 있는가(일부 경우에 TypeScript 포함)?
+- 팀이 프레임워크 및 해당 종속성에 대해 잘 알고 있는가(일부 경우에 TypeScript 포함)?
 
--   프레임워크는 얼마나 독단적인가? 그리고 그러한 작업을 수행하는 기본 방식에 동의하는가?
+- 프레임워크는 얼마나 독단적인가? 그리고 그러한 작업을 수행하는 기본 방식에 동의하는가?
 
--   프레임워크(또는 도우미 라이브러리)에 앱에 필요한 모든 기능이 포함되어 있는가?
+- 프레임워크(또는 도우미 라이브러리)에 앱에 필요한 모든 기능이 포함되어 있는가?
 
--   문서화가 잘 되어 있는가?
+- 문서화가 잘 되어 있는가?
 
--   해당 커뮤니티는 얼마나 활발한가? 해당 프레임워크를 사용하여 새 프로젝트가 빌드되고 있는가?
+- 해당 커뮤니티는 얼마나 활발한가? 해당 프레임워크를 사용하여 새 프로젝트가 빌드되고 있는가?
 
--   해당 코어 팀은 얼마나 활발한가? 문제가 해결되고 있는가? 또 새 버전이 정기적으로 제공되는가?
+- 해당 코어 팀은 얼마나 활발한가? 문제가 해결되고 있는가? 또 새 버전이 정기적으로 제공되는가?
 
 JavaScript 프레임워크는 지속적으로 매우 빠르게 발전하고 있습니다. 나중에 종속된 것을 후회하게 될 프레임워크의 선택 위험을 완화하는 데 도움을 받으려면 위에 나열된 고려 사항을 사용하세요. 특히 안전 주의자인 경우 상용 지원을 제공하고 또는 대기업에서 개발되는 프레임워크를 고려하세요.
 

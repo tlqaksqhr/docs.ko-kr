@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207536"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404595"
 ---
 # <a name="the-history-of-c"></a>C#의 역사 #
 
@@ -73,7 +73,7 @@ C# 버전 3.0은 Visual Studio 2008과 함께 2007년말에 출시되었지만 �
 - [확장 메서드](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [암시적 형식 지역 변수](../language-reference/keywords/var.md)
 - [부분 메서드](../language-reference/keywords/partial-method.md)
-- 개체 및 컬렉션 이니셜라이저
+- [개체 및 컬렉션 이니셜라이저](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 되돌아보면, 이러한 특징은 대부분 필연적이고 불가분한 것입니다. 이러한 모든 특징은 전략적으로 잘 맞습니다. 일반적으로 C# 버전의 핵심 기능은 LINQ(Language-Integrated Query)라고도 하는 쿼리 식이라 생각합니다.
 

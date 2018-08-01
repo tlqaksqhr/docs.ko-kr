@@ -3,20 +3,18 @@ title: 최신 웹 응용 프로그램의 특징
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그램 설계 | 최신 웹 응용 프로그램의 특징
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105809"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404488"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 응용 프로그램의 특징
 
 > "… 적절한 설계를 사용하면 기능을 저렴하게 구현할 수 있습니다. 이 접근 방법은 힘들지만 계속 성공하고 있습니다."  
 > _\- Dennis Ritchie_
-
-## <a name="summary"></a>요약
 
 최신 웹 응용 프로그램은 사용자의 기대치와 요구 사항이 이전보다 더 높습니다. 오늘날의 웹앱은 전 세계 어느 곳에서나 연중무휴 24시간 이용할 수 있으며, 장치 또는 화면 크기에 거의 상관없이 사용할 수 있습니다. 웹 응용 프로그램은 안전하고 유연하며 수요 급증에 맞추어 확장 가능해야 합니다. 점점 더 복잡해지는 시나리오는 JavaScript를 사용하며 웹 API를 통해 효율적으로 통신하는 클라이언트에 빌드된 풍부한 사용자 경험으로 처리되어야 합니다.
 
@@ -24,15 +22,16 @@ ASP.NET Core는 최신 웹 응용 프로그램 및 클라우드 기반 호스팅
 
 ## <a name="reference-application-eshoponweb"></a>참조 응용 프로그램: eShopOnWeb
 
-이 지침에는 몇 가지 원칙과 권장 사항을 설명하는 참조 응용 프로그램인 *eShopOnWeb*이 포함되어 있습니다. 이 응용 프로그램은 셔츠, 커피 머그잔 및 기타 마케팅 항목의 카탈로그 검색을 지원하는 간단한 온라인 상점입니다. 이 참조 응용 프로그램은 이해를 돕기 위한 의도로 간단하게 제작되었습니다.
+이 지침에는 몇 가지 원칙과 권장 사항을 설명하는 참조 응용 프로그램인 _eShopOnWeb_이 포함되어 있습니다. 이 응용 프로그램은 셔츠, 커피 머그잔 및 기타 마케팅 항목의 카탈로그 검색을 지원하는 간단한 온라인 상점입니다. 이 참조 응용 프로그램은 이해를 돕기 위한 의도로 간단하게 제작되었습니다.
 
 **그림 2-1.** eShopOnWeb
 
 ![](./media/image2-1.png)
 
 > ### <a name="reference-application"></a>참조 응용 프로그램
+>
 > - **eShopOnWeb**  
-> <https://github.com/dotnet/eShopOnWeb>
+>   <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>클라우드 호스팅 및 확장 가능
 
@@ -58,7 +57,7 @@ ASP.NET Core 응용 프로그램은 단위 테스트를 지원하며, 느슨한 
 
 반대로, SPA(Single Page Applications)에는 동적으로 생성된 서버 쪽 페이지 로드(있는 경우)가 거의 없습니다. 앱을 시작하고 실행하는 데 필요한 JavaScript 라이브러리를 로드하는 정적 HTML 파일 내에서 많은 SPA가 초기화됩니다. 이러한 앱은 데이터 요구 사항에 따라 웹 API를 많이 사용하며 훨씬 풍부한 사용자 경험을 제공할 수 있습니다.
 
-많은 웹 응용 프로그램에는 기존 웹 응용 프로그램 동작(일반적으로 콘텐츠용)과 SPA(대화형 작업용)가 결합되어 있습니다. ASP.NET Core는 동일한 도구 집합 및 기본 프레임워크 라이브러리를 사용하여 동일한 응용 프로그램에서 MVC 및 웹 API를 모두 지원합니다.
+많은 웹 응용 프로그램에는 기존 웹 응용 프로그램 동작(일반적으로 콘텐츠용)과 SPA(대화형 작업용)가 결합되어 있습니다. ASP.NET Core는 동일한 도구 집합 및 기본 프레임워크 라이브러리를 사용하여 동일한 응용 프로그램에서 MVC(보기 및/또는 Razor Pages) 및 웹 API를 모두 지원합니다.
 
 ## <a name="simple-development-and-deployment"></a>간단한 개발 및 배포
 
@@ -69,12 +68,13 @@ ASP.NET Core 응용 프로그램은 간단한 텍스트 편집기 및 명령줄 
 ASP.NET Core 외에도, 기존 ASP.NET 4.x는 웹 응용 프로그램을 빌드하기 위한 견고하고 안정적인 플랫폼으로 계속 유지됩니다. ASP.NET은 풍부한 페이지 기반 응용 프로그램 개발에 적합하고 풍부한 타사 구성 요소 에코시스템을 지원하는 Web Forms뿐만 아니라 MVC 및 웹 API 개발 모델도 지원합니다. Windows Azure는 ASP.NET 4.x 응용 프로그램을 매우 오랫동안 지원해 왔으며 많은 개발자가 이 플랫폼에 익숙합니다.
 
 > ### <a name="references--modern-web-applications"></a>참조 - 최신 웹 응용 프로그램
+>
 > - **ASP.NET Core 소개**  
-> <https://docs.microsoft.com/aspnet/core/>
+>   <https://docs.microsoft.com/aspnet/core/>
 > - **ASP.NET Core를 더 좋고 차별화되는 프레임워크로 만들어 주는 6가지 주요 이점**  
-> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
+>   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **ASP.NET Core에서 테스트**  
-> <https://docs.microsoft.com/aspnet/core/testing/>
+>   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [이전](index.md)

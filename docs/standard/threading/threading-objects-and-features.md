@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591329"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874789"
 ---
 # <a name="threading-objects-and-features"></a>스레딩 개체 및 기능
 .NET Framework에서는 다중 스레드 응용 프로그램을 만들고 관리하는 데 도움이 되는 많은 개체를 제공합니다. 관리되는 스레드는 <xref:System.Threading.Thread> 클래스를 통해 표현됩니다. <xref:System.Threading.ThreadPool> 클래스는 다중 스레드 백그라운드 작업을 쉽게 만들고 관리할 수 있게 해줍니다. <xref:System.ComponentModel.BackgroundWorker> 클래스는 사용자 인터페이스와 상호 작용하는 작업에 대해 동일한 기능을 수행합니다. <xref:System.Threading.Timer> 클래스는 정해진 간격마다 백그라운드 작업을 실행합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "33591329"
  직접 스레드 관리를 수행할 필요 없이 스레드에 작업을 실행하도록 요청할 수 있게 해주는 **ThreadPool** 클래스를 설명합니다.  
   
  [타이머](../../../docs/standard/threading/timers.md)  
- **Timer**를 사용하여 대리자가 지정된 시간에 호출되도록 지정하는 방법을 설명합니다.  
+ 다중 스레드 환경에서 사용할 수 있는 타이머에 대해 설명합니다.  
   
  [모니터](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  **Monitor** 클래스를 사용하여 멤버에 대한 액세스를 동기화하거나 고유한 스레드 관리 유형을 빌드하는 방법을 설명합니다.  

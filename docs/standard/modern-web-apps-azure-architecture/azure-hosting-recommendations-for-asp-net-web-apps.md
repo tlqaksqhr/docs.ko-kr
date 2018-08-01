@@ -3,64 +3,63 @@ title: ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그램 설계 | ASP.NET 웹앱에 대한 Azure 호스팅 권장 사항
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/27/2018
+ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105711"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404530"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 
 > "모든 기간 업무 리더는 IT 부서를 거치지 않고 클라우드(SaaS라고도 함)에서 응용 프로그램을 다운로드한 후 잡지를 구독하듯 사용료를 지불합니다. 그리고 서비스가 더 이상 필요하지 않으면 사용하지 않는 장비를 굳이 한 구석에 남겨둘 필요 없이 구독을 취소하기만 하면 됩니다.”  
 > _\- Gartner 분석가 Daryl Plummer_
 
-## <a name="summary"></a>요약
-
-응용 프로그램의 요구 사항 및 아키텍처가 무엇이든 Windows Azure는 이를 지원할 수 있습니다. 호스팅 요구 사항은 수십 가지 서비스로 이루어진 매우 복잡한 응용 프로그램에 대한 정적 웹 사이트처럼 간단할 수 있습니다. ASP.NET Core 모놀리식 웹 응용 프로그램 및 지원 서비스에 권장되는 잘 알려진 구성이 몇 가지 있습니다. 아래 권장 사항은 모든 응용 프로그램, 개별 프로세스 또는 데이터에 관계없이 호스팅할 리소스의 종류에 따라 그룹화되어 있습니다.
+응용 프로그램의 요구 사항 및 아키텍처가 무엇이든 Windows Azure는 이를 지원할 수 있습니다. 호스팅 요구 사항은 수십 가지 서비스로 이루어진 복잡한 응용 프로그램에 대한 정적 웹 사이트처럼 간단할 수 있습니다. ASP.NET Core 모놀리식 웹 응용 프로그램 및 지원 서비스에 권장되는 잘 알려진 구성이 몇 가지 있습니다. 이 문서의 권장 사항은 모든 응용 프로그램, 개별 프로세스 또는 데이터에 관계없이 호스팅할 리소스의 종류에 따라 그룹화되어 있습니다.
 
 ## <a name="web-applications"></a>웹 응용 프로그램
 
 웹 응용 프로그램은 다음을 통해 호스팅할 수 있습니다.
 
--   App Service Web Apps
+- App Service Web Apps
 
--   컨테이너
+- 컨테이너
 
--   Azure Service Fabric
+- Azure Service Fabric
 
--   VM(가상 머신)
+- VM(가상 머신)
 
-이 중에서 App Service Web Apps는 대부분의 시나리오에 권장되는 접근 방법입니다. 마이크로 서비스 아키텍처의 경우 컨테이너 기반 접근 방식 또는 서비스 패브릭을 고려합니다. 응용 프로그램을 실행하는 컴퓨터에 대한 더 세부적인 제어가 필요할 경우 Azure Virtual Machines를 고려합니다.
+이 중에서 App Service Web Apps는 대부분의 시나리오에 권장되는 접근 방법입니다. 마이크로 서비스 아키텍처의 경우 컨테이너 기반 접근 방식 또는 Service Fabric을 고려합니다. 응용 프로그램을 실행하는 컴퓨터에 대한 더 세부적인 제어가 필요할 경우 Azure Virtual Machines를 고려합니다.
 
 ### <a name="app-service-web-apps"></a>App Service Web Apps
 
 App Service Web Apps는 웹 응용 프로그램 호스팅에 최적화된 완벽하게 관리되는 플랫폼을 제공합니다. 이는 비즈니스 논리에 집중할 수 있게 해주는 PaaS(Platform-as-a-service) 솔루션이며, Azure는 앱 실행 및 확장에 필요한 인프라를 관리합니다. App Service Web Apps의 몇 가지 주요 기능:
 
--   DevOps 최적화(지속적인 통합 및 업데이트, 여러 환경, A/B 테스트, 스크립팅 지원)
+- DevOps 최적화(지속적인 통합 및 업데이트, 여러 환경, A/B 테스트, 스크립팅 지원)
 
--   세계적인 규모 및 고가용성
+- 세계적인 규모 및 고가용성
 
--   SaaS 플랫폼 및 온-프레미스 데이터에 대한 연결
+- SaaS 플랫폼 및 온-프레미스 데이터에 대한 연결
 
--   보안 및 규정 준수
+- 보안 및 규정 준수
 
--   Visual Studio 통합
+- Visual Studio 통합
 
 Azure App Service는 대부분의 웹앱에 가장 적합한 선택입니다. 배포 및 관리가 플랫폼에 통합되어 있고, 사이트가 높은 트래픽 부하를 처리하기 위해 빠르게 확장될 수 있으며, 기본 제공되는 부하 분산 및 트래픽 관리자가 고가용성을 제공합니다. 온라인 마이그레이션 도구를 사용하여 기존 사이트를 Azure App Service로 쉽게 이동하거나, 웹 응용 프로그램 갤러리에서 오픈 소스 응용 프로그램을 사용하거나, 원하는 프레임워크와 도구를 사용하여 새 사이트를 만들 수 있습니다. Webjob 기능을 사용하면 백그라운드 작업 처리를 App Service 웹앱에 쉽게 추가할 수 있습니다.
 
-### <a name="containers-and-azure-container-service"></a>컨테이너 및 Azure Container Service
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-Azure Container Service를 사용하면 컨테이너화된 응용 프로그램을 실행하도록 미리 구성된 가상 머신 클러스터를 더욱 간편하게 생성, 구성 및 관리할 수 있습니다. Azure Container Service는 인기 있는 오픈 소스 일정 예약 및 오케스트레이션 도구의 최적화된 구성을 사용합니다. 따라서 기존 기술을 사용하거나, 점점 커가는 대규모 전문 커뮤니티를 이용하여 Microsoft Azure에서 컨테이너 기반 응용 프로그램을 배포하고 관리할 수 있습니다.
+AKS(Azure Kubernetes Service)는 컨테이너 오케스트레이션 전문 지식 없이도 컨테이너화된 응용 프로그램을 빠르고 쉽게 배포 및 관리할 수 있도록 해주는 호스트된 Kubernetes 환경을 관리합니다. 또한 응용 프로그램을 오프라인으로 전환하지 않고 요청 시 리소스를 프로비전, 업그레이드 및 크기 조정하여 진행 중인 작업 및 유지 관리 부담을 덜어줍니다.
 
-Azure Container Service를 사용하면 컨테이너화된 응용 프로그램을 실행하도록 미리 구성된 가상 머신 클러스터를 더욱 간편하게 생성, 구성 및 관리할 수 있습니다. Azure Container Service는 인기 있는 오픈 소스 일정 예약 및 오케스트레이션 도구의 최적화된 구성을 사용합니다. 따라서 기존 기술을 사용하거나, 점점 커가는 대규모 전문 커뮤니티를 이용하여 Microsoft Azure에서 컨테이너 기반 응용 프로그램을 배포하고 관리할 수 있습니다.
+AKS는 대부분의 책임을 Azure로 오프로드함으로써 Kubernetes 클러스터 관리에 대한 복잡성 및 운영 오버헤드를 줄입니다. 호스트된 Kubernetes 서비스처럼, Azure는 상태 모니터링 및 유지 관리와 같은 중요 작업을 처리합니다. 또한 사용자는 마스터가 아닌 사용자 클러스터 내 에이전트 노드에 대해서만 비용을 지불합니다. 관리되는 Kubernetes 서비스로서 AKS는 다음을 제공합니다.
 
-Azure Container Service의 목표는 현재 Microsoft 고객들 사이에서 널리 사용되는 오픈 소스 도구 및 기술을 사용하여 컨테이너 호스팅 환경을 제공하는 것입니다. 이를 위해 Azure Container Service는 선택한 오케스트레이터(DC/OS, Docker Swarm 또는 Kubernetes)의 표준 API 엔드포인트를 노출합니다. 이 엔드포인트를 사용하면 해당 엔드포인트와 통신할 수 있는 모든 소프트웨어를 활용할 수 있습니다. 예를 들어 Docker Swarm 엔드포인트의 경우 Docker CLI(명령줄 인터페이스)를 사용하도록 선택할 수 있습니다. DC/OS의 경우 DCOS CLI를 선택할 수 있습니다. Kubernetes의 경우 kubectl을 선택할 수 있습니다. 그림 11-1에서는 이러한 엔드포인트를 사용하여 컨테이너 클러스터를 관리하는 방법을 보여줍니다.
+- 자동화된 Kubernetes 버전 업그레이드 및 패치.
+- 간편한 클러스터 크기 조정.
+- 자체 복구 호스팅된 컨트롤 평면(마스터).
+- 비용 절감 - 실행 중인 에이전트 풀 노드에 대해서만 지불.
 
-![](./media/image11-1.png)
-
-**그림 11-1.** Docker, Kubernetes 또는 DC/OS 엔드포인트를 사용한 Azure Container Service 관리
+이제 AKS 클러스터의 노드 관리를 처리하는 Azure를 사용하면 클러스터 업그레이드와 같은 여러 작업을 수동으로 수행하지 않아도 됩니다. Azure가 사용자를 위해 이와 같은 중요한 유지 관리 작업을 처리하므로 AKS는 클러스터에 대한 직접 액세스를 제공하지 않습니다(예: SSH 사용).
 
 ### <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -68,24 +67,24 @@ Service Fabric은 새 앱을 만들거나 마이크로 서비스 아키텍처를
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 
-App Service 또는 Service Fabric에서 실행하려면 상당한 수정이 필요한 기존 응용 프로그램의 경우, 클라우드로의 마이그레이션을 간소화하기 위해 Virtual Machines를 선택할 수 있습니다. 그러나 VM을 올바르게 구성, 보호 및 유지 관리하려면 Azure App Service 및 Service Fabric보다 훨씬 더 많은 시간과 IT 전문 지식이 필요합니다. Azure Virtual Machines를 고려 중인 경우 VM 환경을 패치, 업데이트 및 관리하는 데 필요한 지속적인 유지 관리 노력을 염두에 두어야 합니다. Azure Virtual Machines는 IaaS(Infrastructure-as-a-Service)이며, App Service 및 Service Fabric은 PaaS(Platform-as-a-Service)입니다.
+App Service 또는 Service Fabric에서 실행하려면 상당한 수정이 필요한 기존 응용 프로그램의 경우, 클라우드로의 마이그레이션을 간소화하기 위해 Virtual Machines를 선택할 수 있습니다. 그러나 VM을 올바르게 구성, 보호 및 유지 관리하려면 Azure App Service 및 Service Fabric보다 훨씬 더 많은 시간과 IT 전문 지식이 필요합니다. Azure Virtual Machines를 고려 중이라면 VM 환경을 패치, 업데이트 및 관리하는 데 지속적인 유지 관리 노력이 필요함을 염두에 두어야 합니다. Azure Virtual Machines는 IaaS(서비스 형태의 인프라)이며, App Service 및 Service Fabric은 PaaS(Platform-as-a-Service)입니다.
 
 #### <a name="feature-comparison"></a>기능 비교
 
-| 기능 App Service | Service Fabric | 가상 컴퓨터 |
-|---------|----------|----------|
-| 거의 즉각적인 배포 | X | X | |
-| 재배포 없이 더 많은 컴퓨터로 확장 | X | X | |
-| 인스턴스가 콘텐츠와 구성 공유, 확장 시 재배포 또는 재구성할 필요 없음 | X | X | |
-| 여러 배포 환경(프로덕션, 준비) | X | X | |
-| 자동 OS 업데이트 관리 | X | | |
-| 32/64비트 플랫폼 간의 원활한 전환 | X | | |
-| Git, FTP를 사용하여 코드 배포 | X | | X |
-| WebDeploy를 사용하여 코드 배포 | X | | X |
-| TFS를 사용하여 코드 배포 | X | X | X |
-| 다중 계층 아키텍처의 호스트 웹 또는 웹 서비스 계층 | X | X | X |
-| Service Bus, Storage, SQL Database와 같은 Azure 서비스에 액세스 | X | X | X |
-| 모든 사용자 지정 MSI 설치 | | X | X |
+| 기능                                                                                    | App Service | 컨테이너(AKS) | Service Fabric | 가상 컴퓨터 |
+| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
+| 거의 즉각적인 배포                                                                    | X           | X                | X              |                 |
+| 재배포 없이 더 많은 컴퓨터로 확장                                               | X           | X                | X              |                 |
+| 인스턴스가 콘텐츠와 구성 공유, 확장 시 재배포 또는 재구성할 필요 없음 | X           | X                | X              |                 |
+| 여러 배포 환경(프로덕션, 준비)                                     | X           | X                | X              |                 |
+| 자동 OS 업데이트 관리                                                             | X           | X                |                |                 |
+| 32/64비트 플랫폼 간의 원활한 전환                                             | X           | X                |                |                 |
+| Git, FTP를 사용하여 코드 배포                                                                  | X           | X                |                | X               |
+| WebDeploy를 사용하여 코드 배포                                                                 | X           | X                |                | X               |
+| TFS를 사용하여 코드 배포                                                                       | X           | X                | X              | X               |
+| 다중 계층 아키텍처의 호스트 웹 또는 웹 서비스 계층                                    | X           | X                | X              | X               |
+| Service Bus, Storage, SQL Database와 같은 Azure 서비스에 액세스                              | X           | X                | X              | X               |
+| 모든 사용자 지정 MSI 설치                                                                     |             | X                | X              | X               |
 
 ## <a name="logical-processes"></a>논리적 프로세스
 
@@ -103,27 +102,30 @@ Azure는 다양한 데이터 저장 옵션을 제공하므로, 응용 프로그�
 
 ## <a name="architecture-recommendations"></a>아키텍처 권장 사항
 
-응용 프로그램의 요구 사항에 따라 아키텍처가 결정됩니다. 사용 가능한 Azure 서비스는 여러 가지가 있으며, 적절한 서비스를 선택하는 것이 중요합니다. Microsoft는 일반적인 시나리오에 최적화된 일반적인 아키텍처를 식별하는 데 도움이 되는 참조 아키텍처의 갤러리를 제공합니다. 응용 프로그램의 요구 사항과 밀접한 관련이 있거나 적어도 시작점을 제공하는 참조 아키텍처를 바인딩할 수 있습니다.
+응용 프로그램의 요구 사항에 따라 아키텍처가 결정됩니다. 여러 다양한 Azure 서비스를 사용할 수 있습니다. 적합한 서비스를 선택하는 것은 중요한 의사 결정입니다. Microsoft는 일반적인 시나리오에 최적화된 일반적인 아키텍처를 식별하는 데 도움이 되는 참조 아키텍처의 갤러리를 제공합니다. 응용 프로그램의 요구 사항과 밀접한 관련이 있거나 적어도 시작점을 제공하는 참조 아키텍처를 찾을 수 있습니다.
 
 그림 11-2는 참조 아키텍처의 예를 보여줍니다. 이 다이어그램에서는 마케팅에 최적화된 Sitecore 콘텐츠 관리 시스템 웹 사이트에 권장되는 아키텍처 접근 방식을 설명합니다.
 
 ![](./media/image11-2.png)
 
-**그림 11-2.** Sitecore 마케팅 웹 사이트 참조 아키텍처 
+**그림 11-1.** Sitecore 마케팅 웹 사이트 참조 아키텍처 
 
 **참조 - Azure 호스팅 권장 사항**
 
--   Azure 솔루션 아키텍처\
-    <https://azure.microsoft.com/solutions/architecture/>
+- Azure 솔루션 아키텍처\
+  <https://azure.microsoft.com/solutions/architecture/>
 
--   Azure 개발자 가이드\
-    <https://azure.microsoft.com/campaigns/developer-guide/>
+- Azure 개발자 가이드\
+  <https://azure.microsoft.com/campaigns/developer-guide/>
 
--   Azure App Service란?\
-    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
+- 웹앱 개요\
+  <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
--   Azure App Service, Virtual Machines, Service Fabric 및 클라우드 서비스 비교\
-    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Azure App Service, Virtual Machines, Service Fabric 및 Cloud Services 비교\
+  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+
+- AKS(Azure Kubernetes Service) 소개\
+  <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
 [이전](development-process-for-azure.md)

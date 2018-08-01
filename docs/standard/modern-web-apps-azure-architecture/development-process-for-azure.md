@@ -3,13 +3,13 @@ title: Azure 개발 프로세스
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그램 설계 | Azure 개발 프로세스
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106855"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404391"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -40,8 +40,6 @@ ms.locfileid: "37106855"
 
 [Visual Studio Code 다운로드](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure에서 호스트되는 ASP.NET Core 앱의 개발 워크플로
 
 응용 프로그램 개발 수명 주기는 각 개발자의 컴퓨터에서 시작되며, 개발자는 선호하는 언어를 사용하여 로컬로 앱을 코딩하고 테스트합니다. 개발자는 빌드 서버를 사용하여 또는 기본 제공 Azure 기능을 기반으로 선호하는 소스 제어 시스템을 선택하고 CI(연속 통합) 및/또는 CD(지속적인 업데이트/지속적인 배포)를 선택할 수 있습니다.
@@ -52,9 +50,9 @@ CI/CD를 사용하여 ASP.NET Core 응용 프로그램 개발을 시작하려면
 
 앱에 대한 릴리스 파이프라인을 만들려면 소스 제어에 응용 프로그램 코드가 있어야 합니다. 로컬 리포지토리를 설정하고 팀 프로젝트의 원격 리포지토리에 연결합니다. 다음 지침을 따릅니다.
 
--   [Git 및 Visual Studio와 코드 공유](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) 또는
+- [Git 및 Visual Studio와 코드 공유](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) 또는
 
--   [TFVC 및 Visual Studio와 코드 공유](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [TFVC 및 Visual Studio와 코드 공유](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 응용 프로그램을 배포할 Azure App Service를 만듭니다. Azure Portal에서 App Services 블레이드로 이동하여 웹앱을 만듭니다. +추가를 클릭하고, 웹앱 템플릿을 선택하고, 만들기를 클릭하고, 이름과 기타 세부 정보를 입력합니다. 웹앱은 {name}.azurewebsites.net에서 액세스할 수 있습니다.
 
@@ -98,7 +96,7 @@ Azure에 배포할 ASP.NET Core 응용 프로그램 개발은 일반적인 응�
 
 빌드가 성공하면 CD 프로세스에서는 생성된 빌드 아티팩트를 선택합니다. 여기에는 웹 배포 패키지가 포함됩니다. 빌드 서버는 이 패키지를 Azure App Service에 배포하여 기존 서비스를 새로 만든 서비스로 바꿉니다. 일반적으로 이 단계는 스테이징 환경을 대상으로 하지만, 일부 응용 프로그램은 CD 프로세스를 통해 프로덕션 환경에 직접 배포합니다.
 
-#### <a name="step-5-azure-app-service-web-app"></a>5단계. Azure App Service. 웹앱.
+#### <a name="step-5-azure-app-service-web-app"></a>5단계. Azure App Service 웹앱
 
 배포되면 ASP.NET Core 응용 프로그램은 Azure App Service 웹앱의 컨텍스트 내에서 실행됩니다. 이 웹앱은 Azure Portal을 사용하여 모니터링하고 추가로 구성할 수 있습니다.
 
@@ -110,7 +108,6 @@ Azure에 배포할 ASP.NET Core 응용 프로그램 개발은 일반적인 응�
 
 **ASP.NET Core 앱을 빌드하고 Azure에 배포**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [이전](test-asp-net-core-mvc-apps.md)
