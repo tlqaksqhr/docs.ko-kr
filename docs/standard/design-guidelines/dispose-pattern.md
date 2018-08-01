@@ -41,15 +41,15 @@ ms.locfileid: "36948552"
   
  패턴에 대 한 주요 목표는 구현의 복잡성을 줄이기 위해는 <xref:System.Object.Finalize%2A> 및 <xref:System.IDisposable.Dispose%2A> 메서드. 메서드 (차이점은 장의 뒷부분에 나오는 설명 참조)에 대 한 일부는 아니지만 일부 코드 경로 공유 하는 사실에서 복잡 한 형태소 분석 합니다. 또한 결정적 리소스 관리에 대 한 언어 지원의 진화와 관련 된 패턴의 일부 요소에 대 한 이유 때문에 있습니다.  
   
- **✓ 않습니다** 삭제 가능한 형식은의 인스턴스를 포함 하는 형식에 기본 Dispose 패턴을 구현 합니다. 참조는 [기본 Dispose 패턴](#basic_pattern) 기본 패턴에 대 한 자세한 내용은 섹션.  
+ **✓ DO** 삭제 가능한 형식은의 인스턴스를 포함 하는 형식에 기본 Dispose 패턴을 구현 합니다. 참조는 [기본 Dispose 패턴](#basic_pattern) 기본 패턴에 대 한 자세한 내용은 섹션.  
   
  형식이 다른 삭제 가능한 개체의 수명을 담당 이면 개발자 너무을 삭제 하는 방법을 해야 합니다. 컨테이너의를 사용 하 여 `Dispose` 메서드는 가능 하도록 하는 편리한 방법입니다.  
   
- **✓ 않습니다** 기본 Dispose 패턴을 구현 하 고 보유 중인 리소스를 명시적으로 해제 해야 하 고 종료자가 없는 형식에 종료자를 제공 합니다.  
+ **✓ DO** 기본 Dispose 패턴을 구현 하 고 보유 중인 리소스를 명시적으로 해제 해야 하 고 종료자가 없는 형식에 종료자를 제공 합니다.  
   
  예를 들어 관리 되지 않는 메모리 버퍼를 저장 하는 형식에 패턴을 구현 되어야 합니다. [종료 가능 형식](#finalizable_types) 섹션 종료자를 구현 하는 데 관련 된 지침에 설명 합니다.  
   
- **✓ 고려** 클래스에 직접 저장 하지 않으므로 관리 되지 않는 리소스 또는 삭제 가능한 개체 이지만 수행 하는 하위 종류가 가능성은 기본 Dispose 패턴을 구현 합니다.  
+ **✓ CONSIDER** 클래스에 직접 저장 하지 않으므로 관리 되지 않는 리소스 또는 삭제 가능한 개체 이지만 수행 하는 하위 종류가 가능성은 기본 Dispose 패턴을 구현 합니다.  
   
  이 예는는 <xref:System.IO.Stream?displayProperty=nameWithType> 클래스입니다. 모든 리소스를 차지 하지 않는 하는 추상 기본 클래스는 아니지만 대부분의 하위 클래스 및이 때문에이 패턴 구현 합니다.  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
  또한이 섹션으로 이미 Dispose 패턴을 구현 하지 않는 기본 클래스에 적용 됩니다. 이미의 패턴을 구현 하는 클래스에서 상속 하는 경우 재정의 하기만 `Dispose(bool)` 메서드를 추가 하는 리소스 정리 논리를 제공 합니다.  
   
- **✓ 않습니다** 선언는 `protected virtual void Dispose(bool disposing)` 관련 된 모든 논리를 중앙 집중화 메서드 관리 되지 않는 리소스를 해제 합니다.  
+ **✓ DO** 선언는 `protected virtual void Dispose(bool disposing)` 관련 된 모든 논리를 중앙 집중화 메서드 관리 되지 않는 리소스를 해제 합니다.  
   
  이 방법에서는 모든 리소스 정리를 수행 합니다. 메서드는 모두 종료자에서 및 `IDisposable.Dispose` 메서드. 매개 변수는 종료 자가 내에서 호출 되는 경우 false 됩니다. 종료 하는 동안 실행 되는 모든 코드에는 다른 종료 가능 개체에 액세스 하는 데 사용할 해야 합니다. 종료자를 구현 세부 정보는 다음 섹션에 설명 되어 있습니다.  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```  
   
- **✓ 않습니다** 구현는 `IDisposable` 단순히 호출 하 여 인터페이스 `Dispose(true)` 이어서 `GC.SuppressFinalize(this)`합니다.  
+ **✓ DO** 구현는 `IDisposable` 단순히 호출 하 여 인터페이스 `Dispose(true)` 이어서 `GC.SuppressFinalize(this)`합니다.  
   
  에 대 한 호출 `SuppressFinalize` 경우에 발생 해야 `Dispose(true)` 성공적으로 실행 합니다.  
   
@@ -108,7 +108,7 @@ public void Dispose(){
 }  
 ```  
   
- **X 하지 않으면** 매개 변수가 없는 확인 `Dispose` 가상 메서드.  
+ **X DO NOT** 매개 변수가 없는 확인 `Dispose` 가상 메서드.  
   
  `Dispose(bool)` 메서드는 서브 클래스에서 재정의 해야 합니다.  
   
@@ -126,11 +126,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X 하지 마십시오** 모든 오버 로드의 선언 된 `Dispose` 이외의 다른 방법 `Dispose()` 및 `Dispose(bool)`합니다.  
+ **X DO NOT** 모든 오버 로드의 선언 된 `Dispose` 이외의 다른 방법 `Dispose()` 및 `Dispose(bool)`합니다.  
   
  `Dispose` 이 패턴을 체계화 하 고 구현자, 사용자 및 컴파일러 간에 혼동을 방지 하려면 예약 된 단어를 고려 되어야 합니다. 일부 언어 특정 형식에 자동으로이 패턴을 구현 하도록 선택할 수 있습니다.  
   
- **✓ 않습니다** 허용 된 `Dispose(bool)` 메서드를 두 번 이상 호출할 수 있습니다. 메서드는 아무것도 수행 하지 않는 첫 번째 호출 이후의 수도 있습니다.  
+ **✓ DO** 허용 된 `Dispose(bool)` 메서드를 두 번 이상 호출할 수 있습니다. 메서드는 아무것도 수행 하지 않는 첫 번째 호출 이후의 수도 있습니다.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **하지 말고 X** 내에서 예외를 throw `Dispose(bool)` 포함 하는 프로세스 손상 되어 중요 한 상황에 따라 제외 하 고 (누수, 일치 하지 않는 공유 상태 등.).  
+ **X AVOID** 내에서 예외를 throw `Dispose(bool)` 포함 하는 프로세스 손상 되어 중요 한 상황에 따라 제외 하 고 (누수, 일치 하지 않는 공유 상태 등.).  
   
  사용자가 기대 하는에 대 한 호출 `Dispose` 예외가 발생 하지 것입니다.  
   
  경우 `Dispose` 예외를 발생 시킬 수 있습니다, finally 블록 정리 논리를 더 이상 실행 되지 것입니다. 이 해결 하려면 사용자를 호출할 때마다 래핑할 해야 `Dispose` (내는 finally 블록!) try 블록에 있는 까지로 매우 복잡 한 정리 처리기입니다. 실행 하는 경우는 `Dispose(bool disposing)` 메서드를 삭제 하는 것이 false 예외가 throw 되지 않습니다. 이렇게 종료자 컨텍스트 내에서 실행 하는 경우 프로세스가 종료 됩니다.  
   
- **✓ 않습니다** throw 한 <xref:System.ObjectDisposedException> 개체의 삭제 된 후에 사용할 수 없는 멤버에서.  
+ **✓ DO** throw 한 <xref:System.ObjectDisposedException> 개체의 삭제 된 후에 사용할 수 없는 멤버에서.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ 고려** 메서드를 제공 하 `Close()`, 외에 `Dispose()`, 영역에서 표준 용어 닫기 인지 합니다.  
+ **✓ CONSIDER** 메서드를 제공 하 `Close()`, 외에 `Dispose()`, 영역에서 표준 용어 닫기 인지 합니다.  
   
  이렇게 할 경우 반드시 귀하에 게는 `Close` 구현 동일 `Dispose` 구현는 `IDisposable.Dispose` 메서드 명시적으로 합니다.  
   
@@ -230,15 +230,15 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **하지 말고 X** 유형을 종료 가능 만드는 합니다.  
+ **X AVOID** 유형을 종료 가능 만드는 합니다.  
   
  종료 자가 필요한 생각 하는 모든 경우를 신중히 고려 합니다. 실제는 한 성능 및 코드 복잡성 관점에서 종료자를 사용 하 여 인스턴스와 관련 된 비용입니다. 와 같은 리소스 래퍼를 사용 하는 것을 선호 <xref:System.Runtime.InteropServices.SafeHandle> 가능한 경우에 관리 되지 않는 리소스를 캡슐화, 하는 경우 종료자 불필요 하 게 만드는 자체 리소스 정리에 대 한 래퍼입니다.  
   
- **X 하지 않으면** 값 형식을 개체로 확인 합니다.  
+ **X DO NOT** 값 형식을 개체로 확인 합니다.  
   
  실제로 참조 형식에만 CLR에 의해 종료 가져오기 및 값 형식에 종료자를 배치 하려고 하므로 무시 됩니다. C# 및 c + + 컴파일러에서이 규칙을 적용 합니다.  
   
- **✓ 않습니다** 형식이 자체 종료 자가 없는 관리 되지 않는 리소스를 해제 하는 일을 담당 하는 경우 종료 가능 형식을 확인 합니다.  
+ **✓ DO** 형식이 자체 종료 자가 없는 관리 되지 않는 리소스를 해제 하는 일을 담당 하는 경우 종료 가능 형식을 확인 합니다.  
   
  종료자를 구현 하는 경우 호출 `Dispose(false)` 내 모든 리소스 정리 논리를 배치 하 고는 `Dispose(bool disposing)` 메서드.  
   
@@ -255,25 +255,25 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ 않습니다** 줄어드는 경우 모든 형식에 대해 기본 Dispose 패턴을 구현 합니다.  
+ **✓ DO** 줄어드는 경우 모든 형식에 대해 기본 Dispose 패턴을 구현 합니다.  
   
  이렇게 하면 형식의 사용자를 명시적으로 종료 자가 담당 이러한 동일한 리소스의 명확한 정리 작업을 수행할 수 있습니다.  
   
- **X 하지 않으면** 는 것은 이미 종료 되었을 상당한 위험 있기 때문에 종료 자가 코드 경로에 추가 된 줄어드는 경우 개체에 액세스 합니다.  
+ **X DO NOT** 는 것은 이미 종료 되었을 상당한 위험 있기 때문에 종료 자가 코드 경로에 추가 된 줄어드는 경우 개체에 액세스 합니다.  
   
  예를 들어 다른 줄어드는 경우 개체 B에 대 한 참조가 있는 종료 가능 개체가 A 안정적으로에 사용할 수 없습니다 B A의 종료 자가 또는 그 반대의 경우도 마찬가지입니다. 종료자 (보다 짧은 중요 한 종료에 대 한 약한 정렬 보증) 임의의 순서로 호출 됩니다.  
   
  또한, 응용 프로그램 도메인 언로드 동안 또는 프로세스를 종료 하는 동안 정적 변수에 저장 된 개체의 특정 지점에서 수집 가져오기 주의 합니다. 종료 가능 개체 (또는 정적 변수에 저장 된 값을 사용할 수 있는 정적 메서드 호출)를 참조 하는 정적 변수가 되지 않을 수 있습니다에 액세스할 경우에 안전 하 게 보호 <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> true를 반환 합니다.  
   
- **✓ 않습니다** 확인 프로그램 `Finalize` 보호 된 메서드에 있습니다.  
+ **✓ DO** 확인 프로그램 `Finalize` 보호 된 메서드에 있습니다.  
   
  C#, c + +, 및 VB.NET 개발자 필요가 없습니다 이런, 컴파일러는이 지침을 적용 하는 데 도움이 되므로 합니다.  
   
- **X 하지 않으면** 종료자 논리 시스템에 중요 한 오류를 제외 하 고 답변된 예외 이스케이프 합니다.  
+ **X DO NOT** 종료자 논리 시스템에 중요 한 오류를 제외 하 고 답변된 예외 이스케이프 합니다.  
   
  예외가 종료자에서를 CLR 종료 됩니다 (현재.NET Framework 버전 2.0)에서는 전체 프로세스를 실행 및 제어 된 방식으로 해제 되지 리소스에서 다른 종료자를 방지 합니다.  
   
- **✓ 고려** 만들고 중요 한 종료 가능 개체를 사용 하 여 (포함 된 형식 계층 구조와 형식을 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>)는 종료자 절대적으로 실행 해야 경우에 강제 응용 프로그램 도메인 언로드 및 스레드 상황에 대 한 중단합니다.  
+ **✓ CONSIDER** 만들고 중요 한 종료 가능 개체를 사용 하 여 (포함 된 형식 계층 구조와 형식을 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>)는 종료자 절대적으로 실행 해야 경우에 강제 응용 프로그램 도메인 언로드 및 스레드 상황에 대 한 중단합니다.  
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   

@@ -15,13 +15,13 @@ ms.locfileid: "33572816"
 # <a name="systemxml-usage"></a>System.Xml 사용법
 이 섹션에 있는 여러 유형의 사용에 대 한 설명 <xref:System.Xml?displayProperty=nameWithType> XML 데이터를 나타내기 위해 사용할 수 있는 네임 스페이스입니다.  
   
- **X 하지 않으면** 사용 <xref:System.Xml.XmlNode> 또는 <xref:System.Xml.XmlDocument> XML 데이터를 표시 하도록 합니다. 인스턴스를 사용 하 여 유사한 <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, 또는 유형의 하위 <xref:System.Xml.Linq.XNode> 대신 합니다. `XmlNode` 및 `XmlDocument` 공용 Api에서 노출 하는 데 설계 되지 않았습니다.  
+ **X DO NOT** 사용 <xref:System.Xml.XmlNode> 또는 <xref:System.Xml.XmlDocument> XML 데이터를 표시 하도록 합니다. 인스턴스를 사용 하 여 유사한 <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, 또는 유형의 하위 <xref:System.Xml.Linq.XNode> 대신 합니다. `XmlNode` 및 `XmlDocument` 공용 Api에서 노출 하는 데 설계 되지 않았습니다.  
   
- **✓ 않습니다** 사용 `XmlReader`, `IXPathNavigable`, 또는 유형의 하위 `XNode` 입력 또는 출력을 사용 하거나 XML을 반환 하는 멤버의으로 합니다.  
+ **✓ DO** 사용 `XmlReader`, `IXPathNavigable`, 또는 유형의 하위 `XNode` 입력 또는 출력을 사용 하거나 XML을 반환 하는 멤버의으로 합니다.  
   
  대신 이러한 추상화를 사용 하 여 `XmlDocument`, `XmlNode`, 또는 <xref:System.Xml.XPath.XPathDocument>없기 때문에이 분리 하는 메모리 내 XML 문서의 특정 구현에서 메서드를 노출 하는 가상 XML 데이터 원본으로 작업 하도록 허용 `XNode` `XmlReader`, 또는 <xref:System.Xml.XPath.XPathNavigator>합니다.  
   
- **X 하지 않으면** 하위 클래스 `XmlDocument` 경우 만들려면 기본 개체 모델 또는 데이터 원본에 대 한 XML 뷰를 나타내는 형식입니다.  
+ **X DO NOT** 하위 클래스 `XmlDocument` 경우 만들려면 기본 개체 모델 또는 데이터 원본에 대 한 XML 뷰를 나타내는 형식입니다.  
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572985"
 ---
 # <a name="framework-design-guidelines"></a>프레임워크 디자인 지침
 이 섹션을 확장 하 고.NET Framework와 상호 작용 하는 라이브러리를 디자인 하기 위한 지침을 제공 합니다. 목표를 통합된 프로그래밍 모델 개발에 사용 되는 프로그래밍 언어와 독립적을 제공 하 여의 사용 편이성과 API 일관성을 확인 하는 라이브러리 디자이너 있습니다. 클래스와.NET Framework를 확장 하는 구성 요소를 개발 하는 경우 이러한 지침을 따르는 것이 좋습니다. 일관성 없는 라이브러리 부정적인 개발자 생산성에 영향을 줍니다 디자인과 채택 하지 못하도록 합니다.  
