@@ -1,1 +1,1 @@
-<span data-ttu-id="2fea9-101">이식 가능한 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="2fea9-101">Portable Class Library</span></span>
+<span data-ttu-id="5c809-101">이식 가능한 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="5c809-101">Portable Class Library</span></span>
