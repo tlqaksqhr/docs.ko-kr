@@ -1,18 +1,18 @@
 ---
 title: SQL-CLR 형식 매핑
-ms.date: 03/30/2017
+ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33365529"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 형식 매핑
 LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자가 선택한 프로그래밍 언어로 표현되는 개체 모델에 매핑됩니다. 응용 프로그램을 실행하면 LINQ to SQL에서는 개체 모델의 통합 언어 쿼리를 SQL로 변환하여 실행을 위해 데이터베이스로 전송합니다. 데이터베이스에서 결과가 반환되면 LINQ to SQL에서는 해당 결과를 사용자의 프로그래밍 언어로 작업할 수 있는 개체로 다시 변환합니다.  
   
- 개체 모델과 데이터베이스 간에 데이터를 변환 하려면 한 *형식 매핑* 정의 해야 합니다. LINQ to SQL에서는 형식 매핑을 사용하여 각 CLR(공용 언어 런타임) 형식을 특정 SQL Server 형식과 연결합니다. 특성 기반 매핑을 사용하여 개체 모델 내부에 형식 매핑 및 데이터베이스 구조와 테이블 관계 같은 다른 매핑 정보를 정의할 수 있습니다. 또는 외부 매핑 파일을 사용하여 개체 모델 외부에 매핑 정보를 지정할 수도 있습니다. 자세한 내용은 참조 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) 및 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
+ 개체 모델과 데이터베이스 간에 데이터를 변환 하기 위해 한 *형식 매핑* 정의 해야 합니다. LINQ to SQL에서는 형식 매핑을 사용하여 각 CLR(공용 언어 런타임) 형식을 특정 SQL Server 형식과 연결합니다. 특성 기반 매핑을 사용하여 개체 모델 내부에 형식 매핑 및 데이터베이스 구조와 테이블 관계 같은 다른 매핑 정보를 정의할 수 있습니다. 또는 외부 매핑 파일을 사용하여 개체 모델 외부에 매핑 정보를 지정할 수도 있습니다. 자세한 내용은 [특성 기반 매핑을](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) 하 고 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
   
  이 항목에서는 다음 사항에 대해 설명합니다.  
   
@@ -36,19 +36,21 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>기본 형식 매핑  
- 개체 모델 또는 외부 매핑 파일은 O/R 디자이너(개체 관계형 디자이너) 또는 SQLMetal 명령줄 도구를 사용하여 자동으로 만들 수 있습니다. 이러한 도구의 기본 형식 매핑은 SQL Server 데이터베이스 내의 열에 매핑될 CLR 형식을 정의합니다. 이러한 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [개체 모델을 만드는](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)합니다.  
+ 개체 모델 또는 외부 매핑 파일은 O/R 디자이너(개체 관계형 디자이너) 또는 SQLMetal 명령줄 도구를 사용하여 자동으로 만들 수 있습니다. 이러한 도구의 기본 형식 매핑은 SQL Server 데이터베이스 내의 열에 매핑될 CLR 형식을 정의합니다. 이러한 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)합니다.  
   
- <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 메서드를 사용하여 개체 모델 또는 외부 매핑 파일의 매핑 정보를 기초로 SQL Server 데이터베이스를 만들 수도 있습니다. <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 메서드의 기본 형식 매핑은 개체 모델의 CLR 형식에 매핑되도록 만들 SQL Server 열의 형식을 정의합니다. 자세한 내용은 참조 [하는 방법: 동적으로 데이터베이스를 만들](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)합니다.  
+ <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 메서드를 사용하여 개체 모델 또는 외부 매핑 파일의 매핑 정보를 기초로 SQL Server 데이터베이스를 만들 수도 있습니다. <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 메서드의 기본 형식 매핑은 개체 모델의 CLR 형식에 매핑되도록 만들 SQL Server 열의 형식을 정의합니다. 자세한 내용은 [방법: 동적으로 데이터베이스를 만들](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)합니다.  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>형식 매핑 런타임 동작 매트릭스  
- 다음 다이어그램에서는 데이터를 데이터베이스에서 검색하거나 데이터베이스에 저장할 때 특정 형식 매핑에 대해 예상되는 런타임 동작을 보여 줍니다. serialization의 경우를 제외하고 LINQ to SQL에서는 이 매트릭스에 지정되어 있는 CLR 또는 SQL Server 데이터 형식 간 매핑만 지원합니다. Serialization 지원에 대 한 자세한 내용은 참조 하십시오. [이진 Serialization](#BinarySerialization)합니다.  
-  
+ 다음 다이어그램에서는 데이터를 데이터베이스에서 검색하거나 데이터베이스에 저장할 때 특정 형식 매핑에 대해 예상되는 런타임 동작을 보여 줍니다. serialization의 경우를 제외하고 LINQ to SQL에서는 이 매트릭스에 지정되어 있는 CLR 또는 SQL Server 데이터 형식 간 매핑만 지원합니다. Serialization 지원에 대 한 자세한 내용은 참조 하세요. [이진 Serialization](#BinarySerialization)합니다.  
+ 
+![SQL CLR 데이터 형식 매핑 테이블에 SQL Server](media/sql-clr-type-mapping.png)
+
 > [!NOTE]
 >  일부 형식 매핑의 경우 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다.  
   
 ### <a name="custom-type-mapping"></a>사용자 지정 형식 매핑  
- LINQ to SQL을 사용할 경우 O/R 디자이너, SQLMetal 및 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 메서드에 사용되는 기본 형식 매핑에 제한이 없습니다. DBML 파일에 명시적으로 지정하는 방법으로 사용자 지정 형식 매핑을 만들 수 있습니다. 그런 다음 이 DBML 파일을 사용하여 개체 모델 코드 및 매핑 파일을 만들 수 있습니다. 자세한 내용은 참조 [SQL-CLR 사용자 지정 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)합니다.  
+ LINQ to SQL을 사용할 경우 O/R 디자이너, SQLMetal 및 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 메서드에 사용되는 기본 형식 매핑에 제한이 없습니다. DBML 파일에 명시적으로 지정하는 방법으로 사용자 지정 형식 매핑을 만들 수 있습니다. 그런 다음 이 DBML 파일을 사용하여 개체 모델 코드 및 매핑 파일을 만들 수 있습니다. 자세한 내용은 [SQL-CLR 사용자 지정 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)합니다.  
   
 <a name="BehaviorDiffs"></a>   
 ## <a name="behavior-differences-between-clr-and-sql-execution"></a>CLR 및 SQL 실행 간의 동작 차이  
@@ -58,7 +60,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
 -   SQL Server에서는 일부 데이터 형식이 CLR에서 이에 해당되는 데이터 형식과 다르게 정렬됩니다. 예를 들어 SQL Server의 `UNIQUEIDENTIFIER` 데이터 형식은 CLR의 <xref:System.Guid?displayProperty=nameWithType> 데이터 형식과 다르게 정렬됩니다.  
   
--   SQL Server에서는 일부 문자열의 비교 연산이 CLR과 다르게 처리됩니다. SQL Server의 경우 문자열 비교 동작은 서버의 데이터 정렬 설정에 따라 다릅니다. 자세한 내용은 참조 [데이터 정렬 작업](http://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server 온라인 설명서의 합니다.  
+-   SQL Server에서는 일부 문자열의 비교 연산이 CLR과 다르게 처리됩니다. SQL Server의 경우 문자열 비교 동작은 서버의 데이터 정렬 설정에 따라 다릅니다. 자세한 내용은 [데이터 정렬 작업](http://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server 온라인 설명서의 합니다.  
   
 -   SQL Server에서는 매핑된 일부 함수에 대해 CLR과는 다른 값을 반환할 수 있습니다. 예를 들어 두 문자열이 후행 공백에서만 차이가 있는 경우 SQL Server에서는 두 문자열이 동일한 것으로 간주되는 반면 CLR에서는 두 문자열이 다른 것으로 간주되기 때문에 같음 함수가 각각 다른 값을 반환합니다.  
   
@@ -77,9 +79,9 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 > [!NOTE]
 >  SQL 텍스트 형식을 CLR <xref:System.Enum?displayProperty=nameWithType>에 매핑할 경우에는 매핑되는 SQL 열에 <xref:System.Enum> 멤버의 이름만 포함해야 합니다. 다른 값은 <xref:System.Enum>에 매핑되는 SQL 열에 사용할 수 없습니다.  
   
- O/R 디자이너 및 SQLMetal 명령줄 도구는 SQL 형식을 CLR <xref:System.Enum> 클래스에 자동으로 매핑할 수 없습니다. O/R 디자이너 및 SQLMetal에 사용하려면 DBML 파일을 사용자 지정하여 이 매핑을 명시적으로 구성해야 합니다. 사용자 지정 형식 매핑에 대 한 자세한 내용은 참조 [SQL-CLR 사용자 지정 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)합니다.  
+ O/R 디자이너 및 SQLMetal 명령줄 도구는 SQL 형식을 CLR <xref:System.Enum> 클래스에 자동으로 매핑할 수 없습니다. O/R 디자이너 및 SQLMetal에 사용하려면 DBML 파일을 사용자 지정하여 이 매핑을 명시적으로 구성해야 합니다. 사용자 지정 형식 매핑에 대 한 자세한 내용은 참조 하세요. [SQL-CLR 사용자 지정 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)합니다.  
   
- 다른 숫자 및 텍스트 열;와 같은 형식의 열거형이 사용 되는 SQL 열 때문에 이러한 도구는 달리 의도 및 기본적으로 매핑됩니다 다음에 설명 된 대로 [숫자 매핑](#NumericMapping) 및 [텍스트 및 XML 매핑](#TextMapping) 섹션. DBML 파일에 코드를 생성 하는 방법에 대 한 자세한 내용은 참조 [LINQ to SQL에서에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)합니다.  
+ 다른 숫자 및 텍스트 열 형식이 동일한 열거형이 사용 하는 SQL 열 이기 때문에 이러한 도구는 프로그램 의도 및 인식 기본적으로 매핑됩니다 다음에 설명 된 대로 [숫자 매핑](#NumericMapping) 하 고 [텍스트 및 XML 매핑](#TextMapping) 섹션입니다. DBML 파일을 사용 하 여 코드를 생성 하는 방법에 대 한 자세한 내용은 참조 하세요. [LINQ to SQL에서에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)합니다.  
   
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드는 CLR <xref:System.Enum?displayProperty=nameWithType> 형식에 매핑되는 숫자 형식의 SQL 열을 만듭니다.  
   
@@ -120,7 +122,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
  이 외에도 여러 가지 숫자 매핑을 선택할 수 있지만 일부의 경우에는 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다. 자세한 내용은 참조는 [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix)합니다.  
   
 ### <a name="decimal-and-money-types"></a>Decimal 및 Money 형식  
- SQL Server의 기본 정밀도 `DECIMAL` 유형 (18 진수 소수점 왼쪽 및 오른쪽)는 CLR의 전체 자릿수 보다 훨씬 작습니다 <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` 것와 쌍을 이루는 기본적으로 형식입니다. 이 때문에 데이터베이스에 데이터를 저장할 때 전체 자릿수가 손실될 수 있습니다. 그러나 SQL Server의 `DECIMAL` 형식이 30자리 이상으로 구성된 경우에는 그 반대의 결과가 발생할 수 있습니다. SQL Server `DECIMAL` 형식의 전체 자릿수가 CLR <xref:System.Decimal?displayProperty=nameWithType>의 전체 자릿수보다 크게 구성된 경우 데이터베이스에서 데이터를 검색할 때 전체 자릿수가 손실될 수 있습니다.  
+ SQL Server의 기본 정밀도 `DECIMAL` 형식 (18 자리 왼쪽을 소수점의 오른쪽) CLR의 전체 자릿수 보다 훨씬 작습니다 <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` 기본적으로 함께 하는 형식입니다. 이 때문에 데이터베이스에 데이터를 저장할 때 전체 자릿수가 손실될 수 있습니다. 그러나 SQL Server의 `DECIMAL` 형식이 30자리 이상으로 구성된 경우에는 그 반대의 결과가 발생할 수 있습니다. SQL Server `DECIMAL` 형식의 전체 자릿수가 CLR <xref:System.Decimal?displayProperty=nameWithType>의 전체 자릿수보다 크게 구성된 경우 데이터베이스에서 데이터를 검색할 때 전체 자릿수가 손실될 수 있습니다.  
   
  CLR `MONEY` 형식과 기본적으로 쌍을 이루는 SQL Server `SMALLMONEY` 및 <xref:System.Decimal?displayProperty=nameWithType> 형식도 전체 자릿수가 훨씬 적기 때문에 데이터베이스에 데이터를 저장할 때 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다.  
   
@@ -160,10 +162,10 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
 -   설명  
   
- 매핑할 수 있지만 <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XDocument> 에 표시 된 대로 SQL Server에는 [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드는 이러한 형식에 대 한 기본 SQL Server 형식 매핑이 없습니다.  
+ 매핑할 수는 있지만 <xref:System.Xml.Linq.XElement> 하 고 <xref:System.Xml.Linq.XDocument> 에 표시 된 대로 SQL Server에는 [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드가 이러한 형식에 대 한 기본 SQL Server 형식 매핑이 없습니다.  
   
 ### <a name="custom-types"></a>사용자 지정 형식  
- 클래스를 구현 하면 `Parse()` 및 `ToString()`, 모든 SQL 텍스트 형식에는 개체를 매핑할 수 있습니다 (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). 개체는 `ToString()`에서 반환하는 값을 매핑된 데이터베이스 열에 전송함으로써 데이터베이스에 저장되고, 데이터베이스에서 반환하는 문자열에 대해 `Parse()`를 호출함으로써 다시 생성됩니다.  
+ 클래스를 구현 하는 경우 `Parse()` 하 고 `ToString()`, SQL 텍스트 형식으로 개체를 매핑할 수 있습니다 (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). 개체는 `ToString()`에서 반환하는 값을 매핑된 데이터베이스 열에 전송함으로써 데이터베이스에 저장되고, 데이터베이스에서 반환하는 문자열에 대해 `Parse()`를 호출함으로써 다시 생성됩니다.  
   
 > [!NOTE]
 >  LINQ to SQL에서 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>을 사용한 serialization은 지원되지 않습니다.  
@@ -195,12 +197,12 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 >  SQL Server 형식 `DATETIME2`, `DATETIMEOFFSET`, `DATE` 및 `TIME`은 Microsoft SQL Server 2008부터 사용할 수 있습니다. LINQ to SQL에서는 .NET Framework 버전 3.5 SP1부터 이러한 새로운 형식의 매핑이 지원됩니다.  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- CLR <xref:System.DateTime?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수는 `DATETIME` 메서드의 기본 형식 매핑인 SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수보다 큽니다. `DATETIME`의 범위를 벗어나는 날짜와 관련된 예외가 발생하지 않도록 하려면 Microsoft SQL Server 2008부터 사용할 수 있는 `DATETIME2`를 사용하세요. `DATETIME2` 범위와 CLR의 전체 자릿수가 일치 시킬 수 <xref:System.DateTime?displayProperty=nameWithType>합니다.  
+ CLR <xref:System.DateTime?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수는 `DATETIME` 메서드의 기본 형식 매핑인 SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수보다 큽니다. `DATETIME`의 범위를 벗어나는 날짜와 관련된 예외가 발생하지 않도록 하려면 Microsoft SQL Server 2008부터 사용할 수 있는 `DATETIME2`를 사용하세요. `DATETIME2` 범위 및 CLR의 전체 자릿수에 맞출 수 <xref:System.DateTime?displayProperty=nameWithType>입니다.  
   
- SQL Server 날짜에는 CLR에서 지원되는 기능인 <xref:System.TimeZone> 개념이 없습니다. 원래 <xref:System.TimeZone> 정보에 관계없이 <xref:System.TimeZone> 값은 <xref:System.DateTimeKind> 변환 없이 데이터베이스에 있는 그대로 저장됩니다. <xref:System.DateTime> 값이 데이터베이스에서 검색될 경우 해당 값은 <xref:System.DateTime>가 <xref:System.DateTimeKind>로 지정되어 <xref:System.DateTimeKind.Unspecified>에 있는 그대로 로드됩니다. 에 대 한 자세한 내용은 지원 <xref:System.DateTime?displayProperty=nameWithType> 메서드 참조 [System.DateTime 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)합니다.  
+ SQL Server 날짜에는 CLR에서 지원되는 기능인 <xref:System.TimeZone> 개념이 없습니다. 원래 <xref:System.TimeZone> 정보에 관계없이 <xref:System.TimeZone> 값은 <xref:System.DateTimeKind> 변환 없이 데이터베이스에 있는 그대로 저장됩니다. <xref:System.DateTime> 값이 데이터베이스에서 검색될 경우 해당 값은 <xref:System.DateTime>가 <xref:System.DateTimeKind>로 지정되어 <xref:System.DateTimeKind.Unspecified>에 있는 그대로 로드됩니다. 지원에 대 한 자세한 내용은 <xref:System.DateTime?displayProperty=nameWithType> 메서드를 참조 하세요 [System.DateTime 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)합니다.  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
- Microsoft SQL Server 2008 및 .NET Framework 3.5 SP1에서는 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식을 SQL Server `TIME` 형식에 매핑할 수 있습니다. 그러나 CLR <xref:System.TimeSpan?displayProperty=nameWithType>에서 지원되는 범위와 SQL Server `TIME` 형식에서 지원되는 범위에는 상당한 차이가 있습니다. 0보다 작거나 23:59:59.9999999시간보다 큰 값을 SQL `TIME`에 매핑하면 오버플로 예외가 발생합니다. 자세한 내용은 참조 [System.TimeSpan 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)합니다.  
+ Microsoft SQL Server 2008 및 .NET Framework 3.5 SP1에서는 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식을 SQL Server `TIME` 형식에 매핑할 수 있습니다. 그러나 CLR <xref:System.TimeSpan?displayProperty=nameWithType>에서 지원되는 범위와 SQL Server `TIME` 형식에서 지원되는 범위에는 상당한 차이가 있습니다. 0보다 작거나 23:59:59.9999999시간보다 큰 값을 SQL `TIME`에 매핑하면 오버플로 예외가 발생합니다. 자세한 내용은 [System.TimeSpan 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)합니다.  
   
  Microsoft SQL Server 2000 및 SQL Server 2005에서는 데이터베이스 필드를 <xref:System.TimeSpan>에 매핑할 수 없습니다. 그러나 <xref:System.TimeSpan> 값은 <xref:System.TimeSpan> 빼기에서 반환되거나 리터럴 또는 바인딩된 변수로 식에 삽입될 수 있기 때문에 <xref:System.DateTime>에 대한 연산은 지원됩니다.  
   
@@ -213,7 +215,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)` 와 `FILESTREAM` 특성|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` 사용 하 여는 `FILESTREAM` 특성|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   
@@ -230,11 +232,11 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  `FILESTREAM` 열의 `VARBINARY(MAX)` 특성은 Microsoft SQL Server 2008부터 사용할 수 있으며 .NET Framework 버전 3.5 SP1부터 LINQ to SQL을 사용하여 매핑할 수 있습니다.  
   
- `VARBINARY(MAX)` 개체에 `FILESTREAM` 특성이 있는 <xref:System.Data.Linq.Binary> 열을 매핑할 수는 있지만 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 `FILESTREAM` 특성이 있는 열을 자동으로 생성할 수는 없습니다. 에 대 한 자세한 내용은 `FILESTREAM`, 참조 [FILESTREAM 개요](http://go.microsoft.com/fwlink/?LinkId=115291) Microsoft SQL Server 온라인 설명서에 있습니다.  
+ `VARBINARY(MAX)` 개체에 `FILESTREAM` 특성이 있는 <xref:System.Data.Linq.Binary> 열을 매핑할 수는 있지만 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 `FILESTREAM` 특성이 있는 열을 자동으로 생성할 수는 없습니다. 에 대 한 자세한 내용은 `FILESTREAM`를 참조 하세요 [FILESTREAM 개요](http://go.microsoft.com/fwlink/?LinkId=115291) Microsoft SQL Server 온라인 설명서에서.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>이진 Serialization  
- 클래스에서 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 경우 개체를 모든 SQL 이진 필드(`BINARY`, `VARBINARY`, `IMAGE`)로 serialize할 수 있습니다. 개체는 <xref:System.Runtime.Serialization.ISerializable> 인터페이스가 구현되는 방법에 따라 serialize 및 deserialize됩니다. 자세한 내용은 참조 [이진 Serialization](http://go.microsoft.com/fwlink/?LinkId=115581)합니다.  
+ 클래스에서 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 경우 개체를 모든 SQL 이진 필드(`BINARY`, `VARBINARY`, `IMAGE`)로 serialize할 수 있습니다. 개체는 <xref:System.Runtime.Serialization.ISerializable> 인터페이스가 구현되는 방법에 따라 serialize 및 deserialize됩니다. 자세한 내용은 [이진 Serialization](http://go.microsoft.com/fwlink/?LinkId=115581)합니다.  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>기타 매핑  

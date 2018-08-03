@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579654"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
@@ -275,7 +275,7 @@ ms.locfileid: "33579654"
   
 -   문자 클래스 내의 공백은 항상 리터럴로 해석됩니다. 예를 들어, 정규식 패턴 `[ .,;:]`는 모든 단일 공백 문자, 마침표, 쉼표, 세미콜론 또는 콜론과 일치합니다.  
   
--   중괄호로 묶은 수량자 내에는 공백이 허용되지 않습니다(예: `{`*n*`}`, `{`*n*`,}` 및 `{`*n*`,`*m*`}`). 예를 들어, 정규식 패턴 `\d{1. 3}`는 공백 문자를 포함하고 있기 때문에 1자리에서 3자리까지의 숫자로 이루어진 어떠한 숫자 시퀀스와도 일치하지 않습니다.  
+-   중괄호로 묶은 수량자 내에는 공백이 허용되지 않습니다(예: `{`*n*`}`, `{`*n*`,}` 및 `{`*n*`,`*m*`}`). 예를 들어, 정규식 패턴 `\d{1, 3}`는 공백 문자를 포함하고 있기 때문에 1자리에서 3자리까지의 숫자로 이루어진 어떠한 숫자 시퀀스와도 일치하지 않습니다.  
   
 -   언어 요소를 도입하는 문자 시퀀스 내에는 공백이 허용되지 않습니다. 예:  
   

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33563045"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>방법: 복합 도형의 채우기 제어
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A> 속성은 <xref:System.Windows.Media.GeometryGroup> 또는 <xref:System.Windows.Media.PathGeometry>, 복합 셰이프를 사용 하 여 지정된 된 지점 기 하 도형의 일부 인지 확인할 "규칙"을 지정 합니다. 두 개의 가능한 값에 대 한 <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> 및 <xref:System.Windows.Media.FillRule.Nonzero>합니다. 다음 섹션에서는 이러한 두 가지 규칙을 사용하는 방법을 설명합니다.  
+합니다 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> 의 속성을 <xref:System.Windows.Media.GeometryGroup> 또는 <xref:System.Windows.Media.PathGeometry>은 복합 도형이 지정 된 기 하 도형의 일부 인지 확인 하는 "규칙"을 지정 합니다. 두 개의 가능한 값에 대 한 <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> 고 <xref:System.Windows.Media.FillRule.Nonzero>입니다. 다음 섹션에서는 이러한 두 가지 규칙을 사용하는 방법을 설명합니다.  
   
  **EvenOdd:** 이 규칙은 해당 점에서 모든 방향으로 무한대로 광선을 그리고 광선이 교차하는 지정된 도형 내에서 경로 세그먼트 수를 계산하여 채우기 영역에 점이 있는지 여부를 결정합니다. 이 숫자가 홀수이면 점이 안에 있고, 짝수이면 밖에 있습니다.  
   
- 예를 들어 다음 XAML와 일련의 동심원 (대상) 이루어진 복합 셰이프를 만듭니다는 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> 로 설정 <xref:System.Windows.Media.FillRule.EvenOdd>합니다.  
+ 예를 들어 다음 XAML을 일련의 동심 링 (대상)의 구성 된 복합 도형을 사용 하 여 만듭니다는 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> 로 <xref:System.Windows.Media.FillRule.EvenOdd>합니다.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33563045"
   
  ![다이어그램: NonZero와 같은 FillRule 속성 값](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
   
- 동작을 더 잘 보여 주기 위해 <xref:System.Windows.Media.FillRule.Nonzero> 규칙 방향을 세그먼트 더 복잡 한 도형을 필요 합니다. XAML 코드에서는 앞의 예제와 제외 하 고로 생성 한 <xref:System.Windows.Media.PathGeometry> 대신는 <xref:System.Windows.Media.EllipseGeometry> 동심원 완전히 닫힐 아니라를 만듭니다.  
+ 동작을 더 잘 보여 주기 위해 <xref:System.Windows.Media.FillRule.Nonzero> 가 다른 방향으로 실행 하는 세그먼트를 사용 하 여 더 복잡 한 도형을 규칙이 필요 합니다. 아래의 XAML 코드를 제외 하 고 사용 하 여 만든 이전 예제와 비슷한 도형을 만들고를 <xref:System.Windows.Media.PathGeometry> 대신 다음을 <xref:System.Windows.Media.EllipseGeometry> 동심원을 완전히 닫힐 대신는 4 개의 동심 호를 만듭니다.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
@@ -55,11 +55,11 @@ ms.locfileid: "33563045"
   
  ![다이어그램: NonZero의 FillRule 속성 값](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **참고:** 위해 <xref:System.Windows.Media.FillRule>, 모든 셰이프는 닫혀 있다고 간주 됩니다. 세그먼트에 틈이 있으면 가상선을 그려 닫습니다. 위의 예제에서는 링에 작은 틈이 있습니다. 이점을 고려할 때 이러한 틈을 지나가는 광선이 다른 결과를 가져와 광선이 다른 방향으로 진행될 것으로 예상할 수 있습니다. 다음은 이러한 차이가 "허수 세그먼트" 중 하나는 확대 보여 줍니다 (적용 하기 위해 그려진 세그먼트는 <xref:System.Windows.Media.FillRule>) 닫을 때.  
+ **참고:** 위해 <xref:System.Windows.Media.FillRule>, 모든 셰이프는 닫혀 있다고 간주 합니다. 세그먼트에 틈이 있으면 가상선을 그려 닫습니다. 위의 예제에서는 링에 작은 틈이 있습니다. 이점을 고려할 때 이러한 틈을 지나가는 광선이 다른 결과를 가져와 광선이 다른 방향으로 진행될 것으로 예상할 수 있습니다. 다음은 이러한 틈 및 "가상 세그먼트" 중 하나의 확대 그림 (적용 하기 위해 그린 세그먼트는 <xref:System.Windows.Media.FillRule>)를 닫습니다.  
   
  ![다이어그램: FillRule의 경우 세그먼트가 항상 닫힘](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="see-also"></a>참고 항목  
  [복합 도형 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  

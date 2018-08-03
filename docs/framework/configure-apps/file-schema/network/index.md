@@ -16,10 +16,10 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742616"
 ---
 # <a name="network-settings-schema"></a>네트워크 설정 스키마
@@ -31,8 +31,7 @@ ms.locfileid: "32742616"
 |[\<connectionManagement> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|인터넷 호스트에 대한 최대 연결 수를 지정합니다.|  
 |[\<defaultProxy> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|인터넷에 대한 HTTP 요청에 사용할 프록시 서버를 지정합니다.|  
 |[\<mailSettings> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|메일 보내기 옵션에 대한 설정을 포함합니다.|  
-|[\<requestCaching> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|인터넷 호스트 정보를 요청하는 데 사용되는 모듈을 지정합니다.|  
-|[\<requestCaching> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<xref:System.Net?displayProperty=nameWithType> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[\<requestCaching> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어합니다.|  
 |[\<webRequestModules> 요소 (네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|인터넷 호스트 정보를 요청하는 데 사용되는 모듈을 지정합니다.|  
   
  URI 설정으로 URI(Uniform Resource Identifier)를 사용하여 표현된 웹 주소를 .NET Framework에서 처리하는 방법을 지정합니다. 다음 표에서는 [\<URI> 요소(URI 설정)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)의 각 자식 구성 요소의 기능을 설명합니다.  

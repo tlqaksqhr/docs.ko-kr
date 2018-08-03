@@ -17,10 +17,10 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579810"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 형식 문자열
@@ -29,12 +29,14 @@ ms.locfileid: "33579810"
 -   서식 지정 작업의 결과로 생성되는 문자열을 정의합니다.  
   
 -   구문 분석 작업을 통해 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값으로 변환할 수 있는 날짜 및 시간 값의 텍스트 표현을 정의합니다.  
-  
- 표준 날짜 및 시간 서식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.  
-  
+
 > [!TIP]
 >  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
+
+표준 날짜 및 시간 서식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.  
   
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+
 <a name="table"></a> 다음 표에서는 표준 날짜 및 시간 서식 지정자에 대해 설명합니다. 다른 설명이 없는 한 특정 표준 날짜 및 시간 서식 지정자는 <xref:System.DateTime> 값에 사용할 때와 <xref:System.DateTimeOffset> 값에 사용할 때 동일한 문자열을 생성합니다. 표준 날짜 및 시간 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#Notes) 섹션을 참조하세요.  
   
 |형식 지정자|설명|예제|  
@@ -63,17 +65,17 @@ ms.locfileid: "33579810"
   
 -   기본 또는 현재 문화권을 사용할 수 있습니다. 다음 예제에서는 현재 문화권의 간단한 날짜 서식을 사용하여 날짜를 표시합니다. 이 예제의 경우 현재 문화권이 en-US입니다.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
 -   사용할 서식 지정과 관련된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.IFormatProvider> 매개 변수가 있는 메서드에 전달할 수 있습니다. 다음 예제에서는 pt-BR 문화권의 간단한 날짜 서식을 사용하여 날짜를 표시합니다.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   서식 지정 정보를 제공하는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 <xref:System.IFormatProvider> 매개 변수가 있는 메서드에 전달할 수 있습니다. 다음 예제에서는 hr-HR 문화권의 <xref:System.Globalization.DateTimeFormatInfo> 개체가 제공하는 간단한 날짜 서식을 사용하여 날짜를 표시합니다.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -90,7 +92,7 @@ ms.locfileid: "33579810"
   
  표준 서식 문자열은 입력 문자열이 특정 패턴을 정확하게 따라야 구문 분석 작업이 성공하는 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 메서드의 구문 분석 작업에서도 사용할 수 있습니다. 많은 표준 서식 문자열은 여러 사용자 지정 서식 문자열로 매핑되므로 날짜 및 시간 값을 여러 서식으로 표현할 수 있으며 그래도 구문 분석 작업이 성공합니다. <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> 메서드를 호출하면 표준 서식 문자열에 해당하는 사용자 지정 서식 문자열을 확인할 수 있습니다. 다음 예제에서는 "d"(간단한 날짜 패턴) 표준 서식 문자열로 매핑되는 사용자 지정 서식 문자열을 보여 줍니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  다음 단원에서는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값에 대한 표준 서식 지정자에 대해 설명합니다.  
@@ -108,7 +110,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "d" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [표로 이동](#table)  
@@ -127,7 +129,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "D" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [표로 이동](#table)  
@@ -150,7 +152,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "f" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [표로 이동](#table)  
@@ -172,7 +174,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "F" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [표로 이동](#table)  
@@ -194,7 +196,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "g" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [표로 이동](#table)  
@@ -216,7 +218,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "G" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [표로 이동](#table)  
@@ -234,7 +236,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "m" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [표로 이동](#table)  
@@ -259,12 +261,12 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "o" 서식 지정자를 사용하여 미국 태평양 표준 시간대에 있는 시스템의 일련의 <xref:System.DateTime> 값 및 <xref:System.DateTimeOffset> 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  다음 예제에서는 "o" 서식 지정자를 사용하여 서식이 지정된 문자열을 만든 다음 날짜 및 시간 `Parse` 메서드를 호출하여 원래 날짜 및 시간 값을 복원합니다.  
   
- [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [표로 이동](#table)  
@@ -285,7 +287,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "r" 서식 지정자를 사용하여 미국 태평양 표준 시간대에 있는 시스템의 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
   
  [표로 이동](#table)  
@@ -300,7 +302,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "s" 서식 지정자를 사용하여 미국 태평양 표준 시간대에 있는 시스템의 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
   
  [표로 이동](#table)  
@@ -320,7 +322,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "t" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [표로 이동](#table)  
@@ -340,7 +342,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "T" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [표로 이동](#table)  
@@ -353,7 +355,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "u" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Standard#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#13)]  
   
  [표로 이동](#table)  
@@ -377,7 +379,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "U" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [표로 이동](#table)  
@@ -395,7 +397,7 @@ ms.locfileid: "33579810"
   
  다음 예제에서는 "y" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [표로 이동](#table)  
