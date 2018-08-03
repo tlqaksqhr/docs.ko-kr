@@ -22,8 +22,7 @@ ms.locfileid: "33324420"
   
 |생성자|설명|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|
-          <xref:System.Xml.Linq.XAttribute> 개체를 만듭니다. `name` 인수는 특성의 이름을 지정하고, `content`는 특성의 내용을 지정합니다.|  
+|`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> 개체를 만듭니다. `name` 인수는 특성의 이름을 지정하고, `content`는 특성의 내용을 지정합니다.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>특성을 사용하여 요소 만들기  
  다음 코드에서는 특성이 포함된 요소를 만드는 일반적인 작업을 보여 줍니다.  
