@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578086"
 ---
 # <a name="best-practices-for-exceptions"></a>예외에 대한 모범 사례
@@ -104,17 +104,19 @@ ms.locfileid: "33578086"
 
 - 도메인이 공통 응용 프로그램 기반 구조를 공유하지 않을 경우, 예외 정보가 포함된 어셈블리를 강력한 이름으로 지정한 다음, 이 어셈블리를 전역 어셈블리 캐시에 배포합니다.
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>모든 예외에 지역화된 설명 문자열 포함
-
-사용자에게 표시되는 오류 메시지는 예외 클래스 이름에서 파생된 메시지가 아니라 throw된 예외의 설명 문자열에서 파생된 메시지입니다.
-
 ## <a name="use-grammatically-correct-error-messages"></a>문법적으로 올바른 오류 메시지 사용
 
-명확한 문을 작성하고 종료 문장 부호를 포함합니다. 설명 문자열의 각 문장의 뒤에는 마침표가 있어야 합니다. 예를 들어 “로그 테이블이 오버플로되었습니다.”는 적절한 설명 문자열입니다.
+명확한 문을 작성하고 종료 문장 부호를 포함합니다. <xref:System.Exception.Message?displayProperty=nameWithType> 속성에 할당된 문자열의 각 문장은 마침표로 끝나야 합니다. 예를 들어 “로그 테이블이 오버플로되었습니다.”는 적절한 메시지 문자열입니다.
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>모든 예외에 지역화된 문자열 메시지를 포함합니다.
+
+사용자에게 표시되는 오류 메시지는 예외 클래스 이름에서 파생된 메시지가 아니라 throw된 예외의 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에서 파생된 메시지입니다. 일반적으로 [예외 생성자](xref:System.Exception.%23ctor%2A)의 `message` 인수에 메시지 문자열을 전달하여 값을 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에 할당합니다. 
+
+지역화된 응용 프로그램의 경우 응용 프로그램에서 throw할 수 있는 모든 예외에 대해 지역화된 메시지 문자열을 제공해야 합니다. 리소스 파일을 사용하여 지역화된 오류 메시지를 제공합니다. 응용 프로그램을 지역화하고 지역화된 문자열을 검색하는 방법은 [데스크톱 앱의 리소스](../../framework/resources/index.md) 및 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>를 참조하세요.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>필요에 따라 사용자 지정 예외에서 추가 속성 제공
 
-추가 정보가 유용한 프로그래밍 시나리오에 대해서만 예외에 설명 문자열 이외의 추가 속성을 제공합니다. 예를 들어, <xref:System.IO.FileNotFoundException>은 <xref:System.IO.FileNotFoundException.FileName> 속성을 제공합니다.
+추가 정보가 유용한 프로그래밍 시나리오에 대해서만 예외에 사용자 지정 메시지 문자열 이외의 추가 속성을 제공합니다. 예를 들어, <xref:System.IO.FileNotFoundException>은 <xref:System.IO.FileNotFoundException.FileName> 속성을 제공합니다.
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>스택 추적이 도움이 되도록 throw 문 포함
 

@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314700"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
 
 Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요한 전기능 IDE(통합 개발 환경)를 제공합니다. 이 항목에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 .NET Core 솔루션을 빌드하는 과정을 안내합니다.
 
-이 자습서에서는 사용자가 입력하는 검색어 및 텍스트 문자열을 수락하고, 클래스 라이브러리의 메서드를 사용하여 해당 검색어가 문자열에 나타나는 횟수를 계산하고, 사용자에게 결과를 반환하는 응용 프로그램을 만드는 방법을 보여 줍니다. 또한 이 솔루션에는 TDD(테스트 기반 개발) 개념을 소개하기 위한 클래스 라이브러리용 단위 테스트도 포함되어 있습니다. 전체 샘플에 대한 자습서를 수행하려면 [샘플 솔루션](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)을 다운로드합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서에서는 사용자가 입력하는 검색어 및 텍스트 문자열을 수락하고, 클래스 라이브러리의 메서드를 사용하여 해당 검색어가 문자열에 나타나는 횟수를 계산하고, 사용자에게 결과를 반환하는 응용 프로그램을 만드는 방법을 보여 줍니다. 이 솔루션에는 유닛 테스트 개념을 소개하기 위해 클래스 라이브러리에 대한 단위 테스트도 포함됩니다. 전체 샘플에 대한 자습서를 수행하려면 [샘플 솔루션](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)을 다운로드합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 > [!NOTE]
 > 사용자 의견은 매우 중요합니다. Mac용 Visual Studio의 개발 팀에 다음 두 가지 방법으로 의견을 제공할 수 있습니다.
@@ -106,15 +106,15 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
    ![IDE 주 창에서 GetWordCount를 확인하기 위한 초기 단위 테스트](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   TDD를 사용하여 새 테스트를 실패하도록 만들어 테스트 논리가 올바른지 확인하는 것이 중요합니다. 이 메서드는 이름 "Jack"(대문자)과 "Jack" 및 "jack"(대문자 및 소문자)을 포함하는 문자열을 전달합니다. `GetWordCount` 메서드는 제대로 작동하면 검색 단어 인스턴스 2를 반환합니다. 의도적으로 이 테스트가 실패하도록 하기 위해 먼저 검색 단어 "Jack"의 두 인스턴스가 `GetWordCount` 메서드에 의해 반환되지 않음을 어설션하는 테스트를 구현합니다. 다음 단계를 계속 진행하여 의도적으로 이 테스트가 실패하도록 합니다.
+   한 번 새 테스트를 실패하도록 만들어 테스트 논리가 올바른지 확인하는 것이 중요합니다. 이 메서드는 이름 "Jack"(대문자)과 "Jack" 및 "jack"(대문자 및 소문자)을 포함하는 문자열을 전달합니다. `GetWordCount` 메서드는 제대로 작동하면 검색 단어 인스턴스 2를 반환합니다. 의도적으로 이 테스트가 실패하도록 하기 위해 먼저 검색 단어 "Jack"의 두 인스턴스가 `GetWordCount` 메서드에 의해 반환되지 않음을 어설션하는 테스트를 구현합니다. 다음 단계를 계속 진행하여 의도적으로 이 테스트가 실패하도록 합니다.
 
 1. 화면 오른쪽의 **단위 테스트** 패널을 엽니다.
 
-![단위 테스트 패널](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![단위 테스트 패널](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. 패널을 열어두려면 **고정** 아이콘을 클릭합니다.
 
-![단위 테스트 패널 고정 아이콘](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![단위 테스트 패널 고정 아이콘](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. **모두 실행** 단추를 클릭합니다.
    

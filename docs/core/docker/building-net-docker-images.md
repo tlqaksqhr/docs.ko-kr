@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827341"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
@@ -38,7 +38,7 @@ ms.locfileid: "34827341"
 
 * **개발:** 우선 순위는 신속하게 변경 내용을 반복하고 변경 내용을 디버그하는 기능에 초점을 둡니다. 이미지의 크기는 중요하지 않으며 코드를 변경하고 변경 내용을 신속하게 확인할 수 있나요?
 
-* **빌드:** 이 이미지는 컴파일러 및 이진 파일을 최적화하는 다른 종속성을 포함하는 앱을 컴파일하는 데 필요한 모든 항목을 포함합니다.  빌드 이미지를 사용하여 프로덕션 이미지로 배치하는 자산을 만듭니다. 빌드 이미지는 지속적인 통합 또는 빌드 환경에서 사용됩니다. 이 방법은 빌드 에이전트가 빌드 이미지 인스턴스에서 응용 프로그램(필요한 모든 종속성과 함께)을 컴파일하고 빌드할 수 있도록 합니다. 빌드 에이전트는 이 Docker 이미지를 실행하는 방법만 알고 있으면 됩니다.
+* **빌드:** 이 이미지는 컴파일러 및 이진 파일을 최적화하는 다른 종속성을 포함하는 앱을 컴파일하는 데 필요한 모든 항목을 포함합니다.  빌드 이미지를 사용하여 프로덕션 이미지로 배치하는 자산을 만듭니다. 빌드 이미지는 연속 통합 또는 빌드 환경에서 사용됩니다. 이 방법은 빌드 에이전트가 빌드 이미지 인스턴스에서 응용 프로그램(필요한 모든 종속성과 함께)을 컴파일하고 빌드할 수 있도록 합니다. 빌드 에이전트는 이 Docker 이미지를 실행하는 방법만 알고 있으면 됩니다.
 
 * **프로덕션:** 이미지를 얼마나 빠르게 배포하고 시작할 수 있나요? 이 이미지는 작기 때문에 Docker 레지스트리에서 Docker 호스트로 네트워크 성능이 최적화됩니다. 콘텐츠를 실행할 준비가 되면 Docker 실행부터 결과 처리까지 가장 빠른 시간에 수행할 수 있습니다. 동적 코드 컴파일은 Docker 모델에 필요하지 않습니다. 이 이미지에 배치되는 콘텐츠는 이진 파일과 응용 프로그램을 실행하는 데 필요한 콘텐츠로 제한됩니다.
 
@@ -83,6 +83,17 @@ ms.locfileid: "34827341"
 * [이 ASP.NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp)은 프로덕션용 ASP.NET Core 앱에 대한 Docker 이미지를 빌드하는 것과 관련한 모범 사례 패턴을 보여 줍니다. 샘플은 Linux 컨테이너와 Windows 컨테이너 둘 다에서 작동합니다.
 
 * 이 .NET Core Docker 샘플은 [프로덕션용 .NET Core 앱에 대한 Docker 이미지를 빌드](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)하는 것과 관련한 모범 사례 패턴을 보여 줍니다.
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>요청 스키마 및 원래 IP 주소 전달
+
+프록시 서버, 부하 분산 장치 및 기타 네트워크 어플라이언스는 종종 컨테이너화된 앱에 도달하기 전에 요청에 대한 정보를 숨깁니다.
+
+* HTTPS 요청이 HTTP를 통해 프록시된 경우 원래 스키마(HTTPS)가 손실되므로 헤더에서 전달되어야 합니다.
+* 앱은 프록시에서 요청을 수신하고 인터넷 또는 회사 네트워크의 실제 소스를 수신하는 것이 아니므로 원래 클라이언트 IP 주소도 헤더에서 전달되어야 합니다.
+
+이 정보는 요청 처리 시 중요할 수 있습니다(예: 리디렉션, 인증, 링크 생성, 정책 평가 및 클라이언트 지리적 위치).
+
+컨테이너화된 ASP.NET Core 앱에 스키마 및 원래 IP 주소를 전달하려면 전달된 헤더 미들웨어를 사용합니다. 자세한 내용은 [프록시 서버 및 부하 분산 장치를 사용하도록 ASP.NET Core 구성](/aspnet/core/host-and-deploy/proxy-load-balancer)을 참조하세요.
 
 ## <a name="your-first-aspnet-core-docker-app"></a>첫 번째 ASP.NET Core Docker 앱
 
@@ -258,7 +269,6 @@ dotnet published/aspnetapp.dll
 > * ASP.NET 샘플 앱을 로컬로 실행
 > * Linux 컨테이너용 Docker로 샘플 빌드 및 실행
 > * Windows 컨테이너용 Docker로 샘플 빌드 및 실행
-
 
 **다음 단계**
 

@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208208"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 형식 문자열
@@ -67,7 +67,7 @@ ms.locfileid: "36208208"
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>표준 숫자 서식 문자열 사용  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 표준 숫자 서식 문자열을 사용하여 다음 두 가지 방법 중 하나로 숫자 값의 서식을 정의할 수 있습니다.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36208208"
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>고정 소수점("F") 서식 지정자  
- 고정 소수점(“F”) 형식 지정자는 숫자를 “-ddd.ddd…” 형태의 문자열로 변환합니다. 여기서 각 "d"는 숫자(0-9)를 나타냅니다. 숫자가 음수이면 문자열 앞에 빼기 기호가 붙습니다.  
+ 고정 소수점("F") 서식 지정자는 숫자를 "-ddd.ddd…" 형태의 문자열로 변환합니다. 여기서 각 "d"는 숫자(0-9)를 나타냅니다. 숫자가 음수이면 문자열 앞에 빼기 기호가 붙습니다.  
   
  전체 자릿수 지정자는 필요한 소수 자릿수를 나타냅니다. 전체 자릿수 지정자를 생략하면 현재 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 속성에서 숫자 전체 자릿수를 제공합니다.  
   
@@ -350,7 +350,7 @@ ms.locfileid: "36208208"
   
 ## <a name="example"></a>예  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  다음 예제에서는 en-US 문화권 및 모든 표준 숫자 서식 지정자를 사용하여 정수 숫자 값과 부동 소수점 숫자 값의 서식을 지정합니다. 이 코드 예제에서는 두 개의 특정 숫자 형식(<xref:System.Double> 및 <xref:System.Int32>)을 사용하지만 다른 기타 숫자 기본 형식(<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> 및 <xref:System.Single>)을 사용해도 유사한 결과가 생성됩니다.  
   
