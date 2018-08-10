@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339620"
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
@@ -35,16 +35,19 @@ C# 7.0부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 �
  
 ## <a name="defining-a-ref-return-value"></a>참조 반환 값 정의
 
-메서드 시그니처의 반환 형식에 [ref](../../language-reference/keywords/ref.md) 키워드를 추가하여 참조 반환 값을 정의합니다. 예를 들어 다음 시그니처는 `GetContactInformation` 속성이 `Person` 개체에 대한 참조를 호출자에게 반환함을 나타냅니다.
+*참조 반환 값*을 반환하는 메서드는 다음 2가지 조건을 충족해야 합니다.
+
+- 메서드 시그니처에는 반환 형식 앞에 [ref](../../language-reference/keywords/ref.md) 키워드가 포함됩니다.
+- 메서드 본문의 각 [return](../../language-reference/keywords/return.md) 문에는 반환된 인스턴스의 이름 앞에 [ref](../../language-reference/keywords/ref.md) 키워드가 포함됩니다.
+
+다음 예제에서는 이러한 조건을 충족하면서 `p`라는 이름의 `Person` 개체에 대한 참조를 반환하는 메서드를 보여줍니다.
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-또한 메서드 본문의 각 [return](../../language-reference/keywords/return.md) 문에서 반환되는 개체의 이름 앞에는 [ref](../../language-reference/keywords/ref.md) 키워드가 와야 합니다. 예를 들어 다음 `return` 문은 `p`라는 `Person` 개체에 대한 참조를 반환합니다.
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>참조 반환 값 사용

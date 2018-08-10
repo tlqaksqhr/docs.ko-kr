@@ -1,65 +1,65 @@
 ---
 title: nullable 형식(C# 프로그래밍 가이드)
-ms.date: 05/15/2017
+description: C# nullable 형식 및 사용 방법 알아보기
+ms.date: 07/30/2018
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "39245594"
 ---
 # <a name="nullable-types-c-programming-guide"></a>nullable 형식(C# 프로그래밍 가이드)
-Nullable 형식은 <xref:System.Nullable%601?displayProperty=nameWithType> 구조체의 인스턴스입니다. Null 허용 형식은 해당 내부 형식의 올바른 값 범위와 추가 `null` 값을 나타낼 수 있습니다. 예를 들어 "Nullable of Int32"로도 나타내는 `Nullable<Int32>`에는 -2147483648에서 2147483647까지 값이 할당되거나 `null` 값이 할당될 수 있습니다. `Nullable<bool>`에는 [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) 또는 [null](../../../csharp/language-reference/keywords/null.md) 값이 할당될 수 있습니다. 숫자 및 부울 형식에 `null`을 할당하는 기능은 값을 할당할 수 없는 요소를 포함하는 데이터베이스 및 기타 데이터 형식을 처리할 때 특히 유용합니다. 예를 들어 데이터베이스의 부울 필드는 값 `true` 또는 `false`를 저장하거나 정의되지 않을 수 있습니다. 
+
+Nullable 형식은 <xref:System.Nullable%601?displayProperty=nameWithType> 구조체의 인스턴스입니다. nullable 형식은 기본 형식 `T`의 모든 값과 추가 [null](../../language-reference/keywords/null.md) 값을 나타낼 수 있습니다. 기본 형식 `T`는 nullable이 아닌 [값 형식](../../language-reference/keywords/value-types.md)일 수 있습니다. `T`는 참조 형식이 아닙니다.
+
+예를 들어 <xref:System.Int32.MinValue?displayProperty=nameWithType>부터 <xref:System.Int32.MaxValue?displayProperty=nameWithType>까지의 `null` 또는 정수 값을 `Nullable<int>`에 할당하고, [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) 또는 `null`을 `Nullable<bool>`에 할당할 수 있습니다
+
+기본 형식의 정의되지 않은 값을 표시해야 하는 경우 nullable 형식을 사용합니다. 부울 변수에는 true와 false라는 두 개의 값만 있을 수 있습니다. "정의되지 않은" 값이 없습니다. 많은 프로그래밍 응용 프로그램(특히, 데이터베이스 상호 작용)에서 변수는 정의되지 않거나 누락될 수 있습니다. 예를 들어 데이터베이스의 필드는 true 또는 false 값을 포함하거나 값을 전혀 포함하지 않을 수 있습니다. 해당 경우에 `Nullable<bool>` 형식을 사용합니다.
+
+null 허용 형식은 다음 특성을 갖습니다.
   
-[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+- nullable 형식은 `null` 값이 할당될 수 있는 값-형식 변수를 나타냅니다. 참조 형식에 따라 null 허용 형식을 만들 수 없습니다. (참조 형식은 `null` 값을 이미 지원합니다.)  
   
-추가 예제를 보려면 [Null 허용 형식 사용](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조하세요.  
+- `T?` 구문은 `Nullable<T>`의 축약형입니다. 두 가지 형태는 동일하게 사용할 수 있습니다.  
   
-## <a name="nullable-types-overview"></a>null 허용 형식 개요  
- null 허용 형식은 다음 특성을 갖습니다.  
+- 일반 값 형식의 경우처럼 nullable 형식에 값을 할당합니다(`int? x = 10;` 또는 `double? d = 4.108;`). `null` 값을 할당할 수도 있습니다(`int? x = null;`).  
   
--   null 허용 형식은 `null` 값이 할당될 수 있는 값-형식 변수를 나타냅니다. 참조 형식에 따라 null 허용 형식을 만들 수 없습니다. (참조 형식은 `null` 값을 이미 지원합니다.)  
+- 다음 예제와 같이 <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 및 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 읽기 전용 속성을 사용하여 null인지 테스트하고 값을 검색합니다. `if (x.HasValue) y = x.Value;`  
   
--   구문 `T?`는 <xref:System.Nullable%601>의 축약형입니다. 여기서 `T`는 값 형식입니다. 두 가지 형태는 동일하게 사용할 수 있습니다.  
+  - <xref:System.Nullable%601.HasValue%2A> 속성은 변수에 값이 있으면 `true`를 반환하고, `null`이면 `false`를 반환합니다.
   
--   일반 값 형식의 경우처럼 null 허용 형식에 값을 할당합니다(예: `int? x = 10;` 또는 `double? d = 4.108;`). null 허용 형식에 값 `null`을 할당할 수도 있습니다. `int? x = null;`  
+  - <xref:System.Nullable%601.Value%2A> 속성은 <xref:System.Nullable%601.HasValue%2A>가 `true`를 반환하는 경우 값을 반환합니다. 그렇지 않으면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
--   <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 메서드를 사용하여 할당된 값 또는 내부 형식의 기본값(값이 `null`인 경우)을 반환합니다(예: `int j = x.GetValueOrDefault();`).  
+- 다음 예제와 같이 nullable 형식에서 `==` 및 `!=` 연산자를 사용할 수도 있습니다. `if (x != null) y = x.Value;` `a` 및 `b`가 둘 다 null인 경우 `a == b`는 `true`로 평가합니다.  
+
+- C# 7.0부터는 패턴 일치를 사용하여 nullable 형식의 값을 검사하고 가져올 수 있습니다. `if (x is int xValue) y = xValue;`
   
--   다음 예제와 같이 <xref:System.Nullable%601.HasValue%2A> 및 <xref:System.Nullable%601.Value%2A> 읽기 전용 속성을 사용하여 null인지 테스트하고 값을 검색합니다. `if(x.HasValue) j = x.Value;`  
+- 기본값인 `T?`는 <xref:System.Nullable%601.HasValue%2A> 속성이 `false`를 반환하는 인스턴스입니다.  
+
+- nullable 형식 값이 `null`인 경우 <xref:System.Nullable%601.GetValueOrDefault> 메서드를 사용하여 할당된 값 또는 기본 값 형식의 [기본값](../../language-reference/keywords/default-values-table.md) 중 하나를 반환합니다.  
+
+- nullable 형식 값이 `null`인 경우 <xref:System.Nullable%601.GetValueOrDefault(%600)> 메서드를 사용하여 할당된 값 또는 제공된 기본값 중 하나를 반환합니다.
   
-    -   `HasValue` 속성은 변수에 값이 있으면 `true`를, `null`이면 `false`를 반환합니다.  
+- [null 결합 연산자](../../language-reference/operators/null-coalescing-operator.md)인 `??`를 사용하여 nullable 형식의 값을 기반으로 하는 기본 형식에 값을 할당합니다. `int? x = null; int y = x ?? -1;` 예제에서 `x`가 null이므로 결과 값인 `y`는 `-1`입니다.
+
+- 두 데이터 형식 간에 사용자 정의 변환이 정의된 경우 이러한 데이터 형식의 nullable 버전에도 같은 변환을 사용할 수 있습니다.
   
-    -   `Value` 속성은 할당된 값이 있으면 해당 값을 반환합니다. 그렇지 않으면 <xref:System.InvalidOperationException?displayProperty=nameWithType>이 throw됩니다.  
+- 중첩된 null 허용 형식은 허용되지 않습니다. 다음 줄은 컴파일되지 않습니다. `Nullable<Nullable<int>> n;`  
+
+자세한 내용은 [nullable 형식 사용](using-nullable-types.md) 및 [방법: nullable 형식 식별](how-to-identify-a-nullable-type.md) 항목을 참조하세요.
   
-    -   `HasValue`의 기본값은 `false`입니다. `Value` 속성에는 기본값이 없습니다.  
-  
-    -   다음 예제와 같이 null 허용 형식에 `==` 및 `!=` 연산자를 사용할 수도 있습니다. `if (x != null) y = x;`  
-  
--   `??` 연산자를 사용하여 현재 값이 `null`인 null 허용 형식이 null을 허용하지 않는 형식에 할당되면 적용될 기본값을 할당합니다(예: `int? x = null; int y = x ?? -1;`).  
-  
--   중첩된 null 허용 형식은 허용되지 않습니다. 다음 줄은 컴파일되지 않습니다. `Nullable<Nullable<int>> n;`  
-  
-## <a name="related-sections"></a>관련 단원  
- 추가 정보  
-  
--   [Nullable 형식 사용](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
-  
--   [Nullable 형식 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
-  
--   [?? 연산자](../../../csharp/language-reference/operators/null-coalescing-operator.md)  
-  
-## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Nullable>  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md)  
- [C# 참조](../../../csharp/language-reference/index.md)  
- ['리프트'란 정확히 어떤 의미입니까?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+## <a name="see-also"></a>참고 항목
+
+ <xref:System.Nullable%601?displayProperty=nameWithType>  
+ <xref:System.Nullable?displayProperty=nameWithType>  
+ [?? 연산자](../../language-reference/operators/null-coalescing-operator.md)  
+ [C# 프로그래밍 가이드](../index.md)  
+ [C# 가이드](../../index.md)  
+ [C# 참조](../../language-reference/index.md)  
+ [Nullable 값 형식(Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
