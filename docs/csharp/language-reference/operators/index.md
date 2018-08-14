@@ -206,7 +206,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
    
 -   부동 소수점 산술 연산 오버플로 또는 0으로 나누기에서 예외를 throw하지 않습니다. 부동 소수점 형식은 IEEE 754를 기반으로 하여 무한대 및 NaN(숫자가 아님)를 나타내려면 프로비전이 필요하기 때문입니다.  
   
--   [10진수<xref:System.OverflowException> 산술 연산 오버플로는 항상 ](../../../csharp/language-reference/keywords/decimal.md)을 throw합니다. 10진수를 0으로 나누면 항상 <xref:System.DivideByZeroException>이 throw됩니다.  
+-   [10진수](../../../csharp/language-reference/keywords/decimal.md) 산술 연산 오버플로는 항상 <xref:System.OverflowException> 을 throw합니다. 10진수를 0으로 나누면 항상 <xref:System.DivideByZeroException>이 throw됩니다.  
   
   
 ## <a name="see-also"></a>참고 항목  
