@@ -13,10 +13,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.sourcegitcommit: 7d13f17bf901751d0169f921a02a6b34541a9eca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
+ms.lasthandoff: 08/16/2018
 ms.locfileid: "37937116"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
@@ -35,9 +35,9 @@ ms.locfileid: "37937116"
   
 -   동일한 클래스에서 <em>MethodName</em>**Completed** 이벤트를 메서드로 정의합니다.  
   
--   <xref:System.EventArgs> 클래스에서 파생되는 <em>MethodName</em>**Completed** 이벤트에 대한 <xref:System.ComponentModel.AsyncCompletedEventArgs> 클래스 및 수반하는 대리자를 정의합니다. 기본 클래스 이름은 *MethodName***CompletedEventArgs** 형식이어야 합니다.  
+-   <xref:System.EventArgs> 클래스에서 파생되는 <em>MethodName</em>**Completed** 이벤트에 대한 <xref:System.ComponentModel.AsyncCompletedEventArgs> 클래스 및 수반하는 대리자를 정의합니다. 기본 클래스 이름은 <em>MethodName</em>**CompletedEventArgs** 형식이어야 합니다.  
   
--   <xref:System.EventArgs> 클래스가 *MethodName* 메서드의 반환 값에 관련되도록 합니다. <xref:System.EventArgs> 클래스를 사용할 경우 개발자가 결과를 캐스팅할 필요가 없도록 해야 합니다.  
+-   <xref:System.EventArgs> 클래스가 <em>MethodName</em> 메서드의 반환 값에 관련되도록 합니다. <xref:System.EventArgs> 클래스를 사용할 경우 개발자가 결과를 캐스팅할 필요가 없도록 해야 합니다.  
   
      다음 코드 예제에서는 각각 이 디자인 요구 사항의 좋은 구현과 나쁜 구현을 보여 줍니다.  
   
@@ -57,27 +57,27 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   <xref:System.EventArgs>를 반환하는 반환 메서드에 대해 `void` 클래스를 정의하지 마세요. 대신 <xref:System.ComponentModel.AsyncCompletedEventArgs> 클래스의 인스턴스를 사용하세요.  
   
--   항상 *MethodName***Completed** 이벤트가 발생하도록 합니다. 이 이벤트는 성공적인 완료, 오류 또는 취소 시 발생해야 합니다. 응용 프로그램이 유휴 상태로 유지되고 절대 완료되지 않는 상황이 응용 프로그램에 발생해서는 안 됩니다.  
+-   항상 <em>MethodName</em>**Completed** 이벤트가 발생하도록 합니다. 이 이벤트는 성공적인 완료, 오류 또는 취소 시 발생해야 합니다. 응용 프로그램이 유휴 상태로 유지되고 절대 완료되지 않는 상황이 응용 프로그램에 발생해서는 안 됩니다.  
   
 -   비동기 작업에서 발생하는 모든 예외를 catch하고 catch된 예외를 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> 속성에 할당하도록 합니다.  
   
 -   작업을 완료하는 중에 오류가 발생한 경우 결과에 액세스할 수 없습니다. <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> 속성이 `null`이 아닌 경우 <xref:System.EventArgs> 구조의 모든 속성에 액세스할 때 예외가 발생해야 합니다. <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> 메서드를 사용하여 이 확인을 수행합니다.  
   
--   제한 시간 초과를 오류로 모델링합니다. 제한 시간 초과가 발생하면 *MethodName***Completed** 이벤트를 발생시키고 <xref:System.TimeoutException>을 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> 속성에 할당합니다.  
+-   제한 시간 초과를 오류로 모델링합니다. 제한 시간 초과가 발생하면 <em>MethodName</em>**Completed** 이벤트를 발생시키고 <xref:System.TimeoutException>을<xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> 속성에 할당합니다.  
   
--   클래스가 여러 동시 호출을 지원하는 경우 *MethodName***Completed** 이벤트에 `userSuppliedState` 개체가 포함되도록 합니다.  
+-   클래스가 여러 동시 호출을 지원하는 경우 <em>MethodName</em>**Completed** 이벤트에 `userSuppliedState` 개체가 포함되도록 합니다.  
   
--   적절한 스레드 및 응용 프로그램 수명 주기의 적절한 시간에 *MethodName***Completed** 이벤트가 발생하도록 합니다. 자세한 내용은 스레딩 및 컨텍스트 섹션을 참조하세요.  
+-   적절한 스레드 및 응용 프로그램 수명 주기의 적절한 시간에 <em>MethodName</em>**Completed** 이벤트가 발생하도록 합니다. 자세한 내용은 스레딩 및 컨텍스트 섹션을 참조하세요.  
   
 ### <a name="simultaneously-executing-operations"></a>작업 동시 실행  
   
--   클래스가 여러 동시 호출을 지원하는 경우 개발자가 개체 반환 상태 매개 변수 또는 `userSuppliedState`라는 작업 ID를 사용하는 *MethodName***Async** 오버로드를 별도로 정의하여 각 호출을 추적할 수 있도록 합니다. 이 매개 변수는 항상 *MethodName***Async** 메서드 시그니처의 마지막 매개 변수여야 합니다.  
+-   클래스가 여러 동시 호출을 지원하는 경우 개발자가 개체 반환 상태 매개 변수 또는 `userSuppliedState`라는 작업 ID를 사용하는 <em>MethodName</em>**Async** 오버로드를 별도로 정의하여 각 호출을 추적할 수 있도록 합니다. 이 매개 변수는 항상 <em>MethodName</em>**Async** 메서드 시그니처의 마지막 매개 변수여야 합니다.  
   
--   클래스가 개체 반환 상태 매개 변수 또는 작업 ID를 사용하는 *MethodName***Async** 오버로드를 정의하는 경우 해당 작업 ID로 작업의 수명을 추적해야 하며, 해당 작업 ID를 완료 처리기에 다시 제공해야 합니다. 도움이 되는 도우미 클래스가 있습니다. 동시성 관리에 대한 자세한 내용은 [연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+-   클래스가 개체 반환 상태 매개 변수 또는 작업 ID를 사용하는 <em>MethodName</em>**Async** 오버로드를 정의하는 경우 해당 작업 ID로 작업의 수명을 추적해야 하며, 해당 작업 ID를 완료 처리기에 다시 제공해야 합니다. 도움이 되는 도우미 클래스가 있습니다. 동시성 관리에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
--   클래스가 상태 매개 변수 없이 *MethodName***Async** 메서드를 정의하고 클래스가 여러 동시 호출을 지원하지 않는 경우 이전 *MethodName***Async** 호출이 완료되기 전에 *MethodName***Async**를 호출하려는 시도에서 <xref:System.InvalidOperationException>이 발생하도록 합니다.  
+-   클래스가 상태 매개 변수 없이 <em>MethodName</em>**Async** 메서드를 정의하고 클래스가 여러 동시 호출을 지원하지 않는 경우 이전 <em>MethodName</em>**Async** 호출이 완료되기 전에 <em>MethodName</em>**Async**를 호출하려는 시도에서 <xref:System.InvalidOperationException>이 발생하도록 합니다.  
   
--   일반적으로 처리 중인 작업이 여러 개 있도록 `userSuppliedState` 매개 변수 없이 *MethodName***Async** 메서드를 여러 번 호출한 경우 예외를 발생시키지 마세요. 클래스가 명시적으로 해당 상황을 처리할 수 없는 경우 예외를 발생시킬 수 있지만 개발자가 구분할 수 없는 이러한 여러 콜백을 처리할 수 있다고 가정합니다.  
+-   일반적으로 처리 중인 작업이 여러 개 있도록 `userSuppliedState` 매개 변수 없이 <em>MethodName</em>**Async** 메서드를 여러 번 호출한 경우 예외를 발생시키지 마세요. 클래스가 명시적으로 해당 상황을 처리할 수 없는 경우 예외를 발생시킬 수 있지만 개발자가 구분할 수 없는 이러한 여러 콜백을 처리할 수 있다고 가정합니다.  
   
 ### <a name="accessing-results"></a>결과 액세스  
   
@@ -89,7 +89,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   가능한 경우 진행률 보고를 지원합니다. 그러면 개발자가 클래스를 사용할 때 더 나은 응용 프로그램 사용자 경험을 제공할 수 있습니다.  
   
--   **ProgressChanged** 또는 *MethodName***ProgressChanged** 이벤트를 구현하는 경우 특정 비동기 작업의 *MethodName***Completed** 이벤트가 발생한 후 해당 작업에 대해 그러한 이벤트가 발생하지 않도록 합니다.  
+-   **ProgressChanged** 또는 <em>MethodName</em>**ProgressChanged** 이벤트를 구현하는 경우 특정 비동기 작업의 <em>MethodName</em>**Completed** 이벤트가 발생한 후 해당 작업에 대해 그러한 이벤트가 발생하지 않도록 합니다.  
   
 -   표준 <xref:System.ComponentModel.ProgressChangedEventArgs>를 채우는 경우 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>가 항상 백분율로 해석될 수 있도록 합니다. 백분율이 정확할 필요는 없지만 백분율을 나타내야 합니다. 진행률 보고 메트릭이 백분율이 아닌 다른 메트릭이어야 하는 경우 <xref:System.ComponentModel.ProgressChangedEventArgs> 클래스에서 클래스를 파생시키고 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>를 0으로 둡니다. 백분율이 아닌 보고 메트릭을 사용하는 것을 피하세요.  
   
@@ -99,7 +99,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   클래스가 여러 동시 호출을 지원하는 경우 `IsBusy` 속성을 노출하지 마세요. 예를 들어, XML 웹 서비스 프록시는 비동기 메서드의 여러 동시 호출을 지원하므로 `IsBusy` 속성을 노출하지 않습니다.  
   
--   `IsBusy` 속성은 *MethodName***Async** 메서드가 호출된 후 *MethodName***Completed** 이벤트가 발생하기 전에 `true`를 반환해야 합니다. 그렇지 않으면 `false`를 반환해야 합니다. <xref:System.ComponentModel.BackgroundWorker> 및 <xref:System.Net.WebClient> 구성 요소는 `IsBusy` 속성을 노출하는 클래스의 예입니다.  
+-   `IsBusy` 속성은 <em>MethodName</em>**Async** 메서드가 호출된 후 <em>MethodName</em>**Completed** 이벤트가 발생하기 전에 `true`를 반환해야 합니다. 그렇지 않으면 `false`를 반환해야 합니다. <xref:System.ComponentModel.BackgroundWorker> 및 <xref:System.Net.WebClient> 구성 요소는 `IsBusy` 속성을 노출하는 클래스의 예입니다.  
   
 ### <a name="cancellation"></a>취소  
   
@@ -111,7 +111,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   취소 메서드에 대한 호출은 항상 성공적으로 반환되고 예외를 발생시키지 않도록 합니다. 일반적으로 클라이언트는 어느 시점에서든 작업이 진정으로 취소 가능한지에 대한 알림을 받지 않으며, 이전에 발생한 취소가 성공적인지에 대한 알림도 받지 않습니다. 그러나 응용 프로그램은 완료 상태에 참여하므로 취소가 성공적일 때 응용 프로그램에는 항상 알림이 제공됩니다.  
   
--   작업이 취소되면 *MethodName***Completed** 이벤트를 발생시킵니다.  
+-   작업이 취소되면 <em>MethodName</em>**Completed** 이벤트를 발생시킵니다.  
   
 ### <a name="errors-and-exceptions"></a>오류 및 예외  
   
@@ -120,14 +120,14 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 ### <a name="threading-and-contexts"></a>스레딩 및 컨텍스트  
  클래스가 올바로 작동하도록 하려면 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 및 Windows Forms 응용 프로그램을 비롯한 지정된 응용 프로그램 모델에 대해 올바른 스레드 또는 컨텍스트에서 클라이언트의 이벤트 처리기가 호출되도록 해야 합니다. 모든 응용 프로그램 모델에서 비동기 클래스가 올바르게 동작하도록 하기 위해 두 개의 중요한 도우미 클래스인 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>가 제공됩니다.  
   
- <xref:System.ComponentModel.AsyncOperationManager>는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 반환하는 하나의 메서드 <xref:System.ComponentModel.AsyncOperation>을 제공합니다. *MethodName***Async** 메서드는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 호출하고 클래스는 반환된 <xref:System.ComponentModel.AsyncOperation>을 사용하여 비동기 작업의 수명을 추적합니다.  
+ <xref:System.ComponentModel.AsyncOperationManager>는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 반환하는 하나의 메서드 <xref:System.ComponentModel.AsyncOperation>을 제공합니다. <em>MethodName</em>**Async** 메서드는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 호출하고 클래스는 반환된 <xref:System.ComponentModel.AsyncOperation>을 사용하여 비동기 작업의 수명을 추적합니다.  
   
  클라이언트에 진행률, 증분 결과 및 완료를 보고하려면 <xref:System.ComponentModel.AsyncOperation.Post%2A>에 대해 <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> 및 <xref:System.ComponentModel.AsyncOperation> 메서드를 호출합니다. <xref:System.ComponentModel.AsyncOperation>은 클라이언트의 이벤트 처리기에 대한 호출을 올바른 스레드 또는 컨텍스트로 마샬링하는 작업을 담당합니다.  
   
 > [!NOTE]
 >  명시적으로 응용 프로그램 모델의 정책에 반대하되 이벤트 기반 비동기 패턴 사용의 다른 이점을 이용하려는 경우 이러한 규칙을 피해 갈 수 있습니다. 예를 들어, Windows Forms에서 작동하는 클래스가 자유 스레드가 되도록 할 수 있습니다. 개발자가 암시된 제한 사항을 이해하는 한 자유 스레드 클래스를 만들 수 있습니다. 콘솔 응용 프로그램은 <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출 실행을 동기화하지 않습니다. 이로 인해 `ProgressChanged` 이벤트가 잘못 발생할 수 있습니다. <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출이 serialize되어 실행되도록 하려면 <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> 클래스를 구현하여 설치합니다.  
   
- <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>를 사용하여 비동기 작업을 사용하도록 설정하는 방법에 대한 자세한 내용은 [연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+ <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>를 사용하여 비동기 작업을 사용하도록 설정하는 방법에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 ## <a name="guidelines"></a>지침  
   
@@ -150,8 +150,8 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
  <xref:System.ComponentModel.BackgroundWorker>  
  [이벤트 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
- [이벤트 기반 비동기 패턴을 사용한 다중 스레드 프로그래밍](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  [이벤트 기반 비동기 패턴 구현 시기 결정](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  [최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- [연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+ [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
