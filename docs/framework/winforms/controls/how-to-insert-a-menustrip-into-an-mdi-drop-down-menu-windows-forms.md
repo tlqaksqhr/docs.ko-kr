@@ -9,17 +9,17 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: 9f7534720f9be185a176247ce00b0be5e2649bff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64e7e7875a635bcd4fbafb62d3ee7b7018214ee4
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538756"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754503"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>방법: MDI 드롭다운 메뉴에 MenuStrip 삽입(Windows Forms)
 일부 응용 프로그램에서는 MDI(다중 문서 인터페이스) 자식 창의 종류가 MDI 부모 창과 다를 수 있습니다. 예를 들어 MDI 부모는 스프레드시트이고 MDI 자식은 차트일 수 있습니다. 이 경우 다른 종류의 MDI 자식 창이 활성화될 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트하려고 합니다.  
   
- 다음 절차는 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> MDI 자식 메뉴의 메뉴 항목 그룹 MDI 부모 메뉴의 드롭다운 부분에 삽입 하는 속성입니다. MDI 자식 창을 닫으면 MDI 부모에서 삽입 된 메뉴 항목을 제거 합니다.  
+ 다음 절차에서는 합니다 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>를 <xref:System.Windows.Forms.MergeAction>, 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> MDI 부모 메뉴의 드롭다운 부분에 MDI 자식 메뉴에서 메뉴 항목의 그룹을 삽입 하는 속성입니다. MDI 자식 창을 닫으면 MDI 부모에서 삽입 된 메뉴 항목을 제거 합니다.  
   
 ### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>MDI 드롭 다운 메뉴에 MenuStrip 삽입 하려면  
   
@@ -29,17 +29,17 @@ ms.locfileid: "33538756"
   
 3.  `Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.  
   
-4.  3 개의 하위 메뉴 항목을 추가 `&File` 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`, `&Import from`, 및 `E&xit`합니다.  
+4.  세 하위 메뉴 항목을 추가 합니다 `&File` 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`를 `&Import from`, 및 `E&xit`합니다.  
   
-5.  두 개의 하위 메뉴 항목을 추가 `&Import from` 하위 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`합니다.  
+5.  두 개의 하위 메뉴 항목을 추가 합니다 `&Import from` 하위 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`합니다.  
   
 6.  프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
   
 7.  `Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&File`로 설정합니다.  
   
-8.  하위 메뉴 항목을 추가 `&File` 의 메뉴 `Form2` 다음과 같은 순서로:는 <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `&Close``and Save`, 또 다른 <xref:System.Windows.Forms.ToolStripSeparator>합니다.  
+8.  하위 메뉴 항목을 추가 합니다 `&File` 메뉴의 `Form2` 다음 순서 대로:를 <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`, 또 다른 <xref:System.Windows.Forms.ToolStripSeparator>합니다.  
   
-9. 설정는 <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 의 속성은 `Form2` 다음 표와 같이 메뉴 항목입니다.  
+9. 설정 합니다 <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 의 속성을 `Form2` 다음 표에 나와 있는 것 처럼 메뉴 항목.  
   
     |Form2 메뉴 항목|MergeAction 값|MergeIndex 값|  
     |---------------------|-----------------------|----------------------|  
