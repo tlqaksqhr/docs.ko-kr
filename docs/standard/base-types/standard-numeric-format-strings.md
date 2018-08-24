@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36208208"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42753606"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 형식 문자열
 
@@ -55,7 +55,7 @@ ms.locfileid: "36208208"
 |----------------------|----------|-----------------|--------------|  
 |"C" 또는 "c"|통화|결과: 통화 값<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [통화("C") 서식 지정자](#CFormatString)|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" 또는 "d"|Decimal|결과: 정수(선택적 음수 기호 포함)<br /><br /> 지원되는 형식: 정수 계열 형식만 지원됨<br /><br /> 전체 자릿수 지정자: 최소 자릿수<br /><br /> 기본 전체 자릿수 지정자: 필요한 최소 자릿수<br /><br /> 추가 정보: [10진수("D") 서식 지정자](#DFormatString)|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|"E" 또는 "e"|지수(과학적 표기법)|결과: 지수 표기법<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: 6<br /><br /> 추가 정보: ["E"(지수) 서식 지정자](#EFormatString)|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
+|"E" 또는 "e"|지수(과학적 표기법)|결과: 지수 표기법<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: 6<br /><br /> 추가 정보: ["E"(지수) 서식 지정자](#EFormatString)|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
 |"F" 또는 "f"|고정 소수점|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [고정 소수점("F") 서식 지정자](#FFormatString)|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" 또는 "g"|일반|결과: 더 간단한 형태의 고정 소수점 또는 과학적 표기법<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 유효 자릿수<br /><br /> 기본 전체 자릿수 지정자: 숫자 형식에 따라 다름<br /><br /> 추가 정보: [일반("G") 서식 지정자](#GFormatString)|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" 또는 "n"|수|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분, 그룹 구분 기호 및 소수 구분 기호<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 필요한 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [숫자("N") 서식 지정자](#NFormatString)|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
