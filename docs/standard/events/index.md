@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb7793c1c510c9b1b303e6b568f105a958c27cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578586"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42907772"
 ---
 # <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
 .NET Framework에서 이벤트는 대리자 모델을 기반으로 합니다. 대리자 모델은 구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 관찰자 디자인 패턴을 따릅니다. 이벤트 전송자는 이벤트가 발생했음을 알리고, 이벤트 수신자는 해당 알림을 수신하고 그에 대한 응답을 정의합니다. 이 문서에서는 대리자 모델의 주요 구성 요소, 응용 프로그램에서 이벤트를 사용하는 방법 및 코드에서 이벤트를 구현하는 방법에 대해 설명합니다.  
   
- Windows 8.x Store 앱에서의 이벤트 처리에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](/previous-versions/windows/apps/hh758286(v=win.10))를 참조하세요.  
+ Windows 8.x Store 앱에서의 이벤트 처리에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))를 참조하세요.  
   
 ## <a name="events"></a>이벤트  
  이벤트는 개체에서 작업 실행을 알리기 위해 보내는 메시지입니다. 이 작업은 단추 클릭과 같은 사용자 인터페이스에 의해 발생하거나 속성의 값을 변경하는 등 다른 프로그램 논리에 의해 발생할 수도 있습니다. 이벤트를 발생시키는 개체를 *이벤트 전송자*라고 하며 이벤트 전송자는 어떤 개체 또는 메서드가 발생되는 이벤트를 수신(처리)할지 모릅니다. 이벤트는 일반적으로 이벤트 전송자의 멤버입니다. 예를 들어 <xref:System.Web.UI.WebControls.Button.Click> 이벤트는 <xref:System.Web.UI.WebControls.Button> 클래스의 멤버이고, <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 이벤트는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하는 클래스의 멤버입니다.  

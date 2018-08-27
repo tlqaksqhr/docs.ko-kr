@@ -3,11 +3,11 @@ title: LINQ to XML 프로그래밍 개요 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
 ms.openlocfilehash: 18e32a855ebaebf8c5adf852be7f746894018132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645696"
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "42754145"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML 프로그래밍 개요 (Visual Basic)
 이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 클래스에 대한 대략적인 개요 정보와 가장 중요한 클래스 중 세 클래스에 대한 자세한 정보를 제공합니다.  

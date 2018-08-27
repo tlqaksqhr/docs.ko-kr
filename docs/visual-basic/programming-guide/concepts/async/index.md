@@ -3,11 +3,11 @@ title: Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753528"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925244"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 응용 프로그램의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 응용 프로그램을 쓰는 일반적인 기술이 복잡하여 해당 응용 프로그램을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -140,14 +140,14 @@ Dim urlContents As String = Await client.GetStringAsync()
 ##  <a name="BKMK_APIAsyncMethods"></a> API Async 메서드  
  `GetStringAsync`와 같이 비동기 프로그래밍을 지원하는 메서드를 어디에서 검색해야 할지 궁금했을 것입니다. .NET Framework 4.5 이상에는 `Async` 및 `Await`에 작동하는 많은 멤버가 포함되어 있습니다. 멤버 이름에 붙는 "Async" 접미사로 이러한 멤버와 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식을 인식할 수 있습니다. 예를 들어, `System.IO.Stream` 클래스는 동기 메서드인 <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> 및 <xref:System.IO.Stream.Write%2A>와 함께 <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>와 같은 메서드를 포함합니다.  
   
- Windows 런타임에는 Windows 앱에서 `Async` 및 `Await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용과 하는 방법에 대 한 참조 [C# 또는 Visual Basic의 비동기 Api 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [비동기 프로그래밍 (Windows 런타임 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), 및 [WhenAny:.NET 간 브리징 프레임 워크 및 Windows 런타임](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))합니다.  
+ Windows 런타임에는 Windows 앱에서 `Async` 및 `Await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용 및 예제 메서드를 참조 하세요 [C# 또는 Visual Basic로 비동기 Api 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)를 [비동기 프로그래밍 (Windows 런타임 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), 및 [WhenAny:.NET 간 브리징 Framework와 Windows 런타임](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))합니다.  
   
 ##  <a name="BKMK_Threads"></a> 스레드  
  비동기 메서드는 비차단 작업입니다. 비동기 메서드의 `Await` 식은 대기한 작업이 실행되는 동안 현재 스레드를 차단하지 않습니다. 대신에 이 식은 메서드의 나머지를 연속으로 등록하고 제어 기능을 비동기 메서드 호출자에게 반환합니다.  
   
  `Async` 및 `Await` 키워드로 인해 추가 스레드가 생성되지 않습니다. 비동기 메서드는 자체 스레드에서 실행되지 않으므로 다중 스레드가 필요하지 않습니다. 메서드는 현재 동기화 컨텍스트에서 실행되고 메서드가 활성화된 경우에만 스레드에서 시간을 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>을 사용하여 CPU 바인딩 작업을 백그라운드 스레드로 이동할 수 있지만 백그라운드 스레드는 프로세스를 지원하지 않고 결과를 사용할 수 있을 때까지 기다립니다.  
   
- 비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히,이 방법은 보다 더 나은 <xref:System.ComponentModel.BackgroundWorker> I/o 바운드 작업 코드가 더 간단 하 고 보호 하지 않아도 때문에 경합 조건을 대 한 합니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>이 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.ComponentModel.BackgroundWorker>을 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 `Task.Run`보다 효과가 뛰어납니다.  
+ 비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히,이 방법은 보다 <xref:System.ComponentModel.BackgroundWorker> I/o 바인딩된 작업 코드를 더 간단 하 고 보호 하지 않아도 되므로 경합 조건에 대 한 합니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>이 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.ComponentModel.BackgroundWorker>을 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 `Task.Run`보다 효과가 뛰어납니다.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async 및 Await  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.  
@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- 자세한 내용 및 예제에 대 한 참조 [C# 또는 Visual Basic의 비동기 Api 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)합니다.  
+ 자세한 내용 및 예제를 참조 하세요 [C# 또는 Visual Basic로 비동기 Api 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)합니다.  
   
 ##  <a name="BKMK_NamingConvention"></a> 명명 규칙  
  규칙에 따라 `Async` 한정자가 있는 메서드 이름에 "Async"를 추가합니다.  

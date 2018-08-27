@@ -2,12 +2,12 @@
 title: '방법: 필터 사용'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b1e02563fcc32a0095e2bdb5e25d0853fc05e84
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496353"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42754653"
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "33496353"
   
 ### <a name="define-filters"></a>필터 정의  
   
-1.  클라이언트 응용 프로그램이 메시지에 추가 하는 "RoundingCalculator" 사용자 지정 헤더를 기반으로 메시지를 확인 하려면이 헤더의 존재 여부에 대 한 XPath 쿼리를 사용 하는 필터를 정의 합니다. 이 헤더를 사용자 지정 네임 스페이스를 사용 하 여 정의 되므로 XPath 쿼리에 사용 되는 "custom"의 사용자 지정 네임 스페이스 접두사를 정의 하는 네임 스페이스 항목도 추가 합니다. 다음 예제에서는 필요한 라우팅 섹션, 네임스페이스 테이블 및 XPath 필터를 정의합니다.  
+1.  클라이언트 응용 프로그램 메시지에 추가 하는 "RoundingCalculator" 사용자 지정 헤더를 기반으로 메시지를 라우팅하려면이 헤더의 존재 여부 확인 하는 XPath 쿼리를 사용 하는 필터를 정의 합니다. 이 헤더에 사용자 지정 네임 스페이스를 사용 하 여 정의 XPath 쿼리에 사용 되는 "custom"의 사용자 지정 네임 스페이스 접두사를 정의 하는 네임 스페이스 항목을 추가할 수도 있습니다. 다음 예제에서는 필요한 라우팅 섹션, 네임스페이스 테이블 및 XPath 필터를 정의합니다.  
   
     ```xml  
     <routing>  
@@ -110,10 +110,10 @@ ms.locfileid: "33496353"
     </routing>  
     ```  
   
-     이 **MessageFilter** 는 "rounding" 값이 포함 된 메시지에서 RoundingCalculator 헤더를 찾습니다. 이 헤더는 클라이언트에 의해 설정되어 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타냅니다.  
+     이렇게 **MessageFilter** "rounding" 값이 포함 된 메시지에서 RoundingCalculator 헤더를 찾습니다. 이 헤더는 클라이언트에 의해 설정되어 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타냅니다.  
   
     > [!NOTE]
-    >  S12 네임 스페이스 접두사는 기본적으로 네임 스페이스 테이블에 정의 되며 네임 스페이스를 나타냅니다 "http://www.w3.org/2003/05/soap-envelope"입니다.  
+    >  S12 네임 스페이스 접두사를 네임 스페이스 테이블에는 기본적으로 정의 되 고 네임 스페이스를 나타내는 "http://www.w3.org/2003/05/soap-envelope"입니다.  
   
 2.  또한 두 가상 끝점에 수신된 메시지를 찾는 필터도 정의해야 합니다. 첫 번째 가상 끝점은 "regular/calculator" 끝점입니다. 클라이언트는 이 끝점에 요청을 보내 메시지가 regularCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성에서는 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>를 사용하여 메시지가 filterData에 지정된 이름을 가진 끝점을 통해 도착했는지 확인하는 필터를 정의합니다.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "33496353"
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     "CalculatorEndpoint" 라는 서비스 끝점에서 수신 되 면이 필터 계산 되 면 `true`합니다.  
+     이 필터를 평가 "calculatorEndpoint" 라는 서비스 끝점에 의해 메시지가 수신 되 면 `true`합니다.  
   
-3.  다음으로 roundingEndpoint의 주소로 전송된 메시지를 찾는 필터를 정의합니다. 클라이언트는 이 끝점에 요청을 보내 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성을 사용 하는 필터를 정의 고 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> "반올림/calculator" 끝점에 메시지가 도착 했는지 확인 하려면.  
+3.  다음으로 roundingEndpoint의 주소로 전송된 메시지를 찾는 필터를 정의합니다. 클라이언트는 이 끝점에 요청을 보내 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성을 사용 하는 필터를 정의 합니다 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 메시지는 "반올림/calculator" 끝점에 도착 했는지 확인 하려면.  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ ms.locfileid: "33496353"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     로 시작 하는 주소에서 메시지를 수신 하는 경우 "http://localhost/routingservice/router/rounding/"이이 필터를 평가 **true**합니다. 이 구성에서 사용 하는 기본 주소는 "http://localhost/routingservice/router"및 "반올림/calculator" roundingEndpoint에 지정 된 주소를이 끝점과 통신 하는 데 전체 주소는 "http://localhost/routingservice/router/rounding/calculator",이 필터와 일치 합니다.  
+     시작 하는 주소에 메시지를 받을 경우 "http://localhost/routingservice/router/rounding/"이이 필터를 평가 **true**합니다. 이 구성에서 사용 되는 기본 주소 이므로 "http://localhost/routingservice/router"고 roundingEndpoint는 "반올림/calculator"에 대해 지정 된 주소를이 끝점과 통신할 때 사용 되는 전체 주소는 "http://localhost/routingservice/router/rounding/calculator",이 필터와 일치 하는 합니다.  
   
     > [!NOTE]
     >  PrefixEndpointAddress 필터는 일치를 수행할 때 호스트 이름을 평가하지 않습니다. 하나의 호스트가 다양한 호스트 이름을 사용하여 참조될 수 있고, 이러한 다양한 이름은 모두 클라이언트 응용 프로그램에서 호스트를 참조하는 유효한 방법일 수 있기 때문입니다. 예를 들어 다음 항목은 모두 같은 호스트를 참조할 수 있습니다.  
     >   
-    >  -   localhost  
+    > -   localhost  
     > -   127.0.0.1  
-    > -   www.contoso.com  
+    > -   `www.contoso.com`  
     > -   ContosoWeb01  
   
-4.  마지막 필터는 사용자 지정 헤더 없이 일반 끝점에 도착하는 메시지의 라우팅을 지원해야 합니다. 이 시나리오의 경우 메시지는 regularCalc 서비스와 roundingCalc 서비스 사이를 번갈아 전환해야 합니다. 이러한 메시지의 "라운드 로빈" 라우팅을 지원 하려면 처리 하는 각 메시지에 대해 일치 시킬 하나의 필터 인스턴스를 허용 하는 사용자 지정 필터를 사용 합니다.  다음 예제에서는 RoundRobinMessageFilter의 두 인스턴스를 정의하며, 이 두 인스턴스는 하나로 그룹화되어 서로 번갈아 전환되어야 함을 나타냅니다.  
+4.  마지막 필터는 사용자 지정 헤더 없이 일반 끝점에 도착하는 메시지의 라우팅을 지원해야 합니다. 이 시나리오의 경우 메시지는 regularCalc 서비스와 roundingCalc 서비스 사이를 번갈아 전환해야 합니다. 이러한 메시지의 "라운드 로빈" 라우팅을 지원 하려면 각 메시지 처리에 대해 일치 시킬 하나의 필터 인스턴스를 허용 하는 사용자 지정 필터를 사용 합니다.  다음 예제에서는 RoundRobinMessageFilter의 두 인스턴스를 정의하며, 이 두 인스턴스는 하나로 그룹화되어 서로 번갈아 전환되어야 함을 나타냅니다.  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -165,7 +165,7 @@ ms.locfileid: "33496353"
     > [!NOTE]
     >  필터 우선 순위를 지정하면 필터가 처리되는 순서를 제어할 수 있지만 라우팅 서비스의 성능에는 부정적인 영향을 미치게 됩니다. 가능한 경우 필터 우선 순위를 사용할 필요가 없도록 필터 논리를 생성하세요.  
   
-     다음 필터 테이블을 정의 하 고 우선 순위가 2 인 테이블을 앞에서 정의한 "XPathFilter"를 추가 합니다. 이 항목은 "XPathFilter"가 메시지와 일치할 경우 메시지가 "roundingCalcEndpoint"로 라우팅되는 또한 지정  
+     다음 필터 테이블을 정의 하 고 우선 순위가 2 인 테이블에 앞에서 정의한 "XPathFilter"를 추가 합니다. 이 항목은 "XPathFilter" 메시지와 일치할 경우 메시지가 "roundingCalcEndpoint"으로 라우팅되는 또한 지정  
   
     ```xml  
     <routing>  
@@ -225,7 +225,7 @@ ms.locfileid: "33496353"
     </behaviors>  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  

@@ -2,12 +2,12 @@
 title: SQL Server에서 인증
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 85f441d2181d434ec9fccca5841296106d0d7e3f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472389"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754504"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
@@ -17,7 +17,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 -   혼합 모드에서는 Windows 인증과 SQL Server 인증을 모두 지원하며 사용자 이름 및 암호 쌍이 SQL Server 내에서 유지 관리됩니다.  
   
 > [!IMPORTANT]
->  가급적 Windows 인증을 사용하는 것이 좋습니다. Windows 인증은 일련의 암호화된 메시지를 사용하여 SQL Server에서 사용자를 인증합니다. SQL Server 로그인에 사용 되는 경우 SQL Server 로그인 이름과 암호화 된 암호는 덜 안전한 효율적 네트워크를 통해 전달 됩니다.  
+>  가급적 Windows 인증을 사용하는 것이 좋습니다. Windows 인증은 일련의 암호화된 메시지를 사용하여 SQL Server에서 사용자를 인증합니다. SQL Server 로그인을 사용 하는 SQL Server 로그인 이름과 암호화 된 암호 수 있으므로 덜 안전한 네트워크를 통해 전달 됩니다.  
   
  Windows 인증을 사용하는 경우 사용자가 Windows에 이미 로그온되어 있으므로 SQL Server에 별도로 로그온할 필요가 없습니다. 다음 `SqlConnection.ConnectionString`은 사용자 이름이나 암호를 제공할 필요가 없는 Windows 인증을 지정합니다.  
   
@@ -46,10 +46,10 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 -   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]과 같은 인터넷 응용 프로그램  
   
 > [!NOTE]
->  Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. ALTER LOGIN DISABLE을 사용 하 여 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 높은 권한을 가진 SQL Server 로그인을 사용 하지 않도록 설정 합니다.  
+>  Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. ALTER LOGIN DISABLE을 사용 하 여 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 높은 SQL Server 로그인을 사용 하지 않도록 설정 합니다.  
   
 ## <a name="login-types"></a>로그인 유형  
- SQL Server에서는 세 가지 유형의 로그인을 지원합니다.  
+ SQL Server는 세 가지 유형의 로그인을 지원합니다.  
   
 -   로컬 Windows 사용자 계정 또는 신뢰할 수 있는 도메인 계정. SQL Server는 Windows를 통해 Windows 사용자 계정을 인증합니다.  
   
@@ -66,17 +66,17 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 > [!IMPORTANT]
 >  SQL Server는 `sa`("system administrator"의 약어)라는 SQL Server 로그인으로 설치됩니다. 따라서 `sa` 로그인에는 강력한 암호를 지정해야 하고 응용 프로그램에는 `sa` 로그인을 사용하지 않아야 합니다. `sa` 로그인은 전체 서버에 대해 취소할 수 없는 관리 자격 증명을 가지는 `sysadmin` 고정 서버 역할에 매핑됩니다. 따라서 공격자가 sa(시스템 관리자)로 액세스할 경우 입을 수 있는 피해는 상상을 초월합니다. Windows `BUILTIN\Administrators` 그룹(로컬 관리자 그룹)의 모든 멤버는 기본적으로 `sysadmin` 역할의 멤버이지만 이 역할에서 멤버를 제거할 수 있습니다.  
   
- SQL Server에서 실행 되는 SQL Server 로그인에 대 한 Windows 암호 정책 메커니즘을 제공 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 또는 이후 버전입니다. 암호 복잡성 정책은 가능한 암호의 수를 늘려 무차별 암호 대입 공격(brute force attack)을 방지하도록 설계되었습니다. SQL Server에서 사용 되는 동일한 복잡성 및 만료 정책을 적용할 수 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] SQL Server 내에서 사용 된 암호입니다.  
+ SQL Server 실행 되는 경우 SQL Server 로그인에 대 한 Windows 암호 정책 메커니즘을 제공 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 이상 버전. 암호 복잡성 정책은 가능한 암호의 수를 늘려 무차별 암호 대입 공격(brute force attack)을 방지하도록 설계되었습니다. SQL Server에 사용 되는 동일한 복잡성 및 만료 정책을 적용할 수 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] SQL Server 내에서 사용 되는 암호입니다.  
   
 > [!IMPORTANT]
->  사용자 입력의 연결 문자열 연결로 인해 문자열 삽입 공격에 노출될 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하면 런타임에 구문상 유효한 연결 문자열을 만들 수 있습니다. 자세한 내용은 참조 [연결 문자열 작성기](../../../../../docs/framework/data/adonet/connection-string-builders.md)합니다.  
+>  사용자 입력의 연결 문자열 연결로 인해 문자열 삽입 공격에 노출될 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하면 런타임에 구문상 유효한 연결 문자열을 만들 수 있습니다. 자세한 내용은 [연결 문자열 작성기](../../../../../docs/framework/data/adonet/connection-string-builders.md)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[보안 주체](http://msdn.microsoft.com/library/bb543165.aspx) SQL Server 온라인 설명서의|로그인 및 SQL Server의 다른 보안 주체에 설명 합니다.|  
+|[보안 주체](/sql/relational-databases/security/authentication-access/principals-database-engine)|로그인 및 SQL Server의 다른 보안 주체에 설명 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
