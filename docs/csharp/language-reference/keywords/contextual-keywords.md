@@ -4,12 +4,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 8b15b0df5e3f65494a037eed7992c9a16d9b8578
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216188"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930044"
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 상황별 키워드는 코드에서 특정 의미를 제공하는 데 사용되지만 C#의 예약어입니다. 다음 상황별 키워드를 이 섹션에서 소개합니다.  
@@ -33,7 +33,8 @@ ms.locfileid: "33216188"
   
  C# 3.0에 도입된 모든 쿼리 키워드도 상황별 키워드입니다. 자세한 내용은 [쿼리 키워드(LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)

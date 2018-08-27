@@ -4,12 +4,12 @@ description: 감정 예측을 통해 적절한 작업을 수행하는 방법을 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 57ade448f5773bee3474cb46bec8ad33e3afbee3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948620"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000390"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용
 
@@ -105,7 +105,7 @@ ms.locfileid: "36948620"
 
 1. [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 및 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 데이터 집합을 다운로드하여 이전에 만든 *Data* 폴더에 저장합니다. 첫 번째 데이터 집합은 기계 학습 모델을 교육하고 두 번째 데이터 집합은 모델이 얼마나 정확한지 평가하는 데 사용할 수 있습니다.
 
-2. 솔루션 탐색기에서 각 \*.tsv 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **항상**으로 변경합니다.
+2. 솔루션 탐색기에서 각 \*.tsv 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
 
 ### <a name="create-classes-and-define-paths"></a>클래스 만들기 및 경로 정의
 

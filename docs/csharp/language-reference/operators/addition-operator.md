@@ -8,12 +8,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d4a269c07e0d6dc2ac6a6a101f200653c6ea7a29
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244873"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930714"
 ---
 # <a name="-operator-c-reference"></a>+ 연산자(C# 참조)
 `+` 연산자는 단항 또는 이항 연산자로 작동할 수 있습니다.  
@@ -33,8 +33,9 @@ ms.locfileid: "39244873"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)  
- [연산자(C# 참조)](../../../csharp/language-reference/keywords/operator.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)  
+- [연산자(C# 참조)](../../../csharp/language-reference/keywords/operator.md)

@@ -2,21 +2,21 @@
 title: 식별자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765882"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932186"
 ---
 # <a name="identifiers-entity-sql"></a>식별자(Entity SQL)
-식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 종류의 식별자를 제공: 단순 식별자와 따옴표 붙은 식별자입니다.  
+식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 종류의 식별자를 제공 합니다: 단순 식별자와 따옴표 붙은 식별자입니다.  
   
 ## <a name="simple-identifiers"></a>단순 식별자  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 단순 식별자는 영숫자와 밑줄 문자의 시퀀스입니다. 식별자의 첫 문자는 영문자(a-z 또는 A-Z)여야 합니다.  
   
 ## <a name="quoted-identifiers"></a>따옴표 붙은 식별자  
- 따옴표 붙은 식별자는 대괄호( [] )로 묶인 임의의 문자 시퀀스입니다. 따옴표 붙은 식별자를 사용하면 식별자에 유효하지 않은 문자를 사용하여 식별자를 지정할 수 있습니다. 대괄호로 묶인 모든 문자는 식별자의 일부가 되며, 여기에는 모든 공백이 포함됩니다.  
+ 따옴표 붙은 식별자는 대괄호( [] )로 묶인 임의의 문자 시퀀스입니다. 따옴표 붙은 식별자를 사용하면 식별자에 유효하지 않은 문자를 사용하여 식별자를 지정할 수 있습니다. 대괄호 사이 모든 문자를 사용 하면 모든 공백을 포함 하는 식별자의 일부가 됩니다.  
   
  따옴표 붙은 식별자는 다음 문자를 포함할 수 없습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "32765882"
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- 따옴표 붙은 식별자 비교 의미 체계에 대 한 참조 [입력 문자 집합](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)합니다.  
+ 따옴표 붙은 식별자 비교 의미 체계를 참조 하세요 [입력 문자 집합](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)합니다.  
   
 ## <a name="aliasing-rules"></a>별칭 지정 규칙  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 구문을 비롯하여 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서 필요 시 항상 별칭을 지정하는 것이 좋습니다.  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577618"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935628"
 ---
 # <a name="types-of-isolation"></a>격리 유형
 격리된 저장소에 대한 액세스는 항상 저장소를 만든 사용자로 제한됩니다. 이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다. 이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "33577618"
  로밍 저장소를 제외하고 격리된 저장소는 지정된 컴퓨터에 로컬인 저장소 시설을 사용하므로 항상 컴퓨터에서 암시적으로 격리됩니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에는 격리된 저장소를 사용할 수 없습니다. 대신에 `Windows.Storage` API에 포함된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 네임스페이스의 응용 프로그램 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [응용 프로그램 데이터](/previous-versions/windows/apps/hh464917(v=win.10))를 참조하세요.  
+>  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에는 격리된 저장소를 사용할 수 없습니다. 대신에 `Windows.Storage` API에 포함된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 네임스페이스의 응용 프로그램 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [응용 프로그램 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 참조하세요.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>사용자 및 어셈블리별 격리  

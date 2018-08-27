@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
 ms.openlocfilehash: 7736b8850a7b09f7212e83e05acf0e1994bce0fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215500"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000006"
 ---
 # <a name="-target-c-compiler-options"></a>-target(C# 컴파일러 옵션)
 **-target** 컴파일러 옵션은 다음 네 가지 형태 중 하나로 지정할 수 있습니다.  

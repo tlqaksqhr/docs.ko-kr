@@ -1,6 +1,6 @@
 ---
 title: InheritsFrom 함수 (관리 되지 않는 API 참조)
-description: InheritsFrom 함수 클래스 또는 인스턴스는 특정 부모 클래스 로부터 파생 있는지 여부를 결정 합니다.
+description: InheritsFrom 함수 클래스 또는 인스턴스를 특정 부모 클래스에서 파생 하는지 여부를 결정 합니다.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461417"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930924"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 함수
-현재 클래스 또는 인스턴스를 지정 된 부모 클래스에서 파생 있는지 여부를 결정 합니다.
+현재 클래스 또는 인스턴스를 지정한 부모 클래스에서 파생 하는지 여부를 결정 합니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,34 +41,34 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>매개 변수
 
 `vFunc`  
-[in] 이 매개 변수를 사용 하지 않습니다.
+[in] 이 매개 변수 사용 되지 않습니다.
 
 `ptr`  
-[in] 에 대 한 포인터는 [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) 인스턴스.
+[in] 에 대 한 포인터를 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스.
 
 `wszAncestor`  
 [in] 클래스의 이름입니다. `wszAncestor` 유효한 가리켜야 `LPCWSTR`합니다.
 
 ## <a name="return-value"></a>반환 값
 
-이 함수에서 반환 되는 다음 값에 정의 된는 *WbemCli.h* 헤더 파일 또는 있습니다를 정의할 수 상수로 코드:
+이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
 |상수  |값  |설명  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | 현재 개체에서 상속 `wszAncestor`합니다.  |
 | `WBEM_S_FALSE` | 1 | 현재 개체에서 상속 되지 않는 `wszAncestor`합니다. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor`가 `null`인 경우 |
+|`WBEM_E_INVALID_PARAMETER` | '(0x80041008 | `wszAncestor`가 `null`인 경우 |
   
 ## <a name="remarks"></a>설명
 
-이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::InheritsFrom](https://msdn.microsoft.com/library/aa391452(v=vs.85).aspx) 메서드.
+이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) 메서드.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

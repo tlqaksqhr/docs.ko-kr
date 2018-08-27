@@ -3,12 +3,12 @@ title: 쿼리 식 기본 사항(C#의 LINQ)
 description: 쿼리 식과 관련된 개념 소개
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 9533fcb76e0c06e7fd20cb4c7ffc6e4980cfc30f
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404543"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933283"
 ---
 # <a name="query-expression-basics"></a>쿼리 식 기본 사항
 
@@ -174,7 +174,7 @@ LINQ에서 쿼리 변수는 쿼리의 *결과* 대신 *쿼리*를 저장하는 �
 
 ## <a name="see-also"></a>참고 항목
 
-[C# 프로그래밍 가이드](../programming-guide/index.md)  
-[LINQ(Language-Integrated Query)](index.md)  
-[쿼리 키워드(LINQ)](../language-reference/keywords/query-keywords.md)  
-[표준 쿼리 연산자 개요](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [C# 프로그래밍 가이드](../programming-guide/index.md)  
+- [LINQ(Language-Integrated Query)](index.md)  
+- [쿼리 키워드(LINQ)](../language-reference/keywords/query-keywords.md)  
+- [표준 쿼리 연산자 개요](../programming-guide/concepts/linq/standard-query-operators-overview.md)  

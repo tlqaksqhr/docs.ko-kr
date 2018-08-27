@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 ms.openlocfilehash: 62dbbbfb7a63c8fb73661fe7d66e73d0eca73107
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340309"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752066"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>방법: 사용자 지정 확장명 메서드 구현 및 호출(C# 프로그래밍 가이드)
 이 항목에서는 모든 .NET 형식에 대한 사용자 고유의 확장 메서드를 구현하는 방법을 보여 줍니다. 클라이언트 코드는 확장 메서드를 포함하는 DLL에 대한 참조를 추가하고 확장 메서드가 정의된 네임스페이스를 지정하는 [using](../../../csharp/language-reference/keywords/using-directive.md) 지시문을 추가하여 확장 메서드를 사용할 수 있습니다.  

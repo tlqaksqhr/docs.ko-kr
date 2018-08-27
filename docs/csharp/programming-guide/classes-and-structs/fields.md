@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65e815411cc9f4af063cb955ae63d18e87f43f38
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314329"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998699"
 ---
 # <a name="fields-c-programming-guide"></a>필드(C# 프로그래밍 가이드)
 *필드*는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md)에서 직접 선언되는 모든 형식의 변수입니다. 필드는 포함하는 형식의 *멤버*입니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "33314329"
   
  필요에 따라 필드를 [static](../../../csharp/language-reference/keywords/static.md)으로 선언할 수 있습니다. 그러면 클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 필드를 사용할 수 있습니다. 자세한 내용은 [static 클래스 및 static 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
   
- 필드를 [readonly](../../../csharp/language-reference/keywords/readonly.md)로 선언할 수 있습니다. 읽기 전용 필드는 초기화 중이나 생성자에서만 값을 할당할 수 있습니다. C# 컴파일러가 컴파일 시간에는 정적 읽기 전용 필드의 값에 액세스할 수 없고 런타임 시에만 액세스할 수 있다는 점을 제외하면`static``readonly` 필드는 상수와 매우 유사합니다. 자세한 내용은 [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)를 참조하세요.  
+ 필드를 [readonly](../../../csharp/language-reference/keywords/readonly.md)로 선언할 수 있습니다. 읽기 전용 필드는 초기화 중이나 생성자에서만 값을 할당할 수 있습니다. C# 컴파일러가 컴파일 시간에는 정적 읽기 전용 필드의 값에 액세스할 수 없고 런타임 시에만 액세스할 수 있다는 점을 제외하면`static readonly` 필드는 상수와 매우 유사합니다. 자세한 내용은 [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

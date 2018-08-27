@@ -2,47 +2,47 @@
 title: SystemWebRouting Integration 샘플
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 52b908d354771cb2b351e339881647462340b716
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 944eb8f2bd907308e60525f8917fcad826caa472
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806528"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932068"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Integration 샘플
-이 샘플에서는 호스팅 계층과 <xref:System.Web.Routing> 네임스페이스에 있는 클래스의 통합을 보여 줍니다. <xref:System.Web.Routing> 네임스페이스의 클래스를 사용하면 응용 프로그램에서 실제 리소스에 직접적으로 해당하지 않는 URL을 사용할 수 있습니다. 웹 라우팅을 사용 하 여 개발자를 실제 WCF 서비스에 다시 매핑되는 HTTP에 대 한 가상 주소를 만들 수 있습니다. 이렇게 하면 실제 파일 또는 리소스 없이 WCF 서비스를 호스트해야 하거나 .html 또는 .aspx와 같은 파일 확장명이 포함되지 않은 URL을 사용하여 서비스에 액세스해야 하는 경우에 유용합니다. 이 샘플에서는 <xref:System.Web.Routing.RouteTable> 클래스를 사용하여 global.asax에 정의된 실행 중인 서비스에 매핑되는 가상 URI를 만드는 방법을 보여 줍니다. 
+이 샘플에서는 호스팅 계층과 <xref:System.Web.Routing> 네임스페이스에 있는 클래스의 통합을 보여 줍니다. <xref:System.Web.Routing> 네임스페이스의 클래스를 사용하면 응용 프로그램에서 실제 리소스에 직접적으로 해당하지 않는 URL을 사용할 수 있습니다. 웹 라우팅을 사용 하 여 개발자를 실제 WCF 서비스에 다시 매핑되는 HTTP 용 가상 주소를 만들 수 있습니다. 이렇게 하면 실제 파일 또는 리소스 없이 WCF 서비스를 호스트해야 하거나 .html 또는 .aspx와 같은 파일 확장명이 포함되지 않은 URL을 사용하여 서비스에 액세스해야 하는 경우에 유용합니다. 이 샘플에서는 <xref:System.Web.Routing.RouteTable> 클래스를 사용하여 global.asax에 정의된 실행 중인 서비스에 매핑되는 가상 URI를 만드는 방법을 보여 줍니다. 
 
 > [!NOTE]
 >  <xref:System.Web.Routing> 네임스페이스의 클래스는 HTTP를 통해 호스트되는 서비스에 대해서만 작동합니다.  
   
-이 예제에서는 WCF를 사용 하 여 두 개의 RSS 피드를 만듭니다:는 `movies` 피드 및 `channels` 피드입니다. 서비스를 활성화 하도록 Url 확장을 포함 하지 않으며에 등록 되어 있는 `Application_Start` 의 메서드는 `Global` 에서 파생 된 클래스는 <xref:System.Web.HttpApplication> 클래스입니다.  
+이 예제에서는 WCF를 사용 하 여 두 개의 RSS 피드를 만듭니다:는 `movies` 피드 및 `channels` 피드 합니다. 서비스를 활성화 하도록 Url 확장을 포함 하지 않으며에 등록 된 합니다 `Application_Start` 메서드를 `Global` 에서 파생 된 클래스는 <xref:System.Web.HttpApplication> 클래스.  
   
 > [!NOTE]
->  이 샘플에만 인터넷 정보 서비스 (IIS) 7.0에서 작동 나중에 IIS 6.0으로 사용 하는 다른 방법을 확장명이 없는 Url을 지원 하기 위한 합니다.  
+>  이 샘플에만 인터넷 정보 서비스 (IIS) 7.0에서 나중에 IIS 6.0 메서드를 사용 하는 다른 지원 확장명이 없는 Url에 대 한 합니다.  
 
-#### <a name="to-download-this-sample"></a>이 예제를 다운로드 하려면
+#### <a name="to-download-this-sample"></a>이 샘플을 다운로드 하려면
   
-이 샘플 컴퓨터에 이미 설치 되어 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+이 예제는 이미 컴퓨터에 설치할 수 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- 이 디렉터리가로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4에 대 한 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+ 이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 하 합니다.  
+1.  WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 합니다.  
   
 2.  F5 키를 눌러 솔루션을 실행하고 웹 개발 서버를 시작합니다.  
   
      샘플의 디렉터리 목록이 나타납니다. 파일 확장명이 .svc인 파일은 없습니다.  
   
-3.  주소 표시줄에 추가 `movies` 한다는 표시 되도록 URL로 http://localhost:[port] / 영화 ENTER 키를 누릅니다.  
+3.  주소 표시줄에 추가할 `movies` 한다는 읽고 있으므로 URL로 `http://localhost:[port]/movies` ENTER 키를 누릅니다.  
   
      movies 피드가 브라우저에 나타납니다.  
   
-4.  주소 표시줄에 추가 `channels` URL로가 되도록 읽기 http://localhost:[port] / 채널 및 ENTER 키를 누릅니다.  
+4.  주소 표시줄에 추가할 `channels` URL로 간단 하 게 읽기 `http://localhost:[port]/channels` ENTER 키를 누릅니다.  
   
      channels 피드가 브라우저에 나타납니다.  
   
@@ -52,27 +52,27 @@ ms.locfileid: "33806528"
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>IIS에서 호스트될 때 이 샘플을 사용하려면  
   
-1.  WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 하 합니다.  
+1.  WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 합니다.  
   
 2.  Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다.  
   
 3.  IIS(인터넷 정보 서비스) 관리자에서 웹 응용 프로그램을 만듭니다.  
   
-    1.  IIS 관리자에서 마우스 오른쪽 단추로 클릭는 **기본 웹 사이트** 선택 **응용 프로그램 추가**합니다.  
+    1.  IIS 관리자를 마우스 오른쪽 단추로 클릭 합니다 **기본 웹 사이트** 선택한 **응용 프로그램 추가**합니다.  
   
-    2.  에 대 한는 **별칭**, 입력 `WebRoutingIntegration`합니다.  
+    2.  에 대 한 합니다 **별칭**, 입력 `WebRoutingIntegration`합니다.  
   
-    3.  에 대 한는 **실제 경로**, 프로젝트 내의 Service 폴더를 선택 합니다.  
+    3.  에 대 한 합니다 **실제 경로**, 프로젝트 내의 Service 폴더를 선택 합니다.  
   
-    4.  Press **OK**.  
+    4.  키를 눌러 **확인**합니다.  
   
 4.  웹 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 응용 프로그램을 시작 **응용 프로그램 관리** 차례로 **찾아보기**합니다.  
   
-5.  주소 표시줄에 추가 `movies` URL로가 되도록 읽기 http://localhost:[port] / 영화 ENTER 키를 누릅니다.  
+5.  주소 표시줄에 추가할 `movies` URL로 간단 하 게 읽기 `http://localhost:[port]/movies` ENTER 키를 누릅니다.  
   
      movies 피드가 브라우저에 나타납니다.  
   
-6.  주소 표시줄에 추가 `channels` URL로가 되도록 읽기 http://localhost:[port] / 채널 및 ENTER 키를 누릅니다.  
+6.  주소 표시줄에 추가할 `channels` URL로 간단 하 게 읽기 `http://localhost:[port]/channels` ENTER 키를 누릅니다.  
   
      channels 피드가 브라우저에 나타납니다.  
   

@@ -3,11 +3,11 @@ title: -subsystemversion(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 ms.openlocfilehash: 25391dd504fb8a2b9458fd9495477258fc23d81a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215516"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001395"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion(C# 컴파일러 옵션)
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.  

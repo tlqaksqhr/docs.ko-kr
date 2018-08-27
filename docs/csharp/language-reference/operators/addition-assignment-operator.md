@@ -7,12 +7,12 @@ helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bcd56acad8e2b08585e5ae60f1c3cf8183b5664a
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171881"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933789"
 ---
 # <a name="-operator-c-reference"></a>+= 연산자(C# 참조)
 더하기 대입 연산자.  
@@ -39,7 +39,8 @@ x = x + y
 ## <a name="example"></a>예  
  [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)

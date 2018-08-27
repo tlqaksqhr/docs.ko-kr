@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 2da8211ac21a5016478e7b881e7f2f9925b49cef
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243628"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001336"
 ---
 # <a name="protected-c-reference"></a>protected(C# 참조)
 `protected` 키워드는 멤버 액세스 한정자입니다. 
@@ -46,14 +46,15 @@ protected 멤버는 해당 클래스 내에서 파생 클래스 인스턴스가 
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [액세스 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [internal virtual 키워드에 대한 보안 문제](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+## 
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [액세스 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+- [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [internal virtual 키워드에 대한 보안 문제](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

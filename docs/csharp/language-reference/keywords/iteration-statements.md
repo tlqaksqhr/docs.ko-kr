@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-ms.openlocfilehash: 12452f5e3fcc78835a7aed9f6e4044463fb0b755
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c5b061b41591ecca0364c2ec940fbf09e223f5cb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207987"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936000"
 ---
 # <a name="iteration-statements-c-reference"></a>반복문(C# 참조)
 
@@ -28,7 +28,7 @@ ms.locfileid: "36207987"
 
 ## <a name="see-also"></a>참고 항목
 
- [C# 참조](../index.md)  
- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
- [C# 키워드](index.md)  
- [문 키워드](statement-keywords.md)
+- [C# 참조](../index.md)  
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
+- [C# 키워드](index.md)  
+- [문 키워드](statement-keywords.md)

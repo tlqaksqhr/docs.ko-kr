@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d6b0cb91dd9b8159919b0d155bb2f9773e7ba534
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315110"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929771"
 ---
 # <a name="bool-c-reference"></a>bool(C# 참조)
 
@@ -51,10 +51,10 @@ C++에서 `bool` 형식의 값은 `int` 형식의 값으로 변환될 수 있습
 
 ## <a name="see-also"></a>참고 항목
 
-[C# 참조](../../../csharp/language-reference/index.md)  
-[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-[C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-[정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+- [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

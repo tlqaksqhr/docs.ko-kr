@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171808"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925542"
 ---
 # <a name="-operator-c-reference"></a>|| 연산자(C# 참조)
 조건부 OR 연산자(`||`)는 해당 `bool` 피연산자의 논리적 OR을 수행합니다. 첫 번째 피연산자가 `true`이면 두 번째 피연산자는 계산되지 않습니다. 첫 번째 피연산자가 `false`이면 두 번째 피연산자에 의해 OR 식 전체가 `true` 또는 `false`인지가 결정됩니다.  
@@ -40,7 +40,8 @@ x | y
   
  [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)

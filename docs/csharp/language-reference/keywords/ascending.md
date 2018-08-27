@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 121b7cef900c5736df3725c19b966c60acfa1e0b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 77801fcf443556515e6f1414490a1deeb4fa7bc4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208064"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935054"
 ---
 # <a name="ascending-c-reference"></a>ascending(C# 참조)
 `ascending` 상황별 키워드는 쿼리 식의 [orderby 절](../../../csharp/language-reference/keywords/orderby-clause.md)에서 사용되어 정렬 순서를 가장 작은 값에서 가장 큰 값의 오름차순으로 지정합니다. `ascending`은 기본 정렬 순서이므로 지정할 필요가 없습니다.  
@@ -23,6 +23,6 @@ ms.locfileid: "36208064"
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [descending](../../../csharp/language-reference/keywords/descending.md)
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [descending](../../../csharp/language-reference/keywords/descending.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 362a02815cb249d57c0bd19706714df1d71644f4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960299"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929665"
 ---
 # <a name="partial-type-c-reference"></a>부분(형식)(C# 참조)
 부분 형식(Partial Type) 정의를 사용하면 클래스, 구조체 또는 인터페이스의 정의를 여러 파일로 분할할 수 있습니다.  
@@ -31,8 +31,9 @@ ms.locfileid: "37960299"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
- [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
+- [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)

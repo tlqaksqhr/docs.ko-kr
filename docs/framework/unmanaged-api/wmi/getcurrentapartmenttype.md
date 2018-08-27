@@ -1,6 +1,6 @@
 ---
 title: GetCurrentApartmentType 함수 (관리 되지 않는 API 참조)
-description: GetCurrentApartmentType 함수 아파트 호출자에 게 실행 되는 형식을 검색 합니다.
+description: GetCurrentApartmentType 함수 호출자가 실행 하는 아파트의 형식을 검색 합니다.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461726"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931417"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 함수
-아파트 호출자에 게 실행 되는 형식을 검색 합니다.   
+호출자가 실행 하는 아파트의 유형을 검색 합니다.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,13 +41,13 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>매개 변수
 
 `vFunc`  
-[in] 이 매개 변수를 사용 하지 않습니다.
+[in] 이 매개 변수 사용 되지 않습니다.
 
 `ptr`  
-[in] 에 대 한 포인터는 [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) 인스턴스.
+[in] 에 대 한 포인터를 [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) 인스턴스.
 
 `aptType`  
-[out] 에 대 한 포인터는 [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) 호출자의 아파트를 나타내는 열거형 값입니다.
+[out] 에 대 한 포인터를 [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) 호출자의 아파트를 나타내는 열거형 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -55,18 +55,18 @@ HRESULT GetCurrentApartmentType (
 |상수  |값  |설명  |
 |---------|---------|---------|
 | `S_OK` | 0 | 함수는 성공적으로 완료 되었습니다. |
-| `E_FAIL` | 0x80000008 | 호출자에 게는 아파트에서 실행할 수 없습니다. |
+| `E_FAIL` | 0x80000008 | 호출자는 아파트에서 실행할 수 없습니다. |
   
 ## <a name="remarks"></a>설명
 
-이 함수에 대 한 호출을 래핑하는 [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) 메서드.
+이 함수에 대 한 호출을 래핑하는 [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) 메서드.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** WMINet_Utils.idl  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료  
 [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

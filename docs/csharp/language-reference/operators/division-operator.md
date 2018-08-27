@@ -7,12 +7,12 @@ helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-ms.openlocfilehash: 9d0bbff1fd9f4ab3c93c879d12ccd5fde1187b44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272573"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935162"
 ---
 # <a name="-operator-c-reference"></a>/ 연산자(C# 참조)
 나누기 연산자(`/`)는 두 번째 피연산자로 첫 번째 피연산자를 나눕니다. 모든 숫자 형식에는 미리 정의된 나누기 연산자가 있습니다.
@@ -29,7 +29,8 @@ ms.locfileid: "33272573"
 ## <a name="example"></a>예  
  [!code-csharp[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)

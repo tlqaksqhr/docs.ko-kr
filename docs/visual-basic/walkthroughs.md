@@ -8,11 +8,11 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654754"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792375"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  

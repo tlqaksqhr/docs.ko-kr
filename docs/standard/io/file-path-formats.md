@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107039"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933607"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 
@@ -181,7 +181,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 ## <a name="skipping-normalization"></a>정규화 건너뛰기
 
-일반적으로 Windows API에 전달되는 경로는 (결과적으로) [GetFullPathName 함수](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)에 전달되고 정규화됩니다. 여기에 중요한 한 가지 예외가 있는데, 바로 마침표 대신에 물음표로 시작하는 장치 경로입니다. 경로는 `\\?\`로 시작하지 않는 한(canonical 백슬래시 사용에 주의) 정규화됩니다.
+일반적으로 Windows API에 전달되는 경로는 (결과적으로) [GetFullPathName 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 전달되고 정규화됩니다. 여기에 중요한 한 가지 예외가 있는데, 바로 마침표 대신에 물음표로 시작하는 장치 경로입니다. 경로는 `\\?\`로 시작하지 않는 한(canonical 백슬래시 사용에 주의) 정규화됩니다.
 
 정규화를 건너뛰려는 이유는 무엇입니까? 세 가지 중요한 이유가 있습니다.
 
@@ -196,9 +196,9 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 정규화 및 최대 경로 검사를 건너뛰는 것은 두 장치 경로 구문 간에만 차이점이 있으며, 다른 면에서는 동일합니다. 정규화를 건너뛸 때에는 "일반적인" 응용 프로그램이 처리하기 어려운 경로를 생성하기 쉽기 때문에 주의해야 합니다.
 
-`\\?\`로 시작하는 경로는 [GetFullPathName 함수](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)에 명시적으로 전달하더라도 여전히 정규화됩니다.
+`\\?\`로 시작하는 경로는 [GetFullPathName 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 명시적으로 전달하더라도 여전히 정규화됩니다.
 
-참고로 `MAX_PATH` 문자보다 큰 경로는 `\\?\` 없이 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)에 전달할 수 있습니다. 이는 Windows에서 처리할 수 있는 최대 문자열 크기까지 임의 길이의 경로를 지원합니다.
+참고로 `MAX_PATH` 문자보다 큰 경로는 `\\?\` 없이 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 전달할 수 있습니다. 이는 Windows에서 처리할 수 있는 최대 문자열 크기까지 임의 길이의 경로를 지원합니다.
 
 ## <a name="case-and-the-windows-file-system"></a>대/소문자 및 Windows 파일 시스템
 

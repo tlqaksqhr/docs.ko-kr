@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type conversion [C#], keywords
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
-ms.openlocfilehash: ffa6d7cb4b6606a5742077b823c1a3f710d2e624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213950"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930413"
 ---
 # <a name="conversion-keywords-c-reference"></a>변환 키워드(C# 참조)
 이 섹션에서는 형식 변환에 사용되는 키워드에 대해 설명합니다.  
@@ -23,6 +23,7 @@ ms.locfileid: "33213950"
 -   [operator](../../../csharp/language-reference/keywords/operator.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)

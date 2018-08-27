@@ -3,12 +3,12 @@ title: 개체의 컬렉션 쿼리(C#의 LINQ)
 description: C#에서 LINQ를 사용하여 컬렉션을 쿼리하는 방법을 알아봅니다.
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: 87c7bbe789c165a6e189231df1979fc264a34dce
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 7bc59e7009f9ae8d8f66c24e9519d9100404c9c4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403923"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935543"
 ---
 # <a name="query-a-collection-of-objects"></a>개체의 컬렉션 쿼리
 
@@ -26,5 +26,5 @@ ms.locfileid: "37403923"
   
 ## <a name="see-also"></a>참고 항목
 
-[LINQ(Language-Integrated Query)](index.md)  
-[문자열 보간](../language-reference/tokens/interpolated.md)
+- [LINQ(Language-Integrated Query)](index.md)  
+- [문자열 보간](../language-reference/tokens/interpolated.md)

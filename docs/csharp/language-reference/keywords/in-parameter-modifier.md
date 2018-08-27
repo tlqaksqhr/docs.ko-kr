@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 913957e6afad1d9d516a01f4bb0e377b94a40aea
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198424"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924990"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 매개 변수 한정자(C# 참조)
 
@@ -122,4 +122,5 @@ Method(in i); // passed by readonly reference, explicitly using `in`
  [C# 참조](../index.md)  
  [C# 프로그래밍 가이드](../../programming-guide/index.md)  
  [C# 키워드](index.md)  
- [메서드 매개 변수](method-parameters.md) [값 형식과 참조 의미 체계](../../reference-semantics-with-value-types.md)
+ [메서드 매개 변수](method-parameters.md)  
+ [값 형식과 참조 의미 체계](../../reference-semantics-with-value-types.md)  

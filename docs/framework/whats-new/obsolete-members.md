@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508776"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999483"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 이 문서의 표에는 .NET Framework 4.5 이상 버전에서 사용되지 않은 형식 멤버가 어셈블리별로 구성되어 있습니다. 각 어셈블리에서 사용되지 않는 멤버 목록과 권장되는 대체 항목을 확인하려면 다음 링크를 사용합니다. 사용되지 않는 형식의 멤버는 이 항목에 나열되지 않습니다. 사용되지 않는 형식 목록은 [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)을 참조하세요.  
@@ -593,7 +593,7 @@ ms.locfileid: "33508776"
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 속성은 사용되지 않습니다. HTTP <xref:System.Net.CookieContainer>를 사용하도록 설정하려면 대신 <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies` 속성을 사용하세요.|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 속성은 사용되지 않습니다. HTTP <xref:System.Net.CookieContainer>를 사용하도록 설정하려면 대신 <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> 속성을 사용하세요.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 피어 채널 기능은 사용되지 않으며 향후 제거될 예정입니다.|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
@@ -778,7 +778,7 @@ ms.locfileid: "33508776"
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이전 버전인 버전 3.5와의 호환성을 위해서만 사용됩니다.|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이전 버전인 버전 3.5와의 호환성을 위해서만 사용됩니다.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>어셈블리: Microsoft.VisualBasic.dll  

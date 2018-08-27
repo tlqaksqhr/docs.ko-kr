@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 671cadce0bd120ec0728562ec448b2ce6edf2dd7
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 182f7164ad929232c185903a3dbf024a2e5d22a7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961354"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998643"
 ---
 # <a name="get-c-reference"></a>get(C# 참조)
 
@@ -34,7 +34,9 @@ ms.locfileid: "37961354"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md) [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)

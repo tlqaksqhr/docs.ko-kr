@@ -18,11 +18,11 @@ helpviewer_keywords:
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
 ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333042"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42752203"
 ---
 # <a name="basic-linq-query-operations-c"></a>기본 LINQ 쿼리 작업(C#)
 이 항목에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식 및 쿼리에서 수행하는 일부 일반적인 작업을 간단히 소개합니다. 자세한 내용은 다음 항목을 참조하세요.  

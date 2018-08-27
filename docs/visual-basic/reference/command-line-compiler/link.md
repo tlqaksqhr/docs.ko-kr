@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656271"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931892"
 ---
 # <a name="-link-visual-basic"></a>-링크 (Visual Basic)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "33656271"
   
 -   어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
   
- 사용 하 여 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 어셈블리 참조 중 하나 이상이 있는 디렉터리를 지정할 수 있습니다.  
+ 사용 하 여 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 어셈블리 참조 중 하나 이상이 있는 디렉터리를 지정 합니다.  
   
- 와 같은 [/참조](../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션은 `-link` 컴파일러 옵션 참조 자주 사용 되는 Vbc.rsp 지시 파일을 사용 하 여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리입니다. 사용 하 여는 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Vbc.rsp 파일을 사용 하도록 컴파일러에 하지 않을 경우 컴파일러 옵션입니다.  
+ 같은 [/참조](../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션을 합니다 `-link` 컴파일러 옵션 참조 자주 사용 되는 Vbc.rsp 지시 파일을 사용 하 여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리입니다. 사용 된 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Vbc.rsp 파일을 사용 하도록 컴파일러에 원하지 않는 경우 컴파일러 옵션입니다.  
   
  `-link`의 약식은 `-l`입니다.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "33656271"
   
  [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
-## <a name="example"></a>예제  
- 다음 명령줄은 소스 파일을 컴파일하 `OfficeApp.vb` 의 어셈블리를 참조 하 고 `COMData1.dll` 및 `COMData2.dll` 되려면 `OfficeApp.exe`합니다.  
+## <a name="example"></a>예  
+ 다음 명령줄은 소스 파일을 컴파일하 `OfficeApp.vb` 참조 어셈블리 및 `COMData1.dll` 하 고 `COMData2.dll` 되려면 `OfficeApp.exe`합니다.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

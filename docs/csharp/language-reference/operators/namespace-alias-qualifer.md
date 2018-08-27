@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 668799a2d846d0f0bf1b3743e202602250a57ae5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 480ed224d1994dac926dfc78d59e227c8d1e8f36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271775"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934997"
 ---
 # <a name="-operator-c-reference"></a>:: 연산자(C# 참조)
 네임스페이스 별칭 한정자(`::`)는 식별자를 조회하는 데 사용됩니다. 다음 예제와 같이 항상 두 식별자 사이에 옵니다.  
@@ -31,10 +31,11 @@ ms.locfileid: "33271775"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)  
- [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)  
- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)  
+- [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: a96641e6dd42e033f2d28b847fc071dfc514912d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: e6aecd5957ae62e3c147af22c2a1b135a4c32310
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936999"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934840"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용
 많은 구성 요소가 비동기적으로 작업을 수행하는 옵션을 제공합니다. 예를 들어 <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소를 사용하면 기본 스레드가 중단 없이 계속 실행되는 동안 사운드 및 이미지를 “배경”으로 로드할 수 있습니다.  
@@ -63,4 +63,3 @@ ms.locfileid: "37936999"
 ## <a name="see-also"></a>참고 항목  
  [방법: 백그라운드에서 작업 실행](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [Visual Basic의 다중 스레딩](../../../docs/visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

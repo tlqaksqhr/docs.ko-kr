@@ -3,11 +3,11 @@ title: '샘플 XML 파일: Customers 및 Orders(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
 ms.openlocfilehash: 2d9d197bccc3749c1874a51ea19150dd33be277c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327781"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999546"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>샘플 XML 파일: Customers 및 Orders(LINQ to XML)
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 고객과 주문이 포함되어 있습니다.  

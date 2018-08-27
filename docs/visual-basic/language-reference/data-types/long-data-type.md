@@ -22,39 +22,39 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687c235be76ef522758658fd1c5fe0cb1dbeb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b3970aad08f2be98d175b4175ef06711bcaf609
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591368"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935444"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 데이터 형식 (Visual Basic)
 
-부호 있는 64 비트 (8 바이트) 정수-9223372036854775808에서 9223372036854775807 까지의 저장 (9.2... E + 18).  
+포함 까지의 부호 있는 64 비트 (8 바이트) 정수 값-9223372036854775808에서 9223372036854775807 (9.2... E + 18).  
   
 ## <a name="remarks"></a>설명
 
- 사용 하 여는 `Long` 너무 커서에 맞지 않은 정수 숫자를 포함 하도록 데이터 형식을 `Integer` 데이터 형식입니다.  
+ 사용 된 `Long` 데이터 형식에 맞게 너무 큰 정수를 포함 하는 `Integer` 데이터 형식.  
   
  `Long`의 기본값은 0입니다.
 
 ## <a name="literal-assignments"></a>리터럴 할당 
 
-선언 하 고 초기화는 `Long` 10 진 리터럴, 16 진수 리터럴을 8 진수 리터럴을 할당 (부터는 Visual Basic 2017) 이진 리터럴 또는 변수입니다. 정수 리터럴이 `Long` 범위를 벗어나는 경우(즉 <xref:System.Int64.MinValue?displayProperty=nameWithType>보다 작거나 <xref:System.Int64.MaxValue?displayProperty=nameWithType>보다 큰 경우) 컴파일 오류가 발생합니다.
+선언 하 고 초기화할 수 있습니다는 `Long` 변수 (Visual Basic 2017부터) 이진 리터럴을 또는 10 진수 리터럴, 16 진수 리터럴, 8 진수 리터럴을 할당 합니다. 정수 리터럴이 `Long` 범위를 벗어나는 경우(즉 <xref:System.Int64.MinValue?displayProperty=nameWithType>보다 작거나 <xref:System.Int64.MaxValue?displayProperty=nameWithType>보다 큰 경우) 컴파일 오류가 발생합니다.
 
 다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 4,294,967,296과 같은 정수가 `Long` 값에 할당됩니다.
   
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
 
 > [!NOTE]
-> 접두사를 사용 `&h` 또는 `&H` 를 나타내는 16 진수 리터럴을, 접두사 `&b` 또는 `&B` 이진 리터럴와 접두사를 나타내기 위해 `&o` 또는 `&O` 8 진수 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
+> 접두사를 사용할 `&h` 또는 `&H` 16 진수 리터럴, 접두사를 나타내는 `&b` 또는 `&B` 이진 리터럴 및 접두사를 나타내는 `&o` 또는 `&O` 8 진수 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
 
-Visual Basic 2017 부터는 사용할 수도 있습니다는 밑줄 문자 `_`, 가독성을 향상 시키기 위해 숫자 구분 기호,으로 다음 예제와 같이 보여 줍니다.
+Visual Basic 2017부터 사용할 수도 있습니다 밑줄 문자 `_`, 가독성 향상을 위해 숫자 구분 기호를 다음 예제와 같이 보여 줍니다.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예를 들어:
+Visual Basic 15.5부터 사용할 수도 있습니다는 밑줄 문자 (`_`) 접두사 및 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예를 들어:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -62,7 +62,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-숫자 리터럴을 포함할 수는 `L` [형식 문자](../../programming-guide\language-features\data-types/type-characters.md) 를 표시 하는 `Long` 다음 예제와 같이 데이터 형식입니다.
+숫자 리터럴을 포함할 수도 있습니다는 `L` [문자를 입력](../../programming-guide\language-features\data-types/type-characters.md) 나타내기 위해는 `Long` 다음 예제와 같이 데이터 형식입니다.
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL
@@ -70,9 +70,9 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
--   **Interop 고려 사항입니다.** Automation 또는 COM 개체를 위한.NET Framework에 대해 작성 되지 않은 구성 요소와 상호 작용 하는 경우에 유의 해야 `Long` 은 다른 환경에서 다른 데이터 너비 (32 비트)입니다. 이러한 구성 요소를 32 비트 인수를 전달 하는 경우로 선언 `Integer` 대신 `Long` 새 Visual Basic 코드에서.  
+-   **Interop 고려 사항입니다.** 예제에서는 자동화 개체나 COM 개체에 대 한.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우에 유의 해야 `Long` 다른 환경에서 다른 데이터 너비 (32 비트)에 있습니다. 이러한 구성 요소는 32 비트 인수를 전달 하는 경우로 선언 `Integer` 대신 `Long` 새 Visual Basic 코드에서.  
   
--   **확대 합니다.** `Long` 데이터 형식으로 확대 되 `Decimal`, `Single`, 또는 `Double`합니다. 이는 `Long` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
+-   **확대 합니다.** 합니다 `Long` 데이터 형식으로 확장 되는지를 `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Long` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
   
 -   **형식 문자입니다.** 리터럴 형식 문자 `L`를 리터럴에 추가하면 `Long` 데이터 형식이 됩니다. 식별자 형식 문자 `&`를 식별자에 추가하면 `Long`가 됩니다.  
   
@@ -81,8 +81,8 @@ Dim number = &H_0FAC_0326_1489_D68CL
 ## <a name="see-also"></a>참고자료
 
 <xref:System.Int64>
-[데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
-[Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
+[데이터 형식](../../../visual-basic/language-reference/data-types/index.md)   
+[정수 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
 [Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)   
 [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
 [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)   

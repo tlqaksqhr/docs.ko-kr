@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 974e0c3ab29da582e7b22c909650a61d179ec3f7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961406"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931168"
 ---
 # <a name="is-c-reference"></a>is(C# 참조) #
 
@@ -147,9 +147,10 @@ var 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 �
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
- [as](../../../csharp/language-reference/keywords/as.md)  
- [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [as](../../../csharp/language-reference/keywords/as.md)  
+- [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)

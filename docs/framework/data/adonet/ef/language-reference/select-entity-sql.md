@@ -2,12 +2,12 @@
 title: SELECT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765986"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933855"
 ---
 # <a name="select-entity-sql"></a>SELECT(Entity SQL)
 쿼리 결과로 반환될 요소를 지정합니다.  
@@ -32,9 +32,9 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  항목 하나만 지정할 수 있으며 행 래퍼를 추가하지 않습니다.  
   
  `topSubclause`  
- 쿼리에서 첫 번째로 반환되는 결과의 개수를 나타내며 `top (``expr``)`형태로 표시되는 모든 유효한 식입니다.  
+ 폼의 쿼리에서 반환할 첫 번째 결과의 수를 나타내는 모든 유효한 식 `top(expr)`합니다.  
   
- LIMIT 매개 변수는 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 연산자 또한 결과 집합의 처음 n 개의 항목을 선택할 수 있습니다.  
+ LIMIT 매개 변수를 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 연산자 또한 결과 집합의 처음 n 개의 항목을 선택할 수 있습니다.  
   
  `aliasedExpr`  
  다음 형태의 식입니다.  
@@ -45,7 +45,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  리터럴 또는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- SELECT 절에 평가 됩니다는 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), 및 [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) 절이 계산 된 합니다. SELECT 절은 현재 범위 내에 있는 항목만 참조할 수 있으며, FROM 절 또는 외부 범위에서 참조할 수 있습니다. GROUP BY 절이 지정된 경우, SELECT 절에서는 GROUP BY 키의 별칭만 참조할 수 있습니다. FROM 절 항목에 대한 참조는 집계 함수에서만 허용됩니다.  
+ SELECT 절에 평가 됩니다 합니다 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)를 [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), 및 [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) 절이 계산 된 합니다. SELECT 절은 현재 범위 내에 있는 항목만 참조할 수 있으며, FROM 절 또는 외부 범위에서 참조할 수 있습니다. GROUP BY 절이 지정된 경우, SELECT 절에서는 GROUP BY 키의 별칭만 참조할 수 있습니다. FROM 절 항목에 대한 참조는 집계 함수에서만 허용됩니다.  
   
  SELECT 키워드 다음에 나오는 하나 이상의 쿼리 식을 나열한 목록은 선택 목록이라고 하고 공식적으로는 프로젝션이라고도 합니다. 가장 일반적인 형태의 프로젝션은 단일 쿼리 식입니다. `member1` 컬렉션에서 `collection1`멤버를 선택하면 다음 예제와 같이 `member1` 의 각 개체에 대한 모든 `collection1`값이 포함된 새로운 컬렉션이 생성됩니다.  
   
@@ -91,10 +91,10 @@ SELECT * FROM T1, T2
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 Entity SQL 쿼리에서는 SELECT 연산자를 사용하여 쿼리에서 반환될 요소를 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1.  [방법: StructuralType 결과를 반환하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
+1.  [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
   
 2.  다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   

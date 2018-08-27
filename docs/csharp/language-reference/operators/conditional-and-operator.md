@@ -7,12 +7,12 @@ helpviewer_keywords:
 - '&& operator [C#]'
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
-ms.openlocfilehash: 15bb3e9702f04cc805af63767c7ecbfc68160368
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171917"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999732"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; 연산자(C# 참조)
 조건부 AND 연산자(`&&`)는 `bool` 피연산자의 논리적 AND를 수행하지만 필요할 경우 두 번째 피연산자만 계산합니다.  
@@ -42,7 +42,8 @@ x & y
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)

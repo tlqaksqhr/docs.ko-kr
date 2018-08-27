@@ -2,23 +2,23 @@
 title: '방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: f14b441ead7c701aa4f794370fc5f54ad3b4a4e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495004"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934409"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가
-Windows Communication Foundation (WCF)를 사용 하면 서비스를 이용 하는 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 사용 가능한 ASP.NET AJAX 사용 끝점을 만들 수 있습니다. 이와 같은 끝점을 만들려면 다른 모든 Windows Communication Foundation (WCF) 끝점 에서처럼 구성 파일을 사용 하거나 구성 요소가 필요 하지 않은 메서드를 사용 합니다. 이 항목에서는 구성 방법을 보여 줍니다.  
+Windows Communication Foundation (WCF)를 사용 하면 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 사용 가능한 ASP.NET AJAX 사용 끝점을 활용 하는 서비스를 만들 수 있습니다. 이러한 끝점을 만들려면 다른 모든 Windows Communication Foundation (WCF) 끝점에서와 마찬가지로 구성 파일을 사용 하거나 구성 요소가 필요 하지 않은 메서드를 사용 합니다. 이 항목에서는 구성 방법을 보여 줍니다.  
   
- 서비스 끝점이 ASP.NET AJAX 사용 될 수 있도록 하는 절차의 일부 끝점이 사용 하 여 구성으로 이루어집니다는 <xref:System.ServiceModel.WebHttpBinding> 을 추가 하는 [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 끝점 동작. 끝점을 구성한 후 구현 하 고 서비스를 호스트 하는 단계는 WCF 서비스에서 사용 되는 비슷합니다. 작업 예제를 참조 하십시오.는 [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
+ 끝점을 사용 하 여 구성의 서비스 끝점이 ASP.NET AJAX 사용 되도록 하는 절차의 일부 구성 합니다 <xref:System.ServiceModel.WebHttpBinding> 추가 하는 [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 끝점 동작. 끝점을 구성한 후 구현 및 서비스를 호스트 하는 단계는 WCF 서비스에서 사용 되는 것과 비슷합니다. 작업 예제를 참조 합니다 [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
   
- 구성을 사용 하지 않고 ASP.NET AJAX 끝점을 구성 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: ASP.NET AJAX 끝점 하지 않고 사용 하 여 구성을 추가](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)합니다.  
+ 구성을 사용 하지 않고 ASP.NET AJAX 끝점을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: ASP.NET AJAX 끝점 없이 사용 하 여 구성을 추가](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)합니다.  
   
 ### <a name="to-create-a-basic-wcf-service"></a>기본 WCF 서비스를 만들려면  
   
-1.  으로 표시 된 인터페이스와 함께 기본 WCF 서비스 계약 정의 <xref:System.ServiceModel.ServiceContractAttribute> 특성입니다. 각 작업을 <xref:System.ServiceModel.OperationContractAttribute>로 표시합니다. <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 속성을 설정해야 합니다.  
+1.  기본 WCF 서비스 계약을 사용 하 여 표시 된 인터페이스를 사용 하 여 정의 된 <xref:System.ServiceModel.ServiceContractAttribute> 특성입니다. 각 작업을 <xref:System.ServiceModel.OperationContractAttribute>로 표시합니다. <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 속성을 설정해야 합니다.  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF)를 사용 하면 서비스를 이용 하�
   
 ### <a name="to-host-the-service-in-iis"></a>IIS에서 서비스를 호스팅하려면  
   
-1.  IIS에서 서비스를 호스팅하려면 응용 프로그램에서 .svc 확장명을 가진 새 파일 서비스를 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 예를 들어 `CalculatorService` 샘플에 대한 서비스 파일의 내용에는 다음 정보가 포함되어 있습니다.  
+1.  IIS에서 서비스를 호스팅하려면 응용 프로그램에서 .svc 확장명을 가진 새 파일 서비스를 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 예를 들어 `CalculatorService` 샘플에 대한 서비스 파일의 내용에는 다음 정보가 포함되어 있습니다.  
   
     ```  
     <%@ServiceHost   
@@ -98,11 +98,11 @@ Windows Communication Foundation (WCF)를 사용 하면 서비스를 이용 하�
     %>  
     ```  
   
-2.  IIS에서 호스팅하는 방법에 대 한 자세한 내용은 참조 [하는 방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
+2.  IIS에서 호스트 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
   
 ### <a name="to-call-the-service"></a>서비스를 호출하려면  
   
-1.  서비스를 사용 하 고 요청을 보내서 전송 하 여 호출할 수 있도록 끝점은.svc 파일을 기준으로 빈 주소에 구성 됩니다\<작업 >-예를 들어에 대 한 service.svc/Add는 `Add` 작업 합니다. 끝점 URL을 ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 입력하여 사용할 수 있습니다. 예를 들어 참조는 [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
+1.  끝점은.svc 파일을 기준으로 빈 주소에 구성를 이제 사용할 수 있으며 service.svc/에 요청을 전송 하 여 호출할 수 있도록\<작업 >-예를 들어에 대 한 경우 service.svc/add `Add` 작업. 끝점 URL을 ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 입력하여 사용할 수 있습니다. 예를 들어 참조 된 [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ASP.NET AJAX용 WCF 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

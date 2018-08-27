@@ -3,11 +3,11 @@ title: 네임스페이스 개요(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323851"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999227"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>네임스페이스 개요(LINQ to XML)
 이 항목에서는 네임스페이스, <xref:System.Xml.Linq.XName> 클래스 및 <xref:System.Xml.Linq.XNamespace> 클래스에 대해 소개합니다.  

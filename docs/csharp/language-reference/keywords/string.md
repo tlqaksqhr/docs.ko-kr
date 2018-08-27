@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172164"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929275"
 ---
 # <a name="string-c-reference"></a>string(C# 참조)
 `string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다. `string`는 .NET에서 <xref:System.String>의 별칭입니다.  
@@ -99,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [문자열 사용에 대한 모범 사례](../../../standard/base-types/best-practices-strings.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)  
- [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
- [기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)  
- [새 문자열 만들기](../../../standard/base-types/creating-new.md)  
- [숫자 결과 형식 지정 표](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [문자열 사용에 대한 모범 사례](../../../standard/base-types/best-practices-strings.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)  
+- [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
+- [기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)  
+- [새 문자열 만들기](../../../standard/base-types/creating-new.md)  
+- [숫자 결과 형식 지정 표](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

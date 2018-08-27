@@ -3,11 +3,11 @@ title: XML 트리 쿼리(C#)
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
 ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331089"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925587"
 ---
 # <a name="querying-xml-trees-c"></a>XML 트리 쿼리(C#)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 예제를 제공합니다.  

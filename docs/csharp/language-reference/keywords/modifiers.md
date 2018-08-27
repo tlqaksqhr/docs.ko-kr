@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272684"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930366"
 ---
 # <a name="modifiers-c-reference"></a>한정자(C# 참조)
 한정자는 형식 및 형식 멤버의 선언을 수정하는 데 사용됩니다. 이 단원에서는 다음의 C# 한정자에 대해 소개합니다.  
@@ -33,7 +33,8 @@ ms.locfileid: "33272684"
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|파생 클래스의 재정의 멤버에 의해 구현이 변경될 수 있는 메서드 또는 접근자를 선언합니다.|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|필드가 운영 체제, 하드웨어 또는 동시에 실행되는 스레드 등에 의해 프로그램에서 수정될 수 있음을 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)

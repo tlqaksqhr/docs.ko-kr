@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314941"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933705"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발
 Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프로젝트 형식으로 Microsoft 플랫폼용 플랫폼 간 앱 및 라이브러리를 신속하고 쉽게 빌드할 수 있습니다.  
@@ -147,7 +147,7 @@ Visual Studio 2012의 대상 변경 대화 상자
  ➌ [Microsoft HTTP 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) 패키지  
   
 > [!WARNING]
->  참조 하는 경우 오류가 발생할 수 있습니다 합니다 [Microsoft 압축](https://www.nuget.org/packages/Microsoft.Bcl.Compression) 하 고 [Microsoft HTTP 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 앱에서 사용할 이식 가능한 라이브러리에서 패키지 합니다. 자세한 내용은 [플랫폼 호환성 및 Windows Phone Silverlight 8.1 앱에 대 한 변경 내용을 주요](/previous-versions/windows/apps/dn642084(v=vs.105))합니다.  
+>  참조 하는 경우 오류가 발생할 수 있습니다 합니다 [Microsoft 압축](https://www.nuget.org/packages/Microsoft.Bcl.Compression) 하 고 [Microsoft HTTP 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 앱에서 사용할 이식 가능한 라이브러리에서 패키지 합니다. 자세한 내용은 [플랫폼 호환성 및 Windows Phone Silverlight 8.1 앱에 대 한 변경 내용을 주요](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105))합니다.  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>지원되는 형식 및 멤버  

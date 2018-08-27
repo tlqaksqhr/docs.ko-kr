@@ -6,19 +6,19 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 2ed0069f9313955edc2cc46ecfd395a5f1ac2852
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b31e3f0164b2a2094e84263702c52c2817219d20
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339737"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752106"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>방법: 텍스트 파일을 한 번에 한 줄씩 읽기(Visual C#)
 이 예제에서는 `StreamReader` 클래스의 `ReadLine` 메서드를 사용하여 텍스트 파일 내용을 한 번에 한 줄씩 문자열로 읽어옵니다. 각 텍스트 줄은 `line` 문자열에 저장되고 화면에 표시됩니다.  
   
 ## <a name="example"></a>예  
   
-```  
+```csharp
 int counter = 0;  
 string line;  
   
@@ -27,7 +27,7 @@ System.IO.StreamReader file =
     new System.IO.StreamReader(@"c:\test.txt");  
 while((line = file.ReadLine()) != null)  
 {  
-    System.Console.WriteLine (line);  
+    System.Console.WriteLine(line);  
     counter++;  
 }  
   

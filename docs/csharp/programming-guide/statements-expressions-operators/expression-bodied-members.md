@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 800280ed9ceaf69b825bb2a3c2c3d0d5f829922d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332756"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911908"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
 식 본문 정의를 사용하면 간결하고 읽을 수 있는 형식으로 멤버 구현을 제공할 수 있습니다. 메서드 또는 속성과 같은 지원되는 멤버에 대한 논리가 단일 식으로 구성된 경우 식 본문 정의를 사용할 수 있습니다. 식 본문 정의의 일반 구문은 다음과 같습니다.
@@ -37,7 +37,7 @@ C# 6에서는 메서드 및 속성 가져오기 접근자에 대해 식 본문 �
 
 식 본문 메서드는 형식이 메서드의 반환 형식과 일치하는 값을 반환하거나 `void`를 반환하는 메서드의 경우 일부 작업을 수행하는 단일 식으로 구성됩니다. 예를 들어 <xref:System.Object.ToString%2A> 메서드를 재정의하는 형식에는 일반적으로 현재 개체의 문자열 표현을 반환하는 단일 식이 포함되어 있습니다. 
 
-다음 예제에<xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `Show` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
+다음 예제에<xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `DisplayName` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 

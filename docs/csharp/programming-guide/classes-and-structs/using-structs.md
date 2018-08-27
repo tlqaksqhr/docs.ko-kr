@@ -5,11 +5,11 @@ helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
 ms.openlocfilehash: 553a6d1d2e922d1683cb5dbe2fa0b525c9b1e37a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326422"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925332"
 ---
 # <a name="using-structs-c-programming-guide"></a>구조체 사용(C# 프로그래밍 가이드)
 `struct` 형식은 `Point`, `Rectangle`, `Color`등의 간단한 개체를 나타내는 데 적합합니다. 점을 [자동으로 구현된 속성](../../../csharp/language-reference/keywords/class.md) 이 있는 [클래스](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)로 표현할 수도 있지만 일부 시나리오에서는 [구조체](../../../csharp/language-reference/keywords/struct.md) 를 사용하는 것이 더 효율적일 수 있습니다. 예를 들어 1000개의 `Point` 개체가 있는 배열을 선언하는 경우에는 각 개체를 참조하기 위해 추가 메모리를 할당하게 되며, 이러한 경우 구조체가 보다 효율적입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 에 <xref:System.Drawing.Point>라는 개체가 포함되어 있으므로 이 예제의 구조체 이름은 "CoOrds"로 지정되었습니다.  

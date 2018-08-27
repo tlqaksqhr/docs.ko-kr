@@ -10,11 +10,11 @@ helpviewer_keywords:
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
 ms.openlocfilehash: 6331a55bb1d20b5804605db103dcfd2997e348d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650152"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930444"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 DLL을 만들 때 기본 기준 주소를 지정 합니다.  
@@ -32,20 +32,20 @@ DLL을 만들 때 기본 기준 주소를 지정 합니다.
 |`address`|필수. DLL의 기준 주소입니다. 이 주소는 16 진수 숫자로 지정 되어야 합니다.|  
   
 ## <a name="remarks"></a>설명  
- DLL에 대 한 기본 기준 주소 설정한는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다.  
+ DLL에 대 한 기본 기준 주소는이 설정한는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다.  
   
- 주의이 주소의 하위 단어 반올림 됩니다. 예를 들어 0x11110001를 지정 하면 0x11110000 반올림 됩니다.  
+ 이 주소의 하위 단어는 반올림 됩니다. 예를 들어 0x11110001을 지정 하면 0x11110000으로 반올림 됩니다.  
   
- DLL에 대 한 서명 프로세스를 완료 하려면 사용 된 `–R` 강력한 이름 도구 (Sn.exe)의 옵션입니다.  
+ DLL에 대 한 서명 프로세스를 완료 하려면 사용 된 `–R` 의 강력한 이름 도구 (Sn.exe) 옵션입니다.  
   
- 대상 DLL이 아닌 경우이 옵션은 무시 됩니다.  
+ 대상 DLL이 아닌 경우이 옵션이 무시 됩니다.  
   
-|Visual Studio IDE에서-baseaddress를 설정 하려면|  
+|-Baseaddress Visual Studio IDE에서 설정 하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급**을 클릭합니다.<br />4.  값을 수정 된 **DLL 기준 주소:** 상자입니다. **참고:** 는 **DLL 기준 주소:** 대상 DLL이 아니면 부분은 읽기 전용입니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급**을 클릭합니다.<br />4.  값을 수정 합니다 **DLL 기준 주소:** 상자입니다. **참고:** 는 **DLL 기준 주소:** 상자는 읽기 전용 대상 DLL이 아니면 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-대상 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Sn.exe (강력한 이름 도구)] [Sn.exe (강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md))

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: 16a169ce1a0ef5dbc29739b2d808acb19737669e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 245ef0a16fd2cec2f36c86dd0ac3b8838a76b02e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269121"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999773"
 ---
 # <a name="remove-c-reference"></a>remove(C# 참조)
 `remove` 상황별 키워드는 클라이언트 코드가 [event](../../../csharp/language-reference/keywords/event.md)에서 구독을 취소할 때 호출되는 사용자 지정 이벤트 접근자를 정의하는 데 사용됩니다. 사용자 지정 `remove` 접근자를 제공하는 경우 [add](../../../csharp/language-reference/keywords/add.md) 접근자도 제공해야 합니다.  
@@ -23,5 +23,6 @@ ms.locfileid: "33269121"
   
  일반적으로 고유한 사용자 지정 이벤트 접근자를 제공할 필요가 없습니다. 이벤트를 선언할 때 컴파일러에서 자동으로 생성되는 접근자만으로도 대부분의 시나리오에 충분합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [이벤트](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [이벤트](../../../csharp/programming-guide/events/index.md)

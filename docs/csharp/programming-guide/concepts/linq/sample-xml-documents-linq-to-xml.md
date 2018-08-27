@@ -3,11 +3,11 @@ title: 샘플 XML 문서(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
 ms.openlocfilehash: ce653f5067869a3ac568cd9c25e47a92b3148dbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333458"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754923"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>샘플 XML 문서(LINQ to XML)
 다음 예제 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서 전반의 코드 샘플과 코드 조각에서 사용됩니다.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472791"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931278"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 초안 언어 사양
 
@@ -26,8 +26,9 @@ C# 언어 사양은 C# 구문 및 사용을 위한 확정된 소스입니다. �
 초안 사양에 관한 문제는 [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) 리포지토리에 작성해야 합니다. 또는, 발견한 오류를 수정하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/csharplang/pulls)을 제출할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
- [C# 참조](../index.md)  
- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+
+- [C# 참조](../index.md)  
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [다음](../../../../_csharplang/spec/introduction.md)

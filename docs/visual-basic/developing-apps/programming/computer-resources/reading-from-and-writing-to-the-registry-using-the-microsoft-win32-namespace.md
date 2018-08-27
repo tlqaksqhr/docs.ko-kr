@@ -5,11 +5,11 @@ helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
 ms.openlocfilehash: 6309f312ed05f48e65b19d8827322071cad1f6de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588871"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42792331"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)
 `My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 <xref:Microsoft.Win32> 네임스페이스에서 <xref:Microsoft.Win32.Registry> 및 <xref:Microsoft.Win32.RegistryKey> 클래스를 사용할 수도 있습니다.  

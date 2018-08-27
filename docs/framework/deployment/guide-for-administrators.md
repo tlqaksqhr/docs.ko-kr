@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b4c2d4205e87d8be21f82eaf74b17e316d9057e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394334"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925059"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
 이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -252,7 +252,7 @@ ms.locfileid: "33394334"
   
 -   [URL 모니커 오류 코드](http://msdn.microsoft.com/library/ms775145.aspx)  
   
--   [WinHttp 오류 코드](http://msdn.microsoft.com/library/aa383770.aspx)  
+-   [WinHttp 오류 코드](/windows/desktop/WinHttp/error-messages)  
   
  기타 오류 코드  
   

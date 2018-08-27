@@ -15,12 +15,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 4584f8ee8b0a87c2150217b1b9eb0c19bc122487
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 942cb889c595f8caaf86dee1c025a935bd7db1b1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244204"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934781"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 데이터 개수, 합 또는 평균 계산(Visual Basic)
 언어 통합 쿼리 (LINQ)를 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행 합니다.  
@@ -79,8 +79,8 @@ ms.locfileid: "39244204"
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [쿼리](../../../../visual-basic/language-reference/queries/queries.md)  
+ [쿼리](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [DataContext 메서드(O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [Aggregate 절](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Group By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)

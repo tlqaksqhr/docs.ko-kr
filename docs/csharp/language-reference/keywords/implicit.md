@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: c731799fd51397b2bbbb190efcec63321ebae940
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 70379136fd4b14403eac919ac15590250b17b416
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243737"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932733"
 ---
 # <a name="implicit-c-reference"></a>implicit(C# 참조)
 
@@ -30,9 +30,9 @@ ms.locfileid: "39243737"
 
 ## <a name="see-also"></a>참고 항목
 
-[C# 참조](../index.md)  
-[C# 프로그래밍 가이드](../../programming-guide/index.md)  
-[C# 키워드](index.md)  
-[explicit](explicit.md)  
-[연산자(C# 참조)](operator.md)  
-[방법: 구조체 간의 사용자 정의 변환 구현](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [C# 참조](../index.md)  
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
+- [C# 키워드](index.md)  
+- [explicit](explicit.md)  
+- [연산자(C# 참조)](operator.md)  
+- [방법: 구조체 간의 사용자 정의 변환 구현](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 2f3bc5780e202bc5905cc027821f937b75335454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a8b6395209e95f3156354c4ee919291e05c7471
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359172"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998426"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 문서 주석(C# 프로그래밍 가이드)
 Visual C#에서는 주석이 참조하는 코드 블록 바로 앞의 소스 코드의 특별 주석 필드(세 개의 슬래시로 표시)에 XML 요소를 포함하여 코드에 대한 문서를 만들 수 있습니다. 예를 들면 다음과 같습니다.  
@@ -25,7 +25,7 @@ Visual C#에서는 주석이 참조하는 코드 블록 바로 앞의 소스 코
 /// <summary>  
 ///  This class performs an important function.  
 /// </summary>  
-public class MyClass{}  
+public class MyClass {}  
 ```  
   
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 옵션을 사용하여 컴파일하는 경우 컴파일러는 소스 코드에서 모든 XML 태그를 검색하고 XML 문서 파일을 만듭니다. 컴파일러에서 생성한 파일을 기반으로 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.  

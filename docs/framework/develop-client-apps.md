@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 279e0536f69ebd4b45d9458a88c4f930f6bb3262
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389111"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999697"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>.NET Framework로 클라이언트 응용 프로그램 개발
 
@@ -49,7 +49,7 @@ Windows 스토어를 통해 사용자에게 제공할 수 있는 Windows 10용 �
 [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
 Windows 컴퓨터와 장치에 배포할 수 있는 스토어 앱에 대한 .NET Framework 지원을 설명합니다.
 
-[Windows Phone Silverlight용 .NET API](https://docs.microsoft.com/en-us/previous-versions/windows/apps/jj207211\(v=vs.105\))  
+[Windows Phone Silverlight용 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
 Windows Phone Silverlight로 앱을 빌드하는 데 사용할 수 있는 .NET Framework API를 나열합니다.
   
 [여러 플랫폼 개발](../../docs/standard/cross-platform/index.md)  

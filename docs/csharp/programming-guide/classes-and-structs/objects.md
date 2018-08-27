@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
 ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324677"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935502"
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
 클래스 또는 구조체 정의는 형식이 수행할 수 있는 작업을 지정하는 청사진과 비슷합니다. 개체는 기본적으로 청사진에 따라 구성 및 할당된 메모리 블록입니다. 프로그램에서 동일한 클래스의 많은 개체를 만들 수 있습니다. 개체를 인스턴스라고도 하며, 명명된 변수나 배열 또는 컬렉션에 저장할 수 있습니다. 클라이언트 코드는 이러한 변수를 사용하여 메서드를 호출하고 개체의 공용 속성에 액세스하는 코드입니다. C#과 같은 개체 지향 언어에서 일반적인 프로그램은 동적으로 상호 작용하는 여러 개체로 구성됩니다.  

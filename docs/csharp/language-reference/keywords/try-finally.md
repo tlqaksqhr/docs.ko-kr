@@ -9,11 +9,11 @@ helpviewer_keywords:
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
 ms.openlocfilehash: 696eb531fe3e340f7fe0ae12483648119cf5a7eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288296"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925181"
 ---
 # <a name="try-finally-c-reference"></a>try-finally(C# 참조)
 `finally` 블록을 사용하면 [try](../../../csharp/language-reference/keywords/try-catch.md) 블록에서 할당된 리소스를 정리할 수 있으며, `try` 블록에서 예외가 발생하는 경우에도 코드를 실행할 수 있습니다. 일반적으로 `finally` 블록의 문은 제어가 `try` 문을 벗어날 때 실행됩니다. 제어 전송은 정상적인 실행 결과, `break`, `continue`, `goto` 또는 `return` 문의 실행 결과 또는 `try` 문에서 예외 전파의 결과로 발생할 수 있습니다.  

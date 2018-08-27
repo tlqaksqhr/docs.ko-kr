@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9babd5e50166be2c2d1b7bc32a5fc11d1ad8ba9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449288"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930566"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 메서드
-지정 된 어셈블리의 배열을 가져옵니다 `szAssemblyName` 참조를 확인 하는 것에 대 한 공용 언어 런타임 (CLR)에서 표준 규칙을 사용 하 여 매개 변수입니다.  
+지정 된 어셈블리의 배열을 가져옵니다 `szAssemblyName` 는 CLR (공용 언어 런타임) 참조를 확인 하 여는 표준 규칙을 사용 하 여 매개 변수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,47 +42,47 @@ HRESULT FindAssembliesByName (
   
 #### <a name="parameters"></a>매개 변수  
  `szAppBase`  
- [in] 지정된 된 어셈블리에 대 한 검색 하려는 루트 디렉터리입니다. 이 값 설정 하는 경우 `null`, `FindAssembliesByName` 어셈블리에 대 한 전역 어셈블리 캐시에만 표시 됩니다.  
+ [in] 지정된 된 어셈블리에 대 한 검색 하는 루트 디렉터리입니다. 이 값 설정 하는 경우 `null`, `FindAssembliesByName` 어셈블리에 대 한 전역 어셈블리 캐시에만 표시 됩니다.  
   
  `szPrivateBin`  
- [in] 세미콜론으로 구분 된 아래의 하위 디렉터리 (예를 들어, "bin; bin2"), 루트 디렉터리에서 어셈블리에 대 한 검색할 목록. 기본 검색 규칙에에서 지정 된 된 권한과 함께 이러한 디렉터리가 검색 됩니다.  
+ [in] 목록 세미콜론으로 구분 된 하위 디렉터리 (예를 들어, "bin; bin2"), 어셈블리에 대 한 검색 하는 루트 디렉터리 아래입니다. 기본 검색 규칙에에서 지정 된 것 외에도 이러한 디렉터리가 검색 됩니다.  
   
  `szAssemblyName`  
- [in] 찾을 어셈블리의 이름입니다. 이 문자열의 형식은 클래스 참조 페이지에 정의 되어 <xref:System.Reflection.AssemblyName>합니다.  
+ [in] 찾을 어셈블리의 이름입니다. 이 문자열의 형식은 클래스 참조 페이지에 대 한 정의 <xref:System.Reflection.AssemblyName>합니다.  
   
  `ppIUnk`  
- [in] 형식의 배열 <<!--zzxref:IUnknown --> `IUnknown`>를 작성할는 `IMetadataAssemblyImport` 인터페이스 포인터입니다.  
+ [in] 형식 배열의 [IUnknown](/cpp/atl/iunknown) 저장할는 `IMetadataAssemblyImport` 인터페이스 포인터입니다.  
   
  `cMax`  
- [out] 에 추가할 수 있는 인터페이스 포인터의 최대 수 `ppIUnk`합니다.  
+ [out] 인터페이스 포인터에 배치할 수 있는 최대 `ppIUnk`합니다.  
   
  `pcAssemblies`  
- [out] 반환 된 인터페이스 포인터의 수입니다. 인터페이스 포인터의 개수에 실제로 배치, 즉 `ppIUnk`합니다.  
+ [out] 반환 된 인터페이스 포인터의 수입니다. 인터페이스 포인터의 개수에 실제로 배치, `ppIUnk`합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |`S_OK`|`FindAssembliesByName` 성공적으로 반환 합니다.|  
-|`S_FALSE`|어셈블리가 없는 있습니다.|  
+|`S_FALSE`|어셈블리가 없는 경우|  
   
 ## <a name="remarks"></a>설명  
- 지정 된 어셈블리 이름의 `FindAssembliesByName` 메서드 어셈블리 참조를 확인 하기 위한 표준 규칙에 따라 어셈블리를 찾습니다. (자세한 내용은 참조 [런타임에서 어셈블리를 찾는 방법을](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` 호출자가 어셈블리 확인자 컨텍스트 응용 프로그램 기본 및 개인 검색 경로 등의 다양 한 측면을 구성할 수 있습니다.  
+ 지정 된 어셈블리 이름의 `FindAssembliesByName` 메서드 어셈블리 참조를 확인 하는 데 표준 규칙에 따라 어셈블리를 찾습니다. (자세한 내용은 [런타임 어셈블리를 찾는 방법](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` 호출자가 어셈블리 확인자 컨텍스트 응용 프로그램 기본 및 개인 검색 경로 등의 다양 한 측면을 구성할 수 있습니다.  
   
- `FindAssembliesByName` 메서드를 사용 하려면 CLR 어셈블리 확인 논리를 호출 하려면 프로세스에서 초기화 되어야 합니다. 따라서 호출 해야 [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (COINITEE_DEFAULT 전달) 호출 하기 전에 `FindAssembliesByName`, 한 다음 호출 하 여 따라 [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)합니다.  
+ `FindAssembliesByName` 메서드 어셈블리 해결 논리를 호출 하기 위해 초기화 프로세스에서 CLR이 있어야 합니다. 따라서 호출 해야 합니다 [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (COINITEE_DEFAULT 전달) 호출 하기 전에 `FindAssembliesByName`를 호출 하 여 다음 [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)합니다.  
   
- `FindAssembliesByName` 반환 된 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 전달 되는 어셈블리 이름에 대 한 어셈블리 매니페스트를 포함 하는 파일에 대 한 포인터입니다. 지정 된 어셈블리 이름 (예: 버전 포함 되어 있지 않으면) 완전 하 게 지정 되지 않은 경우 여러 어셈블리를 반환 될 수 있습니다.  
+ `FindAssembliesByName` 반환 된 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 전달 되는 어셈블리 이름에 대 한 어셈블리 매니페스트를 포함 하는 파일에 대 한 포인터입니다. 지정 된 어셈블리 이름 (예: 버전 포함 되어 있지 않으면) 완벽 하 게 지정 하지 않으면 여러 어셈블리 반환 될 수 있습니다.  
   
- `FindAssembliesByName` 컴파일 타임에 참조 된 어셈블리를 찾으려고 시도 하는 컴파일러에서 일반적으로 사용 됩니다.  
+ `FindAssembliesByName` 컴파일 타임에 참조 된 어셈블리를 찾으려고 시도 하는 컴파일러에서 주로 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임에서 어셈블리를 찾는 방법](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

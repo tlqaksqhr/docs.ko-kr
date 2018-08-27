@@ -2,12 +2,12 @@
 title: SQL Server 및 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360715"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935086"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 및 ADO.NET
 이 단원에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 기능 및 동작에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "33360715"
   
  SQL Server 데이터베이스 엔진에 대한 자세한 내용을 보려면 현재 사용하고 있는 SQL Server 버전에 해당하는 SQL Server 온라인 설명서를 참조하세요.  
   
- [SQL Server 온라인 설명서](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [SQL Server 온라인 설명서](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

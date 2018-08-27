@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961328"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932389"
 ---
 # <a name="do-c-reference"></a>do(C# 참조)
 
@@ -36,9 +36,9 @@ ms.locfileid: "37961328"
 
 ## <a name="see-also"></a>참고 항목
 
- [C# 참조](../index.md)  
- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
- [C# 키워드](index.md)  
- [do-while 문(C++)](/cpp/cpp/do-while-statement-cpp)  
- [반복 문](iteration-statements.md)  
- [while 문](while.md)  
+- [C# 참조](../index.md)  
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
+- [C# 키워드](index.md)  
+- [do-while 문(C++)](/cpp/cpp/do-while-statement-cpp)  
+- [반복 문](iteration-statements.md)  
+- [while 문](while.md)  

@@ -3,11 +3,11 @@ title: 노드를 사용한 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
 ms.openlocfilehash: 060f487e6e92c2ca42a685cc03afbe438106b839
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335421"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752029"
 ---
 # <a name="programming-with-nodes-c"></a>노드를 사용한 프로그래밍(C#)
 XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다. LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다. 이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.  

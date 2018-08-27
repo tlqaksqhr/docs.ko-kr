@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752431"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933532"
 ---
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
-.NET Framework는 계속 진화하고 있으며 플랫폼 간 개발을 향상시키거나 고객에게 새 기능을 일찍 소개하기 위해 새로운 기능인 OOB(대역 외)를 릴리스했습니다. 이 항목에서는 설명서를 제공하는 OOB 프로젝트를 나열합니다.  
+.NET Framework는 지속적으로 발전 합니다. 플랫폼 간 개발을 개선 하 고 새로운 기능을 일찍 소개를 대역 외 (OOB)에서 새로운 기능이 릴리스됩니다. 이 항목에서는 설명서를 제공하는 OOB 프로젝트를 나열합니다.  
   
-또한 일부 라이브러리는 .NET Framework의 구현이나 특정 플랫폼을 대상으로 합니다. 예를 들어는 <xref:System.Text.CodePagesEncodingProvider> 클래스를 사용 하면 코드 페이지 인코딩.NET Framework를 사용 하 여 개발 하는 UWP 앱에 사용할 수 있습니다. 이 항목에서는 이러한 라이브러리도 나열됩니다.  
+또한 일부 라이브러리는 .NET Framework의 구현이나 특정 플랫폼을 대상으로 합니다. 예를 들어를 <xref:System.Text.CodePagesEncodingProvider> 클래스는.NET Framework를 사용 하 여 개발 하는 UWP 앱에 사용할 수 있는 코드 페이지 인코딩을 만듭니다. 이 항목에서는 이러한 라이브러리도 나열됩니다.  
   
 ## <a name="oob-projects"></a>OOB 프로젝트
   
@@ -35,7 +35,7 @@ ms.locfileid: "32752431"
   
 | 프로젝트 | 설명 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 확장 된 <xref:System.Text.EncodingProvider> 클래스 코드 페이지 인코딩 유니버설 Windows 플랫폼을 대상으로 하는 앱에 사용할 수 있도록 합니다. |  
+| <xref:System.Text.CodePagesEncodingProvider> | 확장 된 <xref:System.Text.EncodingProvider> 클래스 코드 페이지 인코딩을 유니버설 Windows 플랫폼을 대상으로 하는 앱에 사용할 수 있도록 합니다. |  
   
 ## <a name="private-apis"></a>전용 API  
 

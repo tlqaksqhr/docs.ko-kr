@@ -12,11 +12,11 @@ helpviewer_keywords:
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
 ms.openlocfilehash: 668476beb2eefa7a818f60606443ae06ae26a17d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217209"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930965"
 ---
 # <a name="-link-c-compiler-options"></a>-link(C# 컴파일러 옵션)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  

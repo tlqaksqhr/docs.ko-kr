@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: eff5f05aa8b5081069b9e0f2f5f152669afaea18
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4bf63af1955582083e7ff54a5717f1ce56dfbb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207994"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929288"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 및 Unboxing(C# 프로그래밍 가이드)
 Boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 변환하는 프로세스입니다. CLR은 값 형식을 boxing할 때 값을 System.Object 내부에 래핑하고 관리되는 힙에 저장합니다. unboxing하면 개체에서 값 형식이 추출됩니다. Boxing은 암시적이며 unboxing은 명시적입니다. Boxing 및 unboxing의 개념은 개체로 처리할 수 있는 모든 값 형식에서 형식 시스템의 C#에 통합된 뷰의 기반이 됩니다.  
@@ -32,7 +32,7 @@ Boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.m
  [!code-csharp[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## <a name="performance"></a>성능  
- 단순 할당에서는 boxing과 unboxing을 수행하는 데 많은 계산 과정이 필요합니다. 값 형식을 boxing할 때는 새로운 개체를 할당하고 생성해야 합니다. 정도는 약간 덜하지만 unboxing에 필요한 캐스트에도 상당한 계산 과정이 필요합니다. 자세한 내용은 [성능](https://msdn.microsoft.com/library/ms173196(VS.110).aspx)을 참조하세요.  
+ 단순 할당에서는 boxing과 unboxing을 수행하는 데 많은 계산 과정이 필요합니다. 값 형식을 boxing할 때는 새로운 개체를 할당하고 생성해야 합니다. 정도는 약간 덜하지만 unboxing에 필요한 캐스트에도 상당한 계산 과정이 필요합니다. 자세한 내용은 [성능](../../../../docs/framework/performance/performance-tips.md)을 참조하세요.  
   
 ## <a name="boxing"></a>boxing  
  boxing은 가비지 수집되는 힙에 값 형식을 저장하는 데 사용됩니다. Boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 암시적으로 변환하는 프로세스입니다. 값 형식을 boxing하면 힙에 개체 인스턴스가 할당되고 값이 새 개체에 복사됩니다.  
@@ -89,13 +89,13 @@ unboxing 변환
   
  다음 문을  
   
-```  
+```csharp
 int j = (short) o;  
 ```  
   
  다음과 같이 변경합니다.  
   
-```  
+```csharp
 int j = (int) o;  
 ```  
   

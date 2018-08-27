@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-ms.openlocfilehash: 18246d013275c8d6c8ad7e05409387457afc3442
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fe56005ce94656b5e8a075cddfb91dc0da096cf7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171519"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929916"
 ---
 # <a name="-operator-c-reference"></a>|= 연산자(C# 참조)
 OR 대입 연산자입니다.  
@@ -37,7 +37,8 @@ x = x | y
 ## <a name="example"></a>예  
  [!code-csharp[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 연산자](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 연산자](../../../csharp/language-reference/operators/index.md)

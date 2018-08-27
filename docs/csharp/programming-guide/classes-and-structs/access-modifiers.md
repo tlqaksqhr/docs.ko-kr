@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199240"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752098"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
 모든 형식과 형식 멤버에는 사용 중인 어셈블리나 기타 어셈블리의 다른 코드에서 사용될 수 있는지 여부를 제어하는 액세스 가능성 수준이 있습니다. 다음 액세스 한정자를 사용하여 형식 또는 멤버를 선언할 때 해당 항목의 액세스 가능성을 지정할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "39199240"
   
  파생 클래스는 기본 형식보다 큰 액세스 가능성을 가질 수 없습니다. 즉, public 클래스 `B`는 internal 클래스 `A`에서 파생될 수 없습니다. 파생될 수 있다면 파생 클래스에서 `A`의 모든 protected 또는 internal 멤버에 액세스할 수 있기 때문에 결과적으로 `A`가 public으로 설정됩니다.  
   
- 다른 특정 어셈블리에서는 InternalsVisibleToAttribute를 사용하여 internal 형식에 액세스할 수 있습니다. 자세한 내용은 [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)(Friend 어셈블리)를 참조하세요.  
+ 다른 특정 어셈블리에서는 InternalsVisibleToAttribute를 사용하여 internal 형식에 액세스할 수 있습니다. 자세한 내용은 [Friend Assemblies](../concepts/assemblies-gac/friend-assemblies.md)(Friend 어셈블리)를 참조하세요.  
   
 ## <a name="class-and-struct-member-accessibility"></a>클래스 및 구조체 멤버 액세스 가능성  
  중첩 클래스 및 구조체를 포함한 클래스 멤버는 6가지 액세스 형식으로 선언될 수 있습니다. 구조체는 상속을 지원하지 않으므로 구조체 멤버는 protected로 선언될 수 없습니다.  

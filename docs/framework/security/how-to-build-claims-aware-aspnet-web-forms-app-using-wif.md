@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400096"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931774"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드
 ## <a name="applies-to"></a>적용 대상  
@@ -122,8 +122,8 @@ ms.locfileid: "33400096"
     </system.identityModel>  
     <system.identityModel.services>  
         <federationConfiguration>  
-            <cookieHandler requireSsl="false" />  
-            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="false" />  
+            <cookieHandler requireSsl="true" />  
+            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="true" />  
         </federationConfiguration>  
     </system.identityModel.services>  
     ```  

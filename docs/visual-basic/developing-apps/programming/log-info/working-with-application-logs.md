@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 9e62224ba4d53e09416819ca68004063dd189551
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592043"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000032"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 응용 프로그램 로그 작업
 `My.Applicaton.Log` 및 `My.Log` 개체를 사용하면 로깅 및 추적 정보를 로그에 쉽게 쓸 수 있습니다.  
@@ -102,4 +102,4 @@ ms.locfileid: "33592043"
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [응용 프로그램의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [응용 프로그램의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/index.md)

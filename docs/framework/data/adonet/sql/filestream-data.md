@@ -2,12 +2,12 @@
 title: FILESTREAM 데이터
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 782674cb38669c400bd5d730c2fd0c144778a985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb7291fad15917614f5eebd31ad0e239c987a81d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357780"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931402"
 ---
 # <a name="filestream-data"></a>FILESTREAM 데이터
 FILESTREAM 저장소 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데이터에 사용됩니다. FILESTREAM 이전에는 이진 데이터를 저장하려면 특별한 처리가 필요했습니다. 텍스트 문서, 이미지 및 비디오 같이 구조화되지 않은 데이터는 대개 데이터베이스의 외부에 저장되어 관리가 어렵습니다.  
@@ -18,10 +18,10 @@ FILESTREAM 저장소 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데�
  varbinary(max) 열에 FILESTREAM 특성을 지정하면 SQL Server에서는 데이터베이스 파일 대신 로컬 NTFS 파일 시스템에 데이터를 저장합니다. 데이터가 별도로 저장되기는 하지만 데이터베이스에 저장된 varbinary(max) 데이터로 작업할 때와 동일한 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 사용할 수 있습니다.  
   
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM에 대한 SqlClient 지원  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>, 지원 읽기 및 쓰기를 사용 하 여 FILESTREAM 데이터는 <xref:System.Data.SqlTypes.SqlFileStream> 에 정의 된 클래스는 <xref:System.Data.SqlTypes> 네임 스페이스입니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>, 읽기 및 쓰기 사용 하 여 FILESTREAM 데이터를 지원 합니다 <xref:System.Data.SqlTypes.SqlFileStream> 에 정의 된 클래스는 <xref:System.Data.SqlTypes> 네임 스페이스입니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.  
   
 ### <a name="creating-the-sql-server-table"></a>SQL Server 테이블 만들기  
- 다음 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 저장소를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스에 대 한 링크는이 항목의 끝부분에 나와 있습니다.  
+ 다음 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 저장소를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스 링크는이 항목의 끝에 나와 있습니다.  
   
 ```  
 CREATE TABLE employees  
@@ -167,7 +167,7 @@ namespace FileStreamTest
 }
 ```  
   
- 또 다른 예제를 참조 하십시오. [저장 하 고 파일 스트림 열에 이진 데이터를 인출 하는 방법을](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)합니다.  
+ 다른 샘플을 보려면 [저장할 파일 스트림 열에 이진 데이터를 인출 하는 방법을](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)합니다.  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 온라인 설명서 리소스  
  FILESTREAM에 대 한 전체 설명서는 SQL Server 온라인 설명서의 다음 섹션에 있습니다.  
@@ -178,7 +178,7 @@ namespace FileStreamTest
 |[FILESTREAM 개요](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|FILESTREAM 저장소를 사용해야 하는 경우 및 FILESTREAM 저장소가 SQL Server 데이터베이스 엔진을 NTFS 파일 시스템과 통합하는 방법에 대해 설명합니다.|  
 |[FILESTREAM 저장소 시작](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|SQL Server 인스턴스에서 FILESTREAM을 사용하도록 설정하는 방법, 저장된 FILESTREAM 데이터에 데이터베이스와 테이블을 만드는 방법 및 FILESTREAM 데이터가 포함된 행을 조작하는 방법에 대해 설명합니다.|  
 |[클라이언트 응용 프로그램에서 FILESTREAM 저장소 사용](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|FILESTREAM 데이터로 작업하기 위한 Win32 API 함수에 대해 설명합니다.|  
-|[FILESTREAM 및 기타 SQL Server 기능](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|SQL Server의 다른 기능과 함께 FILESTREAM 데이터를 사용할 경우의 고려 사항, 지침 및 제한 사항을 제공합니다.|  
+|[FILESTREAM 및 기타 SQL Server 기능](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|SQL Server의 다른 기능과 함께 FILESTREAM 데이터를 사용할 경우의 고려 사항, 지침 및 제한 사항을 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터 형식 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

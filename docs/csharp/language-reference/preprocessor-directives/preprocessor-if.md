@@ -1,17 +1,17 @@
 ---
 title: '#if 전처리기 지시문(C# 참조)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287685"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000939"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
@@ -33,9 +33,9 @@ C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문�
 
 `#define`을 사용하여 기호를 정의할 수 있습니다. 그러면 `#if` 지시문으로 전달되는 식으로 해당 기호를 사용하는 경우 식이 `true`로 평가됩니다.
 
-[/define](../compiler-options/define-compiler-option.md) 컴파일러 옵션으로 기호를 정의할 수도 있습니다. [#undef](preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.
+[-define](../compiler-options/define-compiler-option.md) 컴파일러 옵션으로 기호를 정의할 수도 있습니다. [#undef](preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.
 
-`/define` 또는 `#define`으로 정의하는 기호는 동일한 이름의 변수와 충돌하지 않습니다. 즉, 변수 이름이 전처리기 지시문에 전달되지 않아야 하며 전처리기 지시문을 통해서만 기호를 평가할 수 있습니다.
+`-define` 또는 `#define`으로 정의하는 기호는 동일한 이름의 변수와 충돌하지 않습니다. 즉, 변수 이름이 전처리기 지시문에 전달되지 않아야 하며 전처리기 지시문을 통해서만 기호를 평가할 수 있습니다.
 
 `#define`을 사용하여 만든 기호의 범위는 해당 기호가 정의된 파일입니다.
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>참고 항목
 
-[C# 참조](../../../csharp/language-reference/index.md)  
-[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-[C# 전처리기 지시문](index.md)  
-[방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 전처리기 지시문](index.md)  
+- [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

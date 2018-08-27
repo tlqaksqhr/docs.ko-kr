@@ -3,11 +3,11 @@ title: LINQ to XML 개요 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 3818177c2ed14b1159b8e63e324894d7e89b72b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649089"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932405"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 개요 (Visual Basic)
 XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법으로 널리 채택되고 있습니다. 예를 들어, 웹에 있는 구성 파일, Microsoft Office Word 파일 및 데이터베이스에서 XML을 찾을 수 있습니다.  
@@ -22,9 +22,9 @@ XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법�
 ## <a name="what-is-linq-to-xml"></a>LINQ to XML이란?  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 LINQ를 사용할 수 있는 메모리 내 XML 프로그래밍 인터페이스로, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 프로그래밍 언어에서 XML 작업을 수행할 수 있도록 합니다.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML 문서를 메모리로 가져온다는 점에서 DOM(문서 개체 모델)과 같습니다. 문서를 쿼리하고 수정할 수 있으며 문서를 수정한 후 파일에 저장하거나 serialize하고 네트워크를 통해 보낼 수 있습니다. 그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] DOM에서와 다른: 새 개체 모델은 더 밝게 가중치를 제공 하 고 작업 하기 쉽게 Visual basic에서의 언어 기능을 사용 하 고 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML 문서를 메모리로 가져온다는 점에서 DOM(문서 개체 모델)과 같습니다. 문서를 쿼리하고 수정할 수 있으며 문서를 수정한 후 파일에 저장하거나 serialize하고 네트워크를 통해 보낼 수 있습니다. 그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] DOM에서 다른: 간단 하는 새 개체 모델 제공 작업 하기 쉬우며 및 Visual basic에서 언어 기능을 사용 하는 합니다.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 가장 중요한 이점은 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되었다는 점입니다. 이 통합을 통해 메모리 내 XML 문서에 대한 쿼리를 작성하여 요소와 특성의 컬렉션을 검색할 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 쿼리 기능은 기능 면에서(구문 면에서는 아니지만) XPath 및 XQuery와 유사합니다. 통합 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Visual Basic의 보다 강력한 형식 지정, 컴파일 타임 검사 및 개선 된 디버거 지원 제공 합니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 가장 중요한 이점은 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되었다는 점입니다. 이 통합을 통해 메모리 내 XML 문서에 대한 쿼리를 작성하여 요소와 특성의 컬렉션을 검색할 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 쿼리 기능은 기능 면에서(구문 면에서는 아니지만) XPath 및 XQuery와 유사합니다. 통합 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Visual Basic의 강력한 형식 지정, 컴파일 시간 검사 및 개선 된 디버거 지원 기능을 제공 합니다.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 또 다른 이점은 쿼리 결과를 <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XAttribute> 개체 생성자에 대한 매개 변수로 사용할 수 있다는 점입니다. 이러한 이점은 XML 트리를 만드는 강력한 방법의 기반이 됩니다. 개발자는 *함수 생성*이라는 이 방법을 사용하여 XML 트리의 모양을 쉽게 변환할 수 있습니다.  
   
@@ -64,7 +64,7 @@ Select item
 -   이러한 기능을 함께 사용하여 XML 트리의 모양을 변환할 수 있습니다.  
   
 ## <a name="creating-xml-trees"></a>XML 트리 만들기  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 프로그래밍하는 경우의 가장 중요한 이점 중 하나는 XML 트리를 쉽게 만들 수 있다는 점입니다. 예를 들어, 작은 XML 트리를 만들려면 다음과 같이 코드를 작성할 수 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 프로그래밍하는 경우의 가장 중요한 이점 중 하나는 XML 트리를 쉽게 만들 수 있다는 점입니다. 예를 들어 작은 XML 트리를 만들려면 다음과 같이 코드를 작성할 수 있습니다.  
   
 ```vb  
 Dim contacts = _  
@@ -83,9 +83,9 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- Visual Basic 컴파일러는 XML 리터럴을 변환 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 메서드를 호출 합니다.  
+ Visual Basic 컴파일러에 XML 리터럴 변환 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 메서드 호출 합니다.  
   
- 자세한 내용은 참조 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)합니다.  
+ 자세한 내용은 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.Linq>  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
 ms.openlocfilehash: 4a6cb67474d03ada5e0a73d94f65da7a381c44a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582466"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911943"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>방법: Visual Basic에서 연결 상태 확인
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> 속성은 컴퓨터에 작동하는 네트워크 또는 인터넷 연결이 있는지 확인하는 데 사용될 수 있습니다.  

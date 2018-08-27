@@ -3,11 +3,11 @@ title: CLR 트리거
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
 ms.openlocfilehash: c526e16949c76272ba6c6e17233c86daf9d0d1d2
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754519"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931922"
 ---
 # <a name="clr-triggers"></a>CLR 트리거
 트리거는 언어 이벤트가 실행될 때 자동으로 실행되는 특수한 형식의 저장 프로시저입니다. Microsoft SQL Server가 .NET Framework CLR(공용 언어 런타임)과 통합됨에 따라 .NET Framework 언어를 사용하여 CLR 트리거를 만들 수 있습니다.  

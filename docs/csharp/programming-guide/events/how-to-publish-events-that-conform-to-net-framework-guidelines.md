@@ -5,11 +5,11 @@ helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 830f86be43f1499bd87ff02690061b08f8f7f86d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322639"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001267"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>방법: .NET Framework 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
 다음 절차에서는 표준 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  

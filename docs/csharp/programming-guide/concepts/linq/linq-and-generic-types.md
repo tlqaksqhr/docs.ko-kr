@@ -7,11 +7,11 @@ helpviewer_keywords:
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
 ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327739"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925774"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ 및 제네릭 형식(C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전 2.0에서 도입된 제네릭 형식을 기반으로 합니다. 제네릭에 대한 세부 지식이 없어도 쿼리 작성을 시작할 수 있습니다. 그러나 다음 두 가지 기본 개념은 이해하는 것이 좋습니다.  

@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e422e6ff65439d105020a6305b66a8192586a8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8810508bc61f6fd625b1485f199249a96b2686e6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591491"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931510"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard의 새로운 기능
 
@@ -55,7 +55,7 @@ ms.locfileid: "33591491"
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework 라이브러리에 대한 지원
 
-압도적인 다수로 라이브러리는 .NET Standard가 아닌 .NET Framework를 대상으로 합니다. 그러나 이러한 라이브러리에서 대부분의 호출은 .NET Standard 2.0에 포함된 API를 대상으로 합니다. .NET Standard 2.0부터는 [호환성 shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification)을 사용하여 .NET Standard 라이브러리에서 .NET Framework 라이브러리에 액세스할 수 있습니다. 이 호환성 레이어는 개발자에게 투명합니다. .NET Framework 라이브러리를 이용하기 위해 아무것도 할 필요가 없습니다.
+압도적인 다수로 라이브러리는 .NET Standard가 아닌 .NET Framework를 대상으로 합니다. 그러나 이러한 라이브러리에서 대부분의 호출은 .NET Standard 2.0에 포함된 API를 대상으로 합니다. .NET Standard 2.0부터는 [호환성 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification)을 사용하여 .NET Standard 라이브러리에서 .NET Framework 라이브러리에 액세스할 수 있습니다. 이 호환성 레이어는 개발자에게 투명합니다. .NET Framework 라이브러리를 이용하기 위해 아무것도 할 필요가 없습니다.
 
 하나의 요구 사항은 .NET Framework 클래스 라이브러리에서 호출하는 API가 .NET Standard 2.0에 포함되어야 합니다.
 

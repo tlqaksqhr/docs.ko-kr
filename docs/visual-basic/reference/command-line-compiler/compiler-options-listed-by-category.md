@@ -7,14 +7,14 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655826"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932169"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
-Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 기능 범주별으로 정렬 한 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
+Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE) 내에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 기능 범주별으로 정렬 된 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -43,7 +43,7 @@ Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (ID
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|입력이 동일한 경우 컴파일 간에 이진 콘텐츠가 동일한 어셈블리를 컴파일러에서 출력하도록 합니다.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|출력 파일을 지정합니다.|  
-|[/refonly](refonly-compiler-option.md)|한 참조 어셈블리를 출력합니다.|
+|[/refonly](refonly-compiler-option.md)|참조 어셈블리에만 출력합니다.|
 |[/refout](refout-compiler-option.md)|참조 어셈블리의 출력 경로 지정합니다.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|출력의 형식을 지정합니다.|  
   
@@ -56,7 +56,7 @@ Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (ID
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|지정된 어셈블리에서 네임스페이스를 가져옵니다.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 어셈블리의 위치를 지정 된 [-참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 되는 어셈블리의 위치를 지정 합니다 [-참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|어셈블리에서 메타데이터를 가져옵니다.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|모듈이 속할 어셈블리의 이름을 지정합니다.|  
 |`-analyzer`|이 어셈블리에서 분석기를 실행합니다(약식: -a).|  
@@ -85,7 +85,7 @@ Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (ID
   
 |옵션|용도|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전 지정: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전을 지정 합니다. 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0입니다.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|명시적 변수 선언이 있어야 합니다.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|형식 의미 체계를 엄격하게 확인합니다.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|문자열 비교가 이진인지 또는 로캘별 텍스트 의미 체계를 사용해야 하는지를 지정합니다.|  
@@ -115,7 +115,7 @@ Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (ID
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic 컴파일러에서 내부 컴파일러 오류를 보고 하는 방법을 지정 합니다.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 Windows 커널에 알려줍니다.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 된 클래스를 지정 하는 `Sub Main` 프로시저를 시작할 때 사용 합니다.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 하는 클래스를 지정 합니다 `Sub Main` 프로시저를 시작할 때 사용 합니다.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp로 컴파일하지 않습니다.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|컴파일러에서 표준 라이브러리를 참조하지 않도록 합니다.|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105286"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753601"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 
@@ -19,7 +19,7 @@ Microsoft.Extensions.Configuration.AzureKeyVault 패키지를 통해 ASP.NET Cor
 
 첫 번째로, 응용 프로그램을 Azure AD 응용 프로그램으로 등록합니다. (키 자격 증명 모음에 대한 액세스는 Azure AD에 의해 관리됩니다.) Azure 관리 포털을 통해 이 작업을 수행할 수 있습니다.
 
-또는 암호 또는 클라이언트 암호 대신 인증서를 사용하여 응용 프로그램을 인증하려는 경우 [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) PowerShell cmdlet을 사용할 수 있습니다. Azure Key Vault로 등록하는 인증서는 공개 키만 필요합니다. (응용 프로그램은 개인 키를 사용합니다.)
+또는 암호 또는 클라이언트 암호 대신 인증서를 사용하여 응용 프로그램을 인증하려는 경우 [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet을 사용할 수 있습니다. Azure Key Vault로 등록하는 인증서는 공개 키만 필요합니다. (응용 프로그램은 개인 키를 사용합니다.)
 
 두 번째로, 새 서비스 사용자를 만들어 등록된 응용 프로그램에 키 자격 증명 모음에 대한 액세스를 제공합니다. 다음 PowerShell 명령을 사용하여 이를 수행할 수 있습니다.
 

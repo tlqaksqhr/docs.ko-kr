@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88c70e6a35e0a731cd8937b188dc6ee8e9bce105
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579472"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998856"
 ---
 # <a name="isolated-storage"></a>격리된 저장소
 <a name="top"></a> [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 응용 프로그램의 경우, 격리된 저장소는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 저장소 메커니즘입니다. 표준화를 통해 다음과 같은 여러 가지 이점도 활용할 수 있습니다. 관리자는 파일 저장소 구성, 보안 정책 설정, 사용하지 않은 데이터 삭제를 위해 격리된 저장소를 조작하는 도구를 사용할 수 있습니다. 격리된 저장소를 사용하면 더 이상 파일 시스템에서 안전한 위치를 지정하기 위해 코드에 고유 경로를 포함할 필요가 없으며 격리된 저장소에만 액세스할 수 있는 다른 응용 프로그램으로부터 데이터가 보호됩니다. 응용 프로그램의 저장소 영역 위치를 나타내는 하드 코드된 정보는 필요하지 않습니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에는 격리된 저장소를 사용할 수 없습니다. 대신에 `Windows.Storage` API에 포함된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 네임스페이스의 응용 프로그램 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [응용 프로그램 데이터](/previous-versions/windows/apps/hh464917(v=win.10))를 참조하세요.  
+>  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에는 격리된 저장소를 사용할 수 없습니다. 대신에 `Windows.Storage` API에 포함된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 네임스페이스의 응용 프로그램 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [응용 프로그램 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 참조하세요.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   

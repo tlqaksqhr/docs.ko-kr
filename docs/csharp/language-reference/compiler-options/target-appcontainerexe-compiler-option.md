@@ -3,11 +3,11 @@ title: -target:appcontainerexe(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: b8765f64aeb08d816ca17fce64c13e981d85145b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216741"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42907659"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe(C# 컴파일러 옵션)
 **-target:appcontainerexe** 컴파일러 옵션을 사용하면 컴파일러는 앱 컨테이너에서 실행해야 하는 Windows 실행 파일(.exe)을 만듭니다. 이 옵션은 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)와 같지만 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 응용 프로그램을 위해 설계되었습니다.  

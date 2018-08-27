@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa8cbe0cc87e656eeb8cd0234875a87ade9c05f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeb050e7741422b286c553182cea891278ac9ee7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393603"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998749"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
@@ -101,7 +101,7 @@ ms.locfileid: "33393603"
 | **LCID 매개 변수** | 자동화 서버 설정에서 예상되는 동작과의 일관성을 위해, CLR은 더 이상 `LCID` 매개 변수에 대한 현재 문화권을 관리되지 않는 COM 기반 응용 프로그램에 전달하지 않습니다. 대신, 문화권에 1033(en-us)을 전달합니다. | 특정 문화권을 요구하는 기본 응용 프로그램을 제외하고는 수정이 필요하지 않습니다. |
 | **사용되지 않는 문화권 형식** | <xref:System.Globalization.CultureTypes> 및 <xref:System.Globalization.CultureTypes> 문화권 형식은 이제 사용되지 않습니다.<br><br>이전 버전과의 호환성을 위해 이제 <xref:System.Globalization.CultureTypes>는 이전 .NET Framework에 포함되었던 중립적인 특정 문화권을 반환하고, <xref:System.Globalization.CultureTypes>는 빈 목록을 반환합니다. | <xref:System.Globalization.CultureTypes> 열거형의 다른 값을 사용하세요. |
 | **문화권 검색** | Windows 7부터 .NET Framework 4는 데이터 자체를 저장하는 대신 운영 체제에서 문화권 정보를 검색합니다. 또한 .NET Framework는 데이터 정렬 및 대/소문자 처리를 위해 Windows와 동기화됩니다. | 없음 |
-| **Unicode 5.1 표준** | 이제 .NET Framework는 모든 유니코드 5.1 문자(약 1,400자 추가)를 지원합니다. 추가 문자에는 새로운 기호, 화살표, 분음 부호, 구두점, 수학 기호, CJK 스트로크 및 표의 문자, 추가 말라얄람어 및 텔루구어 숫자 문자, 다양한 미얀마어, 라틴어, 아랍어, 그리스어, 몽골어 및 키릴 문자가 포함됩니다. 유니코드 5.1에서는 순다어, 렙차어, 올치키어, 바이어(Vai), 사우라슈트라어, 카야리어(Kayah Li), 레장어, 구르무키어, 오디아어, 타밀어, 텔구루어, 말라얌람어 문자 및 참어(Cham)의 새 스크립트가 지원됩니다. | 없음 |
+| **Unicode 5.1 표준** | 이제 .NET Framework는 모든 유니코드 5.1 문자(약 1,400자 추가)를 지원합니다. 추가 문자에는 새로운 기호, 화살표, 분음 부호, 구두점, 수학 기호, CJK 스트로크 및 표의 문자, 추가 말라얄람어 및 텔루구어 숫자 문자, 다양한 미얀마어, 라틴어, 아랍어, 그리스어, 몽골어 및 키릴 문자가 포함됩니다. 유니코드 5.1에서는 순다어, 렙차어, 올치키어, 바이어(Vai), 사우라슈트라어, 카야리어(Kayah Li), 레장어, 구르무키어, 오리야어, 타밀어, 텔구루어, 말라얌람어 문자 및 참어(Cham)의 새 스크립트가 지원됩니다. | 없음 |
 
 ### <a name="exceptions"></a>예외
 
@@ -122,7 +122,7 @@ ms.locfileid: "33393603"
 | **어셈블리 로딩** | 어셈블리의 중복 로드를 방지하고 가상 주소 공간을 절약하기 위해 이제 CLR은 Win32 `MapViewOfFile` 함수만 사용하여 어셈블리를 로드합니다. 또한 더 이상 `LoadLibrary` 함수를 호출하지 않습니다.<br><br>이러한 변경은 진단 응용 프로그램에 다음과 같은 방식으로 영향을 줍니다.<br><br>* <xref:System.Diagnostics.ProcessModuleCollection>에는 `Process.GetCurrentProcess().Modules`에 대한 호출에서 가져온 클래스 라이브러리(.dll 파일)의 모듈이 더 이상 포함되지 않습니다.<br>`EnumProcessModules` 함수를 사용하는 Win32 응용 프로그램은 나열된 관리되는 모듈을 모두 볼 수는 없습니다. | 없음 |
 | **선언 형식** | 형식에 선언 형식이 없으면 이제 <xref:System.Type.DeclaringType> 속성이 올바르게 null을 반환합니다. | 없음 |
 | **대리자** | 대리자의 생성자에 null 값이 전달되면 이제 대리자가 <xref:System.NullReferenceException> 대신 <xref:System.ArgumentNullException>을 throw합니다. | 예외 처리가 <xref:System.ArgumentNullException>을 catch하는지 확인하세요. |
-| **전역 어셈블리 캐시 위치 변경** | .NET Framework 4 어셈블리의 경우 전역 어셈블리 캐시가 Windows 디렉터리(%WINDIR%)에서 Microsoft.Net 하위 디렉터리(*%WINDIR%\\Microsoft.Net*)로 이동했습니다. 이전 버전의 어셈블리는 이전 디렉터리에 남아 있습니다.<br><br>관리되지 않는 [ASM_CACHE_FLAGS](https://msdn.microsoft.com/library/ms231621(v=vs.100).aspx) 열거형에 새 `ASM_CACHE_ROOT_EX` 플래그가 포함됩니다. 이 플래그는 [GetCachePath](/dotnet/framework/unmanaged-api/fusion/getcachepath-function) 함수로 얻을 수 있는 .NET Framework 4 어셈블리의 캐시 위치를 가져옵니다. | 응용 프로그램이 어셈블리에 대한 명시적 경로를 사용하지 않는다고 가정할 경우에는 이 방식이 권장되지 않습니다. |
+| **전역 어셈블리 캐시 위치 변경** | .NET Framework 4 어셈블리의 경우 전역 어셈블리 캐시가 Windows 디렉터리(%WINDIR%)에서 Microsoft.Net 하위 디렉터리(*%WINDIR%\\Microsoft.Net*)로 이동했습니다. 이전 버전의 어셈블리는 이전 디렉터리에 남아 있습니다.<br><br>관리되지 않는 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 열거형에 새 `ASM_CACHE_ROOT_EX` 플래그가 포함됩니다. 이 플래그는 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 함수로 얻을 수 있는 .NET Framework 4 어셈블리의 캐시 위치를 가져옵니다. | 응용 프로그램이 어셈블리에 대한 명시적 경로를 사용하지 않는다고 가정할 경우에는 이 방식이 권장되지 않습니다. |
 | **전역 어셈블리 캐시 도구** | [Gacutil.exe(전역 어셈블리 캐시 도구)](https://msdn.microsoft.com/library/ex0ss12c(v=vs.100).aspx)는 더 이상 셸 플러그 인 뷰어를 지원하지 않습니다. | 없음 |
 
 ### <a name="interoperability"></a>상호 운용성
@@ -131,9 +131,9 @@ ms.locfileid: "33393603"
 
 | 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
-| **버퍼 길이**(관리되지 않는 API) | 메모리를 절약하기 위해 [ICorProfilerInfo2::GetStringLayout](/dotnet/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method) 메서드에 대한 `pBufferLengthOffset` 매개 변수의 기능이 `pStringLengthOffset` 매개 변수와 일치하도록 변경되었습니다. 이제 두 매개 변수가 문자열 길이의 오프셋 위치를 가리킵니다. 문자열 클래스의 표시에서 버퍼 길이가 제거되었습니다. | 버퍼 길이에 대한 종속성을 제거하세요. |
+| **버퍼 길이**(관리되지 않는 API) | 메모리를 절약하기 위해 [ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 메서드에 대한 `pBufferLengthOffset` 매개 변수의 기능이 `pStringLengthOffset` 매개 변수와 일치하도록 변경되었습니다. 이제 두 매개 변수가 문자열 길이의 오프셋 위치를 가리킵니다. 문자열 클래스의 표시에서 버퍼 길이가 제거되었습니다. | 버퍼 길이에 대한 종속성을 제거하세요. |
 | **JIT 디버깅** | JIT(Just-In-Time) 디버깅에 대한 등록을 단순화하기 위해 .NET Framework 디버거는 이제 네이티브 코드의 JIT 디버깅 동작을 제어하는 AeDebug 레지스트리 키만 사용합니다. 이 변경의 결과는 다음과 같습니다.<br><br>* 더 이상 관리되는 네이티브 코드에 대해 서로 다른 두 가지 디버거를 등록할 수 없습니다.<br>* 비대화형 프로세스에 대해 자동으로 디버거를 시작할 수는 없지만, 사용자에게 대화형 프로세스를 요구할 수 있습니다.<br>* 디버거가 시작되지 않거나 시작해야 하는 등록된 디버거가 없을 때 더 이상 알림이 표시되지 않습니다.<br>* 응용 프로그램의 대화형 작업에 의존하는 자동 시작 정책이 더 이상 지원되지 않습니다. | 필요에 따라 디버깅 작업을 조정하세요. |
-| **플랫폼 호출** | 비관리 코드와의 상호 운용성 성능을 향상하기 위해, 이제 플랫폼 호출에 잘못된 호출 규칙이 있으면 응용 프로그램이 실패합니다. 이전 버전에서는 마샬링 계층이 스택 위에서 이러한 오류를 해결했습니다. | Microsoft Visual Studio 2010에서 응용 프로그램을 디버깅하면 이러한 오류를 알려주므로 수정할 수 있습니다.<br><br>업데이트할 수 없는 이진 파일이 있는 경우 응용 프로그램의 구성 파일에 [\<NetFx40_PInvokeStackResilience>](/dotnet/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element) 요소를 포함하면 이전 버전과 마찬가지로 스택 위에서 호출 오류를 해결할 수 있습니다. 그러나 이 경우 응용 프로그램의 성능에 영향을 줄 수 있습니다. |
+| **플랫폼 호출** | 비관리 코드와의 상호 운용성 성능을 향상하기 위해, 이제 플랫폼 호출에 잘못된 호출 규칙이 있으면 응용 프로그램이 실패합니다. 이전 버전에서는 마샬링 계층이 스택 위에서 이러한 오류를 해결했습니다. | Microsoft Visual Studio 2010에서 응용 프로그램을 디버깅하면 이러한 오류를 알려주므로 수정할 수 있습니다.<br><br>업데이트할 수 없는 이진 파일이 있는 경우 응용 프로그램의 구성 파일에 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 요소를 포함하면 이전 버전과 마찬가지로 스택 위에서 호출 오류를 해결할 수 있습니다. 그러나 이 경우 응용 프로그램의 성능에 영향을 줄 수 있습니다. |
 | **제거된 인터페이스**(관리되지 않는 API) | 개발자에게 혼란을 주지 않도록 다음 인터페이스가 제거되었습니다. 이러한 인터페이스는 유용한 런타임 시나리오를 제공하지 않았고 CLR이 구현을 제공하거나 수락하지 않았기 때문입니다.<br><br>* **INativeImageINativeImageDependency**<br>* **INativeImageInstallInfo**<br>* **INativeImageEvaluate**<br>* **INativeImageConverter**<br>* **ICorModule**<br>* **IMetaDataConverter** | 없음 |
 
 ## <a name="data"></a>데이터

@@ -4,12 +4,12 @@ description: .NET Core 2.1에서 볼 수 있는 새로운 기능에 대해 알�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874574"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935581"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -123,7 +123,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="windows-compatibility-pack"></a>Windows 호환 기능 팩
 
-.NET Framework에서 .NET Core로 기존 코드를 포팅할 경우 [Windows 호환 기능 팩](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)을 사용할 수 있습니다. .NET Core에서 사용할 수 있는 것보다 20,000개 많은 API에 대한 액세스를 제공합니다. 이러한 API에는 <xref:System.Drawing?displayProperty="nameWithType"> 네임스페이스, <xref:System.Diagnostics.EventLog> 클래스, WMI, 성능 카운터, Windows 서비스 및 Windows 레지스트리 형식/멤버의 형식이 포함됩니다.
+.NET Framework에서 .NET Core로 기존 코드를 포팅할 경우 [Windows 호환 기능 팩](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)을 사용할 수 있습니다. .NET Core에서 사용할 수 있는 것보다 20,000개 많은 API에 대한 액세스를 제공합니다. 이러한 API에는 <xref:System.Drawing?displayProperty=nameWithType> 네임스페이스, <xref:System.Diagnostics.EventLog> 클래스, WMI, 성능 카운터, Windows 서비스 및 Windows 레지스트리 형식/멤버의 형식이 포함됩니다.
 
 ## <a name="jit-compiler-improvements"></a>JIT 컴파일러 개선
 
@@ -195,7 +195,7 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A>는 최적화할 수 없는 메모리 정리 루틴입니다.
 
-- <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> 정적 메서드는 <xref:System.Span%601>를 임의 값으로 채웁니다.
+- <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 정적 메서드는 <xref:System.Span%601>를 임의 값으로 채웁니다.
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>는 이제 Linux 및 maxOS에서 지원됩니다.
 
@@ -215,7 +215,7 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 - 모든 .NET Core 플랫폼에서 일관된 동작.
 
-<xref:System.Net.Http.SocketsHttpHandler>는 .NET Core 2.1의 기본 구현입니다. 그러나 <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> 메서드를 호출하여 이전 <xref:System.Net.Http.HttpClientHandler> 클래스를 사용하도록 응용 프로그램을 구성할 수 있습니다.
+<xref:System.Net.Http.SocketsHttpHandler>는 .NET Core 2.1의 기본 구현입니다. 그러나 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 메서드를 호출하여 이전 <xref:System.Net.Http.HttpClientHandler> 클래스를 사용하도록 응용 프로그램을 구성할 수 있습니다.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

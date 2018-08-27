@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: bd4fe2cfe80930c121a11d03c848b2c4eca152d6
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: be13e04dce12dfb60a1179e05a0a47eca1df1af4
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172125"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752085"
 ---
 # <a name="sealed-c-reference"></a>sealed(C# 참조)
 클래스에 적용된 경우 `sealed` 한정자는 다른 클래스가 해당 클래스에서 상속하지 못하도록 합니다. 다음 예제에서 `B` 클래스는 `A` 클래스에서 상속하지만 `B` 클래스에서 상속할 수 있는 클래스는 없습니다.  
@@ -50,7 +50,7 @@ sealed class B : A {}
   
  그 결과 다음 오류 메시지가 표시됩니다.  
   
- `'MyDerivedC' cannot inherit from sealed class 'SealedClass'.`  
+ `'MyDerivedC': cannot derive from sealed type 'SealedClass'`  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
