@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33552846"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>방법: 캔버스 만들기 및 사용
-다음 예제는 <xref:System.Windows.Controls.Canvas> 컨트롤 클래스의 인스턴스의 생성, 사용법에 관한 예제 입니다.
+다음 예제는 <xref:System.Windows.Controls.Canvas> 컨트롤 클래스 인스턴스의 생성 및 사용법에 관한 예제입니다.
   
 ## <a name="example"></a>예제  
 다음 예시를 통해 캔버스 컨트롤 클래스의 <xref:System.Windows.Controls.Canvas.SetTop%2A> 메소드와 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 메소드를 사용하여 두 개의 <xref:System.Windows.Controls.TextBlock> 엘리먼트를 배치하는 방법을 알 수 있습니다.
