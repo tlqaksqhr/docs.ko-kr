@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: f2cebe8e02a2d8beec659fe4ac81fde2e85f3c1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e12fccf7426ae130cd2aaf120eafb19ac3909659
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557721"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925757"
 ---
 # <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 영향을 미치는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 렌더링 레지스트리 설정에 대해 간략하게 설명합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "33557721"
   
  필수 비디오 드라이버 설정은 다음 형식의 문자열을 사용합니다.  
   
-||  
+| |  
 |-|  
 |*YYYY* `/` *MM* `/` *DD*|  
   

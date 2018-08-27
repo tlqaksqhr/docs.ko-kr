@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495911"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925480"
 ---
 # <a name="endpoint-addresses"></a>끝점 주소
-모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 하 여 Windows Communication Foundation (WCF) 프로그래밍 모델에서 끝점 주소는 표시 된 <xref:System.ServiceModel.EndpointAddress> 선택적 들어 있는 클래스 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 다른 끝점에서 끝점을 인증할 수 있는 속성입니다 교환, 메시지 및 선택적 집합이 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 서비스에 전달 하는 데 필요한 다른 SOAP 헤더를 정의 하는 속성입니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
+모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소에서 Windows Communication Foundation (WCF) 프로그래밍 모델에 표시 됩니다는 <xref:System.ServiceModel.EndpointAddress> 선택적인 포함 하는 클래스 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 다른 끝점에서 끝점을 인증할 수 있게 하는 속성을 exchange를 사용 하 여 메시지 및 선택적 집합이 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 서비스에 도달 하는 데 필요한 다른 SOAP 헤더를 정의 하는 속성입니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
   
 ## <a name="uri-structure-of-an-address"></a>주소의 URI 구조  
- 대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어 URI의 네 부분 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 다음과 같이 항목별로 수 있습니다.  
+ 대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어, URI의 네 가지 부분 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 같이 항목별로 수 있습니다.  
   
 -   스키마: http:  
   
--   시스템: www.fabrikam.com  
+-   컴퓨터: `www.fabrikam.com`  
   
 -   (선택적) 포트: 322  
   
@@ -31,15 +31,15 @@ ms.locfileid: "33495911"
  서비스의 끝점 주소는 코드를 사용하여 명령적으로 지정하거나 구성을 통해 선언적으로 지정할 수 있습니다. 일반적으로 배포된 서비스의 바인딩과 주소가 서비스를 배포할 때 사용된 바인딩 및 주소와 다르기 때문에 코드로 끝점을 정의하는 것은 효과적이지 않습니다. 일반적으로 코드 대신 구성을 사용하여 서비스 끝점을 정의하는 것이 좋습니다. 바인딩 및 주소 지정 정보를 코드와 구분하면 응용 프로그램을 다시 컴파일하거나 재배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
   
 ### <a name="defining-an-address-in-configuration"></a>구성에서 주소 정의  
- 사용 하 여 구성 파일에서 끝점을 정의 하는 [ \<끝점 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소입니다. 자세한 내용 및 예제 참조 [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
+ 구성 파일에서 끝점을 정의 하려면 사용 합니다 [ \<끝점 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소입니다. 세부 정보 및 예제를 참조 하세요 [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
   
 ### <a name="defining-an-address-in-code"></a>코드에서 주소 정의  
- 끝점 주소는 <xref:System.ServiceModel.EndpointAddress> 클래스를 사용하여 코드에 만들 수 있습니다. 자세한 내용 및 예제 참조 [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
+ 끝점 주소는 <xref:System.ServiceModel.EndpointAddress> 클래스를 사용하여 코드에 만들 수 있습니다. 세부 정보 및 예제를 참조 하세요 [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
   
 ### <a name="endpoints-in-wsdl"></a>WSDL의 끝점  
- 끝점 주소는 해당 끝점의 `wsdl:port` 요소 내에 있는 WS-Addressing EPR 요소로 WSDL에서 나타낼 수도 있습니다. EPR에는 끝점 주소와 주소 속성이 포함되어 있습니다. 자세한 내용 및 예제 참조 [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
+ 끝점 주소는 해당 끝점의 `wsdl:port` 요소 내에 있는 WS-Addressing EPR 요소로 WSDL에서 나타낼 수도 있습니다. EPR에는 끝점 주소와 주소 속성이 포함되어 있습니다. 세부 정보 및 예제를 참조 하세요 [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)합니다.  
   
-## <a name="multiple-iis-binding-support-in-net-framework-35"></a>여러 IIS 바인딩 지원.NET framework 3.5  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a>여러 IIS 바인딩 지원.NET Framework 3.5에서  
  인터넷 서비스 공급자는 사이트 밀도를 높이고 총 소유 비용을 줄이기 위해 종종 같은 서버 및 사이트에서 여러 응용 프로그램을 호스팅합니다. 이러한 응용 프로그램은 일반적으로 다른 기본 주소로 바인딩됩니다. IIS(인터넷 정보 서비스) 웹 사이트에 여러 개의 응용 프로그램이 포함될 수 있습니다. 하나 이상의 IIS 바인딩을 통해 한 사이트의 응용 프로그램에 액세스할 수 있습니다.  
   
  IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다. 바인딩 프로토콜은 통신이 이루어지는 스키마를 정의하며, 바인딩 정보는 사이트에 액세스하는 데 사용되는 정보입니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "33495911"
   
 -   바인딩 정보: IP 주소, 포트, 호스트 헤더  
   
- IIS에서는 각 사이트에 대해 여러 개의 바인딩을 지정할 수 있으므로, 각 스키마에 대해 여러 개의 기본 주소가 생성됩니다. 이전에 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF 스키마에 대 한 여러 주소를 지원 하지 않았습니다 고, 지정 된 경우 발생 했습니다는 <xref:System.ArgumentException> 활성화 중입니다.  
+ IIS에서는 각 사이트에 대해 여러 개의 바인딩을 지정할 수 있으므로, 각 스키마에 대해 여러 개의 기본 주소가 생성됩니다. 이전 버전 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF 스키마에 대 한 여러 주소를 지원 하지 않았습니다 고, 지정 된 경우 했습니다는 <xref:System.ArgumentException> 활성화 하는 동안.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하면 인터넷 서비스 공급자가 동일한 사이트의 동일한 스키마에 대해 기본 주소가 다른 여러 응용 프로그램을 호스팅할 수 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33495911"
   
 -   http://shipping.myorg.com/Service.svc  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하여 구성 파일의 AppDomain 수준에서 접두사 필터를 지정합니다. 이 작업을 수행는 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) 접두사 목록을 포함 하는 요소입니다. IIS에서 제공하는 들어오는 기본 주소는 선택적 접두사 목록을 기반으로 필터링됩니다. 기본적으로 접두사가 지정되지 않으면 모든 주소가 통과됩니다. 접두사를 지정하면 해당 스키마에서 일치하는 기본 주소만 통과됩니다.  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하여 구성 파일의 AppDomain 수준에서 접두사 필터를 지정합니다. 이 작업을 수행 합니다 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) 접두사 목록을 포함 하는 요소입니다. IIS에서 제공하는 들어오는 기본 주소는 선택적 접두사 목록을 기반으로 필터링됩니다. 기본적으로 접두사가 지정되지 않으면 모든 주소가 통과됩니다. 접두사를 지정하면 해당 스키마에서 일치하는 기본 주소만 통과됩니다.  
   
  다음은 접두사 필터를 사용하는 구성 코드의 예제입니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33495911"
 </system.serviceModel>  
 ```  
   
- 위의 예에서 net.tcp://payroll.myorg.com: 8000 및 http://shipping.myorg.com:8000 해당 체계를 통해 전달 되는 유일한 기본 주소입니다.  
+ 위의 예에서 net.tcp://payroll.myorg.com: 8000 및 http://shipping.myorg.com:8000 를 통해 전달 되는 해당 스키마에 대 한 유일한 기본 주소를 합니다.  
   
  `baseAddressPrefixFilter`는 와일드카드를 지원하지 않습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "33495911"
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>.NET Framework 4 이상의 여러 IIS 바인딩 지원  
  .NET 4부터는 단일 기본 주소를 선택해야 할 필요 없이 <xref:System.ServiceModel.ServiceHostingEnvironment>의 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 설정을 true로 설정하여 IIS에서 여러 바인딩을 지원할 수 있습니다. 이 지원은 HTTP 프로토콜 체계로 제한됩니다.  
   
- 다음에서 사용 하 여 multipleSiteBindingsEnabled 구성 코드의 한 예로 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)합니다.  
+ 다음은에서 multipleSiteBindingsEnabled를 사용 하는 구성 코드의 예로 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -95,10 +95,10 @@ ms.locfileid: "33495911"
   
  이 설정을 사용하여 여러 사이트 바인딩을 사용하도록 설정하는 경우 HTTP 프로토콜과 그 외의 프로토콜에 대한 모든 baseAddressPrefixFilters 설정이 무시됩니다.  
   
- 세부 정보 및 예제 참조 [여러 IIS 사이트 바인딩 지원](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) 및 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>합니다.  
+ 세부 정보 및 예제를 참조 하세요 [여러 IIS 사이트 바인딩을 지 원하는](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) 고 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>입니다.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>WCF 서비스에서 주소 확장  
- 주소 지정 모델 WCF 서비스의 기본은 다음과 같은 용도로 끝점 주소 URI를 사용 합니다.  
+ 다음과 같은 용도로 끝점 주소 URI를 사용 하는 주소 지정 모델 WCF 서비스의 기본:  
   
 -   끝점이 메시지를 수신 대기하는 위치인 서비스 수신 대기 주소 지정  
   
@@ -119,7 +119,7 @@ ms.locfileid: "33495911"
   
 -   코드에서는 <xref:System.ServiceModel.Channels.AddressHeader> 클래스를 사용하여 사용자 지정 주소 헤더를 만든 다음 <xref:System.ServiceModel.EndpointAddress> 생성에 사용합니다.  
   
--   사용자 지정 구성에서 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 의 자식으로 지정 되는 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
+-   구성에서 사용자 지정 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 의 자식으로 지정 된 된 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
   
  일반적으로 구성을 사용하면 배포 후에 헤더를 변경할 수 있으므로 구성을 사용하는 것이 코드를 사용하는 것보다 낫습니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "33495911"
   
 -   코드에서는 <xref:System.ServiceModel.Description.ClientViaBehavior> 클래스를 끝점의 동작 컬렉션에 추가하여 사용자 지정 수신 대기 주소를 지정합니다.  
   
--   구성에서 지정 된 사용자 지정 수신 대기 주소는 `ListenUri` 서비스의 특성 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
+-   구성에서 사용 하 여 사용자 지정 수신 대기 주소를 지정 합니다 `ListenUri` 서비스의 특성 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
   
 ### <a name="custom-soap-address-filter"></a>사용자 지정 SOAP 주소 필터  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A>는 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성과 함께 사용되어 끝점의 SOAP 주소 필터(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)를 정의합니다. 기본적으로 이 필터는 들어오는 메시지에 끝점의 URI와 일치하는 `To` 메시지 헤더가 있는지, 모든 필수 끝점 헤더가 메시지에 있는지 확인합니다.  

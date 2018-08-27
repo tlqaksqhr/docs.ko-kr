@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655599"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925555"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic의 제네릭 형식(Visual Basic)
 *제네릭 형식* 은 다양한 데이터 형식에 대해 동일한 기능을 수행하도록 조정되는 단일 프로그래밍 요소입니다. 제네릭 클래스 또는 프로시저를 정의할 때는 해당 기능을 수행하고자 하는 각 데이터 형식마다 별도의 버전을 정의할 필요가 없습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "33655599"
   
  제네릭 형식을 정의할 때는 하나 이상의 데이터 형식을 사용하여 매개 변수를 지정할 수 있습니다. 이렇게 하면 코드를 사용하여 데이터 형식을 요구 사항에 맞출 수 있습니다. 각각 서로 다른 데이터 형식 집합에 대해 작동하는 여러 프로그래밍 요소를 제네릭 요소에서 선언할 수 있습니다. 하지만 선언된 요소는 사용하는 데이터 형식에 관계없이 모두 동일한 논리를 수행합니다.  
   
- 예를 들어 `String`과 같은 특정 데이터 형식에서 작동하는 큐 클래스를 만들어 사용할 수 있습니다. 이러한 클래스를 선언할 수 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>다음 예제와 같이 합니다.  
+ 예를 들어 `String`과 같은 특정 데이터 형식에서 작동하는 큐 클래스를 만들어 사용할 수 있습니다. 이러한 클래스를 선언할 수 있습니다 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>다음 예제와 같이 합니다.  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33655599"
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- 자세한 예제를 참조 하십시오. [하는 방법: 기능을 정의 클래스는 수를 제공 동일한 서로 다른 데이터 형식에](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)합니다.  
+ 보다 완전 한 예제를 참조 하세요 [방법: 다른 데이터 형식에 클래스는 수 제공 동일한 기능을 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)합니다.  
   
 ## <a name="eligible-programming-elements"></a>적용 가능한 프로그래밍 요소  
  제네릭 클래스, 구조체, 인터페이스, 프로시저 및 대리자를 정의하고 사용할 수 있습니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 에서는 많이 사용되는 제네릭 요소를 나타내는 몇 개의 제네릭 클래스, 구조체 및 인터페이스를 정의합니다. <xref:System.Collections.Generic?displayProperty=nameWithType> 사전, 목록, 큐 및 스택 네임 스페이스를 제공 합니다. 사용자 고유의 제네릭 요소를 정의 하기 전에 사용할 수 있는 이미 있는지 확인 하십시오 <xref:System.Collections.Generic?displayProperty=nameWithType>합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "33655599"
   
 -   형식 인수는 *참조 형식*이거나 *값 형식*이어야 함  
   
- 둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. 액세스 가능한 생성자를 요구 하려면 포함는 [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md) 키워드 목록에 있습니다. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
+ 둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. 포함 하는 액세스 가능 생성자가 필요 하는 [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md) 목록의 키워드입니다. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
   
  제약 조건에 대한 자세한 내용은 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)을 참조하세요.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "33655599"
  [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)  

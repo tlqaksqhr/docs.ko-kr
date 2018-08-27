@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
 ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244742"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42907998"
 ---
 # <a name="implements-statement"></a>Implements 문
 인터페이스 또는 클래스에서 구현 해야 하는 인터페이스 멤버의 경우 또는 나타나는 구조 정의 하나 이상 지정 합니다.  

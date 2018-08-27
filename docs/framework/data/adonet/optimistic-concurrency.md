@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766230"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912002"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 다중 사용자 환경에서는 낙관적 동시성 및 비관적 동시성의 두 가지 모델을 사용하여 데이터베이스의 데이터를 업데이트할 수 있습니다. <xref:System.Data.DataSet> 개체는 데이터를 원격으로 사용하거나 데이터와 상호 작용하는 등의 장기 실행 작업에 대해 낙관적 동시성을 사용하기에 적합하도록 만들어졌습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "32766230"
   
  오후 1시 1분에 User2가 같은 행을 읽습니다.  
   
- 오후 1시 03분에 User2 변경 **FirstName** "Robert"을 "Bob"에서 데이터베이스를 업데이트 합니다.  
+ 오후 1 시 03 분에 User2 변경 **FirstName** "Robert"를 "Bob"에서 데이터베이스를 업데이트 합니다.  
   
 |열 이름|원래 값|현재 값|데이터베이스 값|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  낙관적 동시성 모델을 사용할 때는 덜 제한적인 조건을 적용할 수도 있습니다. 예를 들어, WHERE 절에 기본 키 열만 사용하면 마지막 쿼리 이후에 다른 열이 업데이트되었는지 여부와 상관없이 데이터를 덮어씁니다. 또한 특정 열에 대해서만 WHERE 절을 사용할 수도 있는데, 이 경우 마지막으로 쿼리된 이후에 특정 필드가 업데이트되지 않았으면 데이터를 덮어씁니다.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 이벤트  
- **RowUpdated** 의 이벤트는 <xref:System.Data.Common.DataAdapter> 개체를 낙관적 동시성 위반의 응용 프로그램에 대 한 알림을 제공할를 앞에서 설명한 기법과 함께 함께에서 사용할 수 있습니다. **RowUpdated** 를 업데이트 하려는 각 시도 후에 발생 한 **Modified** 에서 행는 **데이터 집합**합니다. 이로써 예외 발생 시의 처리와 사용자 지정 오류 정보 및 다시 시도 논리 등의 추가를 포함하여 특별한 처리 코드를 추가할 수 있습니다. <xref:System.Data.Common.RowUpdatedEventArgs> 반환 개체는 **RecordsAffected** 테이블의 수정된 된 행에 대 한 특정 업데이트 명령으로 영향을 받는 행 수를 포함 하는 속성입니다. 낙관적 동시성을 테스트 하도록 업데이트 명령을 설정 하 여는 **RecordsAffected** 속성은, 결과적으로, 반환 값이 0 낙관적 동시성 위반이 발생 했을 때 업데이트 된 레코드가 없으므로 합니다. 또한 이 경우 예외가 throw됩니다. **RowUpdated** 이벤트를 사용 하면이 항목을 처리 하 고 적절 한 설정 하 여 예외를 방지할 수 있습니다 **RowUpdatedEventArgs.Status** 같은 값  **UpdateStatus.SkipCurrentRow**합니다. 에 대 한 자세한 내용은 **RowUpdated** 이벤트 참조 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
+ 합니다 **RowUpdated** 이벤트는 <xref:System.Data.Common.DataAdapter> 개체를 낙관적 동시성 위반의 응용 프로그램에 대 한 알림을 제공를 앞에서 설명한 기법을 사용 하 여 함께에서 사용할 수 있습니다. **RowUpdated** 업데이트 하려는 각 시도 후에 발생 한 **Modified** 에서 행을 **데이터 집합**. 이로써 예외 발생 시의 처리와 사용자 지정 오류 정보 및 다시 시도 논리 등의 추가를 포함하여 특별한 처리 코드를 추가할 수 있습니다. 합니다 <xref:System.Data.Common.RowUpdatedEventArgs> 개체를 반환 합니다는 **RecordsAffected** 테이블의 수정된 된 행에 대 한 특정 업데이트 명령에 의해 영향을 받는 행 수를 포함 하는 속성입니다. 낙관적 동시성을 테스트 하도록 업데이트 명령을 설정 합니다 **RecordsAffected** 속성은, 결과적으로, 반환 값이 0 낙관적 동시성 위반이 발생 했을 때 업데이트 된 레코드가 있으므로. 또한 이 경우 예외가 throw됩니다. 합니다 **RowUpdated** 이벤트이 발생을 처리 하 고 적절 한 설정 하 여 예외를 방지할 수 있습니다 **RowUpdatedEventArgs.Status** 값을 같은  **UpdateStatus.SkipCurrentRow**합니다. 에 대 한 자세한 내용은 합니다 **RowUpdated** 이벤트를 참조 하세요 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
   
- 설정할 수 있습니다 **DataAdapter.ContinueUpdateOnError** 를 **true**를 호출 하기 전에 **업데이트**는 에저장된오류정보에응답할**RowError** 경우 속성의 특정 행의 **업데이트** 완료 합니다. 자세한 내용은 참조 [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)합니다.  
+ 선택적으로 설정할 수 있습니다 **DataAdapter.ContinueUpdateOnError** 하 **true**를 호출 하기 전에 **업데이트**, 합니다 에저장된오류정보에응답하고**RowError** 경우 속성의 특정 행을 **업데이트** 완료 됩니다. 자세한 내용은 [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)합니다.  
   
 ## <a name="optimistic-concurrency-example"></a>낙관적 동시성 예제  
- 다음은 설정 하는 간단한 예제는 **UpdateCommand** 의 **DataAdapter** 낙관적 동시성을 테스트 하려면 다음 사용 하 여는 **RowUpdated** 를 테스트 하는 이벤트 낙관적 동시성 위반 수입니다. 낙관적 동시성 위반이 발생 하는 경우 응용 프로그램 설정의 **RowError** 낙관적 동시성 위반을 반영 하도록 업데이트에 대 한 발급 하는 행의 합니다.  
+ 다음은 설정 하는 간단한 예는 **UpdateCommand** 의 **DataAdapter** 낙관적 동시성을 테스트 하려면 다음 사용 하 여는 **RowUpdated** 이벤트에 대 한 테스트를 낙관적 동시성 위반 합니다. 낙관적 동시성 위반이 발생 하면 응용 프로그램을 설정 합니다 **RowError** 낙관적 동시성 위반을 반영 하도록 업데이트에 대 한 발급 된 행의 합니다.  
   
- UPDATE 명령의 WHERE 절에 전달 된 매개 변수 값에 매핑되는 참고는 **원래** 은 해당 열의 값입니다.  
+ UPDATE 명령의 WHERE 절에 전달 된 매개 변수 값에 매핑되는 참고 합니다 **원래** 해당 열 값입니다.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  
