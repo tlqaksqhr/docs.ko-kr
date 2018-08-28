@@ -17,14 +17,13 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33552846"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>방법: 캔버스 만들기 및 사용
-다음 예제는 <xref:System.Windows.Controls.Canvas> 컨트롤 클래스 인스턴스의 생성 및 사용법에 관한 예제입니다.
+다음 예제는 <xref:System.Windows.Controls.Canvas> 컨트롤 클래스 인스턴스의 생성 및 사용법에 관한 예제입니다.  
   
 ## <a name="example"></a>예제  
-다음 예시를 통해 캔버스 컨트롤 클래스의 <xref:System.Windows.Controls.Canvas.SetTop%2A> 메소드와 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 메소드를 사용하여 두 개의 <xref:System.Windows.Controls.TextBlock> 엘리먼트를 배치하는 방법을 알 수 있습니다.
-또한, 캔버스의 <xref:System.Windows.Controls.Control.Background%2A>를 `LightSteelBlue` 로 설정하는 방법도 알 수 있습니다.
+ 다음 예제에서는 명시적으로 두 개의 배치 <xref:System.Windows.Controls.TextBlock> 요소를 사용 하 여는 <xref:System.Windows.Controls.Canvas.SetTop%2A> 및 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 방식의 <xref:System.Windows.Controls.Canvas>합니다. 이 예에서는 또한 할당 한 <xref:System.Windows.Controls.Control.Background%2A> 의 색 `LightSteelBlue` 에 <xref:System.Windows.Controls.Canvas>합니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 이용하여 TextBlock 엘리먼트들을 배치하는 경우 <xref:System.Windows.Controls.Canvas.Top%2A> 속성과 <xref:System.Windows.Controls.Canvas.Left%2A> 속성을 사용하면 됩니다.
+>  사용 하는 경우 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 위치로 <xref:System.Windows.Controls.TextBlock> 요소를 사용 하 여는 <xref:System.Windows.Controls.Canvas.Top%2A> 및 <xref:System.Windows.Controls.Canvas.Left%2A> 속성입니다.  
   
  [!code-csharp[CanvasCode#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
