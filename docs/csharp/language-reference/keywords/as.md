@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: cc5bb62d94e6999bf9174bd2221fb68e7c711588
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207970"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003075"
 ---
 # <a name="as-c-reference"></a>as(C# 참조)
 `as` 연산자를 사용하여 호환되는 참조 형식 또는 [nullable 형식](../../../csharp/programming-guide/nullable-types/index.md) 간에 특정 형식의 변환을 수행할 수 있습니다. 다음 코드는 예제를 보여 줍니다.  
@@ -43,9 +43,9 @@ expression is type ? (type)expression : (type)null
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [?: 연산자](../../../csharp/language-reference/operators/conditional-operator.md)  
- [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [?: 연산자](../../../csharp/language-reference/operators/conditional-operator.md)  
+- [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)

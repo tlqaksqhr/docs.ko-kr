@@ -1,15 +1,15 @@
 ---
-title: My.Application.Log 개체
+title: My.Application.Log 개체 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 4a4fbb2b823436a16f9f0646632e66f66fe62fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a7bf4d26129e488226a562e1fe25149abc1dbe1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001322"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 개체
 응용 프로그램의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "33595802"
 ## <a name="remarks"></a>설명  
  `My.Application.Log` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log>를 참조하세요.  
   
- 자세한 내용은 참조 [응용 프로그램에서 로깅 정보](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)합니다.  
+ 자세한 내용은 [응용 프로그램에서 로깅 정보](../../../visual-basic/developing-apps/programming/log-info/index.md)합니다.  
   
 > [!NOTE]
 >  .NET Framework의 클래스를 사용하여 응용 프로그램의 정보를 기록할 수도 있습니다. 자세한 내용은 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)을 참조하세요.  

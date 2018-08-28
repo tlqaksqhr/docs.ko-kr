@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579836"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925726"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식에 대한 모범 사례
 <a name="top"></a>.NET의 정규식 엔진은 리터럴 텍스트에 대한 비교 및 검색 대신 패턴 일치를 기반으로 텍스트를 처리하는 완벽한 기능을 갖춘 강력한 도구입니다. 대부분의 경우 신속하고 효율적인 방식으로 패턴 일치가 수행됩니다. 하지만 일부 경우에는 정규식 엔진의 실행 속도가 매우 느리게 보일 수 있습니다. 심한 경우에는 입력 크기가 비교적 적은데도 처리하는 데 시간이 몇 시간 또는 며칠씩 걸려서 응답이 멎은 것처럼 보일 수도 있습니다.  
@@ -190,7 +190,7 @@ ms.locfileid: "33579836"
   
  단어 경계는 단어 문자 또는 단어 문자의 일부와 동일하지 않으므로 정규식 엔진이 단어 문자를 찾을 때 단어 경계를 벗어날 가능성은 없습니다. 즉, 이 정규식의 경우 역추적은 전반적인 문자열 검색 성능에 전혀 기여할 수 없으며, 정규식 엔진이 각각의 단어 문자에 대해 성공한 예비 검색에 대한 상태를 강제로 저장해야 하기 때문에 성능 저하만 유발할 수 있습니다.  
   
- 역추적이 필요하지 않다고 판단될 경우에는 `(?>``subexpression``)` 언어 요소를 사용하여 역추적을 비활성화할 수 있습니다. 다음 예제에서는 두 개의 정규식을 사용하여 입력 문자열의 구문을 분석합니다. 첫 번째 정규식인 `\b\p{Lu}\w*\b`에는 역추적이 사용되고, 두 번째 정규식인 `\b\p{Lu}(?>\w*)\b`에는 역추적이 사용되지 않습니다. 아래 예제의 결과에서와 같이 두 정규식 모두 동일한 결과를 가져옵니다.  
+ 역추적이 필요하지 않다고 판단될 경우에는 `(?>subexpression)` 언어 요소를 사용하여 역추적을 비활성화할 수 있습니다. 다음 예제에서는 두 개의 정규식을 사용하여 입력 문자열의 구문을 분석합니다. 첫 번째 정규식인 `\b\p{Lu}\w*\b`에는 역추적이 사용되고, 두 번째 정규식인 `\b\p{Lu}(?>\w*)\b`에는 역추적이 사용되지 않습니다. 아래 예제의 결과에서와 같이 두 정규식 모두 동일한 결과를 가져옵니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579836"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- 수량자를 언어 요소에 적용하기 위해서만 하위 식을 사용하고 캡처한 텍스트에는 관심이 없을 경우 그룹 캡처를 비활성화해야 합니다. 예를 들어 `(?:``subexpression``)` 언어 요소는 적용할 대상 그룹이 일치하는 부분 문자열을 캡처하지 못하도록 방지합니다. 다음 예제에서 이전 예의 정규식 패턴은 `\b(?:\w+[;,]?\s?)+[.?!]`로 변경되었습니다. 결과에서와 같이 정규식 엔진이 <xref:System.Text.RegularExpressions.GroupCollection> 및 <xref:System.Text.RegularExpressions.CaptureCollection> 컬렉션을 채우지 못하도록 방지합니다.  
+ 수량자를 언어 요소에 적용하기 위해서만 하위 식을 사용하고 캡처한 텍스트에는 관심이 없을 경우 그룹 캡처를 비활성화해야 합니다. 예를 들어 `(?:subexpression)` 언어 요소는 적용할 대상 그룹이 일치하는 부분 문자열을 캡처하지 못하도록 방지합니다. 다음 예제에서 이전 예의 정규식 패턴은 `\b(?:\w+[;,]?\s?)+[.?!]`로 변경되었습니다. 결과에서와 같이 정규식 엔진이 <xref:System.Text.RegularExpressions.GroupCollection> 및 <xref:System.Text.RegularExpressions.CaptureCollection> 컬렉션을 채우지 못하도록 방지합니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  다음 방법 중 하나로 캡처를 비활성화할 수 있습니다.  
   
--   `(?:``subexpression``)` 언어 요소를 사용합니다. 이 요소는 적용된 그룹에서 일치하는 부분 문자열을 캡처하지 않도록 방지합니다. 중첩된 그룹에서 부분 문자열의 캡처는 비활성화하지 않습니다.  
+-   `(?:subexpression)` 언어 요소를 사용합니다. 이 요소는 적용된 그룹에서 일치하는 부분 문자열을 캡처하지 않도록 방지합니다. 중첩된 그룹에서 부분 문자열의 캡처는 비활성화하지 않습니다.  
   
--   <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 옵션을 사용합니다. 이 옵션은 정규식 패턴에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 이 옵션을 사용하면 `(?<``name``>``subexpression``)` 언어 요소로 정의된 명명된 그룹과 일치하는 부분 문자열만 캡처할 수 있습니다. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 플래그는 `options` 클래스 생성자의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 전달하거나 `options` 정적 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 전달할 수 있습니다.  
+-   <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 옵션을 사용합니다. 이 옵션은 정규식 패턴에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 이 옵션을 사용하면 `(?<name>subexpression)` 언어 요소로 정의된 명명된 그룹과 일치하는 부분 문자열만 캡처할 수 있습니다. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 플래그는 `options` 클래스 생성자의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 전달하거나 `options` 정적 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 전달할 수 있습니다.  
   
 -   `n` 언어 요소에서 `(?imnsx)` 옵션을 사용합니다. 이 옵션은 정규식 패턴에서 요소가 나타나는 지점으로부터 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 캡처는 패턴의 끝에 도달하거나 `(-n)` 옵션으로 명명되지 않은 캡처 또는 암시적인 캡처가 활성화될 때가지 비활성화됩니다. 자세한 내용은 [기타 구문](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)을 참조하세요.  
   
--   `n` 언어 요소에서 `(?imnsx:``subexpression``)` 옵션을 사용합니다. 이 옵션은 `subexpression`에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 명명되지 않은 또는 암시적인 중첩된 캡처링 그룹에 의한 캡처도 함께 비활성화됩니다.  
+-   `n` 언어 요소에서 `(?imnsx:subexpression)` 옵션을 사용합니다. 이 옵션은 `subexpression`에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 명명되지 않은 또는 암시적인 중첩된 캡처링 그룹에 의한 캡처도 함께 비활성화됩니다.  
   
  [맨 위로 이동](#top)  
   

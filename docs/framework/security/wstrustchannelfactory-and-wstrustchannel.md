@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410457"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998468"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 및 WSTrustChannel
 WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가 이미 페더레이션을 인식한다는 것을 알고 있습니다. <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 사용하여 WCF 클라이언트를 구성하면 서비스에 페더레이션된 인증을 사용하도록 설정할 수 있습니다.  
@@ -34,10 +34,10 @@ WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가
 > [!TIP]
 >  ActAs와 OnBehalfOf 간의 차이점은 무엇일까요?  
 >   
->  WS-Trust 프로토콜 관점:  
+>  Ws-trust 프로토콜 관점:  
 >   
->  1.  ActAs RST 요소는 요청자가 두 개의 고유 엔터티인 요청자와 ActAs 요소의 토큰이 나타내는 외부 엔터티에 대한 클레임을 포함하는 토큰을 원함을 나타냅니다.  
-> 2.  OnBehalfOf RST 요소는 요청자가 OnBehalfOf 요소의 토큰이 나타내는 외부 엔터티 하나에 대한 클레임만 포함하는 토큰을 원함을 나타냅니다.  
+> 1. ActAs RST 요소는 요청자가 두 개의 고유 엔터티인 요청자와 ActAs 요소의 토큰이 나타내는 외부 엔터티에 대한 클레임을 포함하는 토큰을 원함을 나타냅니다.  
+> 2. OnBehalfOf RST 요소는 요청자가 OnBehalfOf 요소의 토큰이 나타내는 외부 엔터티 하나에 대한 클레임만 포함하는 토큰을 원함을 나타냅니다.  
 >   
 >  ActAs 기능은 일반적으로 복합 위임이 필요한 시나리오에서 사용됩니다. 이 경우 발급된 토큰의 최종 수신자가 전체 위임 체인을 검사하고 클라이언트뿐 아니라 모든 매개 지점을 확인할 수 있습니다. 따라서 전체 ID 위임 체인에 따라 액세스 제어, 감사 및 기타 관련 활동을 수행할 수 있습니다. ActAs 기능은 일반적으로 응용 프로그램/비즈니스 논리 계층에서 정보를 전달할 필요가 없도록 계층 간에 인증하고 ID 정보를 전달하기 위해 다중 계층 시스템에서 사용됩니다.  
 >   

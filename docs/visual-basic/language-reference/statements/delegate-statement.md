@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244243"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999823"
 ---
 # <a name="delegate-statement"></a>Delegate 문
 대리자를 선언 하는 데 사용 합니다. 대리자는 참조 형식을 참조 하는 `Shared` 메서드 형식 또는 개체의 인스턴스 메서드. 매개 변수 및 반환 형식을 일치 하는 프로시저는이 대리자 클래스의 인스턴스를 만드는 데 사용할 수 있습니다. 다음 대리자 인스턴스를 사용 하 여 프로시저에 나중에 호출할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "39244243"
   
  대리자에 대 한 자세한 내용은 참조 하세요. [대리자](../../../visual-basic/programming-guide/language-features/delegates/index.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Delegate` 두 숫자에서 작동 하 고 숫자로 반환에 대 한 대리자를 선언 하는 문입니다. `DelegateTest` 메서드가 형식의 대리자의 인스턴스를 사용 하 고 숫자의 쌍에서 작동 하는 데 사용 합니다.  
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  

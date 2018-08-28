@@ -7,14 +7,14 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656034"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999589"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic 컴파일러 옵션 사전순 목록
-Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일 하는 대신 제공 됩니다. 다음은 사전순으로 정렬 한 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
+Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 사전순으로 정렬 하는 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -41,10 +41,10 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|지정된 어셈블리에서 네임스페이스를 가져옵니다.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전 지정: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 어셈블리의 위치를 지정 된 [-참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전을 지정 합니다. 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0입니다.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 되는 어셈블리의 위치를 지정 합니다 [-참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|관리되는 리소스에 대한 링크를 만듭니다.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 된 클래스를 지정 하는 `Sub Main` 프로시저를 시작할 때 사용 합니다.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 하는 클래스를 지정 합니다 `Sub Main` 프로시저를 시작할 때 사용 합니다.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|모듈이 속할 어셈블리의 이름을 지정합니다.|  
 |`-modulename:<string>`|소스 모듈의 이름을 지정합니다.|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
@@ -65,7 +65,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|컴파일러에서 구문 관련 오류 및 경고에 대한 코드를 표시하지 않도록 합니다.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|어셈블리에서 메타데이터를 가져옵니다.|  
-|[/refonly](refonly-compiler-option.md)|한 참조 어셈블리를 출력합니다.|
+|[/refonly](refonly-compiler-option.md)|참조 어셈블리에만 출력합니다.|
 |[/refout](refout-compiler-option.md)|참조 어셈블리의 출력 경로 지정합니다.|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|정수 오버플로 검사를 사용하지 않습니다.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|관리되는 리소스를 어셈블리에 포함합니다.|  

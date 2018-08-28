@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569910"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931861"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "33569910"
   
 |문자 또는 시퀀스|설명|  
 |---------------------------|-----------------|  
-|다음을 제외한 모든 문자입니다.<br /><br /> 이어야 합니다. $ ^ { [ ( &#124; ) * + ? \|**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
+|다음을 제외한 모든 문자입니다.<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
 |`\a`|벨 문자인 `\u0007`을 찾습니다.|  
 |`\b`|`[`*character_group*`]` 문자 클래스에서 백스페이스 문자인 `\u0008`을 찾습니다.  [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요. 문자 클래스 이외에 `\b`는 단어 경계와 일치하는 앵커입니다. [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)를 참조하세요.|  
 |`\t`|탭 문자인 `\u0009`를 찾습니다.|  

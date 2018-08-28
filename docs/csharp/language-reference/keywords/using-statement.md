@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960954"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003114"
 ---
 # <a name="using-statement-c-reference"></a>using 문(C# 참조)
 <xref:System.IDisposable> 개체의 올바른 사용을 보장하는 편리한 구문을 제공합니다.  
@@ -43,11 +43,12 @@ ms.locfileid: "37960954"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)  
- [가비지 수집](../../../standard/garbage-collection/index.md)  
- [IDisposable을 구현하는 개체 사용](../../../standard/garbage-collection/using-objects.md)  
- [IDisposable 인터페이스](xref:System.IDisposable)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../../../csharp/language-reference/index.md)  
+- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+- [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)  
+- [가비지 수집](../../../standard/garbage-collection/index.md)  
+- [IDisposable을 구현하는 개체 사용](../../../standard/garbage-collection/using-objects.md)  
+- [IDisposable 인터페이스](xref:System.IDisposable)
