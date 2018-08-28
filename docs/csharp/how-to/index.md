@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549394"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999565"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -68,7 +68,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [`as` 및 `is`를 사용하여 다른 형식으로 안전하게 캐스팅합니다](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
 - [`struct` 형식에 대한 변환 연산자를 정의합니다](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [형식이 nullable 값 형식인지 여부를 확인합니다](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [nullable과 비 nullable 값 형식 사이를 변환합니다](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).
+- [nullable과 비 nullable 값 형식 사이를 변환합니다](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>같음 및 순서 비교
 
@@ -126,7 +126,7 @@ LINQ를 사용하면 LINQ 쿼리 식 패턴을 지원하는 데이터 소스를 
 
 - [`System.Threading.Tasks.Task.WhenAll`를 사용하여 비동기 성능을 개선합니다](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 - [`async` 및 `await`를 사용하여 여러 웹을 동시에 요청합니다](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
-- [스레드 풀을 사용합니다](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md).
+- [스레드 풀을 사용합니다](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>프로그램에 대한 명령줄 인수
 
