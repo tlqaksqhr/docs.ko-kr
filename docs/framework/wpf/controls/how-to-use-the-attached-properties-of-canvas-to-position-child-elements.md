@@ -17,10 +17,12 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33552376"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>방법: Canvas의 연결된 속성을 사용하여 자식 요소 배치
-연결된 된 속성을 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.Canvas> 자식 요소의 위치입니다.  
+이 예제는, 자식 요소들을 위치시키기 위해, <xref:System.Windows.Controls.Canvas>의 연결속성을 사용하는 법을 알려주는 예제입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 4 개의 <xref:System.Windows.Controls.Button> 부모의 자식 요소로 요소 <xref:System.Windows.Controls.Canvas>합니다. 이 고유한 연결 된 속성을 각 자식 요소 <xref:System.Windows.Controls.Canvas>: <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, 및 <xref:System.Windows.Controls.Canvas.Top%2A>합니다. 각 <xref:System.Windows.Controls.Button> 에서 부모에 상대적인 배치 <xref:System.Windows.Controls.Canvas> 할당된 된 속성 값에 따라 합니다.  
+아래의 예제는, 4개의 <xref:System.Windows.Controls.Button>을 부모 <xref:System.Windows.Controls.Canvas>의 자식 요소로 추가하는 예제입니다.
+각 요소들은 <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, <xref:System.Windows.Controls.Canvas.Top%2A> 과 같이 구별되는 캔버스의 연결속성으로 나타 낼 수있습니다.
+각 <xref:System.Windows.Controls.Button>은 부모 <xref:System.Windows.Controls.Canvas>를 기준으로 하는 상대 위치 좌표를, 연결 요소 값으로 할당하는 방식으로 배치합니다. 
   
  [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
  [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
